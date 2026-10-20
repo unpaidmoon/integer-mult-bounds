@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "task_id": "scalar-to-moment",
+  "priority_revision": 6,
+  "base_commit": "bb4bccbf42844d2801487450727c2f63e10d1d0f",
+  "original_card": {
+    "id": "scalar-to-moment",
+    "question": "Can one known scalar simplification be converted into an actual paid-profile improvement?",
+    "starting_points": [
+      "research/r439-bsection-stars-seed01/README.md",
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "Derive the changed legal frame itinerary and exact child histogram.",
+      "Prove a scoped obstruction showing why that scalar gain cannot change the paid contract."
+    ],
+    "acceptance_gate": "An unchanged histogram is not a kappa gain; record any separate runtime or proof benefit explicitly.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "research/r439-bsection-stars-seed01/verify.py"
+      ],
+      "expected": "PASS_R439_BSECTION_STARS",
+      "inspect": "Observe that the positive control improves scalar counts while retaining the paid histogram.",
+      "scope": "Positive control / source-bound orientation only; this is not a new construction or full cold replay."
+    },
+    "first_experiment": "Choose one simplification and derive the complete changed frame itinerary, or prove why it cannot change the histogram.",
+    "bottleneck_link": "A legal change to the histogram, not addition count alone, is the bridge to an exponent gain.",
+    "allowed_variations": [
+      "One existing scalar simplification and one proposed frame-path change."
+    ],
+    "scope_change_triggers": [
+      "Submitting only another scalar count as completion of a paid-profile task."
+    ],
+    "overlap_terms": [
+      "scalar simplification",
+      "paid profile",
+      "R439"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "On both pinned PR3734 providers, do PR3942's new-gap pruning and same-ADD composition reductions agree with the single-move price oracle at every fixed-frame adjacent pair and every changed first frame?",
+  "scope_change_reason": "The card asks whether one scalar simplification changes a paid histogram. This package does not propose a new simplification. It audits the obstruction argument in PR #3942, which claims that a radius-one first ADD followed by any second ADD cannot improve the raw rank moment. Discussion #1166 comment 19032637 asks for that independent challenge.",
+  "bottleneck_link": "A two-ADD scalar retiming improves the exponent only if the rank histogram improves. These reductions say that, inside the stated contract, it does not. A histogram gain has to leave the contract.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop after both pinned providers. Do not replay the 11.9-million-row variable census. Stop at the first unlocalized non-bridge price, negative bridge price, disjoint-register frame change, or same-ADD composition mismatch.",
+  "outcome": "completed",
+  "evidence": "Both providers: 4709 fixed pairs, 1354687 non-bridge gap prices all localized to the original corridor, 14693 bridge prices all curvature-nonnegative, 1047 changed first frames with invariant disjoint-register sequences, and 2609832 same-ADD compositions matching a direct move. Quotient rank at most 3 on 1559 intervals. The trace-free gap rows match candidates() on 47 spread and edge pairs per provider. These counts also match an earlier local exhaustive candidates() pass. No new kappa.",
+  "author": "unpaidmoon",
+  "ai_assistance": "Substantial Cursor Grok assistance. The pinned PR3942 price engine was executed, not rewritten.",
+  "open_questions": [
+    {
+      "question": "Does one provider's variable_census receipt match PR3942 RESULT-base.json or RESULT-extra.json on the 11,917,718 shared-register second cuts?",
+      "why_it_matters": "This audit checks the reductions that justify skipping most second cuts. It does not re-execute that census, so a bug in the shared-register loop would survive.",
+      "first_step": "Replay search.variable_census for the 29 frame_only_neutral first words only, and compare the histogram with the published rows for that kind.",
+      "blocked_by": "Runtime of the full census, not a missing lemma. The neutral subclass is the bounded first step."
+    },
+    {
+      "question": "For one changed first frame on these providers, does a disjoint-register second ADD emit the same cut and dimension deltas before and after that move?",
+      "why_it_matters": "The disjoint-register half of the PR3942 reduction says the final delta is a sum of two original nonnegative deltas. This audit checks that those frame sequences do not change. It does not re-sum a disjoint price.",
+      "first_step": "Pick the first variable move in section A, choose one ADD that shares no register with it, and compare candidates() for that ADD before and after apply_move.",
+      "blocked_by": "Nothing structural. Open PRs 4122 and 4128 already treat moved illegal intermediates, so this follow-up stays on the disjoint price."
+    }
+  ]
+}
