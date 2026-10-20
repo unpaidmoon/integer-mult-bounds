@@ -16,8 +16,8 @@ HERE = Path(__file__).resolve().parent
 FRESH = 3072
 OPERATORS_SHA256 = "057a8d5de8c64e63d37db78b26d83164fe1b64d71ce322b1d2cecadcccffd079"
 TARGET = 16
-MINIMUM = 20
-UPPER = 22
+LOWER_BOUND = 20
+REPLAYED = 22
 
 
 def need(cond, message):
@@ -302,12 +302,15 @@ def main():
     fresh_cost = 6 * 2
     k_cost = 2 * 2
     w_cost = 4
-    minimum = fresh_cost + k_cost + w_cost
-    need(minimum == MINIMUM and minimum > TARGET and UPPER == 3 * 2 + 6 * 2 + 4 and UPPER > minimum,
-         "floor 20 sits strictly above 16 and strictly below the replayed 22")
+    lower_bound = fresh_cost + k_cost + w_cost
+    need(lower_bound == LOWER_BOUND and lower_bound > TARGET, "this count is above 16 and is only a lower bound")
+    need(REPLAYED == 3 * 2 + 6 * 2 + 4 and REPLAYED > lower_bound, "replayed rewrite is 22, above this count")
+    # PR #4086 already proves a sharp 22f tariff in this class. This count
+    # charges two K queries and does not see that chi_KW-defect.
     print(
         "PASS_CUT58_LOCAL16_NATIVE_FLOOR"
-        f" minimum={minimum} target16=impossible upper={UPPER}"
+        f" lower_bound={lower_bound} replayed_rewrite={REPLAYED}"
+        " target16=impossible_by_this_bound sharp_floor_not_reproved=pr4086"
         " fresh_queries=6 k_queries=2 w_queries=1 group=256 no_new_kappa"
     )
 

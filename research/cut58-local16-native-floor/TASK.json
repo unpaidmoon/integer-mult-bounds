@@ -59,21 +59,15 @@
     ]
   },
   "scope_status": "changed",
-  "actual_scope": "On the q2 event58 six-bank suffix, with paid natives restricted to the selected pool K, T, W and their inverses, native mass is at least 20. The hypothetical local-16 suffix is impossible. The neutral rewrite of mass 22 is replayed. No producer magnitude ledger and no kappa.",
+  "actual_scope": "On the q2 event58 six-bank suffix, with paid natives restricted to K, T, W and their inverses, a generator-and-bimodule count gives native mass at least 20, so a suffix of 16 is impossible. This is weaker than PR #4086, which already proves a sharp 22f tariff in the same separable class and attains it. The mass-22 rewrite is replayed. No producer magnitude ledger and no kappa.",
   "scope_change_reason": "Discussion #1166 comment 19039339 leaves the q2 event58 target local16 open after PR #4082. That suffix floor is a different obligation from the card's literal F0 producer ledger, which is already covered by open producer-defect work.",
-  "bottleneck_link": "The admitted q2 caller is prefix 54 plus suffix 22, total 76, against stock 72. A suffix of 16 would put the whole mass at 70, under stock. A floor of 20 keeps the whole mass at least 74, still not under stock.",
+  "bottleneck_link": "The admitted q2 caller is prefix 54f plus a separable suffix. PR #4086 shows the suffix is at least 22f, so the whole mass is at least 76f against stock 72f. The count of 20 in this package already keeps a 16-suffix from going under stock, and it is not the sharp bill.",
   "budget_minutes": 60,
-  "stop_rule": "Stop once the selected-pool native mass is proved at least 20 and the mass-22 rewrite is replayed. Do not search a new alphabet or price owners, scans, or a supplier moment.",
-  "outcome": "negative-result",
-  "evidence": "PROOF.md and verify.py. The verifier checks the even/odd splitting of the 256-element pool, the one-K bimodule obstruction, the address-row obstruction, representation rank 96 of the six cores, and equality of the mass-22 replay with those cores.",
+  "stop_rule": "Stop once the weaker count of 20 is checked and the sharp 22f theorem of PR #4086 is identified. Do not reprove that tariff or price another adapter.",
+  "outcome": "partial",
+  "evidence": "PROOF.md and verify.py. The verifier checks the even/odd splitting of the 256-element pool, the one-K bimodule obstruction, the address-row obstruction, representation rank 96 of the six cores, and equality of the mass-22 replay with those cores. Sharpness is cited from PR #4086 and is not reproved here.",
   "author": "unpaidmoon",
   "ai_assistance": "Substantial Cursor Grok 4.7 assistance for the algebra check and the writeup. This is not independent human or formal-kernel review.",
-  "open_questions": [
-    {
-      "question": "Is the selected-pool native minimum 20 or the exhibited 22?",
-      "why_it_matters": "20 charges two K queries, six T queries, and one W. The replayed circuit uses a third K. A two-K circuit would be a strict improvement on mass 22 and would meet the floor.",
-      "first_step": "Try to build both K a and K z, and the outer factor of K W K, with two K queries on six banks, then apply one W and six T queries.",
-      "blocked_by": "Row 0 needs K a alone and row 4 needs K z alone, while row 3 needs K W K on both. One K query hits only one bank."
-    }
-  ]
+  "open_questions": [],
+  "no_open_questions_reason": "PR #4086 already proves the sharp separable tariff 22f and attains it, so the gap between a 20-count and 22 is not open. The rank-0 source ADDRESS swap was priced later and does not undercut 22f. This package does not propose another adapter."
 }

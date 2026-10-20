@@ -3,9 +3,14 @@
 The target is the six-bank suffix at the literal `query5 source J` entrance.
 Prefix native mass is 54 and the exhibited suffix has native mass 22, so the
 whole word has mass 76 against stock 72. A suffix of native mass 16 would put
-the whole word at 70, under stock. Under the gate set below, every such suffix
-has native mass at least 20, so 16 is impossible. A replay of the predecessor's
-neutral rewrite shows that 22 is still achievable. No new κ.
+the whole word at 70, under stock.
+
+PR #4086, head `cd0f22abce2b74d7d080a2e640c0f495d3d2c3aa`, already proves the
+sharp tariff: in this separable class the suffix costs at least `22f` for every
+`f ≥ 2`, and the existing word attains it. This note does not improve that
+theorem and does not leave a gap between 20 and 22. It records a weaker count
+of 20 that already excludes 16, and it says which charge the count misses.
+No new κ.
 
 ## Gate set
 
@@ -95,9 +100,10 @@ Every word in `K` and `T` has identity address rows. The output contains
 monomials whose address rows are `W`'s plane swap. At least one `W` or `W⁻¹`
 is required. It costs 4.
 
-## Total
+## What this count does and does not reach
 
-The three families are disjoint paid natives, so the native mass is at least
+The three charges above are disjoint, so this argument gives native mass at
+least
 
 ```text
 12 + 4 + 4 = 20.
@@ -105,6 +111,14 @@ The three families are disjoint paid natives, so the native mass is at least
 
 The neutral gate list in `verify.py` (three `K`, six `T`, one `W`, together
 with ADD, one rational scale, and one bank swap) reproduces the same matrix and
-has mass 22. Mass 16 is impossible. Whether every circuit needs the third `K`,
-which would raise the floor from 20 to 22, is open. Selected κ stays
-`0.001672660197076918`.
+has mass 22. Mass 16 is impossible already from 20.
+
+The count is not sharp. It treats "at least two `K` queries" as the whole
+`K`-side bill. PR #4086's character `chi_KW` has defect rank `4D` on the
+factored matrix, and each `chi_KW`-odd one-bank response contributes defect
+rank at most `D`, so at least four such responses are required. The attaining
+word uses three `K` queries and one `W`, and `W` is `chi_KW`-odd as well as
+`chi_W`-odd. The old-response tariff `r(h) ≥ 2[q + (p xor q)]`, plus `2` for
+each fresh query, then totals `22f`. That character argument, including the
+`f = 1` obstruction and the tensor-square faithfulness for `f ≥ 2`, is theirs.
+This note does not reprove it. Selected κ stays `0.001672660197076918`.
