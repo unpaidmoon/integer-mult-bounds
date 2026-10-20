@@ -1,0 +1,14 @@
+{
+  "stock_bit_length": 2642,
+  "log2_band": [
+    2641,
+    2642
+  ],
+  "log_q_coefficient_sufficient": 34,
+  "log_q_coefficient_failure": 33,
+  "witness_prime": "1208925819614629174706189",
+  "bit_length_plug_in": 2642,
+  "plug_in_over_sufficient": "1321/17",
+  "rho": "unbound",
+  "new_kappa": false
+}
