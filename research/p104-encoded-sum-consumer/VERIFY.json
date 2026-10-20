@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Sum-only identity on four patterns and four separating ports, 192-transport floor, nine-stage deficit 3272, three-stage split between linear gap 1160 and paid deficit 3104, and controls for a missing copy, a sign flip, omitted descents and a scalar-as-native mischarge."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-O",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Same certificate with assertions disabled, using explicit failures rather than assert."
+    }
+  ]
+}
