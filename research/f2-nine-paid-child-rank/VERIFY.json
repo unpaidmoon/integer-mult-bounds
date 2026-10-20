@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/complex-local-word-ceiling/ceiling.py",
+    "research/selected-k8-unrestricted-ends/common.py",
+    "research/selected-k8-unrestricted-ends/model.py",
+    "research/selected-k8-unrestricted-ends/references/SLOT-PINS.json",
+    "research/selected-k8-unrestricted-ends/references/WORD.json.gz",
+    "research/selected-k8-unrestricted-ends/references/frame_model.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "F_2^9 basis, eight rank-8 centre descents, climb cap 6 on 10222 paid edges, 106 zero-charge cone edges, selected profile, ceilings through rank 44, idle-rank-52 rejection"
+    }
+  ]
+}

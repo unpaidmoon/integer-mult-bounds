@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "task_id": "complex-rank-shape-decoder",
+  "priority_revision": 6,
+  "base_commit": "bb4bccbf42844d2801487450727c2f63e10d1d0f",
+  "original_card": {
+    "id": "complex-rank-shape-decoder",
+    "question": "Can a decoder deliver the local paid mass in fewer, larger-rank children (block frame climbs instead of rank-1 to rank-3 steps)?",
+    "starting_points": [
+      "docs/research/research-family-status.md",
+      "research/complex-local-word-ceiling/README.md",
+      "research/complex-decoder-field-extension-seed44/README.md",
+      "research/complex-frame-pair-decoders/README.md",
+      "research/selected-k8-unrestricted-ends/README.md",
+      "research/eisenstein-reduction-copy-floor/README.md"
+    ],
+    "methods": [
+      "Find one exact small decoding identity whose frame path climbs in blocks, and price its complete per-call profile.",
+      "Bound the best effective child rank achievable for one fixed support alphabet, including copies, frames and restoration."
+    ],
+    "acceptance_gate": "A per-call local profile, with all copied information, frames and restoration counted, whose ceiling exceeds the selected word's by at least 5%; masked or overcomplete supports must change an assumption of the eight-term all-pairs bound. A scoped local result may be retained without a complete supplier. Expanding it into further construction rounds requires the family-level budget and obligation gate in research-family-status.md; an optimistic passing relaxation alone is not acceptance.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "research/complex-local-word-ceiling/verify.py"
+      ],
+      "expected": "PASS_COMPLEX_LOCAL_WORD_CEILING",
+      "inspect": "Read the selected word's per-call local profile, its packing ceiling and the lever table; run levers.py for the ideal budget of the lever you target.",
+      "scope": "Positive control and planning budget only; this is not a new construction or full cold replay."
+    },
+    "first_experiment": "Before any synthesis, write the candidate per-call local profile (and centre charge / unpaid coordinates if changed) and screen it with ceiling.ceiling(); reject it if even the ideal ceiling does not beat the selected word's by your stated margin. Ideal budget: rank-16 delivery is 2.31x (levers.py).",
+    "bottleneck_link": "Rank-1 children are about half of recursive cost; the selected word's effective child rank is about 3.9. Larger-rank delivery lowers recursive cost per unit of paid mass.",
+    "allowed_variations": [
+      "One masked, overcomplete or block decoder family with exact labels and supports.",
+      "A scoped lower bound on effective rank for one alphabet.",
+      "If the coverage law, template or guard changes, derive an applicable fully charged replacement bound instead of applying the incumbent ceiling outside its scope."
+    ],
+    "scope_change_triggers": [
+      "Repacking idle remainders of an unchanged word (covered by the packing ceiling).",
+      "Repeating the eight-term all-pairs search inside its proved scope.",
+      "Only changing helper terminal subspaces and monotone frames within the fixed scalar word, entrances and cleanup contract already covered by #1995/#2013.",
+      "Searching below C=40 in the #2017 Eisenstein binary scalar-rectangle or fixed-support block-linear additive pairing model; specify a changed premise instead. This bound does not cover every complex decoder.",
+      "Continuing a partial cost improvement while leaving the same unpriced consumer, restoration or central-readout obligation unresolved; refresh the family expansion decision first. Local product-retiming evidence has a narrow scope and is not a ban on changed graphs or contracts."
+    ],
+    "overlap_terms": [
+      "rank shape",
+      "block climb",
+      "masked decoder",
+      "overcomplete",
+      "effective rank"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "On the selected complex local word, with frames subspaces of F_2^9 and one paid child per strict nested climb plus eight fixed centre descents, the largest paid child rank any legal unrestricted-terminal assignment can emit is 8, and that cap misses a = 1/99.",
+  "scope_change_reason": "The card allows a lower bound on effective rank for one fixed support alphabet. This does not construct a block-climb decoder and does not search new terminal frames. It reads the child-rank inventory already present in the retained F_2^9 climb contract and compares that inventory with the rank-44 planning threshold.",
+  "bottleneck_link": "Rank-1 children are about half of recursive cost, and a target-scale complex saving on this template needs paid local rank at least 44 under the packing ceiling. A source-bound cap of 8 says that saving is unavailable inside the retained alphabet.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop after every positive-multiplicity edge and every centre descent has a rank cap. Do not search a new scalar word or rerun the selected-k8 linear program.",
+  "outcome": "negative-result",
+  "evidence": "verify.py builds the unrestricted-end graph, recomputes the eight centre descents independently of that graph, checks all 39711 enumerated frames, and screens the rank-8, rank-9, rank-43 and rank-44 histograms with ceiling.py. Marker PASS_F2_NINE_PAID_CHILD_RANK.",
+  "author": "unpaidmoon",
+  "ai_assistance": "Substantial Cursor Grok assistance with the bound, the verifier and the package text.",
+  "open_questions": [
+    {
+      "question": "Can a changed bill, one that charges a single child for the sum of several F_2^9 climbs or that leaves this alphabet, reach paid rank 44 with copies and restoration priced?",
+      "why_it_matters": "The rank-44 histogram clears a = 1/99 in the packing model, and this alphabet cannot emit it.",
+      "first_step": "Write one such identity and its frame, copy and restoration bill, then screen the histogram with ceiling.ceiling before any search.",
+      "blocked_by": "No such changed contract is specified."
+    },
+    {
+      "question": "Does the rank-8 cap survive a scalar rewrite of the selected word?",
+      "why_it_matters": "Terminal-frame changes inside the fixed word are already inside the model bounded here.",
+      "first_step": "Pin one rewritten scalar program, its frame space and its climb rule, and repeat the edge-gap scan.",
+      "blocked_by": "No rewritten scalar program is in scope."
+    }
+  ]
+}
