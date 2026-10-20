@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/staged544-new-gap-audit/pinned/PROOF.md",
+    "research/staged544-new-gap-audit/pinned/inputs/BORROW-WORD-43base.json.gz",
+    "research/staged544-new-gap-audit/pinned/inputs/BORROW-WORD-43extra.json.gz",
+    "research/staged544-new-gap-audit/pinned/search.py",
+    "research/staged544-new-gap-audit/pinned/vendor/retiming.py"
+  ],
+  "commands": [
+    {
+      "argv": ["{python}", "-B", "{package}/verify.py", "base"],
+      "timeout_seconds": 600,
+      "checks": "On BORROW-WORD-43base: exhaustive trace-free new-gap localisation and bridge nonnegativity, exact candidates() agreement on the spread and edge sample, disjoint-register frame invariance, same-ADD composition, first-frame lattices, and predicate controls."
+    },
+    {
+      "argv": ["{python}", "-B", "{package}/verify.py", "extra"],
+      "timeout_seconds": 600,
+      "checks": "The same audit on BORROW-WORD-43extra, including the same predicate controls."
+    }
+  ]
+}

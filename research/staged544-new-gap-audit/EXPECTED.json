@@ -1,0 +1,34 @@
+{
+  "providers": [
+    {
+      "bridge_prices": 14693,
+      "composed_moves": 1047,
+      "composition_options": 2609832,
+      "fixed_pairs": 4709,
+      "intervals": 1559,
+      "max_quotient": 3,
+      "nonbridge_prices": 1354687,
+      "oracle_pairs": 47,
+      "provider": "base",
+      "variable_moves": 1047
+    },
+    {
+      "bridge_prices": 14693,
+      "composed_moves": 1047,
+      "composition_options": 2609832,
+      "fixed_pairs": 4709,
+      "intervals": 1559,
+      "max_quotient": 3,
+      "nonbridge_prices": 1354687,
+      "oracle_pairs": 47,
+      "provider": "extra",
+      "variable_moves": 1047
+    }
+  ],
+  "controls": {
+    "known_lattice": 1,
+    "localisation_predicate": 3,
+    "profitable_rejected": 1,
+    "resource_guard": 1
+  }
+}
