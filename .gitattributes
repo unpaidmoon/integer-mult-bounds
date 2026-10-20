@@ -184,3 +184,6 @@ research/rank7-joint-endframes-restore-edit/** -text -whitespace
 research/pr1-retention-receipt/inputs/** -text -whitespace
 
 research/rank-shape-coframe-bill-seed850bc3/sources/pr3066-RESULT.json -text
+
+# Exact PR4088 export bytes and the pinned two-provider rebind.
+research/staged544-mixed-idle-rebind/** -text -whitespace
