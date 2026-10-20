@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/complex-local-word-ceiling/ceiling.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 180,
+      "checks": "120 lines, pairing rank 9, rank-9 basis, rank-10 rejection, selected maximum rank 8, invoice cap 9, both rank-9 ceilings strictly below 1/99"
+    }
+  ]
+}
