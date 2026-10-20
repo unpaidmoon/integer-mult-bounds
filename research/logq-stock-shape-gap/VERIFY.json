@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/selected-coarse-depth-stock/PROOF.md",
+    "research/selected-stock-envelope-m73/README.md",
+    "research/selected-stock-shape-a-zero/PROOF.md"
+  ],
+  "commands": [
+    {
+      "argv": ["{python}", "-I", "-B", "{package}/verify.py"],
+      "timeout_seconds": 60,
+      "checks": "Recompute C, prove 2^80+13 by Pocklington, and separate B=34 from the bit-length plug-in 2642"
+    },
+    {
+      "argv": ["{python}", "-I", "-O", "-B", "{package}/verify.py"],
+      "timeout_seconds": 60,
+      "checks": "Same certificate with assertions disabled; failures use explicit exits"
+    },
+    {
+      "argv": ["{python}", "-I", "-B", "{package}/independent.py"],
+      "timeout_seconds": 60,
+      "checks": "Rebuild C by multiplying odd factors first and repeat the exponent bracket"
+    }
+  ]
+}
