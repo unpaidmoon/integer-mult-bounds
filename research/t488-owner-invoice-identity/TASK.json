@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "task_id": "scalar-to-moment",
+  "priority_revision": 6,
+  "base_commit": "bb4bccbf42844d2801487450727c2f63e10d1d0f",
+  "original_card": {
+    "id": "scalar-to-moment",
+    "question": "Can one known scalar simplification be converted into an actual paid-profile improvement?",
+    "starting_points": [
+      "research/r439-bsection-stars-seed01/README.md",
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "Derive the changed legal frame itinerary and exact child histogram.",
+      "Prove a scoped obstruction showing why that scalar gain cannot change the paid contract."
+    ],
+    "acceptance_gate": "An unchanged histogram is not a kappa gain; record any separate runtime or proof benefit explicitly.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "research/r439-bsection-stars-seed01/verify.py"
+      ],
+      "expected": "PASS_R439_BSECTION_STARS",
+      "inspect": "Observe that the positive control improves scalar counts while retaining the paid histogram.",
+      "scope": "Positive control / source-bound orientation only; this is not a new construction or full cold replay."
+    },
+    "first_experiment": "Choose one simplification and derive the complete changed frame itinerary, or prove why it cannot change the histogram.",
+    "bottleneck_link": "A legal change to the histogram, not addition count alone, is the bridge to an exponent gain.",
+    "allowed_variations": [
+      "One existing scalar simplification and one proposed frame-path change."
+    ],
+    "scope_change_triggers": [
+      "Submitting only another scalar count as completion of a paid-profile task."
+    ],
+    "overlap_terms": [
+      "scalar simplification",
+      "paid profile",
+      "R439"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "The published T488 admission histogram equals the literal-owner histogram plus the per-call retiming move -2 H1 -2 H2 +2 H3 on all 4392 calls. Rank mass is unchanged.",
+  "scope_change_reason": "The card asks whether one scalar simplification becomes a paid-profile improvement. This package does not propose a simplification. It checks the histogram bridge already claimed by the retimed T488 composition, which discussion #1166 comment 19022532 left open.",
+  "bottleneck_link": "An unchanged histogram is not an exponent gain. This retiming does change the histogram, but the move has rank mass zero, so the invoice identity is not a new selected kappa. The complex side remains the binding supplier.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop once the vendored words and the three old histograms determine the published profile. Do not rerun moment engines, literal row generation, or the fresh bootstrap wrapper.",
+  "outcome": "partial",
+  "evidence": "PASS_T488_OWNER_INVOICE_IDENTITY on the vendored PR #3653 head 607a09ff441c79b215a8127a81f4cc70021d0d9b. Four controls reject a short call count, a bumped literal rank, a nonzero rank-mass move, and a changed A section.",
+  "author": "unpaidmoon",
+  "ai_assistance": "Substantial Cursor Grok assistance. No independent human review.",
+  "open_questions": [
+    {
+      "question": "Does the literal FILL row payload, not OWNER-EXPECTED.json, sum to the old histogram?",
+      "why_it_matters": "The invoice bridge treats the owner expectation as the literal output. A row replay is the missing half of comment 19022532.",
+      "first_step": "Materialize FILL.json.gz at SHA256 20662cc64df34cab409fdf31ed0f0222462530922a01308a46964d661d2374cf and sum its rank column.",
+      "blocked_by": "The literal payload is not vendored in this package."
+    },
+    {
+      "question": "Can the local bills be recounted from the B and cleanup events?",
+      "why_it_matters": "The per-call move is read from report.local_profile.",
+      "first_step": "Give one child-rank rule that reproduces both the old and retimed base bills.",
+      "blocked_by": "The integer in the event rank slot is not the child histogram."
+    }
+  ]
+}
