@@ -13,6 +13,41 @@
       "usage": "provenance",
       "git_blob": "67f085acd86acd7d4e03922d9cf4b26bca66fed5",
       "sha256": "47b42433f5a85809a3aadd29c2c339da2c6ed728e4f7762df6b88bccb7874cf0"
+    },
+    {
+      "path": "research/staged544-new-gap-audit/pinned/PROOF.md",
+      "usage": "provenance",
+      "pin": "head:3c7e83240c707b876875da17137db56570e86e09:research/staged544-new-gap-audit/pinned/PROOF.md",
+      "git_blob": "9c44765e6909d774e10350c07d4d4d0c6c80785a",
+      "sha256": "e02b6f4843e240ed3584f0a83384d9f850d291f066457f60b495fc2bd33ef88d"
+    },
+    {
+      "path": "research/staged544-new-gap-audit/pinned/inputs/BORROW-WORD-43base.json.gz",
+      "usage": "input",
+      "pin": "head:3c7e83240c707b876875da17137db56570e86e09:research/staged544-new-gap-audit/pinned/inputs/BORROW-WORD-43base.json.gz",
+      "git_blob": "674ea18ade4af85ca865fb08dc973637a09e30e6",
+      "sha256": "5ca4be99851f8878cbfe0fd6c454df926b11218f17feefa1664721cf03156699"
+    },
+    {
+      "path": "research/staged544-new-gap-audit/pinned/inputs/BORROW-WORD-43extra.json.gz",
+      "usage": "input",
+      "pin": "head:3c7e83240c707b876875da17137db56570e86e09:research/staged544-new-gap-audit/pinned/inputs/BORROW-WORD-43extra.json.gz",
+      "git_blob": "b17e2be67e327f04802fd034c344fe4253c13a4a",
+      "sha256": "965268a9be73d3f62e7ef680d18f108cf064bfe1f44b82157baa61443232904e"
+    },
+    {
+      "path": "research/staged544-new-gap-audit/pinned/search.py",
+      "usage": "input",
+      "pin": "head:3c7e83240c707b876875da17137db56570e86e09:research/staged544-new-gap-audit/pinned/search.py",
+      "git_blob": "ba2e1f3fffe34a8f67417fd1bd0e6fa390142368",
+      "sha256": "94db5a29ed8fed594491b186f4b713213f32526fe67f666412f930cb324f4f51"
+    },
+    {
+      "path": "research/staged544-new-gap-audit/pinned/vendor/retiming.py",
+      "usage": "input",
+      "pin": "head:3c7e83240c707b876875da17137db56570e86e09:research/staged544-new-gap-audit/pinned/vendor/retiming.py",
+      "git_blob": "c33d7bbcdf2435056b3a56526e8e43f6513e381b",
+      "sha256": "591d7278541ac4de9e9b6fc1e17aba23b205ac4b6c81824a28fc08294658ef0d"
     }
   ]
 }
