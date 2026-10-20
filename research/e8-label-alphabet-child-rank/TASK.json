@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "task_id": "complex-rank-shape-decoder",
+  "priority_revision": 6,
+  "base_commit": "bb4bccbf42844d2801487450727c2f63e10d1d0f",
+  "scope_status": "refined",
+  "actual_scope": "On the fixed 120-line E8 label alphabet, bound the support-pairing rank of one term and screen the cheapest same-mass local shape whose children stay inside that rank.",
+  "scope_change_reason": "The card's second method asks for the best effective child rank of one fixed support alphabet, with copies, frames and restoration counted, and its gate rejects an optimistic relaxation as acceptance. This session proves the pairing-rank cap of the existing E8 label alphabet and shows that the ideal rank-9 shape already misses a=1/99. Copies, frames and restoration are not constructed; they are nonnegative, so they cannot repair that failed screen. Payload regrouping into a wider non-pairing child is left open.",
+  "bottleneck_link": "Rank-1 children dominate the selected recursive cost. A larger pairing rank would lower cost per unit of paid mass. The fixed label alphabet cannot supply a pairing child above rank 9, and rank 9 is below the pure cap 44 that first clears a=1/99 in the pinned ceiling.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop once the pairing rank is proved equal to 9, the ideal rank-9 moment is shown above 1 at a=1/99, and the pure cap-44 control still clears that target in the same calculator. Do not search product-root alphabets or zero-transport payload groupings in this session.",
+  "outcome": "negative-result",
+  "evidence": "RESULT.json. The 120x120 pairing has F2 rank 9 and the pinned nine-line minor has rank 9. The selected local profile is {1:2412, 2:418, 3:432, 4:142, 5:82, 8:8}. Ideal {9:5586/9} has relaxation above 1 at a=1/99 and ceiling 1443139659/500000000000. Pure cap 43 fails that target and pure cap 44 clears it.",
+  "author": "unpaidmoon",
+  "ai_assistance": "Substantial Cursor Grok assistance. No independent human or formal-kernel review is claimed.",
+  "original_card": {
+    "id": "complex-rank-shape-decoder",
+    "question": "Can a decoder deliver the local paid mass in fewer, larger-rank children (block frame climbs instead of rank-1 to rank-3 steps)?",
+    "starting_points": [
+      "docs/research/research-family-status.md",
+      "research/complex-local-word-ceiling/README.md",
+      "research/complex-decoder-field-extension-seed44/README.md",
+      "research/complex-frame-pair-decoders/README.md",
+      "research/selected-k8-unrestricted-ends/README.md",
+      "research/eisenstein-reduction-copy-floor/README.md"
+    ],
+    "methods": [
+      "Find one exact small decoding identity whose frame path climbs in blocks, and price its complete per-call profile.",
+      "Bound the best effective child rank achievable for one fixed support alphabet, including copies, frames and restoration."
+    ],
+    "acceptance_gate": "A per-call local profile, with all copied information, frames and restoration counted, whose ceiling exceeds the selected word's by at least 5%; masked or overcomplete supports must change an assumption of the eight-term all-pairs bound. A scoped local result may be retained without a complete supplier. Expanding it into further construction rounds requires the family-level budget and obligation gate in research-family-status.md; an optimistic passing relaxation alone is not acceptance.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "research/complex-local-word-ceiling/verify.py"
+      ],
+      "expected": "PASS_COMPLEX_LOCAL_WORD_CEILING",
+      "inspect": "Read the selected word's per-call local profile, its packing ceiling and the lever table; run levers.py for the ideal budget of the lever you target.",
+      "scope": "Positive control and planning budget only; this is not a new construction or full cold replay."
+    },
+    "first_experiment": "Before any synthesis, write the candidate per-call local profile (and centre charge / unpaid coordinates if changed) and screen it with ceiling.ceiling(); reject it if even the ideal ceiling does not beat the selected word's by your stated margin. Ideal budget: rank-16 delivery is 2.31x (levers.py).",
+    "bottleneck_link": "Rank-1 children are about half of recursive cost; the selected word's effective child rank is about 3.9. Larger-rank delivery lowers recursive cost per unit of paid mass.",
+    "allowed_variations": [
+      "One masked, overcomplete or block decoder family with exact labels and supports.",
+      "A scoped lower bound on effective rank for one alphabet.",
+      "If the coverage law, template or guard changes, derive an applicable fully charged replacement bound instead of applying the incumbent ceiling outside its scope."
+    ],
+    "scope_change_triggers": [
+      "Repacking idle remainders of an unchanged word (covered by the packing ceiling).",
+      "Repeating the eight-term all-pairs search inside its proved scope.",
+      "Only changing helper terminal subspaces and monotone frames within the fixed scalar word, entrances and cleanup contract already covered by #1995/#2013.",
+      "Searching below C=40 in the #2017 Eisenstein binary scalar-rectangle or fixed-support block-linear additive pairing model; specify a changed premise instead. This bound does not cover every complex decoder.",
+      "Continuing a partial cost improvement while leaving the same unpriced consumer, restoration or central-readout obligation unresolved; refresh the family expansion decision first. Local product-retiming evidence has a narrow scope and is not a ban on changed graphs or contracts."
+    ],
+    "overlap_terms": [
+      "rank shape",
+      "block climb",
+      "masked decoder",
+      "overcomplete",
+      "effective rank"
+    ]
+  },
+  "open_questions": [
+    {
+      "question": "Can one zero-transport grouping of the 2412 rank-1 local children emit a recursive child of rank at least 44, with copies, frames and restoration counted?",
+      "why_it_matters": "That child is not a support-pairing term, so the rank-9 cap does not forbid it. It is the remaining way for this template to reach the pure cap that clears a=1/99.",
+      "first_step": "Write one source-bound itinerary and its child-rank inventory, then price every copy, frame and restoration in the pinned ceiling.",
+      "blocked_by": "No such zero-transport itinerary is an input of this package. A charged transport is already the failing side of the PR #3039 test for a at most 1/99."
+    },
+    {
+      "question": "Does any legal decoder identity on this alphabet use a rank-9 term, or do the eight-term and masked hypotheses keep every costly term at rank at most 8?",
+      "why_it_matters": "The rank-9 minor shows the alphabet can name the cost. It does not show that a hosted term pays it. A hosted maximum of 8 would make the ideal screen above slightly weaker, not stronger.",
+      "first_step": "Exhibit one admissible support whose pairing minor has rank 9 inside a stated term budget, or prove that every legal term has rank at most 8.",
+      "blocked_by": "The witness in RESULT.json is only a minor of the full pairing, not a term of a decoder identity."
+    }
+  ]
+}
