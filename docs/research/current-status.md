@@ -10,11 +10,18 @@ Cold replay: `make frontier1094-verify`. This local review explicitly reuses the
 
 **Reviews since the #1094 selection.** These rounds retain scoped constructions,
 negative results, audits and tooling with individual credit, without changing the
-selected κ. The table records frozen review checkpoints, not live queue counts;
-later rounds can revisit older PRs. Use the [PR ledger](pr-ledger.md) for the
-current disposition of a specific contribution. The latest recorded round is
-the [nineteenth reconciliation](community-efficient1900-review.md); its pending
-follow-ups remain separate from incorporated research and supplier admission.
+selected κ. The table records frozen prose review checkpoints, not live queue
+counts; later rounds can revisit older PRs. Use the [PR ledger](pr-ledger.md)
+for the current disposition of a specific contribution. The last prose review
+in this table is the [nineteenth reconciliation](community-efficient1900-review.md).
+Recorded intake continues through the
+[twenty-sixth reconciliation](../../research/community-efficient2600-audit/README.md);
+rounds [2000](../../research/community-efficient2000-audit/README.md) through
+[2600](../../research/community-efficient2600-audit/README.md) are archive and
+tooling intake, not a selected-frontier update. Round 2200's heading says
+"final unbatched remainder"; rounds 2300 through 2600 are recorded after it.
+Pending obligations in every round stay separate from incorporated research
+and supplier admission.
 
 | Review | Frozen PR selection | Disposition |
 | --- | --- | --- |
@@ -36,7 +43,7 @@ follow-ups remain separate from incorporated research and supplier admission.
 | [efficient1600](community-efficient1600-review.md) | #2592–#2715 | 83 merged; 17 pending |
 | [efficient1700](community-efficient1700-review.md) | #2478, #2716–#2828 | 66 merged; 34 pending |
 | [efficient1800](community-efficient1800-review.md) | 42 new/revised submissions; 58 earlier follow-ups | 42 merged; 58 pending |
-| [efficient1900](community-efficient1900-review.md) | 44 new; four revised; 52 earlier follow-ups | Review in progress; see linked review |
+| [efficient1900](community-efficient1900-review.md) | 44 new; four revised; 52 earlier follow-ups | 63 merged; 1 closed as superseded; 36 pending. |
 
 > **Below this point every section is a historical snapshot.** Inside them, “current,”
 > “selected,” “latest” and “next” refer to that snapshot's own checkpoint. The authoritative

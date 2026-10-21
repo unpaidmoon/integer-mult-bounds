@@ -250,7 +250,8 @@ def glob_regex(pattern):
             require(pattern[i] not in '?+[]{}', 'Unsupported glob syntax: ' + pattern)
             out.append(re.escape(pattern[i]))
             i += 1
-    return re.compile('^' + ''.join(out) + '$')
+    # Paths match in full; globstars include LF, which Git permits in filenames.
+    return re.compile(r'\A' + ''.join(out) + r'\Z', re.DOTALL)
 
 
 def triggers(patterns, name):

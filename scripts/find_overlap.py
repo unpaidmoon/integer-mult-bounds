@@ -421,6 +421,11 @@ def main():
         coverage["pr_files"] = {k: source[k] for k in ("fetched_at", "complete_pagination")} if source else None
         if source:
             coverage["pr_files"]["records"] = len(source["records"])
+            truncated = sorted({row["number"] for row in source["records"] if row.get("truncated", False)})
+            coverage["pr_files"]["truncated_prs"] = truncated
+            if truncated:
+                warnings.append(f"pr_files: incomplete file inventories for {len(truncated)} PRs; "
+                                "paths may be missing. Check truncated_prs in coverage, even when no path matches.")
             pulls = snapshot["sources"].get("open_prs", {"records": []})["records"]
             heads = {pull["number"]: pull.get("head") for pull in pulls}
             file_heads = {row["number"]: row.get("head") for row in source["records"]}
@@ -445,7 +450,7 @@ def main():
         hits = {m["number"]: m for m in path_matches}
         matches = [dict(m, **{key: hits[m["number"]][key]
                              for key in ("matched_paths", "head", "body_head", "head_matches",
-                                         "base", "body_base", "base_matches")}) for m in matches
+                                         "base", "body_base", "base_matches", "truncated")}) for m in matches
                    if m.get("kind") == "pr" and m.get("number") in hits]
     if patterns and not any(t.strip() for t in terms):
         matches = []
@@ -462,7 +467,9 @@ def main():
         report["path_patterns"] = patterns
         report["path_limits"] = ("Path matching covers the changed file paths GitHub reports for open PRs, "
                                  "not diff contents; all available file pages are followed. Missing lists or "
-                                 "advertised-count shortfalls are flagged truncated. Head/base identify the file "
+                                 "advertised-count shortfalls are flagged truncated and listed in coverage.pr_files.truncated_prs "
+                                 "independently of matches or --limit. complete_pagination describes list paging, "
+                                 "not completeness of each PR's file inventory. Head/base identify the file "
                                  "snapshot; body_head/body_base identify PR metadata. Both endpoints must match. "
                                  "This is not an atomic server snapshot. Unverified joins are flagged, "
                                  "including inventories with no matching path.")
@@ -485,7 +492,8 @@ def main():
             print("WARNING: " + warning)
         print(f"{len(matches)} possible matches; showing {min(args.limit, len(matches))}")
         for match in matches[:args.limit]:
-            print(f"\n[{match['kind']}] {match['title']}\n{match.get('url', match.get('path'))}")
+            flags = " (file list truncated)" if match.get("truncated") else ""
+            print(f"\n[{match['kind']}] {match['title']}{flags}\n{match.get('url', match.get('path'))}")
             if match.get("head"):
                 print("Head: " + match["head"])
             if match.get("head_matches") is False:

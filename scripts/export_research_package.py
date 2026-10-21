@@ -8,6 +8,7 @@ from contextlib import closing
 import hashlib
 import io
 import json
+import ntpath
 import os
 from pathlib import Path
 import re
@@ -22,6 +23,13 @@ RECEIPT = '.research-export.json'
 FORMAT = 'research-package-export-v1'
 
 
+def bundle_relative_path(name):
+    canonical_relative_path(name)
+    # A POSIX-relative name such as C:/file or C:file can discard the extraction
+    # directory on Windows. Apply the bundle policy on every producer/check host.
+    require(not ntpath.splitdrive(name)[0], 'drive-qualified export path: ' + name)
+
+
 def inventory(root, package, ref):
     require(re.fullmatch(r'research/[a-z0-9][a-z0-9-]*', package),
             'package must be research/<slug>')
@@ -34,7 +42,7 @@ def inventory(root, package, ref):
     inputs = manifest.get('inputs')
     require(isinstance(inputs, list), 'VERIFY.json inputs must be a list')
     for name in inputs:
-        canonical_relative_path(name)
+        bundle_relative_path(name)
         require(name != RECEIPT, 'reserved export path: ' + name)
     require(len(inputs) == len(set(inputs)), 'duplicate declared input')
     records = git(root, '--literal-pathspecs', 'ls-tree', '-r', '-z', '--full-tree',
@@ -44,7 +52,7 @@ def inventory(root, package, ref):
         header, raw_name = record.split(b'\t', 1)
         mode, kind, obj = header.split()
         name = raw_name.decode('utf-8')
-        canonical_relative_path(name)
+        bundle_relative_path(name)
         require(mode in (b'100644', b'100755') and kind == b'blob',
                 'non-regular committed file: ' + name)
         require(name.startswith(package + '/') or name in inputs,
@@ -53,7 +61,17 @@ def inventory(root, package, ref):
     require(set(inputs) <= entries.keys(), 'missing declared input: ' +
             ', '.join(sorted(set(inputs) - entries.keys())))
     require(package + '/VERIFY.json' in entries, 'missing committed manifest')
+    require_file_tree([*entries, RECEIPT])
     return commit, entries
+
+
+def require_file_tree(names):
+    """Regular-file members cannot also be implicit directories for other files."""
+    files = set(names)
+    for name in sorted(files):
+        for parent in canonical_relative_path(name).parents:
+            require(parent.as_posix() not in files,
+                    'file/directory collision: ' + parent.as_posix() + ' and ' + name)
 
 
 def member(name, data, mode=0o644):
@@ -95,7 +113,7 @@ def check_bundle(path):
     seen, receipt = {}, None
     with tarfile.open(path, mode='r:') as archive:
         for item in archive:
-            canonical_relative_path(item.name)
+            bundle_relative_path(item.name)
             require(item.isfile(), 'non-regular archive member: ' + item.name)
             require(item.name not in seen, 'duplicate archive member: ' + item.name)
             require(item.mode in (0o644, 0o755), 'unsupported mode: ' + item.name)
@@ -109,6 +127,7 @@ def check_bundle(path):
                         digest.update(block)
             seen[item.name] = {'path': item.name, 'mode': item.mode, 'size': item.size,
                                'sha256': digest.hexdigest()}
+    require_file_tree(seen)
     require(isinstance(receipt, dict) and receipt.get('format') == FORMAT, 'missing or invalid export receipt')
     require(isinstance(receipt.get('commit'), str) and
             re.fullmatch(r'[0-9a-f]{40,64}', receipt['commit']), 'invalid commit label')
@@ -120,7 +139,7 @@ def check_bundle(path):
     for row in files:
         require(isinstance(row, dict), 'invalid receipt row')
         name = row.get('path')
-        canonical_relative_path(name)
+        bundle_relative_path(name)
         require(name != RECEIPT and name not in expected, 'duplicate or reserved receipt path')
         expected[name] = row
     del seen[RECEIPT]

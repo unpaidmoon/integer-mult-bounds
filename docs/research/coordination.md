@@ -88,6 +88,11 @@ Joined path results show `head`/`base` for the file snapshot,
 `body_head`/`body_base` for PR metadata, and separate `head_matches` and
 `base_matches` flags. Check both flags and `truncated`. Coverage also lists
 `unverified_heads` and `unverified_bases`, even when no path matches the query.
+It also lists PRs with unavailable file lists or advertised-count shortfalls
+in `truncated_prs`, with a warning even when those PRs do not match
+the requested path or fall outside `--limit`. A true `complete_pagination`
+means the list paging finished; it does not mean every PR's file inventory
+is complete. Term-and-path intersections retain each match's `truncated` flag.
 A missing legacy base remains unknown; it is never copied from another snapshot.
 Online path queries refresh endpoint-incomplete sources. Offline or failed
 refreshes keep the old evidence and explicitly report the missing binding.
