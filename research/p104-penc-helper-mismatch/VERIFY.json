@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Literal intertwiner with and without HT=TH; old correction fails; non-projection Pi control; one-bit chart rejects scalar identity; one N-port exchange and fixed helpers; inherited excess 44096."
+    }
+  ]
+}
