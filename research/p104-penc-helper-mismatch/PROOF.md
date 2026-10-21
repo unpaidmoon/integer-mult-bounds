@@ -82,8 +82,10 @@ On one address bit let \(X=\begin{pmatrix}0&1\\1&0\end{pmatrix}\) and
 \[
 iZXZ=-iX\neq I.
 \]
-If \(F=\lambda I\), the normalization identity would require \(iZXZ=I\).
-It does not. So \(F\) is not a scalar multiple of the entrance chart \(I\).
+The zero map satisfies the identity and is not a chart. If \(F=\lambda I\) with
+\(\lambda\neq 0\), divide by \(\lambda\): the identity would require
+\(iZXZ=I\). It does not, since \(iZXZ=-iX\). So \(F\) is not an invertible
+scalar multiple of the entrance chart \(I\), and in particular \(F\neq I\).
 \(R_{\mathrm{full}}\) therefore does not carry a helper from the identity
 entrance to the completed exit.
 

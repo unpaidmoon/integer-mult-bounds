@@ -19,10 +19,11 @@ the same identity on the witness.
 
 PR #3954 extends every compatibility map by the identity on the 72 dirty
 helper roles. That extension fixes every helper value. The completed-role
-chart \(F\) is not a scalar multiple of the identity entrance: on one address
-bit, \(C^2=X\) and the normalization identity would otherwise require
-\(iZXZ=I\), while \(iZXZ=-iX\). So \(R\) matches the data banks and does not
-carry a helper from the pinned entrance \(I\) to the completed exit \(F\).
+chart \(F\) is not an invertible scalar multiple of the identity entrance: on
+one address bit, \(C^2=X\) and a nonzero scalar multiple would require
+\(iZXZ=I\), while \(iZXZ=-iX\). The zero map is not a chart. So \(R\) matches
+the data banks and does not carry a helper from the pinned entrance \(I\) to
+the completed exit \(F\).
 
 One factor \(\Pi\) exchanges the 96 N-port slots and fixes the 8 J-port slots.
 Realizing both factors around \(P_{\mathrm{enc}}\) is 192 N-port exchanges.

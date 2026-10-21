@@ -185,7 +185,7 @@ def check_chart_not_scalar_identity():
     conjugated = gmat_mul(z_matrix, gmat_mul(x_matrix, z_matrix))
     require(conjugated == gscale(g(-1), x_matrix), "Z X Z")
     i_times = gmat_mul([[g(0, 1), zero], [zero, g(0, 1)]], conjugated)
-    require(i_times != eye_g, "normalization rejects F = scalar I")
+    require(i_times != eye_g, "normalization rejects invertible scalar F")
     require(i_times == gscale(g(0, -1), x_matrix), "i Z X Z = -i X")
 
 
