@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Q A = A P with one dirty helper; P and P_enc fail on a separating state; 96 swaps cost 288 additions; non-projection is not an involution; scaffold excess is 44096."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "{package}/test_verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "A two-step exchange is not a swap; a mutated helper is not Pi; adding 288 rank-1 children still exceeds capacity; then the main certificate passes."
+    }
+  ]
+}
