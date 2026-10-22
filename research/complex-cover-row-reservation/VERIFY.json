@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/unconditional-batched-crt/AUDIT.md",
+    "research/unconditional-batched-crt/COMPLEX.md"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Sentence binding in COMPLEX.md and AUDIT.md; Gamma order and decimal hash; dot-product and perpendicular counts at n=1,3,5; written ceil pad fails for D=1..4; power-of-two control fits; floor repair keeps one copy; depth decreases and two levels halve."
+    }
+  ]
+}

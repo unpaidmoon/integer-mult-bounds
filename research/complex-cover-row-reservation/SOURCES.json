@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "base_commit": "fbc9ea0249746acca4f504d4fda2b84e0e36cf0d",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "c35482cd9035843b15a634cc8276a7e1e40e8395",
+      "sha256": "6fe0a099b89aa2aed796a13c3a21dafc63f3388ebf397464e44e0451893b9375"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "f126dd2e2dad2b669e75d1d0d0bd05c600725602",
+      "sha256": "f7a48bfa2659b88378282a8eee7d9fe52cdf505594124c4d1686b58510fffd72"
+    },
+    {
+      "path": "research/unconditional-batched-crt/AUDIT.md",
+      "usage": "input",
+      "git_blob": "cd59c5e786a3d37de027b8d0f7376fbb00d52efd",
+      "sha256": "2a6c84ba32c6febee0cbc205210a8935c481d40ec1d52d621442e03221cacc3d"
+    },
+    {
+      "path": "research/unconditional-batched-crt/COMPLEX.md",
+      "usage": "input",
+      "git_blob": "c3be56fbfdb4fb29c1ace88cbcdfa7475fb6e343",
+      "sha256": "853e1295850862752e4f854aa9e8b28f9ca6eaa9306e2af110b7b77526d1b5e1"
+    }
+  ]
+}
