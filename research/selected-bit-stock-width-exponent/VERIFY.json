@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "certificates/selected-result.json",
+    "research/joint-helper-lattice/PROOF.md",
+    "research/joint-helper-lattice/RESULT.json",
+    "research/joint-helper-lattice/verify.py",
+    "research/pr4359-p7-padding/dependencies/compiler-refill/endpoint.py",
+    "research/query-thinned-controllers/PROOF.md",
+    "research/query-thinned-controllers/RESULT.json"
+  ],
+  "commands": [
+    {
+      "argv": ["{python}", "-B", "{package}/verify.py"],
+      "timeout_seconds": 60,
+      "checks": "Recompute the selected BIT width exponent, both exact slacks, and the inherited 3/1000 guard identity; reject that exponent as an adapter"
+    },
+    {
+      "argv": ["{python}", "-I", "-O", "-B", "{package}/verify.py"],
+      "timeout_seconds": 60,
+      "checks": "Same certificate with assertions removed; require() still enforces every identity"
+    },
+    {
+      "argv": ["{python}", "-B", "{package}/test_verify.py"],
+      "timeout_seconds": 60,
+      "checks": "Reject the exponent 3/1000 as the selected guard and as an adapter"
+    }
+  ]
+}
