@@ -1,11 +1,42 @@
 # CI verification
 
-## Current selected-family replay
+## Current selected-family replay: #4470
+
+The [selected record](../certificates/selected-result.json) binds conditional
+κ = 0.00302015, the [review](research/pr-intake-evidence/pr4470/PROOF-REVIEW.md),
+[explicit source closure](../certificates/frontier4470-source.json), and
+[integration receipt](research/pr-intake-evidence/pr4470/INTEGRATION.json).
+
+`make frontier4470-verify` authenticates the selected metadata and exports only
+110 reviewed inputs plus its pinned harness into a fresh directory. It then
+runs eight jobs serially with per-job timeouts and a sampled 1 GiB descendant
+memory limit. The exact-source PR4359 and PR4416 foundation reviews are reused
+explicitly; this is not an undisclosed full historical cold replay. No Lean,
+Docker or optimization search is part of this target.
+
+The [frontier4470 workflow](../.github/workflows/frontier4470.yml) uses Ubuntu
+and Python 3.12, read-only permissions and serial execution. It uploads the
+combined validation receipt and individual logs. Historical #4359 and #1094
+workflows are now manual-only. The integration receipt records local and hosted
+status separately; a newly installed workflow is not evidence of a Linux pass.
+
+`make selected-record-check` verifies hashes and the exact selected κ.
+`python3 -B scripts/research_selected_baseline.py` additionally compares the
+raw certificate's budget stages. Neither is an operator replay or a proof of
+the inherited all-column, movement, compiler, precision, analytic or recovery
+contracts. Frozen source packages retain their original provenance records;
+the replay deliberately supplies those records from historical snapshots.
+
+Selected source pointers: [manifest](../certificates/frontier4470-source.json),
+[proof review](research/pr-intake-evidence/pr4470/PROOF-REVIEW.md), and
+[review validation](research/pr-intake-evidence/pr4470/VALIDATION.json).
+
+## Historical selected-family replay through #1094
 
 Start with the [selected record](../certificates/selected-result.json). Its
 `reproduce`, `review`, `source_manifest` and `validation` fields identify the
 replay command, scoped assessment, source bindings and integration evidence.
-At this checkpoint, the selected composition is #589 with #1094, documented in
+At that checkpoint, the selected composition is #589 with #1094, documented in
 [the review](research/community-batch1099-review.md),
 [the source manifest](../research/community-frontier1094-audit/SELECTED-SOURCE.json)
 and [the integration receipt](research/community-batch1099-integration.json).

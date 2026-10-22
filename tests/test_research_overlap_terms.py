@@ -44,7 +44,11 @@ class OverlapTaskTermsTests(unittest.TestCase):
                          {"fetched_at": sources["open_prs"]["fetched_at"],
                           "complete_pagination": True, "records": len(records)})
         self.assertEqual(report["status"], "POSSIBLE_OVERLAP_NOT_A_NOVELTY_CERTIFICATE")
-        self.assertEqual(len(report["warnings"]), 2)
+        # This copied-script fixture is not a Git checkout; only local inventory
+        # coverage is unknown, independently of the two offline-source warnings.
+        self.assertIsNone(report["coverage"]["local"]["complete_head_inventory"])
+        self.assertEqual(sum(w.startswith("local:") for w in report["warnings"]), 1)
+        self.assertEqual(len(report["warnings"]), 3)
         return report
 
     def test_nested_evidence_does_not_hide_a_lead_below_the_default_limit(self):

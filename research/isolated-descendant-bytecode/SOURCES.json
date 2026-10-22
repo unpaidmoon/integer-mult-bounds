@@ -22,7 +22,7 @@
     },
     {
       "path": "scripts/research_package.py",
-      "usage": "input",
+      "usage": "provenance",
       "git_blob": "404823640a4506cc363d5e999b724553a41a39a2",
       "sha256": "8e1fe8bebe7f045c82a672a103ed87a35cd9dfdbab5848b97969350449d0c8b4"
     },

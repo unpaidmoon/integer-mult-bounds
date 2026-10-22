@@ -694,3 +694,15 @@ frontier1042-capsule-closure-verify:
 	python3 -O -B research/frontier1042-capsule-closure-seed75/verify.py --check
 	python3 -B research/frontier1042-capsule-closure-seed75/test_package.py
 	python3 -O -B research/frontier1042-capsule-closure-seed75/test_package.py
+
+# Selected productive-helper construction; sequential fresh replay outside checkout.
+.PHONY: frontier4359-verify
+frontier4359-verify: selected-record-check
+	@work=$$(mktemp -d "$${TMPDIR:-/tmp}/integer-mult-frontier4359.XXXXXX"); \
+	python3 -B scripts/verify_frontier4359.py --work "$$work/replay"
+
+# Current selected changed-construction replay; prior foundation reuse is explicit.
+.PHONY: frontier4470-verify
+frontier4470-verify: selected-record-check
+	@work=$$(mktemp -d "$${TMPDIR:-/tmp}/integer-mult-frontier4470.XXXXXX"); \
+	python3 -B scripts/verify_frontier4470.py --work "$$work/replay"

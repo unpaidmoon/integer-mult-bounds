@@ -48,13 +48,40 @@ path can still be declared), never fewer.
 A row without an explicit `pin` resolves as `base_commit:<path>`. A file vendored
 from a pull-request head can instead carry `"pin": "head:<40-hex sha>:<path>"`,
 whose bytes resolve at that commit rather than at the package base. Any other
-pin form fails closed. The originating task catalogue
+pin form fails closed. Both forms preserve the exact path, including any LF or
+CRLF characters in a Git filename; encode them as JSON escapes in the manifest.
+The originating task catalogue
 `docs/research/agent-task-catalog.json` must stay pinned at `base_commit`, so a
 later catalogue revision cannot replace the card a package answers. Pins resolve
 only against Git objects reachable in this repository (the base commit or an
 explicit head sha); there is no `external` pin for bytes that are not a Git
 object here. For such an input, record its source and a byte-equality check in
 the verifier and explain the gap in the README.
+
+Shared Git source readers ignore local replacement refs, including a custom
+`GIT_REPLACE_REF_BASE` namespace. Otherwise Git can report the original blob ID
+while returning a replacement's bytes, allowing locally generated pins to fail
+in a clean checkout. The generator, metadata validator, HEAD input inventory,
+committed-byte preflight and package exporter use the stored objects. Replacement
+refs are left intact; the policy applies only to these Git subprocesses and does
+not change the caller's environment or verifier subprocesses. This authenticates
+source bytes, not publication ancestry or mathematical claims; the optional
+source-history preflight below remains separate.
+
+Regression controls use temporary Git repositories with blob and commit
+replacements, the legacy batch fallback, newline paths, a custom replacement
+namespace, forged live pins and an exported payload:
+
+```sh
+python3 -W error -B -m unittest discover -s tests -p 'test_research_git_replacements.py' -v
+```
+
+This extends the immutable-object policy of Nick Petalas's
+[source-history preflight (PR3304)](https://github.com/CrocSwap/integer-mult-bounds/pull/3304)
+to the shared source readers. The runner and scaffold retain Douglas Colkitt's
+attribution, and the exporter retains Tekalign's. Added regression coverage and
+reader policy prepared for roger-sato with substantial OpenAI Codex assistance;
+Apache-2.0.
 
 `original_card` in `TASK.json` must equal the full pinned catalogue card object.
 Hand authors can print the exact object instead of copying it by hand:
