@@ -79,6 +79,20 @@ pins are in [SOURCES.json](SOURCES.json). Canonical scientific base is
 runner is provenance; the manifest also declares the evolving live runner and
 regressions for replay selection.
 
+The `research_package.py` source row is historical provenance: `verify.py`
+loads that helper from the exact base-commit Git blob and checks its original
+SHA256 before copying it into the differential fixture. Its base, blob and
+SHA256 are unchanged. The original manifest is retained at commit
+`20ecf2891d80b5acf18d980b2164fb44ea7faa90` (blob
+`5e2d5560769ca754175472d123829a8586bb4ddc`). Classifying this row as a live
+byte pin incorrectly prevented compatible changes to the current helper.
+`VERIFY.json` still declares the current helper as an input for replay
+selection, and its unchanged third command runs the eight current-helper
+bytecode regressions. The sixteen-run historical differential, all three
+registered commands, verifier and `RESULT.json` are retained unchanged.
+This metadata correction was prepared for roger-sato with substantial OpenAI
+Codex assistance; Arham Tahir's original work and source credit are retained.
+
 ```sh
 python3.12 -B scripts/research_package.py --package research/isolated-descendant-bytecode --check-only
 python3.12 -B scripts/research_package.py --package research/isolated-descendant-bytecode
