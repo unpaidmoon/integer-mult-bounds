@@ -994,7 +994,7 @@
     "summary": "37 copied manifest failures trace the same JSON/manifest mismatch to upstream PR1673; broader bundles differ. Provenance does not repair integrity. Preserve holds.",
     "upstream_head": "85ddaa312e463cfaca98d49a2a262994551cec4e"
   },
-  "next": "Zero actionable heads at closing refresh.196 PRs merged:194 source archives, reviewed descendant bytecode isolation (#3348) and worker-width report (#3358).36 focused tests passed; no contribution verifier, Lean, Docker or supplier replay.136 drafts,103 waiting revisions and7 deferred replays remain. PR1365/1494 retain dedicated formalization obligations; PR3251 retains physical-operator objections; PR2361 remains unchanged automatic-CI hold after watched source update. PR3436 complete worker package and superseded PR3457 allocation retained in historical trees; PR3465 is default-tree successor. Refresh once next session; do not rereview dormant holds. Selected kappa unchanged.",
+  "next": "Delta-only intake caught up at the recorded live snapshot (302 open, zero actionable). Resume with plan --refresh; do not reopen unchanged holds. Selected conditional kappa remains 0.00302015. PR4610 remains a separately scheduled substantive candidate. PR5140/5147 successor revisions are retained in history only; frozen default-tree packages are unchanged. PR5167 is staged conformance with incorrect integer recovery, not an admitted multiplier.",
   "publication": {
     "source_commit": "484a8adea580345a7c37d8ac772cedfd47bcde92",
     "merged": [
@@ -1011,213 +1011,52 @@
     "evidence": "docs/research/pr-intake-evidence/windows-and-new-archives-20261016.json"
   },
   "latest_publication": {
-    "source_publication_commit": "608309dc48f22b729ad0edc650f53f53fa173538",
-    "merged": [
-      3332,
-      3333,
-      3334,
-      3335,
-      3336,
-      3337,
-      3338,
-      3339,
-      3340,
-      3341,
-      3342,
-      3343,
-      3344,
-      3345,
-      3346,
-      3347,
-      3348,
-      3349,
-      3350,
-      3351,
-      3352,
-      3353,
-      3354,
-      3356,
-      3357,
-      3358,
-      3359,
-      3360,
-      3361,
-      3362,
-      3363,
-      3364,
-      3365,
-      3366,
-      3367,
-      3368,
-      3369,
-      3370,
-      3371,
-      3372,
-      3373,
-      3374,
-      3375,
-      3376,
-      3377,
-      3378,
-      3379,
-      3380,
-      3381,
-      3382,
-      3383,
-      3384,
-      3385,
-      3386,
-      3387,
-      3388,
-      3389,
-      3390,
-      3391,
-      3392,
-      3393,
-      3394,
-      3395,
-      3396,
-      3397,
-      3398,
-      3399,
-      3400,
-      3401,
-      3402,
-      3403,
-      3404,
-      3405,
-      3406,
-      3407,
-      3408,
-      3409,
-      3410,
-      3411,
-      3412,
-      3413,
-      3414,
-      3415,
-      3416,
-      3417,
-      3418,
-      3419,
-      3420,
-      3421,
-      3422,
-      3423,
-      3424,
-      3425,
-      3426,
-      3427,
-      3428,
-      3429,
-      3430,
-      3431,
-      3432,
-      3433,
-      3434,
-      3435,
-      3436,
-      3437,
-      3438,
-      3439,
-      3440,
-      3441,
-      3442,
-      3443,
-      3444,
-      3445,
-      3446,
-      3447,
-      3448,
-      3449,
-      3450,
-      3451,
-      3452,
-      3453,
-      3454,
-      3455,
-      3456,
-      3457,
-      3458,
-      3459,
-      3460,
-      3461,
-      3462,
-      3463,
-      3464,
-      3465,
-      3466,
-      3467,
-      3468,
-      3469,
-      3470,
-      3471,
-      3472,
-      3473,
-      3474,
-      3475,
-      3476,
-      3477,
-      3478,
-      3479,
-      3480,
-      3481,
-      3482,
-      3483,
-      3484,
-      3485,
-      3486,
-      3487,
-      3488,
-      3489,
-      3490,
-      3491,
-      3492,
-      3493,
-      3494,
-      3495,
-      3496,
-      3497,
-      3498,
-      3499,
-      3500,
-      3501,
-      3502,
-      3503,
-      3504,
-      3505,
-      3506,
-      3507,
-      3508,
-      3509,
-      3510,
-      3511,
-      3512,
-      3513,
-      3514,
-      3515,
-      3516,
-      3517,
-      3518,
-      3519,
-      3520,
-      3521,
-      3522,
-      3523,
-      3524,
-      3525,
-      3526,
-      3527,
-      3528
+    "commits": [
+      "5a0e4b6c270124a86a6da02eb6133d2b5cd70233",
+      "40991fac20d22099114e58a9f93df00b39297fbd"
     ],
-    "prepared": [],
-    "archive_count": 194,
-    "reviewed_tooling_count": 2,
+    "decisions": 49,
+    "merged": 49,
+    "archive_count": 48,
+    "reviewed_tooling_count": 1,
+    "new_revision_holds": [],
+    "actionable_remaining": 1,
+    "selected_frontier_changed": false,
+    "scientific_replays": 0,
+    "checks": "450 changed paths inventoried; Python/JSON syntax and 768 available source-pin checks. Installed Git modes/blobs verified. PR5185: 57 reader and 35 caller tests in each normal/optimized mode. Per-decision invariants and ledger Markdown checked. No scientific verifier, Lean or Docker executed.",
     "evidence": [
-      "docs/research/pr-intake-evidence/queue-oct18-20261018.json",
-      "docs/research/pr-intake-evidence/queue-oct18b-20261018.json"
+      "docs/research/pr-intake-evidence/queue-oct23m-20261023.json",
+      "docs/research/pr-intake-evidence/queue-oct23m-closures.json",
+      "docs/research/pr-intake-evidence/queue-oct23m-tooling-tests.json",
+      "docs/research/pr-intake-evidence/queue-oct23n-20261023.json",
+      "docs/research/pr-intake-evidence/queue-oct23n-closures.json",
+      "docs/research/pr-intake-evidence/queue-oct23mn-final-snapshot.json"
     ],
-    "selected_frontier_changed": false
+    "remaining_queue": {
+      "base": "40991fac20d22099114e58a9f93df00b39297fbd",
+      "observed_at": "2026-10-23T13:11:16.372857+00:00",
+      "counts": {
+        "draft": 177,
+        "waiting_revision": 118,
+        "deferred_replay": 7,
+        "new": 1
+      },
+      "open_count": 303,
+      "actionable_count": 1,
+      "remaining_actionable": 0,
+      "selected": [
+        {
+          "number": 5235,
+          "head": "48976daa4dce59b4867ef046da72a370e389925d",
+          "title": "Add compact universal certificates for dirty linear circuits (no new \u03ba)",
+          "lane": "new",
+          "changes": [],
+          "reason": "No cached intake decision.",
+          "evidence": []
+        }
+      ]
+    },
+    "next_action": "PR5235 arrived during publication and remains new/actionable. Resume delta-only intake; do not rereview unchanged revision holds or deferred replays."
   },
   "reported_followups": [
     {
@@ -1264,16 +1103,551 @@
         2890
       ],
       "scope": "Archived source reports an explicit counterexample to Lemma C5 nonparallel-center classification and supplies a corrected arbitrary-field classification. Independent proof validation remains open; consult correction before relying on the predecessor lemma."
+    },
+    {
+      "source_pr": 4046,
+      "source_head": "84c2b2072e7cba265fc1e43f28ccd558b5a4cbfa",
+      "affected_prs": [
+        3934,
+        3939,
+        3955,
+        3958,
+        3959
+      ],
+      "scope": "Source archive reports inherited retracted idle-axis operator defects on the complex side. Do not select these larger claims without resolving the exact operator objection. Bit-side work is not thereby refuted; draft/held status is unchanged."
+    },
+    {
+      "source_pr": 4321,
+      "source_head": "05ff71ae097fe5cf19894beb83178cac442bbd35",
+      "affected_prs": [
+        4100
+      ],
+      "scope": "Contributor reports frozen-versus-live control-digit wording discrepancy; implementation reads live values. Review exact text and implementation together. Source archived; independent scientific validation remains open."
+    },
+    {
+      "source_pr": 4329,
+      "source_head": "a3b9095c536c404e11d2ed868699fc4fcd4d4f57",
+      "affected_prs": [
+        4100,
+        4174
+      ],
+      "scope": "Contributor reports that mod-K coloring needs K-1 guard bits and that tested PR4174 production descriptors have empty good sets. Scoped author finding, not independent refutation of the selected PR4359 result. Source archived; independent scientific validation remains open."
+    },
+    {
+      "source_pr": 4265,
+      "source_head": "665bfe79d726a0cb3494326d2f63ae81d313302f",
+      "affected_prs": [],
+      "scope": "Contributor reports a counterexample to a proposed general-target right-vector formula over M2(F2): three rather than two operations required. Source archived; independent scientific validation remains open."
+    },
+    {
+      "source_pr": 4339,
+      "source_head": "a6e02c006ccbb6612c3a6e8fcae8ae49c2f474c4",
+      "affected_prs": [],
+      "scope": "Contributor reports a P104 fiber-tag transpose correction; consult before reusing that scoped identity. Source archived; independent scientific validation remains open."
+    },
+    {
+      "source_pr": 4842,
+      "source_head": "acd3384454083d4eb673343eb7762877d43e5394",
+      "affected_prs": [
+        4813,
+        4818,
+        4819,
+        4826
+      ],
+      "scope": "Archived exact-source audit reports full-cascade condition number 3, contradicting smaller claimed loop-based bounds, and missing chronological paid-word admission. Four proposals held for correction or narrowed claims. No larger kappa selected."
+    },
+    {
+      "source_pr": 4946,
+      "affected_prs": [
+        2542,
+        2634,
+        2691
+      ],
+      "scope": "Archived author audit reports an unsound bit-0 census prune and classifies downstream use; claims existing replacement evidence covers relied exclusions. Source/integrity intake only; not independently replayed in this bulk pass."
+    },
+    {
+      "source_pr": 4951,
+      "affected_prs": [
+        4470
+      ],
+      "scope": "Archived independent invoice/moment join reports exact agreement and surplus smaller than one rank-one job. Physical charge completeness and stage-zero unit applicability remain stated audit questions; no change to selected result."
+    },
+    {
+      "source_pr": 5036,
+      "source_head": "a3b9733472db1da15d93745e9859b6a11bc1a555",
+      "affected_prs": [
+        4933,
+        4940,
+        5027,
+        5035
+      ],
+      "scope": "Archived source-bound counterexample reports a nonzero Y-to-Y residual for the specified physical-code substitution. Scalar compiler reserve and inverse-code arithmetic do not discharge this caller-binding gap. Independent scientific audit remains open; no general controller impossibility or selected-result defect inferred."
+    },
+    {
+      "source_pr": 5039,
+      "affected_prs": [
+        4470,
+        4951
+      ],
+      "scope": "Archived scoped owned-query/whole-IDLE charge correspondence retains physical ABIs as hypotheses. No full supplier or compiler review and no selected-frontier change."
     }
   ],
   "latest_queue": {
-    "open_count": 246,
-    "actionable_count": 0,
+    "base": "40991fac20d22099114e58a9f93df00b39297fbd",
+    "observed_at": "2026-10-23T13:11:16.372857+00:00",
     "counts": {
-      "draft": 136,
-      "waiting_revision": 103,
-      "deferred_replay": 7
+      "draft": 177,
+      "waiting_revision": 118,
+      "deferred_replay": 7,
+      "new": 1
     },
-    "observed_at": "2026-10-18T04:52:14.923558+00:00"
+    "open_count": 303,
+    "actionable_count": 1,
+    "remaining_actionable": 0,
+    "selected": [
+      {
+        "number": 5235,
+        "head": "48976daa4dce59b4867ef046da72a370e389925d",
+        "title": "Add compact universal certificates for dirty linear circuits (no new \u03ba)",
+        "lane": "new",
+        "changes": [],
+        "reason": "No cached intake decision.",
+        "evidence": []
+      }
+    ]
+  },
+  "bulk_intake_20261020_completed": {
+    "decisions": 586,
+    "integrations": 569,
+    "archives": 549,
+    "tooling": 20,
+    "new_revision_holds": 14,
+    "new_deferrals": 3,
+    "latest_turn_decisions": 386,
+    "latest_turn_integrations": 382,
+    "latest_turn_archives": 380,
+    "latest_turn_tooling": 2,
+    "latest_turn_new_holds": [
+      4017,
+      4079,
+      4090,
+      4110
+    ],
+    "actionable_remaining": 0,
+    "selected_frontier_changed": false,
+    "heavy_replays_run": false
+  },
+  "bulk_intake_20261021_completed": {
+    "exact_head_decisions": 248,
+    "counts": {
+      "deferred_replay": 1,
+      "waiting_revision": 5,
+      "archive": 239,
+      "reviewed_tooling": 3
+    },
+    "integrations": 242,
+    "publication_only_watch_refreshes": 43,
+    "evidence": [
+      "docs/research/pr-intake-evidence/queue-oct21a-20261021.json",
+      "docs/research/pr-intake-evidence/queue-oct21b-20261021.json",
+      "docs/research/pr-intake-evidence/queue-oct21c-20261021.json",
+      "docs/research/pr-intake-evidence/queue-oct21d-20261021.json"
+    ],
+    "selected_frontier_changed": false,
+    "heavy_replays_run": false,
+    "tooling_tests_passed": 60,
+    "actionable_remaining": 0
+  },
+  "latest_substantive_review": {
+    "prs": [
+      4470
+    ],
+    "dependencies": [
+      4440,
+      4441,
+      4447
+    ],
+    "independent_audits_replayed": [
+      4504,
+      4478,
+      4464,
+      4466
+    ],
+    "kappa": "60403/20000000",
+    "status": "passed_conditional_changed_construction",
+    "evidence": [
+      "docs/research/pr-intake-evidence/pr4470/PROOF-REVIEW.md",
+      "docs/research/pr-intake-evidence/pr4470/VALIDATION.json",
+      "docs/research/pr-intake-evidence/pr4470/SOURCE-REUSE.json",
+      "docs/research/pr-intake-evidence/pr4470/REVIEWED-SOURCES.json",
+      "docs/research/pr-intake-evidence/pr4470/INTEGRATION.json"
+    ],
+    "selected_frontier_changed": true
+  },
+  "next_substantive_review": {
+    "source_pr": 4610,
+    "source_head": "20bb93cd990d2ff683e4d0fc56b87a42cd5d3296",
+    "claim": "Conditional TM kappa 0.0030217758; archived, not selected.",
+    "supporting_followup": [
+      4532,
+      4535,
+      4536,
+      4537,
+      4568,
+      4569,
+      4570,
+      4614,
+      4615,
+      4616,
+      4640
+    ],
+    "plan": "Audit the current native/helper ABI and complete profile, critical-root compiler and outer transfer. Bind independent audits to their actual older source versions before reusing evidence; original 4614-4616 do not certify every later 4610 revision. Do not rerun unchanged selected historical suites.",
+    "separate_bit_followup": {
+      "pr": 4814,
+      "claim": "Ordinary BIT saving 0.003475458; separate supplier claim, not a global multiplication bound.",
+      "status": "Source archive only; requires exact supplier admission and coupled assembly review."
+    }
+  },
+  "bulk_intake_20261022_completed": {
+    "merged": 236,
+    "research_archives": 230,
+    "reviewed_tooling": [
+      4579,
+      4631,
+      4679,
+      4683,
+      4686,
+      4738
+    ],
+    "unchanged_attribute_wakes_resolved": 42,
+    "scientific_replays": 0,
+    "scope": "Exact Git inventories, syntax and declared source integrity for archives; separately reviewed and focused-tested tooling. No scientific frontier promotion. Native Windows author evidence retained but not independently replayed on macOS."
+  },
+  "bulk_intake_20261022_second_pass": {
+    "decisions": 149,
+    "merged": 145,
+    "research_archives": 141,
+    "execution_evidence_archives": [
+      4905
+    ],
+    "reviewed_tooling": [
+      4779,
+      4857,
+      4906
+    ],
+    "new_revision_holds": [
+      4813,
+      4818,
+      4819,
+      4826
+    ],
+    "actionable_remaining": 0,
+    "scientific_replays": 0,
+    "local_tooling_tests": {
+      "executed_passed": 46,
+      "platform_skipped": 23
+    },
+    "evidence": [
+      "docs/research/pr-intake-evidence/queue-oct22e-20261022.json",
+      "docs/research/pr-intake-evidence/queue-oct22e-closures.json",
+      "docs/research/pr-intake-evidence/queue-oct22f-20261022.json",
+      "docs/research/pr-intake-evidence/queue-oct22f-closures.json"
+    ]
+  },
+  "bulk_intake_20261023_completed": {
+    "decisions": 20,
+    "merged": 20,
+    "research_archives": 19,
+    "historical_only": [
+      4947
+    ],
+    "reviewed_tooling": [
+      4936
+    ],
+    "new_revision_holds": [],
+    "external_closures_without_merge": [
+      4813,
+      4818,
+      4819,
+      4826
+    ],
+    "actionable_remaining": 0,
+    "scientific_replays": 0,
+    "local_tooling_tests_passed": 14,
+    "evidence": [
+      "docs/research/pr-intake-evidence/queue-oct22h-20261022.json",
+      "docs/research/pr-intake-evidence/queue-oct22h-closures.json",
+      "docs/research/pr-intake-evidence/queue-oct22i-20261022.json",
+      "docs/research/pr-intake-evidence/queue-oct22i-closures.json",
+      "docs/research/pr-intake-evidence/queue-oct23-external-closures.json"
+    ]
+  },
+  "bulk_intake_20261023_second_pass": {
+    "decisions": 34,
+    "merged": 34,
+    "research_archives": 29,
+    "reviewed_tooling_and_docs": [
+      4964,
+      4973,
+      4975,
+      4984,
+      4988
+    ],
+    "new_revision_holds": [],
+    "actionable_remaining": 0,
+    "scientific_replays": 0,
+    "tooling_tests_passed": 71,
+    "platform_skipped": 7,
+    "publication_commit": "9f789e8a33aef8aa224dbc77a78c69f5fd6d4618",
+    "evidence": [
+      "docs/research/pr-intake-evidence/queue-oct23a-20261023.json",
+      "docs/research/pr-intake-evidence/queue-oct23a-closures.json",
+      "docs/research/pr-intake-evidence/queue-oct23a-final-snapshot.json"
+    ]
+  },
+  "bulk_intake_20261023_third_pass": {
+    "commit": "25594d6fb1cc7e01b684129214189e470abce904",
+    "decisions": 10,
+    "merged": 10,
+    "archive_count": 10,
+    "reviewed_tooling_count": 0,
+    "new_revision_holds": [],
+    "selected_frontier_changed": false,
+    "evidence": [
+      "docs/research/pr-intake-evidence/queue-oct23b-20261023.json",
+      "docs/research/pr-intake-evidence/queue-oct23c-20261023.json",
+      "docs/research/pr-intake-evidence/queue-oct23b-closures.json",
+      "docs/research/pr-intake-evidence/queue-oct23c-closures.json"
+    ],
+    "actionable_remaining": 0,
+    "scientific_replays": 0,
+    "checks": "Git inventories, AST/JSON syntax, available source pins, ledger Markdown and per-decision invariants. Full historical reconciliation was not completed because its historical audit is absent from this sparse checkout."
+  },
+  "bulk_intake_20261023_fourth_pass": {
+    "commit": "9deaf5cf4420605d45b087f2fc40e689e17a2f21",
+    "decisions": 29,
+    "merged": 29,
+    "archive_count": 26,
+    "reviewed_tooling_count": 3,
+    "reviewed_tooling": [
+      5002,
+      5017,
+      5028
+    ],
+    "new_revision_holds": [],
+    "selected_frontier_changed": false,
+    "evidence": [
+      "docs/research/pr-intake-evidence/queue-oct23d-20261023.json",
+      "docs/research/pr-intake-evidence/queue-oct23e-20261023.json",
+      "docs/research/pr-intake-evidence/queue-oct23d-closures.json",
+      "docs/research/pr-intake-evidence/queue-oct23e-closures.json"
+    ],
+    "actionable_remaining": 0,
+    "tooling_tests_passed": 38,
+    "arithmetic_equivalence_replays": 2,
+    "supplier_outer_replays": 0,
+    "notes": "All original downset receipt evidence identical; 93 new product controls. No Lean, Docker, hosted workflow dispatch or archive scientific replay. First tooling invocation had one mistyped test-module name; corrected SIGTERM module passed separately."
+  },
+  "bulk_intake_20261023_fifth_pass": {
+    "commits": [
+      "9269eea18a6a10dddeac6a4f696904c55ef1d365",
+      "d809e986a1b1b45aae167ce83e85b989e5174e97"
+    ],
+    "decisions": 35,
+    "merged": 35,
+    "archive_count": 33,
+    "reviewed_tooling": [
+      5047,
+      5050
+    ],
+    "additional_fixture_fix_from": 5046,
+    "actionable_remaining": 0,
+    "selected_frontier_changed": false,
+    "supplier_outer_replays": 0,
+    "local_tests": {
+      "passed": 79,
+      "skipped": 18,
+      "failed_due_to_absent_historical_fixture": 1
+    },
+    "notes": "Historical frontier1042 fixture absent from sparse checkout; not a new-code failure. Windows native evidence retained from author only. No Lean, Docker or hosted workflow dispatched.",
+    "evidence": [
+      "docs/research/pr-intake-evidence/queue-oct23f-20261023.json",
+      "docs/research/pr-intake-evidence/queue-oct23f-closures.json",
+      "docs/research/pr-intake-evidence/queue-oct23g-20261023.json",
+      "docs/research/pr-intake-evidence/queue-oct23g-closures.json"
+    ],
+    "remaining_queue": {
+      "counts": {
+        "draft": 176,
+        "waiting_revision": 118,
+        "deferred_replay": 7
+      },
+      "open_count": 301,
+      "actionable_count": 0,
+      "observed_at": "2026-10-23T08:20:37.912208+00:00"
+    }
+  },
+  "bulk_intake_20261023_sixth_pass": {
+    "commits": [
+      "bf5519aa000c0dac09e0c3fd2706558c4af6a481",
+      "b898c28c4a2c0c6a5cdab0c6e56d1e71e40c57e8"
+    ],
+    "decisions": 32,
+    "merged": 32,
+    "archive_count": 30,
+    "reviewed_tooling": [
+      5082,
+      5102
+    ],
+    "new_revision_holds": [],
+    "actionable_remaining": 0,
+    "selected_frontier_changed": false,
+    "supplier_outer_replays": 0,
+    "local_tests": {
+      "normal_cases": 223,
+      "normal_platform_skips": 29,
+      "optimized_cases": 14
+    },
+    "notes": "No Lean, Docker, scientific replay or hosted workflow dispatched. Preserve PR5046 LF fixture and PR5047 Unicode argv in cleanup merge resolution. Full historical reconciliation unavailable in sparse tree; per-decision/review-completion and ledger Markdown checks pass. Native Windows unrun. PR5095 hosted full timeout retained as an unresolved obligation.",
+    "evidence": [
+      "docs/research/pr-intake-evidence/queue-oct23h-20261023.json",
+      "docs/research/pr-intake-evidence/queue-oct23h-closures.json",
+      "docs/research/pr-intake-evidence/queue-oct23i-20261023.json",
+      "docs/research/pr-intake-evidence/queue-oct23i-closures.json",
+      "docs/research/pr-intake-evidence/queue-oct23h-tooling-tests.json"
+    ],
+    "remaining_queue": {
+      "counts": {
+        "draft": 177,
+        "waiting_revision": 118,
+        "deferred_replay": 7
+      },
+      "open_count": 302,
+      "actionable_count": 0,
+      "observed_at": "2026-10-23T09:41:52.361567+00:00"
+    }
+  },
+  "bulk_intake_20261023_seventh_pass": {
+    "commits": [
+      "4172bc5de406d30a527d0341276c0a2602ae9ffb",
+      "fe3f9b100d9fe5b72ca34a8d3d535b34788d5db4"
+    ],
+    "decisions": 19,
+    "merged": 19,
+    "archive_count": 17,
+    "reviewed_tooling": [
+      5123,
+      5129
+    ],
+    "new_revision_holds": [],
+    "actionable_remaining": 0,
+    "selected_frontier_changed": false,
+    "supplier_outer_replays": 0,
+    "local_tests": {
+      "normal_cases": 70,
+      "normal_platform_skips": 8,
+      "optimized_cases": 70,
+      "optimized_platform_skips": 8
+    },
+    "notes": "No Lean, Docker, scientific replay or hosted workflow dispatched. PR5123 restores targeted fixture closure without changing frozen pins; PR5129 rejects ambient PYTHONINSPECT false acceptance. Historical live-input drift remains unresolved and native Windows unrun. Research archives remain partially reviewed.",
+    "evidence": [
+      "docs/research/pr-intake-evidence/queue-oct23j-20261023.json",
+      "docs/research/pr-intake-evidence/queue-oct23j-closures.json",
+      "docs/research/pr-intake-evidence/queue-oct23k-20261023.json",
+      "docs/research/pr-intake-evidence/queue-oct23k-closures.json",
+      "docs/research/pr-intake-evidence/queue-oct23j-tooling-tests.json",
+      "docs/research/pr-intake-evidence/queue-oct23jk-final-snapshot.json"
+    ],
+    "remaining_queue": {
+      "counts": {
+        "draft": 177,
+        "waiting_revision": 118,
+        "deferred_replay": 7
+      },
+      "open_count": 302,
+      "actionable_count": 0,
+      "observed_at": "2026-10-23T10:41:31.203416+00:00"
+    }
+  },
+  "bulk_intake_20261023_eighth_pass": {
+    "commit": "e0c2e09b9443f22bb9e3c76ab08d1224493040e3",
+    "decisions": 41,
+    "merged": 41,
+    "archive_count": 41,
+    "history_only": [
+      5140,
+      5147
+    ],
+    "reviewed_tooling_count": 0,
+    "new_revision_holds": [],
+    "actionable_remaining": 0,
+    "selected_frontier_changed": false,
+    "scientific_replays": 0,
+    "checks": "554 changed paths inventoried; Python/JSON syntax and 432 available source-pin checks. Exact installed Git modes/blobs verified before publication. Per-decision invariants and ledger Markdown checked. No submitted scientific code, Lean or Docker executed.",
+    "evidence": [
+      "docs/research/pr-intake-evidence/queue-oct23l-20261023.json",
+      "docs/research/pr-intake-evidence/queue-oct23l-closures.json",
+      "docs/research/pr-intake-evidence/queue-oct23l-final-snapshot.json"
+    ],
+    "remaining_queue": {
+      "base": "e0c2e09b9443f22bb9e3c76ab08d1224493040e3",
+      "observed_at": "2026-10-23T11:56:54.500592+00:00",
+      "counts": {
+        "draft": 177,
+        "waiting_revision": 118,
+        "deferred_replay": 7
+      },
+      "open_count": 302,
+      "actionable_count": 0,
+      "remaining_actionable": 0
+    }
+  },
+  "bulk_intake_20261023_ninth_pass": {
+    "commits": [
+      "5a0e4b6c270124a86a6da02eb6133d2b5cd70233",
+      "40991fac20d22099114e58a9f93df00b39297fbd"
+    ],
+    "decisions": 49,
+    "merged": 49,
+    "archive_count": 48,
+    "reviewed_tooling_count": 1,
+    "new_revision_holds": [],
+    "actionable_remaining": 1,
+    "selected_frontier_changed": false,
+    "scientific_replays": 0,
+    "checks": "450 changed paths inventoried; Python/JSON syntax and 768 available source-pin checks. Installed Git modes/blobs verified. PR5185: 57 reader and 35 caller tests in each normal/optimized mode. Per-decision invariants and ledger Markdown checked. No scientific verifier, Lean or Docker executed.",
+    "evidence": [
+      "docs/research/pr-intake-evidence/queue-oct23m-20261023.json",
+      "docs/research/pr-intake-evidence/queue-oct23m-closures.json",
+      "docs/research/pr-intake-evidence/queue-oct23m-tooling-tests.json",
+      "docs/research/pr-intake-evidence/queue-oct23n-20261023.json",
+      "docs/research/pr-intake-evidence/queue-oct23n-closures.json",
+      "docs/research/pr-intake-evidence/queue-oct23mn-final-snapshot.json"
+    ],
+    "remaining_queue": {
+      "base": "40991fac20d22099114e58a9f93df00b39297fbd",
+      "observed_at": "2026-10-23T13:11:16.372857+00:00",
+      "counts": {
+        "draft": 177,
+        "waiting_revision": 118,
+        "deferred_replay": 7,
+        "new": 1
+      },
+      "open_count": 303,
+      "actionable_count": 1,
+      "remaining_actionable": 0,
+      "selected": [
+        {
+          "number": 5235,
+          "head": "48976daa4dce59b4867ef046da72a370e389925d",
+          "title": "Add compact universal certificates for dirty linear circuits (no new \u03ba)",
+          "lane": "new",
+          "changes": [],
+          "reason": "No cached intake decision.",
+          "evidence": []
+        }
+      ]
+    },
+    "next_action": "PR5235 arrived during publication and remains new/actionable. Resume delta-only intake; do not rereview unchanged revision holds or deferred replays."
   }
 }

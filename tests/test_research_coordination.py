@@ -93,6 +93,21 @@ class CoordinationTests(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError,'before retrying'):post.post(1166,'C',body,api)
         self.assertEqual(sum('mutation' in q for q,v in calls),1)
 
+    def test_nested_reply_rejected_without_mutation_or_body_rewrite(self):
+        calls=[]
+        def api(query,variables):
+            calls.append((query,variables))
+            if 'repository' in query:
+                return {'repository':{'discussion':{'id':'D','url':'https://example/discussion'}}}
+            if 'query' in query:
+                self.assertIn('replyTo {id url}',query)
+                return {'node':{'id':'C','discussion':{'id':'D'},
+                                'replyTo':{'id':'P','url':'https://example/parent'}}}
+            self.fail('nested reply must never issue a mutation')
+        with self.assertRaisesRegex(ValueError,'use parent comment P'):
+            post.post(1166,'C','unchanged body',api)
+        self.assertEqual(len(calls),2)
+
     def test_graphql_uses_json_stdin(self):
         with patch.object(post.subprocess,'run',return_value=subprocess.CompletedProcess([],0,'{"data":{"ok":true}}')) as run:
             self.assertEqual(post.graphql('query',{'body':'a\nb"'}),{'ok':True})

@@ -1,11 +1,54 @@
 # CI verification
 
-## Current selected-family replay
+## Current selected-family replay: #4470
+
+The [selected record](../certificates/selected-result.json) binds conditional
+κ = 0.00302015, the [review](research/pr-intake-evidence/pr4470/PROOF-REVIEW.md),
+[explicit source closure](../certificates/frontier4470-source.json), and
+[integration receipt](research/pr-intake-evidence/pr4470/INTEGRATION.json).
+
+`make frontier4470-verify` authenticates the selected metadata and exports only
+110 reviewed inputs plus its pinned harness into a fresh directory. It then
+runs eight jobs serially with per-job timeouts and a sampled 1 GiB descendant
+memory limit. The exact-source PR4359 and PR4416 foundation reviews are reused
+explicitly; this is not an undisclosed full historical cold replay. No Lean,
+Docker or optimization search is part of this target.
+
+The [frontier4470 workflow](../.github/workflows/frontier4470.yml) uses Ubuntu
+and Python 3.12, read-only permissions and serial execution. It uploads the
+combined validation receipt and individual logs. Historical #4359 and #1094
+workflows are now manual-only. The integration receipt records local and hosted
+status separately; a newly installed workflow is not evidence of a Linux pass.
+
+`make selected-record-check` verifies hashes and the exact selected κ.
+`python3 -B scripts/research_selected_baseline.py` additionally compares the
+raw certificate's budget stages. Neither is an operator replay or a proof of
+the inherited all-column, movement, compiler, precision, analytic or recovery
+contracts. Frozen source packages retain their original provenance records;
+the replay deliberately supplies those records from historical snapshots.
+
+Selected source pointers: [manifest](../certificates/frontier4470-source.json),
+[proof review](research/pr-intake-evidence/pr4470/PROOF-REVIEW.md), and
+[review validation](research/pr-intake-evidence/pr4470/VALIDATION.json).
+
+The fast `scripts/check_selected_ci_inputs.py` guard accepts both historical
+package-root inventories and the current explicit-file inventory. For explicit
+exports it reads only inventoried pin maps and resolves remapped provenance
+against the frozen exported source. Unlisted neighboring files do not add
+replay dependencies. Unknown manifest formats fail closed.
+
+Its trigger report remains advisory: #4470 deliberately runs on selected-input
+pushes to `main` or manual dispatch, not every PR. Static script inspection also
+reports historical HPE paths mentioned by the shared record checker, even
+though they are not inputs of the current export. A passing metadata guard is
+not a fresh construction replay.
+
+## Historical selected-family replay through #1094
 
 Start with the [selected record](../certificates/selected-result.json). Its
 `reproduce`, `review`, `source_manifest` and `validation` fields identify the
 replay command, scoped assessment, source bindings and integration evidence.
-At this checkpoint, the selected composition is #589 with #1094, documented in
+At that checkpoint, the selected composition is #589 with #1094, documented in
 [the review](research/community-batch1099-review.md),
 [the source manifest](../research/community-frontier1094-audit/SELECTED-SOURCE.json)
 and [the integration receipt](research/community-batch1099-integration.json).
@@ -155,13 +198,20 @@ returns failure code 124 with captured diagnostics; even a completion receipt
 cannot turn a timeout into success. Other modules continue, and the final CLI
 exit remains nonzero. No test or assertion is skipped to meet the deadline.
 
-The runner stops the owned process group on POSIX. On Windows its existing
-`taskkill` plus leader cleanup applies while the module is running; descendants
-that detach, and Windows descendants after an already-exited leader, retain
-the existing cleanup limitations. After cleanup, capture has a bounded drain
+The runner stops the owned process group on POSIX. On Windows a private
+supervisor reuses `research_package.py`'s gated Job Object and waits for its
+ordinary descendants to stop even when the test module has already exited.
+Timeout/cancellation targets the live supervisor; closing its job handle also
+terminates the owned descendants. Copies of the runner on Windows must include
+`research_package.py` in the same scripts directory. Test modules must still
+join proof-relevant children and propagate their failures: cleanup does not
+validate unfinished work. After cleanup, capture has a bounded drain
 so an inherited pipe cannot impose an unlimited EOF wait. Cleanup failures
 propagate through the existing cancellation path instead of becoming a pass.
 This is a failure bound, not a speedup or a new mathematical result.
+
+The [Windows exit-cleanup evidence](research/isolated-test-windows-exit.md)
+records the caller-specific native-handle controls and remaining limits.
 
 Regression command: `python3 -B -m unittest discover -s tests -p 'test_isolated*.py'`.
 The deadline controls exercise hung imports, partial output, child cleanup,

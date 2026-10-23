@@ -118,8 +118,26 @@ It reads [the task catalogue](agent-task-catalog.json), draws a
 cards with independently selected methods. It reports your checkout's commit
 and selected-record hash. It does not contact GitHub, reserve work, or establish
 that a task is open. A deterministic seed is a reproducibility aid, not novelty.
-Each card supplies a first working command, expected evidence, a next experiment,
+Each card supplies a first-step command, expected evidence, a next experiment,
 its connection to the bottleneck, allowed variations and scope-change triggers.
+
+**Resolve the generic orientation command before running a historical card.**
+If its `first_step.command` is `python3 -B scripts/research_baseline.py`, use the
+current orientation command in [current priorities](current-priorities.md).
+For the selected #4470 productive-helper schema, that command is:
+
+```sh
+python3 -B scripts/research_selected_baseline.py
+```
+
+The older helper expects `bit_lower` and `complex_lower`, which this certificate
+does not contain. This substitution applies only to the generic selected-baseline
+step; retain the card's question, inspection instructions and any named scientific
+replay command. A future selection must be checked against its own reviewed schema.
+The [startup compatibility audit](task-startup-compatibility.md) explains why the
+historical catalogue, picker and baseline bytes remain intact. The replacement
+authenticates selected sources and checks metadata consistency; it is not a cold
+replay or supplier admission.
 
 In a sparse checkout, the helper can validate omitted catalogue references when
 they are regular files in `HEAD` with matching skip-worktree index entries. It
@@ -127,6 +145,11 @@ reports these as `sparse_checkout.omitted_catalogue_paths`. For absent paths,
 ordinary deletions and staged content replacements still fail. Materialize the
 chosen card's inputs before running its commands. This reference check does not
 resolve replay dependencies.
+
+For missing selected-baseline inputs, run
+`python3 -B scripts/research_baseline_sparse.py`, inspect its materialization
+command, and use its schema-aware `next` command after materializing the inputs.
+Its omission report does not authenticate sources; the baseline still must pass.
 
 Use the overlap helper before choosing a card and refresh before submission:
 
