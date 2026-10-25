@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "base_commit": "32890bc5de034ab8fc93ac88ead7279a6a416d04",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "fc3d4ba105e1f097d0d7d051a308281e86ab1446",
+      "sha256": "66974efdced4083c00025f97d95d83909a226cdf801edb9301c195c6641f6903"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "f126dd2e2dad2b669e75d1d0d0bd05c600725602",
+      "sha256": "f7a48bfa2659b88378282a8eee7d9fe52cdf505594124c4d1686b58510fffd72"
+    },
+    {
+      "path": "research/fresh-helper-boundary/CHANGES.json",
+      "usage": "input",
+      "git_blob": "45744fedd0e28967aa72586048b8bc0c72f419a9",
+      "sha256": "cde73b8ff5b3c0d06e69e2293b991b24fd14a16dd4ccab7ff6b3439074a94624"
+    },
+    {
+      "path": "research/joint-helper-lattice/PATCH.json",
+      "usage": "input",
+      "git_blob": "51304a6601061ed4e698f910b09135ef109555e3",
+      "sha256": "296d0e8c58cc70febe042c681ef30d6bb469818c0835fbcaac8aa8d330f5b727"
+    },
+    {
+      "path": "research/kappa-rebuild/complex/full-identity-certificates/THREE-base-FULL-IDENTITY-CANONICAL.json.gz",
+      "usage": "input",
+      "git_blob": "4a8c4ed26e53a72362d571c972e65aff546be784",
+      "sha256": "6418ec3da24d548a57f5c3fe5b9062c26c9478e638504a61c387f5cfb5f4ed61"
+    },
+    {
+      "path": "research/kappa-rebuild/complex/full-identity-certificates/THREE-base-FULL-IDENTITY-NATIVE.json.gz",
+      "usage": "input",
+      "git_blob": "b46d44c6ee624968dd57be928b0c15d9d45f3b2c",
+      "sha256": "c54b0a3e129d28e6dbf74fa731fc3bb70fe3c6705f07256750fbecddcc842d39"
+    },
+    {
+      "path": "research/missing-join-frame/PATCH.json",
+      "usage": "input",
+      "git_blob": "f96d295d40014d4dd503f58eb3cdabcbb4b8e101",
+      "sha256": "9ab5328245ff02c9d0be21d39bcc375f50bc5d7909e9f7b9a3a9a6f812f5bd6e"
+    }
+  ]
+}
