@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/physical-ordinary-interchange/inputs/pr2809.tar",
+    "research/unconditional-batched-crt/BIT.md",
+    "research/pr2809-continuation-stack-space/README.md"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Hash the PR2809 archive and RoleParking sources; run RoleParking.park on the root, child, and grandchild schedules; require the child data record to be the 28-bit capsule rather than the 4000-bit root packet; bind the depth-linear nested invoice; record D(2^26050)=42857."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "{package}/test_verify.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Reject a child record that recopies the root packet, a child length other than the adopted capsule, and a root length other than the root packet. Accept D(63)=0, D(64)=1, and D(2^26050)=42857."
+    }
+  ]
+}
