@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/crt-reservoir-interchange-bill/PROOF.md",
+    "research/pr4100-guard-coloring/vendor/pr4174_allocator.py",
+    "research/unconditional-batched-crt/BIT.md",
+    "research/unconditional-batched-crt/CRT.md"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Identity: pinned BIT.md, CRT.md and interchange-bill phrases, and the executed #4174 minimal and production parameters. Positive fixtures: the 2j+16 in-record swap on four pairs, one five-bit field exchange with spectators, the label rewrite that leaves payloads in place, the H<2^25 inequality, and the minimal padding range. Failure controls: reversed bit positions and overlapping fields are rejected, and both layouts must show a transport scan count above 18H."
+    }
+  ]
+}
