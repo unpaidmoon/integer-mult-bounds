@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/split-centres-global/proofs/INHERITED-COMPLEX-GEOMETRY.txt",
+    "research/three-bank-restored-unpaid/README.md"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Surviving-birth and naive intersection bounds on every length-3 history in F_2^3 and every line-born length-3 history in F_2^4; the step lemma on both widths; the explicit F_2^73 erasure, cleared source, nested line, side bank, and plane birth; 400 random length-6 histories on F_2^8; rejection of an unpaid-2 erasure count."
+    }
+  ]
+}
