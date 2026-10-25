@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/complementary-consumer-feasibility/RESULT.json"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Authenticates the pinned complementary RESULT.json, rechecks the exceptional L(-2) and ordinary L(-2 Q^{-1}) Laurent endpoints, rejects ordinary L(-2) without the inverse, prices one shared rank-one Q^{-1} child (paid rank-one 4023 to 3968, deficit 176 to 121), checks six positive rational derivative bounds and M(1)=-121, and checks that the predecessor serial envelope 224-112n stays nonpositive for n=2..7 and does not contain the 56 terminals. Failure controls: corrupted receipt hash, a balanced shared bill, and a zero two-call envelope misread as a gain."
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "task_id": "complex-new-helper-inventory",
+  "priority_revision": 7,
+  "base_commit": "32890bc5de034ab8fc93ac88ead7279a6a416d04",
+  "original_card": {
+    "id": "complex-new-helper-inventory",
+    "question": "Can a new local cost interface change the deficit-to-recursive-cost ratio beyond current packing?",
+    "starting_points": [
+      "docs/research/research-family-status.md",
+      "research/complex-local-word-ceiling/README.md",
+      "research/heterogeneous-owner-assembly/README.md",
+      "certificates/selected-result.json",
+      "research/selected-k8-unrestricted-ends/README.md"
+    ],
+    "methods": [
+      "Propose a changed helper inventory and derive an optimistic exact moment.",
+      "Design a small completed instance and independently verify its endpoint and rank bill."
+    ],
+    "acceptance_gate": "A new physically realizable contract outside the frozen catalogue whose per-call profile, screened with ceiling.ceiling(), beats the selected word's packing ceiling; a lower cap does not establish identical circuitry or order attainable optima, and is insufficient to pass the stronger-budget target under this model. A scoped local result may be retained without a complete supplier. Expanding it into further construction rounds requires the family-level budget and obligation gate in research-family-status.md; an optimistic passing relaxation alone is not acceptance.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "research/complex-local-word-ceiling/verify.py"
+      ],
+      "expected": "PASS_COMPLEX_LOCAL_WORD_CEILING",
+      "inspect": "Read the selected word's per-call local profile, its packing ceiling and the lever table; run levers.py for the ideal budget of the lever you target.",
+      "scope": "Positive control and planning budget only; this is not a new construction or full cold replay."
+    },
+    "first_experiment": "Before any synthesis, write the candidate per-call local profile (and centre charge / unpaid coordinates if changed) and screen it with ceiling.ceiling(); reject it if even the ideal ceiling does not beat the selected word's by your stated margin.",
+    "bottleneck_link": "Packing of the selected word is capped at +0.87% (ceiling model); only a lower local excess spend or a changed coverage law raises the cap.",
+    "allowed_variations": [
+      "Narrow to one changed boundary or helper type with explicit counts.",
+      "If the coverage law, template or guard changes, derive an applicable fully charged replacement bound instead of applying the incumbent ceiling outside its scope."
+    ],
+    "scope_change_triggers": [
+      "Mixing only providers already inside the pinned catalogue.",
+      "Only changing helper terminal subspaces and monotone frames within the fixed scalar word, entrances and cleanup contract already covered by #1995/#2013.",
+      "Continuing a partial cost improvement while leaving the same unpriced consumer, restoration or central-readout obligation unresolved; refresh the family expansion decision first. Local product-retiming evidence has a narrow scope and is not a ban on changed graphs or contracts."
+    ],
+    "overlap_terms": [
+      "helper inventory",
+      "heterogeneous-owner",
+      "mutable leaver"
+    ]
+  },
+  "scope_status": "changed",
+  "actual_scope": "Price one shared ordinary L(-2 Q^{-1}) terminal on the pinned complementary B/C word, keeping the 224 owners and both helper multisets, and stop if that optimistic bill stays negative.",
+  "scope_change_reason": "Discussion 1166 comment 19133514 asks for a changed ownership or shared producer beyond the losing fixed-224-owner complementary serial model, after PR4848. The incumbent ceiling.ceiling() screen does not apply: the predecessor already replaced it with a fully charged serial moment. This package prices that one shared scalar contact and does not reopen packing of the selected word.",
+  "bottleneck_link": "The complementary serial screen is already strictly negative for every saving in (0,1]. Sharing the 56 ordinary terminals saves 55 rank-one jobs and leaves moment -121 at exponent 1, with a positive derivative on [0,1], so it does not raise the selected packing cap or authorize a new kappa.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop before native synthesis if the ownership-disjoint census and the optimistic complete moment stay negative on (0,1].",
+  "outcome": "negative-result",
+  "evidence": "verify.py reprints the exceptional and ordinary Laurent endpoints, checks paid rank-one 3968, rank-mass deficit 121, M(1)=-121, six positive rational derivative bounds, and the unchanged envelope 224-112n. PROOF.md records the premise and the subadditivity argument. The predecessor native phase suite is not replayed.",
+  "author": "unpaidmoon",
+  "ai_assistance": "Substantial Cursor Grok assistance; no independent human review.",
+  "open_questions": [
+    {
+      "question": "Can a later premise delete part of the per-call direct primitive, or emit a legal target whose central rank exceeds the mod-2 cap of one odd power of Q, and still clear a positive complete bill?",
+      "why_it_matters": "The shared ordinary terminal saves only jobs the serial envelope already omitted, and the pinned interface still charges one rank-one child per odd port addition.",
+      "first_step": "Write the changed paid histogram and the ownership-disjoint target census, then check the exact moment on (0,1] before any native emission.",
+      "blocked_by": "No such paid profile is established. Sharing all 112 direct rank-one jobs is not legal while each odd port addition is charged separately and fresh diagonal factors stay independent."
+    }
+  ]
+}
