@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "task_id": "connector-alphabet-change",
+  "priority_revision": 7,
+  "base_commit": "32890bc5de034ab8fc93ac88ead7279a6a416d04",
+  "original_card": {
+    "id": "connector-alphabet-change",
+    "question": "Does one explicit extension of the connector alphabet offer a favorable completed budget?",
+    "starting_points": [
+      "docs/research/research-family-status.md",
+      "research/universal-connector-boundary/README.md",
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "Construct and charge a legal extra operation on a minimal instance.",
+      "Prove a target-specific bound after adding one specified operation family."
+    ],
+    "acceptance_gate": "State which fixed-alphabet premise changes and charge its implementation; do not declare it free. A scoped local result may be retained without a complete supplier. Expanding it into further construction rounds requires the family-level budget and obligation gate in research-family-status.md; an optimistic passing relaxation alone is not acceptance.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "research/universal-connector-boundary/verify.py"
+      ],
+      "expected": "PASS_UNIVERSAL_CONNECTOR_BOUNDARY",
+      "inspect": "Reproduce the 945-pairing control, then read Exact interface to list the allowed calls.",
+      "scope": "Positive control / source-bound orientation only; this is not a new construction or full cold replay."
+    },
+    "first_experiment": "Add exactly one legally priced operation and test a tiny dirty-input instance before enumerating larger cases.",
+    "bottleneck_link": "A new legal connector operation could change recursive interface cost; a larger census in the same alphabet is a separate side result.",
+    "allowed_variations": [
+      "Choose one additional operation and a small source count for its first counterexample."
+    ],
+    "scope_change_triggers": [
+      "Keeping the alphabet and only increasing the source count; record this as a changed assignment.",
+      "Extending a source-count census without naming a supplier/interface decision it could change; audit #2973 pruning concerns before relying on the affected predecessor exclusions."
+    ],
+    "overlap_terms": [
+      "universal connector",
+      "source-toggle",
+      "connector alphabet"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Does any 14-point difference basis of F_2^6 have a simple closed walk of length 14 whose steps all have Hamming weight at most 3?",
+  "scope_change_reason": "The card asks whether one added connector operation has a favorable completed budget. Open question 1 of research/f2-six-difference-basis, left open again by research/fixed-fourteen-basis-walk, asks whether any 14-point basis has a simple closed walk of step weight at most 3. This package answers that question for the normalized slice and exhibits one walk. It does not add an operation or change the six-source alphabet.",
+  "bottleneck_link": "A weight-at-most-3 walk of application total 16 would match the generic six-source DUO bill on a minimum difference basis. The walk found here has total 20, the same penalty as the displayed weight-4 cycle, so it does not lower the connector bill or move kappa. The selected frontier is not this connector.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop once the explicit walk is checked and the normalized 14-point census reports its minimum total. Do not search bases outside that slice or the five-source leaf bill.",
+  "outcome": "completed",
+  "evidence": "verify.py prints PASS_F2_WEIGHT3_BASIS_WALK steps=14 max_weight=3 applications=20 normalized_hits=53340 normalized_cycles=53270 normalized_min=20 queries=140 map_applications=146 no_new_kappa=true.",
+  "author": "unpaidmoon",
+  "ai_assistance": "Cursor Grok 4.7 cloud agent drafted the cycle search, the normalized census and this note. The scripts were executed on CPython 3.12 with cc.",
+  "open_questions": [
+    {
+      "question": "Does a 14-point difference basis that omits some weight-1 vector have a weight-at-most-3 closed walk of source-application total 16?",
+      "why_it_matters": "Sixteen is the generic six-source DUO application count. A walk at that total would remove the +4 penalty seen on both recorded bases.",
+      "first_step": "Drop the standard-basis requirement and search sets translated to contain 0.",
+      "blocked_by": "GL(6,2) does not preserve Hamming weight, so the 53340 normalized bases do not represent every weight pattern."
+    },
+    {
+      "question": "Does any closed length-10 five-source walk with one triple and multiplicity (4, 2, 2, 2, 2) attain leaf bill 120?",
+      "why_it_matters": "That is the other open question of research/connector-triple-query-floor.",
+      "first_step": "Search that multiplicity type and test prefix coverage, as stated there.",
+      "blocked_by": "The search is a five-source question and is not decided by this six-source walk."
+    }
+  ]
+}

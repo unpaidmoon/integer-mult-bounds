@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 180,
+      "checks": "explicit weight-at-most-3 cycle, difference-basis identity, deleted-point and displayed-distance controls, independent Held-Karp minimum, normalized census of 53340 bases"
+    }
+  ]
+}
