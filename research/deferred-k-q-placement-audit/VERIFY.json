@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/deferred-k-query-sharing-component/PROOF.md",
+    "research/deferred-k-query-sharing-component/verification/inputs/outputs/kappa0033-race-20261024/plan/BALANCED-J-CURRENT-Q-FRAME-audit/REPORT-v1.md"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-Werror",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 180,
+      "checks": "Read the pinned mode-0 literal word and PROOF.md Km0 sentence, then recompute K, bare Q, K-conjugated Q, R=DQ, and K-versus-R commutation on all 512 basis states. A one-coordinate phase mutation must miss -|7>."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-Werror",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 180,
+      "checks": "Same operator identities under optimized bytecode. No native, phase-table, emitter, or economic replay."
+    }
+  ]
+}

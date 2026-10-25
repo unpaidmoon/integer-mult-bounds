@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "task_id": "independent-moment",
+  "priority_revision": 7,
+  "base_commit": "32890bc5de034ab8fc93ac88ead7279a6a416d04",
+  "original_card": {
+    "id": "independent-moment",
+    "question": "Does a new paid-profile or mixture-ceiling claim have independent source-bound coverage of its actual changed ledger?",
+    "starting_points": [
+      "docs/research/research-family-status.md",
+      "certificates/selected-result.json",
+      "research/staged544-mixed-fourth-entry/README.md",
+      "research/staged-fourth-mixture-ceiling/README.md",
+      "research/r437-two-window-carrier/README.md"
+    ],
+    "methods": [
+      "Independently reconstruct one changed paid ledger or pooled dual with exact source and model binding.",
+      "Check a genuinely uncovered moment implication with a different enclosure method and semantic controls."
+    ],
+    "acceptance_gate": "Demonstrate independence, source binding, positive cases and semantic failure controls. Name the existing checks and the missing coverage. More digits or another equivalent evaluation of an unchanged root is not by itself new verification coverage.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Choose one uncovered implication in #4088 literal mixed fill, #4091 pooled dual/model binding or #4067 changed frame/host bill. #4091 pins an earlier #4088 head: validate word, capacity and stock equivalence before applying that ceiling to the later fill.",
+      "scope": "Source-binding orientation only; no scientific replay, theorem acceptance or supplier admission. Budget any heavy replay separately."
+    },
+    "first_experiment": "Independently reconstruct one changed ledger or pooled certificate with a positive case and a semantic failure control. Compare exact sources and name what existing checks miss. Keep this separate from supplier-boundary-audit (ordinary/outer dispatch) and uniform-transfer-audit (all-size proof). Stop after the chosen implication; more digits of an unchanged root are not additional mechanism coverage.",
+    "bottleneck_link": "Independent pricing prevents unsupported frontier claims and can reveal genuine accounting slack.",
+    "allowed_variations": [
+      "Reconstruct either a source ledger or a numeric enclosure with a different method."
+    ],
+    "scope_change_triggers": [
+      "Importing the primary function and calling its output independent verification.",
+      "Calling an aggregate histogram or source archive an independently accepted physical supplier."
+    ],
+    "overlap_terms": [
+      "independent moment",
+      "rank histogram",
+      "exact enclosure",
+      "2979",
+      "rank7 joint endframes",
+      "paired extraction",
+      "joint lowering",
+      "4088",
+      "4091",
+      "4067",
+      "staged544-mixed-fourth-entry",
+      "staged-fourth-mixture-ceiling",
+      "r437-two-window-carrier"
+    ],
+    "existing_checks": [
+      {
+        "scope": "PR #4088: mixed local/owner/phase ledger and moment reported.",
+        "evidence": "research/staged544-mixed-fourth-entry/README.md",
+        "remaining": "Independent binding of changed construction to paid histogram, distinct from full admission.",
+        "status": "author-checked",
+        "source_commit": "72d7efc181edb21806a878f174847c96dd410ab0",
+        "selected_record_sha256": "bb2eaa58647b353f88d0aec2eafb9d30df1be53589231b23e12ceef3e4bad129"
+      },
+      {
+        "scope": "PR #4091: sharp pooled ceiling proposed for fixed THREE/FOUR words and inventory.",
+        "evidence": "research/staged-fourth-mixture-ceiling/README.md",
+        "remaining": "Validate dual, exhaustive pattern scope and exact source equivalence before applying to newer fills.",
+        "status": "author-checked",
+        "source_commit": "a29bdd8f56cd18b805917775cdec09ff935eddc4",
+        "selected_record_sha256": "bb2eaa58647b353f88d0aec2eafb9d30df1be53589231b23e12ceef3e4bad129"
+      },
+      {
+        "scope": "PR #4067: paid (2,2) to (1,3) exchange and fixed OQ4 host reported.",
+        "evidence": "research/r437-two-window-carrier/README.md",
+        "remaining": "Independent full cost delta; remaining caller/precision/stock obligations are separate.",
+        "status": "author-checked",
+        "source_commit": "a95f11c52e3ca1e4c5171b3c20d8f4b0815aee2e",
+        "selected_record_sha256": "bb2eaa58647b353f88d0aec2eafb9d30df1be53589231b23e12ceef3e4bad129"
+      }
+    ]
+  },
+  "scope_status": "changed",
+  "actual_scope": "Independently recompute the mode-0 Km0 counterexample to K-conjugated current-source Q in the merged deferred-K component, including the 512-state identity K^{-1} X_1 K = -X_7 and the placement R = D Q. No global occurrence ledger and no new kappa.",
+  "scope_change_reason": "Handoff discussioncomment-19160035 asks first for an independent inspection of the literal correction and source-phase Q placement. The component checker records that Km0 witness as inherited and not recomputed. This package closes that operator check only. It does not reconstruct a mixture ceiling or bind the missing global caller ledger.",
+  "bottleneck_link": "A K-wrapped query implements a different map from the bare current-source Q that the eight-H1 overlay uses. Billing that wrapped route in a later global invoice would charge an operator the component does not execute. The local saving still does not fund kappa until a version-correct occurrence ledger exists.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop after the pinned mode-0 word, the all-basis conjugation, and the R = D Q placement. Do not emit a global caller ledger or rerun native, phase, or pricing engines.",
+  "outcome": "completed",
+  "evidence": "research/deferred-k-q-placement-audit/verify.py prints PASS_DEFERRED_K_Q_PLACEMENT. Positive case is the pinned literal word on all 512 computational basis states. The failure control clears one linear phase and no longer yields -|7>.",
+  "author": "unpaidmoon",
+  "ai_assistance": "Prepared by unpaidmoon with substantial Cursor Grok assistance.",
+  "open_questions": [
+    {
+      "question": "Can one version-correct global occurrence ledger fund a gain from the eight-H1 deferred-K overlay?",
+      "why_it_matters": "The local profile still loses for every 0<C<1, and the necessary further-saving gate asks for at least 28 additional H1 deletions or genuine reuses at C=.00330007.",
+      "first_step": "Join one actual caller occurrence to its input version, owner, chart, phase, axes, and lifetime, and debit every helper once.",
+      "blocked_by": "No complete global caller is supplied with this component. This Q-placement check does not create one."
+    },
+    {
+      "question": "Can the full physical raw inverse-transpose, including helper and owned directions, be emitted?",
+      "why_it_matters": "MAIN algebraic inverse products do not certify a literal helper/owned dual.",
+      "first_step": "Construct the ordered helper and owned raw-dual routes and check source classes, normalizers, and zero returns.",
+      "blocked_by": "That dual is outside the mode-0 operator calculation."
+    }
+  ]
+}
