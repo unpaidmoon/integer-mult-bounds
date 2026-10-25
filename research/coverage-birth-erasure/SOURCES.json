@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "base_commit": "32890bc5de034ab8fc93ac88ead7279a6a416d04",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "fc3d4ba105e1f097d0d7d051a308281e86ab1446",
+      "sha256": "66974efdced4083c00025f97d95d83909a226cdf801edb9301c195c6641f6903"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "f126dd2e2dad2b669e75d1d0d0bd05c600725602",
+      "sha256": "f7a48bfa2659b88378282a8eee7d9fe52cdf505594124c4d1686b58510fffd72"
+    },
+    {
+      "path": "research/split-centres-global/proofs/INHERITED-COMPLEX-GEOMETRY.txt",
+      "usage": "input",
+      "git_blob": "c4150cb693414c098690eae79b3aea5f47c184ff",
+      "sha256": "c1ff55536594222a8d2a30bc0e0956959774e1be2d5420b7838ad553ee556df2"
+    },
+    {
+      "path": "research/three-bank-restored-unpaid/README.md",
+      "usage": "input",
+      "git_blob": "f24b9238963a169561f0d79de7d2fa73e6c0c061",
+      "sha256": "24f29a419f2f992d85d5e5bab94daf3c63a3478a18900095f728431f2a29aab2"
+    }
+  ]
+}
