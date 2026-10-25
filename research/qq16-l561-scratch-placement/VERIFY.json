@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/qq16-gaussian-axis-tapes/tapes.py",
+    "research/joint-query/certificate.json.gz",
+    "research/community-frontier1042-audit/selected-replay.tar.gz"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Event 9895 names no tape interval for L561, the C0-C7 windows are still clear, and the kernel-shaped scratch copy has sharp bill READ=2NW, WRITE=2NW, MOVE=8NW-12. The one-past packing costs 12 moves more. Adding the re-metered subtraction gives READ=6NW, WRITE=4NW, MOVE=16NW-24."
+    }
+  ]
+}

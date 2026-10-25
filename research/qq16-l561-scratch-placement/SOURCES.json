@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "base_commit": "32890bc5de034ab8fc93ac88ead7279a6a416d04",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "fc3d4ba105e1f097d0d7d051a308281e86ab1446",
+      "sha256": "66974efdced4083c00025f97d95d83909a226cdf801edb9301c195c6641f6903"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "f126dd2e2dad2b669e75d1d0d0bd05c600725602",
+      "sha256": "f7a48bfa2659b88378282a8eee7d9fe52cdf505594124c4d1686b58510fffd72"
+    },
+    {
+      "path": "research/qq16-gaussian-axis-tapes/tapes.py",
+      "usage": "input",
+      "git_blob": "661aafb229dbc280bc667fdc0f22b438b85c634b",
+      "sha256": "a3ad668b94d44ff1b9d7093e95c5af3ea0d80cdb798365ea7631c0e2a3dcae10"
+    },
+    {
+      "path": "research/joint-query/certificate.json.gz",
+      "usage": "input",
+      "git_blob": "c6e876d8b48d768214deee265ade428f8983b566",
+      "sha256": "a5ed85fac5ebf3c091482a113ab0d351eb5a7892fe2841a35e16017ec1ff49f7"
+    },
+    {
+      "path": "research/community-frontier1042-audit/selected-replay.tar.gz",
+      "usage": "input",
+      "git_blob": "6f4dc6fe7631d8aacf8081fcaecf32197181685b",
+      "sha256": "22c3f4dce4b897a1d423d1388801933e288b6a6b1906cb15e1b16a5eb68db754"
+    }
+  ]
+}
