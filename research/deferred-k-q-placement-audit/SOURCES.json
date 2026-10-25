@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "base_commit": "32890bc5de034ab8fc93ac88ead7279a6a416d04",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "fc3d4ba105e1f097d0d7d051a308281e86ab1446",
+      "sha256": "66974efdced4083c00025f97d95d83909a226cdf801edb9301c195c6641f6903"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "f126dd2e2dad2b669e75d1d0d0bd05c600725602",
+      "sha256": "f7a48bfa2659b88378282a8eee7d9fe52cdf505594124c4d1686b58510fffd72"
+    },
+    {
+      "path": "research/deferred-k-query-sharing-component/PROOF.md",
+      "usage": "input",
+      "git_blob": "9ec973a52ad67eb6fe31709961c005630c3d2190",
+      "sha256": "4cff7aad4cd31479bcbce7eeb23015fa6ae60bc78640756ad3dc5f39544b108d"
+    },
+    {
+      "path": "research/deferred-k-query-sharing-component/verification/inputs/outputs/kappa0033-race-20261024/plan/BALANCED-J-CURRENT-Q-FRAME-audit/REPORT-v1.md",
+      "usage": "input",
+      "git_blob": "b2cc05dcf9f4136803ee49bfa63555509b69c5b2",
+      "sha256": "fb60187fea8346539abb61a08b1c525825cc84bd7c2847eb44a7c9590f3abee3"
+    }
+  ]
+}
