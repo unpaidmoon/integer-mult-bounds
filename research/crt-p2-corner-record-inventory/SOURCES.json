@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "base_commit": "32890bc5de034ab8fc93ac88ead7279a6a416d04",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "fc3d4ba105e1f097d0d7d051a308281e86ab1446",
+      "sha256": "66974efdced4083c00025f97d95d83909a226cdf801edb9301c195c6641f6903"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "f126dd2e2dad2b669e75d1d0d0bd05c600725602",
+      "sha256": "f7a48bfa2659b88378282a8eee7d9fe52cdf505594124c4d1686b58510fffd72"
+    },
+    {
+      "path": "research/crt-arena-root-axis/PROOF.md",
+      "usage": "input",
+      "git_blob": "e2f7a81d5302aa3e5fdd8051da53def50525c130",
+      "sha256": "dc6871e84b882210ad9a96300bc22944530d783ca78b3badd5a174bf628d45aa"
+    },
+    {
+      "path": "research/crt-arena-batch-threshold/PROOF.md",
+      "usage": "input",
+      "git_blob": "f4aba806646d80dedc42af4e7a8d4f72ad18f782",
+      "sha256": "8c9dbbd057811cfbca421234bc9b1f43f71d367a374508231d344c072ed779bb"
+    },
+    {
+      "path": "research/crt-arena-root-axis/vendor/pr4192-crt-benes-scan-PROOF.md",
+      "usage": "input",
+      "git_blob": "af1ea10b9d2b117d150ec7bddfb81e681172cdb4",
+      "sha256": "c3eb4e14dc5ee0102cbf77c4a0e61db9989c2b8a0eaf7f0659a6e39373197474"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "status": "PASS_CRT_P2_CORNER_RECORD_INVENTORY",
+  "claim_type": "finite certificate with a cited domain corollary",
+  "corners": [
+    {
+      "ell": 1,
+      "h": 1,
+      "batch": 822078336,
+      "allowance": 68719476736,
+      "ratio": "6422487/536870912"
+    },
+    {
+      "ell": 2,
+      "h": 1,
+      "batch": 823011968,
+      "allowance": 1099511627776,
+      "ratio": "6429781/8589934592"
+    },
+    {
+      "ell": 2,
+      "h": 2,
+      "batch": 12370604416,
+      "allowance": 1099511627776,
+      "ratio": "96645347/8589934592"
+    }
+  ],
+  "corner_checks": 3,
+  "cell_checks": 2,
+  "box_triples": 45759,
+  "live_inputs": 3,
+  "rejection_controls": 7,
+  "source_sha256": {
+    "PROOF.md": "93ac3b0447901dc844139123eca5ad2bb607e098ed31b061d5c518542ea60723",
+    "verify.py": "c2d7c40e7a9c49fa23b576c3b4889bc29cfd958c4547e37bfeaa9cb50af9f4a3",
+    "SOURCES.json": "fa7f9278876b2674017b3ce2a6574e2a7d37f27aa3c1f70a2ddeccf2efdde562",
+    "TASK.json": "dd1f2080f5402f18dd92e57736220b52387d4f3c0fc9726eb0e1d08a3f0aebcf",
+    "VERIFY.json": "bb517fb7d5875949ec158b8b5c847dfdd7f78e3e2cf6a5acbf812f8c0039f420"
+  }
+}

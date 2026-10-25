@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/crt-arena-root-axis/PROOF.md",
+    "research/crt-arena-batch-threshold/PROOF.md",
+    "research/crt-arena-root-axis/vendor/pr4192-crt-benes-scan-PROOF.md"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Exact p=2 record inventory, inherited majorant, second polynomial expansion, coefficient-one cell enlargement, bounded comparison box and rejection controls."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "The same checks with Python assertions disabled. The checker uses explicit require() calls, so -O does not drop them."
+    }
+  ]
+}
