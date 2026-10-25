@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/block3-shared-port-composition/WORD.json",
+    "research/block3-shared-port-composition/inputs/pr4813-verify_schedule.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Exact pivot identity, hybrid endpoint, paid profiles, unitarity, D factorization, and both negative endpoint gaps, plus aligning-call and ADD-sign rejection controls."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-O",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "The same certificate with assertions stripped. The checks use explicit exceptions, so the optimized run must still reject the controls."
+    }
+  ]
+}

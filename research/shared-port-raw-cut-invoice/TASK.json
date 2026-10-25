@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "task_id": "complex-rank-shape-decoder",
+  "priority_revision": 7,
+  "base_commit": "32890bc5de034ab8fc93ac88ead7279a6a416d04",
+  "original_card": {
+    "id": "complex-rank-shape-decoder",
+    "question": "Can a decoder deliver the local paid mass in fewer, larger-rank children (block frame climbs instead of rank-1 to rank-3 steps)?",
+    "starting_points": [
+      "docs/research/research-family-status.md",
+      "research/complex-local-word-ceiling/README.md",
+      "research/complex-decoder-field-extension-seed44/README.md",
+      "research/complex-frame-pair-decoders/README.md",
+      "research/selected-k8-unrestricted-ends/README.md",
+      "research/eisenstein-reduction-copy-floor/README.md"
+    ],
+    "methods": [
+      "Find one exact small decoding identity whose frame path climbs in blocks, and price its complete per-call profile.",
+      "Bound the best effective child rank achievable for one fixed support alphabet, including copies, frames and restoration."
+    ],
+    "acceptance_gate": "A per-call local profile, with all copied information, frames and restoration counted, whose ceiling exceeds the selected word's by at least 5%; masked or overcomplete supports must change an assumption of the eight-term all-pairs bound. A scoped local result may be retained without a complete supplier. Expanding it into further construction rounds requires the family-level budget and obligation gate in research-family-status.md; an optimistic passing relaxation alone is not acceptance.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "research/complex-local-word-ceiling/verify.py"
+      ],
+      "expected": "PASS_COMPLEX_LOCAL_WORD_CEILING",
+      "inspect": "Read the selected word's per-call local profile, its packing ceiling and the lever table; run levers.py for the ideal budget of the lever you target.",
+      "scope": "Positive control and planning budget only; this is not a new construction or full cold replay."
+    },
+    "first_experiment": "Before any synthesis, write the candidate per-call local profile (and centre charge / unpaid coordinates if changed) and screen it with ceiling.ceiling(); reject it if even the ideal ceiling does not beat the selected word's by your stated margin. Ideal budget: rank-16 delivery is 2.31x (levers.py).",
+    "bottleneck_link": "Rank-1 children are about half of recursive cost; the selected word's effective child rank is about 3.9. Larger-rank delivery lowers recursive cost per unit of paid mass.",
+    "allowed_variations": [
+      "One masked, overcomplete or block decoder family with exact labels and supports.",
+      "A scoped lower bound on effective rank for one alphabet.",
+      "If the coverage law, template or guard changes, derive an applicable fully charged replacement bound instead of applying the incumbent ceiling outside its scope."
+    ],
+    "scope_change_triggers": [
+      "Repacking idle remainders of an unchanged word (covered by the packing ceiling).",
+      "Repeating the eight-term all-pairs search inside its proved scope.",
+      "Only changing helper terminal subspaces and monotone frames within the fixed scalar word, entrances and cleanup contract already covered by #1995/#2013.",
+      "Searching below C=40 in the #2017 Eisenstein binary scalar-rectangle or fixed-support block-linear additive pairing model; specify a changed premise instead. This bound does not cover every complex decoder.",
+      "Continuing a partial cost improvement while leaving the same unpriced consumer, restoration or central-readout obligation unresolved; refresh the family expansion decision first. Local product-retiming evidence has a narrow scope and is not a ban on changed graphs or contracts."
+    ],
+    "overlap_terms": [
+      "rank shape",
+      "block climb",
+      "masked decoder",
+      "overcomplete",
+      "effective rank"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Price the raw gate-11 shared-port cut as an exposed, continued and cleaned child, and decide whether its Gaussian moment is positive on the predecessor exponent interval.",
+  "scope_change_reason": "The catalogue card asks for a larger-rank decoder profile. The open handoff after the fixed-producer completion ceiling instead asks for one changed resource and a complete optimistic invoice before any synthesis. This package answers that invoice for the raw internal cut and stops because the gap is negative.",
+  "bottleneck_link": "This five-bank word spends its local mass on four rank-3 calls. The raw cut appears to add a fifth rank-3 job. The cleanup returns three extra rank-1 calls, so the route does not raise effective child rank.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop when the Gaussian gap is nonpositive for every exponent t in [0, 1], including the one-letter grade-2 widening. Do not synthesize a decoder on this cut.",
+  "outcome": "negative-result",
+  "evidence": "python3 -B research/shared-port-raw-cut-invoice/verify.py prints PASS_SHARED_PORT_RAW_CUT_INVOICE with gap_t1=-2. The same command with -O passes. PROOF.md records the operator identity, the hybrid bill and the derivative comparison.",
+  "author": "unpaidmoon",
+  "ai_assistance": "Substantial Cursor Grok assistance.",
+  "open_questions": [
+    {
+      "question": "Can a feedback write into the live owner separate D x1 from K a x0 with fewer than two extra rank-1 letters?",
+      "why_it_matters": "That is the only Gaussian saving large enough to make gap(1) positive. Left multiplication cannot do it, because D is invertible.",
+      "first_step": "Write one explicit feedback word that uses the live owner and price its paid profile against 8 H1 + 3 H3.",
+      "blocked_by": "A legal feedback contract. The recording-only interface forbids writing into the producer, and every pure source letter is invertible."
+    },
+    {
+      "question": "Do the off-diagonal grade-3 terms in the final rows require more cleanup before those four jobs are legal children?",
+      "why_it_matters": "The reward credited here already counts all four. Further cleanup would deepen the deficit, not open a saving.",
+      "first_step": "Price one off-diagonal grade-3 class on final row 3 under the same source letters.",
+      "blocked_by": "A consumer contract that says whether image dimension 4d is itself a legal child or only a necessary condition."
+    }
+  ]
+}
