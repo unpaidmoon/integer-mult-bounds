@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/dyadic-helper-basis-completion/basis.py",
+    "research/p104-coupled-helper-bases/construct.py",
+    "research/p104-coupled-helper-bases/inputs/pr5580-WORD.json.gz",
+    "research/p104-coupled-helper-bases/local.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Pinned input hashes, old unit-pivot rejection, Euclidean compilation and matrix identities, one coupled handoff, local paid/helper/scalar replay, and defect controls."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-W",
+        "error",
+        "-B",
+        "-O",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "The same handoff replay with assertions replaced by explicit ValueError checks, so optimization cannot skip a control."
+    }
+  ]
+}
