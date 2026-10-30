@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "d59b5035e7b4cbaa9d688a1d32dd0d6eb79c466a",
+      "sha256": "9b8d0eea95b3bf0dfcb7938a732a6439b87a2685dec2a5ab9e525b3b34debbfa"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "3404fbdd5e7529a0674eef26114b5071e4586cec",
+      "sha256": "ead6cdc9d0af6d58e8a49744d8ec8c7c15e13d2ba93c276c434bcf9b51b93a81"
+    },
+    {
+      "path": "research/bit-low-carry-lowering/controller.py",
+      "usage": "input",
+      "git_blob": "0144b35116e83a3894f3644daa99a25f775bb65e",
+      "sha256": "6f5aad2752a3fd9e79428179ca41599574f17c409af61086c9ecbb47ccf49e3b"
+    },
+    {
+      "path": "research/bit-low-carry-lowering/offset.py",
+      "usage": "input",
+      "git_blob": "52d7c2aa9034676ffb5e801cc60f9ef247712aa1",
+      "sha256": "0eaa1a7d6719427c217f5f8370b025faa9213a378be59e03b16fdc2ff5744d6a"
+    },
+    {
+      "path": "research/port9-low-cache-carry/SOURCES.json",
+      "usage": "input",
+      "git_blob": "d505c82d796cf149aba7ba3671c6293a63d6390b",
+      "sha256": "7158c865db1b62952ebcc359843ad8f640fd3cababaaeb073f40dfe5a2c00f28"
+    },
+    {
+      "path": "research/port9-low-cache-carry/adapter.py",
+      "usage": "input",
+      "git_blob": "25954549bb8421d531ccf9e89203b911950b87f9",
+      "sha256": "da9b89052edd75df283411f07ed86ab3cfbdc3c42d5422cb64204e2af30eb74e"
+    },
+    {
+      "path": "research/port9-low-cache-carry/verify.py",
+      "usage": "input",
+      "git_blob": "1f4ed47fec8320b01b2f8b1bc80388a8913808a0",
+      "sha256": "7f644279515c41071692f30be78a0ee41645fac61dbcd2d3f8a9021b928083a5"
+    },
+    {
+      "path": "research/runtime-quarter-carry/TABLE.json.gz",
+      "usage": "input",
+      "git_blob": "f26183d28d8337863516eebfd5a48e2659b1eadc",
+      "sha256": "7222965c79faca34ad43af7e65dfb74e55b6fd0f7625658e82f9a580d5d20204"
+    },
+    {
+      "path": "research/runtime-quarter-carry/inputs/counters.py",
+      "usage": "input",
+      "git_blob": "c4878a7a7e3f390d193df496a579e4a788f25e32",
+      "sha256": "2b51181a3efd403be14111ed2d556ba10e63a8939756e69d488d12344d5a7ad1"
+    },
+    {
+      "path": "research/runtime-quarter-carry/inputs/descriptor.py",
+      "usage": "input",
+      "git_blob": "0f8361865303b0a6898b0085776b19aedf214f6d",
+      "sha256": "ffbb5373b62ff5600fd137c4bca6f578b016a522da51ea9948f6c558a69c7519"
+    },
+    {
+      "path": "research/runtime-quarter-carry/inputs/independent.py",
+      "usage": "input",
+      "git_blob": "0d93b49039465369e79075c0ad93a3d389aa7678",
+      "sha256": "82ba16fae207f2141f986c7cc5788771b6a372a34b90cab67260bc4c7effc500"
+    },
+    {
+      "path": "research/runtime-quarter-carry/inputs/machine.py",
+      "usage": "input",
+      "git_blob": "6ed03865cdb646d40573c132f841afbe335daba0",
+      "sha256": "04b7b76b9f06653d94d2158196cdd1bed7883dd1f59fcbc81a486e3ffb248681"
+    },
+    {
+      "path": "research/runtime-quarter-carry/inputs/route-RESULT.json",
+      "usage": "input",
+      "git_blob": "70714bffd9459abaa12effe68bdbef3674b95e45",
+      "sha256": "44511d9c7da1c88e265f32ba5d77559b92edb6ca1430180231e84727d939d318"
+    },
+    {
+      "path": "research/runtime-quarter-carry/inputs/shear.py",
+      "usage": "input",
+      "git_blob": "b814b6f77b03f12577464df91be6c4f103d1722c",
+      "sha256": "84d60e552bb35657b3c5e63b4ab21846a90d71dfd22c8a46cd01acba76475818"
+    }
+  ]
+}
