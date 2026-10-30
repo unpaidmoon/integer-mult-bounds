@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "task_id": "replay-runtime",
+  "priority_revision": 8,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "original_card": {
+    "id": "replay-runtime",
+    "question": "Can one measured replay bottleneck be sped up without dropping coverage?",
+    "starting_points": [
+      "scripts/run_isolated_tests.py",
+      "scripts/verify_replay_coverage.py",
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "Profile one isolated replay and optimize the measured bottleneck.",
+      "Design source-bound reuse with explicit dependency invalidation and negative controls."
+    ],
+    "acceptance_gate": "Report before/after wall time on the same fixture, retained checks and invalidation behavior.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_selected_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Resolve the current selected review, separate complex/ordinary BIT/admitted BIT/outer budgets, and compare the card against live handoffs before starting. Historical ceilings require exact source/model equivalence.",
+      "scope": "Source-binding orientation only; not a scientific replay or all-size proof. Materialize selected inputs if this checkout is sparse."
+    },
+    "first_experiment": "Measure one unchanged fixture, preserve check coverage, and test one optimization with invalidation controls.",
+    "bottleneck_link": "Faster trustworthy replays increase review throughput and let mechanism candidates be checked sooner.",
+    "allowed_variations": [
+      "Profile one stage or design one source-bound cache boundary."
+    ],
+    "scope_change_triggers": [
+      "Skipping coverage or comparing different fixtures to claim speedup."
+    ],
+    "overlap_terms": [
+      "replay runtime",
+      "cache invalidation",
+      "isolated tests"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Does the published E7 bit-lane iterator emit exactly the weight-at-most-12 words of the 27-dimensional kernel, as an independent half-split census and the predecessor receipt both count them?",
+  "scope_change_reason": "The replay-runtime card asks for a new measured speedup. PR #5729 already published the bit-lane speedup and was archived without an independent replay. The revision-8 verification row says that faster output is not equivalent coverage until checked. This package checks that coverage on the full E7 kernel and does not add another optimization.",
+  "bottleneck_link": "A faster E7 exhaustion is useful for deletion and decoder checks only if it still returns every minimum-weight word. This comparison certifies that iterator on the pinned kernel. It does not change a supplier bill or kappa.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop after one full-kernel set comparison of the published engine against two independent splits. Do not remeasure the timing claim, rerun reflection orbits, or install the engine into another consumer.",
+  "outcome": "completed",
+  "evidence": "Two half-splits agree on 1639 words of weight at most 12: zero plus 1638 weight-12 words, with no lighter nonzero word, over all 134217728 codewords. low_weight_words at batch sizes 16 and 8 returns that same set. The counts match source/RESULT.json. A dropped support and an injected weight-11 word fail.",
+  "author": "unpaidmoon",
+  "ai_assistance": "Substantial Cursor Grok assistance.",
+  "open_questions": [
+    {
+      "question": "Do the two predecessor orbit hashes still partition this independently recovered support set?",
+      "why_it_matters": "The iterator check does not rerun reflections or quadratic ranks, so the archived classification receipt is not re-certified.",
+      "first_step": "Apply the frozen reflection permutations in source/verify.py to this support set and compare both orbit hashes with source/RESULT.json.",
+      "blocked_by": "This package does not recompute the 63 reflection maps."
+    },
+    {
+      "question": "Does the same set equality hold for one other deletion or decoder code named by the bit-lane proof?",
+      "why_it_matters": "The published open question asks to bind another consumer before claiming that the iterator is coverage-preserving outside E7.",
+      "first_step": "Name that code's generators, width and weight bound, then run this half-split against low_weight_words on that basis alone.",
+      "blocked_by": "No second consumer is pinned here."
+    }
+  ]
+}
