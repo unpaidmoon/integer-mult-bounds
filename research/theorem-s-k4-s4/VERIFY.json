@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 240,
+      "checks": "K=2 frontier matches cost 6 at s=3 and s=4; K=2 equality witness replays at cost 6 and a one-bit corruption misses the goal; K=3 direct and orbit searches both find no N=8 schedule; K=4 equality skeleton has 18 edges and the orbit search reaches four stage-2 orbits with no stage-3 child"
+    }
+  ]
+}
