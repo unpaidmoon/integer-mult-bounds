@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/p104-frontier-compression-2/WORD.json.gz",
+    "research/p104-native-input-lifting/WORD.json.gz"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "SHA-256 pins, four departure responses, GF(2) entry subspaces, inverse basis, dirty-carrier cancellation, full 799-register endpoint equality, frame schedule, target debit, and three failing mutants."
+    }
+  ]
+}
