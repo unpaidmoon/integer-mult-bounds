@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/physical-gaussian-core/PROOF.md",
+    "research/physical-gaussian-core/gaussian_axis.py",
+    "research/physical-gaussian-core/gaussian_window.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Exact closed form versus complete literal phase-key scan; clipped, signed, seam, threshold, strict-improvement and invalid-domain controls; source hashes."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Repeat the complete scientific census with every explicit contract active under optimization."
+    }
+  ]
+}

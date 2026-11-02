@@ -1,0 +1,229 @@
+{
+  "author_readiness": {
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/entry-roles/SC4-SOURCE-READINESS-v1.json",
+    "sha256": "243c33b7732206327ad7b955235b4e1f388c5f791c36626c1723a06d7a06b53b"
+  },
+  "blocking_findings": [],
+  "design_review": {
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/roles-armed-independent/SC4-DESIGN-REVIEW-v3.json",
+    "sha256": "4998233eee05111a7a877ca8a9ca1531c1b015f36ba43dde992f18dfedbd62ce"
+  },
+  "epoch_FULL_owner": null,
+  "failure_dispositions": {
+    "absent_STOP_or_Phases_diagnostic_failure": "Disposition fails and qualified remains False; same P outward.",
+    "absent_helper_oracle_failure_after_P": "Helper failure separately retained; same actual P recovered from exact owned evidence and raised; cannot qualify.",
+    "absent_sidecar_publication_failure": "Publication_error separately retained; publication_completed remains False; final marker refused; same P outward.",
+    "early_FULL_None_refusal": "Original gate remains active; not the absent-record P tuple and never a positive result.",
+    "original_full_main_error": "Preserved by bare raise; no qualification attempted.",
+    "positive_observation_or_qualification_failure": "No positive marker; original successful main may be followed by separate raised qualification error."
+  },
+  "freeze": {
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/entry-roles/SC4-CANDIDATE-FREEZE-v1.json",
+    "sha256": "a7e79a2aec9ffe1b0b281d10c695893b00c819f7f170b9c3a065d4ba8a230dae"
+  },
+  "independent_checks": [
+    "All20 freeze payload byte lengths and SHA256 verified, plus all12 unique exact selected overlay input/source pins and Root/provider/native packet pins. No builder, selector or target source executed.",
+    "Each of four independent inverse tables reconstructed original source byte-for-byte. Positive drivers retain14 prior definition ASTs with only main completion observation changed; absent retains13 prior definitions, including protected CLI/main, with only authority-module retention and STOP observation changed. Original absent Phases AST including locations remains exact.",
+    "All68 helper function ASTs unchanged; exact inverse changes only V5_OUTER_FAULT_SOURCE_PINS.main_absent_record.driver_sha256. All52 public body text is preserved; absent non-driver data/cache/adapter/authority inputs remain original byte-exact.",
+    "Three independently fixed source entries are one-use with started set before preflight. Full baseline/candidate preserve original wrapper/main call and normal return. Absent requires actual state=None and packet=None immediately before original helper, which repeats its own exact cold check. No P08 source or terminal state is selected.",
+    "Positive actual completion observation occurs only after original receipt write, stdout and summary publication. Source entry subsequently requires original wrapper normal return, unchanged bound function/code/globals/builtins, live receipt/state/phase/argv aliases, late_started and clean actual owner/CLI/suite/outer disposition.",
+    "Baseline has no epoch suite/acquisition and unused CLI retirement channels; candidate requires used CLI and role channels, unused fallback/emergency channels and no raw extra errors. Positive acquisition retains original ORIGIN_ACCEPTED_PARENT_OWNED/close_attempted=False/close_result=None while original teardown receipt/state establishes closure.",
+    "Absent pure disposition binds actual first-primary protected CLI/main/STOP frames, missing CLI record, original clean argv/disarm local slots, separate STOP-captured inner argv and final outer entry argv, exact P/R1/J1/R2/J2 raw identities, intended used/unused channels, exact two original retirement attempts and unchanged acknowledged replay negative.",
+    "Original data epoch_retire1443-1455 transfers raw R/J before acknowledged=True. Original helper intended-error frames remain untouched. Absent main outer primary stays P with no propagated retirement error, while independent suite channels retain R/J.",
+    "Both positive and absent inspect all original owned cleanup lists, one-shot returned teardown/probe state and raw owner error fields. Absent acquisition requires original PARENT_TEARDOWN_RETURNED, close_attempted=True and same returned close receipt.",
+    "Known original Phases memory diagnostic errors reject both roles. Absent requires original STOP context exit and successful exclusive sidecar context exit; source qualification reads actual records, never serialized status. Sidecar or expected raw P alone cannot qualify.",
+    "Helper normal return is retained locally before observer writes. On helper oracle failure, raw P remains in STOP capture or exact captured helper code/globals frame caught local; missing capture/helper success never qualifies. Helper error/recovery/disposition/publication/qualification remain separate and same actual raw P is raised outward.",
+    "Final absent qualification rechecks actual source/helper aliases and sole-writer outcome/publication fields. No original helper/main/cleanup/retirement retry was added.",
+    "Selector is pure Root command DATA for exactly three fixed normal roles; its literal mapping equals frozen JSON, actual NUL validation is correct, and its inherited Root/provider constants match the pinned base source. Exact helper digest is bound by this selected argv/map; final actual Root/source-map/T1-T4 adoption remains separate.",
+    "Actual native_packet FULL_EXECUTION_CONTRACT109 and both selected cache EPOCH_FULL_EXECUTION_CONTRACT1662 AST literals independently remain None."
+  ],
+  "inverses": [
+    {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/entry-roles/SC4-FULL-BASELINE-INVERSE-v1.json",
+      "sha256": "b8e84807d4c1feb39f12b88d2685a7d4975792a04007a8d4ac080553ac53cf39"
+    },
+    {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/entry-roles/SC4-FULL-CANDIDATE-INVERSE-v1.json",
+      "sha256": "5b64d587ba1fc18eb4d79645f073a549a26235193011198b3e6f5b50c64dda36"
+    },
+    {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/entry-roles/SC4-ABSENT-INVERSE-v1.json",
+      "sha256": "e1489fd9fefc24c7466081cfac131005fa30ed1eab45a09565e43279bf63e8f1"
+    },
+    {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/entry-roles/SC4-HELPER-INVERSE-v1.json",
+      "sha256": "09e8eb2886f61c95436220c45b23d3526892c9645dad618e55c488e49ade9cfa"
+    }
+  ],
+  "limits": [
+    "Acceptance is only these frozen bounded source candidates. No complete SC4 executable admission, approval literal, source-map adoption, target execution, native resource fit or activity credit.",
+    "Independent complete original source/caller/control/cost acceptance, exact final parent map/Root/T1-T4 and native/header/provider/helper/loaded-image gates remain open.",
+    "Additional observations/checks are prospective unmeasured cost. No full caller timing, gain, universal asynchronous/allocation custody or native allocation failure qualification is claimed."
+  ],
+  "native_FULL_owner": null,
+  "new_activity_credit": 0,
+  "next_action": "Parent may consume only the exact reviewed role/helper/selector pins for its separate source selection/adoption gate; preserve original owner None values until complete actual source acceptance.",
+  "original_inputs": {
+    "SC3_shape_only": {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/disposition/controller-v1/p08_controlled_driver_v2.py",
+      "sha256": "c9920851a03f971f2bfecad063c00dcd8ec09f352d0fb8a9e0eba9d328fab3b7"
+    },
+    "authority": {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/parent/AUTHORIZATION-v2.json",
+      "sha256": "9e32514288fed2b1d2873387bf81861ffcd9e1b56d2ab4828be13a311e629106"
+    },
+    "entry_gate": {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/parent/ENTRY-ROLES-SOURCE-GATE-v1.json",
+      "sha256": "66fc0c99705b60fc59b24c5c565f649af9eae6204e7c4a8bc271de35f427f797"
+    },
+    "original_absent_adapter": {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_adapter_main_absent_record_fault_v5.py",
+      "sha256": "f7ca7f4f03ac63c1a95ba42f06149543211566de5e29f487a3dc4d08c5ee9b94"
+    },
+    "original_absent_authority": {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_authority_main_absent_record_fault_v5.py",
+      "sha256": "35d65a6e8c37b1021460a5da6bf1a141d41e4ac33ac5816cf2111ba16190d6ba"
+    },
+    "original_absent_cache": {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_cache_main_absent_record_fault_v5.py",
+      "sha256": "25f3e43001a53cb2cadc926f4371e3c555056b735a5cd3151e01e5a166fb54c4"
+    },
+    "original_absent_data": {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_data_main_absent_record_fault_v5.py",
+      "sha256": "18679fd1eb6ae99c4b375756511427c26718f77674c2d8fcc490e25ceb47cba5"
+    },
+    "original_absent_driver": {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_driver_main_absent_record_fault_v5.py",
+      "sha256": "ec93ad847940da23b56e765e7d9fd6887ff6ca50c524c55feb3e395530552c87"
+    },
+    "original_coverage": {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v1/coverage/COVERAGE-SPEC-v1.json",
+      "sha256": "e4599f79a9dd46a66c9b6cf63ceb7c03d19a0b98a550315b66d5b43dd544d691"
+    },
+    "original_helper": {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-full-contract-completion-v1/cache_epoch_source_controls.py",
+      "sha256": "fcffe77b6a84d5b422b03e3d068924a701c1594cdb9ec305115827e3fad7d4b6"
+    },
+    "original_positive_cache": {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_cache_products_v1.py",
+      "sha256": "d317c9866566cd6147c96566879f26f364e7e6801ac3eed0800b6ed8eedd01a2"
+    },
+    "original_positive_data": {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_data_products_v1.py",
+      "sha256": "18679fd1eb6ae99c4b375756511427c26718f77674c2d8fcc490e25ceb47cba5"
+    },
+    "original_positive_driver": {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_scientific_driver_v1.py",
+      "sha256": "1e8202b7a4c17fc8dfb0a001085c26bf2ec26a69eb6c8501763773324c2bd9a1"
+    },
+    "roles": {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v1/contracts/INVOCATION-ROLE-POLICY-v1.json",
+      "sha256": "ee59734fbd4a9e0e75dc02f8e3861489065e7d3f6b5ed2b3cfb6be981d4e7ecb"
+    }
+  },
+  "reviewer": "/root/cache_roles_armed_review",
+  "roles": [
+    "FULL_BASELINE_NORMAL",
+    "FULL_CANDIDATE_NORMAL",
+    "ABSENT_RECORD_NORMAL"
+  ],
+  "schema": "SC4-three-fixed-entries-independent-source-review-v1",
+  "selected_sources": [
+    {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/entry-roles/sc4_full_baseline_driver_v1.py",
+      "sha256": "4d963f3b4b034b57fe1751ccb30779eb90f48c52f78ff17805f8b9b6c8c6facd"
+    },
+    {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/entry-roles/sc4_full_candidate_driver_v1.py",
+      "sha256": "92b507a2667b0d0085f63fb35176167806272934fef8149da691043411c81db0"
+    },
+    {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/entry-roles/sc4_absent_record_driver_v1.py",
+      "sha256": "e4b08e79f7fb8c1fd0f00b4ec7fa4dc429e4181fc368ef653642280267a7e121"
+    },
+    {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/entry-roles/cache_epoch_source_controls_sc4_v1.py",
+      "sha256": "df6713a68c94cd7e718e8e6f2c3de3e62aeb43dd5314b55b03cb81ee4dd657ca"
+    },
+    {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/entry-roles/sc4_entry_selection_v1.py",
+      "sha256": "aee146e0684b784f99bb89916e61d52c22efdb123aecd92843b7a5cc7d7adeb7"
+    }
+  ],
+  "sole_writers": {
+    "sc4_absent_record_driver_v1.py": {
+      "dispatch_started": [
+        1597
+      ],
+      "disposition": [
+        1648
+      ],
+      "disposition_error": [
+        1651
+      ],
+      "entry_started": [
+        1540
+      ],
+      "publication_completed": [
+        1675
+      ],
+      "publication_error": [
+        1670
+      ],
+      "qualification_error": [
+        1708
+      ],
+      "qualified": [
+        1705
+      ],
+      "stop_write_completed": [
+        1305
+      ]
+    },
+    "sc4_full_baseline_driver_v1.py": {
+      "disposition": [
+        1443
+      ],
+      "full_observation": [
+        1226
+      ],
+      "qualification_error": [
+        1449
+      ],
+      "qualified": [
+        1446
+      ],
+      "started": [
+        1399
+      ]
+    },
+    "sc4_full_candidate_driver_v1.py": {
+      "disposition": [
+        1464
+      ],
+      "full_observation": [
+        1226
+      ],
+      "qualification_error": [
+        1470
+      ],
+      "qualified": [
+        1467
+      ],
+      "started": [
+        1420
+      ]
+    }
+  },
+  "source_adopted": false,
+  "source_selection": {
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/entry-roles/SC4-SOURCE-SELECTIONS-v1.json",
+    "sha256": "2583e630fc5162cddb4994ae103b19686eee8143d447ca4cfc3294554d4dddb0"
+  },
+  "source_span_map": {
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/entry-roles/SC4-SOURCE-SPAN-AND-RECORD-MAP-v1.json",
+    "sha256": "faa24467debe6e61e0b4ec6a5069cfe0b894a043380ef7eacf7e56cdd8967fe1"
+  },
+  "status": "ACCEPT_BOUNDED_SC4_SOURCE_CANDIDATES_ONLY",
+  "target_operations": 0
+}

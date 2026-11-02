@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/order-seventeen-clifford/SOURCE-PINS.json",
+    "research/order-seventeen-clifford/independent.py",
+    "research/order-seventeen-clifford/sources/pr6192-PROOF.md",
+    "research/order-seventeen-clifford/sources/pr6192-README.md",
+    "research/order-seventeen-clifford/verify.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-X",
+        "dev",
+        "-I",
+        "-B",
+        "-W",
+        "error",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Exact signed packing controls, every literal primary product, complete primary and actual packed CLI stdout, unchanged independent checker, and all five source invalidation controls."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-X",
+        "dev",
+        "-I",
+        "-B",
+        "-W",
+        "error",
+        "-O",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Exact signed packing controls, every literal primary product, complete primary and actual packed CLI stdout, unchanged independent checker, and all five source invalidation controls."
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/p104-helper470-twin-rung-removal/WORD.json.gz"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Selected port binding, all2860 edges, complete36-vector exact spectral certificate, six sharp attainers and13 fault/stronger-constant controls."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-W",
+        "error",
+        "-O",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Same full mathematical certificate and controls with assertions disabled."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify_orbits.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Exhaustive 2025-frame domain, reflection transitivity, three stabilizer orbits, all exact spectra including the irrational block, selected orbit membership the Hermitian extension root moments, and 13 semantic rejection controls."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-W",
+        "error",
+        "-O",
+        "-B",
+        "{package}/verify_orbits.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Exhaustive 2025-frame domain, reflection transitivity, three stabilizer orbits, all exact spectra including the irrational block, selected orbit membership the Hermitian extension root moments, and 13 semantic rejection controls."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/independent.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Independent nonorthogonal A8 direct energy, fraction-free exact generalized eigenspace dimensions, coefficient fault and sign covariance. Independent 9D root moments and all784 entries of the skew puncture identity."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "-O",
+        "{package}/independent.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Independent nonorthogonal A8 direct energy, fraction-free exact generalized eigenspace dimensions, coefficient fault and sign covariance. Independent 9D root moments and all784 entries of the skew puncture identity."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/independent_orbits.py"
+      ],
+      "timeout_seconds": 90,
+      "checks": "Independent rational A8 generalized eigenspaces for all three classes, separate irrational-block action, positive LDL sharp attainers, and three semantic controls."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "-O",
+        "{package}/independent_orbits.py"
+      ],
+      "timeout_seconds": 90,
+      "checks": "Independent rational A8 generalized eigenspaces for all three classes, separate irrational-block action, positive LDL sharp attainers, and three semantic controls."
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "counts": {
+    "boundary_pairs": 3,
+    "controls_rejected": 19,
+    "dyadic_pairs": 64,
+    "field_consumers": 9,
+    "integer_pairs": 116
+  },
+  "fixture": {
+    "a": [
+      3,
+      5
+    ],
+    "b": [
+      2,
+      -1
+    ],
+    "legacy_allowance": 134,
+    "legacy_gates": 20,
+    "new_allowance": 64,
+    "new_gates": 7,
+    "new_program": [
+      [
+        "ADD",
+        0,
+        2,
+        "2"
+      ],
+      [
+        "ADD",
+        1,
+        2,
+        "-1"
+      ],
+      [
+        "ADD",
+        2,
+        0,
+        "-3"
+      ],
+      [
+        "ADD",
+        2,
+        1,
+        "-5"
+      ],
+      [
+        "ADD",
+        0,
+        2,
+        "2"
+      ],
+      [
+        "ADD",
+        1,
+        2,
+        "-1"
+      ],
+      [
+        "SCALE",
+        2,
+        2,
+        "-1"
+      ]
+    ],
+    "roles": 3
+  },
+  "package_sha256": {
+    "PROOF.md": "84973fa811181824228610fdaf95504d915a4e98a594bfb0591acb963f354079",
+    "README.md": "c7f6c03990f858c85fd199babdc927f79af25de4421681d9a488c9f8d231ce09",
+    "SOURCES.json": "a6369cb59d3e9f1071b4610ea913deb6b36f3118c6d6f70caebe500fb43cbba5",
+    "TASK.json": "af2acab866adf771dfcbf884c96a260c78fb469e926a00fa1b84273e37f9f9d3",
+    "VERIFY.json": "3e19489d7511cf4861570ceb433a5dd190073e4f341afdaae0e6518abbf42261",
+    "compiler.py": "9d7b71ed4da90360f8a0f15b7a89599340efbb4eb1ff40054e11e621f85df5bf",
+    "verify.py": "17d41e20eb84a0f0f965ff4ff0515fcff996ea6f70bddd60bf217baf72eaca5d"
+  },
+  "schema": "division-free-dual-exchange/1",
+  "source_sha256": {
+    "research/dyadic-helper-basis-completion/PROOF.md": "a909d7b909edffb5babec3e937a3d13052aeaf87852ec73a37dac9802b6d9734",
+    "research/dyadic-helper-basis-completion/basis.py": "f4d097783dd775d434994f1903eb20006cc03933f428bf3edec463437185daf7",
+    "research/p104-coupled-helper-bases/local.py": "5f0678c768544517780d3511995faf0d7062748e7e780c0adb5c4d9c2749a925"
+  }
+}

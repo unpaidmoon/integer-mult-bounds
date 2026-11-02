@@ -1,0 +1,208 @@
+{
+ "flats": {
+  "distinct_spans": 17,
+  "lines_with_dim8_span": 16,
+  "orbit_sizes": [
+   120960,
+   120,
+   1080,
+   3360,
+   34560,
+   8640,
+   241920,
+   30240
+  ],
+  "span_dims": {
+   "8": 16,
+   "9": 1
+  },
+  "span_pair_rank": {
+   "7": 64,
+   "8": 224,
+   "9": 1
+  },
+  "total_lines": 440880
+ },
+ "roots": {
+  "F1_distinct_dim8_spans": 16,
+  "F1_root_lines": {
+   "(False, 52, 8)": 16,
+   "(True, 49, 9)": 104
+  },
+  "F2_pair_rank": {
+   "(7, False, False)": 64,
+   "(8, False, False)": 192,
+   "(8, False, True)": 1664,
+   "(8, True, False)": 1664,
+   "(9, True, True)": 10816
+  },
+  "F3_branch_landing_min_span": {
+   "(8, False, True)": 29,
+   "(8, True, False)": 35,
+   "(8, True, True)": 384,
+   "(9, False, False)": 120,
+   "(9, False, True)": 737,
+   "(9, True, False)": 863,
+   "(9, True, True)": 4972
+  },
+  "root_lines": 120
+ },
+ "words": {
+  "5907": {
+   "NEED": 4992,
+   "PUB_plus_C_eq_I": true,
+   "R1_violations": 0,
+   "R3_violations": 0,
+   "STRICT_edges": 0,
+   "X_Gamma_eq_I_violations": 0,
+   "Z": 0,
+   "branching_symbols": 0,
+   "cost_bound_holds": true,
+   "lineage_paid": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7
+   ],
+   "lineage_rankF2": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7
+   ],
+   "lineages": 8,
+   "merges": 0,
+   "orthogonal_ordered_pairs": 4992,
+   "owned_paid": 56,
+   "rankQ_C": 8,
+   "rankQ_X": 8,
+   "rank_one_mismatches": 0,
+   "symbols": 20
+  },
+  "6030": {
+   "NEED": 4992,
+   "PUB_plus_C_eq_I": true,
+   "R1_violations": 0,
+   "R3_violations": 0,
+   "STRICT_edges": 0,
+   "X_Gamma_eq_I_violations": 0,
+   "Z": 0,
+   "branching_symbols": 0,
+   "cost_bound_holds": true,
+   "lineage_paid": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7
+   ],
+   "lineage_rankF2": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7
+   ],
+   "lineages": 8,
+   "merges": 0,
+   "orthogonal_ordered_pairs": 4992,
+   "owned_paid": 56,
+   "rankQ_C": 8,
+   "rankQ_X": 8,
+   "rank_one_mismatches": 0,
+   "symbols": 20
+  },
+  "6144": {
+   "NEED": 4972,
+   "PUB_plus_C_eq_I": true,
+   "R1_violations": 0,
+   "R3_violations": 0,
+   "STRICT_edges": 0,
+   "X_Gamma_eq_I_violations": 0,
+   "Z": 20,
+   "branching_symbols": 0,
+   "cost_bound_holds": true,
+   "lineage_paid": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7
+   ],
+   "lineage_rankF2": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7
+   ],
+   "lineages": 8,
+   "merges": 0,
+   "orthogonal_ordered_pairs": 4992,
+   "owned_paid": 56,
+   "rankQ_C": 10,
+   "rankQ_X": 8,
+   "rank_one_mismatches": 0,
+   "symbols": 26
+  },
+  "6167": {
+   "NEED": 4972,
+   "PUB_plus_C_eq_I": true,
+   "R1_violations": 0,
+   "R3_violations": 0,
+   "STRICT_edges": 0,
+   "X_Gamma_eq_I_violations": 0,
+   "Z": 20,
+   "branching_symbols": 0,
+   "cost_bound_holds": true,
+   "lineage_paid": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7
+   ],
+   "lineage_rankF2": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7
+   ],
+   "lineages": 8,
+   "merges": 0,
+   "orthogonal_ordered_pairs": 4992,
+   "owned_paid": 56,
+   "rankQ_C": 10,
+   "rankQ_X": 8,
+   "rank_one_mismatches": 0,
+   "symbols": 25
+  }
+ }
+}

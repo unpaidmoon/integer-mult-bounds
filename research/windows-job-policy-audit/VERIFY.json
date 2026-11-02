@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "{package}/verify.py",
+        "--check-receipt"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Retained source hashes, three archived native records and eight exact-reason mutations; no native execution."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "-O",
+        "{package}/verify.py",
+        "--check-receipt"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Same archived evidence and controls with optimized Python; no native execution."
+    }
+  ]
+}

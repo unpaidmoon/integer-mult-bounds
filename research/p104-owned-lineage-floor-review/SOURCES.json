@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "d59b5035e7b4cbaa9d688a1d32dd0d6eb79c466a",
+      "sha256": "9b8d0eea95b3bf0dfcb7938a732a6439b87a2685dec2a5ab9e525b3b34debbfa"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "3404fbdd5e7529a0674eef26114b5071e4586cec",
+      "sha256": "ead6cdc9d0af6d58e8a49744d8ec8c7c15e13d2ba93c276c434bcf9b51b93a81"
+    },
+    {
+      "path": "research/p104-helper468-rung-removal/WORD.json.gz",
+      "usage": "input",
+      "git_blob": "7ffe7b500b02b9d0de49a85ec53e36004f1a411f",
+      "sha256": "b69a9cb3a26d4f40aa7ad14f814b188fe16a782999f6f56292538e447d67b284"
+    },
+    {
+      "path": "research/p104-helper470-twin-rung-removal/WORD.json.gz",
+      "usage": "input",
+      "git_blob": "22f9ab02d1b73ea0aa4b07ce445a14cc2602c760",
+      "sha256": "7834725d9e34ee846a9ccc615221ea81e0201613938afa185d2eda0c9a6c232f"
+    },
+    {
+      "path": "research/p104-root-relay-descent-2/WORD.json.gz",
+      "usage": "input",
+      "git_blob": "69b70ee50c697b185ebf585fbe69f2487af32d1d",
+      "sha256": "c71985d96bf3d4a35aae111aaba87e376f7367efb4a5686278ef293732757533"
+    },
+    {
+      "path": "research/p104-retained-operand-descent/WORD.json.gz",
+      "usage": "input",
+      "git_blob": "f2d3f98964f939e5ca652f9b1453a0604f15f829",
+      "sha256": "68d1ff048bc6d30d85ceaeb38e2557adab87b20a9c67cf73948f95f54104575f"
+    },
+    {
+      "path": "research/p104-designer-toolkit-v2/P104-LEMMAS.md",
+      "usage": "provenance",
+      "git_blob": "129f28dd10c9e1c43d29a9dd280e022070288a73",
+      "sha256": "54263ecdcabb067b1f77749ae60cb1f430c02fd720b63e5e39f358f6bfee78ec"
+    },
+    {
+      "path": "research/p104-designer-toolkit-v2/P104-THEORY.md",
+      "usage": "provenance",
+      "git_blob": "c97d5c20bc60f95df1b1907f31f35085f4b4e99d",
+      "sha256": "8087ef0533d36bf234916401dbdc6a49f23cceaf088c0b417d26d0b8d347fb4d"
+    },
+    {
+      "path": "docs/research/pr-intake-decisions.json",
+      "usage": "provenance",
+      "git_blob": "4b2b3326428046716142a5bfe307263627161283",
+      "sha256": "5c978bcdfe2108d531becf790f4c6a7300f923676cb932a8f64627b5437ef7ab"
+    },
+    {
+      "path": "research/fragmentation-ceiling/PROOF.md",
+      "usage": "provenance",
+      "git_blob": "c4033090d7cd35d9c80744922c587ae115b1de8a",
+      "sha256": "28be45a551ed8491be1ebb8c64acba2834aaa402452cb02e3c71c83e49232264"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "d59b5035e7b4cbaa9d688a1d32dd0d6eb79c466a",
+      "sha256": "9b8d0eea95b3bf0dfcb7938a732a6439b87a2685dec2a5ab9e525b3b34debbfa"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "3404fbdd5e7529a0674eef26114b5071e4586cec",
+      "sha256": "ead6cdc9d0af6d58e8a49744d8ec8c7c15e13d2ba93c276c434bcf9b51b93a81"
+    },
+    {
+      "path": "research/order-seventeen-clifford/SOURCE-PINS.json",
+      "usage": "input",
+      "git_blob": "f65480158f14ebe1bed4f44bdc2ac94b62c601a5",
+      "sha256": "8ee77f2b67a0cf129757c7a56322fa1bcfe356d5a2ed8a0684ea497b1ab42a32"
+    },
+    {
+      "path": "research/order-seventeen-clifford/independent.py",
+      "usage": "input",
+      "git_blob": "8070c240217b607436e99f269039f7388a775ea9",
+      "sha256": "b6745d336436ccd9a8decd9053ab850e031db42dcf6d76bd79323630052ad8db"
+    },
+    {
+      "path": "research/order-seventeen-clifford/sources/pr6192-PROOF.md",
+      "usage": "input",
+      "git_blob": "cbb01d01ffb3d75b18b6d9a9758ad802616728c6",
+      "sha256": "324f494b016b4c63573cb6ed3fd14cedc258621cb17a5b9800165d921a1445d0"
+    },
+    {
+      "path": "research/order-seventeen-clifford/sources/pr6192-README.md",
+      "usage": "input",
+      "git_blob": "e695506e8f9a129b0a393dbb6ef3b34ddf09ac18",
+      "sha256": "dab05bd081f14224bdbe2a0429b8f4389fb930a2922a7544781b184bd4d0f7ec"
+    },
+    {
+      "path": "research/order-seventeen-clifford/verify.py",
+      "usage": "input",
+      "git_blob": "3f5d5f9b59b5812885388194ad4dd570dbeada46",
+      "sha256": "fb9a4906b1145c57d105deea84f7c7503c63d1cf20338116626987c3335a48f2"
+    }
+  ]
+}

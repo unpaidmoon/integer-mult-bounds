@@ -1,0 +1,28 @@
+{
+  "files": {
+    "CONTROL-BILL.json": {
+      "mode": 292,
+      "sha256": "1899914be203ef7ed19ecde949031ab69685d3ff4223d509cde519411e853cda"
+    },
+    "JOBS.json": {
+      "mode": 292,
+      "sha256": "c29f596e6a6f73b5955c927875cb15d7166d34be59b774e4f44031a5134135c0"
+    },
+    "integration/file_controls.py": {
+      "mode": 292,
+      "sha256": "8b8c3b823652c9a8dff0bf9dec2a67a90f30b1b7b642db28e95965b540e9d7bb"
+    },
+    "integration/full_driver.py": {
+      "mode": 292,
+      "sha256": "14125583107b2a06e522e40823cf3874929b6a5c3114d099888adc8c31ac75f5"
+    },
+    "runner_under_test.py": {
+      "mode": 292,
+      "sha256": "32633e40364d824c9f942af1ad2934da9701117328364c7c3f418b21b2e8054a"
+    }
+  },
+  "first_priority": "log handling adverse controls",
+  "runner_sha256": "32633e40364d824c9f942af1ad2934da9701117328364c7c3f418b21b2e8054a",
+  "schema": "h25-log-handling-controls-v1",
+  "scientific_execution": false
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/higher-moment-strictification/README.md",
+    "research/higher-moment-strictification/vendor/FINITE-PRECOMPILATION.md",
+    "research/p104-6030-compiler-binding/README.md",
+    "research/p104-retained-operand-descent/RESULT.json",
+    "research/p104-retained-operand-descent/pricing.py",
+    "research/p104-retained-operand-independent-audit/README.md",
+    "research/p104-retained-operand-independent-audit/RESULT.json"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Exact fixed-source compiler hypotheses, integer-power oracle, 18 semantic controls and deterministic rational receipt."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Same complete check under optimized Python; no assert-dependent acceptance."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/test_boundaries.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Actual Git-free direct replay, seven corrupted source files and corrupted output receipt; exact rejection reasons."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-W",
+        "error",
+        "-B",
+        "{package}/test_boundaries.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Actual Git-free direct replay, seven corrupted source files and corrupted output receipt; exact rejection reasons."
+    }
+  ]
+}

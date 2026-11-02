@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "task_id": "replay-runtime",
+  "priority_revision": 8,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "original_card": {
+    "id": "replay-runtime",
+    "question": "Can one measured replay bottleneck be sped up without dropping coverage?",
+    "starting_points": [
+      "scripts/run_isolated_tests.py",
+      "scripts/verify_replay_coverage.py",
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "Profile one isolated replay and optimize the measured bottleneck.",
+      "Design source-bound reuse with explicit dependency invalidation and negative controls."
+    ],
+    "acceptance_gate": "Report before/after wall time on the same fixture, retained checks and invalidation behavior.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_selected_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Resolve the current selected review, separate complex/ordinary BIT/admitted BIT/outer budgets, and compare the card against live handoffs before starting. Historical ceilings require exact source/model equivalence.",
+      "scope": "Source-binding orientation only; not a scientific replay or all-size proof. Materialize selected inputs if this checkout is sparse."
+    },
+    "first_experiment": "Measure one unchanged fixture, preserve check coverage, and test one optimization with invalidation controls.",
+    "bottleneck_link": "Faster trustworthy replays increase review throughput and let mechanism candidates be checked sooner.",
+    "allowed_variations": [
+      "Profile one stage or design one source-bound cache boundary."
+    ],
+    "scope_change_triggers": [
+      "Skipping coverage or comparing different fixtures to claim speedup."
+    ],
+    "overlap_terms": [
+      "replay runtime",
+      "cache invalidation",
+      "isolated tests"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Reduce complete PR5615 replay time with direct size-one and size-two Leibniz formulas and immutable signed permutation schedules through size five.",
+  "scope_change_reason": "Fix one complete caller and one evaluator; preserve every original certificate predicate and all scientific outputs.",
+  "bottleneck_link": "A faster complete exact-capacity oracle reduces replay cost without changing the helper criterion or admitting any supplier.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop at the first clear complete-command improvement in five alternating fresh-process pairs, or hand off a failed approach.",
+  "outcome": "completed",
+  "evidence": "PROOF.md, MEASUREMENT.json, kernel.py, adapter.py, verify.py",
+  "author": "Nick Petalas",
+  "ai_assistance": "Independent human and formal proof-kernel review are unclaimed.",
+  "open_questions": [
+    {
+      "question": "Can another complete source caller use the same fixed signed schedules without reducing its determinant domain?",
+      "why_it_matters": "Reuse could save verification work while retaining independent minor arithmetic.",
+      "first_step": "Profile one distinct caller and derive its exact dimension and arithmetic contracts before proposing reuse.",
+      "blocked_by": "No broader caller or performance claim is supplied here."
+    }
+  ],
+  "coordination": {
+    "claim": "https://github.com/CrocSwap/integer-mult-bounds/discussions/1166#discussioncomment-19299774",
+    "main": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+    "priority_revision": 8,
+    "source": "original",
+    "author": "original",
+    "overlap": "Live complete open-PR and Discussion snapshots, recent account PRs, all-main README terms and merged searches; sparse local note inventory incomplete. No matching performance target found."
+  },
+  "preserved_worktree": {
+    "branch": "research/w13-1030b-frontier",
+    "head": "cd2404bfcacaa98fe1281946d0a549c11f396614"
+  }
+}

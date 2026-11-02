@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "d59b5035e7b4cbaa9d688a1d32dd0d6eb79c466a",
+      "sha256": "9b8d0eea95b3bf0dfcb7938a732a6439b87a2685dec2a5ab9e525b3b34debbfa"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "3404fbdd5e7529a0674eef26114b5071e4586cec",
+      "sha256": "ead6cdc9d0af6d58e8a49744d8ec8c7c15e13d2ba93c276c434bcf9b51b93a81"
+    },
+    {
+      "path": "research/graded-box-convolution/PROOF.md",
+      "usage": "input",
+      "git_blob": "3d9554940e7a943cefaf905939151906b6971a5f",
+      "sha256": "93b46ee33bc6c8e27c583771ec1e9d6774f70ed10f38b382b35566cff34d0d07"
+    },
+    {
+      "path": "research/graded-box-convolution/code/graded.py",
+      "usage": "input",
+      "git_blob": "2b13bc3fa6b901134448bcd971654a414bc88163",
+      "sha256": "4f2dcf45064d6f1b2102e3464ee95927bf9a39a7b970a8b562f886c4146bc1ad"
+    },
+    {
+      "path": "research/graded-modulus-audit-seed74/PROOF.md",
+      "usage": "input",
+      "git_blob": "df87ad56a8dce30004aeb3a48e2b4c925cdd2e4a",
+      "sha256": "b8c8eebe0199c83656b7d6f7c2c55e8a947a1455060cd9b3e7815d470c4a370c"
+    }
+  ]
+}

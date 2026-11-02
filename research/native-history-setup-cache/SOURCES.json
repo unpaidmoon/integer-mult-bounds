@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "d59b5035e7b4cbaa9d688a1d32dd0d6eb79c466a",
+      "sha256": "9b8d0eea95b3bf0dfcb7938a732a6439b87a2685dec2a5ab9e525b3b34debbfa"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "3404fbdd5e7529a0674eef26114b5071e4586cec",
+      "sha256": "ead6cdc9d0af6d58e8a49744d8ec8c7c15e13d2ba93c276c434bcf9b51b93a81"
+    },
+    {
+      "path": "research/kappa-round3-warp-20261022/ACTUAL-WORD.json.gz",
+      "usage": "input",
+      "git_blob": "46d929df83817b85a5387bcdb9745e0627d6366e",
+      "sha256": "7679daa4ec6a40f56fc7f0202379a6f454310e94945aba4f48beaaaafb838d05"
+    },
+    {
+      "path": "research/native-rank8-helper-provider/WORD.json.gz",
+      "usage": "input",
+      "git_blob": "f3111b47e89496da8ca0ee45b2e4b258c0634d8e",
+      "sha256": "7dc356001ed597ad6fc9fd3e0bc6ff7e3ec3a580a579a956827aa17fccfdd2dc"
+    },
+    {
+      "path": "research/physical-zqy-scalar-span/KERNEL-RESULT.json",
+      "usage": "input",
+      "git_blob": "f57f4accbc0d334db480d2b31db4185420654567",
+      "sha256": "0d56847d579aa195c6ee462a631a5ccdbfbb128dccc26503dbdc481963b6cab8"
+    },
+    {
+      "path": "research/physical-zqy-scalar-span/KERNEL.json",
+      "usage": "input",
+      "git_blob": "cd699656f9192ccf6d462a45617b5e56d6799dfb",
+      "sha256": "ad403cdd98975ae9a8033afff5a86f96d055e44c5be19c1f171387cf26cd3b81"
+    },
+    {
+      "path": "research/physical-zqy-scalar-span/monomial.py",
+      "usage": "input",
+      "git_blob": "1a4483808478808784fe6b3e0b88cdc959752a66",
+      "sha256": "87cdb1688b841891eccefdcaebe67b97a6c86b7af676bbbb667d1d5ee5d45d3e"
+    },
+    {
+      "path": "research/physical-zqy-scalar-span/native.py",
+      "usage": "input",
+      "git_blob": "0784aa84b7bd49454e57530be3ded522313a91f8",
+      "sha256": "1bad1ffe747c3977d1a6bc1cfa9faa4127e38cbf49d7fcf4ae8060fbc7f67d4e"
+    },
+    {
+      "path": "research/physical-zqy-scalar-span/verify_kernel.py",
+      "usage": "input",
+      "git_blob": "036d1f199f03a2a3e2792e33d28c6e5a7e4d26c2",
+      "sha256": "29af4fd8536aa10d8ed0459087744fd077113073ec7e3a682fde970593fd857d"
+    }
+  ]
+}

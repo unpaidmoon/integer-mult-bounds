@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/extension-field-tensor-recognition/SOURCES.json",
+    "research/extension-field-tensor-recognition/recognize.py",
+    "research/extension-field-tensor-recognition/verify.py",
+    "research/frobenius-algebra-recognition/PROOF.md",
+    "research/frobenius-tensor-characters/README.md",
+    "research/nonreduced-tensor-recognition/README.md"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-X",
+        "dev",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 150,
+      "checks": "Exact full-row/pivot equivalence, immutable fused arithmetic, boundary and malformed-input controls, and identical complete original/prepared caller reports."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-W",
+        "error",
+        "-X",
+        "dev",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 150,
+      "checks": "The same new implementation contracts and complete caller under optimized Python; all conditions use explicit exceptions."
+    }
+  ]
+}

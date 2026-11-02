@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "d59b5035e7b4cbaa9d688a1d32dd0d6eb79c466a",
+      "sha256": "9b8d0eea95b3bf0dfcb7938a732a6439b87a2685dec2a5ab9e525b3b34debbfa"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "3404fbdd5e7529a0674eef26114b5071e4586cec",
+      "sha256": "ead6cdc9d0af6d58e8a49744d8ec8c7c15e13d2ba93c276c434bcf9b51b93a81"
+    },
+    {
+      "path": "research/physical-ring-product/inputs/fourier-export.tar",
+      "usage": "input",
+      "git_blob": "6f7f9d59abdf5d98cbecde1583db61103c1cd973",
+      "sha256": "30e460df0428ea1ff72dba6528537e53aec62fcec5dc6077bf736afd5cbbc7e8"
+    },
+    {
+      "path": "research/physical-ring-product/ring_sources.py",
+      "usage": "input",
+      "git_blob": "40a4b21a6ffd89d20051fac8055998fac252f130",
+      "sha256": "82f469acd7f8960ab6b32698e5300a377eb3f18f015f1f129f84604181cac746"
+    },
+    {
+      "path": "research/physical-ring-product/ring_words.py",
+      "usage": "input",
+      "git_blob": "1cb44ce6d95a1e0f9d2c6f78ecd5c7a8e8b39ba9",
+      "sha256": "6bd18c8f78c94b8a0b97512b4f45c03f88b608e895d0f120296585976e1e8104"
+    },
+    {
+      "path": "research/physical-ring-product/twiddle_setup.py",
+      "usage": "input",
+      "git_blob": "f8cba98e816b8aca30dc7c95d3e64dd4fb995cc5",
+      "sha256": "549bc2dd0c08034e8144226f76080b06155c252da514713dc923157d16faf2d4"
+    }
+  ]
+}

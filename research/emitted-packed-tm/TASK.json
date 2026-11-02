@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "task_id": "uniform-transfer-audit",
+  "priority_revision": 8,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "original_card": {
+    "id": "uniform-transfer-audit",
+    "question": "Can one of the selected record's five inherited assumptions be proved at its actual caller?",
+    "starting_points": [
+      "docs/research/current-priorities.md",
+      "docs/research/research-family-status.md",
+      "certificates/selected-result.json",
+      "docs/research/pr-intake-evidence/pr5599-completion/PROOF-REVIEW.md"
+    ],
+    "methods": [
+      "Construct and independently check one source-bound instance of the stated first experiment.",
+      "Seek an exact counterexample or target-specific complete-budget obstruction to that same proposed change."
+    ],
+    "acceptance_gate": "Identify the proposition and what would change downstream; do not equate a finite replay with a universal proof.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_selected_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Read revision 8, the selected review and live exact-source handoffs. Then follow this card's bounded first_experiment.",
+      "scope": "Source-bound orientation only, not a supplier replay or theorem proof."
+    },
+    "first_experiment": "Choose one assumption ID (native_all_columns, owned_erasure, compiler, precision_tape, analytic_recovery), one quantified implication and exact dependency closure. Check current handoffs, including #5625 row reentry and #5707 root-prefix lowering, without treating their partial scope as the whole theorem. Prove or falsify that implication with a caller-bound argument; stop at the chosen obligation. Finite tests or root digits do not discharge an all-size statement.",
+    "bottleneck_link": "Judge the actual current supplier contract and complete signed target/paid bill; frozen-profile ceilings require an applicability proof.",
+    "allowed_variations": [
+      "One exact source head, helper/cut region or quantified proposition and changed hypothesis; check live handoffs first. Different seeds are not different scopes."
+    ],
+    "scope_change_triggers": [
+      "Changing source head, helper/cut domain, operation alphabet or caller boundary without recording the new scope.",
+      "Treating an archived proposal or local numerical pass as complete supplier admission."
+    ],
+    "overlap_terms": [
+      "native_all_columns",
+      "owned_erasure",
+      "compiler",
+      "precision_tape",
+      "analytic_recovery"
+    ],
+    "existing_checks": [
+      {
+        "scope": "PR #4100: proposed unconditional construction and finite checks, without independent acceptance.",
+        "evidence": "research/unconditional-batched-crt/README.md",
+        "remaining": "Independent proof audit of one caller-bound all-size implication; all other premises remain explicit.",
+        "status": "author-checked",
+        "source_commit": "337d04939571a637aeab54a0f58f54fde811663a",
+        "selected_record_sha256": "bb2eaa58647b353f88d0aec2eafb9d30df1be53589231b23e12ceef3e4bad129"
+      },
+      {
+        "scope": "Selected PR5599: complete helper-subspace construction and independent caller replay; five framework assumptions remain.",
+        "evidence": "docs/research/pr-intake-evidence/pr5599-completion/PROOF-REVIEW.md",
+        "remaining": "The next experiment must identify uncovered source-specific work. Successor archive intake does not transfer this admission.",
+        "status": "reviewed",
+        "source_commit": "09dd0965711ca7eeb169057a420abab1c9052137",
+        "selected_record_sha256": "2a0220e866417774606e0f991e41b9c1d26b1f43b97857238cf478dbc7d330b5"
+      }
+    ]
+  },
+  "scope_status": "changed",
+  "actual_scope": "Complete emitted packed finite-TM backend with input, dispatch, signed heads, raw output, genuine halt and a quantified simulation/cost theorem.",
+  "scope_change_reason": "Take PR4538 open question 2 as original construction work. This machine-transfer side result does not discharge a selected supplier assumption or audit a predecessor.",
+  "bottleneck_link": "Makes the packed bounded-word representation executable end to end; a side result on model transfer, not an improvement of the signed supplier invoice.",
+  "budget_minutes": 60,
+  "stop_rule": "Ship the first verified complete emitter; defer tabulation, access fusion and physical multiplication integration.",
+  "outcome": "completed",
+  "evidence": "Written simulation and instruction/storage bounds; exact primitive execution, direct signed-TM boundary comparison, twelve paired unpacked fixtures and rejecting controls.",
+  "author": "Nick Petalas",
+  "ai_assistance": "Independent human and formal proof-kernel review are unclaimed.",
+  "open_questions": [
+    {
+      "question": "Can the retained-read slabs of PR4883 be integrated without invalidating the packed dispatcher?",
+      "why_it_matters": "Could reduce the access part of each simulated transition while retaining the full boundary.",
+      "first_step": "Retain one cache per distinct tape through all dispatch comparisons and certify every clobber.",
+      "blocked_by": "This emitter deliberately uses the original independent GET and SET macros."
+    },
+    {
+      "question": "Can a materialized multiplication caller use this emitted backend at its actual scale, word width and IO ABI?",
+      "why_it_matters": "Connects the completed transfer component to a source-bound application.",
+      "first_step": "Supply the caller machine and its polynomial tape/time envelope, then charge scale/header and output conversion.",
+      "blocked_by": "No complete multiplication TM or selected physical supplier is materialized here."
+    }
+  ],
+  "claim_url": "https://github.com/CrocSwap/integer-mult-bounds/discussions/1166#discussioncomment-19292016",
+  "overlap_coverage": "Live open PRs, 319 account PRs since 2026-10-23, recent handoff posts, active Discussions, main README terms and merged packed-backend searches. The cached helper searched 97 of 8722 main notes; arbitrary diffs and unpublished work remain unsearched."
+}

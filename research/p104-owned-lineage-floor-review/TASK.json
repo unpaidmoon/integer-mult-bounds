@@ -1,0 +1,81 @@
+{
+ "schema_version": 1,
+ "task_id": "complex-rank-shape-decoder",
+ "priority_revision": 8,
+ "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+ "original_card": {
+  "id": "complex-rank-shape-decoder",
+  "question": "Can a legal decoder or coframe change improve the full signed moment, including changed helper targets?",
+  "starting_points": [
+   "docs/research/current-priorities.md",
+   "docs/research/research-family-status.md",
+   "certificates/selected-result.json",
+   "docs/research/pr-intake-evidence/pr5599-completion/PROOF-REVIEW.md",
+   "docs/research/recursive-invoice-preflight.md"
+  ],
+  "methods": [
+   "Construct and independently check one source-bound instance of the stated first experiment.",
+   "Seek an exact counterexample or target-specific complete-budget obstruction to that same proposed change."
+  ],
+  "acceptance_gate": "A source-bound arbitrary-input identity and legal producer/consumer boundary with the complete paid and productive target invoice, including restoration, ownership, native alignment and extra charges. Price under the actual current model; historical ceiling.py assumptions must be established before use. A favorable optimistic relaxation keeps a route open but is not a completed supplier. A scoped local result remains useful; expansion requires the family-level budget gate.",
+  "first_step": {
+   "command": [
+    "python3",
+    "-B",
+    "scripts/research_selected_baseline.py"
+   ],
+   "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+   "inspect": "Read revision 8, the selected review and live exact-source handoffs. Then follow this card's bounded first_experiment.",
+   "scope": "Source-bound orientation only, not a supplier replay or theorem proof."
+  },
+  "first_experiment": "Price one complete changed itinerary with both paid and productive histograms. Check #5693/#5698 for overlap and their exact hypotheses before another coframe search. Use the signed invoice preflight where its boundary contract agrees; an inconclusive concave comparison is not a power crossing. Stop if an optimistic complete budget fails at the chosen target or native delivery remains unspecified.",
+  "bottleneck_link": "Judge the actual current supplier contract and complete signed target/paid bill; frozen-profile ceilings require an applicability proof.",
+  "allowed_variations": [
+   "One exact source head, helper/cut region or quantified proposition and changed hypothesis; check live handoffs first. Different seeds are not different scopes."
+  ],
+  "scope_change_triggers": [
+   "Changing source head, helper/cut domain, operation alphabet or caller boundary without recording the new scope.",
+   "Treating an archived proposal or local numerical pass as complete supplier admission."
+  ],
+  "overlap_terms": [
+   "coframe",
+   "signed moment",
+   "5693",
+   "5698"
+  ],
+  "existing_checks": [
+   {
+    "scope": "Selected PR5599: complete helper-subspace construction and independent caller replay; five framework assumptions remain.",
+    "evidence": "docs/research/pr-intake-evidence/pr5599-completion/PROOF-REVIEW.md",
+    "remaining": "The next experiment must identify uncovered source-specific work. Successor archive intake does not transfer this admission.",
+    "status": "reviewed",
+    "source_commit": "09dd0965711ca7eeb169057a420abab1c9052137",
+    "selected_record_sha256": "2a0220e866417774606e0f991e41b9c1d26b1f43b97857238cf478dbc7d330b5"
+   }
+  ]
+ },
+ "scope_status": "refined",
+ "actual_scope": "Scoped review of PR6170's owned-layer floor framework and an owned-lineage factorization: own exact P_M recount of the owned-delivery matrix C on PR5907, PR6030, PR6144 and PR6167; proof that a relay-free owned lineage contributes a rank-one term on every non-orthogonal pair with paid >= its F2 rank; floor owned paid >= 56 for relay-free, merge-free owned layers with exactly 8 leaves, branching included.",
+ "scope_change_reason": "The card asks whether a legal decoder change can improve the moment. PR6170 prices the owned layer through NEED and a floor LP whose positive values rest on measured scopes; its intake leaves independent review open. The factorization shows that the relay-free owned layer is the masked decoder problem C(P104) >= 56, and branching lineages (shared owned descents, outside the plain decoder model) are the remaining owned-cost lever at 8 terms.",
+ "bottleneck_link": "Side result for the decoder route: it closes shared owned descents as a way below 56 owned paid at 8 leaves (each owned rank is about 380 R0-equivalent in PR6170's fitted law). It does not change kappa.",
+ "budget_minutes": 240,
+ "stop_rule": "Stop when the recount, the factorization on all four words and the finite facts F1-F3 (and all one-dimensional flats) pass, or one fails with a counterexample; no search for new words.",
+ "outcome": "completed",
+ "evidence": "research/p104-owned-lineage-floor-review/RESULT.json",
+ "author": "Matarener",
+ "ai_assistance": "Prepared with Claude (Anthropic) via Claude Code.",
+ "open_questions": [
+  {
+   "question": "Does the lineage factorization extend to merges and STRICT relays?",
+   "why_it_matters": "Together with the masked floor for 9+ terms it would give owned paid >= 56 for every owned layer.",
+   "first_step": "Treat one merged move: split its symbol content per ancestor, or lift PR6229's cumulative row-space invariant from its two-clique quotient to the full port set.",
+   "blocked_by": "No frontier word has merges or STRICT edges, so there is no test instance."
+  },
+  {
+   "question": "Can the orthogonal entries of C be controlled lineage by lineage?",
+   "why_it_matters": "It is the gap between X and C and the missing link to PR6170's open premise NEED >= 3597.",
+   "first_step": "Classify the orthogonal pairs with e(i) > r(j) per lineage on PR6144 and count which can vanish.",
+   "blocked_by": "None; open."
+  }
+ ]
+}

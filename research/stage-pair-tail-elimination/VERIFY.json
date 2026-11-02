@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "docs/research/stage-pair-audit.md",
+    "scripts/audit_cancellation.py",
+    "scripts/audit_fused_block.py",
+    "scripts/audit_joint_frames.py",
+    "scripts/audit_stage_pair.py",
+    "scripts/certify.py",
+    "scripts/exclusion_circuit.py",
+    "scripts/paired_exclusion_circuit.py",
+    "scripts/paired_network.py",
+    "scripts/prepare_layers.py",
+    "scripts/rational_span_frames.py",
+    "scripts/search_network.py",
+    "scripts/shared_point_circuit.py",
+    "scripts/shared_point_network.py",
+    "upstream/LICENSE",
+    "upstream/README.md",
+    "upstream/build/figures/multiplication-flow.tex",
+    "upstream/build/figures/proof-map.tex",
+    "upstream/build/main.tex",
+    "upstream/build/references.bib",
+    "upstream/build/sections/00-introduction.tex",
+    "upstream/build/sections/01-history.tex",
+    "upstream/build/sections/02-streams.tex",
+    "upstream/build/sections/03-motifs.tex",
+    "upstream/build/sections/04-swap.tex",
+    "upstream/build/sections/05-layers.tex",
+    "upstream/build/sections/06-transforms.tex",
+    "upstream/build/sections/07-resampling.tex",
+    "upstream/build/sections/08-assembly.tex",
+    "upstream/build/sections/09-exact-arithmetic.tex",
+    "upstream/build/sections/10-transposition.tex",
+    "upstream/build/sections/11-grouped-rectangles.tex",
+    "upstream/formalization.yaml",
+    "upstream/manifest.json"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 240,
+      "checks": "Complete reference and counted candidate caller, identical full payload/cache, 1271 independent kernel fixtures, invalid inputs and arithmetic mutations."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 240,
+      "checks": "The same full coverage under optimized Python; authenticated predecessor modules retain optimize=0 so their assertions remain active."
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "task_id": "independent-moment",
+  "priority_revision": 8,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "original_card": {
+    "id": "independent-moment",
+    "question": "Does a changed construction's serialized target/paid invoice independently support its claimed improvement?",
+    "starting_points": [
+      "docs/research/current-priorities.md",
+      "docs/research/research-family-status.md",
+      "certificates/selected-result.json",
+      "docs/research/pr-intake-evidence/pr5599-completion/PROOF-REVIEW.md",
+      "docs/research/recursive-invoice-preflight.md"
+    ],
+    "methods": [
+      "Construct and independently check one source-bound instance of the stated first experiment.",
+      "Seek an exact counterexample or target-specific complete-budget obstruction to that same proposed change."
+    ],
+    "acceptance_gate": "Demonstrate independence, source binding, positive cases and semantic failure controls. Name the existing checks and the missing coverage. More digits or another equivalent evaluation of an unchanged root is not by itself new verification coverage.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_selected_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Read revision 8, the selected review and live exact-source handoffs. Then follow this card's bounded first_experiment.",
+      "scope": "Source-bound orientation only, not a supplier replay or theorem proof."
+    },
+    "first_experiment": "Independently recount one changed emitted word and its complete caller, importing no constructor or pricing engine. Include target losses, owned lifetimes, native orientation and extra charges. Check existing #5633/#5708/#5717/#5719 coverage to avoid duplicate audits and preserve its exact head. Stop after the chosen missing implication; a correct root alone is not supplier admission.",
+    "bottleneck_link": "Judge the actual current supplier contract and complete signed target/paid bill; frozen-profile ceilings require an applicability proof.",
+    "allowed_variations": [
+      "One exact source head, helper/cut region or quantified proposition and changed hypothesis; check live handoffs first. Different seeds are not different scopes."
+    ],
+    "scope_change_triggers": [
+      "Changing source head, helper/cut domain, operation alphabet or caller boundary without recording the new scope.",
+      "Treating an archived proposal or local numerical pass as complete supplier admission."
+    ],
+    "overlap_terms": [
+      "invoice",
+      "signed moment",
+      "productive target",
+      "independent recount"
+    ],
+    "existing_checks": [
+      {
+        "scope": "PR #4088: mixed local/owner/phase ledger and moment reported.",
+        "evidence": "research/staged544-mixed-fourth-entry/README.md",
+        "remaining": "Independent binding of changed construction to paid histogram, distinct from full admission.",
+        "status": "author-checked",
+        "source_commit": "72d7efc181edb21806a878f174847c96dd410ab0",
+        "selected_record_sha256": "bb2eaa58647b353f88d0aec2eafb9d30df1be53589231b23e12ceef3e4bad129"
+      },
+      {
+        "scope": "PR #4091: sharp pooled ceiling proposed for fixed THREE/FOUR words and inventory.",
+        "evidence": "research/staged-fourth-mixture-ceiling/README.md",
+        "remaining": "Validate dual, exhaustive pattern scope and exact source equivalence before applying to newer fills.",
+        "status": "author-checked",
+        "source_commit": "a29bdd8f56cd18b805917775cdec09ff935eddc4",
+        "selected_record_sha256": "bb2eaa58647b353f88d0aec2eafb9d30df1be53589231b23e12ceef3e4bad129"
+      },
+      {
+        "scope": "PR #4067: paid (2,2) to (1,3) exchange and fixed OQ4 host reported.",
+        "evidence": "research/r437-two-window-carrier/README.md",
+        "remaining": "Independent full cost delta; remaining caller/precision/stock obligations are separate.",
+        "status": "author-checked",
+        "source_commit": "a95f11c52e3ca1e4c5171b3c20d8f4b0815aee2e",
+        "selected_record_sha256": "bb2eaa58647b353f88d0aec2eafb9d30df1be53589231b23e12ceef3e4bad129"
+      },
+      {
+        "scope": "Selected PR5599: complete helper-subspace construction and independent caller replay; five framework assumptions remain.",
+        "evidence": "docs/research/pr-intake-evidence/pr5599-completion/PROOF-REVIEW.md",
+        "remaining": "The next experiment must identify uncovered source-specific work. Successor archive intake does not transfer this admission.",
+        "status": "reviewed",
+        "source_commit": "09dd0965711ca7eeb169057a420abab1c9052137",
+        "selected_record_sha256": "2a0220e866417774606e0f991e41b9c1d26b1f43b97857238cf478dbc7d330b5"
+      }
+    ]
+  },
+  "scope_status": "changed",
+  "actual_scope": "Independent exact integer/rational reconstruction of every numerical higher-moment and logarithmic-majorant compiler premise for PR6167, source 564a076b113621a93edc4e39968ee4e4a8c9caf0. No outer/native/caller replay.",
+  "scope_change_reason": "Handoff in PR6214 and concurrent PR6245 leaves compiler reconstruction open. PR6109 covers PR6030 with Decimal intervals; this checks changed PR6167 moments using a distinct repeated-square-root fixed-point proof, with no predecessor executable imports.",
+  "bottleneck_link": "Numerical premises linking the changed complete mixed-target invoice to its uniform supplier must hold independently before conditional admission.",
+  "budget_minutes": 120,
+  "stop_rule": "At most 24 minutes orientation; finish the fixed-source numerical audit or report a precise failed condition; no root optimization or supplier expansion. Reserve final 30 minutes for verification and publication.",
+  "outcome": "completed",
+  "evidence": "README.md arithmetic proof and theorem binding; verify.py; deterministic exact RESULT.json; VALIDATION.md.",
+  "author": "@CubeJerry",
+  "ai_assistance": "Substantial OpenAI Codex assistance; no subagents.",
+  "open_questions": [
+    {
+      "question": "Do the P104 controller actual integer batches satisfy the source-size, exit and complement premises at every compiled rank?",
+      "why_it_matters": "This numerical audit instantiates the written inequalities but does not discharge the selected compiler assumption.",
+      "first_step": "Bind one explicit small separated mixed unit and its integer lockstep scheduler to the recurrence in FINITE-PRECOMPILATION.md section 5. Preserve owner identity, batches and chronology.",
+      "blocked_by": "A source-bound constructive all-size interface proof remains distinct from moment and threshold arithmetic."
+    },
+    {
+      "question": "Can the PR6167 scientific admission combine this numerical compiler check with PR6214 and PR6245 without transferring uncovered assumptions?",
+      "why_it_matters": "Archive intake and passing local checks do not change the selected frontier.",
+      "first_step": "Maintainer review of exact source heads and the three packages coverage; compare the inequality-to-theorem table before any admission.",
+      "blocked_by": "Maintainer authorization and all five inherited framework assumptions."
+    }
+  ],
+  "seed": 78,
+  "method_seed": "9f84af37c558ba3174ee8b2e5c4ba54b",
+  "coordination": {
+    "claim_status": "LOCAL-ONLY",
+    "reason": "Only open Issue913 exists, unrelated to coordination; connected GitHub plugin has no Discussion mutation capability and no gh CLI is installed. No reservation issue created.",
+    "claimed_at_utc": "2026-10-30T08:39:09.118063+00:00",
+    "expires_at_utc": "2026-10-30T10:39:09.118063+00:00",
+    "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+    "priority_revision": 8,
+    "selected": "PR6030; kappa=781451/250000000",
+    "canonical_handoff": "https://github.com/CrocSwap/integer-mult-bounds/discussions/1166#discussioncomment-19285465",
+    "expected_deliverable": "Standalone stdlib integer/rational checker, analytic justification, certificate and semantic rejection controls.",
+    "candidate_tasks": [
+      "PR6167 compiler hypotheses via independent integer bounds (chosen)",
+      "Owned-erasure approximate residual COPY boundary",
+      "P104 approximate projector all-column error contract"
+    ],
+    "nearest_work": [
+      {
+        "pr": 6109,
+        "scope": "Same compiler formulas, older PR6030 invoice, Decimal interval implementation; retain credit.",
+        "head": "729842c7a3ea54d5f8a17bfb20dd528fd8d736a5"
+      },
+      {
+        "pr": 6214,
+        "head": "ee8b66c91510b1ff4e5d28be8c6567810b4b3d01",
+        "scope": "Independent word/native/caller/Decimal funding and integer endpoint checks; numerical compiler reconstruction left open."
+      },
+      {
+        "pr": 6245,
+        "head": "8cb302579050454a05ebd77ac7c981e84a9dcb8e",
+        "scope": "Independent outer arithmetic; compiler threshold explicitly excluded."
+      }
+    ],
+    "initial_overlap": {
+      "checked_at_utc": "2026-10-30T08:48:08.720500+00:00",
+      "open_pr_bodies": 314,
+      "open_pr_pages": 4,
+      "local_note_inventory": "Git-object search of all 8722 base HEAD README/TASK note paths for compiler threshold, retained-operand and integer square root; 33 matching paths surfaced, with relevant compiler and arithmetic-method packages read. This is not a full scientific review of every match.",
+      "discussions": "Start-here1163 and newest visible page of1166 read; no full Discussion pagination or posting access.",
+      "tool_limit": "find_overlap --refresh lacked gh, then could not finish writing on a full checkout disk. Sparse checkout freed space; offline helper passed for 686/8722 notes. The complete immutable Git-object search and live plugin PR pages supplement that incomplete helper.",
+      "all_state_PR_search": "compiler + threshold, 35 most recently updated matches; PR6109,6214,6245 relevant. No novelty guarantee."
+    },
+    "presubmission_refresh": {
+      "checked_at_utc": "2026-10-30T08:56:34.913717+00:00",
+      "canonical_main": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+      "priority_revision": 8,
+      "changed_guidance": [],
+      "selected_record_unchanged": true,
+      "bounded_overlap": "Live all-state PR searches for compiler+6167 and 1013, plus newest visible 1166 page. Existing overlap remains #6214/#6245 and #6109; no matching new compiler package found within this bounded coverage."
+    },
+    "completion": {
+      "updated_at_utc": "2026-10-30T09:01:29.787505+00:00",
+      "status": "DONE: scoped numerical audit; publication target below, remote verification reported in PR handoff",
+      "result": "All PR6167 numerical compiler hypotheses pass independently; complement inequality minimum power is 1013, so the older 1012 does not transfer. Published 1024 and j=47005 remain valid. No new kappa.",
+      "branch": "research/p104-compiler-independent-20261030-78",
+      "artifact": "https://github.com/CubeJerry/integer-mult-bounds/tree/research/p104-compiler-independent-20261030-78/research/p104-6167-compiler-audit",
+      "posting": "No coordination Issue or Discussion write capability; this local claim/finding is published with the package."
+    }
+  }
+}

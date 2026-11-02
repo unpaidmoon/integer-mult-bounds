@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "task_id": "replay-runtime",
+  "priority_revision": 8,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "original_card": {
+    "id": "replay-runtime",
+    "question": "Can one measured replay bottleneck be sped up without dropping coverage?",
+    "starting_points": [
+      "scripts/run_isolated_tests.py",
+      "scripts/verify_replay_coverage.py",
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "Profile one isolated replay and optimize the measured bottleneck.",
+      "Design source-bound reuse with explicit dependency invalidation and negative controls."
+    ],
+    "acceptance_gate": "Report before/after wall time on the same fixture, retained checks and invalidation behavior.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_selected_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Resolve the current selected review, separate complex/ordinary BIT/admitted BIT/outer budgets, and compare the card against live handoffs before starting. Historical ceilings require exact source/model equivalence.",
+      "scope": "Source-binding orientation only; not a scientific replay or all-size proof. Materialize selected inputs if this checkout is sparse."
+    },
+    "first_experiment": "Measure one unchanged fixture, preserve check coverage, and test one optimization with invalidation controls.",
+    "bottleneck_link": "Faster trustworthy replays increase review throughput and let mechanism candidates be checked sooner.",
+    "allowed_variations": [
+      "Profile one stage or design one source-bound cache boundary."
+    ],
+    "scope_change_triggers": [
+      "Skipping coverage or comparing different fixtures to claim speedup."
+    ],
+    "overlap_terms": [
+      "replay runtime",
+      "cache invalidation",
+      "isolated tests"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Accelerate the complete PR5210 finite support caller using bounded scaled-integer Gaussian products, with byte-identical complete outputs.",
+  "scope_change_reason": "Select one previously unoptimized finite caller and change its arithmetic representation; no predecessor scientific audit or theorem expansion.",
+  "bottleneck_link": "Reduce exact finite calibration cost while retaining source authentication and every existing control. This is verifier engineering, not a supplier improvement.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop optimizing at the first verified complete-caller improvement; preserve failed conversion evidence and publish only the bounded adapter.",
+  "outcome": "completed",
+  "evidence": "README.md records the complete 18-round timing table and proof. verify.py compares all 277 products, 70912 entries, complete RESULT/MATRICES and the original wrapper report. benchmark.py reruns the fresh-process comparison.",
+  "author": "Nick Petalas",
+  "ai_assistance": "Independent human and formal proof-kernel review are unclaimed.",
+  "open_questions": [
+    {
+      "question": "Can an actual larger native/caller checker use this representation with a useful complete runtime gain?",
+      "why_it_matters": "The present small finite caller saves milliseconds and establishes no full supplier throughput gain.",
+      "first_step": "Profile one different caller and specify its denominator, coefficient-size and matrix-dimension bounds before adapting its products.",
+      "blocked_by": "A source-specific bounded contract and complete-caller measurement are not supplied here."
+    }
+  ]
+}

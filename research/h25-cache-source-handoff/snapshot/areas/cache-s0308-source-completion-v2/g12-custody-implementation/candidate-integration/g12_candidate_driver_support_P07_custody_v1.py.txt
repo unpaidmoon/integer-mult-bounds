@@ -1,0 +1,508 @@
+# Fixed G12 source-control support, appended to the selected epoch driver.
+# SOURCE ONLY. No source selection, FULL approval or execution is supplied here.
+import types as _g12_types
+import traceback as _g12_traceback
+
+_G12_SELECTED_CASE = 'P07'
+_G12_SELECTED_HELPER_PIN = 'eae1fca1f951a572a3487e5136454d80f16124cc02fef296793830c50431b061'
+_G12_TRANSPORT_SOURCE_PIN = None
+_G12_CONTINUATION = {'started': False, 'step': 'EMPTY', 'ready': False,
+                     'helper_handle': None, 'helper_module': None, 'helper_function': None,
+                     'transport_handle': None, 'reference': None, 'suite': None,
+                     'generator': None, 'generator_frame': None, 'observed': None,
+                     'context': None, 'marker': None, 'primary': None,
+                     'secondary': [], 'secondary_clear': True,
+                     'frame_close_error': None, 'terminal_observation_error': None,
+                     'adapter_exit_error': None, 'suffix_phases': [], 'store_entries': 0,
+                     'first_advances': 0, 'second_advances': 0, 'close_attempts': 0}
+
+
+class _G12ControlCompletion(RuntimeError):
+    """Only the exact recorded object is this selected control's completion."""
+
+
+def _g12_cold(index, *args):
+    descriptor = _INITIAL_COLD_CALLER_DESCRIPTOR
+    need(type(descriptor) is tuple and len(descriptor) == 6 and
+         descriptor[1] is _INITIAL_COLD_AUTHORITY and type(index) is int and index in (0, 1, 2),
+         'G12 original cold operation/descriptor differs')
+    primitive, function, record = descriptor[5], descriptor[2], descriptor[3]
+    need(type(primitive) is tuple and len(primitive) == 19 and primitive[0] is type and
+         primitive[1] is _g12_types.FunctionType and primitive[2] is id and primitive[18] is zip and
+         type(function) is primitive[1] and function is record[0],
+         'G12 original cold caller primitives differ')
+    for (_, getter), expected in primitive[18](primitive[4], record[1:7]):
+        need(getter(function, primitive[1]) is expected, 'G12 cold dispatcher field changed')
+    need(record[4] is None and record[5] is None and not record[7], 'G12 cold dispatcher defaults changed')
+    for cell, expected in record[8]:
+        need(primitive[6](cell, primitive[5]) is expected, 'G12 cold dispatcher closure changed')
+    return function(index, *args)
+
+
+def _g12_helper_current():
+    record = _G12_CONTINUATION
+    source = _g12_cold(2, record['helper_handle'])
+    module = record['helper_module']
+    need(source[1] is module and source[2] is module.__dict__ and
+         source[5] == _G12_SELECTED_HELPER_PIN and
+         module.__dict__.get(_G12_SELECTED_CASE) is record['helper_function'] and
+         record['helper_function'].__code__ is record['helper_code'],
+         'G12 selected actual helper source/callable changed')
+    suite = record['suite']
+    need(record['state']['epoch_suite'] is suite and suite.context['driver_function'] is main_epoch and
+         suite.context['phase_owner'] is record['phases'] and
+         suite.context['invocation_token'] is record['invocation_token'] and
+         suite.generation is record['generation'] and suite.owner is record['native_owner'],
+         'G12 selected suite/driver/phase/token changed')
+    # Direct source-owned names extend both captured driver and C3 handler graphs
+    # to the actual outer entry, exit controller and terminal custody predicate.
+    need(type(_g12_continuation_entry) is _g12_types.FunctionType and
+         _g12_continuation_entry.__globals__ is globals() and
+         type(_g12_after_original_exit) is _g12_types.FunctionType and
+         _g12_after_original_exit.__globals__ is globals() and
+         type(_g12_original_terminal_custody) is _g12_types.FunctionType and
+         _g12_original_terminal_custody.__globals__ is globals(),
+         'G12 actual outer entry/exit/custody source owner changed')
+    suite.current()
+
+
+def _g12_generator_shape(suspended):
+    record = _G12_CONTINUATION
+    generator, context = record['generator'], record['context']
+    need(type(generator) is record['generator_type'] and generator.gi_code is record['helper_code'] and
+         generator.gi_running is False and generator.gi_yieldfrom is None and
+         generator.gi_suspended is suspended and generator.gi_frame is record['generator_frame'] and
+         generator.gi_frame is not None and generator.gi_frame.f_globals is record['helper_module'].__dict__,
+         'G12 P07 exact generator/frame/source shape changed')
+    local = generator.gi_frame.f_locals
+    need(type(local) is dict and local.get('c') is context,
+         'G12 P07 generator context identity changed')
+    if suspended:
+        need(local.get('observed') is record['observed'], 'G12 P07 suspended observation identity changed')
+    else:
+        need('observed' not in local, 'G12 P07 body already ran before selected first advance')
+
+
+def _g12_selected_store(suite, original_commit, site, checks):
+    record = _G12_CONTINUATION
+    if record['step'] != 'EXPECT_STORE':
+        return original_commit(site, checks)
+    need(record['ready'] is True and suite is record['suite'] and site == 'C3' and
+         type(site) is str and checks is record['checks'] and
+         type(original_commit) is _g12_types.MethodType and original_commit.__self__ is suite and
+         original_commit.__func__ is type(suite).__dict__['commit'] and record['store_entries'] == 0,
+         'G12 selected original C3 continuation owner changed')
+    _g12_helper_current()
+    pending = suite.pending
+    need(type(pending) is dict and pending.get('site') == 'C3' and pending.get('checks') is checks and
+         type(pending.get('key')) is tuple and pending['key'] == ('perp', (0, 2, 1)) and
+         type(pending.get('label')) is suite.label and
+         checks.cache.get(('perp', (0, 2, 1))) is pending['label'] and
+         suite.active is True and suite.terminal is False and suite.request_live is None and
+         type(suite.registry) is dict and len(suite.registry) == 85196,
+         'G12 requires actual pending extra C3 store at original capacity')
+    record['store_entries'] = 1
+    record['pending_store'] = pending
+    record['stored_label'] = pending['label']
+    context = record['context']
+    need('remaining_original_case_count' not in context and 'remaining_original_outputs' not in context,
+         'G12 candidate remainder fields must be absent before actual original remainder')
+    try:
+        record['step'] = 'HELPER_ENTERED'
+        if _G12_SELECTED_CASE == 'P07':
+            generator = record['helper_function'](context)
+            need(type(generator) is record['generator_type'], 'G12 selected P07 did not return its genuine generator')
+            record['generator'], record['generator_frame'] = generator, generator.gi_frame
+            _g12_generator_shape(False)
+            _g12_helper_current()
+            need(record['first_advances'] == 0, 'G12 P07 first advance repeated')
+            record['first_advances'] = 1
+            try:
+                observed = next(generator)
+            except StopIteration as early:
+                raise RuntimeError('G12 P07 completed before original CLI remainder') from early
+            record['observed'] = observed
+            _g12_generator_shape(True)
+            record['step'] = 'P07_SUSPENDED'
+        else:
+            need(_G12_SELECTED_CASE == 'N22', 'G12 source selected an undeclared helper')
+            _g12_helper_current()
+            record['observed'] = record['helper_function'](context)
+            record['step'] = 'N22_RETURNED'
+        need(type(record['observed']) is dict and
+             all(type(key) is str for key in record['observed']) and
+             set(record['observed']) == {'value', 'capacity_retirements', 'owner'} and
+             suite.terminal is True and suite.active is False and not suite.registry and
+             suite.pending is None and suite.request_live is None,
+             'G12 original N22 did not return its exact terminal continuation observation')
+        # N22 performed the sole original commit. Never call it again here.
+        return None
+    except BaseException as primary:
+        if record['primary'] is None:
+            record['primary'] = primary
+        raise
+
+
+
+def _g12_selected_args(args):
+    need(args.data_lanes == 'candidate' and args.finite_only is False and sys.flags.optimize == 0,
+         'G12 selected control requires the original full candidate/assertion scope')
+
+def _g12_bind_locals(state, extensions, module, binding, phases, invocation_token,
+                      checks_pair, code_pair, label_pair, caller, rank_calls, trace,
+                      captures, stdout, frozen, runtime, engine, output, reference,
+                      reference_bytes, driver_before, pins, frozen_before, engine_before,
+                      runtime_before, copied_engine_before, script_names, new_custody_before,
+                      data_custody_before, anchor_path, anchor_bytes):
+    record = _G12_CONTINUATION
+    suite, set_owner = state['epoch_suite'], extensions['set_binding']['owner']
+    need(record['started'] is True and record['ready'] is False and record['suite'] is None and
+         record['reference'] is not None and record['driver'] is sys.modules['__main__'] and
+         record['driver'].__dict__ is globals() and _EXECUTION['state'] is state and state['enabled'] is True and
+         suite.module is module and suite.context['driver_function'] is main_epoch and
+         suite.context['phase_owner'] is phases and suite.context['invocation_token'] is invocation_token and
+         suite.active is False and suite.terminal is False and suite.invocation_consumed is False and
+         suite.pending is None and suite.request_live is None and not suite.registry and
+         set_owner.sealed is True and set_owner.cli_active is False and set_owner.used is False and
+         set_owner.circuit is None and set_owner.checks is None,
+         'G12 requires the original source-owned sealed, unconsumed main-local generation')
+    for pair in (checks_pair, code_pair, label_pair):
+        need(type(pair) is tuple and len(pair) == 2 and
+             all(type(function) is _g12_types.FunctionType for function in pair),
+             'G12 original phase pair shape changed')
+    need(module.Checks.__dict__['__init__'] is checks_pair[1] and module.compile_roles is code_pair[1] and
+         module.Checks.__dict__['verify_labels'] is label_pair[1], 'G12 actual installed phase pairs changed')
+    # This fixed source name is also captured by the selected C3 product before
+    # product publication. It is not a callback parameter or a context entry.
+    need(_g12_selected_store.__globals__ is globals(), 'G12 fixed source store selector owner changed')
+    record.update({'suite': suite, 'generation': suite.generation, 'native_owner': suite.owner, 'state': state, 'extensions': extensions, 'module': module,
+                   'binding': binding, 'phases': phases, 'invocation_token': invocation_token,
+                   'checks_pair': checks_pair, 'code_pair': code_pair, 'label_pair': label_pair,
+                   'caller': str(caller), 'rank_calls': rank_calls, 'trace': trace, 'captures': captures,
+                   'stdout': stdout, 'frozen': frozen, 'runtime': runtime, 'engine': engine, 'output': output,
+                   'reference_file': reference, 'reference_bytes': reference_bytes, 'driver_before': driver_before,
+                   'pins': pins, 'frozen_before': frozen_before, 'engine_before': engine_before,
+                   'runtime_before': runtime_before, 'copied_engine_before': copied_engine_before,
+                   'script_names': script_names, 'new_custody_before': new_custody_before,
+                   'data_custody_before': data_custody_before, 'anchor_path': anchor_path,
+                   'anchor_bytes': anchor_bytes, 'ready': True, 'step': 'CLI_READY'})
+    _g12_helper_current()
+
+
+def _g12_diagnostics():
+    record = _G12_CONTINUATION
+    ranks = record['rank_calls']
+    need(type(ranks) is list, 'G12 actual original rank list changed')
+    for item in ranks:
+        need(type(item) is tuple and len(item) == 2 and type(item[0]) is tuple and
+             all(type(value) is int for value in item[0]) and type(item[1]) is int,
+             'G12 actual original rank event type changed')
+    binding = record['binding']
+    counters = binding['counters']
+    need(type(counters) is dict and all(type(key) is str and type(value) is int
+                                      for key, value in counters.items()),
+         'G12 original native counter primitive types changed')
+    return {'rank_event_count': len(ranks), 'ordered_rank_events_hex': _g12_bytes(tuple(ranks)).hex(),
+            'complement_receipt': record['trace'].receipt(), 'native_counters': dict(counters),
+            'cache_receipt': _g12_primitive(record['suite'].receipt),
+            'owner_receipt': _g12_primitive(record['suite'].owner.receipt)}
+
+
+
+def _g12_complete_capacity_store(checks, circuit, suite):
+    need(type(circuit.active) is set and len(circuit.active) == 82895 and
+         all(type(node) is int for node in circuit.active) and
+         type(circuit.triples) is list and len(circuit.triples) == 2300,
+         'G12 actual original h25 active/target census changed')
+    for target in circuit.triples:
+        need(type(target) is tuple and len(target) == 3 and all(type(point) is int for point in target) and
+             0 <= target[0] < target[1] < target[2] < 25,
+             'G12 actual original canonical target changed')
+    for key in checks.cache:
+        need(type(key) is int or (type(key) is tuple and len(key) == 2 and type(key[0]) is str and
+             key[0] == 'perp' and type(key[1]) is tuple and len(key[1]) == 3 and
+             all(type(point) is int for point in key[1])), 'G12 actual label store key type changed')
+    need(set(checks.cache) == circuit.active | {('perp', target) for target in circuit.triples},
+         'G12 requires the complete original canonical label store')
+    labels = tuple(checks.cache.values()) + (checks.everything,)
+    need(all(type(label) is suite.label for label in labels), 'G12 actual registered Label type changed')
+    identities = {id(label) for label in labels}
+    need(len(identities) == 85196 and all(type(key) is int for key in suite.registry) and
+         set(suite.registry) == identities, 'G12 actual registry includes missing/foreign original Labels')
+    for label in labels:
+        entry = suite.registry[id(label)]
+        need(type(entry) is tuple and len(entry) == 7 and entry[0] is label and entry[1] is label.basis and
+             entry[2] is label.key and entry[4] is checks and entry[6] is suite.generation,
+             'G12 original registry Label/basis/key/generation custody changed')
+        need(type(label.basis) is dict and all(type(key) is int and type(value) is int
+                                            for key, value in label.basis.items()) and
+             type(label.key) is tuple and all(type(value) is int for value in label.key) and
+             type(label.dim) is int and label.dim == len(label.basis) and
+             label.key == tuple(sorted(label.basis.values())), 'G12 original Label primitive state changed')
+
+def _g12_after_phase(phases, name, function, args, kwargs, result):
+    record = _G12_CONTINUATION
+    if not record['ready']:
+        return result
+    if name not in ('compile_roles', 'verify_labels', 'complete_original_cli'):
+        if record['step'] == 'SUFFIX' and name in _G12_SUFFIX_PHASES:
+            record['suffix_phases'].append(name)
+        return result
+    need(phases is record['phases'], 'G12 fixed actual phase owner changed')
+    _g12_helper_current()
+    if name == 'compile_roles':
+        need(record['step'] == 'CLI_READY' and type(args) is tuple and len(args) == 1 and not kwargs and
+             function is record['code_pair'][0] and record['module'].compile_roles is record['code_pair'][1] and
+             type(args[0]) is record['module'].ComplexSideCircuit,
+             'G12 actual original compile-role return checkpoint changed')
+        record.update({'circuit': args[0], 'code': result, 'code_before': _g12_code_snapshot(result), 'step': 'COMPILED'})
+        return result
+    if name == 'verify_labels':
+        need(record['step'] == 'COMPILED' and type(args) is tuple and len(args) == 1 and not kwargs and
+             function is record['label_pair'][0] and record['module'].Checks.__dict__['verify_labels'] is record['label_pair'][1],
+             'G12 actual original label-phase return checkpoint changed')
+        suite, checks, circuit = record['suite'], args[0], record['circuit']
+        set_owner = record['extensions']['set_binding']['owner']
+        need(type(checks) is suite.checks_class and checks.c is circuit and
+             type(checks.h) is int and type(circuit.h) is int and checks.h == circuit.h == 25 and
+             suite.active is True and suite.terminal is False and suite.invocation_consumed is True and
+             suite.primary_error is None and suite.pending is None and suite.request_live is None and
+             suite.checks is checks and suite.checks_c is circuit and
+             set_owner.cli_active is True and set_owner.used is False and set_owner.circuit is circuit and
+             set_owner.checks is checks and set_owner.triples is circuit.triples and
+             type(suite.registry) is dict and len(suite.registry) == 85196 and type(checks.cache) is dict and
+             len(checks.cache) == 85195 and ('perp', (0, 2, 1)) not in checks.cache,
+             'G12 genuine post-label original capacity checkpoint changed')
+        _g12_complete_capacity_store(checks, circuit, suite)
+        cleanup = record['state']['epoch_cli_cleanup']
+        need(type(cleanup) is dict and cleanup['primary'] is None and cleanup['argv_error'] is None and
+             cleanup['disarm_error'] is None and cleanup['retirement_error'] is None and
+             type(sys.argv) is list and sys.argv == [record['caller']] and sys.argv is not cleanup['argv_owner'],
+             'G12 must be inside original protected CLI after actual arming')
+        c1 = suite.registry.get(id(checks.everything))
+        need(type(c1) is tuple and len(c1) == 7 and c1[0] is checks.everything and c1[1] is checks.everything.basis and
+             c1[2] is checks.everything.key and c1[4] is checks and c1[5] == 'C1' and c1[6] == suite.generation,
+             'G12 registered_label must be actual original C1 store')
+        need(_g12_code_snapshot(record['code']) == record['code_before'], 'G12 original code changed before control store')
+        literal, reference_count, reference_outputs, _ = record['reference']
+        record['checks'] = checks
+        record['context'] = {'bundle': _INITIAL_EPOCH_BUNDLE, 'state': record['state'], 'site': 'C3',
+                             'checks': checks, 'registered_label': checks.everything, 'literal_expected': literal,
+                             'reference_remaining_case_count': reference_count, 'reference_remaining_outputs': reference_outputs}
+        record['prefix_end'] = _g12_diagnostics()
+        record['step'] = 'EXPECT_STORE'
+        actual_label = checks.target_frame((0, 2, 1))
+        need(record['store_entries'] == 1 and actual_label is record['stored_label'] and
+             checks.cache[('perp', (0, 2, 1))] is actual_label and
+             record['step'] == ('P07_SUSPENDED' if _G12_SELECTED_CASE == 'P07' else 'N22_RETURNED'),
+             'G12 actual selected store did not complete exactly once')
+        record['suffix_start'] = _g12_diagnostics()
+        record['rank_prefix'] = _g12_bytes(tuple(record['rank_calls']))
+        record['rank_index'] = len(record['rank_calls'])
+        record['step'] = 'SUFFIX'
+        return result
+    need(record['step'] == 'SUFFIX' and function is runpy.run_path and type(args) is tuple and len(args) == 1 and
+         args[0] == record['caller'] and type(kwargs) is dict and tuple(kwargs) == ('run_name',) and kwargs['run_name'] == '__main__',
+         'G12 actual same-invocation original CLI return changed')
+    record['suffix_phases'].append(name)
+    _g12_complete_original_cli(result)
+    marker = _G12ControlCompletion('G12 intentional ' + _G12_SELECTED_CASE + ' original-CLI control completion')
+    record['marker'], record['step'] = marker, 'MARKED'
+    raise marker
+
+
+def _g12_complete_original_cli(namespace):
+    record = _G12_CONTINUATION
+    module, captures = record['module'], record['captures']
+    need(type(namespace) is dict and all(type(key) is str for key in namespace) and
+         sys.modules.get('complex_circuit') is module and namespace.get('ComplexSideCircuit') is module.ComplexSideCircuit and
+         namespace.get('Checks') is module.Checks and namespace.get('compile_roles') is module.compile_roles and
+         namespace.get('verify_role_frames') is module.verify_role_frames and
+         namespace.get('serializable') is sys.modules['prepare_layers'].serializable,
+         'G12 original completed CLI namespace/observer binding changed')
+    need(type(captures) is dict and all(type(key) is str for key in captures) and set(captures) == {'side', 'full_return'} and
+         type(captures['side']) is tuple and len(captures['side']) == 4, 'G12 actual original capture set changed')
+    circuit, checks, code, roles = captures['side']
+    full_return = captures['full_return']
+    need(circuit is record['circuit'] and checks is record['checks'] and code is record['code'] and
+         type(full_return) is dict and all(type(key) is str for key in full_return) and
+         full_return.get('role_frames') is roles and full_return.get('upstream_commit') == UPSTREAM,
+         'G12 actual same original generation/full role result changed')
+    stdout_text = record['stdout'].getvalue()
+    certificate = (record['runtime'] / 'certificates/complex-network.json').read_bytes()
+    need(stdout_text == EXPECTED_STDOUT and certificate == record['reference_bytes'],
+         'G12 original fresh certificate/stdout differs from original immutable pins')
+    for name in ('side_construction', 'checks_initialization', 'compile_roles', 'verify_map', 'verify_labels',
+                 'verify_role_frames', 'original_upstream_verify_sources', 'full_log_integer_bounds', 'original_serializable'):
+        need(record['phases'].rows.get(name, {}).get('calls') == 1, 'G12 original phase omitted/repeated: ' + name)
+    need('complete_original_cli' not in record['phases'].rows, 'G12 original complete-CLI finally already ran')
+    _g12_original_imports()
+    outputs = _g12_common_outputs(code, record['code_before'], roles, full_return, certificate,
+                                   stdout_text, tuple(record['suffix_phases']))
+    count = _g12_remaining_count(code)
+    need(_g12_bytes(tuple(record['rank_calls'][:record['rank_index']])) == record['rank_prefix'],
+         'G12 actual original rank prefix changed')
+    record.update({'common': outputs, 'case_count': count, 'cli_end': _g12_diagnostics(),
+                   'rank_suffix': _g12_bytes(tuple(record['rank_calls'][record['rank_index']:])),
+                   'namespace': namespace, 'full_return': full_return, 'roles': roles})
+    native_start = record['suffix_start']['native_counters']
+    native_end = record['cli_end']['native_counters']
+    need(set(native_start) == set(native_end), 'G12 original native counter domain changed across suffix')
+    record['native_suffix_delta'] = {key: native_end[key] - value for key, value in native_start.items()}
+    if _G12_SELECTED_CASE == 'P07':
+        context = record['context']
+        need('remaining_original_case_count' not in context and 'remaining_original_outputs' not in context and
+             record['second_advances'] == 0, 'G12 candidate actual remainder publication/advance repeated')
+        _g12_generator_shape(True)
+        context['remaining_original_case_count'] = count
+        context['remaining_original_outputs'] = outputs
+        _g12_helper_current()
+        _g12_generator_shape(True)
+        record['second_advances'] = 1
+        try:
+            next(record['generator'])
+        except StopIteration as completed:
+            need(completed.value is record['observed'], 'G12 original P07 returned a different observation object')
+        else:
+            raise RuntimeError('G12 selected P07 yielded again instead of original comparisons/return')
+        need(record['generator'].gi_frame is None, 'G12 P07 frame remained live after original return')
+        record['p07_returned_original_observation'] = record['observed']
+    else:
+        need(_G12_SELECTED_CASE == 'N22' and record['generator'] is None,
+             'G12 original N22 selection acquired a P07 continuation')
+
+
+def _g12_original_imports():
+    record = _G12_CONTINUATION
+    for name in record['script_names'] - {'complex_network'}:
+        module = sys.modules.get(name)
+        expected = record['engine'] / 'source/complex_circuit.py' if name == 'complex_circuit' else record['runtime'] / 'scripts' / (name + '.py')
+        need(type(module) is _g12_types.ModuleType and Path(module.__file__).resolve() == expected.resolve(),
+             'G12 actual original scientific import path changed: ' + name)
+
+
+def _g12_original_terminal_custody():
+    record = _G12_CONTINUATION
+    need(inventory(record['frozen'], record['pins']) == record['frozen_before'] and
+         inventory(HERE / 'engine', ENGINE_PINS) == record['engine_before'] and
+         inventory(record['runtime'], record['pins'], exact=False) == record['runtime_before'] and
+         inventory(record['engine'], ENGINE_PINS) == record['copied_engine_before'],
+         'G12 original source/input inventory or modes changed')
+    files = {str(path.relative_to(record['runtime'])) for path in record['runtime'].rglob('*') if path.is_file()}
+    need(files == set(record['pins']) | {'certificates/complex-network.json'} and
+         Path(__file__).read_bytes() == record['driver_before'] and
+         record['reference_file'].read_bytes() == record['reference_bytes'],
+         'G12 original output/selected source/reference custody changed')
+    need(adapters.custody(ROUND, 'all') == record['new_custody_before'] and
+         data_adapters.custody(ROUND) == record['data_custody_before'] and
+         (record['anchor_bytes'] is None or record['anchor_path'].read_bytes() == record['anchor_bytes']),
+         'G12 original selected-source/anchor custody changed')
+    _g12_original_imports()
+    for name in ('side_construction', 'checks_initialization', 'compile_roles', 'verify_map', 'verify_labels',
+                 'verify_role_frames', 'original_upstream_verify_sources', 'full_log_integer_bounds',
+                 'original_serializable', 'complete_original_cli'):
+        need(record['phases'].rows.get(name, {}).get('calls') == 1,
+             'G12 complete original phase finally/count changed: ' + name)
+
+
+def _g12_after_original_exit(primary):
+    record = _G12_CONTINUATION
+    if record['primary'] is None:
+        record['primary'] = primary
+    generator = record['generator']
+    if generator is not None and generator.gi_frame is not None:
+        try:
+            # No original CLI resume occurs on failure. Original P07 source has
+            # no finally clause; closing this exact suspended code only releases
+            # its retained frame after original CLI/main/STOP/owned cleanup.
+            _g12_generator_shape(True)
+            need(record['close_attempts'] == 0, 'G12 suspended P07 close repeated')
+            record['close_attempts'] = 1
+            generator.close()
+            need(generator.gi_frame is None, 'G12 exact suspended P07 did not close')
+        except BaseException as secondary:
+            try:
+                record['secondary_clear'] = False
+                record['frame_close_error'] = secondary
+                record['secondary'].append((secondary, secondary.__traceback__, 'P07-frame-close'))
+            except BaseException:
+                pass
+    if primary is record['marker'] and record['step'] == 'MARKED':
+        try:
+            _g12_original_terminal_custody()
+            need(record['secondary_clear'] is True and
+                 record['frame_close_error'] is None and record['terminal_observation_error'] is None and
+                 record['adapter_exit_error'] is None and not record['secondary'],
+                 'G12 source-control secondary error or incomplete journal blocks observation export')
+            row = {'schema': 'g12-original-control-observation-v1', 'case': _G12_SELECTED_CASE,
+                   'selected_driver_sha256': sha(record['driver_before']),
+                   'reference_provenance': record['reference'][3],
+                   'original_helper_observation': _g12_primitive(record['observed']),
+                   'remaining_original_case_count': record['case_count'],
+                   'common_payload_sha256': sha(record['common']), 'common_payload_hex': record['common'].hex(),
+                   'prefix_end': record['prefix_end'], 'suffix_start': record['suffix_start'], 'cli_end': record['cli_end'],
+                   'ordered_rank_suffix_hex': record['rank_suffix'].hex(), 'native_suffix_delta': record['native_suffix_delta'],
+                   'phases': record['phases'].rows,
+                   'store_entries': record['store_entries'], 'first_advances': record['first_advances'],
+                   'second_advances': record['second_advances'], 'close_attempts': record['close_attempts'],
+                   'disposition_qualification': 'OPEN_REQUIRES_SEPARATE_ORIGINAL_STOP_AND_ALL_OWNED_CLEANUP_REVIEW',
+                   'scope': 'Original selected N22/P07 observation plus same-invocation original CLI remainder only. No original full-positive publication/native-count/P02/G12/FULL admission.'}
+            with (record['output'] / 'g12-control-observation.json').open('xb') as stream:
+                stream.write(canonical(row) + b'\n')
+        except BaseException as secondary:
+            try:
+                record['secondary_clear'] = False
+                record['terminal_observation_error'] = secondary
+                record['secondary'].append((secondary, secondary.__traceback__, 'terminal-source-observation'))
+            except BaseException:
+                pass
+    for secondary, traceback, phase in record['secondary']:
+        try:
+            sys.stderr.write('G12 secondary continuation error: ' + phase + '\n')
+            _g12_traceback.print_exception(type(secondary), secondary, traceback, file=sys.stderr)
+        except BaseException:
+            pass
+
+
+def _g12_continuation_entry():
+    record = _G12_CONTINUATION
+    need(record['started'] is False and _G12_SELECTED_CASE in ('N22', 'P07'), 'G12 source control entry is one-use')
+    record['started'] = True
+    record['driver'] = sys.modules['__main__']
+    need(record['driver'].__dict__ is globals(), 'G12 source control requires actual Root-installed driver namespace')
+    need(type(_G12_TRANSPORT_SOURCE_PIN) is str and len(_G12_TRANSPORT_SOURCE_PIN) == 64,
+         'G12 reference transport source has not been selected')
+    helper, helper_handle = _g12_cold(0, str(ROUND / 'areas/cache-validity/g12_source_controls.py'),
+                                     _G12_SELECTED_HELPER_PIN, '_h25_g12_source_controls')
+    transport, transport_handle = _g12_cold(0, str(ROUND / 'areas/cache-validity/g12_reference_transport.py'),
+                                           _G12_TRANSPORT_SOURCE_PIN, '_h25_g12_reference_transport')
+    reference = _g12_cold(1, transport_handle, 'load_original_g12_reference',
+                          _CAPTURED_BOOTSTRAP_ROOT, _CAPTURED_BOOTSTRAP_CAPABILITY, _CAPTURED_BOOTSTRAP_API)
+    need(type(reference) is tuple and len(reference) == 4 and type(reference[0]) is bool and
+         type(reference[1]) is int and reference[1] > 0 and type(reference[2]) is bytes and type(reference[3]) is tuple,
+         'G12 actual source-produced independent reference transport shape changed')
+    source = _g12_cold(2, helper_handle)
+    function = helper.__dict__[_G12_SELECTED_CASE]
+    need(source[1] is helper and source[5] == _G12_SELECTED_HELPER_PIN and
+         type(function) is _g12_types.FunctionType and function.__globals__ is helper.__dict__ and
+         bool(function.__code__.co_flags & 0x20) is (_G12_SELECTED_CASE == 'P07'),
+         'G12 exact selected helper source/generator protocol changed')
+    record.update({'helper_handle': helper_handle, 'helper_module': helper, 'helper_function': function,
+                   'helper_code': function.__code__, 'transport_handle': transport_handle,
+                   'reference': reference, 'generator_type': _g12_types.GeneratorType, 'step': 'PREPARED'})
+    try:
+        _run_epoch_with_stop_evidence()
+    except BaseException as primary:
+        # Original CLI/main/STOP/owned cleanup has already run. Preserve the
+        # identical primary and cause; every adapter cleanup error is secondary.
+        try:
+            _g12_after_original_exit(primary)
+        except BaseException as secondary:
+            try:
+                record['secondary_clear'] = False
+                record['adapter_exit_error'] = secondary
+                record['secondary'].append((secondary, secondary.__traceback__, 'adapter-exit-entry'))
+            except BaseException:
+                pass
+        raise
+    raise RuntimeError('G12 source control reached original full-positive return without its intentional marker')

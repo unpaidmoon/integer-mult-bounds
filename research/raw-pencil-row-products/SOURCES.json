@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "d59b5035e7b4cbaa9d688a1d32dd0d6eb79c466a",
+      "sha256": "9b8d0eea95b3bf0dfcb7938a732a6439b87a2685dec2a5ab9e525b3b34debbfa"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "3404fbdd5e7529a0674eef26114b5071e4586cec",
+      "sha256": "ead6cdc9d0af6d58e8a49744d8ec8c7c15e13d2ba93c276c434bcf9b51b93a81"
+    },
+    {
+      "path": "research/raw-pencil-decomposition/README.md",
+      "usage": "input",
+      "git_blob": "e95fee4df0f1e66e6e514a9c8848459ecfa1f8a7",
+      "sha256": "be96d7feb993850bbd427c55b6a2f3e28c636755ff831dfd5aa0345132209ca7"
+    },
+    {
+      "path": "research/raw-pencil-decomposition/RESULT.json",
+      "usage": "input",
+      "git_blob": "f8072eb16620fadb88c8009e66f883ad158a7160",
+      "sha256": "92d961a8190c35152e9cb35d395e7604940eb82d2c4ab19cb3601699ad02d7bd"
+    },
+    {
+      "path": "research/raw-pencil-decomposition/SOURCES.json",
+      "usage": "input",
+      "git_blob": "69d2927c83ac9892c6a49efa828594771f3d9b38",
+      "sha256": "7dc96ff497e04554d77ebefe22a460379868b8be8635eb4292dab282222da7cc"
+    },
+    {
+      "path": "research/raw-pencil-decomposition/decompose.py",
+      "usage": "input",
+      "git_blob": "c8c275df6668356527f2a4488598efc5268d6755",
+      "sha256": "c13814651f940742ddcbf0addcac2f6ce5286dcfbc6db74141cab2a7ebfbf4a6"
+    },
+    {
+      "path": "research/raw-pencil-decomposition/field_source.py",
+      "usage": "input",
+      "git_blob": "1066bb74c19d180bfef7d9dd1c0650ec6bbd7780",
+      "sha256": "6daa160346d04691c6ca3c9c820b3df8982de4320ec01e5db10e3cb932f42c00"
+    },
+    {
+      "path": "research/raw-pencil-decomposition/verify.py",
+      "usage": "input",
+      "git_blob": "afd693c62b9f70e87faa0570c7b5581a0e7a9b90",
+      "sha256": "b84ec33eba41dad65001932a87b9c4ac17dda73c077fd618789a04f911fdcd3e"
+    }
+  ]
+}

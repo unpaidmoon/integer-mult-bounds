@@ -1,0 +1,15 @@
+{
+ "schema": "mode-fiber-radius-basis-v1",
+ "basis_rows": [
+  7,
+  35,
+  57,
+  73,
+  87,
+  90,
+  92,
+  99
+ ],
+ "tau": 6,
+ "scope": "Rows of M forming a basis of L = M^T Z^112; every other row has integer coordinates in this basis with l1 norm at most tau. Found by search/basis_search.py; verify.py recomputes everything exactly."
+}

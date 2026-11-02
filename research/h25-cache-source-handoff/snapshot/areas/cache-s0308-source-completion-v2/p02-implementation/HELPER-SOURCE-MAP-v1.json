@@ -1,0 +1,31 @@
+{
+  "all_four_comparisons_and_return_including_positions_identical": true,
+  "derivative": {
+    "bytes": 65648,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-implementation/cache_epoch_source_controls_p02_two_yield_v1.py",
+    "sha256": "298b9951e5a0971bf4a7eb19ee789688c860e828a429036fd7fbc37352d69c04"
+  },
+  "derivative_p02_ast_sha256": "d1693a05c1bfdc1becd5a6a9d13cf5cec7de63fbad843bfaa878f95f6bd0759c",
+  "edits": [
+    {
+      "new": "    _p02_labels_result=s.products['labels'](c['checks']);yield _p02_labels_result\n",
+      "old": "    s.products['labels'](c['checks'])\n"
+    },
+    {
+      "new": "    result=c['module'].verify_role_frames(c['circuit'],c['checks'],c['code']);yield result\n",
+      "old": "    result=c['module'].verify_role_frames(c['circuit'],c['checks'],c['code'])\n"
+    }
+  ],
+  "original": {
+    "bytes": 65591,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-full-contract-completion-v1/cache_epoch_source_controls.py",
+    "sha256": "fcffe77b6a84d5b422b03e3d068924a701c1594cdb9ec305115827e3fad7d4b6"
+  },
+  "original_p02_ast_sha256": "6228f17f13accdec4eece1ca8a7cc3b010b6ecd6c638251670f257a235d73d05",
+  "other_top_level_nodes_including_positions_identical": true,
+  "runtime_result": null,
+  "schema": "p02-exact-helper-source-map-v1",
+  "whole_inverse_exact": true,
+  "whole_inverse_sha256": "fcffe77b6a84d5b422b03e3d068924a701c1594cdb9ec305115827e3fad7d4b6",
+  "yields": 2
+}

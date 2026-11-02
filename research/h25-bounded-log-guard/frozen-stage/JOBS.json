@@ -1,0 +1,34 @@
+{
+  "binary": {
+    "finite_only": true,
+    "lanes": "binary"
+  },
+  "files": {
+    "finite_only": true,
+    "lanes": "files"
+  },
+  "nonzero": {
+    "finite_only": true,
+    "lanes": "nonzero"
+  },
+  "normal": {
+    "finite_only": true,
+    "lanes": "normal"
+  },
+  "oversize-fast": {
+    "finite_only": true,
+    "lanes": "oversize-fast"
+  },
+  "oversize-live": {
+    "finite_only": true,
+    "lanes": "oversize-live"
+  },
+  "stderr": {
+    "finite_only": true,
+    "lanes": "stderr"
+  },
+  "stderr-oversize-fast": {
+    "finite_only": true,
+    "lanes": "stderr-oversize-fast"
+  }
+}

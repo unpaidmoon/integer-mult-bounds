@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "d59b5035e7b4cbaa9d688a1d32dd0d6eb79c466a",
+      "sha256": "9b8d0eea95b3bf0dfcb7938a732a6439b87a2685dec2a5ab9e525b3b34debbfa"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "3404fbdd5e7529a0674eef26114b5071e4586cec",
+      "sha256": "ead6cdc9d0af6d58e8a49744d8ec8c7c15e13d2ba93c276c434bcf9b51b93a81"
+    },
+    {
+      "path": "research/higher-moment-strictification/README.md",
+      "usage": "input",
+      "git_blob": "0a736ca89e1eafb73a30e1f2589cc45e6b5f76c3",
+      "sha256": "ebe80b68ff026ce90f71f274c31744f4c0b36132d15ebb7e39cf2d5df4df270d"
+    },
+    {
+      "path": "research/higher-moment-strictification/vendor/FINITE-PRECOMPILATION.md",
+      "usage": "input",
+      "git_blob": "4badb40f0919c515823cb07e44c6470d4d6469ca",
+      "sha256": "4cb32f6b8e388ecf6ed41b5bbdeeb4539cb40c8424f194974afea58f7e0921e8"
+    },
+    {
+      "path": "research/p104-6030-compiler-binding/README.md",
+      "usage": "input",
+      "git_blob": "64d062e56789b26ba335b70b498b7933ab3a253c",
+      "sha256": "f41f6ce26e9fb06753ba3bdbb5fed966da895f4df34101d10e0ecafa75cf420c"
+    },
+    {
+      "path": "research/p104-retained-operand-descent/RESULT.json",
+      "usage": "input",
+      "git_blob": "9d78529c1ac43faef6b3dff6e4b1262d89a86b40",
+      "sha256": "cffec38f3a5ab0bf5ee1bcd15b2e7bf8bcfd711b57ee57de8ec0fea0c5a823df"
+    },
+    {
+      "path": "research/p104-retained-operand-descent/pricing.py",
+      "usage": "input",
+      "git_blob": "cd8220ca7a393f03341f08a93b9d1287f0bb3689",
+      "sha256": "bba1611b05b6cc35279aa1667dcc62ce0e7f27f0ba21f20eb68244fa772e0ae7"
+    },
+    {
+      "path": "research/p104-retained-operand-independent-audit/README.md",
+      "usage": "input",
+      "git_blob": "3e3015f2b248e59116816ff39399a224bf715dde",
+      "sha256": "b6d80a665c8e01c3f6e570940be529333d8e3e8a3e6f7db1c3482107f08d8338"
+    },
+    {
+      "path": "research/p104-retained-operand-independent-audit/RESULT.json",
+      "usage": "input",
+      "git_blob": "f32e4da3ad0335abb896f37065cc1f36c2f80a9c",
+      "sha256": "43584fe082728dc192ea5d0ff51d521502769d91d2b4280e0dd0006bd6c5090a"
+    }
+  ]
+}

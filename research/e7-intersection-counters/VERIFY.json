@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/e7-bitsliced-exhaustion/binary.py",
+    "research/e7-bitsliced-exhaustion/classify.py",
+    "research/e7-bitsliced-exhaustion/source/RESULT.json",
+    "research/e7-bitsliced-exhaustion/source/SOURCES.json",
+    "research/e7-bitsliced-exhaustion/source/vendor/PR5238.py",
+    "research/e7-bitsliced-exhaustion/source/vendor/PR5238.md"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Exact counter arithmetic, complete small/wide-code conformance, malformed/invalidation controls, generated timing receipt and both complete scientific callers. Normal mode."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-O",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Exact counter arithmetic, complete small/wide-code conformance, malformed/invalidation controls, generated timing receipt and both complete scientific callers. Optimized mode."
+    }
+  ]
+}

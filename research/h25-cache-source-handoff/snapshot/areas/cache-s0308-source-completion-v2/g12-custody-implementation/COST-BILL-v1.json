@@ -1,0 +1,130 @@
+{
+  "all_current_actual_wall_cpu_peak_bytes": null,
+  "all_current_final_tail": null,
+  "funding_and_fit_accepted": false,
+  "g12_all_charged_categories": [
+    "source/stage/plan/authentication and dependency preflight",
+    "parent invocation setup and known lease operations",
+    "adapter bootstrap source read/hash/compile/exec and argv/module alias custody/restoration",
+    "entire independent uncached reference including fresh copies/engine imports/original CLI/trace capture/original checks/finally/restoration/cold2",
+    "guard launch/time/monitoring/STOP/final original source inventory/usage/raw-log hashing/receipt",
+    "actual parent wait and known descendant/group/FD cleanup",
+    "canonical receipt and START joins plus all complete raw evidence retention",
+    "both exports full reads/hashes/JSON/schema/payload decode/crosslinks and repeated pair checks",
+    "new parent copies/write/fsync/chmod/close/directory sync/readback",
+    "manifest schema/write/hash/fsync/close/readback and source-selection publication tail",
+    "parent failure/secondary-error retention and necessary cleanup after deadline",
+    "cold consumer complete manifest/pair/publication read/hash/parse/decode/recheck and all retained alias lifetimes"
+  ],
+  "g12_work_assignment": {
+    "C01": "initial parent/Root/bootstrap/source-owned admission; actual process/generation/pidfd observations",
+    "C02": "all source/header/closure/input reads, hashes, complete copies, stage assembly and exact source/inverse review",
+    "C05": "full source and operation graph capture/validation plus overlapping parsed/code/source object lifetimes",
+    "C10": "entire unchanged original uncached producer and its complete independent observations",
+    "C12": "raw primary, cause, traceback and every secondary graph retained through final disposal; fixed slots do not imply fixed retained graph bytes",
+    "C13": "both complete exports, JSON/tag/hex checks, complete original logs/usage/START/receipt, copies/manifest/publication/readback",
+    "C14": "all normal and failed cleanup/restoration and known descriptor/process closes, source/namespace final checks",
+    "C15": "whole parent entry through all final closes/return/source adoption, failure retention and later cold quadruple rereads; no free last tail"
+  },
+  "gain_claimed": false,
+  "memory": "All simultaneous raw/decoded/hex/tagged/schema/source/code/copy/error/traceback/FD ownership is billed. Finite size/depth ceilings reject; they grant no resources or proof of fit. Nested producer times remain diagnostic, not additive disjoint totals.",
+  "new_cap_or_reservation": false,
+  "original_caps": {
+    "RSS_bytes": 1073741824,
+    "Root_seconds": 180,
+    "global_seconds": 2400
+  },
+  "original_categories_unchanged": [
+    {
+      "id": "C01",
+      "includes": "Pristine Root startup, initial TCB authentication, early cold authority capture, queue admission, all process/group/child tracking and aggregate outer measurement; charge before driver START_WALL and after its final sample.",
+      "owner": "pristine_root_parent"
+    },
+    {
+      "id": "C02",
+      "includes": "All original and new source/input inventory/hash/byte/mode checks, pinned closure copy, static packet assembly/inverses, retained source/proof copies, installation inventories and actual startup reads in each selected invocation.",
+      "owner": "source_custody_copy"
+    },
+    {
+      "id": "C03",
+      "includes": "Each of three original metadata cold builds plus all original backend/trace/native builds and child CPU/wall/IO/logs/journals/dependency/header reads. Failed builds and no-retry termination remain charged; no reused binary or zero-cost compiler fixture.",
+      "owner": "cold_native_builds"
+    },
+    {
+      "id": "C04",
+      "includes": "Current actual native/header/FFI/provider/loaded-image/stdlib/primitive profile, preflight, controls, source admission and every original direct/native/reference check. Source definition does not create observed receipts.",
+      "owner": "native_profile_and_controls"
+    },
+    {
+      "id": "C05",
+      "includes": "OriginalGraph, typed factory/source/function/class/default/closure/global/lookup snapshots, twelve actual product roles, native bind clone, AST parse/deepcopy/compile and strict whole-source/code inverses; all concurrent old/new source, AST, code, result and proof graphs.",
+      "owner": "factory_graph_products"
+    },
+    {
+      "id": "C06",
+      "includes": "Every genuine original circuit/Checks/fixture constructor including prearm P08 extra constructor, fallback, native, normalization, counters, source checks and bookkeeping; all fixture copies/temporaries/oracle preparation are charged without suppressed effects.",
+      "owner": "genuine_circuit_checks_fixtures"
+    },
+    {
+      "id": "C07",
+      "includes": "K committed records: dict index capacity, native id integer and fixed seven-field record tuple; at most one pending record; original store/constructor work and actual metadata capacities. Labels/basis/keys are original pointers but retained capacity and transient ownership still charged.",
+      "owner": "registration_and_storage"
+    },
+    {
+      "id": "C08",
+      "includes": "Q actual private role/label/residual requests, nonce and request dictionary, operand tuples, stage/view set, signatures, prepare/finish, literal key/member/store, exact identity comparisons, current source+native checks and original authority state. Do not infer Q from complement or Gram counts.",
+      "owner": "private_requests"
+    },
+    {
+      "id": "C09",
+      "includes": "All unsupported mapping/hook/public escape/reentry/capacity/lifetime fallbacks: retirement, original Owner._data, public V8 canonicalization/collision/counters and full continuation. Charge private attempt plus fallback; no silent truncated case or fast-pass credit.",
+      "owner": "public_fallback_retirement"
+    },
+    {
+      "id": "C10",
+      "includes": "All original arithmetic kernels, independent Fraction work, ordered rank/complement trace, full map/labels/roles/integer-bound/upstream verification and exact type/order witness collection. Baseline and candidate both retain complete obligations.",
+      "owner": "original_arithmetic_observations"
+    },
+    {
+      "id": "C11",
+      "includes": "Every required original cache helper body with each distinct genuine context/source image/mode/lifecycle and all existing control unions in their original activities. Include source fault image preparation, fresh owner/bootstrap, construction, execution, oracles and cleanup for each invocation; body count is not funded command count.",
+      "owner": "control_case_contexts"
+    },
+    {
+      "id": "C12",
+      "includes": "Every P/A/S/R/J and absent-record P/R1/J1/R2/J2 channel allocation, transfer, ACK and consumed-replay check, fixed records/dicts and append-only lists. Retain exact raw errors, causes and traceback/Label/Checks/native/source graph frames until proper parent disposal; finite pointer count does not bound retained graph bytes.",
+      "owner": "error_channel_custody"
+    },
+    {
+      "id": "C13",
+      "includes": "Original lossless typed serialization, full stdout/certificate/side/complement outputs, witnesses, comparisons, source and result hashing, receipt writes, fs metadata/IO and diagnostics. Do not substitute a digest for the original observations or omit failed-attempt evidence.",
+      "owner": "serialization_outputs"
+    },
+    {
+      "id": "C14",
+      "includes": "All normal/error disarm, retirement, metadata close, native owner disposal, source/stdlib/current checks, before-late and late-last, STOP evidence, final custody checks and process teardown. Include both failed cleanup attempts and secondary retention; no forbidden post-late native check.",
+      "owner": "terminal_cleanup"
+    },
+    {
+      "id": "C15",
+      "includes": "Complete parent scheduling/monitoring/accounting, log/receipt/custody readback and retained FD/image/page/allocator/GC/RSS tail through last child/process exit. Charge all retries only if separately authorized; failed or rejected runs are not subtracted.",
+      "owner": "parent_accounting_resource_tail"
+    }
+  ],
+  "original_contract": {
+    "bytes": 9184,
+    "mode": "0444",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v1/contracts/COMPLETE-SYMBOLIC-COST-DEFINITION-v1.json",
+    "sha256": "6ab22ebb387f15f9a1fd91e257ecae649eb4b177af32d4652c2eaec061e3b48c"
+  },
+  "original_full_invoice": {
+    "cpu": "CPU_total is actual parent/driver and all compiler/control/helper child process CPU, including failed setup/cleanup and receipt tails, with each process lifetime counted once.",
+    "index": "For every separately selected actual invocation j and every unique exclusive work segment e, assign exactly one C01-C15 owner. Assign shared setup to the actual common parent or to each actual fresh invocation as incurred; never omit or fabricate amortization.",
+    "peak": "RSS_peak is actual aggregate concurrent high-water across parent/driver/children plus separately declared retained FD/image/page and allocator profile; a sum of individual maxima is not an observed aggregate peak.",
+    "setup_baseline": "Both original complete arms pay the complete actual common control union, Root/native/source setup and teardown. Any asymmetry must be explicit and reviewed; no free candidate-only qualification or baseline control elision.",
+    "unmeasured": "Every unevaluated time/CPU/byte value remains null/unknown. No unknown is treated as zero, no projected gain admitted and no price proof is inferred from symbolic completeness.",
+    "wall": "W_total is actual outer admission-to-final-teardown elapsed time. Per-phase nested samples are diagnostic and must not be summed as if exclusive. Exclusive segment partition plus idle/wait/parent tails must reconcile to W_total."
+  },
+  "schema": "g12-custody-original-complete-symbolic-invoice-v1",
+  "source_completeness_implies_fit": false
+}

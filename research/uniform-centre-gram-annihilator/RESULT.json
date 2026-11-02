@@ -1,0 +1,55 @@
+{
+  "algebra_example": {
+    "determinant_evaluations": 9,
+    "lift_dimensions": [
+      8,
+      32,
+      128
+    ],
+    "polynomial_descending": [
+      1,
+      -4,
+      -12,
+      52,
+      54,
+      -220,
+      -140,
+      300,
+      225
+    ]
+  },
+  "controls": 12,
+  "enclosing_group_size_bound": 1237940039285380274899124224,
+  "exhaustive_composition_pairs": 4112,
+  "package_sha256": {
+    "PROOF.md": "3d0873737dd69c1808d4054d558a3de5178371d3fe1822dc955503287f74d0e0",
+    "README.md": "a4d32a5e0bbf29122280030ae75be71843e47fc331b523fb7ede4b2e042cb529",
+    "SOURCES.json": "279638c3f6f7cf07aa8f96f7610d15a453cff612687007d29608b7a9d30cb1d2",
+    "TASK.json": "23de534337bb8ff64a397571d95bf327c32ead6704ce00b76201ee92e72a5d42",
+    "VERIFY.json": "7ef2ba3648f3c7be54af66ebc0ab8ac87880be402d4b890cecb52ea3e76ce21e",
+    "group.py": "6c3bda022a097f4102b175328fe74274854126dc695d29fe05b94f6b971b90ba",
+    "verify.py": "ef0e7f417ae98388fa86a790b9a7304614e8a4e9546273813ece44d9983f1961"
+  },
+  "small_envelopes": [
+    {
+      "elements": 4,
+      "n": 1,
+      "states": 4
+    },
+    {
+      "elements": 64,
+      "n": 2,
+      "states": 16
+    },
+    {
+      "elements": 4096,
+      "n": 3,
+      "states": 64
+    }
+  ],
+  "source_generator_pairs": 12544,
+  "source_product_states": 62720,
+  "source_sha256": "5c6c51fbffc07a683e922f17532fd90262ae9e23cc3560a696002073dd234ef3",
+  "status": "PASS_UNIFORM_CENTRE_GRAM_ANNIHILATOR",
+  "uniform_annihilator_degree_bound": 9903520314283042199192993792
+}

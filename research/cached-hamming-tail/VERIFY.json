@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/five-label-prefix-completion/PROOF.md",
+    "research/five-label-prefix-completion/README.md",
+    "research/five-label-prefix-completion/bounds.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "All 13312 table translations, 21640 prefixes, complete callers and six rejecting/failure controls."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Same exact coverage with assertions disabled."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/timing_check.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Authenticate all retained timed source bytes and reproduce exact arithmetic of all sixty observations; no new timing threshold."
+    }
+  ]
+}

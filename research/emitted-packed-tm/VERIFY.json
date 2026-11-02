@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/word-ram-transfer/PACKED-TAPES.md",
+    "research/word-ram-transfer/README.md",
+    "research/word-ram-transfer/compiler/tm_to_ramstd.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 180,
+      "checks": "New complete emitted backend: signed-TM invariant, primitive cost/storage, paired source fixture and meaningful mutations."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 180,
+      "checks": "Same complete evidence with interpreter assertions disabled."
+    }
+  ]
+}

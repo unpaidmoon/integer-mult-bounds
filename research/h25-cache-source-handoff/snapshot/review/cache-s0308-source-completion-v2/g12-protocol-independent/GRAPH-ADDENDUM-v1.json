@@ -1,0 +1,256 @@
+{
+  "candidate_freeze": {
+    "bytes": 2012,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1/FREEZE-v1.json",
+    "sha256": "4ee86e91c36c1651da2fa31506da27b3e479ae1883b0a0563818508cda839124"
+  },
+  "combined_finding_ids": [
+    "G12-CANDIDATE-001",
+    "G12-CANDIDATE-002"
+  ],
+  "graph_analysis": {
+    "N22": {
+      "driver_roots": [
+        "main_epoch",
+        "Phases.__init__",
+        "Phases.call",
+        "Phases.memory",
+        "Phases.wrap"
+      ],
+      "g12_not_reachable_in_driver_superset": [
+        "_g12_after_original_exit",
+        "_g12_continuation_entry",
+        "_g12_original_terminal_custody"
+      ],
+      "g12_reachable_from_selected_C3_handler_superset": [
+        "_g12_bind_locals",
+        "_g12_cold",
+        "_g12_generator_shape",
+        "_g12_helper_current",
+        "_g12_selected_args",
+        "_g12_selected_store"
+      ],
+      "g12_reachable_in_driver_superset": [
+        "_g12_after_phase",
+        "_g12_bind_locals",
+        "_g12_bytes",
+        "_g12_code_snapshot",
+        "_g12_cold",
+        "_g12_common_outputs",
+        "_g12_complete_capacity_store",
+        "_g12_complete_original_cli",
+        "_g12_diagnostics",
+        "_g12_generator_shape",
+        "_g12_helper_current",
+        "_g12_original_imports",
+        "_g12_primitive",
+        "_g12_remaining_count",
+        "_g12_selected_args",
+        "_g12_selected_store"
+      ],
+      "missing_definition_spans": {
+        "_g12_after_original_exit": [
+          1762,
+          1805
+        ],
+        "_g12_continuation_entry": [
+          1808,
+          1844
+        ],
+        "_g12_original_terminal_custody": [
+          1738,
+          1759
+        ]
+      },
+      "own_function_referrers": {
+        "_g12_after_original_exit": [
+          "_g12_continuation_entry"
+        ],
+        "_g12_continuation_entry": [],
+        "_g12_original_terminal_custody": [
+          "_g12_after_original_exit"
+        ]
+      },
+      "source": {
+        "bytes": 126735,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1/g12_candidate_driver_N22_v1.py",
+        "sha256": "46f515efa7ebdc60e20b64ef2ebdfb542ecb8c90371d339a951ccabb2a205e09"
+      }
+    },
+    "P07": {
+      "driver_roots": [
+        "main_epoch",
+        "Phases.__init__",
+        "Phases.call",
+        "Phases.memory",
+        "Phases.wrap"
+      ],
+      "g12_not_reachable_in_driver_superset": [
+        "_g12_after_original_exit",
+        "_g12_continuation_entry",
+        "_g12_original_terminal_custody"
+      ],
+      "g12_reachable_from_selected_C3_handler_superset": [
+        "_g12_bind_locals",
+        "_g12_cold",
+        "_g12_generator_shape",
+        "_g12_helper_current",
+        "_g12_selected_args",
+        "_g12_selected_store"
+      ],
+      "g12_reachable_in_driver_superset": [
+        "_g12_after_phase",
+        "_g12_bind_locals",
+        "_g12_bytes",
+        "_g12_code_snapshot",
+        "_g12_cold",
+        "_g12_common_outputs",
+        "_g12_complete_capacity_store",
+        "_g12_complete_original_cli",
+        "_g12_diagnostics",
+        "_g12_generator_shape",
+        "_g12_helper_current",
+        "_g12_original_imports",
+        "_g12_primitive",
+        "_g12_remaining_count",
+        "_g12_selected_args",
+        "_g12_selected_store"
+      ],
+      "missing_definition_spans": {
+        "_g12_after_original_exit": [
+          1762,
+          1805
+        ],
+        "_g12_continuation_entry": [
+          1808,
+          1844
+        ],
+        "_g12_original_terminal_custody": [
+          1738,
+          1759
+        ]
+      },
+      "own_function_referrers": {
+        "_g12_after_original_exit": [
+          "_g12_continuation_entry"
+        ],
+        "_g12_continuation_entry": [],
+        "_g12_original_terminal_custody": [
+          "_g12_after_original_exit"
+        ]
+      },
+      "source": {
+        "bytes": 126735,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1/g12_candidate_driver_P07_v1.py",
+        "sha256": "e6f1038f5a75466d95fd3e8c3d44df483d76f97deff9f966bd6140b2d0bc28a7"
+      }
+    }
+  },
+  "method": "Stdlib AST/text/hash only. The own-function analysis deliberately overapproximates actual code_names edges: every ast.Name anywhere in a function body, including nested code and local references, may add an edge to a top-level own function. All Phases methods are initial roots. Failure to reach a function even in this conservative superset proves it is not reached by the actual own direct-global/function-code path. The exact candidate text was also searched for all three names; no hidden attribute/default/closure publication of those functions is present. No target compilation, import, helper execution, synthetic runtime mutation or test occurred.",
+  "new_blocking_finding": {
+    "established_facts": [
+      "The actual original driver-entry operation receives only main_epoch and Phases as its initial function/class roots. It calls capture_graph0((function,),(phase_class,)) at authority1223.",
+      "capture_graph follows function-valued closure cells/defaults/attributes/effective globals and methods of its supplied/reached classes. It does not capture every function merely because it belongs to the same global namespace or source file. graph_fields_only checks captured function fields and recorded lookups; it does not extend the graph at use.",
+      "main_epoch and Phases reach the G12 phase/store/helper-current functions, including _g12_selected_store and _g12_original_imports. They never reference _g12_continuation_entry, _g12_after_original_exit or _g12_original_terminal_custody. The selected C3 closure root also cannot reach these three.",
+      "_g12_continuation_entry is invoked only from the top-level __main__ guard. It calls _g12_after_original_exit, which calls _g12_original_terminal_custody. This separate chain has no incoming captured main/Phases/product edge.",
+      "Consequently the original current-driver/product checks do not bind the current callable/code/closure/default/effective-global records of this new exit/disposition chain. Pinning file bytes and sharing a module namespace do not supply the missing current-function graph edge."
+    ],
+    "id": "G12-CANDIDATE-002",
+    "impact": "The selected protocol cannot claim its entire source-owned exit/controller/custody predicate is authenticated by the inherited current graph. A rebinding or function-code/default/closure change in this disconnected chain is outside that declared graph, even while the selected store/phase graph still checks successfully. This is a source-boundary absence, not a runtime success/failure observation.",
+    "relationship_to_first_review": "The initial C3-OWNERSHIP finding remains valid for the actual selected handler and phase path. This addendum limits any broader reading: that positive C3 result did not establish source ownership of the separate outer exit/controller chain. Finding001 remains independently blocking.",
+    "required_narrow_change": "Add an explicit source-owned binding from the genuinely captured main/Phases graph to the actual outer entry/controller/predicate chain before publication, and retain that exact callable relationship under existing currentness checks. Prove the new direct/transitive graph edge and actual entry/callable ownership in the successor. Do not introduce a generalized loader, late recapture, dummy source record, or runtime adoption requirement.",
+    "severity": "BOUNDED_SOURCE_CONTRACT_BLOCKER",
+    "sources": [
+      {
+        "bytes": 126735,
+        "lines": [
+          900,
+          902
+        ],
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1/g12_candidate_driver_N22_v1.py",
+        "sha256": "46f515efa7ebdc60e20b64ef2ebdfb542ecb8c90371d339a951ccabb2a205e09"
+      },
+      {
+        "bytes": 126735,
+        "lines": [
+          1738,
+          1849
+        ],
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1/g12_candidate_driver_N22_v1.py",
+        "sha256": "46f515efa7ebdc60e20b64ef2ebdfb542ecb8c90371d339a951ccabb2a205e09"
+      },
+      {
+        "bytes": 126735,
+        "lines": [
+          900,
+          902
+        ],
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1/g12_candidate_driver_P07_v1.py",
+        "sha256": "e6f1038f5a75466d95fd3e8c3d44df483d76f97deff9f966bd6140b2d0bc28a7"
+      },
+      {
+        "bytes": 126735,
+        "lines": [
+          1738,
+          1849
+        ],
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1/g12_candidate_driver_P07_v1.py",
+        "sha256": "e6f1038f5a75466d95fd3e8c3d44df483d76f97deff9f966bd6140b2d0bc28a7"
+      },
+      {
+        "bytes": 137642,
+        "lines": [
+          1216,
+          1225
+        ],
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1/g12_epoch_authority_selector_v1.py",
+        "sha256": "65b3d33068b0549ddb4a9e7e18a9912bebad69c309a8a29ae4fd532e9f428211"
+      },
+      {
+        "bytes": 137642,
+        "lines": [
+          1490,
+          1501
+        ],
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1/g12_epoch_authority_selector_v1.py",
+        "sha256": "65b3d33068b0549ddb4a9e7e18a9912bebad69c309a8a29ae4fd532e9f428211"
+      },
+      {
+        "bytes": 137642,
+        "lines": [
+          1795,
+          1880
+        ],
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1/g12_epoch_authority_selector_v1.py",
+        "sha256": "65b3d33068b0549ddb4a9e7e18a9912bebad69c309a8a29ae4fd532e9f428211"
+      },
+      {
+        "bytes": 172718,
+        "lines": [
+          2745,
+          2766
+        ],
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1/g12_epoch_cache_selector_v1.py",
+        "sha256": "20a8a94e96bfa6213d4f04244dabecf059b4c8c7e8ffa7e9409a8b87cfeef494"
+      }
+    ],
+    "title": "Outer G12 entry, exit controller and terminal custody predicate are absent from the captured driver/product graph"
+  },
+  "preserved_source_results": "The initial81 static checks, complete byte inverses, unchanged original helper and cleanup AST results, genuine capacity/source selection and P07 one-yield call-order analysis remain established. No candidate v1 file has changed.",
+  "prior_freeze": {
+    "bytes": 1866,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-protocol-independent/FREEZE-v1.json",
+    "sha256": "93cd3138cd6961fdf2e2df61c66bd970fd6d788606cff874b2ba655063b8d504"
+  },
+  "prior_review": {
+    "bytes": 33560,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-protocol-independent/G12-CANDIDATE-PROTOCOL-REVIEW-v1.json",
+    "sha256": "feecd63be55243fe2a7d07da8ac1f7cfcec6558362e694b82219a1be232ab7bc"
+  },
+  "reviewer": "/root/cache_g12_protocol_review",
+  "schema": "g12-candidate-protocol-independent-graph-addendum-v1",
+  "scope": "Narrow additive source-currentness graph inspection requested after initial review freeze; preserves that review and all frozen source. No broad re-audit.",
+  "separate_open_scopes": "Literal _G12_TRANSPORT_SOURCE_PIN=None remains closed and is not a rejection finding. Parent reference-custody work, original disposition qualification, runtime/source adoption, execution, whole S03.08 and all activity/performance credit remain separate.",
+  "status": "REJECT_BOUNDED_CANDIDATE_PROTOCOL_SOURCE_V1",
+  "target_operations": 0
+}

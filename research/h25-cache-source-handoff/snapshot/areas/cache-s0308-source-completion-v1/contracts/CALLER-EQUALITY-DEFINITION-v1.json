@@ -1,0 +1,131 @@
+{
+  "expected_results_are_obligations_not_observations": true,
+  "native_expected_full_call_counts": {
+    "complement_fallback": 0,
+    "complement_native": 238685,
+    "gram_fallback": 0,
+    "gram_native": 59959
+  },
+  "new_control_ids": [],
+  "original_literal_expectations": {
+    "BASE": "19fdb086ea96af9a9f87936a2b888e10af4ed810",
+    "COMPLEMENT_EXPECTED": {
+      "calls": 238685,
+      "canonical_stream_bytes": 55839507,
+      "schema": "v2-jsonl:call,us,vs,result(type=list+values or type=None); ordered exact integer vectors",
+      "sha256": "7dec2bf33303c37e1c699609e83768d61df7e19104d34a26a148f66d5ccc4838"
+    },
+    "ENGINE_PINS": {
+      "compare_side_verifier.py": "6e507bb0c7e00d090a60289fddb6c55e90c946d0850c42c3c5e3e15c27604a68",
+      "finite_controls.py": "df989a831aac43cc1af95169dad8c64a7548760e6e1f96976da996703f2c8f7a",
+      "native_backend.py": "e473c38245c3668715b5a78dfe980b2fe3ed0d0c9b8c97c666fbae6ecf1fffd5",
+      "native_gf2.c": "e9c3c9194a08718bd1575c1cf08c6c6772d3b644c2e274c25a84a1f9249d06cc",
+      "profile_side_verifier.py": "9c994378171c20a91539418d93cb8387e1daa93465d6862beefea90e12999c2a",
+      "source/complex_circuit.py": "d623617f7c5cb3189580883a8ab30c0bd3832688ae3f1f0c1f881bbbbff8e0c1",
+      "source/complex_network.py": "0da395e67ac04fa213494e71012c1b19b544596d34cdce5a3b172b1fb6af5f1b"
+    },
+    "EXPECTED_STDOUT": "PASS conditional 59/100000000000 > 2^-31; minimum margin 14779261/25000000000000000\nSide roles per invocation 108195 vs original 3693800\n",
+    "PIN_SHA": "88bba3caf5975f30fa7abceaea9454110cf3b069233e8241a2ca13d1dff171a7",
+    "REFERENCE_DRIVER_SHA": "0d976d2eb6b845f20d4a3396591a806f966688b88693cd6a5f8a0c9e48925e36",
+    "REFERENCE_SHA": "1f763d95c7ff163aa71d13cd82784f16665be8afb21f75e76941e2119562098f",
+    "UPSTREAM": "adc7f1241b42e322a6451854ab7e4b4c146bf78a"
+  },
+  "original_phase_names_exactly_once": [
+    "side_construction",
+    "checks_initialization",
+    "compile_roles",
+    "verify_map",
+    "verify_labels",
+    "verify_role_frames",
+    "original_upstream_verify_sources",
+    "full_log_integer_bounds",
+    "original_serializable",
+    "complete_original_cli"
+  ],
+  "predicates": [
+    {
+      "id": "CP01",
+      "name": "source_and_owner_identity",
+      "require": "The actual original Root/capability/bootstrap API authenticates every installed selected source path, bytes, mode, module identity, globals, closure/defaults and typed owner. Full dictionary ownership is driver.native_packet.FULL_EXECUTION_CONTRACT; epoch ownership is the actual authenticated cache module EPOCH_FULL_EXECUTION_CONTRACT. No data-adapter alias is introduced. Every factory inventory, early driver pin, Root pin, authority graph and strict inverse uses that exact selected tuple."
+    },
+    {
+      "id": "CP02",
+      "name": "fresh_complete_callers",
+      "require": "Baseline and candidate each start a separate fresh original main_epoch -> complete_original_cli -> original scripts/complex_network.py caller. Each invocation retains its own original tokens, circuit, Checks, cold authority, native bindings, source graph and set lease; candidate retains its own epoch. A separate unchanged original same-input baseline supplies independent expected observations through exact typed source-bound transfer. No stale historical result, finite result, P08 fixture or retired generation replaces that full oracle or supplies the candidate live context."
+    },
+    {
+      "id": "CP03",
+      "name": "assertions_modes",
+      "require": "Every full baseline/candidate/P08/absent-record positive runs with original assertions and optimize==0. Existing full guards refuse optimized mode. Finite original semantics are preserved under normal and optimized modes separately; an expected optimized refusal is never a full positive or a body oracle."
+    },
+    {
+      "id": "CP04",
+      "name": "original_arithmetic_oracle",
+      "require": "Expected arithmetic/results originate in the pinned uncached original functions and objects, with independently evaluated Fraction/kernel/collision/current-data checks. Never read expected outputs from candidate registry, private epoch, cached canonical/signature values or candidate-produced captured answers. Exact type, order, callbacks, exceptions and raw object identity are part of equality, not value-only equality."
+    },
+    {
+      "id": "CP05",
+      "name": "original_output_equality",
+      "require": "Require exact original certificate bytes and stdout, typed lossless full return and side witness, full upstream/base/source identity, exact ordered complement transcript and every original rank/control observation against the immutable independent anchor. Preserve all original comparisons, even when another digest appears redundant. No newly generated candidate anchor may certify the candidate."
+    },
+    {
+      "id": "CP06",
+      "name": "original_phase_and_import_equality",
+      "require": "All original complete caller phase names execute exactly once as required by the original driver. Actual imported source module paths/classes/functions must match original engine/scientific closure. Actual role result object is full_return[role_frames]. Preserve serializable, compile_roles, labels, roles, map and upstream-source checks and exact original callback order."
+    },
+    {
+      "id": "CP07",
+      "name": "native_and_fallback_equality",
+      "require": "Retain actual current native guards, source/header/FFI/provider/loaded-image checks and exact full complement/Gram counts with zero fallback where the original full caller requires zero. Private epoch fallback paths must use the real public V8 validation/original Owner._data and counters; a cache hit cannot replace any current-source/native/kernel/Fraction obligation."
+    },
+    {
+      "id": "CP08",
+      "name": "cache_enrollment_lifetime",
+      "require": "Enrollment follows exactly one authentic successful original Label construction/normalization and original store, with two literal basis/key loads, at most one pending record and one fixed seven-field committed record per eligible key. Private full controls construct genuine Checks after actual arm so C1 is registered; the P08 prearm fixture is ineligible. Stored Label/basis/key identities and original store ownership remain. Unsupported mappings/hooks, public escape/reentry, capacity/lifetime end, error or last-role completion retire metadata before public original continuation; no normalized-key duplication or owner rearming."
+    },
+    {
+      "id": "CP09",
+      "name": "genuine_p08",
+      "require": "The source-owned prearm constructor uses genuine installed circuit/Checks/fixtures. Before original arms the suite remains inactive/nonterminal/no primary/unconsumed, original set owner unused and unarmed, and actual phase wrapper equals its authenticated observed slot while original equals suite.products[labels]. Only the actual returned original/observed pair and authority.wrap_proof authorize the wrapper. No unwrap, manufactured objects, flag reset or generic external callback is admitted."
+    },
+    {
+      "id": "CP10",
+      "name": "p08_error_and_cleanup",
+      "require": "P08 reaches the original labels-body AttributeError for NoneType.active through the same original protected CLI/arms; preserve actual primary/disarm/retirement objects and labels frame. sys.argv pointer is restored by identity. Exact original outer cleanup and owner teardown execute. Terminal P08 context is discarded and normal positive CLI does not resume from it."
+    },
+    {
+      "id": "CP11",
+      "name": "absent_record_cold_entry",
+      "require": "Absent-record retains actual cold _run_epoch_with_stop_evidence -> main_epoch with state=None and packet=None on entry, its exact five-image fault tuple, intended original fault boundary, raw P/R1/J1/R2/J2 identities, independent inner/outer channels, transfer-before-ACK and one-shot replay refusal. A prepared P08 state or finite baseline is not this entry."
+    },
+    {
+      "id": "CP12",
+      "name": "raw_failure_evidence",
+      "require": "Preserve exact first primary, disarm, retirement, restoration and journal objects, actual frame/cause/traceback identities, one-shot begun/acknowledged channels, transfer-before-ACK and independently protected cleanup. Source accounting includes traceback-retained graphs. Earlier FULL/phase refusal, formatted error equality or an omitted secondary cannot substitute for original body/raw-channel oracle."
+    },
+    {
+      "id": "CP13",
+      "name": "all_original_cache_bodies",
+      "require": "Retain all 52 original public helper bodies and required variant contexts; their original IDs/oracles are not renamed, removed or weakened. N24 receives an actually fresh unconsumed original None/refusal tuple; N18 receives an authentically retired generation. Do not install one global FULL dictionary into those diagnostic images. Context multiplicity is explicitly mapped separately from body count."
+    },
+    {
+      "id": "CP14",
+      "name": "closed_alias_boundaries",
+      "require": "Review every new constructor, helper, class slot, raw error, retained Label, factory/source graph and post-seal edge against original T1-T4 closure. Existing closed-generation findings do not automatically transfer to exposed aliases. Exclude unrelated callbacks/finalizers, signals and ambient mutable substitutions only under the same original premises; preserve all current checks at each native/source boundary."
+    },
+    {
+      "id": "CP15",
+      "name": "terminal_and_side_effect_equality",
+      "require": "Retain exact source inventories/modes before and after, original expected runtime file set plus certificate, raw output custody and current checks. Complete all original native cleanup before late-last; late-last is the final native/scientific call. Afterwards only permitted source custody/receipt work continues. No native guard, provider or Root call follows terminal late-last."
+    }
+  ],
+  "runtime_observations": 0,
+  "schema": "cache-s0308-caller-equality-source-definition-v1",
+  "source": {
+    "bytes": 89606,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_scientific_driver_v1.py",
+    "sha256": "1e8202b7a4c17fc8dfb0a001085c26bf2ec26a69eb6c8501763773324c2bd9a1"
+  },
+  "status": "CONCRETE_SOURCE_PREDICATES_PENDING_INDEPENDENT_ACCEPTANCE",
+  "whole_S0308_acceptance": false
+}

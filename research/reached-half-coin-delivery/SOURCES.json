@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "d59b5035e7b4cbaa9d688a1d32dd0d6eb79c466a",
+      "sha256": "9b8d0eea95b3bf0dfcb7938a732a6439b87a2685dec2a5ab9e525b3b34debbfa"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "3404fbdd5e7529a0674eef26114b5071e4586cec",
+      "sha256": "ead6cdc9d0af6d58e8a49744d8ec8c7c15e13d2ba93c276c434bcf9b51b93a81"
+    },
+    {
+      "path": "research/p104-helper-subspace-splits/WORD.json.gz",
+      "usage": "input",
+      "git_blob": "e325091e3051afe37a2d9c82f85afe9028510edb",
+      "sha256": "bbb072bced5824a8d9094c49be2fc51fbfdd05fb2b7dab8106e1275053075099"
+    },
+    {
+      "path": "research/p104-stochastic-prefix/PROOF.md",
+      "usage": "input",
+      "git_blob": "0db45191676cb037fca76e7a781e02670fcc4078",
+      "sha256": "db1640be6eade5955320c106ef4d0666742c195560402d0067fa0ee3648bbeca"
+    },
+    {
+      "path": "research/reversible-signed-half-kernel/PROOF.md",
+      "usage": "input",
+      "git_blob": "93ebbe2a1eb08e6f2ee55d2b471b5377c154d4e4",
+      "sha256": "64c9b4b9f58639133f087d77f154b91026a18738bfb0830b93e96d5a30df9932"
+    },
+    {
+      "path": "research/reversible-signed-half-kernel/kernel.py",
+      "usage": "input",
+      "git_blob": "e0b2279b0933f3b5ad81322286fd3da2ff54b567",
+      "sha256": "30da348f62d9935fef3007a63cd33c18e48f260c0ec75a6366894e436a0c8b49"
+    },
+    {
+      "path": "research/reversible-stochastic-shears/verify.py",
+      "usage": "input",
+      "git_blob": "94106a084e8a0c835390c8550567634bc37036ed",
+      "sha256": "7e7a203f6c8f82443d7fd036c36d1659c3d2ffdbbc7f86aebeda49e6642af73c"
+    },
+    {
+      "path": "research/signed-half-marker-audit/AUDIT.md",
+      "usage": "input",
+      "git_blob": "7844a14a93084d433fa5cfb70e52d82eb9b1be51",
+      "sha256": "0661665d9dda68fb4150d5e4024edd97477a00a16e001da995e2e42fa2f9a08a"
+    },
+    {
+      "path": "research/signed-half-marker-audit/verify.py",
+      "usage": "input",
+      "git_blob": "ccf8d2da144acd01982c4d9665a8329f19e3cb73",
+      "sha256": "c2e833f7f1d90683598d1733b7c71c13b0ec2cb24420ccfc10ee14f47c428c5e"
+    }
+  ]
+}

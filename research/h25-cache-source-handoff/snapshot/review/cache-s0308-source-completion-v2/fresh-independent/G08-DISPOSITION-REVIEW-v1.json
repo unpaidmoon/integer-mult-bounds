@@ -1,0 +1,126 @@
+{
+  "base_source": {
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/armed-context/g08_p01_n12_driver.py",
+    "sha256": "1f11ee403a25f91fcc134c1272a7776f2652955f5b6749518744257f8b7f666b"
+  },
+  "blocking_findings": [],
+  "design": {
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/armed-context/disposition-v1/BOUNDARY-DESIGN-v2.json",
+    "sha256": "d85b6b852c647e0d21451b48fecd93ef6fe4ebe543fc0ebe1c31250bab9209a8"
+  },
+  "freeze": {
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/armed-context/disposition-v1/FREEZE-v1.json",
+    "sha256": "14ce2bf290df7ec847d15dffc3852a01921cb51a289852c354793bd5a1a81772"
+  },
+  "independent_checks": [
+    "All ten frozen payload hashes/lengths checked; complete byte inverse reconstructed independently.",
+    "Exact STOP observer rename inverse matches accepted ten-field P08 observer; original STOP is deliberately observed, with original operations/order preserved by reconstructive inverse.",
+    "All prior functions/classes except STOP and case-entry literal spans remain unchanged; Phases AST with locations remains exact.",
+    "Production cache/data/adapter nonfault terminal facts checked separately from P08: actual CLI channels clean and consumed, unused suite channels distinct and untouched, copied errors absent, same P retained and generation terminal.",
+    "Original cache owner receipt definition300-308, returned owner receipt aliases806/2712, known-state construction406/473-490 and epoch acquisition1358-1375 support the selected shape/identity predicates.",
+    "Actual same-entry reference/constructor snapshots and P01 marker versus N12 original construct refusal are retained; expected typed error alone is insufficient.",
+    "Entry preserves local actual P while separately guarding observer writes, outer argv restoration, disposition and publication. Completion flags are success-only.",
+    "One source-captured controller entry call, no normal return, exact current entry/predicate/record identities, actual live disposition/publication/argv checks, scoped marker only in successful qualification else, then same-P bare raise.",
+    "Sole executable writers for disposition/error/publication/controller marker verified; no predicate replay or sidecar acceptance."
+  ],
+  "inverse": {
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/armed-context/disposition-v1/SOURCE-INVERSE-v1.json",
+    "sha256": "31327ad71d68a95c50837ab8fa78a357390efbb9a6f20efd23c653be21b8342f"
+  },
+  "limits": [
+    "Acceptance is only exact P01/N12 bounded source candidate; remaining G08/P02 and source activity obligations are open.",
+    "Exact final source map/Root/currentness/T1-T4 adoption remains a separate source gate.",
+    "Raw phase diagnostic exceptions are only summarized by original code; recorded summaries reject qualification. Universal unexpected raw custody and arbitrary asynchronous/allocation equivalence are not claimed.",
+    "No target import, helper/test/compiler/native/runtime execution, FULL approval, resource fit or progress credit."
+  ],
+  "new_activity_credit": 0,
+  "next_action": "Preserve accepted exact frozen source; complete remaining original source-selection/adoption and coverage obligations without inferring runtime success.",
+  "reviewer": "/root/cache_s0308_v2_review",
+  "schema": "cache-s0308-fresh-independent-g08-disposition-source-review-v1",
+  "selected_source": {
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/armed-context/disposition-v1/g08_p01_n12_disposition_driver_v1.py",
+    "sha256": "ebbc86771d2397a1f0392dec414fd3fd1fb170c612c91a81d5bf412ba63ebc23"
+  },
+  "sole_writer_lines": {
+    "controller_marker": [
+      1979
+    ],
+    "disposition": [
+      1632
+    ],
+    "disposition_error": [
+      1635
+    ],
+    "publication_completed": [
+      1653
+    ],
+    "publication_error": [
+      1648
+    ]
+  },
+  "status": "ACCEPT_BOUNDED_P01_N12_CLEAN_DISPOSITION_AND_LIVE_CONTROLLER_SOURCE",
+  "target_operations": 0,
+  "unchanged_source_members": [
+    "_initial_native_tcb",
+    "_initial_cold_authority",
+    "need",
+    "sha",
+    "canonical",
+    "cpu",
+    "inventory",
+    "candidate_inventory",
+    "typed",
+    "Phases",
+    "main",
+    "_run_with_stop_evidence",
+    "_epoch_cli_boundary",
+    "main_epoch",
+    "_epoch_g08_dispatch",
+    "_epoch_g08_label_snapshot",
+    "_epoch_g08_prepare_reference",
+    "_epoch_g08_bind_locals",
+    "_epoch_g08_after_phase"
+  ],
+  "verified_packet": [
+    {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/armed-context/disposition-v1/g08_disposition_predicate_v1.py.txt",
+      "sha256": "21d27700237075d0bfdbf0f46773fcf3faaf4e5b47d2e1e9fae17da6516aba8b"
+    },
+    {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/armed-context/disposition-v1/g08_entry_tail_v1.py.txt",
+      "sha256": "f9b0ccadfd24acaaf2a7efef8d73d993c64e3e6afe7a31ce0072f6cbb7c3fda1"
+    },
+    {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/armed-context/disposition-v1/g08_controller_v1.py.txt",
+      "sha256": "f75dcade875fd9e6a2e1db3992c24e0397307004f3a6100b81d1e3c6dcf85ae5"
+    },
+    {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/armed-context/disposition-v1/g08_observed_stop_v1.py.txt",
+      "sha256": "12e8358a81b65d64c7886d01912b7cbe81594812da155da290e5bf52e5fece09"
+    },
+    {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/armed-context/disposition-v1/author_g08_disposition_source_v1.py",
+      "sha256": "a1b95aa4fd914bda7f35cb709783998d90c4b5c86e36157a8ccb4f326bfeec47"
+    },
+    {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/armed-context/disposition-v1/g08_p01_n12_disposition_driver_v1.py",
+      "sha256": "ebbc86771d2397a1f0392dec414fd3fd1fb170c612c91a81d5bf412ba63ebc23"
+    },
+    {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/armed-context/disposition-v1/G08-DISPOSITION-v1.patch",
+      "sha256": "255aac04c8529613a6908629d78e03c5db10e43d8eba95749585b15f81b305ba"
+    },
+    {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/armed-context/disposition-v1/SOURCE-INVERSE-v1.json",
+      "sha256": "31327ad71d68a95c50837ab8fa78a357390efbb9a6f20efd23c653be21b8342f"
+    },
+    {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/armed-context/disposition-v1/STATIC-CHECKS-v1.json",
+      "sha256": "0e2b1bf04a0a65e9a67266a2f6014ba9f9bec5d5b82bf3d7a878610574dbfa52"
+    },
+    {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/armed-context/disposition-v1/REPORT-v1.json",
+      "sha256": "88f3ee4e791f567ab487e70459989b538f0972c0b666072d26905b70c656e2fb"
+    }
+  ]
+}

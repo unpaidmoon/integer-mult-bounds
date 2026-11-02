@@ -1,0 +1,37 @@
+{
+  "all_frozen_predecessors_preserved": true,
+  "authority": "Continued direct user Proceed for selected cache-only S03.08 source construction/integration and independent review",
+  "broader_goal_service_status": "paused",
+  "broader_goal_status_changed": false,
+  "created_utc": "2026-10-31T00:19:23.700611+00:00",
+  "design_gate": "Independent review of exact minimal design before substantial derivative; actual infeasible predicate parks branch, no invented authority or weakened checks.",
+  "first_strict60_review_already_complete": "This is continued authorized source construction; no extension or relabeling of the completed25minute review.",
+  "model": "gpt-6-astra",
+  "new_guarded_budget_or_reservation": false,
+  "original_scopes_controls_weights_preserved": true,
+  "ownership": {
+    "armed-context": "/root/strict60_astra_controls: areas/cache-s0308-source-completion-v2/armed-context/**",
+    "continuation": "/root/strict60_astra_retention: areas/cache-s0308-source-completion-v2/continuation/**",
+    "disposition": "/root/strict60_astra_execution_cache: areas/cache-s0308-source-completion-v2/disposition/**",
+    "independent_review": "/root/strict60_astra_independent: review/cache-s0308-source-completion-v2/**",
+    "parent": "areas/cache-s0308-source-completion-v2/parent/** and canonical review metadata"
+  },
+  "phase1_report": {
+    "path": "areas/cache-s0308-source-completion-v1/parent/SOURCE-ROUND-REPORT-v1.json",
+    "sha256": "fb3944cbc97fc268e3891be2f8c97341ca991b0f55d749346c8c613d4d2eacbf"
+  },
+  "predecessor_authorization": {
+    "path": "areas/cache-s0308-source-completion-v1/parent/AUTHORIZATION-v1.json",
+    "sha256": "6a1c639c18ceb486290a9d45290d0e1b189e85ace94c518021d8997054a5905f"
+  },
+  "reasoning_effort": "xhigh",
+  "schema": "cache-s0308-next-source-slices-authorization-v2",
+  "source_implementation_authorized": true,
+  "target_execution_native_compiler_import_test_decoder_authorized": false,
+  "tasks": [
+    "SC3 exact actual known-owner/STOP/raw-error disposition source contract, use existing observables or minimal source-owned observation preserving primary/order; no general outcome framework.",
+    "SC5 genuine N22 capacity selector plus P07 same-invocation original remaining-work and independent count/output oracle transport; no dummy registry or prefilled answers.",
+    "SC5 genuine after-arm P01/N12 context plus source-bound independent original uncached reference transport; preserve separate negative/full/P08 tuples."
+  ],
+  "unrelated_F4_M_and_all212_not_added": true
+}

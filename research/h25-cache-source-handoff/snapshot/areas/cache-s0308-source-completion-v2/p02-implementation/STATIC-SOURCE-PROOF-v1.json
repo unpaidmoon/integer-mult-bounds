@@ -1,0 +1,277 @@
+{
+  "activity_credit": 0,
+  "decoder_runs": 0,
+  "driver": {
+    "bytes": 169084,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-implementation/p02_two_suspension_driver_v1.py",
+    "sha256": "833074436879e62c28a46bc365d368952736ced77a096ffb30398cea0a1b558e"
+  },
+  "execution_authorized": false,
+  "helper": {
+    "bytes": 65648,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-implementation/cache_epoch_source_controls_p02_two_yield_v1.py",
+    "sha256": "298b9951e5a0971bf4a7eb19ee789688c860e828a429036fd7fbc37352d69c04"
+  },
+  "late_boundary": "After original complete artifacts/anchor/source checks through original1213, finish performs third advance; every original1214-1226 statement remains. Generator/reference release follows original main outer retirement; post-late qualification is plain recorded-state inspection only.",
+  "method": "Source text, SHA256, JSON metadata and stdlib AST inspection only; no target import, compile, invocation, decoder, test, native or scientific work.",
+  "network_operations": 0,
+  "not_proved": [
+    "Dynamic call counts, stack/frame behavior and exception paths have not been executed.",
+    "Reference successful-parent/export/custody/typed decoder/join code is absent and gate closed.",
+    "Same-invocation candidate artifact reads require independent custody review alongside the reference bridge.",
+    "No configured stage/root binding, full-owner approval, source adoption, execution/resource authority or numeric cost fit."
+  ],
+  "original_full_success_acquisition": "Original data.finish:1183 -> teardown_cache:1241-1261 closes the owner directly; acquisition remains ORIGIN_ACCEPTED_PARENT_OWNED with failure-only close fields unset. New qualifier checks actual owner teardown receipt plus unchanged acquisition identity/errors, and does not pretend epoch_cleanup_owned ran.",
+  "ownership_contract": "Fixed original root-installed driver, captured source function/code/global/default/closure identities, helper currentness and code/frame identity, original phase/wrapper/certificate frame identities, same suite generation, invocation, arguments and actual phase pairs. Two role observer entries retain exactly three original closure cells; only inner executes original body. No unchanged-stack claim.",
+  "protected_runtime_tree_accessed": false,
+  "review_inputs": [
+    {
+      "bytes": 15254,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/p02-independent/P02-DESIGN-v2-REVIEW-v1.json",
+      "sha256": "814461756b5a55908a0f8400afc4b3617389d28e5dc7b079ee51021da28c7517"
+    },
+    {
+      "bytes": 6019,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/p02-independent/P02-DESIGN-v3-DELTA-REVIEW-v1.json",
+      "sha256": "1b2b0b8894c9d18db4df0446789f614c421a953882bdc59ec0f44a3bf26ae543"
+    }
+  ],
+  "schema": "p02-local-static-source-proof-v1",
+  "source_adopted": false,
+  "source_anchors": {
+    "_epoch_p02_bind_locals": [
+      2064,
+      2104
+    ],
+    "_epoch_p02_controller_entry": [
+      2491,
+      2552
+    ],
+    "_epoch_p02_finish": [
+      2303,
+      2340
+    ],
+    "_epoch_p02_phase_eval": [
+      2164,
+      2238
+    ],
+    "_epoch_p02_prepare_reference": [
+      2054,
+      2061
+    ],
+    "_epoch_p02_release": [
+      2343,
+      2355
+    ],
+    "_epoch_p02_release_owned": [
+      2358,
+      2398
+    ],
+    "_epoch_p02_require_return": [
+      2401,
+      2488
+    ],
+    "_epoch_p02_role_outer": [
+      2241,
+      2272
+    ],
+    "_epoch_p02_role_resume": [
+      2275,
+      2300
+    ],
+    "main_epoch": [
+      900,
+      1260
+    ]
+  },
+  "source_failure_contract": "New phase/role/finish diagnostics use guarded stores followed by bare re-raise. The outer release wrapper catches every additional cleanup/bookkeeping failure, records it only best-effort, and rethrows it only when no prior primary exists. Failed cleanup leaves release_completed/clean-tail qualification incomplete. All original CLI/main/STOP paths and original diagnostic behavior remain literal.",
+  "source_inputs_verified": [
+    {
+      "bytes": 2545,
+      "name": "authority",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/parent/AUTHORIZATION-v2.json",
+      "sha256": "9e32514288fed2b1d2873387bf81861ffcd9e1b56d2ab4828be13a311e629106"
+    },
+    {
+      "bytes": 137642,
+      "name": "authority_products",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_authority_products_v1.py",
+      "sha256": "f279ab86fc17c6a517b035f19d56863919cbd8304de4e7d5332457c6159aec10"
+    },
+    {
+      "bytes": 171075,
+      "name": "cache_products",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_cache_products_v1.py",
+      "sha256": "d317c9866566cd6147c96566879f26f364e7e6801ac3eed0800b6ed8eedd01a2"
+    },
+    {
+      "bytes": 10571,
+      "name": "comparison_writer",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/engine/compare_side_verifier.py",
+      "sha256": "6e507bb0c7e00d090a60289fddb6c55e90c946d0850c42c3c5e3e15c27604a68"
+    },
+    {
+      "bytes": 85486,
+      "name": "coverage",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v1/coverage/COVERAGE-SPEC-v1.json",
+      "sha256": "e4599f79a9dd46a66c9b6cf63ceb7c03d19a0b98a550315b66d5b43dd544d691"
+    },
+    {
+      "bytes": 135539,
+      "name": "current_g08_driver",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/armed-context/disposition-v1/g08_p01_n12_disposition_driver_v1.py",
+      "sha256": "ebbc86771d2397a1f0392dec414fd3fd1fb170c612c91a81d5bf412ba63ebc23"
+    },
+    {
+      "bytes": 103903,
+      "name": "data_products",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_data_products_v1.py",
+      "sha256": "18679fd1eb6ae99c4b375756511427c26718f77674c2d8fcc490e25ceb47cba5"
+    },
+    {
+      "bytes": 4153,
+      "name": "failed_current_route",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/armed-remaining/P02-EXACT-GATE-v1.json",
+      "sha256": "02394a44baabf0b893511352acf9d78f1a0e4a0e975cfab7374193e9f87eab79"
+    },
+    {
+      "bytes": 3531,
+      "name": "g12_review",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/fresh-independent/G12-DESIGN-REVIEW-v1.json",
+      "sha256": "a5199f838e8b8dfc05357ad097cdea6baa3a1b697780d504703869e6ff61a38f"
+    },
+    {
+      "bytes": 65591,
+      "name": "helper",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-full-contract-completion-v1/cache_epoch_source_controls.py",
+      "sha256": "fcffe77b6a84d5b422b03e3d068924a701c1594cdb9ec305115827e3fad7d4b6"
+    },
+    {
+      "bytes": 20334,
+      "name": "native_backend",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/engine/native_backend.py",
+      "sha256": "e473c38245c3668715b5a78dfe980b2fe3ed0d0c9b8c97c666fbae6ecf1fffd5"
+    },
+    {
+      "bytes": 7425,
+      "name": "native_rank_shape",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/engine/native_gf2.c",
+      "sha256": "e9c3c9194a08718bd1575c1cf08c6c6772d3b644c2e274c25a84a1f9249d06cc"
+    },
+    {
+      "bytes": 6105,
+      "name": "original_cli",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/engine/source/complex_network.py",
+      "sha256": "0da395e67ac04fa213494e71012c1b19b544596d34cdce5a3b172b1fb6af5f1b"
+    },
+    {
+      "bytes": 20178,
+      "name": "original_full_driver",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/full_driver.py",
+      "sha256": "0d976d2eb6b845f20d4a3396591a806f966688b88693cd6a5f8a0c9e48925e36"
+    },
+    {
+      "bytes": 1801,
+      "name": "p07_review",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/fresh-independent/P07-HELPER-REVIEW-v1.json",
+      "sha256": "92d70867fa5df4802467631cca12950312c6abdf70584c05181d8af2f60e36d2"
+    },
+    {
+      "bytes": 8959,
+      "name": "rank_encoder",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/engine/profile_side_verifier.py",
+      "sha256": "9c994378171c20a91539418d93cb8387e1daa93465d6862beefea90e12999c2a"
+    }
+  ],
+  "source_maps": [
+    {
+      "bytes": 1626,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-implementation/HELPER-SOURCE-MAP-v1.json",
+      "sha256": "748f83201125604233873b46b9d833f6bc49838554e8246353b81c5c1b1616ba"
+    },
+    {
+      "bytes": 39443,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-implementation/DRIVER-SOURCE-MAP-v1.json",
+      "sha256": "2b67b4823abb027e57d5e67d644d17d2c26e4577537d557c8198256d376d40ed"
+    }
+  ],
+  "state_protocol": [
+    [
+      "READY",
+      "actual labels phase",
+      "LABEL_ADVANCING",
+      "first next; actual labels once"
+    ],
+    [
+      "LABEL_ADVANCING",
+      "first yield",
+      "LABELS_RETURNED",
+      "return yielded raw labels result to original CLI"
+    ],
+    [
+      "LABELS_RETURNED",
+      "actual CLI outer role observer",
+      "ROLE_ADVANCING",
+      "second next"
+    ],
+    [
+      "ROLE_ADVANCING",
+      "one helper inner role observer",
+      "ROLE_BODY_ENTERED",
+      "execute original observer body and roles product once"
+    ],
+    [
+      "ROLE_BODY_ENTERED",
+      "second yield",
+      "ROLE_RETURNED",
+      "return actual captured role result to original CLI"
+    ],
+    [
+      "ROLE_RETURNED",
+      "after original complete output/custody validations",
+      "CHECKS_ADVANCING",
+      "set actual_outputs then third next"
+    ],
+    [
+      "CHECKS_ADVANCING",
+      "StopIteration with unchanged helper return",
+      "HELPER_COMPLETE",
+      "continue every remaining original driver check"
+    ],
+    [
+      "any nonterminal state",
+      "unexpected entry/exception/yield",
+      "FAILED_CONSUMED",
+      "no retry; retain primary and original cleanup"
+    ]
+  ],
+  "status": "LOCAL_STATIC_PROTOCOL_PACKET_AWAITING_INDEPENDENT_REVIEW",
+  "target_imports": 0,
+  "target_operations": 0,
+  "target_runtime_payloads": 0,
+  "target_tests": 0,
+  "verified": {
+    "all_original_G08_functions_preserved": true,
+    "all_original_cli_circuit_authority_cache_data_files_unchanged": true,
+    "all_three_future_handoffs_literal_None": true,
+    "bridge_rejects_even_nonnull_ambient_handoff": true,
+    "helper_four_comparisons_return_source_and_positions_preserved": true,
+    "helper_two_yields": true,
+    "observer_lexical_closure_cells": [
+      "captures",
+      "original_roles",
+      "phases"
+    ],
+    "original_Phases_call_handlers_finally_AST_preserved": true,
+    "original_Phases_wrap_AST_preserved": true,
+    "original_main_epoch_need_count": 44,
+    "original_main_epoch_need_inventory_preserved": true,
+    "original_observer_body_AST_preserved": true,
+    "other_helper_top_level_AST_positions_preserved": true,
+    "three_fixed_next_sites": true,
+    "whole_driver_inverse_exact": true,
+    "whole_driver_inverse_sha256": "ebbc86771d2397a1f0392dec414fd3fd1fb170c612c91a81d5bf412ba63ebc23",
+    "whole_helper_inverse_exact": true,
+    "whole_helper_inverse_sha256": "fcffe77b6a84d5b422b03e3d068924a701c1594cdb9ec305115827e3fad7d4b6"
+  }
+}

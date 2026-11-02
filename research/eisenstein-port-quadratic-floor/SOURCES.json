@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "d59b5035e7b4cbaa9d688a1d32dd0d6eb79c466a",
+      "sha256": "9b8d0eea95b3bf0dfcb7938a732a6439b87a2685dec2a5ab9e525b3b34debbfa"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "3404fbdd5e7529a0674eef26114b5071e4586cec",
+      "sha256": "ead6cdc9d0af6d58e8a49744d8ec8c7c15e13d2ba93c276c434bcf9b51b93a81"
+    },
+    {
+      "path": "research/eisenstein-adaptive-affine-floor/README.md",
+      "usage": "input",
+      "git_blob": "0330271cb21c80956dcf210261cf580c74ec6f30",
+      "sha256": "6bc9f92041abaa0f4a311cd6156301f47c408acb317df0d0d11f9d2d00b28b6c"
+    },
+    {
+      "path": "research/eisenstein-message-copy-bound/PROOF.md",
+      "usage": "input",
+      "git_blob": "86d6e25ed60488646c0316a2c930e1f9e3ade99a",
+      "sha256": "dd8c7890d661ae87167d038d12356845470a2822733c45bd9ab4c9208e381311"
+    },
+    {
+      "path": "research/eisenstein-nonlinear-restriction/PROOF.md",
+      "usage": "input",
+      "git_blob": "af2a642cea88c1ba93cfabb41b9b5c6b41e553e5",
+      "sha256": "05d3cd1a76ac9dfb4479c7f0fb0703ec8ce847ed24f226fdb6ca1ca9483683cc"
+    },
+    {
+      "path": "research/eisenstein-reduction-copy-floor/README.md",
+      "usage": "input",
+      "git_blob": "ebf030c2592de812a6189722b5bf7bdf854bc4ae",
+      "sha256": "f3f243524fd1ddc0fc893b144994ce184fee8fd8e7e49d544281863559f8c1de"
+    }
+  ]
+}

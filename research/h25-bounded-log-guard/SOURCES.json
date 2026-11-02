@@ -1,0 +1,31 @@
+{
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "external_source_export": "Vendored local predecessor files and SHA256/copy equality are listed in PROVENANCE.json and authenticated by verify.py. They have no invented upstream Git blob IDs. No external filesystem input is required at replay.",
+  "files": [
+    {
+      "git_blob": "3404fbdd5e7529a0674eef26114b5071e4586cec",
+      "path": "docs/research/agent-task-catalog.json",
+      "sha256": "ead6cdc9d0af6d58e8a49744d8ec8c7c15e13d2ba93c276c434bcf9b51b93a81",
+      "usage": "provenance"
+    },
+    {
+      "git_blob": "fa006ceb6b6b9d6c0e799f210963f4587ecfb162",
+      "path": "AGENTS.md",
+      "sha256": "fbee67ab9e0ae4629a35fd9dba69c8f7e29e4a15392eb2d0f75d8768ffb65f40",
+      "usage": "provenance"
+    },
+    {
+      "git_blob": "5185786f2ec00f215019fb5777d70979429690a9",
+      "path": "CONTRIBUTING.md",
+      "sha256": "fcd1a8d0e52342a23b8ffa9e905e85ccc539fb084145ef016dfc93cedfb3d924",
+      "usage": "provenance"
+    },
+    {
+      "git_blob": "24cf53c403ff4e72a1717d082296c3918c42fe92",
+      "path": "docs/research/research-package-guide.md",
+      "sha256": "5e3aa8b2ce657f943ef5fd187473a01a92a7073ef7e05b30affa08979daa2c6e",
+      "usage": "provenance"
+    }
+  ],
+  "schema_version": 1
+}

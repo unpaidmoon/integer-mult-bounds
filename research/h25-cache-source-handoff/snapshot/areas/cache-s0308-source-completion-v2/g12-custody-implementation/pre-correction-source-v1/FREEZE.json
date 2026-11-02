@@ -1,0 +1,22 @@
+{
+  "files": {
+    "g12_reference_cold_consumer_v1.py": {
+      "bytes": 59367,
+      "mode": "0444",
+      "sha256": "70f16a3c6e699f7dfbf66137af957323e244d039a647e75e8481855e6d61a610"
+    },
+    "g12_reference_parent_v1.py": {
+      "bytes": 92203,
+      "mode": "0444",
+      "sha256": "5210fe391ef0361639676f6736cd6de1a6dfcb1f6bdaa58f2ced086e7cc35859"
+    },
+    "integration/g12_reference_adapter_v1.py": {
+      "bytes": 19770,
+      "mode": "0444",
+      "sha256": "055e8192e28f2076c45ca22cf4dd1692e0a10e93eb9a2a1153d84229a72ef6fa"
+    }
+  },
+  "schema": "g12-pre-correction-unreviewed-source-snapshot-v1",
+  "status": "UNREVIEWED_SOURCE_ONLY_HISTORY_NOT_ADMITTED",
+  "target_operations": 0
+}

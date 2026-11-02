@@ -1,0 +1,120 @@
+{
+  "commit": {
+    "leaf_contract_error": "every cell, head, borrowed input and declared output",
+    "marker_offset": 3,
+    "other_tapes_unchanged": true,
+    "preserves_three_bits": true,
+    "transitions": 8,
+    "visited_cells": 4
+  },
+  "limits": [
+    "The commit is a successor of the raw leaf exit, not a change to that exit.",
+    "Tail retirement at this halt deletes cache data the leaf contract still returns.",
+    "Low-type, ROW and whole-T consumers remain absent, so no legal cache retirement is scheduled.",
+    "No selected-frontier or kappa change."
+  ],
+  "orientations_executed": [
+    "forward",
+    "inverse"
+  ],
+  "retirement": {
+    "blanked_offsets": [
+      24,
+      191
+    ],
+    "distinct_digit8_caches_become_equal_on_the_tail": true,
+    "leaf_contract_error": "every cell, head, borrowed input and declared output",
+    "preserves_endpoint": true,
+    "preserves_offsets_0_through_23": true,
+    "transitions": 551
+  },
+  "source": {
+    "column": 1,
+    "column_entries": [
+      "-1/4",
+      "0",
+      "-1/2",
+      "0",
+      "-1/4",
+      "0",
+      "0",
+      "0"
+    ],
+    "direction": "inverse",
+    "ignored_digit_index": 8,
+    "ignored_digit_values": [
+      0,
+      4
+    ],
+    "modulus": 125,
+    "new_low": 2,
+    "offset": 93,
+    "port": 9,
+    "quarter_code": -3,
+    "weighted_row": [
+      2,
+      3,
+      2,
+      1,
+      1,
+      1,
+      0,
+      0
+    ]
+  },
+  "static": {
+    "cache_visit_count": 193,
+    "cache_visit_max": 192,
+    "cache_visit_min": 0,
+    "component_tapes": {
+      "False:cleanup": [
+        14
+      ],
+      "False:generic": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "True:cleanup": [
+        14
+      ],
+      "True:generic": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "frontend_names_cache_and_new_low": true,
+    "generic_and_cleanup_avoid_tapes": [
+      17,
+      18
+    ],
+    "leaf_cache_writes": 0,
+    "leaf_new_low_write_offsets": [
+      0,
+      1,
+      2
+    ]
+  },
+  "status": "PASS_PORT9_LOW_COMMIT_GATE"
+}

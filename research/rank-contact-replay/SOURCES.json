@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "d59b5035e7b4cbaa9d688a1d32dd0d6eb79c466a",
+      "sha256": "9b8d0eea95b3bf0dfcb7938a732a6439b87a2685dec2a5ab9e525b3b34debbfa"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "3404fbdd5e7529a0674eef26114b5071e4586cec",
+      "sha256": "ead6cdc9d0af6d58e8a49744d8ec8c7c15e13d2ba93c276c434bcf9b51b93a81"
+    },
+    {
+      "path": "research/native-clifford-gauge-compiler/NOTICE.md",
+      "usage": "input",
+      "git_blob": "5519958ecf6200f04b63a4783f805394c717b915",
+      "sha256": "ea459c3cae30546924cc4d3521eca3d982db19d34ae37cb04d0651909df1081e"
+    },
+    {
+      "path": "research/native-clifford-gauge-compiler/decoder/TRANSVECTION-EXPECTED.json",
+      "usage": "input",
+      "git_blob": "6e929cc239937ccd9374d02856e0379fe23109a1",
+      "sha256": "18a092c2cd4cd9174488646782c86f1bcc3ef044bbb5d7feceb6c513f6fc7988"
+    },
+    {
+      "path": "research/native-clifford-gauge-compiler/decoder/testformula.py",
+      "usage": "input",
+      "git_blob": "0533809634361ff9954df601a77184461c1abbb0",
+      "sha256": "a9f32161eb0222ae9279a96f74504b0af8863ac6251973d9fde32f205dd3ed8c"
+    },
+    {
+      "path": "research/native-clifford-gauge-compiler/inputs/round3-contact-graph.txt",
+      "usage": "input",
+      "git_blob": "31e1bfc6c5ca64d1056bce4f35861d840412cd2a",
+      "sha256": "f802be993525ec7b944a2622c4fd47db76101d7a558ea449ece7254780f6efef"
+    }
+  ]
+}

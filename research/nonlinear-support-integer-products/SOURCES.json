@@ -1,0 +1,294 @@
+{
+  "schema_version": 1,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "d59b5035e7b4cbaa9d688a1d32dd0d6eb79c466a",
+      "sha256": "9b8d0eea95b3bf0dfcb7938a732a6439b87a2685dec2a5ab9e525b3b34debbfa"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "3404fbdd5e7529a0674eef26114b5071e4586cec",
+      "sha256": "ead6cdc9d0af6d58e8a49744d8ec8c7c15e13d2ba93c276c434bcf9b51b93a81"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/.gitattributes",
+      "usage": "input",
+      "git_blob": "ad1d31d8e2bb7ed68388441b61d6367083775650",
+      "sha256": "745b2bf6e11d5ebbed7715dca52b8f5ed8d1a3309a13e7a94be8399bf0a9a20a"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/EVIDENCE.json",
+      "usage": "input",
+      "git_blob": "c867e8e5f38ca696d437a517138838e217dbbe18",
+      "sha256": "e2759cf096a8e80ea1493dd4f7ed716ba509f5b0fd02ff16e01a8550a6ab4671"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/HISTORY.md",
+      "usage": "input",
+      "git_blob": "30d6075beaa3647f19fd9d38f5a3413d865516cd",
+      "sha256": "3ce6913c4a8be2f86c0991fee3fd3d0153c1caf33efc1cbb8816403213328d78"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/LICENSE",
+      "usage": "input",
+      "git_blob": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/NOTICE",
+      "usage": "input",
+      "git_blob": "59d8e0cf3102e15bd11db430838365531e2d7f18",
+      "sha256": "b49022cb4104d90b182e4c335f670faf45529025b15db77bf0291835083c28bd"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/README.md",
+      "usage": "input",
+      "git_blob": "d586643c285e93ccfa0292239bbab4a12dda0edf",
+      "sha256": "c9fddb95e7e3001a16a13601869e824c4130766dbd6353c20f1d15dd0bcd5cb6"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/SOURCE-NOTICE",
+      "usage": "input",
+      "git_blob": "985b6b1bc76dacd54a9cbe9897f3b659ae93c3a4",
+      "sha256": "317b1c5e040bab50ebfc3d0cdb3a47fc30e2f872a00895f563d7931749b1cc7b"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/SOURCES.json",
+      "usage": "input",
+      "git_blob": "a238d5894ce36d4114905c1ea1f85c0e55307059",
+      "sha256": "15e8fa676f198064d2a94097e85f612754a38bcfe032cbb96cc22dcabe57090b"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/TASK.json",
+      "usage": "input",
+      "git_blob": "e455298329b6f47e8f043e7b857191faefa26192",
+      "sha256": "25fb472e34753cfe1badc29dac62499d2e259ed35ac5b62732ce3ae76cbfcc41"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/VERIFY.json",
+      "usage": "input",
+      "git_blob": "56a932e8e8f3f4242e05afd206b5a68df2bee6d0",
+      "sha256": "2c564b69e77fb1f125f0e9b85be93c192c185f722571ab502a43955d31bc9cdf"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/finite-check/FREEZE.json",
+      "usage": "input",
+      "git_blob": "fa301cbc03a63acbb9f08bc5839569137cedbf1e",
+      "sha256": "090145aee55d41069406b642942f5c9feca79c6908846998df8358da9064f043"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/finite-check/MATRICES-OPTIMIZED.json",
+      "usage": "input",
+      "git_blob": "7933c196ec5c86a3b1197e66dc42b9d7477a9de9",
+      "sha256": "02bfc8bd2d1fd9a38de2213d8729aca10feee634de00290f83a94f2bfb19f611"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/finite-check/MATRICES.json",
+      "usage": "input",
+      "git_blob": "7933c196ec5c86a3b1197e66dc42b9d7477a9de9",
+      "sha256": "02bfc8bd2d1fd9a38de2213d8729aca10feee634de00290f83a94f2bfb19f611"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/finite-check/RESULT-OPTIMIZED.json",
+      "usage": "input",
+      "git_blob": "e0fbc46dbb868aedf11bddc2913885b23ee020fc",
+      "sha256": "4639a2721e1e90f0ab4104ed07a2395701e12e3bbcabcb760317d3a63dab7e9e"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/finite-check/RESULT.json",
+      "usage": "input",
+      "git_blob": "e0fbc46dbb868aedf11bddc2913885b23ee020fc",
+      "sha256": "4639a2721e1e90f0ab4104ed07a2395701e12e3bbcabcb760317d3a63dab7e9e"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/finite-check/REVIEW.md",
+      "usage": "input",
+      "git_blob": "1f971549d4c11b479412d9915b6cafa18db1f378",
+      "sha256": "db09dfb39e4dd5bdecc00bcef32d4db77adf9c11e7f073d119c418395fc0f3de"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/finite-check/SHA256SUMS",
+      "usage": "input",
+      "git_blob": "401a248bc0eedc16908b6ddb52bdcb77e5a13869",
+      "sha256": "180502cb8356bd9c8d92bf8f06da25d89f21efeb18a8135723b5bd847256edc4"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/finite-check/SOURCE-FACTS.md",
+      "usage": "input",
+      "git_blob": "80ee1eadc150c1edaff5a09ad0568a0e438ab483",
+      "sha256": "c6e2546054ac68cbec6a579bf7558a523d1a8843c160a70250b24a10220f90fe"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/finite-check/check_support.py",
+      "usage": "input",
+      "git_blob": "9cff7d7616d88d97664cbadebad325d161eabd1f",
+      "sha256": "91115f8380c01d6e788acf27870991b80a6c6ee02d5363396408e4e08dad149c"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/paid-control/AUTHOR-INPUTS.json",
+      "usage": "input",
+      "git_blob": "c788fcfc76c63b5899e2c872851d4b0628365a72",
+      "sha256": "228c3da4d04e20607bdefabd86d682a8d6dd4c09e35c6c0a786bc1e18d3facd4"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/paid-control/AUTHOR-REPORT.md",
+      "usage": "input",
+      "git_blob": "3d6499a9fe72fe4ce47303595364048f3e78a05b",
+      "sha256": "19932a49cda97acb2e3f4933f95d4bed5598e441d7593132bd07d15a63c23731"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/paid-control/CAPTURES.json",
+      "usage": "input",
+      "git_blob": "a2ceca100ea4febcf43622d4a9bbadc37e0507b1",
+      "sha256": "7b4206e960c709bec809731f8de1698b65d3335ebb207d5ae4f90cc9c04e0ca3"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/paid-control/INDEPENDENT-REVIEW.md",
+      "usage": "input",
+      "git_blob": "92f63e0553a033f1a7ee2f73ceba07315b0247ed",
+      "sha256": "3a255cfb2efb874fcf3cc111dacd145901e2b1018a7cfa60f12d251d3239b4e5"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/paid-control/REVIEW-SOURCES.json",
+      "usage": "input",
+      "git_blob": "d31a79799738d9704e3a415a840ebc239dde388f",
+      "sha256": "769e777c6dce6567a77c6aa4f89fd0120955b56e2554001d912d26669b492306"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/paid-control/captures/01-PAID-SHEAR-SCREEN.md",
+      "usage": "input",
+      "git_blob": "296523437fa0e1acb940f3cf9ad28247c7cc8057",
+      "sha256": "81fefcf4a1be0be04076e7cba0e27ba4afe732d4810a13b0a76dbe827967c10c"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/paid-control/captures/03-operator-valued-gather-rank-boundary.md",
+      "usage": "input",
+      "git_blob": "d5dd564d8e9b760b76fcfd4ca2c2a630fe469402",
+      "sha256": "847dccf3cc3a0938b67a22e3074cd06e825f7881e0a90dfad6c29f3963d41f58"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/paid-control/captures/04-PROOF.md",
+      "usage": "input",
+      "git_blob": "6ddce7b794a8676bab5514f29e88c90117b26c88",
+      "sha256": "96c617b306d50fce2b0f4f88afe1f6103d11326b402c2e4980c522c9c48092db"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/paid-control/captures/05-REPORT.md",
+      "usage": "input",
+      "git_blob": "8a200e2535e9ac5eba891f914f0d319923977011",
+      "sha256": "363f66bb655dd9100438aa4ae405025baafeddcaaaad0b8d0a43eecaa43ee784"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/paid-control/captures/06-REVIEW.md",
+      "usage": "input",
+      "git_blob": "f06f34d3334c6c1fcb60de41e29b180b2e26a4a9",
+      "sha256": "23b5aa5df049cb4a8fe3349c054e27d84ca151e29e263c658670639bad082428"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/paid-control/captures/07-REPORT.md",
+      "usage": "input",
+      "git_blob": "ddc6e82c07f65dae97a0b1384c2f0360fc3fabbe",
+      "sha256": "b8b785a815852069b27ee6b18337b6ecd64127c7a22985d0e4221a2fc11bd53a"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/paid-control/captures/08-RESULT.json",
+      "usage": "input",
+      "git_blob": "72aa4afa0490342a9902ac4a24da12e5ad787601",
+      "sha256": "b11a56c453c6f174780edd0cd19c638da7d1552ac9f3f0ff6f8340d8ada382ae"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/paid-control/captures/09-operator-valued-paid-theorem-fit.md",
+      "usage": "input",
+      "git_blob": "60529c988b10f148dae7f8ddea4126c7a68d2958",
+      "sha256": "660225cc59b75eaff65f241a10373f3a4f312981dc386b5833d653dba3d14460"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/paid-control/captures/RAW-GIT-5126-PROOF.md",
+      "usage": "input",
+      "git_blob": "1ebf18af5b8b6e064d6433460f4e6a0c6b832e2b",
+      "sha256": "495a1cd85cc45020adf2205f196b57dc4f65f1eb763fc4951facdb4ccbafc768"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/proof-review/FILES.json",
+      "usage": "input",
+      "git_blob": "786a79bd99537a23bf0e3fd494a40f9fe6d0eb8f",
+      "sha256": "d6b03962432cbb2880dff5825daf6eae9637f8ce614c82de15aaa07ffb90571d"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/proof-review/RESULT.json",
+      "usage": "input",
+      "git_blob": "0eb6ef3ce91e62287dd89d2725aa0b680ef12d20",
+      "sha256": "8bdf9491dc7e9c8ac9883e6be3845d3aa9b05930b0c1699057baf7fb33c7df09"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/proof-review/REVIEW.md",
+      "usage": "input",
+      "git_blob": "f6db55e8b1218d4902ecec3e41db681fd21c8a1f",
+      "sha256": "0b0fe1c33eea85ccd92a3423a705fd086c6f2669f1a47f37fba9c1ca4ae91973"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/proof-review/SOURCES.json",
+      "usage": "input",
+      "git_blob": "85bfcd8f694e7341ae875f36bb8fe6a37b1ab165",
+      "sha256": "0689d9a2bd640fab5b3e71765800064ff8689484d39b975b7834aadbf579ea0e"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/proof-review/frozen/CODE.json",
+      "usage": "input",
+      "git_blob": "03170f4a31f7a8a3db7228f1cd5a6fdcb32720ae",
+      "sha256": "8be7f3f073b7981ec91c6af43edff0ac8a89f4824ef6026ae758c287dd6c03d0"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/proof-review/frozen/FIRST-DRAFT.md",
+      "usage": "input",
+      "git_blob": "a847cb3716f046bc44a4a3fe4b708e9405fd6d2a",
+      "sha256": "669b9b2a3c1797c80d46ed44c119104cbbc36b893877cc8612dcc8b3e50d64fb"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/proof-review/frozen/NORMALIZERS.json",
+      "usage": "input",
+      "git_blob": "bca92c222c395d3d75c047fbb678f3cd0947c60f",
+      "sha256": "ae8aad06aa5d1811d725895b3ab5a4f4daa9dcdd88294aa0d5f723e78bb1e0da"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/proof-review/frozen/PHYSICAL.md",
+      "usage": "input",
+      "git_blob": "da8837ba67423ef08ef1afb8e8297a8032aafe9f",
+      "sha256": "4321b159ff8d3fe705419adaaa1beef75606e869e34341bda553f17d598a6078"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/proof-review/frozen/PREDECESSOR-PROOF.md",
+      "usage": "input",
+      "git_blob": "08b35b275ac258bac7cde0e289761011acd56d8e",
+      "sha256": "c20b2f13e875d9e1fb6d0743693f9deccc4f7d68dcdc55ec241324ed3d7de7bc"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/proof-review/frozen/PREDECESSOR-SOURCE-CHECKER.py",
+      "usage": "input",
+      "git_blob": "9b9f57090ddeb1a80a7af467bc133662a435c105",
+      "sha256": "025ba8f3f63fa4f4d7155a32f0f51de210693f6b425b047312d5f232e96fdc5f"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/proof-review/frozen/PREDECESSOR-SOURCES.json",
+      "usage": "input",
+      "git_blob": "ef42d1e3d12649d233dca75399afe8af01f62b21",
+      "sha256": "e810407fc34de1f3af196fc86e91e680075ff982bbc6fe19d6ebb02f2a0c0d9c"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/evidence/proof-review/frozen/REVIEWED-PROOF.md",
+      "usage": "input",
+      "git_blob": "277a32368a8df3e63077c2783fe4eb89bec5ab64",
+      "sha256": "76bea47531ed557c0c9cb210c4324d6000c74415bf13e5747b7036567853f6ef"
+    },
+    {
+      "path": "research/nonlinear-monomial-control-ceiling/verify.py",
+      "usage": "input",
+      "git_blob": "500e06d1193693108bc4eedc1177a0f12a8eea31",
+      "sha256": "d090adc098a2e4f0a03201bff5803828e7f474cbda6219e286ad6b7701836241"
+    }
+  ]
+}
