@@ -85,13 +85,13 @@
       "question": "Do the 2,930 native chart maps, including absolute phase, agree with this scalar endpoint on the lifted word?",
       "why_it_matters": "Scalar agreement does not discharge native_all_columns. A phase or normalizer failure would block use of the claimed kappa.",
       "first_step": "Replay the pinned lifted word through an independent Clifford lowering and compare one changed helper normalizer, including its global phase.",
-      "blocked_by": "That replay is a separate budget. This package does not import the author native checker."
+      "blocked_by": "The author verifier's native stage passed when rerun here. This package does not reimplement that lowering, so the stage is still not independently checked."
     },
     {
       "question": "Does the exact paid change H1+H2+H3+2H4-4H5, together with the target debit checked here, keep a positive complete-caller margin at 3129111/1000000000?",
       "why_it_matters": "The handoff's kappa claim is a full caller invoice, not the local target debit alone.",
       "first_step": "Recompute the local paid histogram from the move and addition tariff, then evaluate the unchanged p16/a7 caller at the claimed kappa and at PR6167's kappa.",
-      "blocked_by": "pricing.py and the caller replay were not run. Their author outputs are not treated as evidence here."
+      "blocked_by": "The author price and caller stages passed when their verifier was rerun. Their arithmetic was not rederived here, so those outputs are reproducibility notes rather than independent evidence."
     }
   ]
 }
