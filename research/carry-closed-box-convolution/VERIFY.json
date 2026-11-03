@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/graded-box-convolution/PROOF.md",
+    "research/graded-box-convolution/code/graded.py",
+    "research/graded-modulus-audit-seed74/PROOF.md"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "All-carry identity, exact signed integer products, direct coordinate and separable oracles, arithmetic/input controls, live source hashes and generated receipt."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-O",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "All-carry identity, exact signed integer products, direct coordinate and separable oracles, arithmetic/input controls, live source hashes and generated receipt."
+    }
+  ]
+}

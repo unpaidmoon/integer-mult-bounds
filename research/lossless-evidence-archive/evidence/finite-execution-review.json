@@ -1,0 +1,104 @@
+{
+  "accounting": {
+    "boundary": "Nested runner, queue and operations are not summed twice; final residual-record write tail explicitly excluded.",
+    "conservative_enclosing_charge_seconds": 31.48,
+    "current_cumulative_charged_seconds": 81.85018230997026,
+    "enclosing_residual_seconds": 0.04845893402351109,
+    "nested_runner_seconds": 31.320102586003486,
+    "outer_max_rss_kib": 24096,
+    "outer_system_seconds_rounded": 1.6,
+    "outer_user_seconds_rounded": 2.9,
+    "outer_wall_seconds_rounded": 31.47,
+    "parent_overhead_seconds": 0.11143847997300327,
+    "queue_main_to_reconciliation_seconds": 31.43154106597649
+  },
+  "actual_archive_admission": false,
+  "area": "retention",
+  "checks_passed": 278,
+  "disposition": "G2_RETENTION_V5_FINITE_NORMAL_AND_OPTIMIZED_PASS",
+  "evidence_files_pinned": 202,
+  "findings": [
+    "Both modes completed the exact98unique required cases:5positive and93expectedSTOP. Full final reports and source-bound coverage match.",
+    "Both bounded journals contain exactly98newline-terminated records, exact one-based ordinals and row-for-row agreement with final reports. Fresh complete journal digests/bytecounts match.",
+    "Full before/after inventories differ only in counts.allocated_bytes9728to17920. Independent projection and fresh current-tree content/identity/mode census agree; every other recorded field remains equal.",
+    "Fresh independent reads verify all four restored fixture trees, readonly root publication, source9066bytes/19files/5dirs and complete positive package metadata/blob membership, hash pins and sizes.",
+    "Raw STOP reasons match retained operation receipts where present. Oracle-only and isolated snapshot negatives are retained in the exact source-validated journal/report. Secondary receipt failure, partial sibling stages and unadmitted post-rename destinations remain visible.",
+    "Original v2/v3/v4 failure evidence pins remain unchanged. New stage11files/modes and actual runner/queue/config/source gates remain unchanged.",
+    "Retained fixture bytes reconcile with measured pre-final-report census; report and consumer receipt self-write footprint is separately outside that inner census and inside parent process observation.",
+    "Tiny positive fixture archive overhead exceeds source bytes. This finite pass does not claim a storage reduction on the real historical tree."
+  ],
+  "finite_outcome_admission": true,
+  "independent_checks": {
+    "bytes": 57835,
+    "mode": 436,
+    "path": "review/retention-v5-finite-execution/OUTCOME-CHECKS.json",
+    "sha256": "35a567c51a1fe3bf01186b243e06d5805b1277fe45dd1c548f271dcd4b2f8380"
+  },
+  "normal_and_optimized": {
+    "O": {
+      "case_count": 98,
+      "child_wall_seconds": 15.392674330039881,
+      "consumer_wall_seconds": 15.232607451966032,
+      "custody": {
+        "allocated_bytes_after": 17920,
+        "allocated_bytes_before": 9728,
+        "allocated_bytes_delta": 8192,
+        "excluded_field": "counts.allocated_bytes",
+        "unchanged": true
+      },
+      "expected_STOP": 93,
+      "journal_bytes": 10904,
+      "journal_sha256": "e1ff092868f87cd0088e912b92c0248082ae98463b9a4606c0c349556fe38bc7",
+      "kernel_max_rss_kib": 24096,
+      "positive": 5,
+      "positive_archive_bytes": 77665,
+      "raw_STOP_receipts_matched": 73,
+      "retained_regular_file_bytes": 4372219,
+      "retained_regular_file_count": 1759,
+      "runner_wall_seconds": 15.403031482012011,
+      "sampled_group_rss_bytes": 26009600,
+      "source_bytes": 9066
+    },
+    "normal": {
+      "case_count": 98,
+      "child_wall_seconds": 15.90910538501339,
+      "consumer_wall_seconds": 15.840237853000872,
+      "custody": {
+        "allocated_bytes_after": 17920,
+        "allocated_bytes_before": 9728,
+        "allocated_bytes_delta": 8192,
+        "excluded_field": "counts.allocated_bytes",
+        "unchanged": true
+      },
+      "expected_STOP": 93,
+      "journal_bytes": 10909,
+      "journal_sha256": "b795ebb1d5bb358b51cd37101cad17aac0b136068c8728f31b0d00c6dc402f7f",
+      "kernel_max_rss_kib": 23156,
+      "positive": 5,
+      "positive_archive_bytes": 77670,
+      "raw_STOP_receipts_matched": 73,
+      "retained_regular_file_bytes": 4374063,
+      "retained_regular_file_count": 1759,
+      "runner_wall_seconds": 15.917071103991475,
+      "sampled_group_rss_bytes": 25198592,
+      "source_bytes": 9066
+    }
+  },
+  "performance_claim_admission": false,
+  "postrun_hook_admission": false,
+  "required_next": [
+    "Review exact historical archive consumer/source path, complete census/caps/free space, concurrent writer exclusion and output ownership before actual archival.",
+    "Actual archive must preserve oldraws, carry external original inventory/root pins, restore completely, verify full logical/identity custody, charge all IO/space and disclose zero reclaimed workspace bytes.",
+    "Postrun hook remains a separate source/implementation/execution gate; finite success alone does not authorize hook use."
+  ],
+  "reviewer_reexecution_count": 0,
+  "revision": 5,
+  "schema": "h25-independent-finite-execution-review-v1",
+  "scientific_execution_admission": false,
+  "source_gate": {
+    "bytes": 5941,
+    "mode": 292,
+    "path": "review/retention-v5-finite-integration/REVIEW.json",
+    "sha256": "7e296f6f241751c7b8c221fbd13bcb273ebc62e3f69d10f7103c1bef484845af"
+  }
+}

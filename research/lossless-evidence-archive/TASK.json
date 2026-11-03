@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "task_id": "replay-runtime",
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "original_card": {
+    "acceptance_gate": "Report before/after wall time on the same fixture, retained checks and invalidation behavior.",
+    "allowed_variations": [
+      "Profile one stage or design one source-bound cache boundary."
+    ],
+    "bottleneck_link": "Faster trustworthy replays increase review throughput and let mechanism candidates be checked sooner.",
+    "first_experiment": "Measure one unchanged fixture, preserve check coverage, and test one optimization with invalidation controls.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_selected_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Resolve the current selected review, separate complex/ordinary BIT/admitted BIT/outer budgets, and compare the card against live handoffs before starting. Historical ceilings require exact source/model equivalence.",
+      "scope": "Source-binding orientation only; not a scientific replay or all-size proof. Materialize selected inputs if this checkout is sparse."
+    },
+    "id": "replay-runtime",
+    "methods": [
+      "Profile one isolated replay and optimize the measured bottleneck.",
+      "Design source-bound reuse with explicit dependency invalidation and negative controls."
+    ],
+    "overlap_terms": [
+      "replay runtime",
+      "cache invalidation",
+      "isolated tests"
+    ],
+    "question": "Can one measured replay bottleneck be sped up without dropping coverage?",
+    "scope_change_triggers": [
+      "Skipping coverage or comparing different fixtures to claim speedup."
+    ],
+    "starting_points": [
+      "scripts/run_isolated_tests.py",
+      "scripts/verify_replay_coverage.py",
+      "certificates/selected-result.json"
+    ]
+  },
+  "scope_status": "changed",
+  "scope_change_reason": "The explicit user assignment is to contribute the existing stable standalone lossless evidence archive. This packages completed retention work and preserves its original finite controls; it does not perform the card's scientific replay optimization experiment.",
+  "actual_scope": "Publish stable standalone lossless create/verify/restore tools with exact source pins, independent restoration oracle and original finite failure controls.",
+  "bottleneck_link": "Complete retained evidence supports trustworthy review and transport. Archive representation reduction is separate from scientific replay runtime and no runtime improvement is claimed.",
+  "time_budget_minutes": 60,
+  "stop_rule": "Stop after scoped publication preparation and authorized serial finite validation. Preserve every failure and original; no automatic retries, protected payload replay, scientific execution, broader research or automatic retention hook.",
+  "outcome": "partial",
+  "evidence": "Exact historical reviews under evidence/ and RETAINED-SOURCES.json; original finite coverage is 98 cases per mode (5 positive, 93 expected STOP). Current contribution execution is separately pending parent validation; historical full payload is not included.",
+  "author": "Chris R / Clear1nsight",
+  "ai_assistance": "Substantial OpenAI Codex assistance in original local implementation/review and contribution packaging; retain predecessor and independent oracle attribution.",
+  "open_questions": [
+    {
+      "question": "Can another independent environment restore a complete real archive?",
+      "why_it_matters": "Tests portability of the declared complete restoration contract.",
+      "first_step": "Select a newly closed caller-authorized run tree, retain external inventory/ROOT digests, and arrange a separately budgeted complete restore.",
+      "blocked_by": "Authorization, full payload availability, storage and a guarded resource budget; protected historical payload replay is outside this publication."
+    },
+    {
+      "question": "Which unsupported filesystem features merit a separate contract?",
+      "why_it_matters": "ACLs, links and special files need explicit semantics before broadening the accepted input domain.",
+      "first_step": "Specify one feature and design a tiny adversarial fixture before implementation.",
+      "blocked_by": "Separate implementation, independent review and new finite gates; current controls do not admit extensions."
+    },
+    {
+      "question": "Can retention safely follow an application's closed run?",
+      "why_it_matters": "Complete selection depends on writer closure, ownership and finalized receipts.",
+      "first_step": "Develop a separate reviewed lifecycle and caller contract.",
+      "blocked_by": "Automatic integration and broader research remain paused and outside current publication scope."
+    }
+  ]
+}

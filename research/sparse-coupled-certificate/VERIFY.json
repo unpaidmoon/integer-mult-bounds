@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "scripts/certify_coupled_recurrence.py",
+    "scripts/compare_recursive_invoices.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Authenticated exact old/current complete certificate conformance on 286 fixtures, both verifier directions, input preservation, malformed inputs, false certificates and source mutations."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "-O",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Authenticated exact old/current complete certificate conformance on 286 fixtures, both verifier directions, input preservation, malformed inputs, false certificates and source mutations. Optimized control."
+    }
+  ]
+}

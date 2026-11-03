@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-30T07:34:17.594950+00:00",
+  "environment": {
+    "python": "3.12.14",
+    "os": "Linux",
+    "machine": "x86_64"
+  },
+  "commands": [
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "-W",
+        "error",
+        "research/p104-dyadic-rank-seven/verify.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.4883,
+      "stdout_sha256": "1c978a93f5f5e8ef27b470f58423dbe1eb407d5f9578af3ea534f2527787cbd8",
+      "status": "PASS_P104_DYADIC_RANK_SEVEN"
+    },
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "-W",
+        "error",
+        "-O",
+        "research/p104-dyadic-rank-seven/verify.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.4726,
+      "stdout_sha256": "1c978a93f5f5e8ef27b470f58423dbe1eb407d5f9578af3ea534f2527787cbd8",
+      "status": "PASS_P104_DYADIC_RANK_SEVEN"
+    },
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "-W",
+        "error",
+        "research/p104-dyadic-rank-seven/fraction_check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.2198,
+      "stdout_sha256": "7b4b3a0747a397e31121015f68fe595609f3a8f2eb0325676d42eb428dac88cf",
+      "status": "PASS_FRACTION_REALIFICATION"
+    },
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "-W",
+        "error",
+        "-O",
+        "research/p104-dyadic-rank-seven/fraction_check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.386,
+      "stdout_sha256": "7b4b3a0747a397e31121015f68fe595609f3a8f2eb0325676d42eb428dac88cf",
+      "status": "PASS_FRACTION_REALIFICATION"
+    },
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "-W",
+        "error",
+        "research/p104-dyadic-rank-seven/search.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.0821,
+      "stdout_sha256": "b387817a0ddc7ae005cc34ec9cac0c7ae01b5a8a5b476f938ded4ec87cf4be10",
+      "status": "PASS_BOUNDED_DYADIC_SEARCH"
+    },
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "-W",
+        "error",
+        "-O",
+        "research/p104-dyadic-rank-seven/search.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.2323,
+      "stdout_sha256": "b387817a0ddc7ae005cc34ec9cac0c7ae01b5a8a5b476f938ded4ec87cf4be10",
+      "status": "PASS_BOUNDED_DYADIC_SEARCH"
+    }
+  ],
+  "normal_optimized_outputs_identical": true,
+  "input_and_code_sha256": {
+    "research/p104-dyadic-rank-seven/SOURCES.json": "cebc36f2217aa3b18750b2985c68050372888693e9e7d3a04e7d4f573455a4c2",
+    "research/p104-dyadic-rank-seven/VERIFY.json": "b4f26200176583fe5b2dac75e977b8aef04c56822919aafd86061493a523c9fc",
+    "research/p104-dyadic-rank-seven/WITNESS.json": "1fae86302f021b748f533bf7c72e03f4a4096b37e0b4a43adfd3b617446ca55a",
+    "research/p104-dyadic-rank-seven/fraction_check.py": "22b208fbc331c06081e82a9f7b2642fa9519ccb34e3c2f20893b5027b6bd843f",
+    "research/p104-dyadic-rank-seven/search.py": "d44e06b8dd4eb2281945fb2b188f8c7854c6181505e2223a497d753c44f4029e",
+    "research/p104-dyadic-rank-seven/verify.py": "5aa716189efb334d0a1c6a5f0bd8a4cc610ca081f2ee1e8dd86edd72621e3649"
+  },
+  "not_run": [
+    "Selected scientific cold replay",
+    "Physical native/caller/rounded multiplier",
+    "Proof-assistant or independent human review",
+    "Hosted CI"
+  ],
+  "initial_failures": [
+    "Exploratory root parsing omitted sign normalization and produced111roots; invalid outputs discarded.104root and rational predecessor controls added before accepted search.",
+    "Initial draft TASK outcome used a non-schema label; corrected to completed before metadata/registered acceptance."
+  ],
+  "portable": {
+    "mode": "Git-free, empty PATH, files0444/directories0555 during positive replays",
+    "files_checked": 13,
+    "all_file_bytes_unchanged": true,
+    "commands": [
+      {
+        "script": "research/p104-dyadic-rank-seven/verify.py",
+        "optimized": false,
+        "status": "PASS_P104_DYADIC_RANK_SEVEN"
+      },
+      {
+        "script": "research/p104-dyadic-rank-seven/verify.py",
+        "optimized": true,
+        "status": "PASS_P104_DYADIC_RANK_SEVEN"
+      },
+      {
+        "script": "research/p104-dyadic-rank-seven/fraction_check.py",
+        "optimized": false,
+        "status": "PASS_FRACTION_REALIFICATION"
+      },
+      {
+        "script": "research/p104-dyadic-rank-seven/fraction_check.py",
+        "optimized": true,
+        "status": "PASS_FRACTION_REALIFICATION"
+      },
+      {
+        "script": "research/p104-dyadic-rank-seven/search.py",
+        "optimized": false,
+        "status": "PASS_BOUNDED_DYADIC_SEARCH"
+      },
+      {
+        "script": "research/p104-dyadic-rank-seven/search.py",
+        "optimized": true,
+        "status": "PASS_BOUNDED_DYADIC_SEARCH"
+      }
+    ],
+    "actual_exported_byte_controls": [
+      "source append rejected:source digest",
+      "changed witness coordinate rejected:Gaussian-dyadic coefficients"
+    ]
+  }
+}

@@ -1,0 +1,566 @@
+# Explicit P02 source variant. No execution, parent completion or custody grant.
+# These obligations require a separately source-owned successful-parent bridge.
+_P02_PARENT_SUCCESS_HANDOFF = None
+_P02_REFERENCE_CUSTODY_HANDOFF = None
+_P02_REFERENCE_PROJECTION = None
+_P02_HELPER_SHA256 = "298b9951e5a0971bf4a7eb19ee789688c860e828a429036fd7fbc37352d69c04"
+_P02_OUTPUT_NAMES = (
+    'full-return.lossless.json',
+    'runtime-root/certificates/complex-network.json',
+    'original-stdout.txt',
+    'side-observations/result.json',
+    'side-observations/witness.json',
+    'side-observations/rank-trace.json',
+)
+_P02 = {
+    'entry_started': False, 'stage': 'UNBOUND', 'selected': False,
+    'driver': None, 'helper': None, 'helper_handle': None, 'helper_code': None,
+    'reference': None, 'state': None, 'suite': None, 'generation': None,
+    'extensions': None, 'module': None, 'binding': None, 'phases': None,
+    'invocation_token': None, 'pairs': None, 'captures': None, 'observer': None,
+    'caller': None, 'rank_events': None, 'trace': None,
+    'cli_frame': None, 'cli_code': None, 'cli_function': None,
+    'checks': None, 'circuit': None, 'code': None, 'map_returned': False,
+    'context': None, 'generator': None, 'generator_frame': None,
+    'labels_result': None, 'role_result': None, 'observation': None,
+    'primary': None, 'release_started': False, 'release_completed': False,
+    'release_error': None, 'terminal_returned': False,
+    'publication_completed': False, 'publication_error': None,
+    'entry_argv_owner': None, 'entry_argv_restored': False, 'entry_argv_error': None,
+}
+
+
+def _epoch_p02_source_current():
+    r = _P02
+    need(type(r) is dict and r is _P02_SOURCE_BINDING[0] and
+         r['driver'] is sys.modules['__main__'] and r['driver'].__dict__ is globals(),
+         'P02 actual root-installed source owner differs')
+    phase_class, call, call_code, wrap, wrap_code = _P02_PHASE_BINDING
+    need(phase_class is Phases and phase_class.__dict__['call'] is call and call.__code__ is call_code and
+         phase_class.__dict__['wrap'] is wrap and wrap.__code__ is wrap_code,
+         'P02 captured original phase code identities differ')
+    for function, code, namespace, builtins, defaults, kwdefaults, closure in _P02_SOURCE_BINDING[1]:
+        need(type(function) is types.FunctionType and function.__code__ is code and
+             function.__globals__ is namespace is globals() and
+             function.__builtins__ is builtins and function.__defaults__ is defaults and
+             function.__kwdefaults__ is kwdefaults and function.__closure__ is closure and
+             globals().get(function.__name__) is function,
+             'P02 captured fixed source function or environment differs')
+    need(type(r['helper']) is types.ModuleType and type(r['helper_code']) is types.CodeType and
+         r['helper'].P02.__code__ is r['helper_code'], 'P02 distinct helper code changed')
+    _epoch_g08_dispatch(2, r['helper_handle'])
+
+
+def _epoch_p02_prepare_reference(engine, backend_handle):
+    # Intentionally closed. Status strings/receipt bytes cannot supply process
+    # success or immutable custody. No ambient callable or prefilled projection.
+    need(_P02_PARENT_SUCCESS_HANDOFF is not None and
+         _P02_REFERENCE_CUSTODY_HANDOFF is not None and
+         _P02_REFERENCE_PROJECTION is not None,
+         'P02 dual-original successful-parent/custody bridge is unimplemented')
+    raise RuntimeError('P02 requires independently reviewed fixed source bridge; no ambient handoff accepted')
+
+
+def _epoch_p02_bind_locals(state, extensions, module, binding, phases,
+                           invocation_token, pairs, caller, rank_events, trace,
+                           captures, observer):
+    r = _P02
+    _epoch_p02_source_current()
+    need(r['entry_started'] is True and r['stage'] == 'UNBOUND' and
+         r['state'] is None and r['reference'] is not None and r['selected'] is False,
+         'P02 original local binding is one-use and requires complete reference')
+    suite = state['epoch_suite']; owner = extensions['set_binding']['owner']
+    need(_EXECUTION['state'] is state and state['enabled'] is True and suite.module is module and
+         suite.context['driver_function'] is main_epoch and suite.context['phase_owner'] is phases and
+         suite.context['invocation_token'] is invocation_token and
+         suite.active is False and suite.terminal is False and suite.invocation_consumed is False and
+         suite.pending is None and suite.request_live is None and not suite.registry and
+         owner.sealed is True and owner.cli_active is False and owner.used is False and
+         owner.circuit is None and owner.checks is None,
+         'P02 original sealed unconsumed owners differ')
+    need(type(pairs) is tuple and len(pairs) == 4 and all(type(p) is tuple and len(p) == 2 for p in pairs) and
+         module.Checks.__dict__['__init__'] is pairs[0][1] and
+         module.compile_roles is pairs[1][1] and
+         module.Checks.__dict__['verify_map'] is pairs[2][1] and
+         module.Checks.__dict__['verify_labels'] is pairs[3][1] and
+         pairs[3][0] is suite.products['labels'] and
+         module.verify_role_frames is observer and type(captures) is dict and not captures,
+         'P02 genuine installed phase/role pairs differ')
+    # Original authority already checks these cells; retain and bind their exact
+    # identities here as well. No additional observer free variables are allowed.
+    need(type(observer) is types.FunctionType and observer.__globals__ is globals() and
+         type(observer.__defaults__) is tuple and len(observer.__defaults__) == 1 and
+         observer.__defaults__[0] is None and observer.__kwdefaults__ is None and
+         any(item is observer.__code__ for item in main_epoch.__code__.co_consts) and
+         set(observer.__code__.co_freevars) == {'captures', 'original_roles', 'phases'},
+         'P02 original nested role observer code/defaults differ')
+    cells = dict(zip(observer.__code__.co_freevars, observer.__closure__))
+    need(cells['captures'].cell_contents is captures and cells['phases'].cell_contents is phases and
+         cells['original_roles'].cell_contents is suite.products['roles'],
+         'P02 original role closure identities differ')
+    r.update(state=state, suite=suite, generation=suite.generation, extensions=extensions,
+             module=module, binding=binding, phases=phases, invocation_token=invocation_token,
+             pairs=pairs, caller=str(caller), rank_events=rank_events, trace=trace,
+             captures=captures, observer=observer, stage='READY')
+
+
+def _epoch_p02_live_frame(frame):
+    r = _P02; state = r['state']; suite = r['suite']; owner = r['extensions']['set_binding']['owner']
+    _epoch_p02_source_current()
+    need(_EXECUTION['state'] is state and state['epoch_suite'] is suite and
+         suite.module is r['module'] and suite.generation == r['generation'] and
+         suite.context['driver_function'] is main_epoch and suite.context['phase_owner'] is r['phases'] and
+         suite.context['invocation_token'] is r['invocation_token'] and
+         suite.active is True and suite.terminal is False and suite.invocation_consumed is True and
+         suite.primary_error is None and suite.pending is None and suite.request_live is None and
+         owner.cli_active is True,
+         'P02 original same-generation live CLI owner differs')
+    cli = state['epoch_cli_cleanup']
+    need(cli['primary'] is None and cli['uncertain'] is False and
+         all(cli[k] is None for k in ('argv_error', 'disarm_error', 'retirement_error', 'outer_retirement_error')) and
+         type(sys.argv) is list and sys.argv == [r['caller']] and sys.argv is not cli['argv_owner'],
+         'P02 original protected CLI body/argv differs')
+    need(type(frame) is types.FrameType and frame.f_code.co_name == 'certificate' and
+         frame.f_globals.get('__file__') == r['caller'] and frame.f_globals.get('__name__') == '__main__',
+         'P02 actual original certificate frame differs')
+    function = frame.f_globals.get('certificate')
+    need(type(function) is types.FunctionType and function.__globals__ is frame.f_globals and
+         function.__code__ is frame.f_code and function.__defaults__ is None and
+         function.__kwdefaults__ is None and function.__closure__ is None,
+         'P02 actual compiled certificate function identity differs')
+    if r['cli_frame'] is None:
+        need(r['checks'] is None and r['stage'] == 'READY', 'P02 certificate frame capture repeated')
+        r['cli_frame'] = frame; r['cli_code'] = frame.f_code; r['cli_function'] = function
+    else:
+        need(frame is r['cli_frame'] and frame.f_code is r['cli_code'] and function is r['cli_function'],
+             'P02 certificate invocation/code identity changed')
+    suite.current()
+
+
+def _epoch_p02_phase_frame(phases, name, function, pair):
+    # Fixed call chain: this guard <- phase evaluator <- original Phases.call
+    # <- original Phases.wrap.observed <- original certificate. No frame search.
+    evaluation = sys._getframe(1); call = evaluation.f_back; observed = call.f_back; cli = observed.f_back
+    need(evaluation.f_code is _epoch_p02_phase_eval.__code__ and
+         call.f_code is Phases.call.__code__ and call.f_locals.get('self') is phases and
+         observed.f_code is pair[1].__code__ and observed.f_locals.get('self') is phases and
+         observed.f_locals.get('original') is function and observed.f_locals.get('name') == name,
+         'P02 actual phase/wrapper frames differ')
+    _epoch_p02_live_frame(cli)
+
+
+def _epoch_p02_generator_current():
+    r = _P02; generator = r['generator']
+    _epoch_p02_source_current()
+    need(type(generator) is types.GeneratorType and generator.gi_code is r['helper_code'] and
+         generator.gi_frame is r['generator_frame'] and generator.gi_frame is not None and
+         generator.gi_frame.f_globals is r['helper'].__dict__ and
+         generator.gi_frame.f_locals.get('c') is r['context'] and
+         generator.gi_running is False and generator.gi_yieldfrom is None,
+         'P02 exact suspended helper/context/frame ownership differs')
+    return generator
+
+
+def _epoch_p02_phase_eval(phases, name, function, args, kwargs):
+    r = _P02
+    if not r['entry_started'] or r['state'] is None or name not in (
+            'checks_initialization', 'compile_roles', 'verify_map', 'verify_labels'):
+        return function(*args, **kwargs)
+    try:
+        need(phases is r['phases'] and type(args) is tuple and type(kwargs) is dict and not kwargs and
+             r['stage'] == 'READY', 'P02 scientific phase order/owner differs')
+        index = ('checks_initialization', 'compile_roles', 'verify_map', 'verify_labels').index(name)
+        pair = r['pairs'][index]
+        need(function is pair[0], 'P02 original scientific phase function identity differs')
+        if name == 'checks_initialization':
+            # Actual after-arm Checks creation performs the existing C1 product
+            # before the first active frame check. Capture only its returned data.
+            need(r['checks'] is None and len(args) == 2, 'P02 repeated original Checks creation')
+            result = function(*args, **kwargs)
+            _epoch_p02_phase_frame(phases, name, function, pair)
+            checks, circuit = args
+            suite = r['suite']; owner = r['extensions']['set_binding']['owner']
+            need(result is None and type(checks) is suite.checks_class and
+                 type(circuit) is r['module'].ComplexSideCircuit and checks.c is circuit and
+                 type(checks.h) is int and checks.h == circuit.h == 25 and
+                 suite.checks is checks and suite.checks_c is circuit and
+                 owner.circuit is circuit and owner.checks is checks and owner.triples is circuit.triples and owner.used is False,
+                 'P02 genuine after-arm Checks/circuit differs')
+            r['checks'] = checks; r['circuit'] = circuit
+            return result
+        _epoch_p02_phase_frame(phases, name, function, pair)
+        if name == 'compile_roles':
+            need(r['checks'] is not None and r['code'] is None and len(args) == 1 and args[0] is r['circuit'],
+                 'P02 original compile input/order differs')
+            result = function(*args, **kwargs)
+            need(type(result) is dict, 'P02 actual compiled role object differs')
+            r['code'] = result
+            return result
+        need(len(args) == 1 and args[0] is r['checks'] and r['code'] is not None,
+             'P02 original Checks method input/order differs')
+        if name == 'verify_map':
+            need(r['map_returned'] is False, 'P02 original map repeated')
+            result = function(*args, **kwargs)
+            r['map_returned'] = True
+            return result
+        need(r['selected'] is False and r['map_returned'] is True and
+             r['module'].Checks.__dict__['verify_labels'] is pair[1] and
+             function is r['suite'].products['labels'] and
+             all(phases.rows.get(k, {}).get('calls') == 1 for k in (
+                 'checks_initialization', 'compile_roles', 'verify_map')),
+             'P02 labels requires the exact original once-completed predecessors')
+        r['selected'] = True  # Consumed before generator creation or any advance.
+        reference = r['reference']
+        need(type(reference) is dict and set(reference) == {
+             'reference_role_result', 'reference_rank_events', 'reference_trace',
+             'reference_native_counters', 'reference_outputs'}, 'P02 complete reference projection absent')
+        context = dict(reference)
+        context.update(bundle=_INITIAL_EPOCH_BUNDLE, state=r['state'], module=r['module'],
+                       checks=r['checks'], circuit=r['circuit'], code=r['code'],
+                       binding=r['binding'], rank_events=r['rank_events'], trace=r['trace'])
+        r['context'] = context
+        generator = _epoch_g08_dispatch(1, r['helper_handle'], 'P02', context)
+        need(type(generator) is types.GeneratorType, 'P02 distinct helper must be a generator')
+        r['generator'] = generator; r['generator_frame'] = generator.gi_frame
+        r['stage'] = 'LABEL_ADVANCING'
+        result = next(_epoch_p02_generator_current())
+        need(r['stage'] == 'LABEL_ADVANCING' and generator.gi_frame is r['generator_frame'],
+             'P02 first suspension state differs')
+        r['labels_result'] = result; r['stage'] = 'LABELS_RETURNED'
+        return result
+    except BaseException as primary:
+        try:
+            r['stage'] = 'FAILED_CONSUMED'
+            if r['primary'] is None:
+                r['primary'] = primary
+        except BaseException:
+            pass
+        raise
+
+
+def _epoch_p02_role_outer(c, checks, code):
+    r = _P02
+    if not r['entry_started']:
+        return False
+    try:
+        observer_frame = sys._getframe(1)
+        need(observer_frame.f_code is r['observer'].__code__ and
+             observer_frame.f_globals is globals() and
+             c is r['circuit'] and checks is r['checks'] and code is r['code'] and
+             r['module'].verify_role_frames is r['observer'], 'P02 original role entry identity differs')
+        if r['stage'] == 'LABELS_RETURNED':
+            _epoch_p02_live_frame(observer_frame.f_back)
+            need(r['phases'].rows.get('verify_labels', {}).get('calls') == 1 and
+                 'side' not in r['captures'], 'P02 outer original role boundary differs')
+            return True
+        need(r['stage'] == 'ROLE_ADVANCING' and observer_frame.f_back is r['generator_frame'] and
+             r['generator'].gi_running is True and
+             observer_frame.f_back.f_code is r['helper_code'] and
+             observer_frame.f_back.f_locals.get('c') is r['context'] and
+             'side' not in r['captures'], 'P02 only one actual inner helper role entry is permitted')
+        _epoch_p02_source_current()
+        r['suite'].current()
+        r['stage'] = 'ROLE_BODY_ENTERED'
+        return False  # Only this inner entry reaches the literal original body.
+    except BaseException as primary:
+        try:
+            r['stage'] = 'FAILED_CONSUMED'
+            if r['primary'] is None:
+                r['primary'] = primary
+        except BaseException:
+            pass
+        raise
+
+
+def _epoch_p02_role_resume(c, checks, code):
+    r = _P02
+    try:
+        need(r['stage'] == 'LABELS_RETURNED' and c is r['circuit'] and
+             checks is r['checks'] and code is r['code'], 'P02 outer role advance is one-use')
+        generator = _epoch_p02_generator_current()
+        r['stage'] = 'ROLE_ADVANCING'
+        result = next(generator)
+        need(r['stage'] == 'ROLE_BODY_ENTERED' and type(r['captures'].get('side')) is tuple and
+             len(r['captures']['side']) == 4 and r['captures']['side'][0] is c and
+             r['captures']['side'][1] is checks and r['captures']['side'][2] is code and
+             r['captures']['side'][3] is result and r['suite'].active is False and
+             r['suite'].terminal is True and not r['suite'].registry and
+             r['phases'].rows.get('verify_role_frames', {}).get('calls') == 1,
+             'P02 inner original role result/retirement differs')
+        r['role_result'] = result; r['stage'] = 'ROLE_RETURNED'
+        r['cli_frame'] = None; r['cli_function'] = None
+        return result
+    except BaseException as primary:
+        try:
+            r['stage'] = 'FAILED_CONSUMED'
+            if r['primary'] is None:
+                r['primary'] = primary
+        except BaseException:
+            pass
+        raise
+
+
+def _epoch_p02_finish(output, runtime, captures):
+    r = _P02
+    if not r['entry_started']:
+        return None
+    try:
+        need(r['stage'] == 'ROLE_RETURNED' and captures is r['captures'] and
+             captures['side'][3] is r['role_result'] and captures['full_return']['role_frames'] is r['role_result'] and
+             r['phases'].rows.get('complete_original_cli', {}).get('calls') == 1 and
+             _EXECUTION['output'] is output and runtime == output / 'runtime-root' and
+             r['state']['final_receipt'] is None and not r['state']['native_packet']['late_started'],
+             'P02 third advance must follow the complete original invocation and precede finalization')
+        # Exact complete artifacts produced by this invocation. Reference bytes
+        # come only from the independently joined pure-original lane.
+        actual = tuple((output / name).read_bytes() for name in _P02_OUTPUT_NAMES)
+        need(len(actual) == 6 and all(type(value) is bytes for value in actual),
+             'P02 actual complete output tuple differs')
+        r['context']['actual_outputs'] = actual
+        generator = _epoch_p02_generator_current()
+        r['stage'] = 'CHECKS_ADVANCING'
+        try:
+            next(generator)
+        except StopIteration as completed:
+            observation = completed.value
+        else:
+            raise RuntimeError('P02 unexpected third yield')
+        need(r['stage'] == 'CHECKS_ADVANCING' and generator.gi_frame is None and
+             type(observation) is dict and set(observation) == {'value', 'native', 'epoch'} and
+             observation['value'] is r['role_result'], 'P02 exact original helper completion differs')
+        r['observation'] = observation; r['stage'] = 'HELPER_COMPLETE'
+        return None
+    except BaseException as primary:
+        try:
+            r['stage'] = 'FAILED_CONSUMED'
+            if r['primary'] is None:
+                r['primary'] = primary
+        except BaseException:
+            pass
+        raise
+
+
+def _epoch_p02_release(primary):
+    # Guard every added cleanup/bookkeeping operation once P is already owned.
+    # A failed store cannot turn an incomplete release into qualification.
+    try:
+        return _epoch_p02_release_owned(primary)
+    except BaseException as secondary:
+        try:
+            _P02['release_error'] = secondary
+        except BaseException:
+            pass
+        if primary is None:
+            raise
+        return None
+
+
+def _epoch_p02_release_owned(primary):
+    r = _P02
+    if not r['entry_started'] or r['release_started']:
+        return None
+    r['release_started'] = True
+    generator = r['generator']; cleanup_primary = None
+    try:
+        # No authority/native/owner calls after the original late audit boundary.
+        # A completed generator is already closed; earlier failure closes only
+        # this owned generator after each invoked scientific function returned.
+        if generator is not None:
+            need(type(generator) is types.GeneratorType and generator.gi_code is r['helper_code'] and
+                 not generator.gi_running, 'P02 cleanup does not own an idle helper')
+            if generator.gi_frame is not None:
+                generator.close()
+            need(generator.gi_frame is None, 'P02 helper closure incomplete')
+    except BaseException as secondary:
+        cleanup_primary = secondary
+    try:
+        # Drop added aliases after original outer retirement, on every path.
+        for name in ('generator', 'generator_frame', 'cli_frame', 'cli_function',
+                     'labels_result', 'context', 'reference', 'checks', 'circuit',
+                     'code', 'captures', 'role_result', 'rank_events', 'trace'):
+            r[name] = None
+        if primary is not None:
+            r['stage'] = 'FAILED_CONSUMED'
+            if r['primary'] is None:
+                r['primary'] = primary
+    except BaseException as secondary:
+        if cleanup_primary is None:
+            cleanup_primary = secondary
+    if cleanup_primary is not None:
+        try:
+            r['release_error'] = cleanup_primary
+        except BaseException:
+            pass
+        if primary is None:
+            raise cleanup_primary
+        return None
+    r['release_completed'] = True
+    return None
+
+
+def _epoch_p02_require_return():
+    # Plain recorded state only; never call native/currentness after late checks.
+    r = _P02; state = r['state']; suite = r['suite']
+    need(r['stage'] == 'HELPER_COMPLETE' and r['primary'] is None and r['terminal_returned'] is True and
+         r['release_started'] is True and r['release_completed'] is True and r['release_error'] is None and
+         r['generator'] is None and r['generator_frame'] is None and r['cli_frame'] is None and
+         r['entry_argv_restored'] is True and r['entry_argv_error'] is None and sys.argv is r['entry_argv_owner'],
+         'P02 helper/source entry tail is incomplete')
+    outer = _EXECUTION['epoch_outer_cleanup']; cli = state['epoch_cli_cleanup']
+    need(state is _EXECUTION['state'] and suite is state['epoch_suite'] and
+         r['driver'] is sys.modules['__main__'] and r['driver'].__dict__ is globals() and
+         outer['attempted'] is True and outer['primary'] is None and
+         outer['retirement_error'] is None and outer['uncertain'] is False and
+         cli['primary'] is None and cli['uncertain'] is False and
+         all(cli[name] is None for name in ('argv_error', 'disarm_error', 'retirement_error', 'outer_retirement_error')),
+         'P02 original CLI/main primary or secondary cleanup failed')
+    used = (suite.role_retirement_channel, cli['retirement_channel'], cli['outer_retirement_channel'])
+    unused = (suite.emergency_retirement_channel, suite.inner_retirement_channel, suite.outer_retirement_channel)
+    channels = used + unused
+    for index, channel in enumerate(channels):
+        need(type(channel) is dict and set(channel) == {'started', 'error', 'journal_error', 'acknowledged'} and
+             all(channel is not earlier for earlier in channels[:index]) and
+             channel['started'] is (index < 3) and channel['acknowledged'] is (index < 3) and
+             channel['error'] is None and channel['journal_error'] is None,
+             'P02 exact role/CLI/outer retirement channel differs')
+    need(suite.primary_error is None and suite.secondary_error is None and suite.secondary == [] and
+         suite.uncertain is False and suite.active is False and suite.terminal is True and
+         suite.invocation_consumed is True and suite.pending is None and suite.request_live is None and
+         suite.checks is None and suite.checks_c is None and suite.checks_h is None and
+         type(suite.registry) is dict and not suite.registry and suite.receipt['retirements'] == 1 and
+         all(getattr(suite, name) is None for name in (
+             'role_retirement_error', 'emergency_retirement_error', 'emergency_journal_error',
+             'inner_retirement_error', 'inner_journal_error', 'outer_retirement_error', 'outer_journal_error')),
+         'P02 original suite did not cleanly retire')
+    owner = r['extensions']['set_binding']['owner']
+    need(owner.current is None and owner.cli_active is False and owner.circuit is None and
+         owner.checks is None and owner.triples is None and state['native_packet']['late_started'] is True and
+         type(state['final_receipt']) is dict and state['final_receipt']['full_caller_run'] is True,
+         'P02 full original set/native/final receipt tail differs')
+    need(type(state['owned_states']) is list and len(state['owned_states']) > 0 and
+         state['owned_states'][0] is state, 'P02 original known-owner list differs')
+    acquired = 0
+    for index, owned in enumerate(state['owned_states']):
+        need(type(owned) is dict and all(owned is not p for p in state['owned_states'][:index]) and
+             owned['owned_states'] is state['owned_states'] and owned['native_packet'] is state['native_packet'] and
+             type(owned['cleanup_errors']) is list and not owned['cleanup_errors'],
+             'P02 original known owner cleanup differs')
+        binding = owned['cache_binding']; acquisition = owned.get('epoch_acquisition')
+        if binding is None:
+            need(owned['cache_teardown_attempted'] is False and owned['cache_teardown_receipt'] is None and
+                 owned['cache_teardown_stop'] is None and acquisition is None,
+                 'P02 unacquired owner has a partial teardown')
+            continue
+        acquired += 1
+        owner = binding['owner']; receipt = owned['cache_teardown_receipt']
+        need(owned['cache_teardown_attempted'] is True and owned['cache_teardown_stop'] is None and
+             type(receipt) is dict and binding['receipt'] is owner.receipt and
+             set(receipt) == set(owner.receipt) | {'native_probe', 'probe_closed'} and
+             all(type(receipt[k]) is type(v) and receipt[k] == v for k, v in owner.receipt.items()) and
+             owner.receipt['teardowns'] == 1 and owner.receipt['current_authority_entries'] == 0 and
+             not owner.states and owner.probe_closed is True and receipt['probe_closed'] is True and
+             owner.teardown_stop is None and owner.teardown_primary_error is None and owner.teardown_close_error is None,
+             'P02 original acquired owner lacks its single clean teardown')
+        if acquisition is not None:
+            # Full success uses original finish -> teardown_cache directly.
+            # Do not invent the failure-only epoch_cleanup_owned close phase.
+            need(type(acquisition) is dict and acquisition['prepared'] is binding and
+                 acquisition['owner'] is owner and acquisition['probe_binding'] is owner.probe_binding and
+                 acquisition['published'] is True and acquisition['primary'] is None and
+                 acquisition['secondary'] is None and acquisition['uncertain'] is False and
+                 acquisition['phase'] == 'ORIGIN_ACCEPTED_PARENT_OWNED' and
+                 acquisition['close_attempted'] is False and acquisition['close_result'] is None,
+                 'P02 original full-success acquisition custody differs')
+        if owned is state:
+            need(acquisition is not None and acquisition['origin_handle'] is suite.handle and owner is suite.owner,
+                 'P02 selected original acquired owner/handle differs')
+        probe = receipt['native_probe']
+        need(type(probe) is dict and type(probe['calls']) is int and type(probe['counter_overflow']) is int and
+             probe['counter_overflow'] == 0 and
+             probe['calls'] == owner.receipt['probe_entry_calls'] + owner.receipt['probe_exit_calls'],
+             'P02 original probe teardown accounting differs')
+    need(acquired > 0, 'P02 no genuine cache owner was finalized')
+    for row in r['phases'].rows.values():
+        for sample in row['memory_samples']:
+            need(sample['diagnostic_error'] is None, 'P02 original phase memory observation failed')
+    return {'schema': 'h25-p02-source-observation-v1', 'case_id': 'P02',
+            'helper_completed': True, 'original_full_tail_returned': True,
+            'acquired_owners': acquired, 'runtime_or_resource_admitted': False}
+
+
+def _epoch_p02_controller_entry():
+    r = _P02
+    need(r['entry_started'] is False and r['stage'] == 'UNBOUND', 'P02 source entry is one-use')
+    r['entry_started'] = True
+    args = sys.argv; r['entry_argv_owner'] = args
+    need(type(args) is list and all(type(x) is str for x in args) and
+         args.count('--cache-control-case') == args.count('--cache-control-sha256') == 1,
+         'P02 exact parent source arguments required')
+    case_at = args.index('--cache-control-case'); hash_at = args.index('--cache-control-sha256')
+    need(case_at + 1 < len(args) and hash_at + 1 < len(args) and abs(case_at - hash_at) >= 2 and
+         args[case_at + 1] == 'P02' and args[hash_at + 1] == _P02_HELPER_SHA256,
+         'P02 distinct helper/source selection differs')
+    removed = {case_at, case_at + 1, hash_at, hash_at + 1}
+    argv = [x for i, x in enumerate(args) if i not in removed]
+    need('--finite-only' not in argv and argv.count('--lanes') == 1 and
+         argv.index('--lanes') + 1 < len(argv) and argv[argv.index('--lanes') + 1] == 'candidate' and
+         sys.flags.optimize == 0, 'P02 requires complete assertion-on original candidate route')
+    r['driver'] = sys.modules['__main__']
+    helper, handle = _epoch_g08_dispatch(0, str(ROUND / 'integration/cache_epoch_source_controls_p02_two_yield_v1.py'),
+                                        _P02_HELPER_SHA256, '_h25_cache_p02_two_yield')
+    r['helper'] = helper; r['helper_handle'] = handle; r['helper_code'] = helper.P02.__code__
+    primary = None
+    try:
+        _epoch_p02_source_current()
+        sys.argv = argv
+        _run_epoch_with_stop_evidence()
+        r['terminal_returned'] = True
+    except BaseException as error:
+        primary = error
+        try:
+            if r['primary'] is None:
+                r['primary'] = error
+        except BaseException:
+            pass
+        raise
+    finally:
+        try:
+            sys.argv = args
+            r['entry_argv_restored'] = True
+        except BaseException as argv_error:
+            try:
+                r['entry_argv_error'] = argv_error
+            except BaseException:
+                pass
+            if primary is None:
+                raise
+        finally:
+            _epoch_p02_release(primary if primary is not None else r['entry_argv_error'])
+    observation = _epoch_p02_require_return()
+    try:
+        with (_EXECUTION['output'] / 'P02-source-observation.json').open('x', encoding='utf-8') as stream:
+            stream.write(json.dumps(observation, sort_keys=True, indent=2) + '\n')
+    except BaseException as publication_error:
+        try:
+            r['publication_error'] = publication_error
+        except BaseException:
+            pass
+        raise
+    r['publication_completed'] = True
+    # A caller must still observe this actual return after stdout and sidecar
+    # publication. Neither the receipt nor this field supplies parent success.
+    return observation
+
+
+_P02_PHASE_BINDING = (Phases, Phases.call, Phases.call.__code__, Phases.wrap, Phases.wrap.__code__)
+_P02_SOURCE_BINDING = (_P02, tuple(
+    (function, function.__code__, function.__globals__, function.__builtins__,
+     function.__defaults__, function.__kwdefaults__, function.__closure__)
+    for function in (
+        main_epoch, _epoch_p02_source_current, _epoch_p02_prepare_reference,
+        _epoch_p02_bind_locals, _epoch_p02_live_frame, _epoch_p02_phase_frame,
+        _epoch_p02_generator_current, _epoch_p02_phase_eval,
+        _epoch_p02_role_outer, _epoch_p02_role_resume, _epoch_p02_finish,
+        _epoch_p02_release, _epoch_p02_release_owned, _epoch_p02_require_return, _epoch_p02_controller_entry,
+    )
+))

@@ -1,0 +1,72 @@
+{
+  "conditional_progress": {
+    "additional_points_only_after_full_independent_source_acceptance": 1.25,
+    "awarded_now": 0,
+    "complete_activities_if_closed": 23,
+    "current_complete_activities": 22,
+    "current_weighted_percent": 43.5,
+    "result_if_entire_original_activity_closed": 44.75,
+    "total_activities": 49
+  },
+  "created_utc": "2026-10-30T23:40:37.688060+00:00",
+  "execution_boundary": "This recommendation authorizes neither implementation nor target execution. The present round is source review only; native work, current runtime/profile checks, complete controls/caller execution and measurement retain their separate original gates. Pure-Python source construction is not categorically prohibited by NATIVE-01.",
+  "first_discriminating_source_check": "Trace genuine fixture/circuit/Checks construction and prove original set owner remains unused and epoch unarmed. Reject manual state resets, forged objects, rearming, or reuse of a consumed generation. If no authentic route satisfies the original contract, record the exact failed predicate and park this branch rather than add generic infrastructure.",
+  "governing_scope_erratum": {
+    "path": "astra-execution-cache/SOURCE-SCOPE-ERRATUM.json",
+    "sha256": "3e3e9b763803835408a5e2e89b8c5ce2c96e078ef6e8eef125151795ff6481dc"
+  },
+  "not_a_new_progress_rubric": true,
+  "original_activity_scope_unchanged": true,
+  "other_future_branches": {
+    "controls": "One source-owned two-unit diagnostic capture/sequence receiver, with explicit diagnostic-mode authority; no full-union completion claim.",
+    "execution": "Preserve accepted F4V3 repairs; actual derivative consumer adoption and genuine M financial producer/transport require separate source closure.",
+    "retention": "Exact original-domain equality is first hard gate at C2 pre1404. Stop if required later K/M writers prevent that seam; narrowing cannot earn full activity credit."
+  },
+  "schema": "strict60-next-source-checklist-v1",
+  "scope_selection": "Select only the cache branch of the reviewed A/C packet. F4 consumer adoption and M producer transport remain separate work; they are not added as prerequisites for S03.08 without an exact demonstrated dependency. Preserve all wider control-union and runtime/native obligations in their original activities.",
+  "selected_existing_activity": "S03.08",
+  "source_closure_checklist": [
+    {
+      "fail": "None contracts, deferred adoption, arbitrary dictionary-only approval, stale owner/hash or undeclared tuple substitution remain.",
+      "id": "SC1",
+      "pass": "New immutable tuple uses fcffe corrected helper or its exact reviewed derivative, unchanged accepted V5 production bodies except declared bounded splices, and exact full typed native_packet and epoch-cache contract definitions. Every source inventory, factory/Root/driver/authority map and strict inverse matches the actual selected source. Both contract owners and their underlying original source/caller/cost approvals are explicit; no stale finite helper or copied approval literal.",
+      "requirement": "Exactly selected and adopted production/control tuple"
+    },
+    {
+      "fail": "Constructing Checks/circuit already consumes the set lease, requires arming, bypasses a guard, creates an unauthenticated object or forces manual active/phase/origin/registry reset. If no original route meets these predicates, the packet is not complete.",
+      "id": "SC2",
+      "pass": "A fixed source-owned constructor creates the exact original circuit, Checks and required fixtures through their authentic constructors and installed products; proves actual Checks class and verify_labels identity; preserves s.active=False, terminal=False, primary_error=None, invocation unconsumed, original set owner unused and unarmed, exact driver state/bundle/token and actual native/load/bind/seal lineage. Constructor behavior must be source-traced: no source-owned state field is reset to manufacture these conditions.",
+      "requirement": "Genuine P08 unarmed context"
+    },
+    {
+      "fail": "Earlier FULL/phase refusal substitutes for body oracle, generic external callback escapes mutable aliases, new skip/early return loses cleanup, or consumed/retired generation is rearmed.",
+      "id": "SC3",
+      "pass": "At driver1160-1168, a fixed source-selected branch passes only the genuine local context to unchanged P08 body helper, uses real original arms, same protected CLI boundary and exact original script, retains AttributeError NoneType.active in actual labels frame, sys.argv pointer restoration and distinct actual primary/disarm/retirement raw errors. All original outer cleanup/owner teardown paths remain, with exact whole-source inverse. The terminal context is not reused and normal positive CLI does not resume after the control.",
+      "requirement": "Bounded post-seal P08 dispatch and terminal cleanup"
+    },
+    {
+      "fail": "Borrowed P08 prepared state, shared consumed generation, finite-baseline substitute or replayed captured evidence.",
+      "id": "SC4",
+      "pass": "Positive full remains a fresh original complete caller. Absent-record retains actual cold _run_epoch_with_stop_evidence -> main_epoch, state=None and packet=None on entry, exact selected full five-image fault tuple, intended absent-record fault at original boundary, raw P/R1/J1/R2/J2 identities, independent inner/outer channels and transfer-before-ACK/one-shot replay semantics. Source maps authenticate each distinct entry.",
+      "requirement": "Separate authentic full and absent-record entries"
+    },
+    {
+      "fail": "A single P08 seam is treated as whole genuine cache/full-caller source acceptance, required cache caller/control corrections remain unbound, original cache tests are removed/renamed/weakened, expected answers come from candidate cache state, or optimized full refusal counts as a positive body test.",
+      "id": "SC5",
+      "pass": "Close every outstanding correction and genuine context required by the original S03.08 cache/full-P08 caller source scope. Retain all52 existing helper bodies and provide their authentic case-context/selection/oracle bindings to the extent required by that original source contract. Expected results must use independently authentic uncached original arithmetic/objects, exact types/order/callbacks/hit/fallback/cleanup and raw error identities. Adopt import/owner/primary/acquisition/source/argv/raw-channel corrections. Make normal full/P08/absent-record positives and optimized finite/public/refusal semantics explicit. Document any exact dependency on wider source-control families rather than assuming all families belong to S03.08.",
+      "requirement": "Complete original cache/full-caller source-control context and oracle contract; preserve wider unions without reallocating activities"
+    },
+    {
+      "fail": "The old closed-generation lemma is transferred wholesale to new exposed aliases; live native validation or resource fit is claimed from source; required native source/profile contract or cost/caller definition remains absent.",
+      "id": "SC6",
+      "pass": "Independently review new source graph and mutable alias lifetime against original T1-T4, including fixture/Checks construction and every post-seal helper edge. Specify exact original native source/profile ownership, authentic Root/load token/guard premises and failure stop conditions. Provide complete source work/cost/caller/control bill, preserving all original limits, tails and unmeasured quantities. Independent review accepts the whole actual configured source tuple and records execution prerequisites separately.",
+      "requirement": "Closed aliases, source/native/caller/cost contract and exact acceptance"
+    }
+  ],
+  "source_review": {
+    "path": "astra-execution-cache/REVIEW.json",
+    "sha256": "755aca77c7b303b8bd855a32bf61f082b91e47374e54dc2814bcbf5cde095871"
+  },
+  "status": "RECOMMENDED_NEXT_SOURCE_WORK_NOT_STARTED",
+  "subrows_earn_no_fractional_activity_credit": true
+}

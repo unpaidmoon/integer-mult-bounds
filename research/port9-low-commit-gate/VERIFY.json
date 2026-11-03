@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/bit-low-carry-lowering/controller.py",
+    "research/bit-low-carry-lowering/offset.py",
+    "research/port9-low-cache-carry/SOURCES.json",
+    "research/port9-low-cache-carry/adapter.py",
+    "research/port9-low-cache-carry/verify.py",
+    "research/runtime-quarter-carry/TABLE.json.gz",
+    "research/runtime-quarter-carry/inputs/counters.py",
+    "research/runtime-quarter-carry/inputs/descriptor.py",
+    "research/runtime-quarter-carry/inputs/independent.py",
+    "research/runtime-quarter-carry/inputs/machine.py",
+    "research/runtime-quarter-carry/inputs/route-RESULT.json",
+    "research/runtime-quarter-carry/inputs/shear.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Both leaf orientations, digit-8 cache mutant, static component tapes, eight-step commit and 551-step tail retirement against the predecessor exit contract."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-O",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "The same receipt under optimized bytecode, with no assertion-only controls."
+    }
+  ]
+}

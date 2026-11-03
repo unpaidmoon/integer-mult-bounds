@@ -1,0 +1,36 @@
+COMMAND ['/opt/homebrew/opt/python@3.14/bin/python3.14', '-B', '-W', 'error', 'tests/test_research_rational_rank.py']
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 1.505s
+
+OK
+COMMAND ['/opt/homebrew/opt/python@3.14/bin/python3.14', '-B', '-W', 'error', 'tests/test_research_coupled_recurrence.py']
+......
+----------------------------------------------------------------------
+Ran 6 tests in 0.899s
+
+OK
+COMMAND ['/opt/homebrew/opt/python@3.14/bin/python3.14', '-B', '-W', 'error', 'tests/test_check_pinned_edits.py']
+......
+----------------------------------------------------------------------
+Ran 6 tests in 4.754s
+
+OK
+COMMAND ['/opt/homebrew/opt/python@3.14/bin/python3.14', '-B', '-O', '-W', 'error', 'tests/test_research_rational_rank.py']
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 1.096s
+
+OK
+COMMAND ['/opt/homebrew/opt/python@3.14/bin/python3.14', '-B', '-O', '-W', 'error', 'tests/test_research_coupled_recurrence.py']
+......
+----------------------------------------------------------------------
+Ran 6 tests in 0.516s
+
+OK
+COMMAND ['/opt/homebrew/opt/python@3.14/bin/python3.14', '-B', '-O', '-W', 'error', 'tests/test_check_pinned_edits.py']
+......
+----------------------------------------------------------------------
+Ran 6 tests in 3.873s
+
+OK

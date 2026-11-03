@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/p104-complex-rank-seven/PROOF.md",
+    "research/p104-complex-rank-seven/README.md",
+    "research/p104-contractive-gram-deflation/MISSING.json",
+    "research/p104-rank-seven-error-floor/PROOF.md"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "-W",
+        "error",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 30,
+      "checks": "Complete exact Gram/projector identity, rank, dyadic coefficients, positive fixtures and semantic/source rejection controls"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "-W",
+        "error",
+        "-O",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 30,
+      "checks": "Complete exact Gram/projector identity, rank, dyadic coefficients, positive fixtures and semantic/source rejection controls"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "-W",
+        "error",
+        "{package}/fraction_check.py"
+      ],
+      "timeout_seconds": 30,
+      "checks": "Separate Fraction realification and all residual entries; no primary imports"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "-W",
+        "error",
+        "-O",
+        "{package}/fraction_check.py"
+      ],
+      "timeout_seconds": 30,
+      "checks": "Separate Fraction realification and all residual entries; no primary imports"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "-W",
+        "error",
+        "{package}/search.py"
+      ],
+      "timeout_seconds": 30,
+      "checks": "Exact replay of five bounded DP domains and first-success stopping rule"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "-W",
+        "error",
+        "-O",
+        "{package}/search.py"
+      ],
+      "timeout_seconds": 30,
+      "checks": "Exact replay of five bounded DP domains and first-success stopping rule"
+    }
+  ]
+}

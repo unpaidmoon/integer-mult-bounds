@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "task_id": "bit-new-register-model",
+  "priority_revision": 8,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "original_card": {
+    "id": "bit-new-register-model",
+    "question": "Can an explicitly larger or nonabelian register model escape the scoped three-register obstruction?",
+    "starting_points": [
+      "docs/research/research-family-status.md",
+      "research/bit-three-register-lower-bound/README.md",
+      "certificates/selected-result.json",
+      "research/bit-gl3-mixed-targets-length10/README.md",
+      "docs/research/community-efficient1000-review.md"
+    ],
+    "methods": [
+      "Construct the smallest exact identity in a newly specified legal operation alphabet.",
+      "Derive a target-specific relaxation bound for that same explicit alphabet."
+    ],
+    "acceptance_gate": "Name the changed hypothesis, all counted roles and a uniform identity; finite column tests alone do not certify it. A scoped local result may be retained without a complete supplier. Expanding it into further construction rounds requires the family-level budget and obligation gate in research-family-status.md; an optimistic passing relaxation alone is not acceptance.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_selected_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Resolve the current selected review, separate complex/ordinary BIT/admitted BIT/outer budgets, and compare the card against live handoffs before starting. Historical ceilings require exact source/model equivalence.",
+      "scope": "Source-binding orientation only; not a scientific replay or all-size proof. Materialize selected inputs if this checkout is sparse."
+    },
+    "first_experiment": "First compare the alphabet, role count and length with the fully replayed #1974 census and #2027 mixed-root tariff. Identify a changed premise and a legal native implementation; then price one smallest completed instance before searching larger words.",
+    "bottleneck_link": "A small-width completed saving changes the bit primitive; a finite-address identity alone is insufficient.",
+    "allowed_variations": [
+      "Choose a fixed larger register count or a specified nonabelian operation family."
+    ],
+    "scope_change_triggers": [
+      "Remaining inside the already-excluded three-register abelian model.",
+      "Repeating the two-register GL3 census or a covered three-register length without changing a hypothesis; a formal group-algebra word without native conversion is a partial result."
+    ],
+    "overlap_terms": [
+      "three-register",
+      "nonabelian",
+      "group algebra"
+    ]
+  },
+  "scope_status": "changed",
+  "actual_scope": "Sharp simultaneous-success threshold for weighted rational-frame partition certificates under independent uniform finite-alphabet inputs; common-flag rank floor, reversible same-terminal attainment, and independent-coin versus expected-budget distinction.",
+  "scope_change_reason": "The operation model permits arbitrary pointwise nonlinear gates and errors rather than exact formal group-algebra words. This is an originally posed error-tolerance obstruction motivated by external PR1757, not a larger-group counterpart, a source audit or a selected supplier.",
+  "bottleneck_link": "A simultaneous error allowance below 1-1/q cannot evade a partition-excluded local primitive. This narrows approximate mechanism design while supplying no physical supplier or kappa improvement.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop at the first verified threshold proof and matching reversible construction; package the scoped result without expanding to other distributions or mechanisms.",
+  "outcome": "completed",
+  "evidence": "PROOF.md and verify.py: complete approximate-map successful-fiber census, literal framed identity/swap attainments, seed/input mixture enumeration, invalid-contract and boundary controls; generated hash-bound stdout receipts.",
+  "author": "Nick Petalas",
+  "ai_assistance": "Independent human and formal proof-kernel review are unclaimed.",
+  "open_questions": [
+    {
+      "question": "For a named producer with nonuniform inputs, what is the maximum mass of a successful transcript fiber?",
+      "why_it_matters": "A justified distribution might change the uniform error threshold.",
+      "first_step": "Bind one actual producer distribution and one deficient cut, then optimize its successful fibers.",
+      "blocked_by": "No distribution or physical acquisition cost is supplied here."
+    },
+    {
+      "question": "Can an actual approximate supplier provide both a useful partition certificate and simultaneous exact symbol-success guarantee?",
+      "why_it_matters": "This connects the obstruction to a physical proposed mechanism.",
+      "first_step": "Extract its full graph, terminal demands and every charged wire.",
+      "blocked_by": "Numerical error, recovery, native implementation and full cost remain separate."
+    }
+  ],
+  "coordination": "https://github.com/CrocSwap/integer-mult-bounds/discussions/1166#discussioncomment-19292052",
+  "claim_type": "scoped proof with exact finite corroboration",
+  "environment": {
+    "python": "3.12.15",
+    "implementation": "CPython",
+    "system": "Darwin",
+    "machine": "arm64",
+    "dependencies": "standard library only"
+  }
+}

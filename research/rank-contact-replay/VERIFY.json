@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/native-clifford-gauge-compiler/NOTICE.md",
+    "research/native-clifford-gauge-compiler/decoder/TRANSVECTION-EXPECTED.json",
+    "research/native-clifford-gauge-compiler/decoder/testformula.py",
+    "research/native-clifford-gauge-compiler/inputs/round3-contact-graph.txt"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 180,
+      "checks": "Replacement versus literal intersections, invalid inputs, one-contact cache and complete retained caller"
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 180,
+      "checks": "The same complete conformance and caller checks with optimization enabled"
+    }
+  ]
+}

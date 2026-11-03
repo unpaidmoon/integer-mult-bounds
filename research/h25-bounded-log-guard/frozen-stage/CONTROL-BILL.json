@@ -1,0 +1,119 @@
+{
+  "area": "log-handling",
+  "baseline_runner_sha256": "b74366a925dd44c0e95a7ad87aa1505cbdcad9fefcb9360d77d6459679f102be",
+  "cli": "run_guarded.py STAGE JOB LABEL",
+  "execution_owner": "parent serial queue only; all new attempts and failures charged to new ledger",
+  "helpers": {
+    "finalize_logs(folder, stop)": "Returns stdout record, stderr record, preserved-or-new STOP reason, output-cap observation location.",
+    "read_usage(path)": "At most16385bytes read; oversized metadata stops the run without raw materialization.",
+    "stream_log(path)": "Finite64KiB-block hash of initial regular-file snapshot; bytes is the exact hashed count, final_bytes is final physical size, stable requires matching identity/timestamps/counts."
+  },
+  "installation": "Copy the exact reviewed runner bytes to the new round root, freeze its hash in every admitted stage, and use it for this round's actual queue. Do not overwrite prior runner or ledger.",
+  "limits": {
+    "command_seconds": 180,
+    "initial_round_seconds": 600,
+    "log_read_chunk_bytes": 65536,
+    "maximum_process_fixture_stderr_bytes": 2097153,
+    "maximum_process_fixture_stdout_bytes": 4194304,
+    "ordinary_stdout_or_stderr_bytes": 2097152,
+    "real_file_fixture_total_bytes_upper_bound": 46137344,
+    "rss_bytes": 1073741824,
+    "total_round_seconds": 2400,
+    "usage_metadata_bytes": 16384
+  },
+  "memory_gate": "Each real-file finalization must have tracemalloc peak <=512KiB and process lifetime maximum RSS increment <=8MiB. Both4MiB and32MiB sizes are retained and measured; these controls establish bounded log hashing only, not a verifier performance factor.",
+  "outer_precedent_sha256": "c1722dabdfbd4c50b2e5a8bc8988dc3f1e02ec76b924361e432afce552abc33d",
+  "process_control_cases": [
+    {
+      "exit": 0,
+      "job": "normal",
+      "lanes": "normal",
+      "status": "PASS",
+      "stderr_bytes": 0,
+      "stdout_bytes": 15
+    },
+    {
+      "exit": 0,
+      "job": "binary",
+      "lanes": "binary",
+      "status": "PASS",
+      "stderr_bytes": 0,
+      "stdout_bytes": 4352
+    },
+    {
+      "exit": 0,
+      "job": "stderr",
+      "lanes": "stderr",
+      "status": "STOP",
+      "stderr_bytes": 18,
+      "stdout_bytes": 22,
+      "termination": null
+    },
+    {
+      "exit": 7,
+      "job": "nonzero",
+      "lanes": "nonzero",
+      "status": "STOP",
+      "stderr_bytes": 0,
+      "stdout_bytes": 16,
+      "termination": null
+    },
+    {
+      "job": "oversize-live",
+      "lanes": "oversize-live",
+      "output_fixture_bound_bytes": 4194304,
+      "status": "STOP",
+      "termination": "output_cap"
+    },
+    {
+      "job": "oversize-fast",
+      "lanes": "oversize-fast",
+      "output_fixture_bound_bytes": 2097153,
+      "status": "STOP",
+      "termination": "output_cap"
+    },
+    {
+      "job": "stderr-oversize-fast",
+      "lanes": "stderr-oversize-fast",
+      "output_fixture_bound_bytes": 2097153,
+      "status": "STOP",
+      "termination": "output_cap"
+    },
+    {
+      "exit": 0,
+      "job": "files",
+      "lanes": "files",
+      "status": "PASS"
+    }
+  ],
+  "real_file_controls": [
+    "empty",
+    "binary",
+    "exact2MiB-boundary",
+    "4MiB-oversize-finalization",
+    "32MiB-oversize-finalization",
+    "deterministic-final-size-growth",
+    "deterministic-post-hash-cap-growth",
+    "existing-STOP-precedence"
+  ],
+  "receipt_contract": {
+    "hash_completeness": "stdout_sha256/stderr_sha256 hash exactly stdout_bytes/stderr_bytes. A complete retained-file digest is claimed only if retained_log_bytes_stable is true; final physical sizes are separately recorded.",
+    "new_ledger_charge": "runner_wall_seconds begins before source inventory and ends after log/source postprocessing, before receipt writing. New ledger sums this field, falling back to wall_seconds only for earlier schema receipts.",
+    "new_observations": [
+      "runner_wall_seconds",
+      "runner_user_seconds",
+      "runner_system_seconds",
+      "runner_lifetime_max_rss_kib",
+      "stdout_final_bytes",
+      "stderr_final_bytes",
+      "retained_log_bytes_stable",
+      "output_cap_observed_at",
+      "log_read_chunk_bytes"
+    ],
+    "retained": "Every old field remains; wall_seconds retains the child envelope. Raw stdout/stderr remain byte-for-byte in the unique attempt directory, including STOP attempts."
+  },
+  "source_inventory_boundary": "The unchanged source inventory still reads authenticated source files in full. Bounded-memory claims in this area concern stdout/stderr/usage diagnostics, not arbitrary source or manifest bytes.",
+  "status": "SOURCE_REVIEW_REQUIRED_NO_EXECUTION",
+  "unsupported_log_path_drift": "Admission requires retained regular stdout/stderr files. Unlink, symlink or open/read errors fail closed with raw attempt directory retained and no receipt; the next run is refused until parent reconciliation. Existing process-group cleanup is preserved without claiming stronger descendant cleanup.",
+  "version": 1
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/e7-bitsliced-exhaustion/PROOF.md",
+    "research/e7-bitsliced-exhaustion/binary.py",
+    "research/e7-bitsliced-exhaustion/source/RESULT.json",
+    "research/e7-bitsliced-exhaustion/source/vendor/PR5238.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 180,
+      "checks": "Hash the four live inputs, compare two independent E7 half-splits with engine batches 16 and 8, match the predecessor support count, and reject a dropped support, a weight-11 injection, and a toy bound change."
+    }
+  ]
+}

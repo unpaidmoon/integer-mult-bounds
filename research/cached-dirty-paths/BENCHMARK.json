@@ -1,0 +1,73 @@
+{
+  "executable_sha256": {
+    "SOURCES.json": "c8ac64e892500c3423d1d5733b19e1d793d977704f476f1d10281c5e43ba5951",
+    "benchmark.py": "a123eaf27a7dec4edda569e832985760dfc3927e6ebfe5996ee83a2eef565fd8",
+    "check_certificate.py": "ee53974866ba979b9e2ff13bcb44ba63f770351b9f24e5eccb18aaf44d66bfd9",
+    "replay.py": "af6feb7d42c909f5057c64f9173de30753a253f50f5215bc24145253c7f88a86"
+  },
+  "failures": 0,
+  "input_sha256": {
+    "research/cyclic-dirty-commutator-audit/echo.py": "63d44c48801f51720a7cc994d6b5e2e857d1aa4fae4c6b83c0cca032b3d9e13b",
+    "research/universal-dirty-certificates/README.md": "fb8d94a58b6c0448aa893e65f263b9d71639b1aa79cd10f054d0dc740a570dca",
+    "research/universal-dirty-certificates/SOURCES.json": "5d2c0b2a8921b8dc0f724fa11f93cdfeb764e57cfdfb7fa236ec958d72306899",
+    "research/universal-dirty-certificates/check_certificate.py": "09cba2605c62f8af0dc48cf60b4eab9f8711cba820e22698d0447833c1a16c37",
+    "research/universal-dirty-certificates/examples/binary-echo3.certificate.json": "cd088d9d5c0a8378361341c99e25ae5654a6be0b20398c9757a76804df2ab66a",
+    "research/universal-dirty-certificates/examples/binary-echo3.json": "a5199c1dc6236e346891c641b9402d8065c5bd29087c560e76fcdf2299cdfcf9",
+    "research/universal-dirty-certificates/examples/dirty-echo3.certificate.json": "21444c604e17d0cbd707ffbecde10edb4bdff0bdc5a3ffb71819be04c3ac58c5",
+    "research/universal-dirty-certificates/examples/dirty-echo3.json": "862281041cd5616a8785b526d0cee57a50aa7457a8cb64a0abff1133d6d60798",
+    "research/universal-dirty-certificates/examples/wrong-order.certificate.json": "54850450cc231e4db2a1c4637fc3f7a49dfb694d9c64cfeb8faa8df91d529a79",
+    "research/universal-dirty-certificates/examples/wrong-order.json": "137def9876c1195456a312b8c232d656ff063cc5caae645be6afc3d06709742c",
+    "research/universal-dirty-certificates/fields.py": "0829ad6ed3775ba6e3d11cf04cfb3513ac763549b730aaed74958b1238e660d7",
+    "research/universal-dirty-certificates/linear_words.py": "fe825cf7c886de61bb5ec5a02171c5a392a7bddc185280726f4c359b3f289584",
+    "research/universal-dirty-certificates/verify.py": "2759a2e7514453012ed0e4ffc7017375dea973925672dc16f127d91790dcb6e5"
+  },
+  "load_average_at_end": [
+    5.4560546875,
+    4.09814453125,
+    2.72216796875
+  ],
+  "logical_cpus": 18,
+  "median_seconds": {
+    "baseline": 5.680195042,
+    "cached": 4.398449334
+  },
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "python": "3.12.15 (main, Oct 14 2026, 00:55:37) [Clang 23.1.3 ]",
+  "reduction_percent": 22.56517071196725,
+  "samples_seconds": {
+    "baseline": [
+      5.680195042,
+      5.481301333,
+      6.071584333,
+      5.704761833,
+      5.459807334
+    ],
+    "cached": [
+      4.318586542,
+      4.34075425,
+      4.426208458,
+      4.558830625,
+      4.398449334
+    ]
+  },
+  "schema": "complete-dirty-path-benchmark/v1",
+  "scientific_output": {
+    "certificate_rejections": 15,
+    "committed_examples": 3,
+    "differential_cases": 120,
+    "echo_identities": 210,
+    "exponential_support": {
+      "basis_rows": 65,
+      "distinct_words": 18446744073709551616,
+      "states": 130
+    },
+    "finite_field_operations": 596,
+    "gaussian_field_controls": 51,
+    "input_rejections": 9,
+    "literal_counterexamples": 180,
+    "max_echo_basis_rows": 38,
+    "max_echo_states": 284,
+    "tensor_of_sum_rejections": 1
+  },
+  "successful_complete_replays": 10
+}

@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "task_id": "uniform-transfer-audit",
+  "priority_revision": 8,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "original_card": {
+    "id": "uniform-transfer-audit",
+    "question": "Can one of the selected record's five inherited assumptions be proved at its actual caller?",
+    "starting_points": [
+      "docs/research/current-priorities.md",
+      "docs/research/research-family-status.md",
+      "certificates/selected-result.json",
+      "docs/research/pr-intake-evidence/pr5599-completion/PROOF-REVIEW.md"
+    ],
+    "methods": [
+      "Construct and independently check one source-bound instance of the stated first experiment.",
+      "Seek an exact counterexample or target-specific complete-budget obstruction to that same proposed change."
+    ],
+    "acceptance_gate": "Identify the proposition and what would change downstream; do not equate a finite replay with a universal proof.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_selected_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Read revision 8, the selected review and live exact-source handoffs. Then follow this card's bounded first_experiment.",
+      "scope": "Source-bound orientation only, not a supplier replay or theorem proof."
+    },
+    "first_experiment": "Choose one assumption ID (native_all_columns, owned_erasure, compiler, precision_tape, analytic_recovery), one quantified implication and exact dependency closure. Check current handoffs, including #5625 row reentry and #5707 root-prefix lowering, without treating their partial scope as the whole theorem. Prove or falsify that implication with a caller-bound argument; stop at the chosen obligation. Finite tests or root digits do not discharge an all-size statement.",
+    "bottleneck_link": "Judge the actual current supplier contract and complete signed target/paid bill; frozen-profile ceilings require an applicability proof.",
+    "allowed_variations": [
+      "One exact source head, helper/cut region or quantified proposition and changed hypothesis; check live handoffs first. Different seeds are not different scopes."
+    ],
+    "scope_change_triggers": [
+      "Changing source head, helper/cut domain, operation alphabet or caller boundary without recording the new scope.",
+      "Treating an archived proposal or local numerical pass as complete supplier admission."
+    ],
+    "overlap_terms": [
+      "native_all_columns",
+      "owned_erasure",
+      "compiler",
+      "precision_tape",
+      "analytic_recovery"
+    ],
+    "existing_checks": [
+      {
+        "scope": "PR #4100: proposed unconditional construction and finite checks, without independent acceptance.",
+        "evidence": "research/unconditional-batched-crt/README.md",
+        "remaining": "Independent proof audit of one caller-bound all-size implication; all other premises remain explicit.",
+        "status": "author-checked",
+        "source_commit": "337d04939571a637aeab54a0f58f54fde811663a",
+        "selected_record_sha256": "bb2eaa58647b353f88d0aec2eafb9d30df1be53589231b23e12ceef3e4bad129"
+      },
+      {
+        "scope": "Selected PR5599: complete helper-subspace construction and independent caller replay; five framework assumptions remain.",
+        "evidence": "docs/research/pr-intake-evidence/pr5599-completion/PROOF-REVIEW.md",
+        "remaining": "The next experiment must identify uncovered source-specific work. Successor archive intake does not transfer this admission.",
+        "status": "reviewed",
+        "source_commit": "09dd0965711ca7eeb169057a420abab1c9052137",
+        "selected_record_sha256": "2a0220e866417774606e0f991e41b9c1d26b1f43b97857238cf478dbc7d330b5"
+      }
+    ]
+  },
+  "scope_status": "changed",
+  "actual_scope": "Open question 1 of #6312 (research/mode-preserving-rounding, head 46593234bfe658b63fb829f0d22b7eb216e392a2): the least uniform l_inf radius R for exact mode-preserving integer rounding on all nonempty fibers of the PR4933 mode map M.",
+  "scope_change_reason": "The session drew recursive-interfaces cards needing a full construction context. #6312 had just changed this card to a precision side result and left its first open question with only a lower bound. That self-contained question is answered here in part.",
+  "bottleneck_link": "Side result on the precision contract of the coded inverse. It bounds what an exact mode-preserving rounder can achieve on this M; it does not show that any caller needs one.",
+  "budget_minutes": 90,
+  "stop_rule": "Stop at a rigorous characterisation plus explicit upper bounds, or at one exact counterexample t in L cap int Z outside S. Do not claim R = 1 from search evidence.",
+  "outcome": "partial",
+  "evidence": "PROOF.md Theorems A, B and C, with verify.py exact checks: L is the Hamming E8 lattice; the genericity rank condition; the tau = 6 basis; the pinned blocks and 2e_j pairs; the exhaustive Hall lemma; 120 exact runs of the Theorem C rounder; 1,864 exact subset-sum witnesses.",
+  "author": "apoursh",
+  "ai_assistance": "Anthropic Claude (Claude Code) designed the argument, wrote the code and ran the searches under apoursh's direction.",
+  "open_questions": [
+    {
+      "question": "Is every lattice point of L in the open zonotope int Z a 0/1 subset sum of rows (equivalently, R = 1)?",
+      "why_it_matters": "It settles #6312's open question exactly; the search sample supports yes.",
+      "first_step": "Use the signed-permutation automorphism group of the 112 rows to reduce the finitely many near-boundary cases. Try a face recursion: points deep in Z are handled by discrepancy rounding, and points near a face reduce to the rows lying in that flat.",
+      "blocked_by": "Brute force is infeasible (roughly 1e12 lattice points), and the face recursion is not proved."
+    },
+    {
+      "question": "Can R <= 2 be lowered towards 1?",
+      "why_it_matters": "Theorem C loses one unit through the vertex step; an exact stress test of 12,000 inputs reaches 1.998, so the construction itself is tight at 2.",
+      "first_step": "Replace the vertex y* with a fiber point near y, for example by blockwise Beck-Fiala rounding against the 8 mode constraints, then reuse the pair-and-Hall repair.",
+      "blocked_by": "The repair must fit in the remaining error budget per coordinate."
+    }
+  ]
+}

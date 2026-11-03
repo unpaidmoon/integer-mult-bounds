@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/g20-conjugation-admission/PATHS.json",
+    "research/g20-conjugation-admission/WORD.json.gz",
+    "research/g20-conjugation-admission/construct.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Complete 1503-candidate longer-contact census, every scalar endpoint, all emitted signed histograms, exact whole-interval sign certificates and 519 controls."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-O",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "The same complete finite certificate and rejection controls with assertions disabled."
+    }
+  ]
+}

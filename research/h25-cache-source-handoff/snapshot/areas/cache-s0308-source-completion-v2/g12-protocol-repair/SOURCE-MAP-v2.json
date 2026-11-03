@@ -1,0 +1,534 @@
+{
+  "authority": {
+    "bytes": 2545,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/parent/AUTHORIZATION-v2.json",
+    "sha256": "9e32514288fed2b1d2873387bf81861ffcd9e1b56d2ab4828be13a311e629106"
+  },
+  "case_sources": {
+    "N22": {
+      "C3_closure_path": [
+        "selected_commit.cell(handler)",
+        "_g12_selected_store",
+        "_g12_helper_current",
+        "_g12_continuation_entry",
+        "_g12_after_original_exit",
+        "_g12_original_terminal_custody"
+      ],
+      "direct_global_edges": [
+        {
+          "from": "main_epoch",
+          "load_lines": [
+            1167
+          ],
+          "target_definition_lines": [
+            1516,
+            1554
+          ],
+          "to": "_g12_bind_locals"
+        },
+        {
+          "from": "Phases.call",
+          "load_lines": [
+            369
+          ],
+          "target_definition_lines": [
+            1608,
+            1676
+          ],
+          "to": "_g12_after_phase"
+        },
+        {
+          "from": "_g12_bind_locals",
+          "load_lines": [
+            1554
+          ],
+          "target_definition_lines": [
+            1407,
+            1431
+          ],
+          "to": "_g12_helper_current"
+        },
+        {
+          "from": "_g12_after_phase",
+          "load_lines": [
+            1617
+          ],
+          "target_definition_lines": [
+            1407,
+            1431
+          ],
+          "to": "_g12_helper_current"
+        },
+        {
+          "from": "_g12_selected_store",
+          "load_lines": [
+            1460,
+            1482,
+            1494
+          ],
+          "target_definition_lines": [
+            1407,
+            1431
+          ],
+          "to": "_g12_helper_current"
+        },
+        {
+          "from": "_g12_helper_current",
+          "load_lines": [
+            1424,
+            1425
+          ],
+          "target_definition_lines": [
+            1832,
+            1873
+          ],
+          "to": "_g12_continuation_entry"
+        },
+        {
+          "from": "_g12_helper_current",
+          "load_lines": [
+            1426,
+            1427
+          ],
+          "target_definition_lines": [
+            1773,
+            1829
+          ],
+          "to": "_g12_after_original_exit"
+        },
+        {
+          "from": "_g12_helper_current",
+          "load_lines": [
+            1428,
+            1429
+          ],
+          "target_definition_lines": [
+            1749,
+            1770
+          ],
+          "to": "_g12_original_terminal_custody"
+        },
+        {
+          "from": "_g12_continuation_entry",
+          "load_lines": [
+            1864
+          ],
+          "target_definition_lines": [
+            1773,
+            1829
+          ],
+          "to": "_g12_after_original_exit"
+        },
+        {
+          "from": "_g12_after_original_exit",
+          "load_lines": [
+            1797
+          ],
+          "target_definition_lines": [
+            1749,
+            1770
+          ],
+          "to": "_g12_original_terminal_custody"
+        }
+      ],
+      "driver": {
+        "bytes": 128331,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-protocol-repair/g12_candidate_driver_N22_v2.py",
+        "sha256": "a2d7fcaa1d3267bb43f14bfa1422759f77ede73641ed1f2a4fe55448792eec4a"
+      },
+      "driver_root_path": [
+        "main_epoch",
+        "_g12_bind_locals",
+        "_g12_helper_current",
+        "_g12_continuation_entry",
+        "_g12_after_original_exit",
+        "_g12_original_terminal_custody"
+      ],
+      "function_driver_lines": {
+        "_g12_after_original_exit": [
+          1773,
+          1829
+        ],
+        "_g12_after_phase": [
+          1608,
+          1676
+        ],
+        "_g12_bind_locals": [
+          1516,
+          1554
+        ],
+        "_g12_continuation_entry": [
+          1832,
+          1873
+        ],
+        "_g12_helper_current": [
+          1407,
+          1431
+        ],
+        "_g12_original_terminal_custody": [
+          1749,
+          1770
+        ],
+        "_g12_selected_store": [
+          1451,
+          1508
+        ]
+      },
+      "helper": {
+        "bytes": 65591,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-full-contract-completion-v1/cache_epoch_source_controls.py",
+        "sha256": "fcffe77b6a84d5b422b03e3d068924a701c1594cdb9ec305115827e3fad7d4b6"
+      },
+      "phase_root_path": [
+        "Phases.call",
+        "_g12_after_phase",
+        "_g12_helper_current",
+        "_g12_continuation_entry",
+        "_g12_after_original_exit",
+        "_g12_original_terminal_custody"
+      ],
+      "secondary_handlers": [
+        {
+          "function": "_g12_after_original_exit",
+          "journal_phase": "P07-frame-close",
+          "raw_slot": "frame_close_error",
+          "support_handler_lines": [
+            423,
+            429
+          ]
+        },
+        {
+          "function": "_g12_after_original_exit",
+          "journal_phase": "terminal-source-observation",
+          "raw_slot": "terminal_observation_error",
+          "support_handler_lines": [
+            452,
+            458
+          ]
+        },
+        {
+          "function": "_g12_continuation_entry",
+          "journal_phase": "adapter-exit-entry",
+          "raw_slot": "adapter_exit_error",
+          "support_handler_lines": [
+            500,
+            506
+          ]
+        }
+      ],
+      "support": {
+        "bytes": 33517,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-protocol-repair/g12_candidate_driver_support_N22_v2.py",
+        "sha256": "5b7709012375e7e6600840c2c86bf90f44382499d1670b15ce325b30c14a2b48"
+      }
+    },
+    "P07": {
+      "C3_closure_path": [
+        "selected_commit.cell(handler)",
+        "_g12_selected_store",
+        "_g12_helper_current",
+        "_g12_continuation_entry",
+        "_g12_after_original_exit",
+        "_g12_original_terminal_custody"
+      ],
+      "direct_global_edges": [
+        {
+          "from": "main_epoch",
+          "load_lines": [
+            1167
+          ],
+          "target_definition_lines": [
+            1516,
+            1554
+          ],
+          "to": "_g12_bind_locals"
+        },
+        {
+          "from": "Phases.call",
+          "load_lines": [
+            369
+          ],
+          "target_definition_lines": [
+            1608,
+            1676
+          ],
+          "to": "_g12_after_phase"
+        },
+        {
+          "from": "_g12_bind_locals",
+          "load_lines": [
+            1554
+          ],
+          "target_definition_lines": [
+            1407,
+            1431
+          ],
+          "to": "_g12_helper_current"
+        },
+        {
+          "from": "_g12_after_phase",
+          "load_lines": [
+            1617
+          ],
+          "target_definition_lines": [
+            1407,
+            1431
+          ],
+          "to": "_g12_helper_current"
+        },
+        {
+          "from": "_g12_selected_store",
+          "load_lines": [
+            1460,
+            1482,
+            1494
+          ],
+          "target_definition_lines": [
+            1407,
+            1431
+          ],
+          "to": "_g12_helper_current"
+        },
+        {
+          "from": "_g12_helper_current",
+          "load_lines": [
+            1424,
+            1425
+          ],
+          "target_definition_lines": [
+            1832,
+            1873
+          ],
+          "to": "_g12_continuation_entry"
+        },
+        {
+          "from": "_g12_helper_current",
+          "load_lines": [
+            1426,
+            1427
+          ],
+          "target_definition_lines": [
+            1773,
+            1829
+          ],
+          "to": "_g12_after_original_exit"
+        },
+        {
+          "from": "_g12_helper_current",
+          "load_lines": [
+            1428,
+            1429
+          ],
+          "target_definition_lines": [
+            1749,
+            1770
+          ],
+          "to": "_g12_original_terminal_custody"
+        },
+        {
+          "from": "_g12_continuation_entry",
+          "load_lines": [
+            1864
+          ],
+          "target_definition_lines": [
+            1773,
+            1829
+          ],
+          "to": "_g12_after_original_exit"
+        },
+        {
+          "from": "_g12_after_original_exit",
+          "load_lines": [
+            1797
+          ],
+          "target_definition_lines": [
+            1749,
+            1770
+          ],
+          "to": "_g12_original_terminal_custody"
+        }
+      ],
+      "driver": {
+        "bytes": 128331,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-protocol-repair/g12_candidate_driver_P07_v2.py",
+        "sha256": "dc0e3c32a2412d8a872f8568ecbaff99a41785fadd79b0bbfc2341e0e51ede74"
+      },
+      "driver_root_path": [
+        "main_epoch",
+        "_g12_bind_locals",
+        "_g12_helper_current",
+        "_g12_continuation_entry",
+        "_g12_after_original_exit",
+        "_g12_original_terminal_custody"
+      ],
+      "function_driver_lines": {
+        "_g12_after_original_exit": [
+          1773,
+          1829
+        ],
+        "_g12_after_phase": [
+          1608,
+          1676
+        ],
+        "_g12_bind_locals": [
+          1516,
+          1554
+        ],
+        "_g12_continuation_entry": [
+          1832,
+          1873
+        ],
+        "_g12_helper_current": [
+          1407,
+          1431
+        ],
+        "_g12_original_terminal_custody": [
+          1749,
+          1770
+        ],
+        "_g12_selected_store": [
+          1451,
+          1508
+        ]
+      },
+      "helper": {
+        "bytes": 65607,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/helper-variant-v1/cache_epoch_source_controls_p07_yield_v1.py",
+        "sha256": "eae1fca1f951a572a3487e5136454d80f16124cc02fef296793830c50431b061"
+      },
+      "phase_root_path": [
+        "Phases.call",
+        "_g12_after_phase",
+        "_g12_helper_current",
+        "_g12_continuation_entry",
+        "_g12_after_original_exit",
+        "_g12_original_terminal_custody"
+      ],
+      "secondary_handlers": [
+        {
+          "function": "_g12_after_original_exit",
+          "journal_phase": "P07-frame-close",
+          "raw_slot": "frame_close_error",
+          "support_handler_lines": [
+            423,
+            429
+          ]
+        },
+        {
+          "function": "_g12_after_original_exit",
+          "journal_phase": "terminal-source-observation",
+          "raw_slot": "terminal_observation_error",
+          "support_handler_lines": [
+            452,
+            458
+          ]
+        },
+        {
+          "function": "_g12_continuation_entry",
+          "journal_phase": "adapter-exit-entry",
+          "raw_slot": "adapter_exit_error",
+          "support_handler_lines": [
+            500,
+            506
+          ]
+        }
+      ],
+      "support": {
+        "bytes": 33517,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-protocol-repair/g12_candidate_driver_support_P07_v2.py",
+        "sha256": "7c41cb423b18df69de48573817f92fae1a21be2751af7ad97768480ffa0b4a19"
+      }
+    }
+  },
+  "closure_ownership_proof": [
+    "The unchanged cache selector derives driver from suite.context[driver_function], then namespace=driver.__globals__; it requires Root-installed __main__ namespace and driver is namespace main_epoch.",
+    "It obtains handler from that same namespace _g12_selected_store, requires exact FunctionType and handler.__globals__ is namespace, and returns selected_commit, whose free names handler/suite/original_commit are bound by that selector activation. No defaults or callback parameter supply this handler.",
+    "Original product capture follows the selected_commit handler cell to that exact _g12_selected_store. Its direct _g12_helper_current global now names the three actual outer callables.",
+    "Original driver capture begins with main_epoch/Phases; direct main/phase hook edges also reach _g12_helper_current. New unshadowed direct global names are included in raw_function_record code_names and capture_graph follows their function values before publication.",
+    "The actual __main__ guard calls that same _g12_continuation_entry name; entry directly calls _g12_after_original_exit, which directly calls _g12_original_terminal_custody. Each new explicit hook reference requires the exact FunctionType in the same driver namespace.",
+    "Existing graph_fields_only/check_fields retain callable/code/globals/builtins/defaults/closure/attributes plus effective-global lookup identities; no late recapture or replacement authority is added."
+  ],
+  "future_stage_roles": {
+    "authority": "areas/cache-validity/cold_authority_v7.py",
+    "cache": "areas/cache-validity/cache_contract_v8.py",
+    "driver": "integration/scientific_driver.py (one selected case only)",
+    "helper": "areas/cache-validity/g12_source_controls.py (matching selected case)",
+    "transport": "CLOSED_NONE_NO_MAPPING_SELECTED"
+  },
+  "no_current_runtime_graph_claim": true,
+  "parent_custody": "Separate author/scope; no parent custody source is selected or modified here.",
+  "predecessor_freeze": {
+    "bytes": 2012,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1/FREEZE-v1.json",
+    "sha256": "4ee86e91c36c1651da2fa31506da27b3e479ae1883b0a0563818508cda839124"
+  },
+  "reference_handoff": null,
+  "review_freeze": {
+    "bytes": 3091,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-protocol-independent/FREEZE-v2.json",
+    "sha256": "add8245e21be2a902556837090dd454989bb5e4f97e4821fefdcf7b41c2b308d"
+  },
+  "schema": "g12-candidate-protocol-repair-source-map-v2",
+  "source_inverse": {
+    "bytes": 7471,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-protocol-repair/SOURCE-INVERSE-v2.json",
+    "sha256": "baa1dcf93dd4246be19f75fcedba9fdb614267c39ac89882ed22d234461b0466"
+  },
+  "static_verification": {
+    "bytes": 32201,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-protocol-repair/STATIC-VERIFICATION-v2.json",
+    "sha256": "7589715b307f4e840634b0ad8686cf0e3e5b4981076dc6300f7f38a4b246d2f7"
+  },
+  "status": "SOURCE_ONLY_TRANSPORT_CLOSED_PENDING_INDEPENDENT_DELTA_REVIEW",
+  "target_operations": 0,
+  "transport_source_pin": null,
+  "unchanged_authority_evidence": {
+    "current_driver_check_lines": [
+      1490,
+      1501
+    ],
+    "driver_capture_lines": [
+      1216,
+      1225
+    ],
+    "function_field_and_cell_checks_lines": [
+      850,
+      867
+    ],
+    "graph_fields_and_lookups_lines": [
+      1199,
+      1212
+    ],
+    "raw_record_and_transitive_capture_lines": [
+      1795,
+      1880
+    ],
+    "source": {
+      "bytes": 137642,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1/g12_epoch_authority_selector_v1.py",
+      "sha256": "65b3d33068b0549ddb4a9e7e18a9912bebad69c309a8a29ae4fd532e9f428211"
+    }
+  },
+  "unchanged_selected_dependencies": {
+    "g12_cache_selector_source_v1.py": {
+      "bytes": 1537,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1/g12_cache_selector_source_v1.py",
+      "sha256": "a9b4019ce368b6f89553ceb98c5451593d0d11ebda699dcb626cab323297375c"
+    },
+    "g12_common_source_v1.py": {
+      "bytes": 4517,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1/g12_common_source_v1.py",
+      "sha256": "8ac6902915ec8afb09914fc5f229e175d864e6aae9fe367f127e1bbd654ed42a"
+    },
+    "g12_epoch_authority_selector_v1.py": {
+      "bytes": 137642,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1/g12_epoch_authority_selector_v1.py",
+      "sha256": "65b3d33068b0549ddb4a9e7e18a9912bebad69c309a8a29ae4fd532e9f428211"
+    },
+    "g12_epoch_cache_selector_v1.py": {
+      "bytes": 172718,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1/g12_epoch_cache_selector_v1.py",
+      "sha256": "20a8a94e96bfa6213d4f04244dabecf059b4c8c7e8ffa7e9409a8b87cfeef494"
+    }
+  }
+}

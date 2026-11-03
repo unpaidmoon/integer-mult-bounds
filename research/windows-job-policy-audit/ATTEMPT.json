@@ -1,0 +1,120 @@
+{
+  "attempt": 1,
+  "command": "python3.12 -B research/windows-job-policy-audit/verify.py --write",
+  "result": "failed; no certificate written",
+  "stage": "gate CreateProcess, before requested-payload report",
+  "controller_outer_active_before_resume": 1,
+  "case": {
+    "mode": "denied2",
+    "outer_limit": 2,
+    "gate_count": 0,
+    "gate_argv_verified": true,
+    "gate_outer_active_before_release": [],
+    "gate_wait_results": [],
+    "launch_reports": [],
+    "context_yielded": false,
+    "sentinel_present": false,
+    "sentinel_matches": false,
+    "payload_returncode": null,
+    "observer_cleanup_used": false,
+    "exception": {
+      "type": "OSError",
+      "errno": 12,
+      "winerror": 1816,
+      "strerror": "このコマンドを実行するための十分なクォータがありません。",
+      "filename": null,
+      "filename2": null
+    }
+  },
+  "validation_error": "wrong gate count",
+  "interpreter_inspection": {
+    "executable": "C:\\Users\\main\\.local\\bin\\python3.12.exe",
+    "base_executable": "F:\\Application\\stability_matrix\\Assets\\Python\\cpython-3.12.11-windows-x86_64-none\\python.exe",
+    "executable_size_bytes": 41572,
+    "python": "3.12.11"
+  },
+  "interpretation": "Requested-payload denial was not observed in this first attempt. The PATH command identifies a launcher rather than the base interpreter. No host policy was changed. Follow-up observations below distinguish interpreter selection and an initially incorrect process-count premise.",
+  "followup_attempts": [
+    {
+      "attempt": 2,
+      "interpreter": "PATH python3.12 launcher",
+      "observation_change": "Record current immediate-job accounting and the probe/parent images.",
+      "probe_pid": 40712,
+      "parent_pid": 45472,
+      "probe_image": "F:\\Application\\stability_matrix\\Assets\\Python\\cpython-3.12.11-windows-x86_64-none\\python.exe",
+      "parent_image": "C:\\Users\\main\\.local\\bin\\python3.12.exe",
+      "immediate_job_entry_active": 1,
+      "gate_count": 0,
+      "launch_reports": [],
+      "native_error": [12, 1816],
+      "result": "failed before payload stage; immediate-job accounting does not identify the controller's outer job"
+    },
+    {
+      "attempt": 3,
+      "interpreter": "PATH python3.12 launcher",
+      "observation_change": "Query the controller's unique named outer job through a query-only handle.",
+      "probe_pid": 6184,
+      "parent_pid": 38108,
+      "outer_entry_active": 3,
+      "before_gate_active": 3,
+      "gate_count": 0,
+      "launch_reports": [],
+      "native_error": [12, 1816],
+      "result": "failed before payload stage; no certificate"
+    },
+    {
+      "attempt": 4,
+      "interpreter": "explicit physical CPython 3.12.11 binary",
+      "observation_change": "Use the physical interpreter directly; retain limits 2/3 and the unchanged payload.",
+      "probe_pid": 45212,
+      "parent_pid": 45084,
+      "outer_entry_active": 2,
+      "before_gate_active": 2,
+      "gate_outer_active": 3,
+      "gate_count": 1,
+      "launch_report_status": "oserror",
+      "native_error": [12, 1816],
+      "sentinel_present": false,
+      "retained_gate_wait": 0,
+      "result": "requested-payload denial observed; failed original literal count assertion; no certificate"
+    },
+    {
+      "attempt": 5,
+      "interpreter": "explicit physical CPython 3.12.11 binary",
+      "observation_change": "Enumerate only the newly created outer job's PID list.",
+      "probe_pid": 43568,
+      "parent_pid": 48040,
+      "outer_entry_pids": [43568, 47588],
+      "gate_pid": 48028,
+      "outer_gate_pids": [43568, 47588, 48028],
+      "outer_entry_active": 2,
+      "gate_outer_active": 3,
+      "launch_report_status": "oserror",
+      "native_error": [12, 1816],
+      "sentinel_present": false,
+      "retained_gate_wait": 0,
+      "result": "failed original single-probe PID premise; no certificate"
+    },
+    {
+      "attempt": 6,
+      "interpreter": "explicit physical CPython 3.12.11 binary",
+      "observation_change": "Resolve images only for the observed outer-job PIDs.",
+      "probe_pid": 46628,
+      "parent_pid": 16392,
+      "outer_entry_identities": [
+        {"pid": 46628, "image": "F:\\Application\\stability_matrix\\Assets\\Python\\cpython-3.12.11-windows-x86_64-none\\python.exe"},
+        {"pid": 47232, "image": "C:\\Windows\\System32\\conhost.exe"}
+      ],
+      "gate_pid": 47324,
+      "outer_gate_pids": [46628, 47232, 47324],
+      "outer_entry_active": 2,
+      "gate_outer_active": 3,
+      "launch_report_status": "oserror",
+      "native_error": [12, 1816],
+      "sentinel_present": false,
+      "retained_gate_wait": 0,
+      "result": "identified the exact console-host auxiliary; original single-probe PID premise still rejected; no certificate"
+    }
+  ],
+  "accepted_scope_refinement_before_success": "Require the exact probe plus observed C:\\Windows\\System32\\conhost.exe at entry, and require the gated snapshot to add exactly the retained gate PID. Keep both active limits and the payload unchanged. Preserve aggregate counts and image identities, but do not infer a universal console-host quota exemption. The first complete successful three-case run is retained in CERTIFICATE.json."
+}

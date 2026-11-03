@@ -1,0 +1,460 @@
+"""Fixed integration adapter: unchanged G12 producer under the actual injected Root.
+SOURCE ONLY. The exact new stage is not mounted and no run is authorized.
+"""
+import os
+import sys
+import stat
+import json
+import hashlib
+import math
+from types import FunctionType, CodeType, ModuleType
+_ROOT_PIN = 'f5a2d33f2b4d3651f214156a0e7094c2bb516ce2d5ab7698d18c11f98f35dee0'
+_PROVIDER_PIN = '9cbb7368f89e71d1e6cc46db5dc77efed3e03ed2a801c98c88fe316e4d9f3ef2'
+_PRODUCER_PIN = 'a346025d5b6e2b26246521c6af6292643a4c2c3286b33ff3996dcf051cd6be26'
+_BOOTSTRAP = (bootstrap_root, bootstrap_capability, bootstrap_api)
+_CHUNK = 65536
+_MISSING = object()
+_ID_NAMES = ('dev', 'ino', 'full_st_mode', 'size', 'mtime_ns', 'ctime_ns')
+_R = '/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028'
+
+class _RawG12Errors:
+    """Fixed error-retention slots; storing raw failures precedes formatting/IO."""
+    __slots__ = ('slots', 'count')
+    def __init__(self):
+        self.slots = [None] * 4096
+        self.count = 0
+    def append(self, value):
+        # All fixed directory/process/stream paths together have fewer than 4096
+        # close sites under the 256-component/128-generation source ceilings.
+        if self.count >= len(self.slots):
+            raise RuntimeError('G12-N09: fixed raw secondary retention exhausted')
+        self.slots[self.count] = value
+        self.count += 1
+    def __bool__(self):
+        return self.count != 0
+    def __len__(self):
+        return self.count
+    def __getitem__(self, index):
+        if type(index) is not int or not 0 <= index < self.count:
+            raise IndexError(index)
+        return self.slots[index]
+    def __iter__(self):
+        for index in range(self.count):
+            yield self.slots[index]
+    def __repr__(self):
+        return repr(tuple(self))
+
+
+def _need(condition, message):
+    if not condition:
+        raise RuntimeError(message)
+
+
+def _exact(value, expected):
+    if type(value) is not type(expected):
+        return False
+    if type(value) in (list, tuple):
+        return len(value) == len(expected) and all(_exact(a, b) for a, b in zip(value, expected))
+    if type(value) is dict:
+        return set(value) == set(expected) and all(_exact(value[k], expected[k]) for k in expected)
+    return value == expected
+
+
+def _fields(value, fields):
+    _need(type(value) is dict and all(type(k) is str for k in value) and
+          set(value) == set(fields), 'G12-N12: exact field domain differs')
+
+
+def _digest(value):
+    return type(value) is str and len(value) == 64 and all(c in '0123456789abcdef' for c in value)
+
+
+def _uint(value, positive=False):
+    _need(type(value) is int and value >= (1 if positive else 0), 'G12-N12: exact integer domain')
+
+
+def _number(value):
+    _need(type(value) in (int, float) and math.isfinite(value) and value >= 0,
+          'G12-N12: finite nonnegative exact number required')
+
+
+def _path(path):
+    _need(type(path) is str and path.startswith('/') and
+          all(p not in ('', '.', '..') for p in path.split('/')[1:]), 'G12-N11: absolute canonical path')
+    return path
+
+
+def _identity(info):
+    return dict(zip(_ID_NAMES, (info.st_dev, info.st_ino, info.st_mode, info.st_size,
+                                info.st_mtime_ns, info.st_ctime_ns)))
+
+
+def _directory_key(info):
+    return info.st_dev, info.st_ino, info.st_mode
+
+
+def _directory_chain(path):
+    """Held no-follow chain; no later absolute path silently changes its owner."""
+    _path(path)
+    _need(len(path.split('/')) <= 257, 'G12-N11: finite directory-component bound')
+    fds, rows = [], []
+    primary = None
+    try:
+        fd = os.open('/', os.O_RDONLY | os.O_DIRECTORY | os.O_CLOEXEC)
+        fds.append(fd)
+        for part in path.split('/')[1:]:
+            before = os.stat(part, dir_fd=fd, follow_symlinks=False)
+            _need(stat.S_ISDIR(before.st_mode), 'G12-N11: directory component type')
+            child = os.open(part, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW | os.O_CLOEXEC,
+                            dir_fd=fd)
+            fds.append(child)
+            opened = os.fstat(child)
+            _need(_directory_key(before) == _directory_key(opened), 'G12-N11: directory replaced')
+            rows.append((fd, part, child, _directory_key(opened)))
+            fd = child
+        return fds, rows
+    except BaseException as error:
+        primary = (error, error.__traceback__)
+    secondary = _RawG12Errors()
+    for descriptor in reversed(fds):
+        try:
+            os.close(descriptor)
+        except BaseException as error:
+            secondary.append((error, error.__traceback__))
+    _raise_preserved(primary, secondary)
+
+
+def _check_chain(rows):
+    for parent, name, descriptor, key in rows:
+        _need(_directory_key(os.fstat(descriptor)) == key ==
+              _directory_key(os.stat(name, dir_fd=parent, follow_symlinks=False)),
+              'G12-N11: directory binding changed')
+
+
+def _raise_preserved(primary, secondaries):
+    """Never replace first raw failure if evidence formatting or retention fails."""
+    if primary is not None:
+        error, traceback = primary
+        try:
+            error.add_note('G12 ordered secondary failures: ' + repr(secondaries))
+        except BaseException:
+            pass
+        raise error.with_traceback(traceback)
+    if secondaries:
+        error, traceback = secondaries[0][:2]
+        raise error.with_traceback(traceback)
+
+
+def _read_file(path, cap, mode=None):
+    _path(path)
+    parent, name = path.rsplit('/', 1)
+    fds, rows = _directory_chain(parent)
+    descriptor, primary, secondary, result = None, None, _RawG12Errors(), None
+    try:
+        before = os.stat(name, dir_fd=fds[-1], follow_symlinks=False)
+        _need(stat.S_ISREG(before.st_mode) and before.st_nlink == 1 and
+              0 <= before.st_size <= cap and (mode is None or before.st_mode == stat.S_IFREG | mode),
+              'G12-N11: regular-file size/mode/link domain')
+        descriptor = os.open(name, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK | os.O_CLOEXEC,
+                             dir_fd=fds[-1])
+        opened = os.fstat(descriptor)
+        _need(_identity(before) == _identity(opened) and opened.st_nlink == 1,
+              'G12-N11: file changed on open')
+        count, blocks, hasher = 0, [], hashlib.sha256()
+        while count < opened.st_size:
+            block = os.read(descriptor, min(_CHUNK, opened.st_size - count))
+            _need(bool(block), 'G12-N11: short file read')
+            count += len(block)
+            hasher.update(block)
+            blocks.append(block)
+        _need(os.read(descriptor, 1) == b'', 'G12-N11: file grew')
+        after = os.fstat(descriptor)
+        ending = os.stat(name, dir_fd=fds[-1], follow_symlinks=False)
+        _need(_identity(before) == _identity(after) == _identity(ending) and
+              after.st_nlink == ending.st_nlink == 1, 'G12-N11: full file identity changed')
+        _check_chain(rows)
+        result = ({'path': path, 'sha256': hasher.hexdigest(), 'bytes': count,
+                   'identity': _identity(after), 'nlink': 1}, b''.join(blocks))
+    except BaseException as error:
+        primary = (error, error.__traceback__)
+    for fd in ([descriptor] if descriptor is not None else []) + list(reversed(fds)):
+        try:
+            os.close(fd)
+        except BaseException as error:
+            secondary.append((error, error.__traceback__))
+    _raise_preserved(primary, secondary)
+    return result
+
+
+def _pairs(items):
+    result = {}
+    for key, value in items:
+        _need(type(key) is str and key not in result, 'G12-N12: duplicate JSON key')
+        result[key] = value
+    return result
+
+
+def _nonfinite(value):
+    raise ValueError('G12-N12: nonfinite JSON token: ' + value)
+
+
+def _canonical(value):
+    return json.dumps(value, sort_keys=True, separators=(',', ':'), ensure_ascii=True,
+                      allow_nan=False).encode('ascii')
+
+
+def _json(raw, cap, canonical=False, newline=False):
+    _need(type(raw) is bytes and len(raw) <= cap, 'G12-N12: raw JSON bound')
+    # Scan lexical nesting before json.loads recursion or object materialization.
+    depth, quoted, escaped = 0, False, False
+    for char in raw:
+        if quoted:
+            if escaped:
+                escaped = False
+            elif char == 92:
+                escaped = True
+            elif char == 34:
+                quoted = False
+        elif char == 34:
+            quoted = True
+        elif char in (91, 123):
+            depth += 1
+            _need(depth <= 256, 'G12-N12: JSON depth limit')
+        elif char in (93, 125):
+            depth -= 1
+            _need(depth >= 0, 'G12-N12: JSON nesting')
+    _need(depth == 0 and not quoted, 'G12-N12: incomplete JSON')
+    value = json.loads(raw.decode('utf-8'), object_pairs_hook=_pairs, parse_constant=_nonfinite)
+    pending, count = [(value, 0)], 0
+    while pending:
+        item, depth = pending.pop()
+        count += 1
+        _need(count <= cap and depth <= 256, 'G12-N12: JSON node/depth limit')
+        if type(item) is dict:
+            pending.extend((x, depth + 1) for pair in item.items() for x in pair)
+        elif type(item) is list:
+            pending.extend((x, depth + 1) for x in item)
+        elif type(item) is str:
+            _need(len(item) <= cap, 'G12-N12: JSON string limit')
+        elif type(item) is float:
+            _need(math.isfinite(item), 'G12-N12: overflowed JSON number')
+        else:
+            _need(item is None or type(item) in (bool, int), 'G12-N12: JSON primitive')
+    if canonical:
+        _need(raw == _canonical(value) + (b'\n' if newline else b''), 'G12-N12: canonical JSON bytes')
+    return value
+
+
+def _capture_graph(namespace):
+    """Capture the fixed own/JSON function graph before candidate exposure."""
+    modules = (json, json.decoder, json.encoder, json.scanner, hashlib, os, stat, math) + tuple(
+        namespace[name] for name in ('subprocess', 'fcntl', 'signal', 'resource', 'time') if name in namespace)
+    namespaces = [namespace] + [module.__dict__ for module in modules]
+    namespaces.extend((json._default_decoder.__dict__, json._default_encoder.__dict__))
+    records, members, seen = [], [], set()
+    for mapping in namespaces:
+        members.append((mapping, tuple(mapping.items())))
+        for value in mapping.values():
+            candidates = [value]
+            if type(value) is type:
+                candidates.extend(value.__dict__.values())
+                if value.__module__ in (__name__, 'json.decoder', 'json.encoder', 'subprocess'):
+                    members.append((value.__dict__, tuple(value.__dict__.items())))
+            for function in candidates:
+                if type(function) is not FunctionType or id(function) in seen:
+                    continue
+                seen.add(id(function))
+                records.append((function, function.__code__, function.__globals__, function.__builtins__,
+                    function.__defaults__, function.__kwdefaults__, function.__closure__,
+                    tuple(function.__dict__.items()),
+                    () if function.__kwdefaults__ is None else tuple(function.__kwdefaults__.items()),
+                    () if function.__closure__ is None else tuple((c, c.cell_contents) for c in function.__closure__)))
+    data = tuple((name, _canonical(namespace[name])) for name in
+                 ('_PAIR_SCHEMA', '_MANIFEST_SCHEMA', '_GUARD_SCHEMA', '_PUBLICATION_SCHEMA',
+                  '_ENGINE_PINS', '_OTHER_SOURCE_PINS', '_ENV', '_EVIDENCE_NAMES') if name in namespace)
+    return tuple(records), tuple(members), data
+
+
+
+def _current_graph(graph):
+    records, members, data = graph
+    for mapping, rows in members:
+        # The capture itself is assigned once after this snapshot.
+        expected = dict(rows)
+        for name, value in rows:
+            _need(mapping.get(name, _MISSING) is value, 'G12-N04: captured namespace member changed: ' + name)
+        extra = set(mapping) - set(expected)
+        _need(not extra or mapping is globals() and extra == {'_INITIAL_GRAPH'},
+              'G12-N04: captured namespace census changed')
+    for name, expected in data:
+        _need(_canonical(globals()[name]) == expected, 'G12-N04: source-owned schema constant changed')
+    for f, code, namespace, builtin, defaults, kw, cells, attrs, kws, contents in records:
+        _need(f.__code__ is code and f.__globals__ is namespace and f.__builtins__ is builtin and
+              f.__defaults__ is defaults and f.__kwdefaults__ is kw and f.__closure__ is cells and
+              len(f.__dict__) == len(attrs), 'G12-N04: captured function graph changed')
+        for name, value in attrs:
+            _need(f.__dict__.get(name, _MISSING) is value, 'G12-N04: function attributes changed')
+        if kw is not None:
+            _need(len(kw) == len(kws), 'G12-N04: keyword-default census changed')
+            for name, value in kws:
+                _need(kw.get(name, _MISSING) is value, 'G12-N04: keyword defaults changed')
+        for cell, value in contents:
+            _need(cell.cell_contents is value, 'G12-N04: captured closure changed')
+
+
+
+def _source_code_shape(code):
+    _need(type(code) is CodeType, 'G12-N04: exact code type')
+    def constant(value):
+        kind = type(value)
+        if value is None or value is Ellipsis:
+            return ('singleton', value is Ellipsis)
+        if kind in (int, bool, str, bytes):
+            return (kind.__name__, value)
+        if kind is float:
+            return ('float', value.hex())
+        if kind is tuple:
+            return ('tuple', tuple(constant(item) for item in value))
+        if kind is frozenset:
+            return ('frozenset', tuple(sorted(constant(item) for item in value)))
+        if kind is CodeType:
+            return ('code', _source_code_shape(value))
+        raise RuntimeError('G12-N04: unsupported source code constant')
+    return tuple(constant(value) for value in (
+        code.co_argcount, code.co_posonlyargcount, code.co_kwonlyargcount,
+        code.co_nlocals, code.co_stacksize, code.co_flags, code.co_code,
+        code.co_names, code.co_varnames, code.co_freevars, code.co_cellvars,
+        code.co_exceptiontable, code.co_linetable, code.co_firstlineno,
+        code.co_filename, code.co_name, code.co_qualname, code.co_consts))
+
+
+def _authenticate_own_functions(root, api, source, path):
+    _need(api[0]() == _ROOT_PIN, 'G12-N04: Root before selected-source compilation')
+    code = root._COMPILE(source, path, 'exec', dont_inherit=True, optimize=0)
+    declared = {item.co_name: item for item in code.co_consts if type(item) is CodeType}
+    for name, function in tuple(globals().items()):
+        if type(function) is FunctionType and function.__globals__ is globals():
+            _need(name in declared and function.__builtins__ is root.builtins.__dict__ and
+                  _source_code_shape(function.__code__) == _source_code_shape(declared[name]),
+                  'G12-N04: actual entire own callable differs from selected source: ' + name)
+    _need(api[0]() == _ROOT_PIN, 'G12-N04: Root after selected-source compilation')
+
+
+
+def _g12_adapter_entry():
+    root, capability, api = _BOOTSTRAP
+    _need(root is bootstrap_root and capability is bootstrap_capability and api is bootstrap_api and
+          type(root) is ModuleType and type(api) is tuple and len(api) == 4 and
+          all(type(f) is FunctionType and f.__globals__ is root.__dict__ for f in api),
+          'G12-N04: unchanged initially injected actual bootstrap objects required')
+    _need(api[0]() == _ROOT_PIN and sys.flags.optimize == 0, 'G12-N02: Root/assertion source mismatch')
+    api[1](capability, _PROVIDER_PIN)
+    _current_graph(_INITIAL_GRAPH)
+    stage = _R + '/stages/g12-reference-custody-v1'
+    adapter = stage + '/integration/g12_reference_adapter_v1.py'
+    _need(__file__ == adapter and type(sys.argv) is list and len(sys.argv) == 5 and
+          sys.argv[0] == adapter and sys.argv[1] == '--output' and
+          sys.argv[3:] == ['--lanes', 'g12-reference'], 'G12-N03: exact original guard argv tail')
+    output = _path(sys.argv[2])
+    prefix = _R + '/runtime/runs/'
+    _need(output.startswith(prefix) and output.endswith('/science'), 'G12-N03: selected guard science path')
+    label = output[len(prefix):-len('/science')]
+    _need(bool(label) and all(c in 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_' for c in label),
+          'G12-N03: fixed simple guard label')
+    parent_fds, parent_rows = _directory_chain(output.rsplit('/', 1)[0])
+    primary, secondary = None, _RawG12Errors()
+    try:
+        try:
+            os.stat('science', dir_fd=parent_fds[-1], follow_symlinks=False)
+        except FileNotFoundError:
+            pass
+        else:
+            raise RuntimeError('G12-N05: prior science output exists')
+        _check_chain(parent_rows)
+    except BaseException as error:
+        primary = error, error.__traceback__
+    for descriptor in reversed(parent_fds):
+        try:
+            os.close(descriptor)
+        except BaseException as error:
+            secondary.append((error, error.__traceback__))
+    _raise_preserved(primary, secondary)
+    own_record, own_source = _read_file(adapter, 262144, 0o444)
+    stage_record, stage_raw = _read_file(stage + '/STAGE.json', 262144, 0o444)
+    declared = _json(stage_raw, 262144)
+    _need(declared['files']['integration/g12_reference_adapter_v1.py'] ==
+          {'sha256': own_record['sha256'], 'mode': 0o444}, 'G12-N02: exact guard-selected adapter source')
+    _authenticate_own_functions(root, api, own_source, adapter)
+    producer_path = stage + '/baseline/full_driver.py'
+    source_record, source = _read_file(producer_path, 1048576, 0o444)
+    _need(source_record['sha256'] == _PRODUCER_PIN and source_record['bytes'] == 70246,
+          'G12-N02: unchanged accepted producer bytes/mode')
+    _need(api[0]() == _ROOT_PIN, 'G12-N04: Root before source hashing')
+    digest, count, actual_source = root._hash_regular(producer_path, 1048576, True)
+    _need(digest == _PRODUCER_PIN and count == 70246 and actual_source == source,
+          'G12-N02: original Root full source hash')
+    api[1](capability, _PROVIDER_PIN)
+    producer_argv = [producer_path, '--frozen-root', stage + '/baseline/frozen',
+                     '--reference', stage + '/baseline/reference/certificates/complex-network.json',
+                     '--mode', 'profile', '--output', output]
+    producer = root.ModuleType('__main__')
+    namespace = producer.__dict__
+    namespace.update({'__file__': producer_path, '__name__': '__main__',
+                      '__builtins__': root.builtins.__dict__, 'bootstrap_root': root,
+                      'bootstrap_capability': capability, 'bootstrap_api': api})
+    argv_owner, modules_owner = sys.argv, sys.modules
+    prior_main = modules_owner['__main__']
+    _need(prior_main.__dict__ is globals(), 'G12-N04: actual Root-installed adapter module owner')
+    code = root._COMPILE(source, producer_path, 'exec', dont_inherit=True, optimize=0)
+    _need(api[0]() == _ROOT_PIN, 'G12-N04: Root before unchanged producer entry')
+    primary, secondary = None, _RawG12Errors()
+    # Install precisely the two Root._entry alias slots. Do not intercept or
+    # reinterpret the producer completion marker; only its ordinary return wins.
+    sys.argv = producer_argv
+    modules_owner['__main__'] = producer
+    try:
+        root._EXEC(code, namespace)
+        _need(sys.argv is producer_argv and sys.modules is modules_owner and
+              modules_owner.get('__main__') is producer, 'G12-N09: producer alias ownership lost')
+        api[1](capability, _PROVIDER_PIN)
+        _need(api[0]() == _ROOT_PIN, 'G12-N09: Root after unchanged producer ordinary return')
+        _need(_read_file(producer_path, 1048576, 0o444) == (source_record, source),
+              'G12-N09: producer source changed after return')
+        _need(root._hash_regular(producer_path, 1048576, False)[:2] == (_PRODUCER_PIN, 70246),
+              'G12-N09: final actual Root full producer digest')
+    except BaseException as error:
+        primary = error, error.__traceback__
+    # Each restoration is attempted independently; a foreign slot is never
+    # overwritten and a secondary cannot replace the retained original primary.
+    try:
+        _need(sys.argv is producer_argv, 'G12-N09: argv restoration owner lost')
+        sys.argv = argv_owner
+    except BaseException as error:
+        secondary.append((error, error.__traceback__))
+    try:
+        _need(sys.modules is modules_owner and modules_owner.get('__main__') is producer,
+              'G12-N09: module restoration owner lost')
+        modules_owner['__main__'] = prior_main
+    except BaseException as error:
+        secondary.append((error, error.__traceback__))
+    try:
+        _current_graph(_INITIAL_GRAPH)
+        api[1](capability, _PROVIDER_PIN)
+        _need(api[0]() == _ROOT_PIN, 'G12-N09: final bootstrap currentness')
+        _need(_read_file(adapter, 262144, 0o444) == (own_record, own_source) and
+              _read_file(stage + '/STAGE.json', 262144, 0o444) == (stage_record, stage_raw),
+              'G12-N09: adapter/stage source drift')
+    except BaseException as error:
+        secondary.append((error, error.__traceback__))
+    if secondary:
+        try:
+            sys.stderr.write('G12 adapter ordered secondary errors: ' + repr(secondary) + '\n')
+            sys.stderr.flush()
+        except BaseException as error:
+            secondary.append((error, error.__traceback__))
+    _raise_preserved(primary, secondary)
+
+
+_INITIAL_GRAPH = _capture_graph(globals())
+if __name__ == '__main__':
+    _g12_adapter_entry()

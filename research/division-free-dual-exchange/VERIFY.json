@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/dyadic-helper-basis-completion/PROOF.md",
+    "research/dyadic-helper-basis-completion/basis.py",
+    "research/p104-coupled-helper-bases/local.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Full dual-pair/involution matrices, scalar prefixes, both tariffs, arbitrary dirty-spare consumer, named emitted-program comparison and rejection controls."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-W",
+        "error",
+        "-O",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Same complete finite evidence with optimized Python and all exception-based checks retained."
+    }
+  ]
+}

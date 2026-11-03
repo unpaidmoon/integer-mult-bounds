@@ -1,0 +1,165 @@
+{
+  "activity_credit": 0,
+  "already_emitted_by_each_unchanged_original_producer": [
+    {
+      "lines": [
+        309,
+        310
+      ],
+      "name": "full-return.lossless.json",
+      "provides": "complete canonical typed return; role_frames projection with order and types"
+    },
+    {
+      "lines": [
+        115,
+        117
+      ],
+      "name": "runtime-root/certificates/complex-network.json",
+      "provides": "complete original scientific CLI certificate",
+      "source": {
+        "bytes": 6105,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/engine/source/complex_network.py",
+        "sha256": "0da395e67ac04fa213494e71012c1b19b544596d34cdce5a3b172b1fb6af5f1b"
+      }
+    },
+    {
+      "lines": [
+        311,
+        311
+      ],
+      "name": "original-stdout.txt",
+      "provides": "original scientific CLI stdout bytes, distinct from outer driver/process stdout"
+    },
+    {
+      "lines": [
+        74,
+        88
+      ],
+      "name": "side-observations/result.json",
+      "provides": "complete exact side result",
+      "source": {
+        "bytes": 10571,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/engine/compare_side_verifier.py",
+        "sha256": "6e507bb0c7e00d090a60289fddb6c55e90c946d0850c42c3c5e3e15c27604a68"
+      }
+    },
+    {
+      "lines": [
+        74,
+        89
+      ],
+      "name": "side-observations/witness.json",
+      "provides": "complete structural/label/code witness",
+      "source": {
+        "bytes": 10571,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/engine/compare_side_verifier.py",
+        "sha256": "6e507bb0c7e00d090a60289fddb6c55e90c946d0850c42c3c5e3e15c27604a68"
+      }
+    },
+    {
+      "lines": [
+        74,
+        90
+      ],
+      "name": "side-observations/rank-trace.json",
+      "provides": "complete original ordered rank transcript",
+      "source": {
+        "bytes": 10571,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/engine/compare_side_verifier.py",
+        "sha256": "6e507bb0c7e00d090a60289fddb6c55e90c946d0850c42c3c5e3e15c27604a68"
+      }
+    },
+    {
+      "lines": [
+        307,
+        312
+      ],
+      "name": "complement-transcript.json",
+      "provides": "full cumulative complement receipt"
+    },
+    {
+      "lines": [
+        332,
+        347
+      ],
+      "name": "receipt.json",
+      "provides": "mode/driver/source inventory/source custody/science, real native_calls only in original native lane; insufficient to prove later stdout tail or parent success"
+    }
+  ],
+  "closed_values": {
+    "_P02_PARENT_SUCCESS_HANDOFF": null,
+    "_P02_REFERENCE_CUSTODY_HANDOFF": null,
+    "_P02_REFERENCE_PROJECTION": null,
+    "actual_output_hashes": null
+  },
+  "consumer_attachment_points": {
+    "actual_comparison": "_epoch_p02_finish after original1213 and before original1214/1215",
+    "parent_success": "must be observed only after original main full output/late custody/outer cleanup plus new P02 publication return",
+    "pre_cli": "_epoch_p02_bind_locals before original protected CLI call",
+    "pre_module_load": "main_epoch original1092 now _epoch_p02_prepare_reference(engine, backend_handle)",
+    "projection_use": "_epoch_p02_phase_eval labels branch, exact five reference keys"
+  },
+  "execution_authorized": false,
+  "missing_consumer_source_predicates": [
+    "Authenticate source-bound parent success for BOTH lanes after original full_driver:348-352 and bind exact actual argv/anchor/output/generation.",
+    "Acquire fresh immutable file custody and validate both receipts and all six raw artifacts plus full trace against their actual parent bindings; distinguish equal content from aliased mutable custody.",
+    "Implement fixed strict full-return typed parser, ordered role/rank/trace projection and native counter shape checks per schema; do not run it during source-only construction.",
+    "Perform complete dual-original equality join before constructing pure-owned role/rank/trace/outputs and native-owned actual counters.",
+    "Install the projection in _P02[reference] only through an exact source-owned one-use root/helper/invocation bridge. Current _epoch_p02_prepare_reference rejects every ambient handoff and must be replaced by a new independently reviewed derivative, never by assigning constants.",
+    "Prove candidate same-invocation fixed artifact reads preserve the original complete-output custody boundary; maintain all original helper comparisons, phase counts, late source/owner checks and actual parent completion.",
+    "Independently review concrete source/inverses/cost ownership and failure channels before adoption. No execution authority or runtime handoff is present."
+  ],
+  "missing_outer_parent_export_fields": {
+    "actual_child_argv": "actual immutable complete argv vector including mode, output, frozen-root, reference, anchor; recorded by source-owned spawn/return wrapper",
+    "actual_working_directory": "actual execution directory bound before child start and after return",
+    "anchor_binding": "actual anchor raw bytes SHA256 plus successful source-owned original anchor provenance and original driver equality; not a new profile sample",
+    "artifacts": "ordered tuple of six (relative name, exact immutable raw bytes, byte count, observed SHA256, identity/custody binding); no omitted member",
+    "base_commit": "19fdb086ea96af9a9f87936a2b888e10af4ed810",
+    "complement": "actual raw complement-transcript.json bytes with corresponding identity/custody binding",
+    "complete_parent_stdout_stderr": "actual retained raw outer process streams, including original receipt stdout tail; parent must observe completion after original full_driver:348-352",
+    "consumed": "exact one-use parent-to-consumer transfer, no candidate writable alias",
+    "guard_result": "actual outer full-cost wall/CPU/RSS/resource result, never receipt status or a source-only budget inference",
+    "invocation_id": "fresh parent-owned one-use identity, not receipt status",
+    "lane": "exact str baseline or candidate, paired respectively pure/native",
+    "normal_exit": "actual independently observed normal exit code exactly 0, no signal, timeout, kill, cancellation, guard failure or pending child",
+    "output_custody": "seal all required regular files after successful exit and revalidate same identity/content before transfer; reject symlink, stale, partial, aliased or changed custody",
+    "output_root": "fresh canonical separate output root, lstat/device/inode/mode ownership record and cold-generation nonce",
+    "parent_source_binding": "exact root-owned parent function/code/global/default/closure identity and source SHA256",
+    "producer_engine_pins": {
+      "compare_side_verifier.py": "6e507bb0c7e00d090a60289fddb6c55e90c946d0850c42c3c5e3e15c27604a68",
+      "finite_controls.py": "df989a831aac43cc1af95169dad8c64a7548760e6e1f96976da996703f2c8f7a",
+      "native_backend.py": "e473c38245c3668715b5a78dfe980b2fe3ed0d0c9b8c97c666fbae6ecf1fffd5",
+      "native_gf2.c": "e9c3c9194a08718bd1575c1cf08c6c6772d3b644c2e274c25a84a1f9249d06cc",
+      "profile_side_verifier.py": "9c994378171c20a91539418d93cb8387e1daa93465d6862beefea90e12999c2a",
+      "source/complex_circuit.py": "d623617f7c5cb3189580883a8ab30c0bd3832688ae3f1f0c1f881bbbbff8e0c1",
+      "source/complex_network.py": "0da395e67ac04fa213494e71012c1b19b544596d34cdce5a3b172b1fb6af5f1b"
+    },
+    "producer_source": {
+      "bytes": 20178,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/full_driver.py",
+      "sha256": "0d976d2eb6b845f20d4a3396591a806f966688b88693cd6a5f8a0c9e48925e36"
+    },
+    "receipt_binding": "actual receipt.json bytes and file identity, mode/source/engine/inventory/original checks/science binding verified",
+    "schema": "fixed source-owned parent completion schema, exact version to be independently implemented",
+    "scientific_input": "Same pinned 32-file inventory, H=25 and original relative paths; exact script argv [fresh_runtime/scripts/complex_network.py].",
+    "source_inventory_sha256": "88bba3caf5975f30fa7abceaea9454110cf3b069233e8241a2ca13d1dff171a7",
+    "upstream_commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a"
+  },
+  "next_owner_scope": "A separate source construction owns the dual-original parent/export/consumer bridge; do not change this packet or original scientific producers.",
+  "producer_source": {
+    "bytes": 20178,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/full_driver.py",
+    "sha256": "0d976d2eb6b845f20d4a3396591a806f966688b88693cd6a5f8a0c9e48925e36"
+  },
+  "required_scientific_producer_splices": [],
+  "runtime_evidence": null,
+  "schema": "p02-reference-producer-export-consumer-handoff-v1",
+  "schema_artifact": {
+    "bytes": 15170,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-implementation/REFERENCE-BINDING-PROJECTION-SCHEMA-v1.json",
+    "sha256": "133950d6f513b234c62457e657a5d137443dedbc1a52afec38974654fc364054"
+  },
+  "source_adopted": false,
+  "status": "MISSING_BRIDGE_EXACT_PREDICATES_FROZEN",
+  "why_no_scientific_export_splice": "Both unchanged original modes already emit every required scientific/reference value; a bounded new outer parent/export source must observe actual process completion and bind immutable files. Changing original full_driver.py would also break its original driver/anchor pin."
+}

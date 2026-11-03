@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "task_id": "replay-runtime",
+  "priority_revision": 8,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "original_card": {
+    "id": "replay-runtime",
+    "question": "Can one measured replay bottleneck be sped up without dropping coverage?",
+    "starting_points": [
+      "scripts/run_isolated_tests.py",
+      "scripts/verify_replay_coverage.py",
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "Profile one isolated replay and optimize the measured bottleneck.",
+      "Design source-bound reuse with explicit dependency invalidation and negative controls."
+    ],
+    "acceptance_gate": "Report before/after wall time on the same fixture, retained checks and invalidation behavior.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_selected_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Resolve the current selected review, separate complex/ordinary BIT/admitted BIT/outer budgets, and compare the card against live handoffs before starting. Historical ceilings require exact source/model equivalence.",
+      "scope": "Source-binding orientation only; not a scientific replay or all-size proof. Materialize selected inputs if this checkout is sparse."
+    },
+    "first_experiment": "Measure one unchanged fixture, preserve check coverage, and test one optimization with invalidation controls.",
+    "bottleneck_link": "Faster trustworthy replays increase review throughput and let mechanism candidates be checked sooner.",
+    "allowed_variations": [
+      "Profile one stage or design one source-bound cache boundary."
+    ],
+    "scope_change_triggers": [
+      "Skipping coverage or comparing different fixtures to claim speedup."
+    ],
+    "overlap_terms": [
+      "replay runtime",
+      "cache invalidation",
+      "isolated tests"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Replace the commutative algebra-law kernel in the complete PR5502 primary and companion callers with unordered-triple equations, preserving exact behavior.",
+  "scope_change_reason": "The replay-runtime card is narrowed to one measured algebra-law bottleneck and a source-authenticated opt-in adapter.",
+  "bottleneck_link": "The isolated profile attributes 3.126 of 3.452 seconds to repeated associativity contractions; reducing those equations makes the complete scientific caller cheaper without dropping checks.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop at the first verified complete-caller wall-time gain and package it. No second optimization or wider algebra-family search.",
+  "outcome": "completed",
+  "evidence": "Five alternating fresh-process pairs: median 1.415539083071053 -> 0.48924245801754296 seconds; 65.43772871631934% less wall time, identical complete output bytes and zero errors. Direct and registered exact conformance checks cover both original complete callers.",
+  "author": "Nick Petalas",
+  "ai_assistance": "Independent human and formal proof-kernel review are unclaimed.",
+  "open_questions": [
+    {
+      "question": "Should a public opt-in algebra-law backend use the symmetric kernel?",
+      "why_it_matters": "An actual downstream consumer could benefit without a source-copy adapter.",
+      "first_step": "Bind the normalized-table contract and replay one external caller before adoption.",
+      "blocked_by": "Public API and resource contract are not supplied."
+    },
+    {
+      "question": "Does algebra-law checking dominate another actual tensor recognizer?",
+      "why_it_matters": "Only a measured complete-caller bottleneck justifies another adaptation.",
+      "first_step": "Profile one specified consumer and check whether it has commutative inputs.",
+      "blocked_by": "Noncommutative inputs do not satisfy the symmetry premise."
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"status": "PASS", "oracle": "Fraction sum of exact products", "valid_products": 800, "invalid_products_rejected": 498, "scaling_caps": [16384, 0], "scope": "Finite independent checks of integer-scaled and forced fallback paths, including empty factors. Not a universal proof."}

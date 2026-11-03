@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "d59b5035e7b4cbaa9d688a1d32dd0d6eb79c466a",
+      "sha256": "9b8d0eea95b3bf0dfcb7938a732a6439b87a2685dec2a5ab9e525b3b34debbfa"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "3404fbdd5e7529a0674eef26114b5071e4586cec",
+      "sha256": "ead6cdc9d0af6d58e8a49744d8ec8c7c15e13d2ba93c276c434bcf9b51b93a81"
+    },
+    {
+      "path": "research/centre-polynomial-cache-limits/frozen/work/centre-encoding-campaign-20261014/lanes/circuit-interface/INTERFACE.json",
+      "usage": "input",
+      "git_blob": "4201e9a04c12273b919e2cae60a6b6482c8150f3",
+      "sha256": "5c6c51fbffc07a683e922f17532fd90262ae9e23cc3560a696002073dd234ef3"
+    },
+    {
+      "path": "research/exact-one-slot-gram/README.md",
+      "usage": "provenance",
+      "git_blob": "d783f028fd776e7536f4ac203211b7654f1af2b0",
+      "sha256": "0c6eefe9bcfef8325b7dcd7c87c4b93a045713f508fa0f75771b4ebfeebea442"
+    },
+    {
+      "path": "research/centre-polynomial-cache-limits/PROOF.md",
+      "usage": "provenance",
+      "git_blob": "98e070a4e309010d76d7885b39366f9a9ef71341",
+      "sha256": "ebcd0912e990c71f3b29b87674c1b5e3efa8f5ea37ed20f4fd06d80ce27f6382"
+    },
+    {
+      "path": "research/centre-polynomial-cache-limits/NOTICE.md",
+      "usage": "provenance",
+      "git_blob": "b0262bd4f2a4dd701713914c3ae47cb1225848d6",
+      "sha256": "4dde831dc40b31d0edc23adbcd0aaeec3aa573eef6f4f27fcdb53d24eab173e8"
+    },
+    {
+      "path": "research/equal-bell-two-slot-spectrum/README.md",
+      "usage": "provenance",
+      "git_blob": "3e9e574cb86729bec406db9073610c340270ab05",
+      "sha256": "e20b09c62eda072e2db18d104b2edeb89083549557753c9cfe460809e44ec5a7"
+    },
+    {
+      "path": "research/resonant-all-width-projector/PROOF.md",
+      "usage": "provenance",
+      "git_blob": "2a65c15bebaa9096d79dea2f0e898cdeee0b4ac4",
+      "sha256": "a11f8a97519ae94982b1a212d2cc9789d82a4452317eb1d3843080caf910c45c"
+    }
+  ]
+}

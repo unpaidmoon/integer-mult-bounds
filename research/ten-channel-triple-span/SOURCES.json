@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "d59b5035e7b4cbaa9d688a1d32dd0d6eb79c466a",
+      "sha256": "9b8d0eea95b3bf0dfcb7938a732a6439b87a2685dec2a5ab9e525b3b34debbfa"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "3404fbdd5e7529a0674eef26114b5071e4586cec",
+      "sha256": "ead6cdc9d0af6d58e8a49744d8ec8c7c15e13d2ba93c276c434bcf9b51b93a81"
+    },
+    {
+      "path": "research/filtered-native-kappa004/inputs/original-packet.tar.gz",
+      "usage": "input",
+      "git_blob": "7f904307bd99f2d778bc7b64e98e353715cbc041",
+      "sha256": "595f988e748b1f3b25e7525a226da173966e4278a70f511b2919245cec1b45f7"
+    },
+    {
+      "path": "research/nine-channel-monotone-bound/PROOF.md",
+      "usage": "provenance",
+      "git_blob": "6545736d5564783cf5d73f812b311b49054fb4a0",
+      "sha256": "57a17e11025202e6c54831209f70c50e219e2d7894b3396f8231a5fc4201e84b"
+    },
+    {
+      "path": "research/nine-channel-monotone-bound/independent.py",
+      "usage": "provenance",
+      "git_blob": "d162c9ca5c7caa4c4cd073a109acfa04a5e976f2",
+      "sha256": "117bb0e9a75ab3e3dde90a5dee98e7e9ed47a3127312210f9932b979e3792325"
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "activity": {
+    "frozen_predecessors_modified": false,
+    "network_operations": 0,
+    "review_metadata_only_written": true,
+    "runtime_or_adoption_approval": false,
+    "source_edits": 0,
+    "target_operations": 0,
+    "target_process_or_lock_operations": 0
+  },
+  "activity_credit_awarded": 0,
+  "complete_source_acceptance": false,
+  "created_utc": "2026-10-31T02:26:54.208105+00:00",
+  "declared_stop_deadline_utc": "2026-10-31T02:29:08.955035Z",
+  "findings": [
+    {
+      "evidence": "Parent candidate_pin element 3 is constructed as tuple(manifest_record[identity][k] for k in _ID_NAMES). Consumer unpacks that element as identity and assigns it unchanged to manifest_record[identity]. _root_read immediately calls _file_record, which calls _fields(identity,_ID_NAMES); _fields requires exact dict. A tuple returned by the parent therefore rejects before reading the manifest. The later provenance construction also indexes identity by string keys.",
+      "id": "G12-CUSTODY-SOURCE-001",
+      "impact": "The exact emitted immutable handoff cannot flow directly into the new consumer even after genuine future source selection. No explicit checked adoption conversion is supplied in the inspected integration. This is a source type contract mismatch, not missing runtime result values.",
+      "minimum_resolution": "Choose one exact immutable handoff identity representation and explicitly validate/convert it to the FileRecord dictionary inside the owned consumer or provide a pinned reviewed adoption conversion; preserve exact integer/full-mode/source identity checks and all None selections. Do not silently replace future recorded evidence.",
+      "priority": "P1",
+      "source_spans": [
+        {
+          "lines": [
+            1645,
+            1648
+          ],
+          "source": {
+            "bytes": 94080,
+            "mode": "0444",
+            "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/g12_reference_parent_v1.py",
+            "sha256": "160b8c5de808b9b31532608a89fa5e209110caea132145cd431ffade4403079e"
+          }
+        },
+        {
+          "lines": [
+            204,
+            228
+          ],
+          "source": {
+            "bytes": 61159,
+            "mode": "0444",
+            "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/g12_reference_cold_consumer_v1.py",
+            "sha256": "89ad17cfa90e895e2cb105e80cc57c82be4bf1a4a85a9d44322016c4344e3849"
+          }
+        },
+        {
+          "lines": [
+            979,
+            984
+          ],
+          "source": {
+            "bytes": 61159,
+            "mode": "0444",
+            "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/g12_reference_cold_consumer_v1.py",
+            "sha256": "89ad17cfa90e895e2cb105e80cc57c82be4bf1a4a85a9d44322016c4344e3849"
+          }
+        },
+        {
+          "lines": [
+            1042,
+            1047
+          ],
+          "source": {
+            "bytes": 61159,
+            "mode": "0444",
+            "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/g12_reference_cold_consumer_v1.py",
+            "sha256": "89ad17cfa90e895e2cb105e80cc57c82be4bf1a4a85a9d44322016c4344e3849"
+          }
+        }
+      ],
+      "status": "ESTABLISHED_STATIC_ABI_DEFECT",
+      "title": "Emitted parent handoff identity cannot satisfy consumer FileRecord schema"
+    },
+    {
+      "evidence": "The prior-path probe wraps its body in try/finally and calls os.close directly for every held directory FD. The parent lease setup repeats the same bare finally close loop. If body failure P is followed by close failure S, the escaping exception is S, so the outer run handler records S as primary. The first failed close also aborts the remaining close loop; these local fds are not retained in science_directory/run_directory/retained/observation for P09. Python implicit __context__ does not preserve P as the required primary or establish that later closes were attempted.",
+      "id": "G12-CUSTODY-SOURCE-002",
+      "impact": "Violates original CP12/CP15 first-primary, ordered-secondary and known descriptor-cleanup obligations on an explicit admitted close-error branch. This rejection is conditional source control flow; no fault was injected or runtime failure claimed.",
+      "minimum_resolution": "Use the existing source-owned raw first-primary/secondary pattern for both preflight descriptor domains, attempt every known close independently, and keep failed/unknown cleanup non-successful while propagating the original raw primary.",
+      "priority": "P1",
+      "source_spans": [
+        {
+          "lines": [
+            1385,
+            1398
+          ],
+          "source": {
+            "bytes": 94080,
+            "mode": "0444",
+            "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/g12_reference_parent_v1.py",
+            "sha256": "160b8c5de808b9b31532608a89fa5e209110caea132145cd431ffade4403079e"
+          }
+        },
+        {
+          "lines": [
+            1401,
+            1414
+          ],
+          "source": {
+            "bytes": 94080,
+            "mode": "0444",
+            "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/g12_reference_parent_v1.py",
+            "sha256": "160b8c5de808b9b31532608a89fa5e209110caea132145cd431ffade4403079e"
+          }
+        },
+        {
+          "lines": [
+            1701,
+            1720
+          ],
+          "source": {
+            "bytes": 94080,
+            "mode": "0444",
+            "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/g12_reference_parent_v1.py",
+            "sha256": "160b8c5de808b9b31532608a89fa5e209110caea132145cd431ffade4403079e"
+          }
+        }
+      ],
+      "status": "ESTABLISHED_CONDITIONAL_PRIMARY_MASKING_AND_INCOMPLETE_CLOSE_PATH",
+      "title": "Bare preflight finally cleanup can replace the first failure and skip remaining closes"
+    }
+  ],
+  "inputs": [
+    {
+      "bytes": 2545,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/parent/AUTHORIZATION-v2.json",
+      "sha256": "9e32514288fed2b1d2873387bf81861ffcd9e1b56d2ab4828be13a311e629106"
+    },
+    {
+      "bytes": 60181,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody/DESIGN-v1.json",
+      "sha256": "1f88ec187415abfd058728b7bf37fb6d9550e8bb3a080da4841d32be4019fe72"
+    },
+    {
+      "bytes": 26124,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-custody-independent/G12-CUSTODY-DESIGN-REVIEW-v1.json",
+      "sha256": "748af02d5766eae9a1f60890780817e3230e91d61b374e0c5e0b4621852e1ae3"
+    },
+    {
+      "bytes": 10062,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-custody-independent/G12-CUSTODY-DESIGN-CLARIFICATION-v1.json",
+      "sha256": "dd78fbbe4060e16f58294ee4e8e0c667943e50ed0052d10500a1ac50da9f1a75"
+    },
+    {
+      "bytes": 10874,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-custody-independent/G12-CUSTODY-SOURCE-SCOPE-CLARIFICATION-v1.json",
+      "sha256": "a9261f686d4fbe6ca40258335231a730dc7e3319be7cedf7c39e189a57c7f367"
+    },
+    {
+      "bytes": 29269,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-protocol-independent/G12-CANDIDATE-PROTOCOL-REVIEW-v2.json",
+      "sha256": "9b9043fa83f1a052a6708105431db20efd37b88bc0f23adc36491edd27b867ee"
+    },
+    {
+      "bytes": 4764,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-protocol-repair/FREEZE-v2.json",
+      "sha256": "716dfb49f659651eb41c0965a2189db6efcad1587b25e307b19523bfbd05c7d3"
+    },
+    {
+      "bytes": 3767,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/SOURCE-READY-PINS-v1.json",
+      "sha256": "5080c15fc408ed0bae011c055920f410c57237150172c1d56da57f569caecd4c"
+    },
+    {
+      "bytes": 10990,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/FREEZE-v1.json",
+      "sha256": "31afc1a99450482602b8403482a748fa245c1a6cb4bd6ff42afbb1d143232c49"
+    },
+    {
+      "bytes": 4347,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/DESIGN-CORRECTION-v2.json",
+      "sha256": "f7a71e8cf29b002fc98fb9a4a847c2257e5f8daa366bef60339b4e321067f02f"
+    },
+    {
+      "bytes": 10141,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/COST-BILL-v1.json",
+      "sha256": "63abb4fb916b4b661dd47c0eadb62498c6adb96b2d6f0db338f1d89704e90f12"
+    },
+    {
+      "bytes": 9784,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/SOURCE-INVERSE-v1.json",
+      "sha256": "380416b2020654151afb95b716020ce5cdfaf68100e1841eb50a267d1af0b132"
+    },
+    {
+      "bytes": 5367,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/STAGE-DERIVATION-v1.json",
+      "sha256": "8bb604ba1b101ba228e9a3b26a24f4369bb9712cf4f0381d2b0f504bfd925441"
+    }
+  ],
+  "parent_alone_controls_activity_count": true,
+  "review_limits_and_unreviewed_remainder": [
+    "No full acceptance of all 18 negative branches, every JSON/tagged schema predicate, all syscall races, all allocation failures, all graph/currentness transitive aliases or the entire 94KB parent and 61KB consumer was completed. The two established defects suffice for rejection; other defects may remain.",
+    "The author SOURCE-MAP and NEGATIVE-BRANCHES records were hash verified, not independently traversed in full. Author static verification counts are not adopted as independent proof.",
+    "Actual external parent-launcher identity injection, future source/stage selection, runtime authorization, complete budget/funding/headroom, measurement and final-tail qualification remain separate closed obligations; no new API is invented to satisfy them.",
+    "No actual Popen, process census, signal, lease, target factory, target helper, target test, target import, compilation, scientific operation or decoder was invoked. No protected runtime/bookkeeping was enumerated or read.",
+    "The accepted original producer/control behavior is retained through unchanged pins and byte-exact integration inverses; this bounded review does not independently re-prove the entire prior accepted graph or award whole S03.08 completion."
+  ],
+  "reviewer": "/root/cache_g12_custody_source_review",
+  "schema": "g12-custody-independent-source-review-v1",
+  "scope": "Eight exact source-ready files and directly named prior contracts/pins. Reused prior accepted candidate protocol analysis after independently verifying complete declared inverse byte equality. Findings establish rejection; remaining unreviewed obligations are not presumed passed.",
+  "source_pins": {
+    "candidate-integration/g12_candidate_driver_N22_custody_v1.py": {
+      "bytes": 128363,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/candidate-integration/g12_candidate_driver_N22_custody_v1.py",
+      "sha256": "c9d72a79ce3a828815d3d0370a1f95f210e1a41edeed767c55ff9d0614126fa4"
+    },
+    "candidate-integration/g12_candidate_driver_P07_custody_v1.py": {
+      "bytes": 128363,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/candidate-integration/g12_candidate_driver_P07_custody_v1.py",
+      "sha256": "2a5d202dabd78d5de54fac29db7fdfaf8836866425d93842f2b22d747fa52d0c"
+    },
+    "candidate-integration/g12_candidate_driver_support_N22_custody_v1.py": {
+      "bytes": 33549,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/candidate-integration/g12_candidate_driver_support_N22_custody_v1.py",
+      "sha256": "28c1a44750b9745a5ad6e930f9a83cf256b3a90905f5f30d08a89aca54c828da"
+    },
+    "candidate-integration/g12_candidate_driver_support_P07_custody_v1.py": {
+      "bytes": 33549,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/candidate-integration/g12_candidate_driver_support_P07_custody_v1.py",
+      "sha256": "cae88bf247ee775d6d7fc1264cb2af1d487e4c19168ca787c7c16aba16452220"
+    },
+    "candidate-integration/g12_epoch_authority_custody_v1.py": {
+      "bytes": 139604,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/candidate-integration/g12_epoch_authority_custody_v1.py",
+      "sha256": "3079a096df1072a83056f3f8a8cbf9e766fdddb488e36dddb36544c7929f988a"
+    },
+    "g12_reference_cold_consumer_v1.py": {
+      "bytes": 61159,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/g12_reference_cold_consumer_v1.py",
+      "sha256": "89ad17cfa90e895e2cb105e80cc57c82be4bf1a4a85a9d44322016c4344e3849"
+    },
+    "g12_reference_parent_v1.py": {
+      "bytes": 94080,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/g12_reference_parent_v1.py",
+      "sha256": "160b8c5de808b9b31532608a89fa5e209110caea132145cd431ffade4403079e"
+    },
+    "integration/g12_reference_adapter_v1.py": {
+      "bytes": 21740,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/integration/g12_reference_adapter_v1.py",
+      "sha256": "43aaabc69841b0a90fae599011de85f4736f42ced64344c49d6cd93f20297f9f"
+    }
+  },
+  "status": "REJECTED_TWO_ESTABLISHED_SOURCE_DEFECTS_BOUNDED_REVIEW",
+  "stop": "Review frozen and ended before the stated deadline. No automatic repair, expanded research or later re-review is authorized by this report.",
+  "supported_bounded_observations": [
+    "All 21 full-freeze file hash/size/mode records match. All eight current source pins match the earlier source-ready packet and parse as Python AST.",
+    "All five candidate/authority derivatives reconstruct their exact pinned predecessors using unique declared reverse splices. Candidate support changes only add the captured capability argument; full drivers additionally update the authority source hash. Prior protocol repairs are preserved byte-for-byte outside these splices.",
+    "Authority load has an explicit fixed transport name/path/hash branch injecting its captured actual root/capability/API and independently selected consumer source identity before execution and module registration. Its invoke branch checks exact three-object identity and typed four-result shape. Candidate entry passes the actual initially captured capability. This addresses the previously absent caller ABI source edge locally, without accepting the whole new consumer.",
+    "Parent source retains actual private subprocess.Popen, generation observation and zero wait returncode checks; joins original START/receipt/usage/raw logs; reads both complete exports and retains both in a fresh parent domain after known selected cleanup. No execution of that source was performed.",
+    "Consumer source checks initially injected object identity, authentic API/capability currentness, exact source identity and its own callable shape; performs complete manifest/publication/evidence/pair reads and final rereads including diagnostics; exact bool/positive-int/bytes return checks are present. The identity mismatch blocks the emitted handoff before this can complete.",
+    "Adapter source selects the unchanged producer digest and 70246-byte size, exact profile argv and actual bootstrap objects. It uses Root compile/exec and checks ordinary return, source rehash and owned argv/module restoration. It does not replace the accepted producer or catch its completion marker as manufactured success.",
+    "Parent and consumer eight selected schema/constant ASTs are exactly equal. This checks consistency only, not completeness of every schema predicate.",
+    "The corrected design explicitly separates custody publication from complete final-cost qualification. COST-BILL preserves exact original C01-C15 category and full-invoice objects; all actual current costs/final tail stay null, fit/funding/gain remain false. No new financial API requirement is imposed by this review.",
+    "Parent launch, consumer handoff, candidate transport pins and authority execution/source/funding gates remain None in the supplied source. No runtime or stage adoption follows from source inspection."
+  ],
+  "verification": {
+    "bytes": 15591,
+    "mode": "0444",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-custody-source-independent/STATIC-SOURCE-VERIFICATION-v1.json",
+    "sha256": "37303886fe57deff19a59f0b1c37974ee5550ce637ac626ce0aa183a5a654f4f"
+  }
+}

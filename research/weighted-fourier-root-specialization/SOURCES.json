@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "d59b5035e7b4cbaa9d688a1d32dd0d6eb79c466a",
+      "sha256": "9b8d0eea95b3bf0dfcb7938a732a6439b87a2685dec2a5ab9e525b3b34debbfa"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "3404fbdd5e7529a0674eef26114b5071e4586cec",
+      "sha256": "ead6cdc9d0af6d58e8a49744d8ec8c7c15e13d2ba93c276c434bcf9b51b93a81"
+    },
+    {
+      "path": "research/weighted-fourier-layout/EXPECTED.json",
+      "usage": "input",
+      "git_blob": "dbed65d4a117897f5357570f640d225a44163158",
+      "sha256": "0cd843f0e51e97c7d3b43d89c1629b05f9f543c3cc1578e25e5af22674e5dddd"
+    },
+    {
+      "path": "research/weighted-fourier-layout/SOURCES.json",
+      "usage": "input",
+      "git_blob": "dd749bf54a71fb0a4940adc74e9057e33354d8fb",
+      "sha256": "cfa4086bad74ae2a747f1fe6799ebaf117fda469073b718bde04ea28a704bdcf"
+    },
+    {
+      "path": "research/weighted-fourier-layout/oracle.py",
+      "usage": "input",
+      "git_blob": "dd7b4445ef841f12e090e732d418c80a43435ea0",
+      "sha256": "d9c8562960dea38488c253a0aa17d9ece9fd5936d5b8f62233c3138018d370d8"
+    },
+    {
+      "path": "research/weighted-fourier-layout/test_verify.py",
+      "usage": "input",
+      "git_blob": "fde8424e5686530cc38be25d47398ab844ba54ab",
+      "sha256": "9a1a8518f3544b8dbcae4bf8b060e0ce8c29745e85d3adab68f371d9a541a2f3"
+    },
+    {
+      "path": "research/weighted-fourier-layout/verify.py",
+      "usage": "input",
+      "git_blob": "ea7c77a905aa7e55b7358d43e99c87bc7b7d40a2",
+      "sha256": "183380b6eb84a7d12c7e495aaf1fc7a04ec0d1d3209670dacf7f7ac64ccc3afa"
+    },
+    {
+      "path": "upstream/build/sections/07-resampling.tex",
+      "usage": "input",
+      "git_blob": "256243bf9416baefb82bf9203f80215b9ebe28f2",
+      "sha256": "8a6b91670f9163afb54892489fa2210c77fe1b058f0325ec7d18b44b94be6e2c"
+    },
+    {
+      "path": "upstream/manifest.json",
+      "usage": "input",
+      "git_blob": "01c309e34d36cf3669c43d89c5dfb25cdc31b8af",
+      "sha256": "16ab13971694cabab09440c47ebf2fc0496a9d35fc3af33950fda3498f8e2392"
+    }
+  ]
+}

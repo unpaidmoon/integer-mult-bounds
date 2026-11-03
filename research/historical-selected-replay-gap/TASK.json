@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "task_id": "portable-replay",
+  "priority_revision": 8,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "original_card": {
+    "id": "portable-replay",
+    "question": "Can one reproducible environment or artifact-comparison failure be repaired?",
+    "starting_points": [
+      "research/gzip-container-reproducibility/README.md",
+      "docs/ci-verification.md"
+    ],
+    "methods": [
+      "Reproduce one portability failure and add a minimal cross-environment fix.",
+      "Audit one canonical-payload comparison for omitted proof-relevant fields."
+    ],
+    "acceptance_gate": "Preserve immutable source hashes and proof-relevant content; a different compressed byte stream alone is not a mathematical mismatch.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_selected_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Resolve the current selected review, separate complex/ordinary BIT/admitted BIT/outer budgets, and compare the card against live handoffs before starting. Historical ceilings require exact source/model equivalence.",
+      "scope": "Source-binding orientation only; not a scientific replay or all-size proof. Materialize selected inputs if this checkout is sparse."
+    },
+    "first_experiment": "Reproduce one specific mismatch or audit one canonical comparison for omitted proof-relevant fields.",
+    "bottleneck_link": "Portable exact checks prevent environment failures from blocking valid contributions.",
+    "allowed_variations": [
+      "One interpreter/version mismatch or one payload field comparison."
+    ],
+    "scope_change_triggers": [
+      "Removing immutable-source pins because generated compressed bytes differ."
+    ],
+    "overlap_terms": [
+      "gzip container",
+      "reproducibility",
+      "canonical payload"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Report the exact-head helper plan at 2485805 and the historical admission failure of the live selected-result checker, without rewriting frozen pins or admitting unreviewed successors.",
+  "scope_change_reason": "Handoff comment 19138624 asks for an inspection report, not an allowlist. Admitting the seven drifted live files would review edits this session did not review. The portable-replay card's repair method stays available as the next question.",
+  "bottleneck_link": "Side result for verifier engineering. The selected conditional exponent stays 781451/250000000. A blocked historical admission gate does not change that exponent, and it stops this historical checker from running on the current selected-result verifier.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop after the selected-checker rejection, the seven-path rejection census, and the exact parent-to-head helper plan. Do not admit live hashes, repin frozen inputs, or replay frontier 6030 or the nine selected receipt packages.",
+  "outcome": "partial",
+  "evidence": "Author-checked Python 3.12 walk of replay_historical_check.authenticated_input: 19 rejections on 7 paths. The tooling-ledger selected checker keeps frozen pin d7fd929726b326aeeaf0a3996475adec88eee9aac09ae0bebeeaa0bc1fc8f199 and live digest d6b305eac5b9bdb8172c469ad30a1655a60fa0aceac8b1bf610e1b73f51babd8. The helper plan for 01885346..2485805 selects nine receipt packages and not frontier6030. Selected-baseline orientation passed. No human or formal-kernel review.",
+  "author": "unpaidmoon",
+  "ai_assistance": "Substantial Cursor Grok assistance in selection, inspection, packaging and prose.",
+  "open_questions": [
+    {
+      "question": "Which of the seven unadmitted live files are safe successors of their frozen historical inputs?",
+      "why_it_matters": "The historical gate stays red, and the selected-result checker cannot be replayed through it, until each successor is admitted or reverted.",
+      "first_step": "Diff scripts/verify_selected_result.py against ledger-batch970-verify_selected_result.py and against accepted digest c0cc23a8534d91c8d272195315c725213f13279815750ffdef055ec3adfbe911, then decide that one file only.",
+      "blocked_by": "A review of the explicit-file closure and historical supplement branch in the live checker. An allowlist edit is not a frontier 6030 replay."
+    },
+    {
+      "question": "Do the nine receipt packages selected by the 2485805 ledger edit still pass?",
+      "why_it_matters": "The helper plan names them as the exact-head replay set. This audit did not execute that set.",
+      "first_step": "Run python3 -B scripts/research_package.py --package research/frontier-source-retention and record its outcome before the other eight.",
+      "blocked_by": "Separate replay budget. Do not treat a plan listing as a pass."
+    }
+  ]
+}

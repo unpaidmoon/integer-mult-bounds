@@ -1,0 +1,432 @@
+{
+  "checks": [
+    "prior81checks carried forward without rerunning predecessor checker",
+    "successor exact bytes and0444 DELTA-v2.json",
+    "successor exact bytes and0444 SOURCE-INVERSE-v2.json",
+    "successor exact bytes and0444 SOURCE-MAP-v2.json",
+    "successor exact bytes and0444 STATIC-VERIFICATION-v2.json",
+    "successor exact bytes and0444 g12_candidate_driver_N22_v2.py",
+    "successor AST parses g12_candidate_driver_N22_v2.py",
+    "successor exact bytes and0444 g12_candidate_driver_P07_v2.py",
+    "successor AST parses g12_candidate_driver_P07_v2.py",
+    "successor exact bytes and0444 g12_candidate_driver_support_N22_v2.py",
+    "successor AST parses g12_candidate_driver_support_N22_v2.py",
+    "successor exact bytes and0444 g12_candidate_driver_support_P07_v2.py",
+    "successor AST parses g12_candidate_driver_support_P07_v2.py",
+    "exactly six declared distinct edits",
+    "unchanged selected dependency identity g12_cache_selector_source_v1.py",
+    "unchanged selected dependency identity g12_common_source_v1.py",
+    "unchanged selected dependency identity g12_epoch_authority_selector_v1.py",
+    "unchanged selected dependency identity g12_epoch_cache_selector_v1.py",
+    "g12_candidate_driver_N22_v2.py unique reverse edit 001-incomplete-journal-blocks-observation",
+    "g12_candidate_driver_N22_v2.py unique reverse edit 001-guard-adapter-exit-entry",
+    "g12_candidate_driver_N22_v2.py unique reverse edit 001-guard-terminal-source-observation",
+    "g12_candidate_driver_N22_v2.py unique reverse edit 001-guard-P07-frame-close",
+    "g12_candidate_driver_N22_v2.py unique reverse edit 002-captured-hook-direct-source-edges",
+    "g12_candidate_driver_N22_v2.py unique reverse edit 001-preexisting-error-slots",
+    "g12_candidate_driver_N22_v2.py entire inverse exactly predecessor",
+    "g12_candidate_driver_P07_v2.py unique reverse edit 001-incomplete-journal-blocks-observation",
+    "g12_candidate_driver_P07_v2.py unique reverse edit 001-guard-adapter-exit-entry",
+    "g12_candidate_driver_P07_v2.py unique reverse edit 001-guard-terminal-source-observation",
+    "g12_candidate_driver_P07_v2.py unique reverse edit 001-guard-P07-frame-close",
+    "g12_candidate_driver_P07_v2.py unique reverse edit 002-captured-hook-direct-source-edges",
+    "g12_candidate_driver_P07_v2.py unique reverse edit 001-preexisting-error-slots",
+    "g12_candidate_driver_P07_v2.py entire inverse exactly predecessor",
+    "g12_candidate_driver_support_N22_v2.py unique reverse edit 001-incomplete-journal-blocks-observation",
+    "g12_candidate_driver_support_N22_v2.py unique reverse edit 001-guard-adapter-exit-entry",
+    "g12_candidate_driver_support_N22_v2.py unique reverse edit 001-guard-terminal-source-observation",
+    "g12_candidate_driver_support_N22_v2.py unique reverse edit 001-guard-P07-frame-close",
+    "g12_candidate_driver_support_N22_v2.py unique reverse edit 002-captured-hook-direct-source-edges",
+    "g12_candidate_driver_support_N22_v2.py unique reverse edit 001-preexisting-error-slots",
+    "g12_candidate_driver_support_N22_v2.py entire inverse exactly predecessor",
+    "g12_candidate_driver_support_P07_v2.py unique reverse edit 001-incomplete-journal-blocks-observation",
+    "g12_candidate_driver_support_P07_v2.py unique reverse edit 001-guard-adapter-exit-entry",
+    "g12_candidate_driver_support_P07_v2.py unique reverse edit 001-guard-terminal-source-observation",
+    "g12_candidate_driver_support_P07_v2.py unique reverse edit 001-guard-P07-frame-close",
+    "g12_candidate_driver_support_P07_v2.py unique reverse edit 002-captured-hook-direct-source-edges",
+    "g12_candidate_driver_support_P07_v2.py unique reverse edit 001-preexisting-error-slots",
+    "g12_candidate_driver_support_P07_v2.py entire inverse exactly predecessor",
+    "N22 only entire support block changed",
+    "N22 predecessor common/support block unique",
+    "N22 composed inverse driver line unique 124",
+    "N22 composed inverse driver line unique 183",
+    "N22 composed inverse driver line unique 369",
+    "N22 composed inverse driver line unique 925",
+    "N22 composed inverse driver line unique 1112",
+    "N22 composed inverse driver line unique 1116",
+    "N22 composed inverse driver line unique 1124",
+    "N22 composed inverse driver line unique 1167",
+    "N22 composed inverse driver line unique 1270",
+    "N22 composed successor-to-original complete byte inverse",
+    "N22 only three intended function ASTs changed",
+    "N22 preexisting clear flag and three empty raw slots",
+    "N22 exactly three designated secondary handlers",
+    "N22 secondary handler entire body guarded at 423",
+    "N22 unconditional BaseException suppression for new bookkeeping at 423",
+    "N22 flag then raw slot then optional journal at 423",
+    "N22 secondary handler entire body guarded at 452",
+    "N22 unconditional BaseException suppression for new bookkeeping at 452",
+    "N22 flag then raw slot then optional journal at 452",
+    "N22 secondary handler entire body guarded at 500",
+    "N22 unconditional BaseException suppression for new bookkeeping at 500",
+    "N22 flag then raw slot then optional journal at 500",
+    "N22 one designated raw slot per handler",
+    "N22 original primary bare raise remains after guarded exit handler",
+    "N22 clear flag never reset after initialization",
+    "N22 export gate retains all four conservative checks",
+    "N22 transport still None",
+    "N22 genuine unshadowed direct global edge main_epoch -> _g12_bind_locals",
+    "N22 genuine unshadowed direct global edge _g12_bind_locals -> _g12_helper_current",
+    "N22 genuine unshadowed direct global edge Phases.call -> _g12_after_phase",
+    "N22 genuine unshadowed direct global edge _g12_after_phase -> _g12_helper_current",
+    "N22 genuine unshadowed direct global edge _g12_selected_store -> _g12_helper_current",
+    "N22 genuine unshadowed direct global edge _g12_helper_current -> _g12_continuation_entry",
+    "N22 genuine unshadowed direct global edge _g12_helper_current -> _g12_after_original_exit",
+    "N22 genuine unshadowed direct global edge _g12_helper_current -> _g12_original_terminal_custody",
+    "N22 genuine unshadowed direct global edge _g12_continuation_entry -> _g12_after_original_exit",
+    "N22 genuine unshadowed direct global edge _g12_after_original_exit -> _g12_original_terminal_custody",
+    "N22 top-level actual invocation uses same entry name",
+    "P07 only entire support block changed",
+    "P07 predecessor common/support block unique",
+    "P07 composed inverse driver line unique 124",
+    "P07 composed inverse driver line unique 183",
+    "P07 composed inverse driver line unique 369",
+    "P07 composed inverse driver line unique 925",
+    "P07 composed inverse driver line unique 1112",
+    "P07 composed inverse driver line unique 1116",
+    "P07 composed inverse driver line unique 1124",
+    "P07 composed inverse driver line unique 1167",
+    "P07 composed inverse driver line unique 1270",
+    "P07 composed successor-to-original complete byte inverse",
+    "P07 only three intended function ASTs changed",
+    "P07 preexisting clear flag and three empty raw slots",
+    "P07 exactly three designated secondary handlers",
+    "P07 secondary handler entire body guarded at 423",
+    "P07 unconditional BaseException suppression for new bookkeeping at 423",
+    "P07 flag then raw slot then optional journal at 423",
+    "P07 secondary handler entire body guarded at 452",
+    "P07 unconditional BaseException suppression for new bookkeeping at 452",
+    "P07 flag then raw slot then optional journal at 452",
+    "P07 secondary handler entire body guarded at 500",
+    "P07 unconditional BaseException suppression for new bookkeeping at 500",
+    "P07 flag then raw slot then optional journal at 500",
+    "P07 one designated raw slot per handler",
+    "P07 original primary bare raise remains after guarded exit handler",
+    "P07 clear flag never reset after initialization",
+    "P07 export gate retains all four conservative checks",
+    "P07 transport still None",
+    "P07 genuine unshadowed direct global edge main_epoch -> _g12_bind_locals",
+    "P07 genuine unshadowed direct global edge _g12_bind_locals -> _g12_helper_current",
+    "P07 genuine unshadowed direct global edge Phases.call -> _g12_after_phase",
+    "P07 genuine unshadowed direct global edge _g12_after_phase -> _g12_helper_current",
+    "P07 genuine unshadowed direct global edge _g12_selected_store -> _g12_helper_current",
+    "P07 genuine unshadowed direct global edge _g12_helper_current -> _g12_continuation_entry",
+    "P07 genuine unshadowed direct global edge _g12_helper_current -> _g12_after_original_exit",
+    "P07 genuine unshadowed direct global edge _g12_helper_current -> _g12_original_terminal_custody",
+    "P07 genuine unshadowed direct global edge _g12_continuation_entry -> _g12_after_original_exit",
+    "P07 genuine unshadowed direct global edge _g12_after_original_exit -> _g12_original_terminal_custody",
+    "P07 top-level actual invocation uses same entry name"
+  ],
+  "findings_addressed": [
+    "G12-CANDIDATE-001",
+    "G12-CANDIDATE-002"
+  ],
+  "full_inverse": "Both complete successor drivers recover their pinned v1 drivers and complete original driver bytes; both support inverse recover pinned v1 support bytes.",
+  "inputs": {
+    "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_scientific_driver_v1.py": {
+      "bytes": 89606,
+      "sha256": "1e8202b7a4c17fc8dfb0a001085c26bf2ec26a69eb6c8501763773324c2bd9a1"
+    },
+    "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1/SOURCE-INVERSE-v1.json": {
+      "bytes": 8491,
+      "sha256": "083d171828102a8c138810d05f9110fc6136c2017a09ab11d8d63c433afd387e"
+    },
+    "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1/g12_cache_selector_source_v1.py": {
+      "bytes": 1537,
+      "sha256": "a9b4019ce368b6f89553ceb98c5451593d0d11ebda699dcb626cab323297375c"
+    },
+    "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1/g12_candidate_driver_N22_v1.py": {
+      "bytes": 126735,
+      "sha256": "46f515efa7ebdc60e20b64ef2ebdfb542ecb8c90371d339a951ccabb2a205e09"
+    },
+    "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1/g12_candidate_driver_P07_v1.py": {
+      "bytes": 126735,
+      "sha256": "e6f1038f5a75466d95fd3e8c3d44df483d76f97deff9f966bd6140b2d0bc28a7"
+    },
+    "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1/g12_candidate_driver_support_N22_v1.py": {
+      "bytes": 31921,
+      "sha256": "b4a8ec11d4b390d8a8f7167d8149b067be0572f977a1f2286c1719052437fccb"
+    },
+    "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1/g12_candidate_driver_support_P07_v1.py": {
+      "bytes": 31921,
+      "sha256": "a918ff01875267c4945a0dbc6d914a904c3eb38b9f5de8256bdc47394b19dcb7"
+    },
+    "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1/g12_common_source_v1.py": {
+      "bytes": 4517,
+      "sha256": "8ac6902915ec8afb09914fc5f229e175d864e6aae9fe367f127e1bbd654ed42a"
+    },
+    "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1/g12_epoch_authority_selector_v1.py": {
+      "bytes": 137642,
+      "sha256": "65b3d33068b0549ddb4a9e7e18a9912bebad69c309a8a29ae4fd532e9f428211"
+    },
+    "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1/g12_epoch_cache_selector_v1.py": {
+      "bytes": 172718,
+      "sha256": "20a8a94e96bfa6213d4f04244dabecf059b4c8c7e8ffa7e9409a8b87cfeef494"
+    },
+    "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-protocol-repair/DELTA-v2.json": {
+      "bytes": 3304,
+      "sha256": "ab8420e82d30e04185dcb1f42b213906c36b3103dc90cf1523c4d72c3efbe097"
+    },
+    "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-protocol-repair/FREEZE-v2.json": {
+      "bytes": 4764,
+      "sha256": "716dfb49f659651eb41c0965a2189db6efcad1587b25e307b19523bfbd05c7d3"
+    },
+    "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-protocol-repair/SOURCE-INVERSE-v2.json": {
+      "bytes": 7471,
+      "sha256": "baa1dcf93dd4246be19f75fcedba9fdb614267c39ac89882ed22d234461b0466"
+    },
+    "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-protocol-repair/SOURCE-MAP-v2.json": {
+      "bytes": 17778,
+      "sha256": "04f0e573d6df6c0ef278758db0ac0b991e79a9904f5da3ce50d122b046f70c29"
+    },
+    "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-protocol-repair/STATIC-VERIFICATION-v2.json": {
+      "bytes": 32201,
+      "sha256": "7589715b307f4e840634b0ad8686cf0e3e5b4981076dc6300f7f38a4b246d2f7"
+    },
+    "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-protocol-repair/g12_candidate_driver_N22_v2.py": {
+      "bytes": 128331,
+      "sha256": "a2d7fcaa1d3267bb43f14bfa1422759f77ede73641ed1f2a4fe55448792eec4a"
+    },
+    "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-protocol-repair/g12_candidate_driver_P07_v2.py": {
+      "bytes": 128331,
+      "sha256": "dc0e3c32a2412d8a872f8568ecbaff99a41785fadd79b0bbfc2341e0e51ede74"
+    },
+    "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-protocol-repair/g12_candidate_driver_support_N22_v2.py": {
+      "bytes": 33517,
+      "sha256": "5b7709012375e7e6600840c2c86bf90f44382499d1670b15ce325b30c14a2b48"
+    },
+    "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-protocol-repair/g12_candidate_driver_support_P07_v2.py": {
+      "bytes": 33517,
+      "sha256": "7c41cb423b18df69de48573817f92fae1a21be2751af7ad97768480ffa0b4a19"
+    },
+    "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-protocol-independent/FREEZE-v2.json": {
+      "bytes": 3091,
+      "sha256": "add8245e21be2a902556837090dd454989bb5e4f97e4821fefdcf7b41c2b308d"
+    },
+    "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-protocol-independent/G12-CANDIDATE-PROTOCOL-REVIEW-v1.json": {
+      "bytes": 33560,
+      "sha256": "feecd63be55243fe2a7d07da8ac1f7cfcec6558362e694b82219a1be232ab7bc"
+    },
+    "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-protocol-independent/GRAPH-ADDENDUM-v1.json": {
+      "bytes": 13092,
+      "sha256": "d78a97545c84854b5da0905485c232030f7b4d3884bd51088c2d3ffa604632dd"
+    },
+    "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-protocol-independent/STATIC-VERIFICATION-v1.json": {
+      "bytes": 13784,
+      "sha256": "e6db24ed8e2dd7927cab57680af61e8cde80b2b6a3e117630af3434c64f0b46b"
+    }
+  },
+  "method": "Only text/hash/AST; author checker and all target sources/helpers unexecuted",
+  "prior_checks_carried": 81,
+  "schema": "g12-candidate-successor-independent-static-delta-v2",
+  "source_graph_edges": {
+    "N22": {
+      "actual_top_level_entry_line": 1878,
+      "edges": [
+        {
+          "load_lines": [
+            1167
+          ],
+          "source": "main_epoch",
+          "target": "_g12_bind_locals"
+        },
+        {
+          "load_lines": [
+            1554
+          ],
+          "source": "_g12_bind_locals",
+          "target": "_g12_helper_current"
+        },
+        {
+          "load_lines": [
+            369
+          ],
+          "source": "Phases.call",
+          "target": "_g12_after_phase"
+        },
+        {
+          "load_lines": [
+            1617
+          ],
+          "source": "_g12_after_phase",
+          "target": "_g12_helper_current"
+        },
+        {
+          "load_lines": [
+            1460,
+            1482,
+            1494
+          ],
+          "source": "_g12_selected_store",
+          "target": "_g12_helper_current"
+        },
+        {
+          "load_lines": [
+            1424,
+            1425
+          ],
+          "source": "_g12_helper_current",
+          "target": "_g12_continuation_entry"
+        },
+        {
+          "load_lines": [
+            1426,
+            1427
+          ],
+          "source": "_g12_helper_current",
+          "target": "_g12_after_original_exit"
+        },
+        {
+          "load_lines": [
+            1428,
+            1429
+          ],
+          "source": "_g12_helper_current",
+          "target": "_g12_original_terminal_custody"
+        },
+        {
+          "load_lines": [
+            1864
+          ],
+          "source": "_g12_continuation_entry",
+          "target": "_g12_after_original_exit"
+        },
+        {
+          "load_lines": [
+            1797
+          ],
+          "source": "_g12_after_original_exit",
+          "target": "_g12_original_terminal_custody"
+        }
+      ],
+      "outer_chain_definition_spans": {
+        "_g12_after_original_exit": [
+          1773,
+          1829
+        ],
+        "_g12_continuation_entry": [
+          1832,
+          1873
+        ],
+        "_g12_helper_current": [
+          1407,
+          1431
+        ],
+        "_g12_original_terminal_custody": [
+          1749,
+          1770
+        ]
+      }
+    },
+    "P07": {
+      "actual_top_level_entry_line": 1878,
+      "edges": [
+        {
+          "load_lines": [
+            1167
+          ],
+          "source": "main_epoch",
+          "target": "_g12_bind_locals"
+        },
+        {
+          "load_lines": [
+            1554
+          ],
+          "source": "_g12_bind_locals",
+          "target": "_g12_helper_current"
+        },
+        {
+          "load_lines": [
+            369
+          ],
+          "source": "Phases.call",
+          "target": "_g12_after_phase"
+        },
+        {
+          "load_lines": [
+            1617
+          ],
+          "source": "_g12_after_phase",
+          "target": "_g12_helper_current"
+        },
+        {
+          "load_lines": [
+            1460,
+            1482,
+            1494
+          ],
+          "source": "_g12_selected_store",
+          "target": "_g12_helper_current"
+        },
+        {
+          "load_lines": [
+            1424,
+            1425
+          ],
+          "source": "_g12_helper_current",
+          "target": "_g12_continuation_entry"
+        },
+        {
+          "load_lines": [
+            1426,
+            1427
+          ],
+          "source": "_g12_helper_current",
+          "target": "_g12_after_original_exit"
+        },
+        {
+          "load_lines": [
+            1428,
+            1429
+          ],
+          "source": "_g12_helper_current",
+          "target": "_g12_original_terminal_custody"
+        },
+        {
+          "load_lines": [
+            1864
+          ],
+          "source": "_g12_continuation_entry",
+          "target": "_g12_after_original_exit"
+        },
+        {
+          "load_lines": [
+            1797
+          ],
+          "source": "_g12_after_original_exit",
+          "target": "_g12_original_terminal_custody"
+        }
+      ],
+      "outer_chain_definition_spans": {
+        "_g12_after_original_exit": [
+          1773,
+          1829
+        ],
+        "_g12_continuation_entry": [
+          1832,
+          1873
+        ],
+        "_g12_helper_current": [
+          1407,
+          1431
+        ],
+        "_g12_original_terminal_custody": [
+          1749,
+          1770
+        ]
+      }
+    }
+  },
+  "target_operations": 0,
+  "verified_delta_check_count": 126
+}

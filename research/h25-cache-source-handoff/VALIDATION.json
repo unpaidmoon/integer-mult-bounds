@@ -1,0 +1,34 @@
+{
+  "all_original_bytes_and_sha256_match": true,
+  "all_selected_json_parses": true,
+  "artifact_files": 111,
+  "compiler_operations": 0,
+  "complete_physical_time": null,
+  "created_utc": "2026-10-31T03:19:38.752435+00:00",
+  "decoder_operations": 0,
+  "historical_review_evidence_only": true,
+  "metadata_check_elapsed_seconds": 0.05738557002041489,
+  "new_candidate_acceptance": false,
+  "new_independent_semantic_review": false,
+  "original_content_bytes": 4158563,
+  "publication_tail": "OPEN_NOT_ZERO",
+  "relative_document_links_checked": 19,
+  "required_freeze_and_p02_pin_references_mapped": 53,
+  "review_decisions": {
+    "g12_integration": "REJECTED_TWO_ESTABLISHED_SOURCE_DEFECTS_BOUNDED_REVIEW",
+    "g12_local": "ACCEPT_BOUNDED_CANDIDATE_PROTOCOL_SOURCE_V2",
+    "p02_bridge_design": "ACCEPT_EXACT_V4_REFERENCE_BRIDGE_SOURCE_DESIGN_ONLY",
+    "p02_local": "ACCEPT_LOCAL_PROTOCOL_SOURCE_ONLY_REFERENCE_BRIDGE_CLOSED"
+  },
+  "runtime_closure_claimed": false,
+  "schema": "h25-cache-source-handoff-metadata-validation-v1",
+  "scientific_operations": 0,
+  "target_operations": 0,
+  "unrun": [
+    "target source imports and helper execution",
+    "complete dependency reconstruction",
+    "candidate implementation/adoption",
+    "complete caller and original runtime controls",
+    "scientific replay and complete performance measurement"
+  ]
+}

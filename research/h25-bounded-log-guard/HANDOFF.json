@@ -1,0 +1,36 @@
+{
+  "adapter_revision": {
+    "change": "Only private external JOBS.json and STAGE.json copies are chmod 0644 before rewriting; both are resealed 0444 by the existing code. No copied directory permissions, runner, controls, schemas or historical evidence are changed.",
+    "failed_attempts": "Parent retains failed exact-source package and /tmp/h25-bounded-log-guard-nqyca56a; worker neither reads nor removes them.",
+    "previous_verify_sha256": "8dac019a692e95819b55764740ec83b9f9cec761dc54b6bd1bea852ec4dca3d2",
+    "reason": "Parent release check exposed copytree preserving read-only metadata modes and raising PermissionError before controls.",
+    "validation": "Source-only AST/JSON/hash checks; fresh parent source admission and replay pending.",
+    "verify_sha256": "1ca1670712540d9089e9d5928101055e1a172438e3f64d167053fa2152c08d15"
+  },
+  "author": "Chris R / Clear1nsight",
+  "canonical_base": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "historical_review_sha256": "bce18e269d06e2f2ca0e518996e5ea8186bdba2b610375b82030df175ef8a7fa",
+  "manifest_contract": "MANIFEST.json covers every shipped regular file except itself. Fresh runtime/results are external; no mutable local result is shipped. Manifest and handoff are pending coordinated parent freeze.",
+  "nested_paths": [
+    "frozen-stage/{STAGE.json,JOBS.json,CONTROL-BILL.json,runner_under_test.py}",
+    "frozen-stage/integration/{file_controls.py,full_driver.py}",
+    "historical/{INTERFACE.txt,PROPOSAL.json,SOURCE-MANIFEST.json,REVIEW.json}"
+  ],
+  "parent_obligations": [
+    "Execute normal and optimized registered commands serially and retain their external workspaces/expected STOP evidence.",
+    "Run upstream package metadata checks against committed exact task provenance.",
+    "Recompute MANIFEST.json after any package change, then rerun affected checks.",
+    "Record complete actual publication accounting without fabricating historical costs or receipt tails.",
+    "Finalize publication Git metadata and hosted CI independently; no publication PASS is claimed by this handoff."
+  ],
+  "schema": "h25-log-guard-source-only-handoff-v1",
+  "source_root": "outputs/h25-data-handling-20261028",
+  "status": "PENDING_PARENT_VALIDATION",
+  "upstream_destination": "research/h25-bounded-log-guard",
+  "worker_checks": [
+    "stdlib AST parsing of Python sources",
+    "stdlib JSON syntax parsing",
+    "exact byte-copy SHA256 and size conservation"
+  ],
+  "worker_executed_code": false
+}

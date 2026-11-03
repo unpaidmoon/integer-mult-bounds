@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "d59b5035e7b4cbaa9d688a1d32dd0d6eb79c466a",
+      "sha256": "9b8d0eea95b3bf0dfcb7938a732a6439b87a2685dec2a5ab9e525b3b34debbfa"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "3404fbdd5e7529a0674eef26114b5071e4586cec",
+      "sha256": "ead6cdc9d0af6d58e8a49744d8ec8c7c15e13d2ba93c276c434bcf9b51b93a81"
+    },
+    {
+      "path": "research/scale-dependent-seed-moment-audit/README.md",
+      "usage": "provenance",
+      "git_blob": "39c8248430c2c8a3a73060052ebb2000c564b475",
+      "sha256": "57763765566907080dce9c68322efc86f8937dee6cb069ca9dcb01124ba9b8ed"
+    },
+    {
+      "path": "research/idea-a-spectral-radius-screen/README.md",
+      "usage": "provenance",
+      "git_blob": "f41c8e88e4558037184a2d75ae0b8e1c74ed4e40",
+      "sha256": "a9bd86f8e19171a8b2b58bccf6e3009cd0a71c5e9ea0d6ddb8e9a8dff7240cc9"
+    },
+    {
+      "path": "research/kappa-action-theory/volumes/04-analytic.md",
+      "usage": "provenance",
+      "git_blob": "b2f539798e71f2ad1a499480d39704f82c32bf07",
+      "sha256": "b95ce636445ffeb0ad13e6ab66b7dc8c1d2d40a9f3f1d225104e4a2c7db6e45e"
+    }
+  ]
+}

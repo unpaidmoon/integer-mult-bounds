@@ -1,0 +1,2770 @@
+{
+  "schema": "cache-s0308-52-body-coverage-source-spec-v1",
+  "status": "SOURCE_SPECIFICATION_DRAFT_FOR_PEER_REVIEW",
+  "created_utc": "2026-10-31T00:04:15.492508+00:00",
+  "scope": "Original52 cache helper bodies only, minimum63 explicit selections, grouped into13 reusable original checkpoints. No target execution, runtime admission or wider212 reallocation.",
+  "counts": {
+    "original_public_bodies": 52,
+    "minimum_explicit_invocation_selections": 63,
+    "checkpoint_groups": 13,
+    "existing_finite_factory_selected_bodies": 2,
+    "P08_body_derivative_pending_other_lane": 1,
+    "other_bodies_without_current_selected_entry": 49,
+    "runtime_results": 0
+  },
+  "count_limit": "63 is the minimum explicit variant expansion, not proof of exhaustive fixture/request-kind/mode coverage; N13 label/residual and each original fixture/oracle requirement remain visible.",
+  "source_references": [
+    {
+      "id": "HELPER",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-full-contract-completion-v1/cache_epoch_source_controls.py",
+      "sha256": "fcffe77b6a84d5b422b03e3d068924a701c1594cdb9ec305115827e3fad7d4b6",
+      "bytes": 65591
+    },
+    {
+      "id": "CONTEXTS",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/SOURCE-CASE-CONTEXTS.json",
+      "sha256": "4eeb55857ff84aff47c17aaa3736bbeba2d525d1ed9ea129ffd35272669b00ff",
+      "bytes": 19587
+    },
+    {
+      "id": "CACHE",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_cache_products_v1.py",
+      "sha256": "d317c9866566cd6147c96566879f26f364e7e6801ac3eed0800b6ed8eedd01a2",
+      "bytes": 171075
+    },
+    {
+      "id": "DRIVER",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_scientific_driver_v1.py",
+      "sha256": "1e8202b7a4c17fc8dfb0a001085c26bf2ec26a69eb6c8501763773324c2bd9a1",
+      "bytes": 89606
+    },
+    {
+      "id": "DATA",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_data_products_v1.py",
+      "sha256": "18679fd1eb6ae99c4b375756511427c26718f77674c2d8fcc490e25ceb47cba5",
+      "bytes": 103903
+    },
+    {
+      "id": "AUTHORITY",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_authority_products_v1.py",
+      "sha256": "f279ab86fc17c6a517b035f19d56863919cbd8304de4e7d5332457c6159aec10",
+      "bytes": 137642
+    },
+    {
+      "id": "ORIGINAL_CIRCUIT",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/engine/source/complex_circuit.py",
+      "sha256": "d623617f7c5cb3189580883a8ab30c0bd3832688ae3f1f0c1f881bbbbff8e0c1",
+      "bytes": 19732
+    },
+    {
+      "id": "ORIGINAL_FULL_SCRIPT",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/engine/source/complex_network.py",
+      "sha256": "0da395e67ac04fa213494e71012c1b19b544596d34cdce5a3b172b1fb6af5f1b",
+      "bytes": 6105
+    },
+    {
+      "id": "UNCACHED_CONTROLS",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/areas/cache-validity/cache_controls_v8.py",
+      "sha256": "8ac3ccf5a3923d46c3f470d2cb1d2d1440fb72ad4344f4c08501c12d7be6ad1d",
+      "bytes": 100708
+    },
+    {
+      "id": "LEGACY_CONTROL_CALLER",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/integration/data_adapters.py",
+      "sha256": "c00c9c215d0b81a91dd5dffddacfd2225c4bc40fe3ba43c7b93677bb686591cc",
+      "bytes": 80465
+    },
+    {
+      "id": "FINITE_FACTORY",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-genuine-context-v1/cache_epoch_context_assembly_v1.py",
+      "sha256": "9c2c5ffdbfc692b48ddba780258df7694ba376ef43e7d5ab14e8760a041851ad",
+      "bytes": 81941
+    },
+    {
+      "id": "OWNER_FAULTS",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/CONTROL-FAULT-SOURCE-PINS.json",
+      "sha256": "acd47a2097495eb3f3455ec579fa408fc9126140ac3cb2e77ddc1804ad70491b",
+      "bytes": 3349
+    },
+    {
+      "id": "CLI_V3_FAULTS",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/CLI-FAULT-SOURCE-PINS-v3.json",
+      "sha256": "d3733658f54067edcc518c4222559b0f2bc040aab6e43b6facf30dc98a8798fb",
+      "bytes": 7020
+    },
+    {
+      "id": "CLI_V4_FAULTS",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/CLI-FAULT-SOURCE-PINS-v4.json",
+      "sha256": "7900cfc574374ffc21d9f8d512ccc20d7ed02980d138bf84e86b89756cbd883a",
+      "bytes": 6691
+    },
+    {
+      "id": "MAIN_V5_FAULTS",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/OUTER-FAULT-SOURCE-PINS-v5.json",
+      "sha256": "c4d8d7daffa60f3ae0a97995829127d0fcf144a01a61b840ed9d3bbcc368ed4d",
+      "bytes": 3655
+    },
+    {
+      "id": "AUTHORIZATION",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v1/parent/AUTHORIZATION-v1.json",
+      "sha256": "6a1c639c18ceb486290a9d45290d0e1b189e85ace94c518021d8997054a5905f",
+      "bytes": 2433
+    },
+    {
+      "id": "SC5",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/strict-source-review-20261030T231709Z/parent/NEXT-SOURCE-CHECKLIST-v1.json",
+      "sha256": "0c0ed109bd6d1bdbfa457c2f25c437b5a97cad44fd590b989d0fb74cd20544ce",
+      "bytes": 8029
+    }
+  ],
+  "checkpoint_groups": [
+    {
+      "id": "G01",
+      "name": "Original cold load admission",
+      "cases": [
+        "N01"
+      ],
+      "checkpoint": [
+        {
+          "source": "DRIVER",
+          "lines": [
+            [
+              1092,
+              1095
+            ]
+          ]
+        },
+        {
+          "source": "AUTHORITY",
+          "lines": [
+            [
+              1227,
+              1238
+            ]
+          ]
+        }
+      ],
+      "recipe": "Use genuine Root-created driver entry, descriptor and backend handle already owned by original prepare. At the fixed source selector immediately before original epoch_load, pass the original bundle to unchanged N01; its foreign object is deliberately rejected by actual load admission. Preserve real parent cleanup.",
+      "fields": "bundle; optional native binding only if one genuinely exists already",
+      "construction_class": "BOUNDED_FIXED_SELECTOR_MISSING",
+      "mode": "FINITE_SOURCE_BOTH_MODES_IF_ORIGINAL_FINITE_ENTRY_SEPARATELY_ADMITTED; full main remains normal-only",
+      "oracle": "Original dispatcher/handle rejection with no original arithmetic; no fabricated Root or handle."
+    },
+    {
+      "id": "G02",
+      "name": "Real load ticket and acquired-owner factory boundary",
+      "cases": [
+        "N02",
+        "V2_OWNER_FIRST_CAPTURE",
+        "V2_OWNER_LATE_GRAPH"
+      ],
+      "checkpoint": [
+        {
+          "source": "DATA",
+          "lines": [
+            [
+              1358,
+              1372
+            ]
+          ]
+        },
+        {
+          "source": "AUTHORITY",
+          "lines": [
+            [
+              1237,
+              1239
+            ],
+            [
+              1285,
+              1307
+            ]
+          ]
+        }
+      ],
+      "recipe": "Use actual load module/ticket and original factory arguments. N02 enters after real epoch_acquisition allocation1363-1365 and before factories1366, mutates only the owned echelon slot and calls the unchanged helper. The owner-fault cases enter original install_epoch_circuit with their separately pinned first/late authority+driver images, so real prepare publishes the parent-owned record before the declared fault. Never synthesize epoch_acquisition or prepared/owner records.",
+      "fields": "state,module,load_ticket,factory_arguments,extensions,comparison,factory_context,bundle,data_module,authority_module",
+      "construction_class": "EXISTING_FAULT_IMAGES_PLUS_BOUNDED_FIXED_SELECTORS",
+      "mode": "FINITE_SOURCE_BOTH_MODES_IF_EXACT_ENTRY_ADMITTED",
+      "oracle": "First fault keeps origin_handle None; late fault keeps actual returned origin handle; exact intended admit frame/error and original one-shot owner cleanup."
+    },
+    {
+      "id": "G03",
+      "name": "Authentic unarmed Suite before native final binding",
+      "cases": [
+        "N03",
+        "N04",
+        "N05",
+        "N06",
+        "N07",
+        "N08",
+        "N09",
+        "N18",
+        "N24",
+        "V2_ORIGIN_FIRST_ALL_ROUTES",
+        "V3_INSTANCE_KEY_DOMAIN",
+        "V3_FIXED_RECORD_BINDINGS",
+        "V3_INSTANCE_METHOD_SHADOW",
+        "V3_INSTANCE_STATE_SCHEMA"
+      ],
+      "checkpoint": [
+        {
+          "source": "DATA",
+          "lines": [
+            [
+              1372,
+              1393
+            ]
+          ]
+        },
+        {
+          "source": "AUTHORITY",
+          "lines": [
+            [
+              1309,
+              1328
+            ],
+            [
+              1413,
+              1419
+            ],
+            [
+              1490,
+              1501
+            ]
+          ]
+        },
+        {
+          "source": "CACHE",
+          "lines": [
+            [
+              1984,
+              2011
+            ],
+            [
+              2044,
+              2070
+            ]
+          ]
+        }
+      ],
+      "recipe": "Capture actual returned state.epoch_suite after original derive/install and before driver final_native_binding. N03/N07 require actual FACTORIES_ADMITTED or CALLERS_INSTALLED; do not advance or reset phase. Keep original FULLNone tuple for N24 and a distinct fresh generation for N18, which calls actual retire then arm. Each origin route and each instance variant uses a distinct source-selected cold generation; restore only the helper-owned fault binding and discard the failed generation.",
+      "fields": "state,bundle,authority_module,cache_module,module,foreign_function,foreign_class,invocation_token; route_index/fixed_record_field/state_schema_field as exact literal variant",
+      "construction_class": "BOUNDED_FIXED_SELECTORS_OVER_EXISTING_GENUINE_RETURN",
+      "mode": "FINITE_SOURCE_BOTH_MODES_IF_EXACT_ENTRY_ADMITTED; N18/N24 refuse before optimize guard",
+      "oracle": "Exact intended source guard/type/args/frame; foreign equality/origin callbacks remain uncalled. N18 retired/consumed refusal precedes FULL; N24 fresh FULLNone refusal is distinct."
+    },
+    {
+      "id": "G04",
+      "name": "Authentic row-derived AST packet",
+      "cases": [
+        "N11"
+      ],
+      "checkpoint": [
+        {
+          "source": "CACHE",
+          "lines": [
+            [
+              1734,
+              1750
+            ],
+            [
+              2531,
+              2557
+            ]
+          ]
+        }
+      ],
+      "recipe": "At original bind_epoch_cache_backend after actual row producer returned and its registered callable/AST inverse checks passed, retain the original row FunctionDef from that exact packet. Invoke unchanged N11 on a deep copied mutation; preserve actual original node and producer identity. Do not substitute an arbitrary AST having the right shape.",
+      "fields": "state,bundle,registered_row_bind_ast,cache_module",
+      "construction_class": "BOUNDED_FIXED_SELECTOR_AND_RETAINED_ORIGINAL_LOCAL",
+      "mode": "FINITE_SOURCE_BOTH_MODES_IF_EXACT_ENTRY_ADMITTED",
+      "oracle": "Exact production _epoch_locations structural mismatch; original registered row AST remains unchanged."
+    },
+    {
+      "id": "G05",
+      "name": "Actual clone return before final binding capture",
+      "cases": [
+        "N10"
+      ],
+      "checkpoint": [
+        {
+          "source": "CACHE",
+          "lines": [
+            [
+              2606,
+              2609
+            ],
+            [
+              2240,
+              2247
+            ]
+          ]
+        },
+        {
+          "source": "AUTHORITY",
+          "lines": [
+            [
+              1464,
+              1483
+            ]
+          ]
+        }
+      ],
+      "recipe": "Retain actual clone result at cache2606 after real raw RuntimeGuard initialization and before finish call2609. Require origin GLOBALS_COMMITTED, result.runtime_guard is origin.raw_guard and owner.runtime is same actual raw object. Pass that result as binding and call N10; no phase/runtime replacement.",
+      "fields": "state,bundle,module,binding",
+      "construction_class": "BOUNDED_FIXED_SELECTOR_AT_EXISTING_RETURN",
+      "mode": "FINITE_SOURCE_BOTH_MODES_IF_EXACT_ENTRY_ADMITTED",
+      "oracle": "Added source slot must fail exact Epoch source namespace owner/census at actual ledger.check, not an earlier phase/raw mismatch."
+    },
+    {
+      "id": "G06",
+      "name": "Sealed but unarmed source objects and exact CLI fault tuples",
+      "cases": [
+        "N23",
+        "V2_ROLE_CLEANUP_ONLY",
+        "P03",
+        "P08",
+        "V4_ROLE_RAW_JOURNAL",
+        "V4_CLI_RAW_JOURNAL"
+      ],
+      "checkpoint": [
+        {
+          "source": "DRIVER",
+          "lines": [
+            [
+              1108,
+              1137
+            ],
+            [
+              1160,
+              1168
+            ]
+          ]
+        },
+        {
+          "source": "CACHE",
+          "lines": [
+            [
+              2304,
+              2316
+            ]
+          ]
+        },
+        {
+          "source": "ORIGINAL_CIRCUIT",
+          "lines": [
+            [
+              26,
+              42
+            ],
+            [
+              267,
+              269
+            ]
+          ]
+        },
+        {
+          "source": "HELPER",
+          "lines": [
+            [
+              337,
+              379
+            ],
+            [
+              400,
+              415
+            ],
+            [
+              481,
+              508
+            ],
+            [
+              725,
+              750
+            ]
+          ]
+        }
+      ],
+      "recipe": "Use exact real load/install/bind/construction-set-epoch sealing. Construct ComplexSideCircuit(8) and Checks through installed authentic constructors while original set owner remains unused and Suite unarmed. No private C1 registry is created in this prearm path. P03 only needs genuine SEALED guard state, not fixtures. Role cases call actual role product while unarmed. P08 and V4 CLI variants use exact original protected boundary and pinned source tuple/script. P08 body requires the separately reviewed captured(original,observed) phase-wrapper repair, never W-is-L.",
+      "fields": "state,bundle,module,cache_module,authority_module,driver_module,data_module,extensions,phases,invocation_token,circuit,checks,case_kind,case_script_path",
+      "construction_class": "P08_BODY_DERIVATIVE_IN_OTHER_LANE_PENDING_REVIEW; OTHER_FIXED_SELECTORS_MISSING",
+      "mode": "P08_BODY_NORMAL_ONLY; early source faults and role/public modes require separately admitted exact finite or full caller",
+      "oracle": "P08 body actual labels AttributeError and distinct primary/disarm/retirement raw identities; unarmed role KeyError or cleanup-only primary; exact source tuple, argv pointer and terminal ownership preserved."
+    },
+    {
+      "id": "G07",
+      "name": "Original baseline prearm CLI cleanup variants",
+      "cases": [
+        "V3_CLI_DISARM_ONLY",
+        "V3_CLI_BODY_DISARM",
+        "V3_CLI_BODY_DISARM_RETIREMENT",
+        "V4_ARGV_ONLY",
+        "V4_BODY_ARGV_DISARM_RETIREMENT",
+        "V4_ARGV_DISARM_RETIREMENT",
+        "V4_ARGV_BEFORE_DISARM_RETIREMENT"
+      ],
+      "checkpoint": [
+        {
+          "source": "HELPER",
+          "lines": [
+            [
+              597,
+              637
+            ],
+            [
+              658,
+              707
+            ]
+          ]
+        },
+        {
+          "source": "DRIVER",
+          "lines": [
+            [
+              1094,
+              1095
+            ],
+            [
+              1102,
+              1103
+            ],
+            [
+              1160,
+              1168
+            ]
+          ]
+        }
+      ],
+      "recipe": "Select original baseline prepare/install/bind/seal path so state.arm is baseline, enabled False and epoch_suite absent by genuine source outcome. Use exact V3/V4 five-image tuple and normal or body-failure script; actual set arm and protected CLI/argv/disarm occur unchanged. Fresh owner per variant; no candidate state toggling.",
+      "fields": "driver_module,state,extensions,checks,phases,case_script_path,authority_module,cache_module",
+      "construction_class": "EXISTING_FAULT_IMAGES_PLUS_BOUNDED_FIXED_SELECTORS",
+      "mode": "NORMAL_OR_OPTIMIZED_ONLY_WHEN_GENUINE_BASELINE_ENTRY_ALLOWS; full main optimize refusal cannot count",
+      "oracle": "Exact body/argv/disarm/retirement error objects and frames; before-restore variant observes unrestored pointer before fixture parent restores its own argv."
+    },
+    {
+      "id": "G08",
+      "name": "Genuine armed private/public caller fixtures",
+      "cases": [
+        "N12",
+        "N16",
+        "N19",
+        "N21",
+        "P01",
+        "P02",
+        "P04",
+        "P05",
+        "P06"
+      ],
+      "checkpoint": [
+        {
+          "source": "CACHE",
+          "lines": [
+            [
+              2063,
+              2070
+            ],
+            [
+              2084,
+              2121
+            ],
+            [
+              2133,
+              2159
+            ]
+          ]
+        },
+        {
+          "source": "ORIGINAL_CIRCUIT",
+          "lines": [
+            [
+              267,
+              311
+            ],
+            [
+              335,
+              348
+            ]
+          ]
+        },
+        {
+          "source": "ORIGINAL_FULL_SCRIPT",
+          "lines": [
+            [
+              90,
+              108
+            ]
+          ]
+        }
+      ],
+      "recipe": "Use a fresh exact accepted normal full candidate tuple and original protected arm operations. Construct original circuit and Checks AFTER arm for private C1 registration; use actual constructors for C2/C3 via uncached valid active node and target tuple from that original circuit. Never reuse P08 prearm Checks. Public fallback controls begin with actual active metadata and then enter real public methods, proving retirement rather than starting retired. P02 uses complete original labels/roles in original order and independently owned original baseline oracle.",
+      "fields": "state,bundle,checks,circuit,code,binding,module,fresh_active_node,fresh_output_S,registered_label,replacement_basis,vectors,small,big,callback_small,callback_big,literal_expected,snapshots_before,rank_events,trace,actual_outputs and independently produced reference_*",
+      "construction_class": "FIXED_FULL_ENTRY_AND_FIXTURE_SELECTION_SOURCE_AUTHORABLE; FULL_CONTEXT_AND_REFERENCE_TRANSPORT_NOT_YET_BOUND",
+      "mode": "NORMAL_ONLY_FOR_GENUINE_ARMED_PRIVATE_BODY; optimized refusal is separate",
+      "oracle": "N12 must reach active wrong-site guard, P01 verifies actual C1/C2/C3 object pairing/counts, P02 exact typed/order/native/trace/output equality, public results use separate uncached original objects and retire private metadata."
+    },
+    {
+      "id": "G09",
+      "name": "Unchanged independent legacy control invocation",
+      "cases": [
+        "N20"
+      ],
+      "checkpoint": [
+        {
+          "source": "LEGACY_CONTROL_CALLER",
+          "lines": [
+            [
+              676,
+              691
+            ],
+            [
+              746,
+              770
+            ]
+          ]
+        },
+        {
+          "source": "UNCACHED_CONTROLS",
+          "lines": [
+            [
+              52,
+              57
+            ],
+            [
+              105,
+              106
+            ],
+            [
+              248,
+              268
+            ],
+            [
+              327,
+              345
+            ],
+            [
+              1822,
+              1830
+            ]
+          ]
+        }
+      ],
+      "recipe": "Invoke original source-owned data_controls route with exact original Root/capability/provider/native/environment handles and unchanged run_controls args/kwargs. This is its own real work, not a cached receipt. Use existing independent original reference loader and paired objects; do not repurpose its small SimpleNamespace fixture as a full P08 circuit.",
+      "fields": "legacy_controls,legacy_control_args,legacy_control_kwargs",
+      "construction_class": "EXISTING_AUTHENTIC_CALLER_REUSE_WITH_FIXED_SELECTION",
+      "mode": "EXISTING_FINITE_NORMAL_AND_OPTIMIZED_SEMANTICS",
+      "oracle": "Unchanged155 controls including exact canonical2 HIT/1 complement, wide1 fallback and12 caller/10 native consumer counts; does not migrate wider212 scope into S03.08."
+    },
+    {
+      "id": "G10",
+      "name": "Actual live and consumed request checkpoints",
+      "cases": [
+        "N13",
+        "N17"
+      ],
+      "checkpoint": [
+        {
+          "source": "CACHE",
+          "lines": [
+            [
+              2136,
+              2193
+            ]
+          ]
+        },
+        {
+          "source": "HELPER",
+          "lines": [
+            [
+              151,
+              156
+            ],
+            [
+              183,
+              186
+            ]
+          ]
+        }
+      ],
+      "recipe": "Run actual armed labels/roles caller with real registered operands and original caller capability. N13 needs the same actual req created2155, at entry-view stage1 before an entry view has been consumed; a fixed source-selected one-shot port must retain it without creating/resetting a dict. N17 retains that actual request across original finally2159 setting stage3, then calls unchanged N17. Both require exact derivative source/inverse and closed alias lifetime, not a generic callback.",
+      "fields": "state,bundle,live_request or consumed_request; actual checks/operands are members of original request",
+      "construction_class": "SOURCE_AUTHORABLE_FIXED_PORTS_REQUIRED; NO_CURRENT_GENUINE_RETAINED_REQUEST_SELECTOR",
+      "mode": "NORMAL_ONLY",
+      "oracle": "Equal-but-distinct registered key must fail exact request/key identity with no arithmetic; replay of actual consumed request refuses. Need label/residual fixture coverage adjudication beyond63 explicit variants."
+    },
+    {
+      "id": "G11",
+      "name": "Actual pending constructor and original store failure",
+      "cases": [
+        "N14",
+        "N15"
+      ],
+      "checkpoint": [
+        {
+          "source": "CACHE",
+          "lines": [
+            [
+              1770,
+              1795
+            ],
+            [
+              2084,
+              2129
+            ]
+          ]
+        },
+        {
+          "source": "ORIGINAL_CIRCUIT",
+          "lines": [
+            [
+              271,
+              286
+            ]
+          ]
+        },
+        {
+          "source": "HELPER",
+          "lines": [
+            [
+              159,
+              172
+            ]
+          ]
+        }
+      ],
+      "recipe": "N14 selects exact original active constructor interval after source has set pending2093 and before it clears; fixed one-shot source port invokes helper on actual pending object and permits original cleanup. N15 can use genuine postarm Checks and valid fresh node with a separately source-owned public cache mapping that raises at original Checks.label store285; original transformed C2 catches/cancels through unchanged inverse handler. Do not supply an invalid node that fails before intended constructor/store or fabricate pending/registry. Exact failure fixture and source-owner acceptance are still required.",
+      "fields": "state,bundle,checks,node,vectors; actual pending stays private and is never synthesized",
+      "construction_class": "N14_FIXED_SOURCE_PORT_MISSING; N15_BOUNDED_ORIGINAL_STORE_FAILURE_FIXTURE_SOURCE_AUTHORABLE",
+      "mode": "NORMAL_ONLY",
+      "oracle": "N14 nested constructor retires active metadata; N15 original caught constructor/store error is primary, pending/registry cleared, genuine secondary uncertainty preserved."
+    },
+    {
+      "id": "G12",
+      "name": "Real metadata-capacity boundary and remaining original work",
+      "cases": [
+        "N22",
+        "P07"
+      ],
+      "checkpoint": [
+        {
+          "source": "CACHE",
+          "lines": [
+            [
+              2106,
+              2121
+            ]
+          ]
+        },
+        {
+          "source": "HELPER",
+          "lines": [
+            [
+              227,
+              233
+            ],
+            [
+              330,
+              334
+            ]
+          ]
+        }
+      ],
+      "recipe": "Provide a fixed admissible original-input/constructor sequence that genuinely leaves85196 distinct retained original store-backed entries and a real pending next original store. All entries must arise from unchanged C1/C2/C3 constructors and original stores; no seeding/resizing/dummy tuples or lowered cap. N22 then calls original commit; P07 additionally needs exact remainder count/output from independent unchanged original caller under same input.",
+      "fields": "state,bundle,site,checks,registered_label,literal_expected,remaining_original_case_count,remaining_original_outputs,reference_remaining_case_count,reference_remaining_outputs",
+      "construction_class": "FIXTURE_REACHABILITY_AND_INDEPENDENT_REMAINDER_SOURCE_CONSTRUCTION_NOT_SUPPLIED",
+      "mode": "NORMAL_ONLY",
+      "oracle": "Actual threshold retirement and original fallback continuation; P07 proves no remaining original work skipped. Costliness alone is not a source impossibility, but a bare number85196 supplies neither fixture nor reachability."
+    },
+    {
+      "id": "G13",
+      "name": "Cold original main/STOP entries",
+      "cases": [
+        "V5_MAIN_PRIMARY_OUTER",
+        "V5_MAIN_CLEANUP_ONLY",
+        "V5_MAIN_ABSENT_RECORD"
+      ],
+      "checkpoint": [
+        {
+          "source": "HELPER",
+          "lines": [
+            [
+              758,
+              839
+            ]
+          ]
+        },
+        {
+          "source": "FINITE_FACTORY",
+          "lines": [
+            [
+              68,
+              86
+            ]
+          ]
+        },
+        {
+          "source": "DRIVER",
+          "lines": [
+            [
+              1246,
+              1270
+            ]
+          ]
+        }
+      ],
+      "recipe": "Each entry starts actual driver._EXECUTION state and packet None. Existing finite factory binds two baseline --finite-only entries and both optimize modes. Absent-record needs separate exact full candidate five-image tuple, normal mode, no --finite-only, actual _run_epoch_with_stop_evidence -> main_epoch and its fixed fault before CLI record allocation; never borrow P08 prepared state.",
+      "fields": "driver_module,authority_module,cache_module,argv",
+      "construction_class": "TWO_EXISTING_FINITE_SELECTIONS; ABSENT_RECORD_FULL_SELECTION_AND_CONTRACT_BINDING_MISSING",
+      "mode": "TWO_FINITE_CASES_BOTH_MODES; ABSENT_RECORD_NORMAL_ONLY",
+      "oracle": "Actual STOP primary frame and one-shot known-owner cleanup; absent-record distinct P/R1/J1/R2/J2 raw identities, independent inner/outer channels and transfer-before-ACK replay rejection."
+    }
+  ],
+  "case_matrix": [
+    {
+      "id": "N01",
+      "checkpoint": "G01",
+      "helper_lines": [
+        70,
+        72
+      ],
+      "public_function_ast_sha256": "dcd3c198eaa59decfe295e1a11cfb907431f3270efaacd8801bb685299cf4685",
+      "literal_function_span_sha256": "7dabbdcc6a0ab4412d66105a214079cd5746af36631a600bdbdaa58e7abef5ec",
+      "context_keys_read_in_transitive_local_helpers": [
+        "binding"
+      ],
+      "local_helper_dependencies": [
+        "_counts",
+        "_need",
+        "_reject"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "N02",
+      "checkpoint": "G02",
+      "helper_lines": [
+        75,
+        78
+      ],
+      "public_function_ast_sha256": "0bb95ed937076eaa989a23653fe333ddd99b4a9e22825d51751866fad65ff985",
+      "literal_function_span_sha256": "7afb1f868a7e01a56810a70d517f35986635c8d9f7599191fb70442da0a92a23",
+      "context_keys_read_in_transitive_local_helpers": [
+        "binding",
+        "factory_arguments",
+        "foreign_function",
+        "module"
+      ],
+      "local_helper_dependencies": [
+        "_counts",
+        "_need",
+        "_reject"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "N03",
+      "checkpoint": "G03",
+      "helper_lines": [
+        81,
+        86
+      ],
+      "public_function_ast_sha256": "a3ee7a20fe51addfd2e8a8447a586ab0e834b0e0e052d642b4f95f50ffca860c",
+      "literal_function_span_sha256": "3c42897d173a7554ed9f2f0bee910c705a6a6d3050822e2349249374f248fbb6",
+      "context_keys_read_in_transitive_local_helpers": [
+        "authority_module",
+        "binding",
+        "bundle",
+        "foreign_function",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_counts",
+        "_dispatch",
+        "_has_frame",
+        "_intended_error",
+        "_ledger",
+        "_live",
+        "_need",
+        "_reject"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "N04",
+      "checkpoint": "G03",
+      "helper_lines": [
+        90,
+        94
+      ],
+      "public_function_ast_sha256": "c0c7d74a27acf781624dd5815ad9f4436897810592e6c807708d0b81e45274c7",
+      "literal_function_span_sha256": "1d2d14c11b65eb50b7b078ed50da46b6e6e8ba4c752dbf237abce4607561db8b",
+      "context_keys_read_in_transitive_local_helpers": [
+        "binding",
+        "bundle",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_counts",
+        "_dispatch",
+        "_live",
+        "_need",
+        "_reject"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "N05",
+      "checkpoint": "G03",
+      "helper_lines": [
+        97,
+        99
+      ],
+      "public_function_ast_sha256": "f00bc0244c84988f5d7cb7211ca9b38e7101e09eae801bd707787754975cb7c4",
+      "literal_function_span_sha256": "3c4b4275eeb182df5110489ac7cd7e61ad855ec57380a50f781ab57b8accf42c",
+      "context_keys_read_in_transitive_local_helpers": [
+        "binding",
+        "bundle",
+        "foreign_class",
+        "module",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_counts",
+        "_dispatch",
+        "_live",
+        "_need",
+        "_reject"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "N06",
+      "checkpoint": "G03",
+      "helper_lines": [
+        102,
+        104
+      ],
+      "public_function_ast_sha256": "a4e9b5d5f01a7f86ec766f030e76e8eaf3c42cb4e3bbc6faa82b40360588531d",
+      "literal_function_span_sha256": "3db1e2ebe2e2031deeb168b60f9a8f93a53ebe0cfdcc5e5836d067914d6db47d",
+      "context_keys_read_in_transitive_local_helpers": [
+        "binding",
+        "bundle",
+        "foreign_function",
+        "module",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_counts",
+        "_dispatch",
+        "_live",
+        "_need",
+        "_reject"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "N07",
+      "checkpoint": "G03",
+      "helper_lines": [
+        107,
+        112
+      ],
+      "public_function_ast_sha256": "718deafd1bb769b96469adff18376b3212b18a091de4e8df3f1b4152be9397bb",
+      "literal_function_span_sha256": "c3003a0250a0fed949387c2c6b4151805e14c431767491b5a7cf65916772345a",
+      "context_keys_read_in_transitive_local_helpers": [
+        "authority_module",
+        "binding",
+        "bundle",
+        "foreign_function",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_counts",
+        "_dispatch",
+        "_has_frame",
+        "_intended_error",
+        "_ledger",
+        "_live",
+        "_need",
+        "_reject"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "N08",
+      "checkpoint": "G03",
+      "helper_lines": [
+        116,
+        120
+      ],
+      "public_function_ast_sha256": "bd34be4a35e6103591ff81af668160fdfee3e626317853dab730f95246697ae3",
+      "literal_function_span_sha256": "e82763569e80b4a5bfa1f4dd41b673865800c12bead8bb6aa89588f2724fe37c",
+      "context_keys_read_in_transitive_local_helpers": [
+        "authority_module",
+        "binding",
+        "bundle",
+        "foreign_function",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_counts",
+        "_dispatch",
+        "_ledger",
+        "_live",
+        "_need",
+        "_reject"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "N09",
+      "checkpoint": "G03",
+      "helper_lines": [
+        123,
+        125
+      ],
+      "public_function_ast_sha256": "84faca00cf9310dcd2a84bca58517a4a80b1f59874418a2cc7e16bd3b2bcf9bb",
+      "literal_function_span_sha256": "37aa258fceeb6115da08967a7b9f52acc84f5bc792e7e780132a847ebc28c68f",
+      "context_keys_read_in_transitive_local_helpers": [
+        "binding",
+        "bundle",
+        "module",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_counts",
+        "_dispatch",
+        "_live",
+        "_need",
+        "_reject"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "N10",
+      "checkpoint": "G05",
+      "helper_lines": [
+        128,
+        135
+      ],
+      "public_function_ast_sha256": "7eb1022be02c2635936afe60b421a60ddce16c5f6e9613bb2fac3836bcd665a3",
+      "literal_function_span_sha256": "021a18eaa404ef2d69a9ccceea6a1f28956b6be1cb7b44a2b5896eb62740cf94",
+      "context_keys_read_in_transitive_local_helpers": [
+        "authority_module",
+        "binding",
+        "bundle",
+        "module",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_counts",
+        "_dispatch",
+        "_has_frame",
+        "_intended_error",
+        "_ledger",
+        "_live",
+        "_need",
+        "_reject"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "N11",
+      "checkpoint": "G04",
+      "helper_lines": [
+        139,
+        143
+      ],
+      "public_function_ast_sha256": "88eb15f63c62f3b2ee960fdfc74dae20537fdd69a5ac6ae9cf5faec74084fd0e",
+      "literal_function_span_sha256": "847566f6c9e856af7b8d44b345668cc5710f3c22eb8d838076f65709ee4fe61a",
+      "context_keys_read_in_transitive_local_helpers": [
+        "binding",
+        "bundle",
+        "cache_module",
+        "registered_row_bind_ast",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_counts",
+        "_dispatch",
+        "_live",
+        "_need",
+        "_reject"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "N12",
+      "checkpoint": "G08",
+      "helper_lines": [
+        146,
+        148
+      ],
+      "public_function_ast_sha256": "aec33454fdfcf95671812886ed5132a4c5cc1d98fb69a0bc75fbf9051344d33f",
+      "literal_function_span_sha256": "aa7de83db487423a64a7b949a69af055dbc02aaf33d498c6ce7fa9741341294a",
+      "context_keys_read_in_transitive_local_helpers": [
+        "binding",
+        "bundle",
+        "checks",
+        "state",
+        "vectors"
+      ],
+      "local_helper_dependencies": [
+        "_counts",
+        "_dispatch",
+        "_live",
+        "_need",
+        "_reject"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "N13",
+      "checkpoint": "G10",
+      "helper_lines": [
+        151,
+        156
+      ],
+      "public_function_ast_sha256": "88595ad730b501c70f1745040e7a17767530cddef81bb53a25a82ed96bda9fbd",
+      "literal_function_span_sha256": "5d32113e89b541157ce5c55e7a39d32f5f246ed141f988b65c9d40a3e59c6842",
+      "context_keys_read_in_transitive_local_helpers": [
+        "binding",
+        "bundle",
+        "live_request",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_counts",
+        "_dispatch",
+        "_live",
+        "_need",
+        "_reject"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "N14",
+      "checkpoint": "G11",
+      "helper_lines": [
+        159,
+        163
+      ],
+      "public_function_ast_sha256": "62e97f8e372eff0e07fbc9fe7d821ec147752bfefc9032c36aa284e016ab12c8",
+      "literal_function_span_sha256": "184b0d16dbff5912fb364eeb8a8306f7c378354a4da637afe1763a99255a791a",
+      "context_keys_read_in_transitive_local_helpers": [
+        "binding",
+        "bundle",
+        "checks",
+        "node",
+        "state",
+        "vectors"
+      ],
+      "local_helper_dependencies": [
+        "_counts",
+        "_dispatch",
+        "_live",
+        "_need",
+        "_reject"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "N15",
+      "checkpoint": "G11",
+      "helper_lines": [
+        166,
+        172
+      ],
+      "public_function_ast_sha256": "81e1e245066509a549b9e921b41e1a8f1c8daa4eef2fbcdcf78a40cf8583462b",
+      "literal_function_span_sha256": "68700079eed8575affd445390fba126ffeed9df44fc030d5d39f53a616e1f87f",
+      "context_keys_read_in_transitive_local_helpers": [
+        "bundle",
+        "checks",
+        "node",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_dispatch",
+        "_live",
+        "_need"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "N16",
+      "checkpoint": "G08",
+      "helper_lines": [
+        175,
+        180
+      ],
+      "public_function_ast_sha256": "50059ab93e4944b460706dedd86ac6a5aeafc53480daad7b2e2b7847b70cfa39",
+      "literal_function_span_sha256": "0758ef00ca2b7bae5f8d1a986da5897ad8f6585f2b852b2ca48b46cb61853df8",
+      "context_keys_read_in_transitive_local_helpers": [
+        "binding",
+        "bundle",
+        "checks",
+        "module",
+        "state",
+        "vectors"
+      ],
+      "local_helper_dependencies": [
+        "_counts",
+        "_dispatch",
+        "_live",
+        "_need",
+        "_reject"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "N17",
+      "checkpoint": "G10",
+      "helper_lines": [
+        183,
+        186
+      ],
+      "public_function_ast_sha256": "f1fdf46b2ccca2be944afe2cf9c4713d987606b85a54c46fc3fcbbbfaeef5250",
+      "literal_function_span_sha256": "97f48a75976291483b6cb2bc9b2765791654dfffd16eea610775d61be5e0b8e8",
+      "context_keys_read_in_transitive_local_helpers": [
+        "binding",
+        "bundle",
+        "consumed_request",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_counts",
+        "_dispatch",
+        "_live",
+        "_need",
+        "_reject"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "N18",
+      "checkpoint": "G03",
+      "helper_lines": [
+        189,
+        193
+      ],
+      "public_function_ast_sha256": "a758c42795d96d498be2fef04858e28d7f43a104f76f9a45987415a08a037501",
+      "literal_function_span_sha256": "ce89b46bf724849d761acd672a8f195ebc73edcd38420f1e7b5620bd696dabf8",
+      "context_keys_read_in_transitive_local_helpers": [
+        "binding",
+        "bundle",
+        "invocation_token",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_counts",
+        "_dispatch",
+        "_has_frame",
+        "_intended_error",
+        "_live",
+        "_need",
+        "_reject"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "N19",
+      "checkpoint": "G08",
+      "helper_lines": [
+        197,
+        203
+      ],
+      "public_function_ast_sha256": "575c6ce65f322d116d7b7c1e0b69e1ce5ac4941330754254a2bbe40a1ef702b3",
+      "literal_function_span_sha256": "1c82c6921d94145239cbd5d7eb5055a8e8233b794f80e0014cba2ad69dd346e1",
+      "context_keys_read_in_transitive_local_helpers": [
+        "bundle",
+        "checks",
+        "literal_expected",
+        "registered_label",
+        "replacement_basis",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_dispatch",
+        "_live",
+        "_need"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "N20",
+      "checkpoint": "G09",
+      "helper_lines": [
+        206,
+        214
+      ],
+      "public_function_ast_sha256": "1482427ed9a485b65d6b9297e450e115e22e4cfcd21efbf01bf901f929cf43b0",
+      "literal_function_span_sha256": "458a775cf2890e3640017a609f2886c62a37b57aae7821200d214fa94f9b3ddd",
+      "context_keys_read_in_transitive_local_helpers": [
+        "legacy_control_args",
+        "legacy_control_kwargs",
+        "legacy_controls"
+      ],
+      "local_helper_dependencies": [
+        "_need"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "N21",
+      "checkpoint": "G08",
+      "helper_lines": [
+        217,
+        224
+      ],
+      "public_function_ast_sha256": "243cb31009a3f7ecce11205990a45a1f29ab6ce4316bb78f3f67236cc3e26579",
+      "literal_function_span_sha256": "fc66965e8fad7fa5c8753615bd2dbfb9091be65b08d65f2af076e1356b70355c",
+      "context_keys_read_in_transitive_local_helpers": [
+        "bundle",
+        "callback_big",
+        "callback_small",
+        "checks",
+        "literal_expected",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_dispatch",
+        "_live",
+        "_need"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "N22",
+      "checkpoint": "G12",
+      "helper_lines": [
+        227,
+        233
+      ],
+      "public_function_ast_sha256": "efb6c1aec28f37b1c85204f8ac9e00a5c7c6d77b8fb9cdfd980137a035ebfdb7",
+      "literal_function_span_sha256": "28ecf35b8063424cbe434988fdea2caa340da1d155e160192fc52bf29605c5df",
+      "context_keys_read_in_transitive_local_helpers": [
+        "bundle",
+        "checks",
+        "literal_expected",
+        "registered_label",
+        "site",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_dispatch",
+        "_live",
+        "_need"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "N23",
+      "checkpoint": "G06",
+      "helper_lines": [
+        236,
+        254
+      ],
+      "public_function_ast_sha256": "0ea6165e00f2e3eed14329d8975a903ad2de94e9c853bb6851de70814b77f6a0",
+      "literal_function_span_sha256": "12a26f613f67250fb017f3d30e2805ebe112ae9a24b73751eb06f646d0a293e5",
+      "context_keys_read_in_transitive_local_helpers": [
+        "bundle",
+        "checks",
+        "circuit",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_dispatch",
+        "_has_frame",
+        "_intended_error",
+        "_live",
+        "_need"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "N24",
+      "checkpoint": "G03",
+      "helper_lines": [
+        258,
+        264
+      ],
+      "public_function_ast_sha256": "80a775a9caee7df7c39158bf95bddcbe0a3a9fa7d8e697b37f422fb0a026ef49",
+      "literal_function_span_sha256": "7b643255a15e5122ee05e929d091d1286faac501a41d7823c9f079cddc896d7a",
+      "context_keys_read_in_transitive_local_helpers": [
+        "binding",
+        "cache_module",
+        "invocation_token",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_counts",
+        "_has_frame",
+        "_intended_error",
+        "_need",
+        "_reject"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "P01",
+      "checkpoint": "G08",
+      "helper_lines": [
+        268,
+        278
+      ],
+      "public_function_ast_sha256": "7d7f4ec8824d4144ce234e12f8a81a52ad20cf901b87c8ccc6d3c1e66ff0f211",
+      "literal_function_span_sha256": "b26d017ed9346f296822ade55e72422d0495aa5fa39d0cfe84f883bff1ab4033",
+      "context_keys_read_in_transitive_local_helpers": [
+        "bundle",
+        "checks",
+        "fresh_active_node",
+        "fresh_output_S",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_dispatch",
+        "_live",
+        "_need"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "P02",
+      "checkpoint": "G08",
+      "helper_lines": [
+        281,
+        292
+      ],
+      "public_function_ast_sha256": "6228f17f13accdec4eece1ca8a7cc3b010b6ecd6c638251670f257a235d73d05",
+      "literal_function_span_sha256": "6a1a9bcdca6ff559feae924316e38d3a60ea4c81c97808c92f377e084f8c2d19",
+      "context_keys_read_in_transitive_local_helpers": [
+        "actual_outputs",
+        "binding",
+        "bundle",
+        "checks",
+        "circuit",
+        "code",
+        "module",
+        "rank_events",
+        "reference_native_counters",
+        "reference_outputs",
+        "reference_rank_events",
+        "reference_role_result",
+        "reference_trace",
+        "state",
+        "trace"
+      ],
+      "local_helper_dependencies": [
+        "_dispatch",
+        "_live",
+        "_need"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "P03",
+      "checkpoint": "G06",
+      "helper_lines": [
+        295,
+        301
+      ],
+      "public_function_ast_sha256": "e495e6d7b82efe05d3eb5c38783f464867a15096f3309591d0a82f0a592326f0",
+      "literal_function_span_sha256": "b1be0adcd7cbb5f68dbfa0d033979eee68573f7ff1712efe7db8ee4c3d427c47",
+      "context_keys_read_in_transitive_local_helpers": [
+        "authority_module",
+        "bundle",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_dispatch",
+        "_ledger",
+        "_live",
+        "_need"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "P04",
+      "checkpoint": "G08",
+      "helper_lines": [
+        304,
+        309
+      ],
+      "public_function_ast_sha256": "01846a9fd15c17c287083540df126c4a01a081b33ab7a0815247fdba1e2aca73",
+      "literal_function_span_sha256": "d6fb167724212cba1cac76d5cc86cc384c32efb84de8ff002e3ae3d207bccf0b",
+      "context_keys_read_in_transitive_local_helpers": [
+        "bundle",
+        "checks",
+        "literal_expected",
+        "module",
+        "state",
+        "vectors"
+      ],
+      "local_helper_dependencies": [
+        "_dispatch",
+        "_live",
+        "_need"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "P05",
+      "checkpoint": "G08",
+      "helper_lines": [
+        312,
+        317
+      ],
+      "public_function_ast_sha256": "bd029f2b2b0377c79a0a04e61d18889dc809c61d686937ea2086ccc79270bd7b",
+      "literal_function_span_sha256": "f026ac732f8fc6e5eb4fe8a5e2aeb95c78f3f4bc6cfc18c5d7c27ca1f71df291",
+      "context_keys_read_in_transitive_local_helpers": [
+        "big",
+        "bundle",
+        "checks",
+        "literal_expected",
+        "small",
+        "snapshots_before",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_dispatch",
+        "_live",
+        "_need"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "P06",
+      "checkpoint": "G08",
+      "helper_lines": [
+        320,
+        327
+      ],
+      "public_function_ast_sha256": "786c44b4b26f5975e6af840921f19161c1efb50ff759f7db20db0b8489e90f4d",
+      "literal_function_span_sha256": "0d11d8b820aa4f05c52f6c3f0f4abf9b83d69d0bea21bd8d1367645f98da10de",
+      "context_keys_read_in_transitive_local_helpers": [
+        "binding",
+        "bundle",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_counts",
+        "_dispatch",
+        "_live",
+        "_need"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "P07",
+      "checkpoint": "G12",
+      "helper_lines": [
+        330,
+        334
+      ],
+      "public_function_ast_sha256": "7d50646fc8c537a99ae72df7c27e7fa3b6b038ffbf9c6a2bc7b670ba068236f5",
+      "literal_function_span_sha256": "7d7534a534a7b0224eb733b1609868280878707bd5902dde41ae557d07edb30d",
+      "context_keys_read_in_transitive_local_helpers": [
+        "bundle",
+        "checks",
+        "literal_expected",
+        "reference_remaining_case_count",
+        "reference_remaining_outputs",
+        "registered_label",
+        "remaining_original_case_count",
+        "remaining_original_outputs",
+        "site",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "N22",
+        "_dispatch",
+        "_live",
+        "_need"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "P08",
+      "checkpoint": "G06",
+      "helper_lines": [
+        337,
+        379
+      ],
+      "public_function_ast_sha256": "f2cea31405a6d59129cbf9ebbdfc82761ca4882c5397f845e22440c565f8d271",
+      "literal_function_span_sha256": "027a3edc5ec688ce1f9cebe7e887d5eb93261de24a8a45016c844d6df58ba51c",
+      "context_keys_read_in_transitive_local_helpers": [
+        "authority_module",
+        "binding",
+        "bundle",
+        "cache_module",
+        "case_kind",
+        "case_script_path",
+        "checks",
+        "data_module",
+        "driver_module",
+        "extensions",
+        "invocation_token",
+        "phases",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_counts",
+        "_dispatch",
+        "_has_frame",
+        "_intended_error",
+        "_live",
+        "_need",
+        "_p08_original_body"
+      ],
+      "explicit_variants": [
+        {
+          "case_kind": "original_arm_entry"
+        },
+        {
+          "case_kind": "original_arm_after_set"
+        },
+        {
+          "case_kind": "epoch_arm_entry"
+        },
+        {
+          "case_kind": "body"
+        }
+      ],
+      "selection_status": "P08_BODY_ONLY_IN_CONSTRUCTOR_LANE_PENDING_REVIEW",
+      "runtime_result": null
+    },
+    {
+      "id": "V2_ROLE_CLEANUP_ONLY",
+      "checkpoint": "G06",
+      "helper_lines": [
+        400,
+        415
+      ],
+      "public_function_ast_sha256": "16ce83be0080bcec62d08ca50a4f2d097ed6f4e59d7b2d978ca6ef2e351b4056",
+      "literal_function_span_sha256": "2b1a9349998d2c8d641b1664dfb5e621af8a92c4ee99a1d2460ae4fc7b02aaa3",
+      "context_keys_read_in_transitive_local_helpers": [
+        "bundle",
+        "checks",
+        "circuit",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_dispatch",
+        "_has_frame",
+        "_intended_error",
+        "_live",
+        "_need"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "V2_OWNER_FIRST_CAPTURE",
+      "checkpoint": "G02",
+      "helper_lines": [
+        447,
+        448
+      ],
+      "public_function_ast_sha256": "81b3bc1b9408767b648c6fad73fe0e21fdf5d57bd572a9c4a4e2eee4325a4e69",
+      "literal_function_span_sha256": "2163c6108a42497c523a4d7bccd57b668e592447904c94d7f2670e0930bfc383",
+      "context_keys_read_in_transitive_local_helpers": [
+        "authority_module",
+        "binding",
+        "bundle",
+        "comparison",
+        "data_module",
+        "extensions",
+        "factory_context",
+        "load_ticket",
+        "module",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_counts",
+        "_has_frame",
+        "_intended_error",
+        "_need",
+        "_owner_failure_case"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "V2_OWNER_LATE_GRAPH",
+      "checkpoint": "G02",
+      "helper_lines": [
+        451,
+        452
+      ],
+      "public_function_ast_sha256": "7a6eebc50ca18afe5f13e7c0e8aa6a396a0c66e680bcde154da10ba60a3953d4",
+      "literal_function_span_sha256": "9326052567b4d4af70e1b60ef638abddc9660302d1218f710f8bf00749bfd018",
+      "context_keys_read_in_transitive_local_helpers": [
+        "authority_module",
+        "binding",
+        "bundle",
+        "comparison",
+        "data_module",
+        "extensions",
+        "factory_context",
+        "load_ticket",
+        "module",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_counts",
+        "_has_frame",
+        "_intended_error",
+        "_need",
+        "_owner_failure_case"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "V2_ORIGIN_FIRST_ALL_ROUTES",
+      "checkpoint": "G03",
+      "helper_lines": [
+        455,
+        475
+      ],
+      "public_function_ast_sha256": "aaee460e87d8f504f8ef9f9931ff5bc8d54c62c75c104a4a13adffdea49f6c96",
+      "literal_function_span_sha256": "fcb9c7f970484f632a80044743b34c9d983ce5e40936aa2be699f91ec59a2349",
+      "context_keys_read_in_transitive_local_helpers": [
+        "authority_module",
+        "binding",
+        "bundle",
+        "route_index",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_counts",
+        "_dispatch",
+        "_has_frame",
+        "_intended_error",
+        "_ledger",
+        "_live",
+        "_need"
+      ],
+      "explicit_variants": [
+        {
+          "route_index": 1
+        },
+        {
+          "route_index": 2
+        },
+        {
+          "route_index": 3
+        },
+        {
+          "route_index": 4
+        },
+        {
+          "route_index": 5
+        },
+        {
+          "route_index": 6
+        }
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "V3_INSTANCE_KEY_DOMAIN",
+      "checkpoint": "G03",
+      "helper_lines": [
+        511,
+        531
+      ],
+      "public_function_ast_sha256": "b4a9342e721766c6b453e17cd827bd46c5dd2582ba456f16672eed3186d5fa78",
+      "literal_function_span_sha256": "9e333aeef7b3fd90f565af51d65aff8dc53317fc913ac09353c721464223a087",
+      "context_keys_read_in_transitive_local_helpers": [
+        "authority_module",
+        "bundle",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_dispatch",
+        "_has_frame",
+        "_intended_error",
+        "_ledger",
+        "_live",
+        "_need"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "V3_FIXED_RECORD_BINDINGS",
+      "checkpoint": "G03",
+      "helper_lines": [
+        534,
+        547
+      ],
+      "public_function_ast_sha256": "7729af17a66cf957dead40d805e9d21811ba461d6b66a45c676a461ba96670a9",
+      "literal_function_span_sha256": "f7c91c279d9be523477bba7243c2037bf2b21066ea3430d58f01992df798a495",
+      "context_keys_read_in_transitive_local_helpers": [
+        "authority_module",
+        "bundle",
+        "fixed_record_field",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_dispatch",
+        "_has_frame",
+        "_intended_error",
+        "_ledger",
+        "_live",
+        "_need"
+      ],
+      "explicit_variants": [
+        {
+          "fixed_record_field": "class_origin"
+        },
+        {
+          "fixed_record_field": "method_origin"
+        }
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "V3_INSTANCE_METHOD_SHADOW",
+      "checkpoint": "G03",
+      "helper_lines": [
+        553,
+        568
+      ],
+      "public_function_ast_sha256": "fdfff329e0dd280806ba9d2af44a13a29882718ee8888f8d5e567a61517535f6",
+      "literal_function_span_sha256": "d43986e9ce008e98e2c0a13758522ee9b45318ad48d7baed842b82c6d38406d8",
+      "context_keys_read_in_transitive_local_helpers": [
+        "authority_module",
+        "bundle",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_dispatch",
+        "_has_frame",
+        "_intended_error",
+        "_ledger",
+        "_live",
+        "_need"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "V3_INSTANCE_STATE_SCHEMA",
+      "checkpoint": "G03",
+      "helper_lines": [
+        571,
+        591
+      ],
+      "public_function_ast_sha256": "f200bb51c2803399225fa1dfac2e04ca2d48294c43d167da442e9c2ca89ad503",
+      "literal_function_span_sha256": "d62ec22965531f8e29af1c622e7da50049b0914820e5985d05387382d61f69f9",
+      "context_keys_read_in_transitive_local_helpers": [
+        "authority_module",
+        "bundle",
+        "state",
+        "state_schema_field"
+      ],
+      "local_helper_dependencies": [
+        "_dispatch",
+        "_has_frame",
+        "_intended_error",
+        "_ledger",
+        "_live",
+        "_need"
+      ],
+      "explicit_variants": [
+        {
+          "state_schema_field": "phase"
+        },
+        {
+          "state_schema_field": "serial"
+        },
+        {
+          "state_schema_field": "failure"
+        }
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "V3_CLI_DISARM_ONLY",
+      "checkpoint": "G07",
+      "helper_lines": [
+        640,
+        640
+      ],
+      "public_function_ast_sha256": "0735aff85e14a2eec4c489169ffb5462ab8d9cfb6d11fb9a4ef653b941236e67",
+      "literal_function_span_sha256": "cfa63d5af26c7a752bcfed8c8e0740e320aac12d020dd2eaac9bea28b22e45b6",
+      "context_keys_read_in_transitive_local_helpers": [
+        "authority_module",
+        "cache_module",
+        "case_script_path",
+        "checks",
+        "driver_module",
+        "extensions",
+        "phases",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_has_frame",
+        "_intended_error",
+        "_need",
+        "_v3_baseline_cli_case"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "V3_CLI_BODY_DISARM",
+      "checkpoint": "G07",
+      "helper_lines": [
+        641,
+        641
+      ],
+      "public_function_ast_sha256": "8ba3c40fe519bdb2e28b326af5d9b61b387b9ad9a77cbacabba3718adf46fa84",
+      "literal_function_span_sha256": "63d1ed6413137e9cfa2e39263945175f1301a54ac451f74a384fbe7e742d48d7",
+      "context_keys_read_in_transitive_local_helpers": [
+        "authority_module",
+        "cache_module",
+        "case_script_path",
+        "checks",
+        "driver_module",
+        "extensions",
+        "phases",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_has_frame",
+        "_intended_error",
+        "_need",
+        "_v3_baseline_cli_case"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "V3_CLI_BODY_DISARM_RETIREMENT",
+      "checkpoint": "G07",
+      "helper_lines": [
+        642,
+        642
+      ],
+      "public_function_ast_sha256": "69a2509a94424a57b372edd6f94a05ea5a0a6e3c50e1e7eee818ce2b9109446a",
+      "literal_function_span_sha256": "384106a37f459f3ec937dee3f82c7fb78137eb679f0b3afdb3d84fcfe466ff04",
+      "context_keys_read_in_transitive_local_helpers": [
+        "authority_module",
+        "cache_module",
+        "case_script_path",
+        "checks",
+        "driver_module",
+        "extensions",
+        "phases",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_has_frame",
+        "_intended_error",
+        "_need",
+        "_v3_baseline_cli_case"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "V4_ARGV_ONLY",
+      "checkpoint": "G07",
+      "helper_lines": [
+        704,
+        704
+      ],
+      "public_function_ast_sha256": "4f82c693ba7483d7f3a4c5ee6b67d023f3decbc9ac054f63c765eb487de111db",
+      "literal_function_span_sha256": "fb105b6fd39ade5ddc6c0d496bdc628247cd7d2efda7f3857ccbab848289c4dd",
+      "context_keys_read_in_transitive_local_helpers": [
+        "authority_module",
+        "cache_module",
+        "case_script_path",
+        "checks",
+        "driver_module",
+        "extensions",
+        "phases",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_has_frame",
+        "_intended_error",
+        "_need",
+        "_v4_images",
+        "_v4_restore_case"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "V4_BODY_ARGV_DISARM_RETIREMENT",
+      "checkpoint": "G07",
+      "helper_lines": [
+        705,
+        705
+      ],
+      "public_function_ast_sha256": "ba8d369e1583979a1f7183f95a744bb71e71a876d40b3ea044790574e5a6d7d0",
+      "literal_function_span_sha256": "94bf8b30235e6371071e10523d65dbfa347da4cf3580e015cc68a9f29e77ba86",
+      "context_keys_read_in_transitive_local_helpers": [
+        "authority_module",
+        "cache_module",
+        "case_script_path",
+        "checks",
+        "driver_module",
+        "extensions",
+        "phases",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_has_frame",
+        "_intended_error",
+        "_need",
+        "_v4_images",
+        "_v4_restore_case"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "V4_ARGV_DISARM_RETIREMENT",
+      "checkpoint": "G07",
+      "helper_lines": [
+        706,
+        706
+      ],
+      "public_function_ast_sha256": "e1811b3714c5b97f16b1d9c59a712a44d375ba708435bde5c385879ead2e336d",
+      "literal_function_span_sha256": "8db7463e84a7cbaf281c6b32ed8000d0a57fef7b12d23f8473b7efd92bbbb2a8",
+      "context_keys_read_in_transitive_local_helpers": [
+        "authority_module",
+        "cache_module",
+        "case_script_path",
+        "checks",
+        "driver_module",
+        "extensions",
+        "phases",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_has_frame",
+        "_intended_error",
+        "_need",
+        "_v4_images",
+        "_v4_restore_case"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "V4_ARGV_BEFORE_DISARM_RETIREMENT",
+      "checkpoint": "G07",
+      "helper_lines": [
+        707,
+        707
+      ],
+      "public_function_ast_sha256": "dc86a26df5619f966d60823032183b48b5c017f3d5a2f41f2021e1c9e7e738cc",
+      "literal_function_span_sha256": "55b86cb8e42e484ec6730624cd3d0c787320bd90c0201f812299f6819a1beedd",
+      "context_keys_read_in_transitive_local_helpers": [
+        "authority_module",
+        "cache_module",
+        "case_script_path",
+        "checks",
+        "driver_module",
+        "extensions",
+        "phases",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_has_frame",
+        "_intended_error",
+        "_need",
+        "_v4_images",
+        "_v4_restore_case"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "V4_ROLE_RAW_JOURNAL",
+      "checkpoint": "G06",
+      "helper_lines": [
+        725,
+        732
+      ],
+      "public_function_ast_sha256": "7f079e7491eb0ef771f810162ed685b9586de6bc8271841c96bb8a211b61df87",
+      "literal_function_span_sha256": "34678fcc51ad1f075d61a8372f2746099c756c8b7bd0b56a25ee1e0e2431ade6",
+      "context_keys_read_in_transitive_local_helpers": [
+        "authority_module",
+        "bundle",
+        "cache_module",
+        "checks",
+        "circuit",
+        "driver_module",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_dispatch",
+        "_has_frame",
+        "_intended_error",
+        "_live",
+        "_need",
+        "_v4_images",
+        "_v4_raw_channel_oracle"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "V4_CLI_RAW_JOURNAL",
+      "checkpoint": "G06",
+      "helper_lines": [
+        735,
+        750
+      ],
+      "public_function_ast_sha256": "27674ae1876ac3d8ddc1f2f5860dc928892d6d7882e7846cd8d41637448cae19",
+      "literal_function_span_sha256": "fbb2c12fdaa741df7b1f64a008d948062932a4f9065dad089bd32625b7d7a6dd",
+      "context_keys_read_in_transitive_local_helpers": [
+        "authority_module",
+        "binding",
+        "bundle",
+        "cache_module",
+        "case_script_path",
+        "driver_module",
+        "extensions",
+        "invocation_token",
+        "phases",
+        "state"
+      ],
+      "local_helper_dependencies": [
+        "_counts",
+        "_dispatch",
+        "_has_frame",
+        "_intended_error",
+        "_live",
+        "_need",
+        "_v4_images",
+        "_v4_raw_channel_oracle"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    },
+    {
+      "id": "V5_MAIN_PRIMARY_OUTER",
+      "checkpoint": "G13",
+      "helper_lines": [
+        842,
+        842
+      ],
+      "public_function_ast_sha256": "2678ead2e237095afcd98677eb36787ee73faa6ed645348c48ec6c9595a6e91b",
+      "literal_function_span_sha256": "5b68dcdb3b142ed87b7d6e43390349958aace9f2b74d101f03cbdfa8e0d6d265",
+      "context_keys_read_in_transitive_local_helpers": [
+        "argv",
+        "authority_module",
+        "cache_module",
+        "driver_module"
+      ],
+      "local_helper_dependencies": [
+        "_has_frame",
+        "_intended_error",
+        "_need",
+        "_v5_images",
+        "_v5_main_stop"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "EXISTING_FINITE_FACTORY_SOURCE",
+      "runtime_result": null
+    },
+    {
+      "id": "V5_MAIN_CLEANUP_ONLY",
+      "checkpoint": "G13",
+      "helper_lines": [
+        843,
+        843
+      ],
+      "public_function_ast_sha256": "0695e3f010d12e74ed707faef2141968ac713ea645e71209ea59f84bef321709",
+      "literal_function_span_sha256": "99a7970022e6240519c3f2ba8d37f78ab77ed18b5f6c45ce8d20cbb7cf137ef1",
+      "context_keys_read_in_transitive_local_helpers": [
+        "argv",
+        "authority_module",
+        "cache_module",
+        "driver_module"
+      ],
+      "local_helper_dependencies": [
+        "_has_frame",
+        "_intended_error",
+        "_need",
+        "_v5_images",
+        "_v5_main_stop"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "EXISTING_FINITE_FACTORY_SOURCE",
+      "runtime_result": null
+    },
+    {
+      "id": "V5_MAIN_ABSENT_RECORD",
+      "checkpoint": "G13",
+      "helper_lines": [
+        844,
+        844
+      ],
+      "public_function_ast_sha256": "1511fb1817b66da082c3896af9da64eb2ee87acfd028d7ee9c62a625aa129a87",
+      "literal_function_span_sha256": "3fffe19dd207cf205221e659139f9a3afdc59af6a5fc8e7396427368687e2331",
+      "context_keys_read_in_transitive_local_helpers": [
+        "argv",
+        "authority_module",
+        "cache_module",
+        "driver_module"
+      ],
+      "local_helper_dependencies": [
+        "_has_frame",
+        "_intended_error",
+        "_need",
+        "_v5_images",
+        "_v5_main_stop"
+      ],
+      "explicit_variants": [
+        {}
+      ],
+      "selection_status": "SOURCE_RECIPE_ONLY_NO_CONSTRUCTED_SELECTOR",
+      "runtime_result": null
+    }
+  ],
+  "minimum_explicit_selection_inventory": [
+    {
+      "case_id": "N01",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G01"
+    },
+    {
+      "case_id": "N02",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G02"
+    },
+    {
+      "case_id": "N03",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G03"
+    },
+    {
+      "case_id": "N04",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G03"
+    },
+    {
+      "case_id": "N05",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G03"
+    },
+    {
+      "case_id": "N06",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G03"
+    },
+    {
+      "case_id": "N07",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G03"
+    },
+    {
+      "case_id": "N08",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G03"
+    },
+    {
+      "case_id": "N09",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G03"
+    },
+    {
+      "case_id": "N10",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G05"
+    },
+    {
+      "case_id": "N11",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G04"
+    },
+    {
+      "case_id": "N12",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G08"
+    },
+    {
+      "case_id": "N13",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G10"
+    },
+    {
+      "case_id": "N14",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G11"
+    },
+    {
+      "case_id": "N15",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G11"
+    },
+    {
+      "case_id": "N16",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G08"
+    },
+    {
+      "case_id": "N17",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G10"
+    },
+    {
+      "case_id": "N18",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G03"
+    },
+    {
+      "case_id": "N19",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G08"
+    },
+    {
+      "case_id": "N20",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G09"
+    },
+    {
+      "case_id": "N21",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G08"
+    },
+    {
+      "case_id": "N22",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G12"
+    },
+    {
+      "case_id": "N23",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G06"
+    },
+    {
+      "case_id": "N24",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G03"
+    },
+    {
+      "case_id": "P01",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G08"
+    },
+    {
+      "case_id": "P02",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G08"
+    },
+    {
+      "case_id": "P03",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G06"
+    },
+    {
+      "case_id": "P04",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G08"
+    },
+    {
+      "case_id": "P05",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G08"
+    },
+    {
+      "case_id": "P06",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G08"
+    },
+    {
+      "case_id": "P07",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G12"
+    },
+    {
+      "case_id": "P08",
+      "variant": {
+        "case_kind": "original_arm_entry"
+      },
+      "fresh_genuine_generation": true,
+      "checkpoint": "G06"
+    },
+    {
+      "case_id": "P08",
+      "variant": {
+        "case_kind": "original_arm_after_set"
+      },
+      "fresh_genuine_generation": true,
+      "checkpoint": "G06"
+    },
+    {
+      "case_id": "P08",
+      "variant": {
+        "case_kind": "epoch_arm_entry"
+      },
+      "fresh_genuine_generation": true,
+      "checkpoint": "G06"
+    },
+    {
+      "case_id": "P08",
+      "variant": {
+        "case_kind": "body"
+      },
+      "fresh_genuine_generation": true,
+      "checkpoint": "G06"
+    },
+    {
+      "case_id": "V2_ROLE_CLEANUP_ONLY",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G06"
+    },
+    {
+      "case_id": "V2_OWNER_FIRST_CAPTURE",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G02"
+    },
+    {
+      "case_id": "V2_OWNER_LATE_GRAPH",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G02"
+    },
+    {
+      "case_id": "V2_ORIGIN_FIRST_ALL_ROUTES",
+      "variant": {
+        "route_index": 1
+      },
+      "fresh_genuine_generation": true,
+      "checkpoint": "G03"
+    },
+    {
+      "case_id": "V2_ORIGIN_FIRST_ALL_ROUTES",
+      "variant": {
+        "route_index": 2
+      },
+      "fresh_genuine_generation": true,
+      "checkpoint": "G03"
+    },
+    {
+      "case_id": "V2_ORIGIN_FIRST_ALL_ROUTES",
+      "variant": {
+        "route_index": 3
+      },
+      "fresh_genuine_generation": true,
+      "checkpoint": "G03"
+    },
+    {
+      "case_id": "V2_ORIGIN_FIRST_ALL_ROUTES",
+      "variant": {
+        "route_index": 4
+      },
+      "fresh_genuine_generation": true,
+      "checkpoint": "G03"
+    },
+    {
+      "case_id": "V2_ORIGIN_FIRST_ALL_ROUTES",
+      "variant": {
+        "route_index": 5
+      },
+      "fresh_genuine_generation": true,
+      "checkpoint": "G03"
+    },
+    {
+      "case_id": "V2_ORIGIN_FIRST_ALL_ROUTES",
+      "variant": {
+        "route_index": 6
+      },
+      "fresh_genuine_generation": true,
+      "checkpoint": "G03"
+    },
+    {
+      "case_id": "V3_INSTANCE_KEY_DOMAIN",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G03"
+    },
+    {
+      "case_id": "V3_FIXED_RECORD_BINDINGS",
+      "variant": {
+        "fixed_record_field": "class_origin"
+      },
+      "fresh_genuine_generation": true,
+      "checkpoint": "G03"
+    },
+    {
+      "case_id": "V3_FIXED_RECORD_BINDINGS",
+      "variant": {
+        "fixed_record_field": "method_origin"
+      },
+      "fresh_genuine_generation": true,
+      "checkpoint": "G03"
+    },
+    {
+      "case_id": "V3_INSTANCE_METHOD_SHADOW",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G03"
+    },
+    {
+      "case_id": "V3_INSTANCE_STATE_SCHEMA",
+      "variant": {
+        "state_schema_field": "phase"
+      },
+      "fresh_genuine_generation": true,
+      "checkpoint": "G03"
+    },
+    {
+      "case_id": "V3_INSTANCE_STATE_SCHEMA",
+      "variant": {
+        "state_schema_field": "serial"
+      },
+      "fresh_genuine_generation": true,
+      "checkpoint": "G03"
+    },
+    {
+      "case_id": "V3_INSTANCE_STATE_SCHEMA",
+      "variant": {
+        "state_schema_field": "failure"
+      },
+      "fresh_genuine_generation": true,
+      "checkpoint": "G03"
+    },
+    {
+      "case_id": "V3_CLI_DISARM_ONLY",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G07"
+    },
+    {
+      "case_id": "V3_CLI_BODY_DISARM",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G07"
+    },
+    {
+      "case_id": "V3_CLI_BODY_DISARM_RETIREMENT",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G07"
+    },
+    {
+      "case_id": "V4_ARGV_ONLY",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G07"
+    },
+    {
+      "case_id": "V4_BODY_ARGV_DISARM_RETIREMENT",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G07"
+    },
+    {
+      "case_id": "V4_ARGV_DISARM_RETIREMENT",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G07"
+    },
+    {
+      "case_id": "V4_ARGV_BEFORE_DISARM_RETIREMENT",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G07"
+    },
+    {
+      "case_id": "V4_ROLE_RAW_JOURNAL",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G06"
+    },
+    {
+      "case_id": "V4_CLI_RAW_JOURNAL",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G06"
+    },
+    {
+      "case_id": "V5_MAIN_PRIMARY_OUTER",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G13"
+    },
+    {
+      "case_id": "V5_MAIN_CLEANUP_ONLY",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G13"
+    },
+    {
+      "case_id": "V5_MAIN_ABSENT_RECORD",
+      "variant": {},
+      "fresh_genuine_generation": true,
+      "checkpoint": "G13"
+    }
+  ],
+  "critical_context_invariants": [
+    "P01/private family requires Checks construction after genuine arm so C1 is registered; P08 prearm constructor leaves registry empty by source2085/2108 and is not reusable.",
+    "N12 requires genuine active arm before wrong-site test2087; unarmed construct2085 returns original Label and bypasses this intended predicate.",
+    "N18 executes actual retire then arm and must retain retired/consumed error. N24 retains actual fresh unconsumed FULLNone source and exact FULLNone error. No global FULL install.",
+    "Source guard/refusal body requires exact intended checkpoint, not an earlier FULL/phase failure that happens to raise.",
+    "Original phase wrapper installed on Checks.verify_labels must be authenticated through genuine returned(original,observed) pair and underlying labels product; pair repair remains conditional on independent derivative acceptance.",
+    "Mode claims are route-specific: actual armed private/full/P08body/absent-record require optimize0; full-O refusal is separate; finite/public/source guards need their own genuine admitted finite selection.",
+    "Reference values come from independent unchanged original sources and separate objects, no cache candidate state/receipts or approved boolean."
+  ],
+  "construction_decisions": {
+    "straightforward_fixed_source_selectors": [
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06 except P08 derivative acceptance",
+      "G07",
+      "G09",
+      "G13 finite existing and full absent selector after contract binding"
+    ],
+    "source_authorable_but_needs_exact_new_capture_or_fixture": [
+      "G08 fresh postarm genuine constructors plus independent oracle transport",
+      "G10 exact request-lifetime ports with no state reset",
+      "G11 pending port and fixed original store-failure fixture"
+    ],
+    "not_currently_supplied_genuine_prerequisite": [
+      "G12 actual85196 constructor/store reachability fixture with admissible original input and independent remaining-work oracle"
+    ],
+    "not_impossibility_claim": "The G12 gap is an unprovided source construction, not proof that it is impossible or too expensive. No runtime experiment is needed or authorized to claim it source-complete.",
+    "earliest_missing_oracle_binding": "Public literal arithmetic is available in ORIGINAL_CIRCUIT296-311 and UNCACHED_CONTROLS105-106/248-268. The first full-caller oracle binding is P02 reference_role_result/rank_events/trace/native_counters/outputs from a fresh original baseline run; those producers exist, but exact same-input typed transport into the new selected candidate context is not yet source-bound. P07 additionally lacks the exact capacity-prefix/remainder selection."
+  },
+  "oracle_recipe": {
+    "public": "Use original backend-owned load_source to create distinct original reference module and objects; construct reference ComplexSideCircuit/Checks and Label objects independently. For each ordinary comparison supply a fresh exact reference verdict dict and invoke unchanged original method. Candidate operands or snapshots never supply expected answers. Preserve independent callback classes/event logs and exact type/order.",
+    "full": "Use separate fresh original baseline complete caller with same exact input/argv/source pins; preserve original labels, roles, rank events, complement trace, native counters and outputs as typed observations. Bind corresponding candidate fields without copying candidate state. No observed values are invented in this source-only packet.",
+    "legacy": "N20 reuses unchanged original run_controls and its own authentic arguments and captures; no reimplementation or skip of its155 obligation."
+  },
+  "other_lane_ownership": {
+    "contracts": "/root/strict60_astra_controls owns FULL/EPOCH native owner/caller/cost definitions and role IDs",
+    "constructor": "/root/strict60_astra_execution_cache owns actual P08 constructor/driver and phase-pair correction",
+    "independent": "/root/strict60_astra_independent owns source acceptance; this matrix does not approve itself"
+  },
+  "preservation": {
+    "original52_bodies_edited": 0,
+    "target_imports": 0,
+    "target_executions": 0,
+    "native_compiler_decoder_scientific_work": 0,
+    "protected_bookkeeping_runs_read_or_enumerated": false,
+    "writes_only_coverage_directory": true,
+    "no_subagents": true,
+    "wider_crosswalk_used_for_case_expansion": false,
+    "new_progress_credit": 0
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "activity_credit": 0,
+  "charges": [
+    {
+      "category": "Original complete epoch invocation",
+      "charge": "All unchanged original scientific CLI calls, controls, cold native/trace/metadata work, full witnesses, source checks, timing/memory samples, normal/failure cleanup and publication remain paid."
+    },
+    {
+      "category": "Independent reference producers",
+      "charge": "Two separate fresh complete standard original full_driver.py invocations: pure --mode baseline and original native --mode candidate. Native lane cold build/native load/all original finite controls paid; original source anchor retained. No G12 altered-workload reuse."
+    },
+    {
+      "category": "Generator protocol",
+      "charge": "One distinct helper generator creation; exactly three syntactic next sites and two suspensions. Retained actual labels result, role result, code/context and generator locals. Source authority/currentness checks at every named transition and helper code/frame ownership checks paid."
+    },
+    {
+      "category": "Frames and identity checks",
+      "charge": "One additional outer role-observer frame plus all new fixed evaluator/gate/guard frames. Actual original certificate frame is additionally retained from Checks through second yield then released; code identity retained separately. This is not unchanged call-stack equivalence."
+    },
+    {
+      "category": "Reference transport and complete join",
+      "charge": "Both actual parent wrappers and output seals, every file identity/stat/hash/read/revalidation, raw artifact storage, strict full typed decode, ordered role/rank/trace projection, deep copies, two-lane comparison of all six artifacts and full trace, and fixed invocation handoff. No sunk-cost exemption."
+    },
+    {
+      "category": "Candidate output comparison",
+      "charge": "Six additional complete candidate artifact reads and bytes tuple allocation before third advance; all original helper role, ordered rank/cumulative trace, native count and complete output comparisons remain. Candidate/reference ownership and custody validation paid."
+    },
+    {
+      "category": "Lifetime and cleanup",
+      "charge": "Added context/reference aliases, code/circuit/Checks captures, helper return observation and source state retained until named release/qualification points; generator close on failure, all diagnostic guards, original known-owner cleanup, source-tail qualification and sidecar write paid."
+    },
+    {
+      "category": "Source packaging",
+      "charge": "Larger explicit derivative source, unchanged original definitions retained, fixed source maps/authority graph checks and additional source custody included in any future cold parent budget."
+    }
+  ],
+  "driver": {
+    "bytes": 169084,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-implementation/p02_two_suspension_driver_v1.py",
+    "sha256": "833074436879e62c28a46bc365d368952736ced77a096ffb30398cea0a1b558e"
+  },
+  "execution_authorized": false,
+  "helper": {
+    "bytes": 65648,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-implementation/cache_epoch_source_controls_p02_two_yield_v1.py",
+    "sha256": "298b9951e5a0971bf4a7eb19ee789688c860e828a429036fd7fbc37352d69c04"
+  },
+  "kappa_credit": 0,
+  "ownership": {
+    "cleanup": "Original suite and data owners retain all scientific/native cleanup authority. New release touches only added generator/frame/context aliases and source bookkeeping.",
+    "control_state": "Distinct source-owned _P02, exact helper frame and captured original invocation.",
+    "publication": "Actual full original tail and clean source return must precede source observation publication; external parent must separately prove completion after publication.",
+    "references": "Pure lane owns role/rank/trace/complete output values; native lane owns actual counters after all common output joins; no mutable candidate alias.",
+    "scientific_objects": "Actual original suite/module/phase products; never recreated by a fixture or substituted expected objects."
+  },
+  "quantitative_cost_or_speedup_claim": null,
+  "remaining_cost_gate": "Independent full-owner/resource review of exact assembled reference bridge and both complete producer invocations before any execution; unchanged broader gates stay closed.",
+  "resource_measurements": null,
+  "schema": "p02-source-cost-ownership-ledger-v1",
+  "source_adopted": false,
+  "status": "COMPLETE_SYMBOLIC_CHARGE_CATEGORIES_NO_NUMERIC_FIT"
+}

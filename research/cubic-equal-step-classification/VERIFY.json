@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/cubic-pure-b-boundary/PROOF.md",
+    "research/dyadic-cubic-repair/PROOF.md"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Universal coefficient identities, finite dyadic classification, literal dirty restoration, two scope-positive examples and 14 rejecting controls."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-O",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Universal coefficient identities, finite dyadic classification, literal dirty restoration, two scope-positive examples and 14 rejecting controls."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/crosscheck.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Independent block-concatenation defect and generic exact elimination, nonmonic normalization, centered scope control and six rejection cases."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-O",
+        "-B",
+        "{package}/crosscheck.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Independent block-concatenation defect and generic exact elimination, nonmonic normalization, centered scope control and six rejection cases."
+    }
+  ]
+}

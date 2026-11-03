@@ -1,0 +1,60 @@
+{
+  "execution_or_adoption": false,
+  "files": {
+    "SOURCE-BOUNDARY-v1.json": {
+      "bytes": 3781,
+      "mode": "0444",
+      "sha256": "dc68dbe9b72599f6fa7cb95a21ed8ef91037abfbf09dcabf5cea9c1136001495"
+    },
+    "SOURCE-INVERSE-v1.json": {
+      "bytes": 8491,
+      "mode": "0444",
+      "sha256": "083d171828102a8c138810d05f9110fc6136c2017a09ab11d8d63c433afd387e"
+    },
+    "g12_cache_selector_source_v1.py": {
+      "bytes": 1537,
+      "mode": "0444",
+      "sha256": "a9b4019ce368b6f89553ceb98c5451593d0d11ebda699dcb626cab323297375c"
+    },
+    "g12_candidate_driver_N22_v1.py": {
+      "bytes": 126735,
+      "mode": "0444",
+      "sha256": "46f515efa7ebdc60e20b64ef2ebdfb542ecb8c90371d339a951ccabb2a205e09"
+    },
+    "g12_candidate_driver_P07_v1.py": {
+      "bytes": 126735,
+      "mode": "0444",
+      "sha256": "e6f1038f5a75466d95fd3e8c3d44df483d76f97deff9f966bd6140b2d0bc28a7"
+    },
+    "g12_candidate_driver_support_N22_v1.py": {
+      "bytes": 31921,
+      "mode": "0444",
+      "sha256": "b4a8ec11d4b390d8a8f7167d8149b067be0572f977a1f2286c1719052437fccb"
+    },
+    "g12_candidate_driver_support_P07_v1.py": {
+      "bytes": 31921,
+      "mode": "0444",
+      "sha256": "a918ff01875267c4945a0dbc6d914a904c3eb38b9f5de8256bdc47394b19dcb7"
+    },
+    "g12_common_source_v1.py": {
+      "bytes": 4517,
+      "mode": "0444",
+      "sha256": "8ac6902915ec8afb09914fc5f229e175d864e6aae9fe367f127e1bbd654ed42a"
+    },
+    "g12_epoch_authority_selector_v1.py": {
+      "bytes": 137642,
+      "mode": "0444",
+      "sha256": "65b3d33068b0549ddb4a9e7e18a9912bebad69c309a8a29ae4fd532e9f428211"
+    },
+    "g12_epoch_cache_selector_v1.py": {
+      "bytes": 172718,
+      "mode": "0444",
+      "sha256": "20a8a94e96bfa6213d4f04244dabecf059b4c8c7e8ffa7e9409a8b87cfeef494"
+    }
+  },
+  "reference_handoff": null,
+  "schema": "g12-fixed-candidate-protocol-freeze-v1",
+  "status": "FROZEN_SOURCE_ONLY_TRANSPORT_CLOSED_PENDING_INDEPENDENT_REVIEW",
+  "target_operations": 0,
+  "transport_source_pin": null
+}

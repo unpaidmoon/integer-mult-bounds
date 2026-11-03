@@ -1,0 +1,330 @@
+{
+  "cpu_count": 18,
+  "errors": 0,
+  "faster_pairs": 8,
+  "finished_at": "2026-10-30T11:28:04.495866+00:00",
+  "input_sha256": {
+    "research/five-label-prefix-completion/PROOF.md": "54731461e8636b0048bb01ad6bde4b92ce718959923a5cb58e888a519d94ac9d",
+    "research/five-label-prefix-completion/README.md": "591816a89f4f733b69fe218a66efd9f396e3c260ee2f3c0f4a8cdcd893571c83",
+    "research/five-label-prefix-completion/bounds.py": "e9023abd49e92ae4c5d0bcbf265ad0883d9408a51bab5354e321102f2f20f522"
+  },
+  "load_average": [
+    1.2666015625,
+    2.38330078125,
+    2.50390625
+  ],
+  "median_paired_ratio": 0.8971293845135672,
+  "pairs": 9,
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "python": "3.12.15 (main, Oct 14 2026, 00:55:37) [Clang 23.1.3 ]",
+  "rows": [
+    {
+      "caller_ns": 37200417,
+      "counts": {
+        "closed": 828,
+        "entered": 7350,
+        "pruned": 4381,
+        "universal": 828
+      },
+      "hashes": [
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727",
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727"
+      ],
+      "pair": 0,
+      "side": "baseline",
+      "wall_ns": 64503000
+    },
+    {
+      "caller_ns": 30470083,
+      "counts": {
+        "closed": 828,
+        "entered": 7350,
+        "pruned": 4381,
+        "universal": 828
+      },
+      "hashes": [
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727",
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727"
+      ],
+      "pair": 0,
+      "side": "candidate",
+      "wall_ns": 57174750
+    },
+    {
+      "caller_ns": 30840792,
+      "counts": {
+        "closed": 828,
+        "entered": 7350,
+        "pruned": 4381,
+        "universal": 828
+      },
+      "hashes": [
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727",
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727"
+      ],
+      "pair": 1,
+      "side": "candidate",
+      "wall_ns": 56933625
+    },
+    {
+      "caller_ns": 37281208,
+      "counts": {
+        "closed": 828,
+        "entered": 7350,
+        "pruned": 4381,
+        "universal": 828
+      },
+      "hashes": [
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727",
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727"
+      ],
+      "pair": 1,
+      "side": "baseline",
+      "wall_ns": 63462000
+    },
+    {
+      "caller_ns": 37284250,
+      "counts": {
+        "closed": 828,
+        "entered": 7350,
+        "pruned": 4381,
+        "universal": 828
+      },
+      "hashes": [
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727",
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727"
+      ],
+      "pair": 2,
+      "side": "baseline",
+      "wall_ns": 64193167
+    },
+    {
+      "caller_ns": 30695292,
+      "counts": {
+        "closed": 828,
+        "entered": 7350,
+        "pruned": 4381,
+        "universal": 828
+      },
+      "hashes": [
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727",
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727"
+      ],
+      "pair": 2,
+      "side": "candidate",
+      "wall_ns": 57121667
+    },
+    {
+      "caller_ns": 30271875,
+      "counts": {
+        "closed": 828,
+        "entered": 7350,
+        "pruned": 4381,
+        "universal": 828
+      },
+      "hashes": [
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727",
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727"
+      ],
+      "pair": 3,
+      "side": "candidate",
+      "wall_ns": 57044250
+    },
+    {
+      "caller_ns": 37085375,
+      "counts": {
+        "closed": 828,
+        "entered": 7350,
+        "pruned": 4381,
+        "universal": 828
+      },
+      "hashes": [
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727",
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727"
+      ],
+      "pair": 3,
+      "side": "baseline",
+      "wall_ns": 63884875
+    },
+    {
+      "caller_ns": 37207166,
+      "counts": {
+        "closed": 828,
+        "entered": 7350,
+        "pruned": 4381,
+        "universal": 828
+      },
+      "hashes": [
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727",
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727"
+      ],
+      "pair": 4,
+      "side": "baseline",
+      "wall_ns": 64004041
+    },
+    {
+      "caller_ns": 108161125,
+      "counts": {
+        "closed": 828,
+        "entered": 7350,
+        "pruned": 4381,
+        "universal": 828
+      },
+      "hashes": [
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727",
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727"
+      ],
+      "pair": 4,
+      "side": "candidate",
+      "wall_ns": 167176917
+    },
+    {
+      "caller_ns": 31355750,
+      "counts": {
+        "closed": 828,
+        "entered": 7350,
+        "pruned": 4381,
+        "universal": 828
+      },
+      "hashes": [
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727",
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727"
+      ],
+      "pair": 5,
+      "side": "candidate",
+      "wall_ns": 65240333
+    },
+    {
+      "caller_ns": 37151625,
+      "counts": {
+        "closed": 828,
+        "entered": 7350,
+        "pruned": 4381,
+        "universal": 828
+      },
+      "hashes": [
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727",
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727"
+      ],
+      "pair": 5,
+      "side": "baseline",
+      "wall_ns": 65894584
+    },
+    {
+      "caller_ns": 37745792,
+      "counts": {
+        "closed": 828,
+        "entered": 7350,
+        "pruned": 4381,
+        "universal": 828
+      },
+      "hashes": [
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727",
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727"
+      ],
+      "pair": 6,
+      "side": "baseline",
+      "wall_ns": 65262583
+    },
+    {
+      "caller_ns": 30577667,
+      "counts": {
+        "closed": 828,
+        "entered": 7350,
+        "pruned": 4381,
+        "universal": 828
+      },
+      "hashes": [
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727",
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727"
+      ],
+      "pair": 6,
+      "side": "candidate",
+      "wall_ns": 59297417
+    },
+    {
+      "caller_ns": 32861292,
+      "counts": {
+        "closed": 828,
+        "entered": 7350,
+        "pruned": 4381,
+        "universal": 828
+      },
+      "hashes": [
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727",
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727"
+      ],
+      "pair": 7,
+      "side": "candidate",
+      "wall_ns": 65806666
+    },
+    {
+      "caller_ns": 42420625,
+      "counts": {
+        "closed": 828,
+        "entered": 7350,
+        "pruned": 4381,
+        "universal": 828
+      },
+      "hashes": [
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727",
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727"
+      ],
+      "pair": 7,
+      "side": "baseline",
+      "wall_ns": 72149000
+    },
+    {
+      "caller_ns": 37561042,
+      "counts": {
+        "closed": 828,
+        "entered": 7350,
+        "pruned": 4381,
+        "universal": 828
+      },
+      "hashes": [
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727",
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727"
+      ],
+      "pair": 8,
+      "side": "baseline",
+      "wall_ns": 66469209
+    },
+    {
+      "caller_ns": 30736542,
+      "counts": {
+        "closed": 828,
+        "entered": 7350,
+        "pruned": 4381,
+        "universal": 828
+      },
+      "hashes": [
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727",
+        "2e64b75bdd56124eb0993e0dcb2b79f849435465c32bdc9329ea2c171b506727"
+      ],
+      "pair": 8,
+      "side": "candidate",
+      "wall_ns": 58997625
+    }
+  ],
+  "scope": "Sequential fresh processes; complete caller, source reading, cache setup, startup and output included. OS caches not flushed; other host work uncontrolled. No performance threshold in CI.",
+  "source_sha256": {
+    "SOURCES.json": "ce31c68a83474ac32b839b8bdc5d4745a694bab70e4bba48f2b05384acf6bbb4",
+    "benchmark.py": "fb0466f9d110cb4adda55dfa775de9c70d8cc827d05525e3ee1cedb6a502072c",
+    "kernel.py": "228226ebdcd8140c4a975677e777372b2eba4ddab1e46956b9323c2ecfb79739",
+    "source.py": "e78ea90266efd698322c0e239b675ff98656a2bf8de7fd3f744509aca687e655"
+  },
+  "started_at": "2026-10-30T11:28:03.258956+00:00",
+  "summary": {
+    "baseline": {
+      "max_ns": 72149000,
+      "median_ns": 64503000,
+      "min_ns": 63462000
+    },
+    "candidate": {
+      "max_ns": 167176917,
+      "median_ns": 58997625,
+      "min_ns": 56933625
+    }
+  }
+}

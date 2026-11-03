@@ -1,0 +1,31 @@
+{
+  "files": {
+    "INTERFACE.txt": {
+      "bytes": 3884,
+      "mode": 436,
+      "sha256": "47e46ad6aece51b2277f05ec6160fe4078287929b9d73f9666a061d69bf24a27"
+    },
+    "PROPOSAL.json": {
+      "bytes": 4559,
+      "mode": 436,
+      "sha256": "cd06d296d9c2cf1c691f13cca9a0f1f6245eca3e69b08cca1edc854cb506cb55"
+    },
+    "controls/integration/file_controls.py": {
+      "bytes": 6168,
+      "mode": 436,
+      "sha256": "8b8c3b823652c9a8dff0bf9dec2a67a90f30b1b7b642db28e95965b540e9d7bb"
+    },
+    "controls/integration/full_driver.py": {
+      "bytes": 2121,
+      "mode": 436,
+      "sha256": "14125583107b2a06e522e40823cf3874929b6a5c3114d099888adc8c31ac75f5"
+    },
+    "run_guarded.py": {
+      "bytes": 12110,
+      "mode": 436,
+      "sha256": "32633e40364d824c9f942af1ad2934da9701117328364c7c3f418b21b2e8054a"
+    }
+  },
+  "status": "SOURCE_REVIEW_ONLY_NOT_EXECUTED",
+  "validation": "Python AST and JSON syntax parsing only; no candidate imports, controls, scientific execution or benchmarks."
+}

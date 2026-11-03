@@ -1,0 +1,245 @@
+{
+  "actual_archive_outcome_admission": false,
+  "actual_archive_source_admission": true,
+  "area": "retention",
+  "caps": {
+    "charged_before_seconds": 81.85018230997026,
+    "child_address_space_bytes": 268435456,
+    "child_seconds": 175,
+    "file_bytes_max": 536870912,
+    "free_space_requirement": "2 * full source logical bytes + 67108864 before output creation, freshly checked in the consumer.",
+    "fresh_review_free_bytes": 4530158436352,
+    "initial_aggregate_seconds": 600,
+    "manifest_bytes_max": 1048576,
+    "maximum_projected_run_manifest_bytes": 21063,
+    "metadata_bytes_max": 8388608,
+    "ordinary_log_bytes_each": 2097152,
+    "projected_original_manifest_bytes": 438011,
+    "root_rss_bytes": 1073741824,
+    "root_seconds": 180,
+    "round_aggregate_seconds": 2400,
+    "source_and_restore_logical_bytes_each": 2147483648,
+    "source_entries_max": 4096
+  },
+  "command_contract": {
+    "config_note": "The frozen config execution_gate PENDING label is descriptive. This exact source review is the external admission; preserve the config hash.",
+    "cwd": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028",
+    "enclosing_argv": [
+      "/usr/bin/time",
+      "-f",
+      "{\"wall_seconds\":%e,\"user_seconds\":%U,\"system_seconds\":%S,\"max_rss_kib\":%M,\"exit\":%x}",
+      "-o",
+      "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/validation/G3HistoricalArchiveV5-OUTER-TIME.txt",
+      "--",
+      "/usr/bin/flock",
+      "--exclusive",
+      "--nonblock",
+      "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-bookkeeping-swarm-20261028/runtime/science.lock",
+      "/usr/bin/python3.12",
+      "-B",
+      "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/integration/run_reviewed_queue_v2.py",
+      "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/control/G3-HISTORICAL-ARCHIVE-V5.json"
+    ],
+    "fresh_label": "G3-historical-archive-v5",
+    "lock_binding": {
+      "bytes": 0,
+      "device": 39,
+      "inode": 10322263,
+      "mode": 436,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-bookkeeping-swarm-20261028/runtime/science.lock"
+    },
+    "source_lock_failure": "Do not start another attempt; retain failure and enclosing diagnostics."
+  },
+  "disposition": "APPROVED_ONE_DECLARED_HISTORICAL_ARCHIVE_CREATE_AND_RESTORE_ATTEMPT",
+  "execution_admission": true,
+  "measurement_contract": {
+    "allocation": "stat block-allocation sums are diagnostics; actual shared extents are unknown. Preserve before and after allocation observations.",
+    "cpu": "Use enclosing GNUtime user/system and queue self/children values with their stated scopes; no duplicate sum of nested operation figures.",
+    "footprint": "The final consumer receipt includes complete output footprint before its own write. Final review must census output after receipt and separately report the additional self-write and outer log/queue/receipt footprint.",
+    "storage_claim": "Archive-only representation reduction, if observed, is distinct from retained original plus archive plus restoration footprint. No workspace reclamation claim.",
+    "wall": "Nested operation and runner times are not added again. Charge the encompassing queue plus nonoverlapping GNUtime residual, using the existing pinned reconciliation source."
+  },
+  "performance_claim_admission": false,
+  "permitted_execution": "One parent invocation of the exact frozen G3HistoricalArchiveV5 queue/config/stage, enclosed by GNUtime and the existing original science.lock exclusive/nonblocking lock for the entire queue. Stop on first failure and preserve every raw, partial stage and receipt. No automatic retry.",
+  "postrun_hook_admission": false,
+  "required_after_execution": [
+    "Freeze actual outcome only after source/runner/queue/config/stage pins and original lock identity still match. Reconcile enclosing timing and all raw log hashes/lengths and actual runner/consumer/operation statuses.",
+    "Independently check complete original inventory27-run closure, source counts and all1179file entries, package ROOT authentication, exact manifests/blob union and restored oracle projection; do not substitute RUN-INDEX22 membership.",
+    "Freshly verify original content and identity custody, all retained copies, package metadata and independent restored bytes. Retain any unsupported entry or failure visible; no silent omission or source repair.",
+    "Check create/restore RESULT.json PASS against START/provenance, root/inventory/restore-proof pins and full journal/receipt closure. Completion markers alone are insufficient.",
+    "Report source/archive/restore logical and diagnostic allocated footprints, complete new retained footprint after final receipts, storage ratio and zero reclaimed bytes, plus nested counters and nonoverlapping wall/CPU/RSS.",
+    "Keep all originals, prior finite failures and new partial artifacts. The postrun hook and all scientific callers remain independently gated."
+  ],
+  "reviewed_files": {
+    "control/EXECUTION-PHASE.json": {
+      "bytes": 227,
+      "mode": 436,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/control/EXECUTION-PHASE.json",
+      "sha256": "b70727589f9fca1d9fbe57ebbea74f4cd3956edf00cf0e02fe10109508e1b6aa"
+    },
+    "control/G3-HISTORICAL-ARCHIVE-V5.json": {
+      "bytes": 1679,
+      "mode": 292,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/control/G3-HISTORICAL-ARCHIVE-V5.json",
+      "sha256": "9d424b75acab205a83cf4f2991bc7a567486fa9ab7a6a5356936500160800de1"
+    },
+    "control/HISTORICAL-RAW-METADATA.json": {
+      "bytes": 2420,
+      "mode": 436,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/control/HISTORICAL-RAW-METADATA.json",
+      "sha256": "4c0d6feee983b267aae87d98ea7ae14bd02068058f8ac02e5f152967b5ceb522"
+    },
+    "integration/reconcile_outer.py": {
+      "bytes": 3204,
+      "mode": 436,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/integration/reconcile_outer.py",
+      "sha256": "807e7370fae02571ac05bc9148e20c6a60dbe108f50699a4ce5d81c7a0573811"
+    },
+    "integration/retention_driver.py": {
+      "bytes": 7367,
+      "mode": 436,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/integration/retention_driver.py",
+      "sha256": "53128e46999ff7f3a94b2c4a2489e95796069dd2e105d829cca859ca4b7edb0b"
+    },
+    "integration/run_reviewed_queue_v2.py": {
+      "bytes": 9359,
+      "mode": 436,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/integration/run_reviewed_queue_v2.py",
+      "sha256": "ca67c5362c5c86b3792b4e7381c7e7a6cd9cc2718dd280753aec086b80a23c2a"
+    },
+    "original_run_index": {
+      "bytes": 8735,
+      "mode": 436,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-bookkeeping-swarm-20261028/validation/RUN-INDEX.json",
+      "sha256": "cfcc237d5267c0edc8eb4658d349aff9445044ff42cc17f0cbdc50f02772f3e0"
+    },
+    "original_science_lock": {
+      "bytes": 0,
+      "device": 39,
+      "inode": 10322263,
+      "mode": 436,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-bookkeeping-swarm-20261028/runtime/science.lock"
+    },
+    "review/retention-v5-finite-execution/REVIEW.json": {
+      "bytes": 5360,
+      "mode": 292,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/retention-v5-finite-execution/REVIEW.json",
+      "sha256": "366fb15c4be72522428401c684076775f75c75abd4ace0373d71078019956cb4"
+    },
+    "run_guarded.py": {
+      "bytes": 12110,
+      "mode": 436,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/run_guarded.py",
+      "sha256": "32633e40364d824c9f942af1ad2934da9701117328364c7c3f418b21b2e8054a"
+    },
+    "stages/retention-v5/JOBS.json": {
+      "bytes": 263,
+      "mode": 292,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/retention-v5/JOBS.json",
+      "sha256": "f49873709161ef53a319eae7f92ec09e79791cb014325cf763044f86d39ff0b7"
+    },
+    "stages/retention-v5/SOURCE.json": {
+      "bytes": 578,
+      "mode": 292,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/retention-v5/SOURCE.json",
+      "sha256": "d3630878461edd72c7b89b343d550500f0e4a838e6c244741403a458a1d6e259"
+    },
+    "stages/retention-v5/STAGE.json": {
+      "bytes": 1737,
+      "mode": 292,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/retention-v5/STAGE.json",
+      "sha256": "53d78f7d5c3cd56c6db4f1ffa4adabaf92aa6b4f29bb327f66f873404dd7082f"
+    },
+    "stages/retention-v5/integration/full_driver.py": {
+      "bytes": 7367,
+      "mode": 292,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/retention-v5/integration/full_driver.py",
+      "sha256": "53128e46999ff7f3a94b2c4a2489e95796069dd2e105d829cca859ca4b7edb0b"
+    },
+    "stages/retention-v5/retention/CONTRACT-v5.md": {
+      "bytes": 3102,
+      "mode": 292,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/retention-v5/retention/CONTRACT-v5.md",
+      "sha256": "df290080f7f16f2a06d5b387cd09618d4edbd415f991772086de727bfc24dd93"
+    },
+    "stages/retention-v5/retention/CONTROL-BILL-v6.json": {
+      "bytes": 15311,
+      "mode": 292,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/retention-v5/retention/CONTROL-BILL-v6.json",
+      "sha256": "796a6fc8fd8c65e69f467303b9c5de1d41b08a32c18f9caa3b74ff876fc190b2"
+    },
+    "stages/retention-v5/retention/COVERAGE-v5.json": {
+      "bytes": 7984,
+      "mode": 292,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/retention-v5/retention/COVERAGE-v5.json",
+      "sha256": "dfada24bd481a79048ac70eb0bcfcf4d7b43982051b24352401f2d80dd32369e"
+    },
+    "stages/retention-v5/retention/SOURCE-HASHES-v5.json": {
+      "bytes": 1539,
+      "mode": 292,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/retention-v5/retention/SOURCE-HASHES-v5.json",
+      "sha256": "88dcc2cd5f8a6e5d448cd8ef6183280f3d685fb984d3500be3f48c55957dfa86"
+    },
+    "stages/retention-v5/retention/USAGE.md": {
+      "bytes": 3824,
+      "mode": 292,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/retention-v5/retention/USAGE.md",
+      "sha256": "13edef89fe8aa68cd662ccc6b0c6fbac7026e08385303c605963594f77c9ba89"
+    },
+    "stages/retention-v5/retention/archive.py": {
+      "bytes": 38565,
+      "mode": 292,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/retention-v5/retention/archive.py",
+      "sha256": "5c60009c9ba1dd9eab5ba85b859ae3ca43b36ed1675100e824a801c9f04804f7"
+    },
+    "stages/retention-v5/retention/controls.py": {
+      "bytes": 44686,
+      "mode": 292,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/retention-v5/retention/controls.py",
+      "sha256": "ece5c5a7f4282c783c7ccd274c5c130b1af12e5dc2cae8946dd9974ff7b66e89"
+    },
+    "stages/retention-v5/retention/oracle.py": {
+      "bytes": 11902,
+      "mode": 292,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/retention-v5/retention/oracle.py",
+      "sha256": "5617967782a34a142dad25f499f432e6c5736a670bec6db6192c143bb774d9f3"
+    }
+  },
+  "reviewer_candidate_or_archive_execution_count": 0,
+  "revision": 5,
+  "schema": "h25-independent-historical-archive-source-review-v1",
+  "scientific_execution_admission": false,
+  "source_checks_passed": 101,
+  "source_findings": [
+    "The sole job enters the archive lane, sets175s alarm and256MiB address-space cap, freshly authenticates the supplemental run-index, and bounds complete source metadata before output creation.",
+    "The source read occurs only after acquiring the parent enclosing original-writer lock; the new-round runner also keeps its separate existing lock. All27historical top-level receipts are closed.",
+    "The original inventory freshly streams every source file. Creation binds its external hash, verifies the complete source census before and after payload copying, writes raw content-addressed blobs, verifies the whole package, and publishes through same-parent no-replace rename.",
+    "Restoration never opens the historical source path. It verifies the package, creates independent single-link files and original modes, freshly hashes every restored file through the separate oracle, compares complete content projection, verifies the package again and rechecks staged identity before publication.",
+    "The actual driver then freshly collects the entire original source again, compares all logical and identity fields excluding only diagnostic allocated bytes, preserves both inventories and allocation observations, and rechecks the run-index bytes.",
+    "Complete package logical bytes must be below source logical bytes for the actual consumer PASS. Tiny-fixture finite PASS does not predict this outcome. Originals remain and reclaimed workspace bytes are exactly zero.",
+    "All source, archive and restore reads and retained output space remain charged to the encompassing consumer/runner/queue observation. Operation self-write exclusions and final parent accounting tail are explicit."
+  ],
+  "source_inspection": {
+    "bytes": 28580,
+    "mode": 436,
+    "path": "review/historical-archive-v5-source/SOURCE-INSPECTION.json",
+    "sha256": "da056a21f99db014035ba6a2df712cba3b08adee4f03df89d64931369c6b68a5"
+  },
+  "source_scope": {
+    "closed_top_level_runs": 27,
+    "files": 1179,
+    "full_completeness_anchor": "Fresh independently collected full original inventory and complete original census, externally retained inventory hash and archive ROOT hash. RUN-INDEX22 is supplemental provenance and is not used to select files.",
+    "live_payload_hashes_pending_execution": true,
+    "logical_bytes": 743333823,
+    "metadata_only_review": true,
+    "run_index_runs": 22,
+    "subdirectories": 311,
+    "supplemental_index_extras": [
+      "publication-RO-O",
+      "publication-RO-canonical",
+      "publication-RO-full",
+      "publication-RO-normal",
+      "publication-registry-v1"
+    ]
+  }
+}
