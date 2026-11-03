@@ -1,0 +1,51 @@
+{
+  "bounded_changes": [
+    "Predeclare three raw secondary-error slots and a conservative secondary_clear flag in the existing source-owned record.",
+    "Guard all three new secondary-handler bodies; store failure flag and raw error before optional tuple/list journal; suppress bookkeeping errors within each handler so the enclosing primary bare raise remains reachable.",
+    "Require secondary_clear, empty raw slots and empty journal before unqualified observation export, so failed/incomplete journaling cannot make a secondary error qualifying.",
+    "Add direct source-owned entry/exit/custody function references to already-captured _g12_helper_current with exact function-type/driver-namespace checks. Existing capture and currentness machinery binds the whole actual chain."
+  ],
+  "finding_ids": [
+    "G12-CANDIDATE-001",
+    "G12-CANDIDATE-002"
+  ],
+  "inverse": {
+    "bytes": 7471,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-protocol-repair/SOURCE-INVERSE-v2.json",
+    "sha256": "baa1dcf93dd4246be19f75fcedba9fdb614267c39ac89882ed22d234461b0466"
+  },
+  "limits": [
+    "No target operations or runtime validation",
+    "No source adoption, original disposition qualification, complete S03.08 or G12/FULL admission",
+    "No cost, performance, execution or activity credit",
+    "No universal allocation-equivalence claim; raw slots are ordinary pre-existing exact-dict entries and all three new handler bodies have outer protection",
+    "Independent review outcome remains pending"
+  ],
+  "literal_edit_count_per_support": 6,
+  "predecessor": {
+    "bytes": 2012,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1/FREEZE-v1.json",
+    "sha256": "4ee86e91c36c1651da2fa31506da27b3e479ae1883b0a0563818508cda839124"
+  },
+  "schema": "g12-candidate-protocol-mechanical-repair-delta-v2",
+  "source_map": {
+    "bytes": 17778,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-protocol-repair/SOURCE-MAP-v2.json",
+    "sha256": "04f0e573d6df6c0ef278758db0ac0b991e79a9904f5da3ce50d122b046f70c29"
+  },
+  "status": "FROZEN_SOURCE_SUCCESSOR_PENDING_INDEPENDENT_DELTA_REVIEW",
+  "target_operations": 0,
+  "unchanged": [
+    "Complete original driver main/CLI/STOP/owned cleanup flow",
+    "Original cache selector, cache prefix, authority and their exact source inverses",
+    "Capacity85196 and genuine85197th store",
+    "N22 sole commit, P07 explicit one-yield helper, same-invocation remaining work and comparisons",
+    "Original scientific/common projection and all helper pins",
+    "Closed None transport selection and separate parent custody scope"
+  ],
+  "verification": {
+    "bytes": 32201,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-protocol-repair/STATIC-VERIFICATION-v2.json",
+    "sha256": "7589715b307f4e840634b0ad8686cf0e3e5b4981076dc6300f7f38a4b246d2f7"
+  }
+}

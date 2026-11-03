@@ -2,13 +2,16 @@
 """Compare package working bytes with a commit before publishing hash receipts.
 
 This is a byte-transport preflight, not a research verifier or CI-equivalence
-claim. Prepared for ywz65 with OpenAI Codex assistance. Apache-2.0.
+claim. Use --check-modes on POSIX to compare owner-execute bits as well.
+Other permission bits, ACLs and mount policy are outside that check.
+Prepared for ywz65 with OpenAI Codex assistance. Apache-2.0.
 """
 import argparse
 import hashlib
 import json
 import os
 import re
+import stat
 import subprocess
 from contextlib import closing
 from pathlib import Path
@@ -17,6 +20,7 @@ from research_package import (
     canonical_relative_path,
     git,
     git_blobs,
+    git_source_env,
     relative_file,
     require,
     source_pin,
@@ -29,7 +33,7 @@ MAX_SOURCE_COMMITS = 256
 
 
 def history_git(root, *args):
-    env = os.environ.copy()
+    env = git_source_env()
     env['GIT_GRAFT_FILE'] = os.devnull
     env.pop('GIT_SHALLOW_FILE', None)
     return subprocess.run(['git', '--no-replace-objects', *args], cwd=root, env=env,
@@ -54,7 +58,11 @@ def source_history(root, package, commit):
     This is declared history availability, not full SOURCES.json validation
     or discovery of imports, archive references or runtime dependencies.
     """
-    sources = publication_sources(root, package, commit)
+    return _source_history_from_metadata(root, publication_sources(root, package, commit), commit)
+
+
+def _source_history_from_metadata(root, sources, commit):
+    """Validate metadata obtained from the immutable publication blob."""
     require(isinstance(sources, dict), 'SOURCES.json must be an object')
     base = sources.get('base_commit')
     require(isinstance(base, str) and re.fullmatch(r'[0-9a-f]{40,64}', base),
@@ -85,7 +93,8 @@ def source_history(root, package, commit):
     return sorted(commits)
 
 
-def check(root, package, ref='HEAD', check_source_history=False):
+def check(root, package, ref='HEAD', check_source_history=False, check_modes=False):
+    require(not check_modes or os.name == 'posix', 'executable-mode check requires a POSIX host')
     require(re.fullmatch(r'research/[a-z0-9][a-z0-9-]*', package), 'package must be research/<slug>')
     manifest = json.loads(relative_file(root, package+'/VERIFY.json').read_text(encoding='utf-8'))
     require(isinstance(manifest, dict), 'VERIFY.json must be an object')
@@ -97,7 +106,7 @@ def check(root, package, ref='HEAD', check_source_history=False):
     # Literal pathspecs keep wildcard filenames from selecting other files.
     records = git(root, '--literal-pathspecs', 'ls-tree', '-r', '-z', '--full-tree',
                   commit, '--', package, *inputs).split(b'\0')
-    entries = {}
+    entries, modes = {}, {}
     for record in records:
         if not record:
             continue
@@ -107,6 +116,7 @@ def check(root, package, ref='HEAD', check_source_history=False):
         require(mode in (b'100644', b'100755') and kind == b'blob',
                 'commit contains a non-regular file: '+name)
         entries[name] = obj.decode('ascii')
+        modes[name] = mode == b'100755'
     # New nonignored local checkers must not disappear from the publication.
     local = git(root, '--literal-pathspecs', 'ls-files', '-c', '-o', '--exclude-standard',
                 '-z', '--', package).decode('utf-8').split('\0')
@@ -115,18 +125,31 @@ def check(root, package, ref='HEAD', check_source_history=False):
             ', '.join(sorted(set(entries) ^ expected)))
     names = sorted(entries)
     require(names, 'empty package inventory')
+    source_payload, source_size = None, None
     with closing(git_blobs(root, [entries[name] for name in names])) as blobs:
         # Advance the blob iterator once past its last yield, so its final
         # Git exit-status check runs before reporting success.
         for (_, committed), name in zip(blobs, names):
-            working = relative_file(root, name).read_bytes()
-            require(working == committed,
-                    'working/commit bytes differ: '+name+' (working SHA256 '+
-                    hashlib.sha256(working).hexdigest()+', commit SHA256 '+
-                    hashlib.sha256(committed).hexdigest()+')')
+            path = relative_file(root, name)
+            if check_modes:
+                require(bool(path.stat().st_mode & stat.S_IXUSR) == modes[name],
+                        'working/commit executable mode differs: ' + name)
+            working = path.read_bytes()
+            if working != committed:
+                raise ValueError('working/commit bytes differ: '+name+' (working SHA256 '+
+                                 hashlib.sha256(working).hexdigest()+', commit SHA256 '+
+                                 hashlib.sha256(committed).hexdigest()+')')
+            if check_source_history and name == package + '/SOURCES.json':
+                source_size = len(committed)
+                source_payload = committed if source_size <= MAX_SOURCE_METADATA_BYTES else None
     result = {'commit':commit, 'files':len(names), 'package':package}
+    if check_modes:
+        result['executable_modes_checked'] = True
     if check_source_history:
-        result['source_history_commits'] = source_history(root, package, commit)
+        require(source_size is not None, 'missing publication SOURCES.json')
+        require(source_size <= MAX_SOURCE_METADATA_BYTES, 'source metadata byte limit exceeded')
+        result['source_history_commits'] = _source_history_from_metadata(
+            root, json.loads(source_payload), commit)
     return result
 
 
@@ -136,9 +159,11 @@ def main():
     parser.add_argument('--ref', default='HEAD', help='commit to publish; default HEAD')
     parser.add_argument('--check-source-history', action='store_true',
                         help='also require declared SOURCES.json pin commits in publication ancestry; full history only')
+    parser.add_argument('--check-modes', action='store_true',
+                        help='also compare POSIX owner-execute bits with committed Git modes')
     args = parser.parse_args()
     try:
-        result = check(ROOT, args.package, args.ref, args.check_source_history)
+        result = check(ROOT, args.package, args.ref, args.check_source_history, args.check_modes)
     except (OSError, ValueError, TypeError, subprocess.SubprocessError) as exc:
         parser.exit(1, str(exc)+'\n')
     print('PASS_RESEARCH_COMMIT_BYTES '+json.dumps(result))

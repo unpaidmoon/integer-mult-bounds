@@ -1,0 +1,106 @@
+{
+  "accepted_design": {
+    "bytes": 55647,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/DESIGN-v4.json",
+    "sha256": "e3b79641915661c18b2249818664579624c494ac19e2673d118f4c26b77f37bd"
+  },
+  "created_utc": "2026-10-31T02:25:37.366642+00:00",
+  "finding_resolution": "The successor removes pure-lane retention before native launch. It first validates and retains ownership of the original pure namespace without creating a retention directory, copy, lane seal or qualified handoff. It then launches and validates native exactly once and requires both chains and all their known streams/pidfds closed. Only afterward does it create the fresh parent retention directory, retain both sets of complete byte-identical copies, compare all six raw outputs and full trace, jointly recheck original/retained/source identities and seal the pair. This now satisfies the unchanged post-both-chain retention predicate.",
+  "input_delta": {
+    "bytes": 9724,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/EXACT-DELTA-v3-to-v4.json",
+    "sha256": "a2acdd7089faa98ac0669dea665d9e1b92cff4b0e4a2469f522e2b18646053fe"
+  },
+  "input_freeze": {
+    "bytes": 2982,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/FREEZE-v4.json",
+    "sha256": "a1825d27d6721c10b0442173aa4ff246fc115fb4bf9f29fb50e2d87091f763e9"
+  },
+  "limits": {
+    "accepted_body_credit": 0,
+    "activity_credit": 0,
+    "actual_current_costs": null,
+    "actual_unmeasured_final_tail": null,
+    "broader_goal_service_status_changed": false,
+    "configured_source_completion": false,
+    "execution_authorized": false,
+    "full_owner_approval": false,
+    "funding_and_fit_accepted": false,
+    "implementation_created": false,
+    "physical_complete_cost_admission": false,
+    "runtime_payloads_created": 0,
+    "source_adopted": false,
+    "target_operations": 0,
+    "whole_activity_accepted": false
+  },
+  "mechanism_conclusion": "Accept this exact corrected fixed source design together with the retained full v3 independent analysis. No unresolved finding remains at this bounded source-design review level. Concrete parent/adapter/consumer/driver source, exact maps/inverses and independently verified ownership/custody/error/cost paths are still required before any implemented or configured source-completion acceptance.",
+  "method": "Exact named JSON/text/SHA256 and structural/byte delta replay only. No target import/helper/factory/test/compiler/native/scientific/decoder execution, process/lock/network operations, broad recovery or protected bookkeeping runtime access.",
+  "preserved_rejected_design": {
+    "bytes": 53696,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/DESIGN-v3.json",
+    "sha256": "deef1b8534a46e892cceeb755c4b9f5915816c31f8cdb255094d75a87a77baa7"
+  },
+  "remaining_implementation_and_runtime_gates": [
+    "Implement only under a separate explicit source assignment; no code is created or authorized to run by this review.",
+    "Independently review exact new parent, unchanged-producer adapter, cold consumer and candidate driver pins; source maps, complete inverse, actual source/ABI graph, strict decoder, custody/alias/first-primary/cleanup/cost obligations remain concrete implementation work.",
+    "Keep actual launch/data selections, anchor successful-parent provenance, parent completion, reference output hashes and runtime payloads absent until supplied by an accepted genuine source-owned path.",
+    "Source adoption, actual execution, original guards/phase/budget, full-owner approval, physical cost/funding/fit and all unknown measured/final tails remain separate closed gates."
+  ],
+  "resolved_finding": "P02-RB-V3-F1",
+  "retained_full_design_review": {
+    "bytes": 12596,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/p02-reference-independent/P02-REFERENCE-DESIGN-v3-REVIEW-v1.json",
+    "sha256": "b53c92ef3774d159fde456eb0545d34365d67e0c0a6bfd944693fda044d28373"
+  },
+  "retained_local_protocol_review": {
+    "bytes": 13606,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/p02-protocol-independent/P02-PROTOCOL-REVIEW-v1.json",
+    "sha256": "6f649d3dc9893836b731c01f0ab2ad5830aae88e393ab5f0def9e92d8ea52c7d"
+  },
+  "reviewer": "/root/cache_p02_protocol_review",
+  "schema": "p02-reference-independent-successor-design-delta-review-v1",
+  "scope": "Bounded exact v3-to-v4 retention-order delta only. Retains the full independent v3 source mechanism analysis and the separate accepted local protocol review. No repeat full audit, implementation, configured source completion or whole-activity acceptance.",
+  "status": "ACCEPT_EXACT_V4_REFERENCE_BRIDGE_SOURCE_DESIGN_ONLY",
+  "stop_rule": {
+    "accepted_count_baseline": "49/52",
+    "baseline_utc": "2026-10-31T01:59:08.955035Z",
+    "deadline_utc": "2026-10-31T02:29:08.955035Z",
+    "design_acceptance_resets_deadline": false,
+    "freeze_and_end_before_deadline": true,
+    "this_review_count_increase": 0
+  },
+  "verified": {
+    "all_other_design_sections_identical": true,
+    "changed_paths_only": [
+      "/parent_sequence/3",
+      "/parent_sequence/4",
+      "/parent_sequence/5",
+      "/parent_sequence/6",
+      "/revision",
+      "/schema",
+      "/supersedes"
+    ],
+    "exact_forward_json_and_bytes": true,
+    "exact_inverse_json_and_bytes": true,
+    "genuine_cold_4_7_6_6_design_unchanged": true,
+    "inverse_sha256": "deef1b8534a46e892cceeb755c4b9f5915816c31f8cdb255094d75a87a77baa7",
+    "no_earlier_qualified_handoff_added": true,
+    "original_retention_predicate_unchanged": true,
+    "parent_sequence_indices_0_1_2_7_identical": true,
+    "previous_rejection_and_all_predecessors_preserved": true,
+    "same_source_pin_file_and_all_29_source_ref_records": true,
+    "same_two_original_modes_anchor_workload_and_complete_join": true,
+    "source_interfaces_unchanged": {
+      "bytes": 12560,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/SOURCE-INTERFACES-v3.json",
+      "sha256": "1d51889836e1dbc73f68c96395308bbd5de45279db1078c25d44402e2c414b05"
+    },
+    "source_pins_unchanged": {
+      "bytes": 10881,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/SOURCE-PINS-v3.json",
+      "sha256": "a1773498e738ac9a193f6772c117c5d35be7494c9e7e2abda16143d11045cf5a"
+    },
+    "strict_schema_custody_cleanup_and_candidate_reader_contracts_unchanged": true,
+    "symbolic_cost_null_tail_and_separate_actual_runtime_gates_unchanged": true
+  }
+}

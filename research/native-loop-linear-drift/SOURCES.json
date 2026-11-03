@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "d59b5035e7b4cbaa9d688a1d32dd0d6eb79c466a",
+      "sha256": "9b8d0eea95b3bf0dfcb7938a732a6439b87a2685dec2a5ab9e525b3b34debbfa"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "3404fbdd5e7529a0674eef26114b5071e4586cec",
+      "sha256": "ead6cdc9d0af6d58e8a49744d8ec8c7c15e13d2ba93c276c434bcf9b51b93a81"
+    },
+    {
+      "path": "research/native-rounded-loop-defect/RECIPES.json",
+      "usage": "input",
+      "git_blob": "ec453b2741a28a472689ab640ac9e3c325b97304",
+      "sha256": "97f769fe20aada89d065f538af137f6385d4fbcdb21e0832dd850429f679b8b2"
+    },
+    {
+      "path": "research/native-rounded-loop-defect/README.md",
+      "usage": "provenance",
+      "git_blob": "1f5c8849d44af1fbd1e2248cfcf7d9ea52af6824",
+      "sha256": "71de2059290b95a8c9c0521396d26c4ea8e082ddc7d2abb90c1bc83ce228a5fc"
+    },
+    {
+      "path": "research/native-rounded-loop-defect/PROOF.md",
+      "usage": "provenance",
+      "git_blob": "51a633ae554dfce0da4a83900d4537d3a67e843e",
+      "sha256": "44e1e608b3e5befdf4f037b93f9296e3ce0a44e66622ecd377f1a7317a1e430f"
+    },
+    {
+      "path": "research/p104-reversible-lifting/README.md",
+      "usage": "provenance",
+      "git_blob": "05eddb238528e00e0985a2cdb2e04e7595cbbb51",
+      "sha256": "051a886e9777b6ace444920df1fd46c285dc0251d7ef6fac570dc12cca7c4bc8"
+    },
+    {
+      "path": "research/coherent-frame-additivity/README.md",
+      "usage": "provenance",
+      "git_blob": "5c72c03ba7887aedad30acf4c20f40346da2fee5",
+      "sha256": "cf6889e806a9b4fa9a75beccefaa998627a9b35b77be529f0fe26718f60b9d67"
+    }
+  ]
+}

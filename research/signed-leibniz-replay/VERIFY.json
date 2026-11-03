@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/dyadic-helper-channel-capacity/RESULT.json",
+    "research/dyadic-helper-channel-capacity/SOURCES.json",
+    "research/dyadic-helper-channel-capacity/capacity.py",
+    "research/dyadic-helper-channel-capacity/verify.py",
+    "research/p104-coupled-helper-bases/PROOF.md"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Complete unchanged caller equivalence, all 19654 determinant requests, bounded formula conformance, schedule and source corruptions, Git-free empty-PATH replay and generated measurement integrity."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "-O",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Complete unchanged caller equivalence, all 19654 determinant requests, bounded formula conformance, schedule and source corruptions, Git-free empty-PATH replay and generated measurement integrity."
+    }
+  ]
+}

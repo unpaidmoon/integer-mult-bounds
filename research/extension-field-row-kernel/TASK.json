@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "task_id": "replay-runtime",
+  "priority_revision": 8,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "original_card": {
+    "id": "replay-runtime",
+    "question": "Can one measured replay bottleneck be sped up without dropping coverage?",
+    "starting_points": [
+      "scripts/run_isolated_tests.py",
+      "scripts/verify_replay_coverage.py",
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "Profile one isolated replay and optimize the measured bottleneck.",
+      "Design source-bound reuse with explicit dependency invalidation and negative controls."
+    ],
+    "acceptance_gate": "Report before/after wall time on the same fixture, retained checks and invalidation behavior.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_selected_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Resolve the current selected review, separate complex/ordinary BIT/admitted BIT/outer budgets, and compare the card against live handoffs before starting. Historical ceilings require exact source/model equivalence.",
+      "scope": "Source-binding orientation only; not a scientific replay or all-size proof. Materialize selected inputs if this checkout is sparse."
+    },
+    "first_experiment": "Measure one unchanged fixture, preserve check coverage, and test one optimization with invalidation controls.",
+    "bottleneck_link": "Faster trustworthy replays increase review throughput and let mechanism candidates be checked sooner.",
+    "allowed_variations": [
+      "Profile one stage or design one source-bound cache boundary."
+    ],
+    "scope_change_triggers": [
+      "Skipping coverage or comparing different fixtures to claim speedup."
+    ],
+    "overlap_terms": [
+      "replay runtime",
+      "cache invalidation",
+      "isolated tests"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Exact bounded table-driven row elimination in the complete PR5637 extension-field tensor-recognition caller, preserving all decisions, literal certificates and controls.",
+  "scope_change_reason": "The replay-runtime card is refined to one original arithmetic-kernel implementation on a named foreign complete caller. This is not a scientific audit or a new classification.",
+  "bottleneck_link": "Verification tooling side result: reduce complete exact replay cost without changing its tensor domain or any supplier/selected-frontier claim.",
+  "budget_minutes": 60,
+  "stop_rule": "Ship the first verified complete-caller runtime improvement after exact row-output checks and five alternating fresh-process pairs; otherwise release a concrete failed-method handoff.",
+  "outcome": "completed",
+  "evidence": "Written stepwise implementation-equivalence proof; complete F2/F4 caller report equality, exhaustive small row comparisons and boundary/rejection controls; local benchmark generated outside the checkout.",
+  "author": "Nick Petalas",
+  "ai_assistance": "Independent human and formal proof-kernel review are unclaimed.",
+  "open_questions": [
+    {
+      "question": "Can the bounded row engine be admitted directly into a source-owned recognition API without a private module adapter?",
+      "why_it_matters": "A source-owned entry point would avoid wrapper setup and make field/shape capacities explicit for consumers.",
+      "first_step": "Define the public field and augmented-row contract and preserve exact full rows and pivot order.",
+      "blocked_by": "This contribution intentionally keeps the predecessor bytes frozen and supplies no upstream API change."
+    }
+  ]
+}

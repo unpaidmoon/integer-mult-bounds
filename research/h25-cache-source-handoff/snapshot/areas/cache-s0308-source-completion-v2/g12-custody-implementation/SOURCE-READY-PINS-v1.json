@@ -1,0 +1,56 @@
+{
+  "created_utc": "2026-10-31T02:22:25.534003+00:00",
+  "files": {
+    "candidate-integration/g12_candidate_driver_N22_custody_v1.py": {
+      "bytes": 128363,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/candidate-integration/g12_candidate_driver_N22_custody_v1.py",
+      "sha256": "c9d72a79ce3a828815d3d0370a1f95f210e1a41edeed767c55ff9d0614126fa4"
+    },
+    "candidate-integration/g12_candidate_driver_P07_custody_v1.py": {
+      "bytes": 128363,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/candidate-integration/g12_candidate_driver_P07_custody_v1.py",
+      "sha256": "2a5d202dabd78d5de54fac29db7fdfaf8836866425d93842f2b22d747fa52d0c"
+    },
+    "candidate-integration/g12_candidate_driver_support_N22_custody_v1.py": {
+      "bytes": 33549,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/candidate-integration/g12_candidate_driver_support_N22_custody_v1.py",
+      "sha256": "28c1a44750b9745a5ad6e930f9a83cf256b3a90905f5f30d08a89aca54c828da"
+    },
+    "candidate-integration/g12_candidate_driver_support_P07_custody_v1.py": {
+      "bytes": 33549,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/candidate-integration/g12_candidate_driver_support_P07_custody_v1.py",
+      "sha256": "cae88bf247ee775d6d7fc1264cb2af1d487e4c19168ca787c7c16aba16452220"
+    },
+    "candidate-integration/g12_epoch_authority_custody_v1.py": {
+      "bytes": 139604,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/candidate-integration/g12_epoch_authority_custody_v1.py",
+      "sha256": "3079a096df1072a83056f3f8a8cbf9e766fdddb488e36dddb36544c7929f988a"
+    },
+    "g12_reference_cold_consumer_v1.py": {
+      "bytes": 61159,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/g12_reference_cold_consumer_v1.py",
+      "sha256": "89ad17cfa90e895e2cb105e80cc57c82be4bf1a4a85a9d44322016c4344e3849"
+    },
+    "g12_reference_parent_v1.py": {
+      "bytes": 94080,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/g12_reference_parent_v1.py",
+      "sha256": "160b8c5de808b9b31532608a89fa5e209110caea132145cd431ffade4403079e"
+    },
+    "integration/g12_reference_adapter_v1.py": {
+      "bytes": 21740,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/integration/g12_reference_adapter_v1.py",
+      "sha256": "43aaabc69841b0a90fae599011de85f4736f42ced64344c49d6cd93f20297f9f"
+    }
+  },
+  "schema": "g12-custody-ready-source-pins-v1",
+  "status": "SOURCE_BYTES_FINAL_FOR_INDEPENDENT_REVIEW_FULL_METADATA_PENDING",
+  "target_operations": 0
+}

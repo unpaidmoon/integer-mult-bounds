@@ -1,0 +1,4045 @@
+{
+  "cold_caller_loader_edges": {
+    "actual_reference_handoff": null,
+    "actual_transport_source_pin": null,
+    "authority_capture": "Original capture_epoch_authority(root, capability, api), actual bootstrap validated before operations return; private loader uses those exact closure cells before selected source exec/module_image; invoke validates identity before call and cold_check after return.",
+    "current_target_execution": 0,
+    "edits": [
+      {
+        "derivative": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/candidate-integration/g12_epoch_authority_custody_v1.py",
+        "derivative_sha256": "3079a096df1072a83056f3f8a8cbf9e766fdddb488e36dddb36544c7929f988a",
+        "kind": "authority fixed loader and invoke",
+        "original": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1/g12_epoch_authority_selector_v1.py",
+        "original_sha256": "65b3d33068b0549ddb4a9e7e18a9912bebad69c309a8a29ae4fd532e9f428211"
+      },
+      {
+        "derivative": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/candidate-integration/g12_candidate_driver_N22_custody_v1.py",
+        "derivative_sha256": "c9d72a79ce3a828815d3d0370a1f95f210e1a41edeed767c55ff9d0614126fa4",
+        "kind": "exact capability ABI and selected owned authority derivative",
+        "original": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-protocol-repair/g12_candidate_driver_N22_v2.py",
+        "original_sha256": "a2d7fcaa1d3267bb43f14bfa1422759f77ede73641ed1f2a4fe55448792eec4a"
+      },
+      {
+        "derivative": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/candidate-integration/g12_candidate_driver_support_N22_custody_v1.py",
+        "derivative_sha256": "28c1a44750b9745a5ad6e930f9a83cf256b3a90905f5f30d08a89aca54c828da",
+        "kind": "exact capability ABI",
+        "original": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-protocol-repair/g12_candidate_driver_support_N22_v2.py",
+        "original_sha256": "5b7709012375e7e6600840c2c86bf90f44382499d1670b15ce325b30c14a2b48"
+      },
+      {
+        "derivative": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/candidate-integration/g12_candidate_driver_P07_custody_v1.py",
+        "derivative_sha256": "2a5d202dabd78d5de54fac29db7fdfaf8836866425d93842f2b22d747fa52d0c",
+        "kind": "exact capability ABI and selected owned authority derivative",
+        "original": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-protocol-repair/g12_candidate_driver_P07_v2.py",
+        "original_sha256": "dc0e3c32a2412d8a872f8568ecbaff99a41785fadd79b0bbfc2341e0e51ede74"
+      },
+      {
+        "derivative": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/candidate-integration/g12_candidate_driver_support_P07_custody_v1.py",
+        "derivative_sha256": "cae88bf247ee775d6d7fc1264cb2af1d487e4c19168ca787c7c16aba16452220",
+        "kind": "exact capability ABI",
+        "original": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-protocol-repair/g12_candidate_driver_support_P07_v2.py",
+        "original_sha256": "7c41cb423b18df69de48573817f92fae1a21be2751af7ad97768480ffa0b4a19"
+      }
+    ],
+    "no_self_digest_cycle": "Consumer source identity is initial loader tuple(path,digest,size) from its original Root hash; own source does not embed its own hash.",
+    "schema": "g12-fixed-cold-custody-source-edges-v1"
+  },
+  "cold_identity": "Private original loader injects captured actual Root/capability/API and (path,digest,size) from Root hash before exec/module_image only for fixed selected transport name/path/pin; invoke verifies exact argument identity and cold_check after return.",
+  "function_spans": {
+    "candidate-integration/g12_candidate_driver_N22_custody_v1.py": [
+      {
+        "arguments": [],
+        "end": 114,
+        "name": "_initial_native_tcb",
+        "start": 54
+      },
+      {
+        "arguments": [],
+        "end": 156,
+        "name": "_initial_cold_authority",
+        "start": 127
+      },
+      {
+        "arguments": [
+          "condition",
+          "message"
+        ],
+        "end": 261,
+        "name": "need",
+        "start": 259
+      },
+      {
+        "arguments": [
+          "data"
+        ],
+        "end": 265,
+        "name": "sha",
+        "start": 264
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 269,
+        "name": "canonical",
+        "start": 268
+      },
+      {
+        "arguments": [],
+        "end": 275,
+        "name": "cpu",
+        "start": 272
+      },
+      {
+        "arguments": [
+          "root",
+          "pins"
+        ],
+        "end": 293,
+        "name": "inventory",
+        "start": 278
+      },
+      {
+        "arguments": [
+          "root",
+          "pins"
+        ],
+        "end": 314,
+        "name": "candidate_inventory",
+        "start": 298
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 336,
+        "name": "typed",
+        "start": 317
+      },
+      {
+        "arguments": [],
+        "end": 800,
+        "name": "main",
+        "start": 400
+      },
+      {
+        "arguments": [],
+        "end": 833,
+        "name": "_run_with_stop_evidence",
+        "start": 803
+      },
+      {
+        "arguments": [
+          "phases",
+          "data_state",
+          "extensions",
+          "caller",
+          "stdout",
+          "invocation_token",
+          "old_argv"
+        ],
+        "end": 898,
+        "name": "_epoch_cli_boundary",
+        "start": 838
+      },
+      {
+        "arguments": [],
+        "end": 1244,
+        "name": "main_epoch",
+        "start": 900
+      },
+      {
+        "arguments": [],
+        "end": 1267,
+        "name": "_run_epoch_with_stop_evidence",
+        "start": 1246
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 1308,
+        "name": "_g12_primitive",
+        "start": 1286
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 1312,
+        "name": "_g12_bytes",
+        "start": 1311
+      },
+      {
+        "arguments": [
+          "code"
+        ],
+        "end": 1336,
+        "name": "_g12_code_snapshot",
+        "start": 1315
+      },
+      {
+        "arguments": [
+          "code"
+        ],
+        "end": 1344,
+        "name": "_g12_remaining_count",
+        "start": 1339
+      },
+      {
+        "arguments": [
+          "code",
+          "code_before",
+          "role_result",
+          "full_return",
+          "certificate_bytes",
+          "stdout_text",
+          "suffix_phases"
+        ],
+        "end": 1362,
+        "name": "_g12_common_outputs",
+        "start": 1347
+      },
+      {
+        "arguments": [
+          "index"
+        ],
+        "end": 1404,
+        "name": "_g12_cold",
+        "start": 1389
+      },
+      {
+        "arguments": [],
+        "end": 1431,
+        "name": "_g12_helper_current",
+        "start": 1407
+      },
+      {
+        "arguments": [
+          "suspended"
+        ],
+        "end": 1448,
+        "name": "_g12_generator_shape",
+        "start": 1434
+      },
+      {
+        "arguments": [
+          "suite",
+          "original_commit",
+          "site",
+          "checks"
+        ],
+        "end": 1508,
+        "name": "_g12_selected_store",
+        "start": 1451
+      },
+      {
+        "arguments": [
+          "args"
+        ],
+        "end": 1514,
+        "name": "_g12_selected_args",
+        "start": 1512
+      },
+      {
+        "arguments": [
+          "state",
+          "extensions",
+          "module",
+          "binding",
+          "phases",
+          "invocation_token",
+          "checks_pair",
+          "code_pair",
+          "label_pair",
+          "caller",
+          "rank_calls",
+          "trace",
+          "captures",
+          "stdout",
+          "frozen",
+          "runtime",
+          "engine",
+          "output",
+          "reference",
+          "reference_bytes",
+          "driver_before",
+          "pins",
+          "frozen_before",
+          "engine_before",
+          "runtime_before",
+          "copied_engine_before",
+          "script_names",
+          "new_custody_before",
+          "data_custody_before",
+          "anchor_path",
+          "anchor_bytes"
+        ],
+        "end": 1554,
+        "name": "_g12_bind_locals",
+        "start": 1516
+      },
+      {
+        "arguments": [],
+        "end": 1573,
+        "name": "_g12_diagnostics",
+        "start": 1557
+      },
+      {
+        "arguments": [
+          "checks",
+          "circuit",
+          "suite"
+        ],
+        "end": 1606,
+        "name": "_g12_complete_capacity_store",
+        "start": 1577
+      },
+      {
+        "arguments": [
+          "phases",
+          "name",
+          "function",
+          "args",
+          "kwargs",
+          "result"
+        ],
+        "end": 1676,
+        "name": "_g12_after_phase",
+        "start": 1608
+      },
+      {
+        "arguments": [
+          "namespace"
+        ],
+        "end": 1737,
+        "name": "_g12_complete_original_cli",
+        "start": 1679
+      },
+      {
+        "arguments": [],
+        "end": 1746,
+        "name": "_g12_original_imports",
+        "start": 1740
+      },
+      {
+        "arguments": [],
+        "end": 1770,
+        "name": "_g12_original_terminal_custody",
+        "start": 1749
+      },
+      {
+        "arguments": [
+          "primary"
+        ],
+        "end": 1829,
+        "name": "_g12_after_original_exit",
+        "start": 1773
+      },
+      {
+        "arguments": [],
+        "end": 1873,
+        "name": "_g12_continuation_entry",
+        "start": 1832
+      },
+      {
+        "arguments": [
+          "self"
+        ],
+        "end": 346,
+        "name": "__init__",
+        "start": 345
+      },
+      {
+        "arguments": [],
+        "end": 362,
+        "name": "memory",
+        "start": 349
+      },
+      {
+        "arguments": [
+          "self",
+          "name",
+          "function"
+        ],
+        "end": 390,
+        "name": "call",
+        "start": 364
+      },
+      {
+        "arguments": [
+          "self",
+          "owner",
+          "attribute",
+          "name"
+        ],
+        "end": 397,
+        "name": "wrap",
+        "start": 392
+      },
+      {
+        "arguments": [
+          "c",
+          "checks",
+          "code"
+        ],
+        "end": 649,
+        "name": "observe_roles",
+        "start": 645
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 673,
+        "name": "observe_serializable",
+        "start": 659
+      },
+      {
+        "arguments": [],
+        "end": 395,
+        "name": "observed",
+        "start": 394
+      },
+      {
+        "arguments": [
+          "c",
+          "checks",
+          "code"
+        ],
+        "end": 1133,
+        "name": "observe_roles",
+        "start": 1129
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 1158,
+        "name": "observe_serializable",
+        "start": 1146
+      }
+    ],
+    "candidate-integration/g12_candidate_driver_P07_custody_v1.py": [
+      {
+        "arguments": [],
+        "end": 114,
+        "name": "_initial_native_tcb",
+        "start": 54
+      },
+      {
+        "arguments": [],
+        "end": 156,
+        "name": "_initial_cold_authority",
+        "start": 127
+      },
+      {
+        "arguments": [
+          "condition",
+          "message"
+        ],
+        "end": 261,
+        "name": "need",
+        "start": 259
+      },
+      {
+        "arguments": [
+          "data"
+        ],
+        "end": 265,
+        "name": "sha",
+        "start": 264
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 269,
+        "name": "canonical",
+        "start": 268
+      },
+      {
+        "arguments": [],
+        "end": 275,
+        "name": "cpu",
+        "start": 272
+      },
+      {
+        "arguments": [
+          "root",
+          "pins"
+        ],
+        "end": 293,
+        "name": "inventory",
+        "start": 278
+      },
+      {
+        "arguments": [
+          "root",
+          "pins"
+        ],
+        "end": 314,
+        "name": "candidate_inventory",
+        "start": 298
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 336,
+        "name": "typed",
+        "start": 317
+      },
+      {
+        "arguments": [],
+        "end": 800,
+        "name": "main",
+        "start": 400
+      },
+      {
+        "arguments": [],
+        "end": 833,
+        "name": "_run_with_stop_evidence",
+        "start": 803
+      },
+      {
+        "arguments": [
+          "phases",
+          "data_state",
+          "extensions",
+          "caller",
+          "stdout",
+          "invocation_token",
+          "old_argv"
+        ],
+        "end": 898,
+        "name": "_epoch_cli_boundary",
+        "start": 838
+      },
+      {
+        "arguments": [],
+        "end": 1244,
+        "name": "main_epoch",
+        "start": 900
+      },
+      {
+        "arguments": [],
+        "end": 1267,
+        "name": "_run_epoch_with_stop_evidence",
+        "start": 1246
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 1308,
+        "name": "_g12_primitive",
+        "start": 1286
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 1312,
+        "name": "_g12_bytes",
+        "start": 1311
+      },
+      {
+        "arguments": [
+          "code"
+        ],
+        "end": 1336,
+        "name": "_g12_code_snapshot",
+        "start": 1315
+      },
+      {
+        "arguments": [
+          "code"
+        ],
+        "end": 1344,
+        "name": "_g12_remaining_count",
+        "start": 1339
+      },
+      {
+        "arguments": [
+          "code",
+          "code_before",
+          "role_result",
+          "full_return",
+          "certificate_bytes",
+          "stdout_text",
+          "suffix_phases"
+        ],
+        "end": 1362,
+        "name": "_g12_common_outputs",
+        "start": 1347
+      },
+      {
+        "arguments": [
+          "index"
+        ],
+        "end": 1404,
+        "name": "_g12_cold",
+        "start": 1389
+      },
+      {
+        "arguments": [],
+        "end": 1431,
+        "name": "_g12_helper_current",
+        "start": 1407
+      },
+      {
+        "arguments": [
+          "suspended"
+        ],
+        "end": 1448,
+        "name": "_g12_generator_shape",
+        "start": 1434
+      },
+      {
+        "arguments": [
+          "suite",
+          "original_commit",
+          "site",
+          "checks"
+        ],
+        "end": 1508,
+        "name": "_g12_selected_store",
+        "start": 1451
+      },
+      {
+        "arguments": [
+          "args"
+        ],
+        "end": 1514,
+        "name": "_g12_selected_args",
+        "start": 1512
+      },
+      {
+        "arguments": [
+          "state",
+          "extensions",
+          "module",
+          "binding",
+          "phases",
+          "invocation_token",
+          "checks_pair",
+          "code_pair",
+          "label_pair",
+          "caller",
+          "rank_calls",
+          "trace",
+          "captures",
+          "stdout",
+          "frozen",
+          "runtime",
+          "engine",
+          "output",
+          "reference",
+          "reference_bytes",
+          "driver_before",
+          "pins",
+          "frozen_before",
+          "engine_before",
+          "runtime_before",
+          "copied_engine_before",
+          "script_names",
+          "new_custody_before",
+          "data_custody_before",
+          "anchor_path",
+          "anchor_bytes"
+        ],
+        "end": 1554,
+        "name": "_g12_bind_locals",
+        "start": 1516
+      },
+      {
+        "arguments": [],
+        "end": 1573,
+        "name": "_g12_diagnostics",
+        "start": 1557
+      },
+      {
+        "arguments": [
+          "checks",
+          "circuit",
+          "suite"
+        ],
+        "end": 1606,
+        "name": "_g12_complete_capacity_store",
+        "start": 1577
+      },
+      {
+        "arguments": [
+          "phases",
+          "name",
+          "function",
+          "args",
+          "kwargs",
+          "result"
+        ],
+        "end": 1676,
+        "name": "_g12_after_phase",
+        "start": 1608
+      },
+      {
+        "arguments": [
+          "namespace"
+        ],
+        "end": 1737,
+        "name": "_g12_complete_original_cli",
+        "start": 1679
+      },
+      {
+        "arguments": [],
+        "end": 1746,
+        "name": "_g12_original_imports",
+        "start": 1740
+      },
+      {
+        "arguments": [],
+        "end": 1770,
+        "name": "_g12_original_terminal_custody",
+        "start": 1749
+      },
+      {
+        "arguments": [
+          "primary"
+        ],
+        "end": 1829,
+        "name": "_g12_after_original_exit",
+        "start": 1773
+      },
+      {
+        "arguments": [],
+        "end": 1873,
+        "name": "_g12_continuation_entry",
+        "start": 1832
+      },
+      {
+        "arguments": [
+          "self"
+        ],
+        "end": 346,
+        "name": "__init__",
+        "start": 345
+      },
+      {
+        "arguments": [],
+        "end": 362,
+        "name": "memory",
+        "start": 349
+      },
+      {
+        "arguments": [
+          "self",
+          "name",
+          "function"
+        ],
+        "end": 390,
+        "name": "call",
+        "start": 364
+      },
+      {
+        "arguments": [
+          "self",
+          "owner",
+          "attribute",
+          "name"
+        ],
+        "end": 397,
+        "name": "wrap",
+        "start": 392
+      },
+      {
+        "arguments": [
+          "c",
+          "checks",
+          "code"
+        ],
+        "end": 649,
+        "name": "observe_roles",
+        "start": 645
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 673,
+        "name": "observe_serializable",
+        "start": 659
+      },
+      {
+        "arguments": [],
+        "end": 395,
+        "name": "observed",
+        "start": 394
+      },
+      {
+        "arguments": [
+          "c",
+          "checks",
+          "code"
+        ],
+        "end": 1133,
+        "name": "observe_roles",
+        "start": 1129
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 1158,
+        "name": "observe_serializable",
+        "start": 1146
+      }
+    ],
+    "candidate-integration/g12_candidate_driver_support_N22_custody_v1.py": [
+      {
+        "arguments": [
+          "index"
+        ],
+        "end": 39,
+        "name": "_g12_cold",
+        "start": 24
+      },
+      {
+        "arguments": [],
+        "end": 66,
+        "name": "_g12_helper_current",
+        "start": 42
+      },
+      {
+        "arguments": [
+          "suspended"
+        ],
+        "end": 83,
+        "name": "_g12_generator_shape",
+        "start": 69
+      },
+      {
+        "arguments": [
+          "suite",
+          "original_commit",
+          "site",
+          "checks"
+        ],
+        "end": 143,
+        "name": "_g12_selected_store",
+        "start": 86
+      },
+      {
+        "arguments": [
+          "args"
+        ],
+        "end": 149,
+        "name": "_g12_selected_args",
+        "start": 147
+      },
+      {
+        "arguments": [
+          "state",
+          "extensions",
+          "module",
+          "binding",
+          "phases",
+          "invocation_token",
+          "checks_pair",
+          "code_pair",
+          "label_pair",
+          "caller",
+          "rank_calls",
+          "trace",
+          "captures",
+          "stdout",
+          "frozen",
+          "runtime",
+          "engine",
+          "output",
+          "reference",
+          "reference_bytes",
+          "driver_before",
+          "pins",
+          "frozen_before",
+          "engine_before",
+          "runtime_before",
+          "copied_engine_before",
+          "script_names",
+          "new_custody_before",
+          "data_custody_before",
+          "anchor_path",
+          "anchor_bytes"
+        ],
+        "end": 189,
+        "name": "_g12_bind_locals",
+        "start": 151
+      },
+      {
+        "arguments": [],
+        "end": 208,
+        "name": "_g12_diagnostics",
+        "start": 192
+      },
+      {
+        "arguments": [
+          "checks",
+          "circuit",
+          "suite"
+        ],
+        "end": 241,
+        "name": "_g12_complete_capacity_store",
+        "start": 212
+      },
+      {
+        "arguments": [
+          "phases",
+          "name",
+          "function",
+          "args",
+          "kwargs",
+          "result"
+        ],
+        "end": 311,
+        "name": "_g12_after_phase",
+        "start": 243
+      },
+      {
+        "arguments": [
+          "namespace"
+        ],
+        "end": 372,
+        "name": "_g12_complete_original_cli",
+        "start": 314
+      },
+      {
+        "arguments": [],
+        "end": 381,
+        "name": "_g12_original_imports",
+        "start": 375
+      },
+      {
+        "arguments": [],
+        "end": 405,
+        "name": "_g12_original_terminal_custody",
+        "start": 384
+      },
+      {
+        "arguments": [
+          "primary"
+        ],
+        "end": 464,
+        "name": "_g12_after_original_exit",
+        "start": 408
+      },
+      {
+        "arguments": [],
+        "end": 508,
+        "name": "_g12_continuation_entry",
+        "start": 467
+      }
+    ],
+    "candidate-integration/g12_candidate_driver_support_P07_custody_v1.py": [
+      {
+        "arguments": [
+          "index"
+        ],
+        "end": 39,
+        "name": "_g12_cold",
+        "start": 24
+      },
+      {
+        "arguments": [],
+        "end": 66,
+        "name": "_g12_helper_current",
+        "start": 42
+      },
+      {
+        "arguments": [
+          "suspended"
+        ],
+        "end": 83,
+        "name": "_g12_generator_shape",
+        "start": 69
+      },
+      {
+        "arguments": [
+          "suite",
+          "original_commit",
+          "site",
+          "checks"
+        ],
+        "end": 143,
+        "name": "_g12_selected_store",
+        "start": 86
+      },
+      {
+        "arguments": [
+          "args"
+        ],
+        "end": 149,
+        "name": "_g12_selected_args",
+        "start": 147
+      },
+      {
+        "arguments": [
+          "state",
+          "extensions",
+          "module",
+          "binding",
+          "phases",
+          "invocation_token",
+          "checks_pair",
+          "code_pair",
+          "label_pair",
+          "caller",
+          "rank_calls",
+          "trace",
+          "captures",
+          "stdout",
+          "frozen",
+          "runtime",
+          "engine",
+          "output",
+          "reference",
+          "reference_bytes",
+          "driver_before",
+          "pins",
+          "frozen_before",
+          "engine_before",
+          "runtime_before",
+          "copied_engine_before",
+          "script_names",
+          "new_custody_before",
+          "data_custody_before",
+          "anchor_path",
+          "anchor_bytes"
+        ],
+        "end": 189,
+        "name": "_g12_bind_locals",
+        "start": 151
+      },
+      {
+        "arguments": [],
+        "end": 208,
+        "name": "_g12_diagnostics",
+        "start": 192
+      },
+      {
+        "arguments": [
+          "checks",
+          "circuit",
+          "suite"
+        ],
+        "end": 241,
+        "name": "_g12_complete_capacity_store",
+        "start": 212
+      },
+      {
+        "arguments": [
+          "phases",
+          "name",
+          "function",
+          "args",
+          "kwargs",
+          "result"
+        ],
+        "end": 311,
+        "name": "_g12_after_phase",
+        "start": 243
+      },
+      {
+        "arguments": [
+          "namespace"
+        ],
+        "end": 372,
+        "name": "_g12_complete_original_cli",
+        "start": 314
+      },
+      {
+        "arguments": [],
+        "end": 381,
+        "name": "_g12_original_imports",
+        "start": 375
+      },
+      {
+        "arguments": [],
+        "end": 405,
+        "name": "_g12_original_terminal_custody",
+        "start": 384
+      },
+      {
+        "arguments": [
+          "primary"
+        ],
+        "end": 464,
+        "name": "_g12_after_original_exit",
+        "start": 408
+      },
+      {
+        "arguments": [],
+        "end": 508,
+        "name": "_g12_continuation_entry",
+        "start": 467
+      }
+    ],
+    "candidate-integration/g12_epoch_authority_custody_v1.py": [
+      {
+        "arguments": [
+          "root",
+          "capability",
+          "api"
+        ],
+        "end": 763,
+        "name": "capture_authority",
+        "start": 33
+      },
+      {
+        "arguments": [
+          "condition",
+          "message"
+        ],
+        "end": 813,
+        "name": "need",
+        "start": 811
+      },
+      {
+        "arguments": [
+          "mapping"
+        ],
+        "end": 819,
+        "name": "string_keys",
+        "start": 816
+      },
+      {
+        "arguments": [
+          "code"
+        ],
+        "end": 831,
+        "name": "names",
+        "start": 822
+      },
+      {
+        "arguments": [
+          "function"
+        ],
+        "end": 847,
+        "name": "function_record",
+        "start": 834
+      },
+      {
+        "arguments": [
+          "record"
+        ],
+        "end": 867,
+        "name": "check_fields",
+        "start": 850
+      },
+      {
+        "arguments": [
+          "cls"
+        ],
+        "end": 875,
+        "name": "class_record",
+        "start": 870
+      },
+      {
+        "arguments": [
+          "functions",
+          "classes",
+          "canonical_functions",
+          "canonical_classes"
+        ],
+        "end": 923,
+        "name": "graph",
+        "start": 878
+      },
+      {
+        "arguments": [
+          "function"
+        ],
+        "end": 1161,
+        "name": "_epoch_closure",
+        "start": 1158
+      },
+      {
+        "arguments": [
+          "code",
+          "name"
+        ],
+        "end": 1167,
+        "name": "_epoch_code_constant",
+        "start": 1164
+      },
+      {
+        "arguments": [
+          "ledger",
+          "legacy",
+          "capture_graph0",
+          "raw_function0",
+          "descriptor_factory",
+          "record_for0",
+          "cold_check0",
+          "root",
+          "capability",
+          "api",
+          "missing",
+          "engine_guard",
+          "bundle_cell"
+        ],
+        "end": 1569,
+        "name": "_epoch_operations",
+        "start": 1170
+      },
+      {
+        "arguments": [
+          "root",
+          "capability",
+          "api"
+        ],
+        "end": 2459,
+        "name": "capture_epoch_authority",
+        "start": 1581
+      },
+      {
+        "arguments": [
+          "ok",
+          "message"
+        ],
+        "end": 91,
+        "name": "need",
+        "start": 89
+      },
+      {
+        "arguments": [
+          "owner",
+          "domains"
+        ],
+        "end": 118,
+        "name": "string_domain",
+        "start": 93
+      },
+      {
+        "arguments": [
+          "owner",
+          "name",
+          "domains"
+        ],
+        "end": 128,
+        "name": "get_id",
+        "start": 120
+      },
+      {
+        "arguments": [
+          "owner",
+          "expected"
+        ],
+        "end": 154,
+        "name": "identity_mapping",
+        "start": 130
+      },
+      {
+        "arguments": [
+          "code"
+        ],
+        "end": 171,
+        "name": "code_names",
+        "start": 158
+      },
+      {
+        "arguments": [
+          "function"
+        ],
+        "end": 194,
+        "name": "raw_function_record",
+        "start": 173
+      },
+      {
+        "arguments": [
+          "initial_functions",
+          "initial_classes"
+        ],
+        "end": 254,
+        "name": "capture_graph",
+        "start": 196
+      },
+      {
+        "arguments": [
+          "namespace",
+          "name",
+          "expected"
+        ],
+        "end": 262,
+        "name": "expected_global",
+        "start": 256
+      },
+      {
+        "arguments": [
+          "record",
+          "domains",
+          "builtin_values"
+        ],
+        "end": 345,
+        "name": "fresh_function",
+        "start": 264
+      },
+      {
+        "arguments": [
+          "graph",
+          "domains",
+          "builtin_values",
+          "message"
+        ],
+        "end": 360,
+        "name": "fresh_graph",
+        "start": 349
+      },
+      {
+        "arguments": [
+          "module",
+          "name",
+          "kind",
+          "path",
+          "digest",
+          "source_bytes"
+        ],
+        "end": 393,
+        "name": "module_image",
+        "start": 362
+      },
+      {
+        "arguments": [
+          "handle"
+        ],
+        "end": 398,
+        "name": "record_for",
+        "start": 395
+      },
+      {
+        "arguments": [
+          "record",
+          "domains",
+          "builtin_values"
+        ],
+        "end": 416,
+        "name": "fresh_module",
+        "start": 400
+      },
+      {
+        "arguments": [
+          "domains"
+        ],
+        "end": 452,
+        "name": "root_and_stdlib",
+        "start": 434
+      },
+      {
+        "arguments": [
+          "domains"
+        ],
+        "end": 456,
+        "name": "check_registered",
+        "start": 454
+      },
+      {
+        "arguments": [
+          "handle"
+        ],
+        "end": 471,
+        "name": "cold_check",
+        "start": 458
+      },
+      {
+        "arguments": [
+          "path",
+          "digest",
+          "name",
+          "kind"
+        ],
+        "end": 506,
+        "name": "load",
+        "start": 473
+      },
+      {
+        "arguments": [
+          "operations",
+          "label"
+        ],
+        "end": 587,
+        "name": "make_caller_descriptor",
+        "start": 508
+      },
+      {
+        "arguments": [
+          "handle"
+        ],
+        "end": 598,
+        "name": "runtime_guard",
+        "start": 589
+      },
+      {
+        "arguments": [
+          "module"
+        ],
+        "end": 606,
+        "name": "known_backend",
+        "start": 600
+      },
+      {
+        "arguments": [
+          "cls"
+        ],
+        "end": 622,
+        "name": "known_guard",
+        "start": 608
+      },
+      {
+        "arguments": [
+          "record",
+          "export"
+        ],
+        "end": 628,
+        "name": "classify",
+        "start": 624
+      },
+      {
+        "arguments": [
+          "record",
+          "export",
+          "role",
+          "args",
+          "kwargs"
+        ],
+        "end": 681,
+        "name": "validate_producer_arguments",
+        "start": 630
+      },
+      {
+        "arguments": [
+          "handle",
+          "export"
+        ],
+        "end": 708,
+        "name": "invoke",
+        "start": 683
+      },
+      {
+        "arguments": [
+          "obj",
+          "producer_handle",
+          "export",
+          "args_tuple",
+          "kwargs_dict"
+        ],
+        "end": 729,
+        "name": "check_product",
+        "start": 710
+      },
+      {
+        "arguments": [
+          "handle",
+          "cls"
+        ],
+        "end": 749,
+        "name": "set_backend_guard",
+        "start": 731
+      },
+      {
+        "arguments": [
+          "handle"
+        ],
+        "end": 753,
+        "name": "source",
+        "start": 751
+      },
+      {
+        "arguments": [
+          "self"
+        ],
+        "end": 935,
+        "name": "__init__",
+        "start": 928
+      },
+      {
+        "arguments": [
+          "self"
+        ],
+        "end": 945,
+        "name": "guard_engine",
+        "start": 937
+      },
+      {
+        "arguments": [
+          "self",
+          "module",
+          "backend",
+          "source_bytes",
+          "factory_results",
+          "authority_graph",
+          "missing_token"
+        ],
+        "end": 995,
+        "name": "capture",
+        "start": 947
+      },
+      {
+        "arguments": [
+          "self",
+          "handle"
+        ],
+        "end": 1002,
+        "name": "origin",
+        "start": 997
+      },
+      {
+        "arguments": [
+          "self",
+          "handle",
+          "suite"
+        ],
+        "end": 1009,
+        "name": "enroll_suite",
+        "start": 1004
+      },
+      {
+        "arguments": [
+          "self",
+          "handle",
+          "kind",
+          "name",
+          "old",
+          "new",
+          "role",
+          "product_graph"
+        ],
+        "end": 1028,
+        "name": "authorize",
+        "start": 1011
+      },
+      {
+        "arguments": [
+          "self",
+          "handle",
+          "suite",
+          "role",
+          "function",
+          "product_graph"
+        ],
+        "end": 1045,
+        "name": "register_product",
+        "start": 1030
+      },
+      {
+        "arguments": [
+          "self",
+          "handle",
+          "kind",
+          "name",
+          "new"
+        ],
+        "end": 1058,
+        "name": "install",
+        "start": 1047
+      },
+      {
+        "arguments": [
+          "self",
+          "handle",
+          "kind",
+          "name",
+          "old",
+          "new",
+          "role",
+          "product_graph"
+        ],
+        "end": 1071,
+        "name": "observed_transition",
+        "start": 1060
+      },
+      {
+        "arguments": [
+          "self",
+          "owner",
+          "name",
+          "old"
+        ],
+        "end": 1079,
+        "name": "expected",
+        "start": 1073
+      },
+      {
+        "arguments": [
+          "self",
+          "raw_record",
+          "namespace",
+          "name",
+          "expected"
+        ],
+        "end": 1090,
+        "name": "expected_lookup",
+        "start": 1081
+      },
+      {
+        "arguments": [
+          "self",
+          "function"
+        ],
+        "end": 1096,
+        "name": "original_record",
+        "start": 1092
+      },
+      {
+        "arguments": [
+          "self",
+          "cls"
+        ],
+        "end": 1102,
+        "name": "original_class",
+        "start": 1098
+      },
+      {
+        "arguments": [
+          "self",
+          "cls",
+          "name",
+          "expected"
+        ],
+        "end": 1105,
+        "name": "projected_member",
+        "start": 1104
+      },
+      {
+        "arguments": [
+          "self",
+          "handle"
+        ],
+        "end": 1129,
+        "name": "check",
+        "start": 1107
+      },
+      {
+        "arguments": [
+          "self",
+          "handle",
+          "expected",
+          "new"
+        ],
+        "end": 1133,
+        "name": "phase_to",
+        "start": 1131
+      },
+      {
+        "arguments": [
+          "self",
+          "handle",
+          "raw"
+        ],
+        "end": 1138,
+        "name": "fix_raw_guard",
+        "start": 1135
+      },
+      {
+        "arguments": [
+          "self",
+          "handle",
+          "result",
+          "owner"
+        ],
+        "end": 1147,
+        "name": "finish_bind",
+        "start": 1140
+      },
+      {
+        "arguments": [
+          "self",
+          "handle",
+          "error"
+        ],
+        "end": 1153,
+        "name": "fail",
+        "start": 1149
+      },
+      {
+        "arguments": [],
+        "end": 1176,
+        "name": "before",
+        "start": 1175
+      },
+      {
+        "arguments": [
+          "handle",
+          "digest"
+        ],
+        "end": 1181,
+        "name": "owned",
+        "start": 1178
+      },
+      {
+        "arguments": [
+          "handle",
+          "suite"
+        ],
+        "end": 1193,
+        "name": "suite_guard",
+        "start": 1183
+      },
+      {
+        "arguments": [
+          "origin",
+          "functions",
+          "classes"
+        ],
+        "end": 1197,
+        "name": "product_graph",
+        "start": 1195
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 1212,
+        "name": "graph_fields_only",
+        "start": 1199
+      },
+      {
+        "arguments": [
+          "stage"
+        ],
+        "end": 1307,
+        "name": "admit",
+        "start": 1214
+      },
+      {
+        "arguments": [
+          "handle",
+          "context"
+        ],
+        "end": 1328,
+        "name": "derive",
+        "start": 1309
+      },
+      {
+        "arguments": [
+          "origin"
+        ],
+        "end": 1335,
+        "name": "check_factory",
+        "start": 1330
+      },
+      {
+        "arguments": [
+          "origin",
+          "suite",
+          "kind",
+          "name",
+          "role",
+          "function"
+        ],
+        "end": 1375,
+        "name": "wrap_proof",
+        "start": 1337
+      },
+      {
+        "arguments": [
+          "handle",
+          "suite",
+          "action"
+        ],
+        "end": 1411,
+        "name": "product",
+        "start": 1377
+      },
+      {
+        "arguments": [
+          "handle",
+          "suite",
+          "stage"
+        ],
+        "end": 1483,
+        "name": "stages",
+        "start": 1413
+      },
+      {
+        "arguments": [
+          "handle",
+          "suite"
+        ],
+        "end": 1488,
+        "name": "seal",
+        "start": 1485
+      },
+      {
+        "arguments": [
+          "handle",
+          "suite"
+        ],
+        "end": 1501,
+        "name": "check",
+        "start": 1490
+      },
+      {
+        "arguments": [
+          "handle"
+        ],
+        "end": 1508,
+        "name": "manifest",
+        "start": 1503
+      },
+      {
+        "arguments": [
+          "handle",
+          "error"
+        ],
+        "end": 1541,
+        "name": "failed",
+        "start": 1517
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 1547,
+        "name": "plain0",
+        "start": 1543
+      },
+      {
+        "arguments": [
+          "function"
+        ],
+        "end": 1567,
+        "name": "protect",
+        "start": 1549
+      },
+      {
+        "arguments": [],
+        "end": 1701,
+        "name": "engine_guard",
+        "start": 1652
+      },
+      {
+        "arguments": [
+          "ok",
+          "message"
+        ],
+        "end": 1717,
+        "name": "need",
+        "start": 1715
+      },
+      {
+        "arguments": [
+          "owner",
+          "domains"
+        ],
+        "end": 1744,
+        "name": "string_domain",
+        "start": 1719
+      },
+      {
+        "arguments": [
+          "owner",
+          "name",
+          "domains"
+        ],
+        "end": 1754,
+        "name": "get_id",
+        "start": 1746
+      },
+      {
+        "arguments": [
+          "owner",
+          "expected"
+        ],
+        "end": 1780,
+        "name": "identity_mapping",
+        "start": 1756
+      },
+      {
+        "arguments": [
+          "code"
+        ],
+        "end": 1797,
+        "name": "code_names",
+        "start": 1784
+      },
+      {
+        "arguments": [
+          "function"
+        ],
+        "end": 1820,
+        "name": "raw_function_record",
+        "start": 1799
+      },
+      {
+        "arguments": [
+          "initial_functions",
+          "initial_classes"
+        ],
+        "end": 1884,
+        "name": "capture_graph",
+        "start": 1822
+      },
+      {
+        "arguments": [
+          "namespace",
+          "name",
+          "expected",
+          "original_record"
+        ],
+        "end": 1898,
+        "name": "expected_global",
+        "start": 1886
+      },
+      {
+        "arguments": [
+          "record",
+          "domains",
+          "builtin_values"
+        ],
+        "end": 1981,
+        "name": "fresh_function",
+        "start": 1900
+      },
+      {
+        "arguments": [
+          "graph",
+          "domains",
+          "builtin_values",
+          "message"
+        ],
+        "end": 1996,
+        "name": "fresh_graph",
+        "start": 1985
+      },
+      {
+        "arguments": [
+          "module",
+          "name",
+          "kind",
+          "path",
+          "digest",
+          "source_bytes"
+        ],
+        "end": 2029,
+        "name": "module_image",
+        "start": 1998
+      },
+      {
+        "arguments": [
+          "handle"
+        ],
+        "end": 2034,
+        "name": "record_for",
+        "start": 2031
+      },
+      {
+        "arguments": [
+          "record",
+          "domains",
+          "builtin_values"
+        ],
+        "end": 2052,
+        "name": "fresh_module",
+        "start": 2036
+      },
+      {
+        "arguments": [
+          "domains"
+        ],
+        "end": 2088,
+        "name": "root_and_stdlib",
+        "start": 2070
+      },
+      {
+        "arguments": [
+          "domains"
+        ],
+        "end": 2094,
+        "name": "check_registered",
+        "start": 2090
+      },
+      {
+        "arguments": [
+          "handle"
+        ],
+        "end": 2109,
+        "name": "cold_check",
+        "start": 2096
+      },
+      {
+        "arguments": [
+          "path",
+          "digest",
+          "name",
+          "kind"
+        ],
+        "end": 2157,
+        "name": "load",
+        "start": 2111
+      },
+      {
+        "arguments": [
+          "operations",
+          "label"
+        ],
+        "end": 2258,
+        "name": "make_caller_descriptor",
+        "start": 2159
+      },
+      {
+        "arguments": [
+          "handle"
+        ],
+        "end": 2269,
+        "name": "runtime_guard",
+        "start": 2260
+      },
+      {
+        "arguments": [
+          "module"
+        ],
+        "end": 2277,
+        "name": "known_backend",
+        "start": 2271
+      },
+      {
+        "arguments": [
+          "cls"
+        ],
+        "end": 2293,
+        "name": "known_guard",
+        "start": 2279
+      },
+      {
+        "arguments": [
+          "record",
+          "export"
+        ],
+        "end": 2299,
+        "name": "classify",
+        "start": 2295
+      },
+      {
+        "arguments": [
+          "record",
+          "export",
+          "role",
+          "args",
+          "kwargs"
+        ],
+        "end": 2359,
+        "name": "validate_producer_arguments",
+        "start": 2301
+      },
+      {
+        "arguments": [
+          "handle",
+          "export"
+        ],
+        "end": 2397,
+        "name": "invoke",
+        "start": 2361
+      },
+      {
+        "arguments": [
+          "obj",
+          "producer_handle",
+          "export",
+          "args_tuple",
+          "kwargs_dict"
+        ],
+        "end": 2418,
+        "name": "check_product",
+        "start": 2399
+      },
+      {
+        "arguments": [
+          "handle",
+          "cls"
+        ],
+        "end": 2438,
+        "name": "set_backend_guard",
+        "start": 2420
+      },
+      {
+        "arguments": [
+          "handle"
+        ],
+        "end": 2442,
+        "name": "source",
+        "start": 2440
+      },
+      {
+        "arguments": [
+          "index"
+        ],
+        "end": 580,
+        "name": "dispatch",
+        "start": 534
+      },
+      {
+        "arguments": [],
+        "end": 596,
+        "name": "guarded_helpers",
+        "start": 591
+      },
+      {
+        "arguments": [],
+        "end": 1566,
+        "name": "operation",
+        "start": 1550
+      },
+      {
+        "arguments": [
+          "index"
+        ],
+        "end": 2251,
+        "name": "dispatch",
+        "start": 2188
+      },
+      {
+        "arguments": [],
+        "end": 2267,
+        "name": "guarded_helpers",
+        "start": 2262
+      }
+    ],
+    "g12_reference_cold_consumer_v1.py": [
+      {
+        "arguments": [
+          "condition",
+          "message"
+        ],
+        "end": 65,
+        "name": "_need",
+        "start": 63
+      },
+      {
+        "arguments": [
+          "value",
+          "expected"
+        ],
+        "end": 75,
+        "name": "_exact",
+        "start": 68
+      },
+      {
+        "arguments": [
+          "value",
+          "fields"
+        ],
+        "end": 80,
+        "name": "_fields",
+        "start": 78
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 84,
+        "name": "_digest",
+        "start": 83
+      },
+      {
+        "arguments": [
+          "value",
+          "positive"
+        ],
+        "end": 88,
+        "name": "_uint",
+        "start": 87
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 93,
+        "name": "_number",
+        "start": 91
+      },
+      {
+        "arguments": [
+          "path"
+        ],
+        "end": 99,
+        "name": "_path",
+        "start": 96
+      },
+      {
+        "arguments": [
+          "info"
+        ],
+        "end": 104,
+        "name": "_identity",
+        "start": 102
+      },
+      {
+        "arguments": [
+          "info"
+        ],
+        "end": 108,
+        "name": "_directory_key",
+        "start": 107
+      },
+      {
+        "arguments": [
+          "path"
+        ],
+        "end": 139,
+        "name": "_directory_chain",
+        "start": 111
+      },
+      {
+        "arguments": [
+          "rows"
+        ],
+        "end": 146,
+        "name": "_check_chain",
+        "start": 142
+      },
+      {
+        "arguments": [
+          "primary",
+          "secondaries"
+        ],
+        "end": 160,
+        "name": "_raise_preserved",
+        "start": 149
+      },
+      {
+        "arguments": [
+          "path",
+          "cap",
+          "mode"
+        ],
+        "end": 201,
+        "name": "_read_file",
+        "start": 163
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 216,
+        "name": "_file_record",
+        "start": 204
+      },
+      {
+        "arguments": [
+          "root",
+          "api",
+          "record",
+          "cap"
+        ],
+        "end": 228,
+        "name": "_root_read",
+        "start": 219
+      },
+      {
+        "arguments": [
+          "items"
+        ],
+        "end": 236,
+        "name": "_pairs",
+        "start": 231
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 240,
+        "name": "_nonfinite",
+        "start": 239
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 245,
+        "name": "_canonical",
+        "start": 243
+      },
+      {
+        "arguments": [
+          "raw",
+          "cap",
+          "canonical",
+          "newline"
+        ],
+        "end": 287,
+        "name": "_json",
+        "start": 248
+      },
+      {
+        "arguments": [
+          "value",
+          "cap"
+        ],
+        "end": 293,
+        "name": "_hex",
+        "start": 290
+      },
+      {
+        "arguments": [
+          "value",
+          "positive"
+        ],
+        "end": 301,
+        "name": "_decimal",
+        "start": 296
+      },
+      {
+        "arguments": [
+          "raw",
+          "cap"
+        ],
+        "end": 342,
+        "name": "_tagged",
+        "start": 304
+      },
+      {
+        "arguments": [
+          "encoded"
+        ],
+        "end": 352,
+        "name": "_rank_events",
+        "start": 345
+      },
+      {
+        "arguments": [
+          "common_raw",
+          "diagnostic_raw"
+        ],
+        "end": 400,
+        "name": "_validate_pair",
+        "start": 355
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 408,
+        "name": "_source_pin",
+        "start": 403
+      },
+      {
+        "arguments": [
+          "start",
+          "receipt",
+          "usage",
+          "stdout",
+          "stderr",
+          "root_argv",
+          "invocation",
+          "source_pins",
+          "phase_sha"
+        ],
+        "end": 453,
+        "name": "_validate_guard",
+        "start": 411
+      },
+      {
+        "arguments": [
+          "namespace"
+        ],
+        "end": 483,
+        "name": "_capture_graph",
+        "start": 456
+      },
+      {
+        "arguments": [
+          "graph"
+        ],
+        "end": 509,
+        "name": "_current_graph",
+        "start": 486
+      },
+      {
+        "arguments": [
+          "manifest",
+          "parent_path",
+          "parent_sha"
+        ],
+        "end": 873,
+        "name": "_validate_manifest",
+        "start": 776
+      },
+      {
+        "arguments": [
+          "label",
+          "sources"
+        ],
+        "end": 889,
+        "name": "_fixed_argv",
+        "start": 876
+      },
+      {
+        "arguments": [
+          "publication",
+          "manifest",
+          "manifest_record"
+        ],
+        "end": 921,
+        "name": "_validate_publication",
+        "start": 892
+      },
+      {
+        "arguments": [
+          "code"
+        ],
+        "end": 946,
+        "name": "_source_code_shape",
+        "start": 924
+      },
+      {
+        "arguments": [
+          "root",
+          "api",
+          "source",
+          "path"
+        ],
+        "end": 958,
+        "name": "_authenticate_own_functions",
+        "start": 949
+      },
+      {
+        "arguments": [
+          "root",
+          "capability",
+          "api"
+        ],
+        "end": 1058,
+        "name": "load_original_g12_reference",
+        "start": 961
+      },
+      {
+        "arguments": [
+          "self"
+        ],
+        "end": 40,
+        "name": "__init__",
+        "start": 38
+      },
+      {
+        "arguments": [
+          "self",
+          "value"
+        ],
+        "end": 47,
+        "name": "append",
+        "start": 41
+      },
+      {
+        "arguments": [
+          "self"
+        ],
+        "end": 49,
+        "name": "__bool__",
+        "start": 48
+      },
+      {
+        "arguments": [
+          "self"
+        ],
+        "end": 51,
+        "name": "__len__",
+        "start": 50
+      },
+      {
+        "arguments": [
+          "self",
+          "index"
+        ],
+        "end": 55,
+        "name": "__getitem__",
+        "start": 52
+      },
+      {
+        "arguments": [
+          "self"
+        ],
+        "end": 58,
+        "name": "__iter__",
+        "start": 56
+      },
+      {
+        "arguments": [
+          "self"
+        ],
+        "end": 60,
+        "name": "__repr__",
+        "start": 59
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 940,
+        "name": "constant",
+        "start": 926
+      }
+    ],
+    "g12_reference_parent_v1.py": [
+      {
+        "arguments": [
+          "condition",
+          "message"
+        ],
+        "end": 101,
+        "name": "_need",
+        "start": 99
+      },
+      {
+        "arguments": [
+          "value",
+          "expected"
+        ],
+        "end": 111,
+        "name": "_exact",
+        "start": 104
+      },
+      {
+        "arguments": [
+          "value",
+          "fields"
+        ],
+        "end": 116,
+        "name": "_fields",
+        "start": 114
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 120,
+        "name": "_digest",
+        "start": 119
+      },
+      {
+        "arguments": [
+          "value",
+          "positive"
+        ],
+        "end": 124,
+        "name": "_uint",
+        "start": 123
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 129,
+        "name": "_number",
+        "start": 127
+      },
+      {
+        "arguments": [
+          "path"
+        ],
+        "end": 135,
+        "name": "_path",
+        "start": 132
+      },
+      {
+        "arguments": [
+          "info"
+        ],
+        "end": 140,
+        "name": "_identity",
+        "start": 138
+      },
+      {
+        "arguments": [
+          "info"
+        ],
+        "end": 144,
+        "name": "_directory_key",
+        "start": 143
+      },
+      {
+        "arguments": [
+          "path"
+        ],
+        "end": 175,
+        "name": "_directory_chain",
+        "start": 147
+      },
+      {
+        "arguments": [
+          "rows"
+        ],
+        "end": 182,
+        "name": "_check_chain",
+        "start": 178
+      },
+      {
+        "arguments": [
+          "primary",
+          "secondaries"
+        ],
+        "end": 196,
+        "name": "_raise_preserved",
+        "start": 185
+      },
+      {
+        "arguments": [
+          "path",
+          "cap",
+          "mode"
+        ],
+        "end": 237,
+        "name": "_read_file",
+        "start": 199
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 252,
+        "name": "_file_record",
+        "start": 240
+      },
+      {
+        "arguments": [
+          "items"
+        ],
+        "end": 260,
+        "name": "_pairs",
+        "start": 255
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 264,
+        "name": "_nonfinite",
+        "start": 263
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 269,
+        "name": "_canonical",
+        "start": 267
+      },
+      {
+        "arguments": [
+          "raw",
+          "cap",
+          "canonical",
+          "newline"
+        ],
+        "end": 311,
+        "name": "_json",
+        "start": 272
+      },
+      {
+        "arguments": [
+          "value",
+          "cap"
+        ],
+        "end": 317,
+        "name": "_hex",
+        "start": 314
+      },
+      {
+        "arguments": [
+          "value",
+          "positive"
+        ],
+        "end": 325,
+        "name": "_decimal",
+        "start": 320
+      },
+      {
+        "arguments": [
+          "raw",
+          "cap"
+        ],
+        "end": 366,
+        "name": "_tagged",
+        "start": 328
+      },
+      {
+        "arguments": [
+          "encoded"
+        ],
+        "end": 376,
+        "name": "_rank_events",
+        "start": 369
+      },
+      {
+        "arguments": [
+          "common_raw",
+          "diagnostic_raw"
+        ],
+        "end": 424,
+        "name": "_validate_pair",
+        "start": 379
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 432,
+        "name": "_source_pin",
+        "start": 427
+      },
+      {
+        "arguments": [
+          "start",
+          "receipt",
+          "usage",
+          "stdout",
+          "stderr",
+          "root_argv",
+          "invocation",
+          "source_pins",
+          "phase_sha"
+        ],
+        "end": 477,
+        "name": "_validate_guard",
+        "start": 435
+      },
+      {
+        "arguments": [
+          "namespace"
+        ],
+        "end": 507,
+        "name": "_capture_graph",
+        "start": 480
+      },
+      {
+        "arguments": [
+          "graph"
+        ],
+        "end": 534,
+        "name": "_current_graph",
+        "start": 511
+      },
+      {
+        "arguments": [
+          "manifest",
+          "parent_path",
+          "parent_sha"
+        ],
+        "end": 903,
+        "name": "_validate_manifest",
+        "start": 806
+      },
+      {
+        "arguments": [
+          "label",
+          "sources"
+        ],
+        "end": 919,
+        "name": "_fixed_argv",
+        "start": 906
+      },
+      {
+        "arguments": [
+          "publication",
+          "manifest",
+          "manifest_record"
+        ],
+        "end": 951,
+        "name": "_validate_publication",
+        "start": 922
+      },
+      {
+        "arguments": [
+          "code"
+        ],
+        "end": 976,
+        "name": "_source_code_shape",
+        "start": 954
+      },
+      {
+        "arguments": [
+          "pid"
+        ],
+        "end": 1059,
+        "name": "_proc",
+        "start": 1032
+      },
+      {
+        "arguments": [],
+        "end": 1071,
+        "name": "_census",
+        "start": 1062
+      },
+      {
+        "arguments": [],
+        "end": 1075,
+        "name": "_children",
+        "start": 1074
+      },
+      {
+        "arguments": [],
+        "end": 1180,
+        "name": "_trusted_parent_launch",
+        "start": 1172
+      },
+      {
+        "arguments": [
+          "path"
+        ],
+        "end": 1205,
+        "name": "_exclusive_directory",
+        "start": 1183
+      },
+      {
+        "arguments": [
+          "descriptor",
+          "raw"
+        ],
+        "end": 1221,
+        "name": "_write_fd",
+        "start": 1208
+      },
+      {
+        "arguments": [
+          "directory",
+          "name",
+          "raw"
+        ],
+        "end": 1239,
+        "name": "_copy_file",
+        "start": 1224
+      },
+      {
+        "arguments": [
+          "entry_ns",
+          "own_start",
+          "children_start"
+        ],
+        "end": 1250,
+        "name": "_actual_costs",
+        "start": 1242
+      },
+      {
+        "arguments": [],
+        "end": 1722,
+        "name": "run_g12_reference",
+        "start": 1253
+      },
+      {
+        "arguments": [
+          "self"
+        ],
+        "end": 76,
+        "name": "__init__",
+        "start": 74
+      },
+      {
+        "arguments": [
+          "self",
+          "value"
+        ],
+        "end": 83,
+        "name": "append",
+        "start": 77
+      },
+      {
+        "arguments": [
+          "self"
+        ],
+        "end": 85,
+        "name": "__bool__",
+        "start": 84
+      },
+      {
+        "arguments": [
+          "self"
+        ],
+        "end": 87,
+        "name": "__len__",
+        "start": 86
+      },
+      {
+        "arguments": [
+          "self",
+          "index"
+        ],
+        "end": 91,
+        "name": "__getitem__",
+        "start": 88
+      },
+      {
+        "arguments": [
+          "self"
+        ],
+        "end": 94,
+        "name": "__iter__",
+        "start": 92
+      },
+      {
+        "arguments": [
+          "self"
+        ],
+        "end": 96,
+        "name": "__repr__",
+        "start": 95
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 970,
+        "name": "constant",
+        "start": 956
+      },
+      {
+        "arguments": [
+          "self"
+        ],
+        "end": 1087,
+        "name": "__init__",
+        "start": 1080
+      },
+      {
+        "arguments": [
+          "self",
+          "row"
+        ],
+        "end": 1105,
+        "name": "add",
+        "start": 1089
+      },
+      {
+        "arguments": [
+          "self"
+        ],
+        "end": 1125,
+        "name": "observe",
+        "start": 1107
+      },
+      {
+        "arguments": [
+          "self"
+        ],
+        "end": 1137,
+        "name": "stop_known",
+        "start": 1127
+      },
+      {
+        "arguments": [
+          "self",
+          "process",
+          "deadline",
+          "failed"
+        ],
+        "end": 1169,
+        "name": "finish",
+        "start": 1139
+      },
+      {
+        "arguments": [],
+        "end": 1297,
+        "name": "current",
+        "start": 1285
+      },
+      {
+        "arguments": [],
+        "end": 1416,
+        "name": "_g12_preflight_and_claim",
+        "start": 1299
+      },
+      {
+        "arguments": [],
+        "end": 1445,
+        "name": "_g12_launch_once",
+        "start": 1418
+      },
+      {
+        "arguments": [],
+        "end": 1478,
+        "name": "_g12_observe_wait_and_close",
+        "start": 1447
+      },
+      {
+        "arguments": [],
+        "end": 1504,
+        "name": "_g12_join_original_guard_evidence",
+        "start": 1480
+      },
+      {
+        "arguments": [],
+        "end": 1517,
+        "name": "_g12_collect_complete_pair",
+        "start": 1506
+      },
+      {
+        "arguments": [],
+        "end": 1552,
+        "name": "_g12_retain_parent_pair_and_evidence",
+        "start": 1519
+      },
+      {
+        "arguments": [],
+        "end": 1648,
+        "name": "_g12_seal_once",
+        "start": 1554
+      },
+      {
+        "arguments": [],
+        "end": 1696,
+        "name": "_g12_finish_failure",
+        "start": 1650
+      }
+    ],
+    "integration/g12_reference_adapter_v1.py": [
+      {
+        "arguments": [
+          "condition",
+          "message"
+        ],
+        "end": 50,
+        "name": "_need",
+        "start": 48
+      },
+      {
+        "arguments": [
+          "value",
+          "expected"
+        ],
+        "end": 60,
+        "name": "_exact",
+        "start": 53
+      },
+      {
+        "arguments": [
+          "value",
+          "fields"
+        ],
+        "end": 65,
+        "name": "_fields",
+        "start": 63
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 69,
+        "name": "_digest",
+        "start": 68
+      },
+      {
+        "arguments": [
+          "value",
+          "positive"
+        ],
+        "end": 73,
+        "name": "_uint",
+        "start": 72
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 78,
+        "name": "_number",
+        "start": 76
+      },
+      {
+        "arguments": [
+          "path"
+        ],
+        "end": 84,
+        "name": "_path",
+        "start": 81
+      },
+      {
+        "arguments": [
+          "info"
+        ],
+        "end": 89,
+        "name": "_identity",
+        "start": 87
+      },
+      {
+        "arguments": [
+          "info"
+        ],
+        "end": 93,
+        "name": "_directory_key",
+        "start": 92
+      },
+      {
+        "arguments": [
+          "path"
+        ],
+        "end": 124,
+        "name": "_directory_chain",
+        "start": 96
+      },
+      {
+        "arguments": [
+          "rows"
+        ],
+        "end": 131,
+        "name": "_check_chain",
+        "start": 127
+      },
+      {
+        "arguments": [
+          "primary",
+          "secondaries"
+        ],
+        "end": 145,
+        "name": "_raise_preserved",
+        "start": 134
+      },
+      {
+        "arguments": [
+          "path",
+          "cap",
+          "mode"
+        ],
+        "end": 186,
+        "name": "_read_file",
+        "start": 148
+      },
+      {
+        "arguments": [
+          "items"
+        ],
+        "end": 194,
+        "name": "_pairs",
+        "start": 189
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 198,
+        "name": "_nonfinite",
+        "start": 197
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 203,
+        "name": "_canonical",
+        "start": 201
+      },
+      {
+        "arguments": [
+          "raw",
+          "cap",
+          "canonical",
+          "newline"
+        ],
+        "end": 245,
+        "name": "_json",
+        "start": 206
+      },
+      {
+        "arguments": [
+          "namespace"
+        ],
+        "end": 275,
+        "name": "_capture_graph",
+        "start": 248
+      },
+      {
+        "arguments": [
+          "graph"
+        ],
+        "end": 302,
+        "name": "_current_graph",
+        "start": 279
+      },
+      {
+        "arguments": [
+          "code"
+        ],
+        "end": 328,
+        "name": "_source_code_shape",
+        "start": 306
+      },
+      {
+        "arguments": [
+          "root",
+          "api",
+          "source",
+          "path"
+        ],
+        "end": 340,
+        "name": "_authenticate_own_functions",
+        "start": 331
+      },
+      {
+        "arguments": [],
+        "end": 455,
+        "name": "_g12_adapter_entry",
+        "start": 344
+      },
+      {
+        "arguments": [
+          "self"
+        ],
+        "end": 25,
+        "name": "__init__",
+        "start": 23
+      },
+      {
+        "arguments": [
+          "self",
+          "value"
+        ],
+        "end": 32,
+        "name": "append",
+        "start": 26
+      },
+      {
+        "arguments": [
+          "self"
+        ],
+        "end": 34,
+        "name": "__bool__",
+        "start": 33
+      },
+      {
+        "arguments": [
+          "self"
+        ],
+        "end": 36,
+        "name": "__len__",
+        "start": 35
+      },
+      {
+        "arguments": [
+          "self",
+          "index"
+        ],
+        "end": 40,
+        "name": "__getitem__",
+        "start": 37
+      },
+      {
+        "arguments": [
+          "self"
+        ],
+        "end": 43,
+        "name": "__iter__",
+        "start": 41
+      },
+      {
+        "arguments": [
+          "self"
+        ],
+        "end": 45,
+        "name": "__repr__",
+        "start": 44
+      },
+      {
+        "arguments": [
+          "value"
+        ],
+        "end": 322,
+        "name": "constant",
+        "start": 308
+      }
+    ]
+  },
+  "original_source_anchors": [
+    {
+      "functions": [
+        "require_trusted_launch",
+        "main"
+      ],
+      "lines": [
+        [
+          25,
+          54
+        ],
+        [
+          166,
+          254
+        ],
+        [
+          259,
+          310
+        ]
+      ],
+      "source": "original_guard",
+      "supports": "Exact guard contract, own locks/phase/original limits, START/wait/receipt join and fixed argv tail."
+    },
+    {
+      "functions": [
+        "_check_root",
+        "_hash_regular",
+        "admit_provider",
+        "capture_api",
+        "_entry"
+      ],
+      "lines": [
+        [
+          447,
+          506
+        ],
+        [
+          577,
+          624
+        ],
+        [
+          772,
+          833
+        ]
+      ],
+      "source": "root",
+      "supports": "Actual Root source identity/capability/currentness and injected bootstrap execution; hashing limitation explicitly supplemented."
+    },
+    {
+      "functions": [
+        "_profile_files",
+        "_audit_files",
+        "preflight_runtime"
+      ],
+      "lines": [
+        [
+          276,
+          294
+        ],
+        [
+          452,
+          458
+        ]
+      ],
+      "source": "provider",
+      "supports": "Unchanged exact runtime-profile and header/file audit before driver entry."
+    },
+    {
+      "functions": [
+        "main",
+        "_g12_common_outputs",
+        "_g12_diagnostic_snapshot",
+        "_g12_restore_and_check",
+        "_g12_export_reference",
+        "_g12_reference_entry",
+        "_g12_reference_bootstrap"
+      ],
+      "lines": [
+        [
+          136,
+          174
+        ],
+        [
+          178,
+          218
+        ],
+        [
+          257,
+          265
+        ],
+        [
+          356,
+          448
+        ],
+        [
+          858,
+          874
+        ],
+        [
+          878,
+          892
+        ],
+        [
+          1046,
+          1150
+        ],
+        [
+          1153,
+          1226
+        ]
+      ],
+      "source": "reference_producer",
+      "supports": "Accepted original reference bytes, mode/layout, known profile call chain, exact schemas, joint export and actual initial bootstrap premise."
+    },
+    {
+      "functions": [
+        "ComplementTrace.receipt"
+      ],
+      "lines": [
+        [
+          212,
+          254
+        ]
+      ],
+      "source": "native_backend_source",
+      "supports": "Exact diagnostic cumulative complement receipt schema only; no native body was run."
+    },
+    {
+      "functions": [
+        "stable_file",
+        "proc",
+        "census",
+        "generation",
+        "children_now",
+        "OwnedDomain",
+        "run_root"
+      ],
+      "lines": [
+        [
+          63,
+          91
+        ],
+        [
+          114,
+          146
+        ],
+        [
+          205,
+          309
+        ],
+        [
+          688,
+          792
+        ]
+      ],
+      "source": "current_supervisor",
+      "supports": "Finite actual Popen/generation/known-cleanup/complete-byte custody pattern only, no current funded runner adoption."
+    },
+    {
+      "functions": [
+        "ActualRootResults",
+        "safe_custody_state"
+      ],
+      "lines": [
+        [
+          731,
+          759
+        ],
+        [
+          875,
+          898
+        ]
+      ],
+      "source": "current_controller",
+      "supports": "Retain actual result/Popen-owner path; serialization never reconstructs live ownership."
+    }
+  ],
+  "parent_identity": "Original external initial trusted launcher supplies bootstrap_g12_parent_source_pin; future launch source literal parent slot must be None, effective selection joins external source identity. No caller completion data or source self-hash cycle.",
+  "schema": "g12-custody-fixed-source-map-v1",
+  "shared_helpers": {
+    "_authenticate_own_functions": [
+      {
+        "end": 958,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "dc2297aaa593221c588730ecd40c0a7a9877996719cc7f5290269c327bcefbda",
+        "start": 949
+      },
+      {
+        "end": 340,
+        "file": "integration/g12_reference_adapter_v1.py",
+        "sha256": "dc2297aaa593221c588730ecd40c0a7a9877996719cc7f5290269c327bcefbda",
+        "start": 331
+      }
+    ],
+    "_canonical": [
+      {
+        "end": 245,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "7e0e9478b35d59301777b9dbf1503bbf073d3c3f386dbd689d6a4be07be30695",
+        "start": 243
+      },
+      {
+        "end": 269,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "7e0e9478b35d59301777b9dbf1503bbf073d3c3f386dbd689d6a4be07be30695",
+        "start": 267
+      },
+      {
+        "end": 203,
+        "file": "integration/g12_reference_adapter_v1.py",
+        "sha256": "7e0e9478b35d59301777b9dbf1503bbf073d3c3f386dbd689d6a4be07be30695",
+        "start": 201
+      }
+    ],
+    "_capture_graph": [
+      {
+        "end": 483,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "14c6657265ab2ae5b8a42e842ef1104a48397f16fb3cfa0d03b73470975fdfe5",
+        "start": 456
+      },
+      {
+        "end": 507,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "14c6657265ab2ae5b8a42e842ef1104a48397f16fb3cfa0d03b73470975fdfe5",
+        "start": 480
+      },
+      {
+        "end": 275,
+        "file": "integration/g12_reference_adapter_v1.py",
+        "sha256": "14c6657265ab2ae5b8a42e842ef1104a48397f16fb3cfa0d03b73470975fdfe5",
+        "start": 248
+      }
+    ],
+    "_check_chain": [
+      {
+        "end": 146,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "415449803e24666532d3c91659ea3eaee20d1828573700c9dc437762aab5b0d9",
+        "start": 142
+      },
+      {
+        "end": 182,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "415449803e24666532d3c91659ea3eaee20d1828573700c9dc437762aab5b0d9",
+        "start": 178
+      },
+      {
+        "end": 131,
+        "file": "integration/g12_reference_adapter_v1.py",
+        "sha256": "415449803e24666532d3c91659ea3eaee20d1828573700c9dc437762aab5b0d9",
+        "start": 127
+      }
+    ],
+    "_current_graph": [
+      {
+        "end": 509,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "60d1ed829a44dc5293578284b3038e8e50978c5e94cf7e2641e5d78b9d3e8d08",
+        "start": 486
+      },
+      {
+        "end": 534,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "60d1ed829a44dc5293578284b3038e8e50978c5e94cf7e2641e5d78b9d3e8d08",
+        "start": 511
+      },
+      {
+        "end": 302,
+        "file": "integration/g12_reference_adapter_v1.py",
+        "sha256": "60d1ed829a44dc5293578284b3038e8e50978c5e94cf7e2641e5d78b9d3e8d08",
+        "start": 279
+      }
+    ],
+    "_decimal": [
+      {
+        "end": 301,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "16640948a0adb7ca5a269692c206ca94a80e89b957ebbb367412e30664f5b0e4",
+        "start": 296
+      },
+      {
+        "end": 325,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "16640948a0adb7ca5a269692c206ca94a80e89b957ebbb367412e30664f5b0e4",
+        "start": 320
+      }
+    ],
+    "_digest": [
+      {
+        "end": 84,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "06b0ef7123fba28822f2f760003d2993f7e0fa55543eb2735ae96ea9022ab9f5",
+        "start": 83
+      },
+      {
+        "end": 120,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "06b0ef7123fba28822f2f760003d2993f7e0fa55543eb2735ae96ea9022ab9f5",
+        "start": 119
+      },
+      {
+        "end": 69,
+        "file": "integration/g12_reference_adapter_v1.py",
+        "sha256": "06b0ef7123fba28822f2f760003d2993f7e0fa55543eb2735ae96ea9022ab9f5",
+        "start": 68
+      }
+    ],
+    "_directory_chain": [
+      {
+        "end": 139,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "f7ec33765832d534e78a6f021f6ab358a05db55db6fb2880823faa6bc191b43c",
+        "start": 111
+      },
+      {
+        "end": 175,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "f7ec33765832d534e78a6f021f6ab358a05db55db6fb2880823faa6bc191b43c",
+        "start": 147
+      },
+      {
+        "end": 124,
+        "file": "integration/g12_reference_adapter_v1.py",
+        "sha256": "f7ec33765832d534e78a6f021f6ab358a05db55db6fb2880823faa6bc191b43c",
+        "start": 96
+      }
+    ],
+    "_directory_key": [
+      {
+        "end": 108,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "a770ea9d60f7984a6da81d9af9aa79bde251cba712beeec1066a6cfb04676504",
+        "start": 107
+      },
+      {
+        "end": 144,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "a770ea9d60f7984a6da81d9af9aa79bde251cba712beeec1066a6cfb04676504",
+        "start": 143
+      },
+      {
+        "end": 93,
+        "file": "integration/g12_reference_adapter_v1.py",
+        "sha256": "a770ea9d60f7984a6da81d9af9aa79bde251cba712beeec1066a6cfb04676504",
+        "start": 92
+      }
+    ],
+    "_exact": [
+      {
+        "end": 75,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "01d4dd247edcc06dec9eccc258c4b3924e5775c4c9a42494e43bf58117d90942",
+        "start": 68
+      },
+      {
+        "end": 111,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "01d4dd247edcc06dec9eccc258c4b3924e5775c4c9a42494e43bf58117d90942",
+        "start": 104
+      },
+      {
+        "end": 60,
+        "file": "integration/g12_reference_adapter_v1.py",
+        "sha256": "01d4dd247edcc06dec9eccc258c4b3924e5775c4c9a42494e43bf58117d90942",
+        "start": 53
+      }
+    ],
+    "_fields": [
+      {
+        "end": 80,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "ef75e9fe2185d965e3ce2d81a71598ff54819bdb599343b0b6068a305ccb5498",
+        "start": 78
+      },
+      {
+        "end": 116,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "ef75e9fe2185d965e3ce2d81a71598ff54819bdb599343b0b6068a305ccb5498",
+        "start": 114
+      },
+      {
+        "end": 65,
+        "file": "integration/g12_reference_adapter_v1.py",
+        "sha256": "ef75e9fe2185d965e3ce2d81a71598ff54819bdb599343b0b6068a305ccb5498",
+        "start": 63
+      }
+    ],
+    "_file_record": [
+      {
+        "end": 216,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "a702bd3285a2e2a95c96386f9183225743edb7af9e68ed316c8b71426f23402f",
+        "start": 204
+      },
+      {
+        "end": 252,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "a702bd3285a2e2a95c96386f9183225743edb7af9e68ed316c8b71426f23402f",
+        "start": 240
+      }
+    ],
+    "_fixed_argv": [
+      {
+        "end": 889,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "873bb9d49d16ad164c78504a190a1f8b32d5bb8c60465ced4a31542c89c070bd",
+        "start": 876
+      },
+      {
+        "end": 919,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "873bb9d49d16ad164c78504a190a1f8b32d5bb8c60465ced4a31542c89c070bd",
+        "start": 906
+      }
+    ],
+    "_hex": [
+      {
+        "end": 293,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "9c3f82c20caef2a3230c50e9da7d0811b335ba0ee20ae019d91dad487ca97865",
+        "start": 290
+      },
+      {
+        "end": 317,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "9c3f82c20caef2a3230c50e9da7d0811b335ba0ee20ae019d91dad487ca97865",
+        "start": 314
+      }
+    ],
+    "_identity": [
+      {
+        "end": 104,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "3b3ebde1076617647e5d494d90941845707678922ac82b0cc4ba1ef5c866c7dc",
+        "start": 102
+      },
+      {
+        "end": 140,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "3b3ebde1076617647e5d494d90941845707678922ac82b0cc4ba1ef5c866c7dc",
+        "start": 138
+      },
+      {
+        "end": 89,
+        "file": "integration/g12_reference_adapter_v1.py",
+        "sha256": "3b3ebde1076617647e5d494d90941845707678922ac82b0cc4ba1ef5c866c7dc",
+        "start": 87
+      }
+    ],
+    "_json": [
+      {
+        "end": 287,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "e8a6d40a4f2febbb08b6de804b91e8179ec2de20beda2022ef5495bcfafce979",
+        "start": 248
+      },
+      {
+        "end": 311,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "e8a6d40a4f2febbb08b6de804b91e8179ec2de20beda2022ef5495bcfafce979",
+        "start": 272
+      },
+      {
+        "end": 245,
+        "file": "integration/g12_reference_adapter_v1.py",
+        "sha256": "e8a6d40a4f2febbb08b6de804b91e8179ec2de20beda2022ef5495bcfafce979",
+        "start": 206
+      }
+    ],
+    "_need": [
+      {
+        "end": 65,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "894c50c732c10090c7a9c429309fe280b589ec0542afa9d3835e590b2ae9a4cd",
+        "start": 63
+      },
+      {
+        "end": 101,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "894c50c732c10090c7a9c429309fe280b589ec0542afa9d3835e590b2ae9a4cd",
+        "start": 99
+      },
+      {
+        "end": 50,
+        "file": "integration/g12_reference_adapter_v1.py",
+        "sha256": "894c50c732c10090c7a9c429309fe280b589ec0542afa9d3835e590b2ae9a4cd",
+        "start": 48
+      }
+    ],
+    "_nonfinite": [
+      {
+        "end": 240,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "244f707c8a2696174d54e44e3824a7c0322742c0fb804465e13564103ab39365",
+        "start": 239
+      },
+      {
+        "end": 264,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "244f707c8a2696174d54e44e3824a7c0322742c0fb804465e13564103ab39365",
+        "start": 263
+      },
+      {
+        "end": 198,
+        "file": "integration/g12_reference_adapter_v1.py",
+        "sha256": "244f707c8a2696174d54e44e3824a7c0322742c0fb804465e13564103ab39365",
+        "start": 197
+      }
+    ],
+    "_number": [
+      {
+        "end": 93,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "ce9e5a629f1a9312489b6806bce8b23d2ec738a4c6b732cb03ab80aa3b6e59c6",
+        "start": 91
+      },
+      {
+        "end": 129,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "ce9e5a629f1a9312489b6806bce8b23d2ec738a4c6b732cb03ab80aa3b6e59c6",
+        "start": 127
+      },
+      {
+        "end": 78,
+        "file": "integration/g12_reference_adapter_v1.py",
+        "sha256": "ce9e5a629f1a9312489b6806bce8b23d2ec738a4c6b732cb03ab80aa3b6e59c6",
+        "start": 76
+      }
+    ],
+    "_pairs": [
+      {
+        "end": 236,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "90dc6ee079b92f83e3ac116a1814a618dd42bf2c97093e0b5d0a33633c55df64",
+        "start": 231
+      },
+      {
+        "end": 260,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "90dc6ee079b92f83e3ac116a1814a618dd42bf2c97093e0b5d0a33633c55df64",
+        "start": 255
+      },
+      {
+        "end": 194,
+        "file": "integration/g12_reference_adapter_v1.py",
+        "sha256": "90dc6ee079b92f83e3ac116a1814a618dd42bf2c97093e0b5d0a33633c55df64",
+        "start": 189
+      }
+    ],
+    "_path": [
+      {
+        "end": 99,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "46e6a95a50d1433e354f9ccbd17961aa923756469e1c2a9196b013a24636a032",
+        "start": 96
+      },
+      {
+        "end": 135,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "46e6a95a50d1433e354f9ccbd17961aa923756469e1c2a9196b013a24636a032",
+        "start": 132
+      },
+      {
+        "end": 84,
+        "file": "integration/g12_reference_adapter_v1.py",
+        "sha256": "46e6a95a50d1433e354f9ccbd17961aa923756469e1c2a9196b013a24636a032",
+        "start": 81
+      }
+    ],
+    "_raise_preserved": [
+      {
+        "end": 160,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "183d23c4e56af814bfa689551ba5f3605c665daf4dd87686f72d060caf12665b",
+        "start": 149
+      },
+      {
+        "end": 196,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "183d23c4e56af814bfa689551ba5f3605c665daf4dd87686f72d060caf12665b",
+        "start": 185
+      },
+      {
+        "end": 145,
+        "file": "integration/g12_reference_adapter_v1.py",
+        "sha256": "183d23c4e56af814bfa689551ba5f3605c665daf4dd87686f72d060caf12665b",
+        "start": 134
+      }
+    ],
+    "_rank_events": [
+      {
+        "end": 352,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "e0134b65787051090fd9b77c09603fcc5f40d541a418e351e97b99637a8ce61e",
+        "start": 345
+      },
+      {
+        "end": 376,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "e0134b65787051090fd9b77c09603fcc5f40d541a418e351e97b99637a8ce61e",
+        "start": 369
+      }
+    ],
+    "_read_file": [
+      {
+        "end": 201,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "6fa40aa3a963ca6f6cc44092e4942e7c4f728eb72400e9af5292c5120e14e9bd",
+        "start": 163
+      },
+      {
+        "end": 237,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "6fa40aa3a963ca6f6cc44092e4942e7c4f728eb72400e9af5292c5120e14e9bd",
+        "start": 199
+      },
+      {
+        "end": 186,
+        "file": "integration/g12_reference_adapter_v1.py",
+        "sha256": "6fa40aa3a963ca6f6cc44092e4942e7c4f728eb72400e9af5292c5120e14e9bd",
+        "start": 148
+      }
+    ],
+    "_source_code_shape": [
+      {
+        "end": 946,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "43b18e4634d80127bcef2c4f38441007505c9ab179ff7c383e64a95a6b7fad7f",
+        "start": 924
+      },
+      {
+        "end": 976,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "43b18e4634d80127bcef2c4f38441007505c9ab179ff7c383e64a95a6b7fad7f",
+        "start": 954
+      },
+      {
+        "end": 328,
+        "file": "integration/g12_reference_adapter_v1.py",
+        "sha256": "43b18e4634d80127bcef2c4f38441007505c9ab179ff7c383e64a95a6b7fad7f",
+        "start": 306
+      }
+    ],
+    "_source_pin": [
+      {
+        "end": 408,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "9b56c55e466783d89a2a580993ae19f6833da76047b660d51c088b6697f2a242",
+        "start": 403
+      },
+      {
+        "end": 432,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "9b56c55e466783d89a2a580993ae19f6833da76047b660d51c088b6697f2a242",
+        "start": 427
+      }
+    ],
+    "_tagged": [
+      {
+        "end": 342,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "ebe7a709a788246d3a09dab91ad97cafb3ed645cea34293eb2b804c9ef1c261b",
+        "start": 304
+      },
+      {
+        "end": 366,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "ebe7a709a788246d3a09dab91ad97cafb3ed645cea34293eb2b804c9ef1c261b",
+        "start": 328
+      }
+    ],
+    "_uint": [
+      {
+        "end": 88,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "dd5a9496e01d4111210fbe8c8de36b824bc6d0a4919596b9ea02aae820665e41",
+        "start": 87
+      },
+      {
+        "end": 124,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "dd5a9496e01d4111210fbe8c8de36b824bc6d0a4919596b9ea02aae820665e41",
+        "start": 123
+      },
+      {
+        "end": 73,
+        "file": "integration/g12_reference_adapter_v1.py",
+        "sha256": "dd5a9496e01d4111210fbe8c8de36b824bc6d0a4919596b9ea02aae820665e41",
+        "start": 72
+      }
+    ],
+    "_validate_guard": [
+      {
+        "end": 453,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "18e731760b9db41d407e098e61c41498e40dded69d6d6dca2a058a4f2229c76b",
+        "start": 411
+      },
+      {
+        "end": 477,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "18e731760b9db41d407e098e61c41498e40dded69d6d6dca2a058a4f2229c76b",
+        "start": 435
+      }
+    ],
+    "_validate_manifest": [
+      {
+        "end": 873,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "905e2e71444989a15f01e3b4be0bed7874bc1180329692e4072c41c0fbb70feb",
+        "start": 776
+      },
+      {
+        "end": 903,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "905e2e71444989a15f01e3b4be0bed7874bc1180329692e4072c41c0fbb70feb",
+        "start": 806
+      }
+    ],
+    "_validate_pair": [
+      {
+        "end": 400,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "417a9fb35620481b7e7bf8de630595a472b4d2d4c5bdf884eb0afd50442068b1",
+        "start": 355
+      },
+      {
+        "end": 424,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "417a9fb35620481b7e7bf8de630595a472b4d2d4c5bdf884eb0afd50442068b1",
+        "start": 379
+      }
+    ],
+    "_validate_publication": [
+      {
+        "end": 921,
+        "file": "g12_reference_cold_consumer_v1.py",
+        "sha256": "a155ee516065e539bab5bacaa6a30c50c603995b8a5e6eb819126c6c5d815b11",
+        "start": 892
+      },
+      {
+        "end": 951,
+        "file": "g12_reference_parent_v1.py",
+        "sha256": "a155ee516065e539bab5bacaa6a30c50c603995b8a5e6eb819126c6c5d815b11",
+        "start": 922
+      }
+    ]
+  },
+  "source_files": {
+    "candidate-integration/g12_candidate_driver_N22_custody_v1.py": {
+      "bytes": 128363,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/candidate-integration/g12_candidate_driver_N22_custody_v1.py",
+      "sha256": "c9d72a79ce3a828815d3d0370a1f95f210e1a41edeed767c55ff9d0614126fa4"
+    },
+    "candidate-integration/g12_candidate_driver_P07_custody_v1.py": {
+      "bytes": 128363,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/candidate-integration/g12_candidate_driver_P07_custody_v1.py",
+      "sha256": "2a5d202dabd78d5de54fac29db7fdfaf8836866425d93842f2b22d747fa52d0c"
+    },
+    "candidate-integration/g12_candidate_driver_support_N22_custody_v1.py": {
+      "bytes": 33549,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/candidate-integration/g12_candidate_driver_support_N22_custody_v1.py",
+      "sha256": "28c1a44750b9745a5ad6e930f9a83cf256b3a90905f5f30d08a89aca54c828da"
+    },
+    "candidate-integration/g12_candidate_driver_support_P07_custody_v1.py": {
+      "bytes": 33549,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/candidate-integration/g12_candidate_driver_support_P07_custody_v1.py",
+      "sha256": "cae88bf247ee775d6d7fc1264cb2af1d487e4c19168ca787c7c16aba16452220"
+    },
+    "candidate-integration/g12_epoch_authority_custody_v1.py": {
+      "bytes": 139604,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/candidate-integration/g12_epoch_authority_custody_v1.py",
+      "sha256": "3079a096df1072a83056f3f8a8cbf9e766fdddb488e36dddb36544c7929f988a"
+    },
+    "g12_reference_cold_consumer_v1.py": {
+      "bytes": 61159,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/g12_reference_cold_consumer_v1.py",
+      "sha256": "89ad17cfa90e895e2cb105e80cc57c82be4bf1a4a85a9d44322016c4344e3849"
+    },
+    "g12_reference_parent_v1.py": {
+      "bytes": 94080,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/g12_reference_parent_v1.py",
+      "sha256": "160b8c5de808b9b31532608a89fa5e209110caea132145cd431ffade4403079e"
+    },
+    "integration/g12_reference_adapter_v1.py": {
+      "bytes": 21740,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/integration/g12_reference_adapter_v1.py",
+      "sha256": "43aaabc69841b0a90fae599011de85f4736f42ced64344c49d6cd93f20297f9f"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/bit-row-route-generator/PROGRAM.json.gz",
+    "research/selected-bit-stream-routes/qadic_streams.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Committed f=1 shift census, 64 f^2 and 160 f^2 formulas at f=1,2,3, three conjugation fixtures, and two failing controls."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-O",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Same identity under optimized execution; checks use exceptions rather than assertions."
+    }
+  ]
+}

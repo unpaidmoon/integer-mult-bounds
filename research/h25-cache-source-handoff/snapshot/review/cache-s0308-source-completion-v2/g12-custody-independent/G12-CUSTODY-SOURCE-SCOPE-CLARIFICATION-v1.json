@@ -1,0 +1,143 @@
+{
+  "activity": {
+    "append_only_owned_metadata": true,
+    "broad_search_history_or_protected_runtime": false,
+    "frozen_predecessors_modified": false,
+    "inspection": "Only the three exact requested original static JSON contracts, plus hash verification of the existing clarification",
+    "new_implementation": 0,
+    "process_lock_network_operations": 0,
+    "target_imports_execution_tests_helpers_compiler_native_science_decoders": 0
+  },
+  "answer": "The inspected original SC5/SC6 checklist and cost/caller contracts do not require construction of a new enclosing financial/accounting API for reference custody. They require authentic independent original reference transport, source and alias ownership, and a complete source work/cost bill preserving actual measurement, limits, all tails and unmeasured quantities. No exact original causal dependency on new F4/M source work was demonstrated. The additional final-publication/enclosing-completion API is a requirement introduced by the G12 design as written; its absence is not by itself a justified original S03.08 source-completion blocker.",
+  "causal_classification": {
+    "not_demonstrated_original_source_dependency": "Construction or adoption of a new enclosing financial producer/completion API, F4 consumer or M transport body. Naming an enclosing owner in new DESIGN-v1 line 228 does not establish a dependency in the original checklist.",
+    "original_required_cost_definition": "Assign all parent/producer/adapter/guard/process/cleanup/pair-read/parse/copy/hash/manifest/retention/consumer/receipt/publication work and retained memory to the complete original symbolic invoice; preserve measured-through boundaries, unknown final tails and every original limit.",
+    "original_required_source_edge": "Independent original observed result -> actual successful source-owned parent/guard completion and checks -> complete authentic reference pair with known cleanup/custody -> exact typed source-authenticated cold caller/consumer transport.",
+    "separate_runtime_obligation": "Before any actual permitted invocation, source adoption or completed-cost claim, genuine authorization/phase/budget/measurement/custody/cleanup/final-tail conditions must be satisfied through an accepted actual execution path. This clarification does not supply or satisfy them."
+  },
+  "created_utc": "2026-10-31T02:14:25.200171+00:00",
+  "effect_on_previous_clarification": {
+    "G12_SOURCE_GAP_01": "Preserved as an unsupplied edge of DESIGN-v1 as written, but explicitly NOT established as an original S03.08 source prerequisite. The earlier addendum must not be used to reassign new accounting/F4/M work into S03.08 merely to discharge this chosen design requirement.",
+    "G12_SOURCE_GAP_02": "Remains an original-scope source integration obligation: exact typed independent transfer under CP01/CP02 and SC5 requires the proposed consumer ABI and actual registered caller to agree and carry genuine initially captured objects. No new caller source was inspected in this source-scope check.",
+    "no_retroactive_full_acceptance": "This correction does not make the original frozen design fully connected, accept any produced implementation, or award whole S03.08 activity credit. It permits a narrow explicitly reviewed design-boundary correction without inventing a new prerequisite."
+  },
+  "exact_inputs": {
+    "caller_equality": {
+      "bytes": 10515,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v1/contracts/CALLER-EQUALITY-DEFINITION-v1.json",
+      "sha256": "4a11f90727c636bdbaaf683d1ac95aa9234324698fb594a7da92a92f6a45c7eb"
+    },
+    "complete_symbolic_cost": {
+      "bytes": 9184,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v1/contracts/COMPLETE-SYMBOLIC-COST-DEFINITION-v1.json",
+      "sha256": "6ab22ebb387f15f9a1fd91e257ecae649eb4b177af32d4652c2eaec061e3b48c"
+    },
+    "original_checklist": {
+      "bytes": 8029,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/strict-source-review-20261030T231709Z/parent/NEXT-SOURCE-CHECKLIST-v1.json",
+      "sha256": "0c0ed109bd6d1bdbfa457c2f25c437b5a97cad44fd590b989d0fb74cd20544ce"
+    },
+    "prior_clarification": {
+      "bytes": 10062,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-custody-independent/G12-CUSTODY-DESIGN-CLARIFICATION-v1.json",
+      "sha256": "dd78fbbe4060e16f58294ee4e8e0c667943e50ed0052d10500a1ac50da9f1a75"
+    }
+  },
+  "original_evidence": [
+    {
+      "lines": [
+        12,
+        26
+      ],
+      "predicate": "Runtime/profile/control/caller execution and measurement retain separate original gates. F4 consumer adoption and M producer transport are not added as S03.08 prerequisites without an exact demonstrated dependency.",
+      "source": "original_checklist"
+    },
+    {
+      "lines": [
+        54,
+        57
+      ],
+      "predicate": "SC5 requires authentic independent uncached expected results, required cache/caller source bindings, retained helper bodies and corrections; it requires exact dependencies on wider families to be documented rather than assumed.",
+      "source": "original_checklist"
+    },
+    {
+      "lines": [
+        60,
+        63
+      ],
+      "predicate": "SC6 requires independent actual source graph/alias review and complete source work/cost/caller/control bill, preserving limits, tails and unmeasured quantities; execution prerequisites are recorded separately.",
+      "source": "original_checklist"
+    },
+    {
+      "lines": [
+        2,
+        5
+      ],
+      "predicate": "Actual wall/CPU/peak values are null. Broader unions and F4/M remain in original activities absent an actual named source dependency.",
+      "source": "complete_symbolic_cost"
+    },
+    {
+      "lines": [
+        8,
+        15
+      ],
+      "predicate": "C01 and C02 include pristine parent/Root admission, process tracking, outer measurement, and every source/input/installation custody and copy cost, including before driver START_WALL and after its last sample.",
+      "source": "complete_symbolic_cost"
+    },
+    {
+      "lines": [
+        63,
+        80
+      ],
+      "predicate": "C12-C15 charge raw failure graphs, lossless output/receipt/hash/IO costs, normal and failed cleanup, final custody and parent accounting/resource tails through last child/process exit.",
+      "source": "complete_symbolic_cost"
+    },
+    {
+      "lines": [
+        83,
+        110
+      ],
+      "predicate": "Every exclusive actual work segment gets a category owner; wall and all-process CPU include receipt/cleanup tails. Unmeasured values remain unknown, funding/fit are false, no cap is granted and source completeness does not imply fit.",
+      "source": "complete_symbolic_cost"
+    },
+    {
+      "lines": [
+        47,
+        64
+      ],
+      "predicate": "CP01-CP04 require actual Root/capability/API source ownership, fresh unchanged same-input original baseline and exact typed source-bound independent transfer; candidate state cannot supply expected answers.",
+      "source": "caller_equality"
+    },
+    {
+      "lines": [
+        102,
+        119
+      ],
+      "predicate": "CP12/CP14/CP15 preserve first-primary and raw secondary identities, closed mutable aliases, source/mode/output custody and permitted terminal order. These are actual source obligations independent of any added financial API.",
+      "source": "caller_equality"
+    }
+  ],
+  "progress_boundary": {
+    "broader_goal_or_runtime_status_changed": false,
+    "fractional_credit_awarded": 0,
+    "original_activity_count": 49,
+    "whole_activity_acceptance": false
+  },
+  "proposed_narrow_corrected_source_boundary": {
+    "ABI_requirement": "Resolve the two-argument prior transport versus proposed three-argument consumer with an exact owned, source-authenticated cold registration/call derivation and genuine initial Root/capability/API ownership. Keep the source edge open until inspected; never fabricate capability or weaken checks.",
+    "cost_contract": "Retain the complete source invoice with explicit categories and full lifetimes for all new custody/consumer operations. Keep all unmeasured costs and final accounting tail null/unknown, preserve original caps and report actual measured-through endpoints where later available. Unknown is never zero and custody data does not imply fully paid completion, funding, resource fit or gain.",
+    "custody_success_contract": "Retain the actual private Popen and exact successful original parent/guard exit, original START/receipt/raw logs and all guards, known selected-chain cleanup/closed descriptors, source/workload/identity/namespace checks and both complete original/retained exports. Emit custody provenance only from these observed private source-owned facts. Common-only, fake/cached PASS, reconstructed receipt, unknown cleanup and caller booleans remain rejected.",
+    "design_specific_publication_dependency": "If the narrow source design ceases to require a separately constructed enclosing financial API for its source-only custody artifact, make that change explicit in a new owned design/schema revision and review it. Do not silently drop an existing DESIGN-v1 predicate or synthesize an enclosing completion record. Any final-publication record retained in that revision must state its actual bounded purpose and cannot claim costs beyond observed completion.",
+    "runtime_separation": "G12_REFERENCE_LAUNCH_SELECTION and G12_REFERENCE_HANDOFF remain None now. Actual execution/adoption and complete final-cost qualification stay behind their separate genuine authorization/accounting gates. A source-only custody design does not authorize consuming an unqualified reference or bypassing original guard/phase/budget checks.",
+    "scope_limit": "No new generic accounting framework, F4 adoption, M financial producer/transport, all212 work, scientific execution or new reservation follows from this proposal.",
+    "status": "PROPOSED_FOR_EXPLICIT_OWNED_DESIGN_CORRECTION_AND_REVIEW_ONLY_NOT_IMPLEMENTED_OR_ADOPTED"
+  },
+  "reviewer": "/root/cache_g12_custody_review",
+  "schema": "g12-custody-original-source-scope-clarification-v1",
+  "status": "NEW_ENCLOSING_ACCOUNTING_API_NOT_DEMONSTRATED_AS_ORIGINAL_S0308_SOURCE_PREREQUISITE",
+  "stop": "Focused original-scope clarification complete. Freeze and return exact artifact/hash; no further implementation, research or expanded audit."
+}

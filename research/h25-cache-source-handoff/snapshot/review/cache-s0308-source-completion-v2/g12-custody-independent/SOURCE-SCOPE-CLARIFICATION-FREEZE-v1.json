@@ -1,0 +1,13 @@
+{
+  "prior_clarification_sha256": "dd78fbbe4060e16f58294ee4e8e0c667943e50ed0052d10500a1ac50da9f1a75",
+  "report": {
+    "bytes": 10874,
+    "mode": "0444",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-custody-independent/G12-CUSTODY-SOURCE-SCOPE-CLARIFICATION-v1.json",
+    "sha256": "a9261f686d4fbe6ca40258335231a730dc7e3319be7cedf7c39e189a57c7f367"
+  },
+  "runtime_or_whole_activity_approval": false,
+  "schema": "g12-custody-source-scope-clarification-freeze-v1",
+  "source_only": true,
+  "status": "NEW_ENCLOSING_ACCOUNTING_API_NOT_DEMONSTRATED_AS_ORIGINAL_S0308_SOURCE_PREREQUISITE"
+}

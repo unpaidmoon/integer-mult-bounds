@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "d59b5035e7b4cbaa9d688a1d32dd0d6eb79c466a",
+      "sha256": "9b8d0eea95b3bf0dfcb7938a732a6439b87a2685dec2a5ab9e525b3b34debbfa"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "3404fbdd5e7529a0674eef26114b5071e4586cec",
+      "sha256": "ead6cdc9d0af6d58e8a49744d8ec8c7c15e13d2ba93c276c434bcf9b51b93a81"
+    },
+    {
+      "path": "research/weighted-fourier-layout/README.md",
+      "usage": "input",
+      "git_blob": "7cd23891f12ea1f054ed778289bc45a7e8fb622e",
+      "sha256": "676e107f9e312a36793ec87ca9eec3df3c8764c71268153055c2d6064a40e79e"
+    },
+    {
+      "path": "upstream/build/sections/07-resampling.tex",
+      "usage": "input",
+      "git_blob": "256243bf9416baefb82bf9203f80215b9ebe28f2",
+      "sha256": "8a6b91670f9163afb54892489fa2210c77fe1b058f0325ec7d18b44b94be6e2c"
+    }
+  ]
+}

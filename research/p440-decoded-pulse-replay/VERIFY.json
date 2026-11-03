@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/complex-p440-window-shocks/CERTIFICATE.json",
+    "research/complex-p440-window-shocks/INDEPENDENT.json",
+    "research/complex-p440-window-shocks/independent.py",
+    "research/complex-p440-window-shocks/inputs/BASE-WORD.json.gz"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 180,
+      "checks": "Exact differential pulse recurrence, changed-source and boundary rejection, both unchanged complete callers and saved receipts."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 180,
+      "checks": "The same complete exact and rejection checks under optimized Python, including optimized child interpreters."
+    }
+  ]
+}

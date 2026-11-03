@@ -1,0 +1,975 @@
+{
+  "activity": {
+    "metadata_only_verification": "Read/hashes and JSON construction/parse of owned design metadata only; no target scientific payload/decoder or source was imported/executed.",
+    "network": 0,
+    "process_or_lock_operations": 0,
+    "protected_bookkeeping_runtime_runs_read_or_enumerated": false,
+    "report_files_written_only_under_owned_g12_custody": true,
+    "source_or_stage_implementation": 0,
+    "target_execution_tests_helpers_compiler_native_scientific_decoder_runs": 0,
+    "target_imports": 0
+  },
+  "adapter_contract": {
+    "actual_bootstrap": "bootstrap_root, bootstrap_capability, bootstrap_api are the same objects Root._entry injected, not caller descriptors, imported substitutes, or objects recovered from JSON.",
+    "authority_boundary": "Adapter passing authentic objects preserves the external Root-source selection premise. This is not Python self-authentication; it depends on the trusted launcher/Root/OS/interpreter/stdlib specified below.",
+    "checks_before_source_execution": [
+      "Require optimize==0 and api[0]() equals pinned Root; validate actual capability with api[1](capability, exact provider pin); retain actual initially supplied root/API and source-owned operation aliases.",
+      "Require exact newstage integration adapter path, no symlink components, new external output path computed by the selected parent/guard run; output must not exist and cannot be below stage or frozen root.",
+      "Require accepted producer source complete digest/size/mode; actual Root._hash_regular on stage/baseline/full_driver.py with finite bound; authenticated API calls on both sides. The accepted producer is not edited.",
+      "Build exactly [producer_path, --frozen-root, stage/baseline/frozen, --reference, stage/baseline/reference/certificates/complex-network.json, --mode, profile, --output, guard_science_path]. Do not pass --anchor, --lanes, --finite-only or optimization flags to producer.",
+      "Create root.ModuleType(__main__) with exact producer __file__, builtins owner, and the unchanged actual bootstrap objects. Set its __name__ to __main__; save prior sys.argv object and sys.modules[__main__] identity; set producer argv/module alias.",
+      "Use root._COMPILE(exact_source, exact_producer_path, exec, dont_inherit=True, optimize=0), api currentness checks, then root._EXEC(code, fresh_producer_namespace). This is the same admitted source-execution leaf as Root._entry, not importlib/runpy reconstruction of the producer."
+    ],
+    "completion": "Only ordinary successful return through the unchanged producer._g12_reference_entry is eligible for adapter postchecks. The adapter never catches the producer marker to manufacture success and never calls producer internals separately.",
+    "entry_function": "_g12_adapter_entry()",
+    "input_argv": "Exactly [absolute_adapter_path, --output, absolute_guard_run_science_path, --lanes, g12-reference]; no other arguments.",
+    "restoration_and_errors": "After source execution, require producer argv/module aliases retain their expected identities before restoration. Restore only owned slots once; retain first raw exception/traceback and ordered secondary errors, emit stderr where possible; any secondary blocks ordinary adapter success. Do not overwrite a foreign slot or replace the original primary. Require api[0] and producer source bytes unchanged after return.",
+    "source_anchors": {
+      "guard": [
+        [
+          230,
+          247
+        ]
+      ],
+      "producer": [
+        [
+          136,
+          174
+        ],
+        [
+          858,
+          860
+        ],
+        [
+          1094,
+          1178
+        ],
+        [
+          1190,
+          1226
+        ]
+      ],
+      "root": [
+        [
+          804,
+          833
+        ]
+      ]
+    }
+  },
+  "authority": {
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/parent/AUTHORIZATION-v2.json",
+    "scope": "Parent delegated bounded G12 custody design only; independent exact design review required before implementation; no execution authority.",
+    "sha256": "9e32514288fed2b1d2873387bf81861ffcd9e1b56d2ab4828be13a311e629106"
+  },
+  "cold_consumer_design": {
+    "authenticity_limit": "Source selection of the parent manifest/publication record establishes immutable data provenance under the trusted launcher. Consumer does not recreate parent Popen/lease/owner from JSON; absence of valid source selection stays closed.",
+    "caller_authority": "Only the existing authenticated cold registered-source entry may call it, passing initially captured actual Root/capability/API before candidate exposure. Verify its exact source/argument ownership there; function shape checks alone cannot authenticate a supplied root.",
+    "costs": "All reads, hashes, strict parsing, complete hex decode, final triple/pair rechecks, retained memory and source/cold checks are charged to the actual candidate/reference invoice. No reference production or custody is amortized away or treated as free.",
+    "function": "load_original_g12_reference(root, capability, api) -> (literal,count,common_bytes,provenance)",
+    "order": [
+      "Call authentic api[0] and api[1](capability, expected provider pin), verify selected consumer function/source identity and pristine source-owned read/JSON/hash operation aliases under the cold entry; None fails immediately.",
+      "Read exact source-selected manifest with complete bytes/mode/path identity checks and original Root._hash_regular on both sides. Root._hash_regular L480-506 alone does not check full mode or final path identity; add source-owned nofollow/dirfd/full-mode checks without modifying Root.",
+      "Parse strict manifest schema; require pinned parent source identity and exact fixed Root/provider/adapter/producer/authority/guard/workload/argv bindings. Validate complete successful guard and actual-terminal fields as part of authenticated parent manifest data, not as independently trusted booleans.",
+      "Verify the source-selected final publication/accounting record joins this exact manifest digest and parent source and records successful final close/tail; do not synthesize it from manifest fields. Retained original raw evidence remains fully available; manifest holds complete parent-validated original START/receipt field joins.",
+      "Read both retained common and diagnostic complete files under actual Root and fixed manifest FileRecords, strict exact schema/crosslink checks, decode full common hex and hash it; retain complete raw diagnostic bytes/provenance even though it is not a candidate equality output.",
+      "After decode, re-read manifest and BOTH retained exports and publication record, recheck complete hashes, modes, identities and directory bindings together, then authentic Root/API currentness and selected consumer ownership once more. Mutation of diagnostics after the first common read rejects.",
+      "Expose only observed exact bool literal, positive exact int count, opaque complete common bytes, and immutable provenance including manifest/pair/publication/source/workload pins. Keep full diagnostics in parent retention; do not promote diagnostic counters to expected scientific equality values."
+    ],
+    "original_transport_not_adopted": "The existing common-only fourtuple draft is insufficient and remains unselected; it is a location/pattern reference only, not an accepted transport dependency.",
+    "source_selection": "G12_REFERENCE_HANDOFF = None remains unchanged in the existing draft. Proposed new consumer also starts None. Later immutable source literal is (manifest_absolute_path,manifest_sha256,manifest_bytes,manifest_identity,parent_source_path,parent_source_sha256,final_publication_record_path,final_publication_record_sha256,final_publication_record_bytes). This is source-selected after actual parent custody and final accounting; no runtime setter/callback/registry."
+  },
+  "design_decisions": [
+    "Use a G12-specific trusted parent with its own actual Popen of the unchanged original guard. Do not call the full historical composed controller or relabel the current funded runner as a G12 executor.",
+    "Use the existing actual Root/provider bootstrap and one small fixed integration adapter. The adapter source-executes the unchanged producer from the baseline directory using the actual Root/capability/API objects it received from Root._entry.",
+    "A scoped known-process observation leaf follows the current supervisor generation/pidfd pattern. It does not claim universal writer exclusion or a hostile-fork sandbox. Missing/denied/ambiguous observations fail closed.",
+    "Create the immutable retained parent domain only after successful guard join and known process/stream cleanup. It is outside every declared child output subtree and has no inherited directory or writable file descriptor.",
+    "Parent source-owned completion, exact original guard START/receipt/raw logs, both complete exports and known custody must all join before sealing. A serialized PASS, caller success boolean, common-only payload or diagnostic completion text is insufficient.",
+    "Later cold consumption authenticates a separately source-selected manifest and both retained exports under the actual Root. It transports original literal/count/common bytes and provenance; it does not reconstruct a live parent or add a new oracle.",
+    "All current runtime/source selections remain None. Actual future output hashes are values produced by the future successful custody operation; they are not prerequisites to this source design or a reason to invent payloads."
+  ],
+  "finite_IO_contract": {
+    "FileIdentity": "Exact tuple(dev:int>=0, ino:int>0, full_st_mode:int, size:int>=0, mtime_ns:int, ctime_ns:int); retain nlink:int and require regular, nonsymlink, nlink==1 for named files. Exclude atime only because own reads may change it.",
+    "cap_semantics": "Finite rejection ceilings only, not a resource grant or evidence that actual data fits. Original 1GiB/resource/body caps still apply to simultaneous raw bytes, JSON trees, decoded hex and copies; over-cap or insufficient paid headroom blocks before materialization. Any actual size above selected bound is a visible closed branch, not silent truncation.",
+    "chunk_bytes": 65536,
+    "common_cap_bytes": 268435456,
+    "current_action": "These are source requirements only; no export file or runtime evidence has been read or decoded.",
+    "diagnostic_cap_bytes": 268435456,
+    "future_decoder_limits": "Source-fixed depth <=256; decoded node_count <= the relevant fixed file byte ceiling; individual string/hex length <= that ceiling. These are exact defensive rejection limits, checked within genuine memory/time budget. No relaxation/retry during actual custody.",
+    "json": "Exact UTF-8/ASCII canonical producer JSON plus one newline, duplicate keys rejected by object_pairs_hook at all levels, reject NaN/Infinity, only exact builtin JSON primitives; booleans never pass integer fields. Bound raw bytes before decoding, decoded depth/node/hex work by selected finite limits inside actual resource/time budget. Do not execute target scientific decoders or import producer to validate data.",
+    "metadata_cap_bytes": 262144,
+    "read_pair": "Use authenticated source-owned openat/no-follow directory traversal and held dirfd, O_RDONLY|O_NOFOLLOW|O_NONBLOCK|O_CLOEXEC. lstat/path identity == opened fstat == post-read fstat == final lstat. Read exactly initial size in bounded chunks plus bounded EOF confirmation; short read, growth, replacement, changed mode/link count, wrong parent directory, or close error rejects. Recheck both originals jointly after both reads and before commit; retained copies receive same checks.",
+    "write_copy": "Exclusive O_CREAT|O_EXCL|O_NOFOLLOW|O_CLOEXEC; partial writes loop with positive progress; hash all written bytes; fsync/fchmod/readback/known close; no copy operation is assumed complete from its return status alone."
+  },
+  "finite_negative_branches": [
+    {
+      "id": "G12-N01",
+      "result": "Reject before dependent operation; no execution or expected reference.",
+      "trigger": "launch or handoff source selection None/missing/foreign"
+    },
+    {
+      "id": "G12-N02",
+      "result": "Reject before scientific entry; unchanged accepted producer remains intact.",
+      "trigger": "Root/provider/adapter/producer/authority/stage/source/reference pin or mode mismatch, historical 2a941 authority"
+    },
+    {
+      "id": "G12-N03",
+      "result": "Adapter refuses; never silently removes an unrecognized option.",
+      "trigger": "wrong guard tail, --finite-only, -O, wrong lanes, supplied anchor or alternate producer CLI"
+    },
+    {
+      "id": "G12-N04",
+      "result": "Cold/adapter source entry refuses; shapes/status do not establish provenance.",
+      "trigger": "fake or restored Root/API/capability, copied function namespace, foreign initial source owner"
+    },
+    {
+      "id": "G12-N05",
+      "result": "No launch or no publication; preserve failed attempt; no retry.",
+      "trigger": "budget/phase/lease contention, prior label output, orphan prior attempt, inadequate full tail"
+    },
+    {
+      "id": "G12-N06",
+      "result": "Bounded known cleanup and raw evidence; no canonical success receipt invented.",
+      "trigger": "Popen raises or no retained Popen/generation, nonzero return, timeout/RSS/output cap, parent STOP"
+    },
+    {
+      "id": "G12-N07",
+      "result": "Reject pair sealing; outer status cannot override guard predicates.",
+      "trigger": "guard return0 but receipt absent/nonzero/termination/STOP/stderr/input drift/log drift/usage incomplete"
+    },
+    {
+      "id": "G12-N08",
+      "result": "Cleanup/custody UNKNOWN; no manifest selection or universal closure claim.",
+      "trigger": "unknown/denied process observation, remaining descendant/group/child, unknown stream/FD close, namespace owner loss"
+    },
+    {
+      "id": "G12-N09",
+      "result": "Preserve first primary and ordered secondaries; reject successful completion even if files exist.",
+      "trigger": "producer primary/secondary/restoration/cold2 failure, adapter ownership/restoration failure"
+    },
+    {
+      "id": "G12-N10",
+      "result": "Retain partial originals, no manifest or common-only fallback.",
+      "trigger": "only common export, missing diagnostic, partial diagnostic, missing common"
+    },
+    {
+      "id": "G12-N11",
+      "result": "Reject complete-byte custody; no stable/read-only shortcut.",
+      "trigger": "symlink/hardlink/foreign namespace, short read, changed size/mode/identity or incomplete hash"
+    },
+    {
+      "id": "G12-N12",
+      "result": "Reject without target science decoding or repair.",
+      "trigger": "duplicate JSON key, NaN/Infinity, bool-as-int, unknown schema/field/tag, bad hex, finite decoder limit exceeded"
+    },
+    {
+      "id": "G12-N13",
+      "result": "Reject; matching self-reported completion strings are irrelevant.",
+      "trigger": "producer/role/source/workload mismatch across pair/manifest, payload hash or inner-prefix mismatch"
+    },
+    {
+      "id": "G12-N14",
+      "result": "Preserve partial retained files with no seal; final manifest bytes alone do not qualify.",
+      "trigger": "copy/fsync/chmod/close/readback/final alias check failure or unexpected child after first check"
+    },
+    {
+      "id": "G12-N15",
+      "result": "Manifest stays unselected; handoff None; no completed invoice or custody approval.",
+      "trigger": "manifest written but enclosing final cost/close/publication tail fails or lacks actual authority"
+    },
+    {
+      "id": "G12-N16",
+      "result": "Reject; only later immutable source literal selects actual parent custody.",
+      "trigger": "candidate source supplies success bool, result registry or arbitrary manifest path at runtime"
+    },
+    {
+      "id": "G12-N17",
+      "result": "No expected literal/count/common is exposed.",
+      "trigger": "cold recheck detects manifest/common/diagnostic/publication mutation or Root/reader ownership drift"
+    },
+    {
+      "id": "G12-N18",
+      "result": "Out of scope; original separate controls remain required.",
+      "trigger": "attempt to use G12 diagnostics as P02 standard-workload/native/full-positive/performance approval"
+    }
+  ],
+  "full_cost_invoice": {
+    "accounting_rule": "Measure whole parent entry through final close/retention/publication with monotonic wall and self+children CPU, preserve original GNU time/guard raw measurements and peak/lifetime memory observations, and separately meter later cold-consumer work. Nested producer phase timings are not added as if disjoint. No reclassification of profile as performance sample.",
+    "bounds": "Preserve first failure and every observed cap; never silently truncate complete files to fit, reroll a failure, hide secondary cost or drop diagnostic retention.",
+    "execution_gate": "Actual later run must have a separately authorized exact source-owned budget/phase covering entire parent/reference/custody/consumer/publication costs. Original guard phase/lock/limit checks remain unchanged. Future numerical caps/reservations are not invented here. Lack of runtime authority does not block construction/review of this closed source design.",
+    "no_budget_or_funding_created": true,
+    "required_categories": [
+      "source/stage/plan/authentication and dependency preflight",
+      "parent invocation setup and known lease operations",
+      "adapter bootstrap source read/hash/compile/exec and argv/module alias custody/restoration",
+      "entire independent uncached reference including fresh copies/engine imports/original CLI/trace capture/original checks/finally/restoration/cold2",
+      "guard launch/time/monitoring/STOP/final original source inventory/usage/raw-log hashing/receipt",
+      "actual parent wait and known descendant/group/FD cleanup",
+      "canonical receipt and START joins plus all complete raw evidence retention",
+      "both exports full reads/hashes/JSON/schema/payload decode/crosslinks and repeated pair checks",
+      "new parent copies/write/fsync/chmod/close/directory sync/readback",
+      "manifest schema/write/hash/fsync/close/readback and source-selection publication tail",
+      "parent failure/secondary-error retention and necessary cleanup after deadline",
+      "cold consumer complete manifest/pair/publication read/hash/parse/decode/recheck and all retained alias lifetimes"
+    ],
+    "tail_rule": "Manifest stores preseal costs and exact billing boundaries. After manifest write/readback and actual lease close, a fixed source-owned final-publication record joins manifest hash and complete operation costs through its own pre-write point. A separately retained authoritative enclosing completion charge covers final-record write/readback/close and final source-selection publication. The enclosing receipt cannot be replaced by a self-reported completed flag. If no actual authorized enclosing source-owned accounting path covers that last tail, selection remains None; no infinite self-accounting recursion or free tail claim."
+  },
+  "known_process_and_namespace_contract": {
+    "failure_limit": "If failed launch/guard leaves an unseen or unadopted descendant outside observed known ownership, source records cleanup UNKNOWN and never seals. It must not claim a universal cleanup result from inherited process-group kill alone.",
+    "leaf_basis": "Current supervisor proc/census/generation/children_now L114-146 and OwnedDomain L205-309; use only this finite G12 observation/cleanup leaf, not bind_active_run_root or current controller. No native subreaper installation is required for successful fixed wait chain under stated premise; no claim about arbitrary orphaning/hostile fork.",
+    "mandatory_leaf_differences": "PermissionError, malformed/oversized process metadata, failed descriptor close, unknown observation, generation ambiguity or unsupported pidfd operation is a STOP/unknown result; never interpret it as empty. Never signal parent or a PID without retained generation/pidfd. Initial parent child set and thread set must be empty/single-task; no concurrent children may be created.",
+    "namespace": "Original guard run folder and producer science directory are fixed from the selected label, were absent before launch, and are retained by identity after join. Parent lease and source-selected role restrictions exclude another cooperating writer. Directory FD chain checks reject symlink components/rename/substitution. Symlink/hardlink/foreign names and unexpected output alias ownership block pair custody.",
+    "parent_domain": "Fresh R/runtime/g12-reference-parent-custody-v1/<label> is created only after known writers have completed. It is outside R/runtime/runs/<label>/science and outside all staged/frozen roots. No retained-directory FD was available to children. Directory 0700 while writing, 0500 after seal; files 0444. Same-UID/chmod resistance to hostile outsiders is not claimed.",
+    "selected_successful_chain": "New parent -> actual original guard -> /usr/bin/time -> actual Root -> adapter -> profile/no-anchor producer in the same Root process. Producer candidate-only build_native and native control branches are unreachable (producer L201-218). Original CLI uses same-process runpy at L257-265.",
+    "source_only_now": "No process inspection, Popen, child cleanup, lock acquisition, source loading, stage mount or runtime directory creation was performed.",
+    "trusted_closed_role_premise": "Selected fixed scientific sources, adapter and ordinary profile branch do not fork/spawn threads, daemonize, pass writable descriptors to outsiders, or enlist external writers. Trusted OS/loader/interpreter/stdlib and cooperating same-user parent launch domain exclude unrelated writer interference. This is an explicit finite source/operating premise, not established merely by a clean /proc snapshot."
+  },
+  "launch_selection_schema": {
+    "accounting_selection": "Exact source pin and fixed entry of the separately authorized existing enclosing accounting owner and its original body/tail allocation. This design never substitutes a caller callback or serialized funding boolean. No actual execution source selection exists in this packet.",
+    "constants": {
+      "job": "g12-reference",
+      "schema": "g12-one-reference-launch-selection-v1",
+      "stage": "g12-reference-custody-v1"
+    },
+    "current_value": null,
+    "directory_paths": "Fixed R/runtime/g12-reference-parent-observation-v1/<label> for prelaunch logs and R/runtime/g12-reference-parent-custody-v1/<label> for retained evidence after cleanup. The latter must not exist until P07.",
+    "exact_future_fields": [
+      "schema",
+      "stage",
+      "job",
+      "label",
+      "stage_sha256",
+      "jobs_sha256",
+      "source_pins",
+      "phase_pin",
+      "accounting_selection",
+      "body_deadline_ns",
+      "retention_tail_allowance_ns",
+      "parent_observation_directory",
+      "parent_retained_directory"
+    ],
+    "label": "Exact source-selected nonempty simple ASCII label accepted by unchanged guard, no runtime choice. Full paths are derived once from that source label; existence rejects, and only one Popen attempt is permitted.",
+    "numeric_types": "body_deadline_ns and retention_tail_allowance_ns exact positive int, latter no larger than genuine existing paid allowance. No values granted here. Failed source/owner/budget gate leaves selection closed.",
+    "phase_pin": "Exact known original EXECUTION-PHASE.json SourcePin and original budget semantics; no phase read is performed during this design.",
+    "source_literal_name": "G12_REFERENCE_LAUNCH_SELECTION",
+    "source_pins": "Exact selected sources required by manifest schema, with complete staged closure supplied by STAGE.json. Parent expected digest is supplied by authentic external source selection; parent source does not contain its own digest."
+  },
+  "line_function_evidence": [
+    {
+      "functions": [
+        "require_trusted_launch",
+        "main"
+      ],
+      "lines": [
+        [
+          25,
+          54
+        ],
+        [
+          166,
+          254
+        ],
+        [
+          259,
+          310
+        ]
+      ],
+      "source": "original_guard",
+      "supports": "Exact guard contract, own locks/phase/original limits, START/wait/receipt join and fixed argv tail."
+    },
+    {
+      "functions": [
+        "_check_root",
+        "_hash_regular",
+        "admit_provider",
+        "capture_api",
+        "_entry"
+      ],
+      "lines": [
+        [
+          447,
+          506
+        ],
+        [
+          577,
+          624
+        ],
+        [
+          772,
+          833
+        ]
+      ],
+      "source": "root",
+      "supports": "Actual Root source identity/capability/currentness and injected bootstrap execution; hashing limitation explicitly supplemented."
+    },
+    {
+      "functions": [
+        "_profile_files",
+        "_audit_files",
+        "preflight_runtime"
+      ],
+      "lines": [
+        [
+          276,
+          294
+        ],
+        [
+          452,
+          458
+        ]
+      ],
+      "source": "provider",
+      "supports": "Unchanged exact runtime-profile and header/file audit before driver entry."
+    },
+    {
+      "functions": [
+        "main",
+        "_g12_common_outputs",
+        "_g12_diagnostic_snapshot",
+        "_g12_restore_and_check",
+        "_g12_export_reference",
+        "_g12_reference_entry",
+        "_g12_reference_bootstrap"
+      ],
+      "lines": [
+        [
+          136,
+          174
+        ],
+        [
+          178,
+          218
+        ],
+        [
+          257,
+          265
+        ],
+        [
+          356,
+          448
+        ],
+        [
+          858,
+          874
+        ],
+        [
+          878,
+          892
+        ],
+        [
+          1046,
+          1150
+        ],
+        [
+          1153,
+          1226
+        ]
+      ],
+      "source": "reference_producer",
+      "supports": "Accepted original reference bytes, mode/layout, known profile call chain, exact schemas, joint export and actual initial bootstrap premise."
+    },
+    {
+      "functions": [
+        "ComplementTrace.receipt"
+      ],
+      "lines": [
+        [
+          212,
+          254
+        ]
+      ],
+      "source": "native_backend_source",
+      "supports": "Exact diagnostic cumulative complement receipt schema only; no native body was run."
+    },
+    {
+      "functions": [
+        "stable_file",
+        "proc",
+        "census",
+        "generation",
+        "children_now",
+        "OwnedDomain",
+        "run_root"
+      ],
+      "lines": [
+        [
+          63,
+          91
+        ],
+        [
+          114,
+          146
+        ],
+        [
+          205,
+          309
+        ],
+        [
+          688,
+          792
+        ]
+      ],
+      "source": "current_supervisor",
+      "supports": "Finite actual Popen/generation/known-cleanup/complete-byte custody pattern only, no current funded runner adoption."
+    },
+    {
+      "functions": [
+        "ActualRootResults",
+        "safe_custody_state"
+      ],
+      "lines": [
+        [
+          731,
+          759
+        ],
+        [
+          875,
+          898
+        ]
+      ],
+      "source": "current_controller",
+      "supports": "Retain actual result/Popen-owner path; serialization never reconstructs live ownership."
+    }
+  ],
+  "new_stage_design": {
+    "created_now": false,
+    "future_digest_rule": "New adapter/stage/parent source digests must be computed from independently reviewed bytes at source selection; they cannot be fake hashes or runtime setter inputs. No self-referential source/plan hash cycle.",
+    "job_name": "g12-reference",
+    "job_record": {
+      "bootstrap": {
+        "driver": "integration/g12_reference_adapter_v1.py",
+        "provider": "integration/probe_binding_v3.py"
+      },
+      "lanes": "g12-reference",
+      "optimized": false
+    },
+    "job_rejections": [
+      "entry present",
+      "finite_only present or true",
+      "optimized other than exact False",
+      "additional jobs or bootstrap keys",
+      "different lanes",
+      "unknown argv tail"
+    ],
+    "manifest_rule": "New immutable STAGE.json and JOBS.json enumerate exactly the staged closure including adapter, Root, provider, baseline producer/source/reference and correct authority; runner_sha256 is unchanged original guard. No existing stage is edited. Root/provider runtime file pins remain unchanged.",
+    "mounts": {
+      "areas/cache-validity/cold_authority_v7.py": {
+        "historical_2a941_mount_rejected": true,
+        "mode": "0444",
+        "sha256": "f279ab86fc17c6a517b035f19d56863919cbd8304de4e7d5332457c6159aec10"
+      },
+      "baseline/SOURCE-PINS.json": {
+        "mode": "0444",
+        "sha256": "88bba3caf5975f30fa7abceaea9454110cf3b069233e8241a2ca13d1dff171a7"
+      },
+      "baseline/engine/": {
+        "constraint": "Exact original seven ENGINE_PINS entries at producer L33-41, original modes; no source modification."
+      },
+      "baseline/frozen/": {
+        "constraint": "Exact 32-file SOURCE-PINS closure, original modes, no symlinks; original producer inventory remains authoritative."
+      },
+      "baseline/full_driver.py": {
+        "bytes": 70246,
+        "mode": "0444",
+        "sha256": "a346025d5b6e2b26246521c6af6292643a4c2c3286b33ff3996dcf051cd6be26",
+        "source": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/reference-producer-v2/g12_reference_driver_v2.py"
+      },
+      "baseline/reference/certificates/complex-network.json": {
+        "mode": "0444",
+        "sha256": "1f763d95c7ff163aa71d13cd82784f16665be8afb21f75e76941e2119562098f"
+      },
+      "integration/RUNTIME-PROFILE.json": {
+        "mode": "0444",
+        "sha256": "ad0ec2aea01b83f97bdeafd9e9208360127fee870d024d353879b5ed99237109",
+        "source": "Exact file named by provider._profile_files at historical stage integration; preserve provider runtime/header preflight."
+      },
+      "integration/full_driver.py": {
+        "mode": "0444",
+        "sha256": "f5a2d33f2b4d3651f214156a0e7094c2bb516ce2d5ab7698d18c11f98f35dee0",
+        "source": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/integration/full_driver.py"
+      },
+      "integration/g12_reference_adapter_v1.py": {
+        "mode": "0444",
+        "sha256": "FUTURE_REVIEWED_ADAPTER_SOURCE_DIGEST"
+      },
+      "integration/probe_binding_v3.py": {
+        "mode": "0444",
+        "sha256": "9cbb7368f89e71d1e6cc46db5dc77efed3e03ed2a801c98c88fe316e4d9f3ef2",
+        "source": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/integration/probe_binding_v3.py"
+      }
+    },
+    "shape_reason": "Producer.__file__ at stage/baseline/full_driver.py makes HERE baseline and its rsplit(/,2)[0] authority reference resolve to stage/areas/cache-validity/cold_authority_v7.py exactly.",
+    "stage_name": "g12-reference-custody-v1",
+    "stage_root": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/g12-reference-custody-v1"
+  },
+  "original_guard_acceptance_predicate": {
+    "START_exact_fields": [
+      "command",
+      "parent_launch",
+      "stage_sha256",
+      "runner_sha256",
+      "fractions_sha256",
+      "budget_phase_sha256",
+      "spent_before_seconds",
+      "phase_cap_seconds",
+      "job",
+      "label"
+    ],
+    "joins": "Receipt shared START fields are type-exact equal to exact START bytes and the parent prelaunch selection. START command is exactly the Root/provider/adapter argv the unchanged guard constructs; producer argv is exactly the adapter source derivation. Run label/job/stage SHA/guard SHA/Root/provider/adapter/producer/authority/reference/frozen/engine pins all bind one invocation. Parent stdout echoes receipt from guard; it is checked for consistency but never substitutes for the canonical receipt.",
+    "limits": "Original timeout 180 seconds, aggregate existing phase 600 or 2400 only, sampled process group RSS <=1GiB, runner lifetime RSS <=1GiB, usage metadata <=16KiB, no source/log drift. Preserve original current spent/cap checks; no new cap is granted by this document.",
+    "no_reconstruction": "No replayed caller dictionary, diagnostic completion sentence, receipt status alone, file existence, helper callback or future desired digest can supply the genuine parent invocation owner.",
+    "outer": "Actual private Popen exists, exact guard source launch, actual returncode int==0, original primary absent, no parent STOP, complete known cleanup, known closed outer logs, unchanged initial source/namespace/lease bindings.",
+    "raw_log_checks": "Recompute complete stdout/stderr bytes and SHA256 from retained files, check final sizes and identities, original 2MiB per stream, empty stderr, and complete outer raw logs; outer stderr must be empty. Original guard and producer diagnostics remain raw retained evidence.",
+    "receipt_exact_fields": [
+      "command",
+      "parent_launch",
+      "stage_sha256",
+      "runner_sha256",
+      "fractions_sha256",
+      "budget_phase_sha256",
+      "spent_before_seconds",
+      "phase_cap_seconds",
+      "job",
+      "label",
+      "exit",
+      "wall_seconds",
+      "usage",
+      "termination",
+      "sampled_process_group_rss_bytes",
+      "source_bytes_and_modes_unchanged",
+      "stdout_sha256",
+      "stdout_bytes",
+      "stderr_sha256",
+      "stderr_bytes",
+      "stdout_final_bytes",
+      "stderr_final_bytes",
+      "retained_log_bytes_stable",
+      "output_cap_observed_at",
+      "log_read_chunk_bytes",
+      "runner_wall_seconds",
+      "runner_user_seconds",
+      "runner_system_seconds",
+      "runner_lifetime_max_rss_kib",
+      "python",
+      "platform",
+      "status"
+    ],
+    "required_values": {
+      "exit": 0,
+      "log_read_chunk_bytes": 65536,
+      "output_cap_observed_at": null,
+      "retained_log_bytes_stable": true,
+      "source_bytes_and_modes_unchanged": true,
+      "status": "PASS",
+      "stderr_bytes": 0,
+      "stderr_final_bytes": 0,
+      "termination": null
+    },
+    "usage": "Retain original usage.json raw bytes; require exact expected GNU time record user_seconds/system_seconds/kernel_max_rss_kib/exit with finite nonnegative values and exact exit int zero for complete accounting. Missing/malformed/oversized usage is nonqualifying, not a fabricated zero."
+  },
+  "owner": "/root/cache_g12_custody_design",
+  "parent_functions_in_required_order": [
+    {
+      "contract": "Fresh trusted parent entry, no public success/result/manifest arguments. G12_REFERENCE_LAUNCH_SELECTION is None in source-only derivative. A later independently selected exact launch literal is required before any runtime operation. Construct one private invocation record; caller cannot deserialize/mint it or provide completion fields.",
+      "function": "run_g12_reference() -> source-owned sealed-result or raised original failure",
+      "id": "P01"
+    },
+    {
+      "contract": "Verify exact source selection, initial interpreter/stdlib/native TCB and clean launch, stage/plan pins, fixed argv, exact existing original execution-phase pin and authorized full invoice. Reject prior output/evidence/custody paths. Hold the actual separate parent-queue lease through finish; preserve its FD/device/inode/known mode and currentness. Original guard retains its own science.lock; never pre-lock that same guard lock and deadlock it. No wait behind contention or retry.",
+      "function": "_g12_preflight_and_claim()",
+      "id": "P02"
+    },
+    {
+      "contract": "Retain actual subprocess.Popen of [/usr/bin/python3.12,-S,-s,-P,-B,R/run_guarded_v3.py,g12-reference-custody-v1,g12-reference,label], cwd R, exact clean ENV, close_fds=True, start_new_session=True. Open exclusive outer raw log files in parent observation directory and retain actual descriptors. Set attempted state before Popen; at most one attempt. Capture actual PID/start ticks/PGID/SID before poll/wait and retain that same Popen object.",
+      "function": "_g12_launch_once()",
+      "id": "P03"
+    },
+    {
+      "contract": "Own and monitor the actual selected guard process/known descendants using the scoped generation/pidfd leaf; retain original wall/RSS/raw-log limits plus selected complete-body deadline and cleanup reserve. Join actual Popen. Require actual returncode exact int zero, no parent STOP/exception, no current known descendant/group/child, all owned pidfd/outer-log descriptors known closed, and a complete observation. A diagnostic status string is not this predicate.",
+      "function": "_g12_observe_wait_and_close()",
+      "id": "P04"
+    },
+    {
+      "contract": "Under the still-held lease and known namespace, complete-read original START.json, receipt.json, stdout.txt, stderr.txt, usage.json plus parent LAUNCH and raw outer logs. Require exact run/stage/job/argv/source/fractions/phase bindings and all original success/resource/custody predicates below. Preserve every raw file; missing receipt stays missing. No receipt reconstructed from outer stdout.",
+      "function": "_g12_join_original_guard_evidence()",
+      "id": "P05"
+    },
+    {
+      "contract": "Only after P04/P05, open exactly the two named exports relative to the retained owned science-directory descriptor, perform bounded complete identity-stable reads, validate both primitive envelopes and all cross-links, then repeat both file snapshots together. Missing/partial diagnostic makes otherwise complete common nonqualifying.",
+      "function": "_g12_collect_complete_pair()",
+      "id": "P06"
+    },
+    {
+      "contract": "Create fresh parent retained directory after known cleanup; exclusive-create byte-identical copies of both complete exports and exact launch/guard/raw evidence. Complete writes, fsync, chmod/fchmod 0444, known close, directory sync and complete readback. Keep original identities and retained identities separately; do not alter child original bytes/modes. Any failure retains partial data with no seal.",
+      "function": "_g12_retain_parent_pair_and_evidence()",
+      "id": "P07"
+    },
+    {
+      "contract": "Nested source-private closure, no caller-supplied success flag or externally supplied completion object. Recheck same actual Popen/lease/namespace/no children/known IO, original and retained pair hashes and source closure; emit fixed manifest only from retained actual observations. Manifest exclusive create, fsync, 0444, known close, directory sync and exact readback. After final tail and lease-close success, return immutable source-owned candidate pin for later separate source adoption. Until then no output is qualified.",
+      "function": "_g12_seal_once()",
+      "id": "P08"
+    },
+    {
+      "contract": "Always bounded known cleanup and necessary final retention, charging costs. Preserve primary and ordering, do not overwrite partial/foreign files or mint a PASS/manifest substitute. Incomplete cleanup/unknown IO/failed final close remains open and blocks publication; no reroll. A fully written manifest before a failed final tail is still unselected and nonqualifying.",
+      "function": "_g12_finish_failure(primary, ordered_secondaries)",
+      "id": "P09"
+    }
+  ],
+  "parent_manifest_schema": {
+    "FileRecord": "Exact {path,sha256,bytes,identity,nlink}; path absolute canonical string; identity six exact fields dev,ino,full_st_mode,size,mtime_ns,ctime_ns; nlink==1. bytes==identity.size. sha256 lowercase64. No stable=True substitutes for these checked values.",
+    "ProcessRecord": "Exact object {pid,ppid,pgid,sid,start_ticks,state,rss_bytes}; pid/ppid/pgid/sid/start_ticks/rss_bytes exact nonnegative ints (pid>0); state exact source-observed bounded process-state string. Owned identity is (pid,start_ticks), never PID alone. Group exact {pgid,sid}. DirectoryIdentity exact {dev,ino,full_st_mode,mtime_ns,ctime_ns}; mutation checks account only for explicitly owned new-file creates and are resealed afterward.",
+    "SourcePin": "Exact object {path:absolute canonical str,sha256:lowercase64,bytes:exact nonnegative int,mode:four-digit octal string}; parent source identity is authenticated by the external trusted source selection, never its own reported digest. engine is exact producer ENGINE_PINS mapping; cleanup_leaf_origin pins the inspected supervisor source and its fixed extraction/review identity.",
+    "accounting": "Exact source-fixed boundaries and raw references described by full_cost_invoice below; every actual time/count field finite primitive and explicit present or nonqualifying, no fabricated zero. Post-manifest publication tail is in an independently retained final source-selection/publication record, because manifest cannot hash its own final close and publication costs.",
+    "accounting_exact_fields": [
+      "clock",
+      "parent_entry_ns",
+      "preseal_end_ns",
+      "parent_preseal_wall_ns",
+      "parent_self_user_seconds",
+      "parent_self_system_seconds",
+      "parent_children_user_seconds",
+      "parent_children_system_seconds",
+      "parent_lifetime_max_rss_kib",
+      "guard_usage",
+      "guard_runner_wall_seconds",
+      "categories",
+      "complete_tail_accounting_required",
+      "enclosing_accounting_source_pin"
+    ],
+    "accounting_values": "clock is monotonic_ns; exact clock endpoints and wall_ns exact nonnegative ints with end>=begin and difference equality; resource values finite nonnegative exact numbers, no bool. categories is the exact ordered full_cost_invoice category list. guard_usage and guard_runner_wall_seconds join canonical actual guard receipt. complete_tail_accounting_required is true. enclosing_accounting_source_pin matches authentic source selection and gives no grant on its own.",
+    "cleanup_exact_fields": [
+      "operating_premises",
+      "owned_generations",
+      "observed_groups",
+      "remaining",
+      "current_children",
+      "known_streams_closed",
+      "known_pidfds_closed",
+      "io_unknown",
+      "lease_identity",
+      "science_directory_identity",
+      "observations_record"
+    ],
+    "cleanup_values": "remaining and current_children exactly []; known closes true; io_unknown false; positive ownership records from actual live source observation. operating_premises are exact bounded text/constants from this design, not a claim of all-OS writer proof.",
+    "custody_exact_fields": [
+      "retained_directory",
+      "retained_directory_identity",
+      "retained_file_mode",
+      "created_after_known_cleanup",
+      "source_selection_required",
+      "known_close_policy"
+    ],
+    "custody_values": "New parent retained directory, full identity, file_mode0444, created_after_known_cleanup true, source_selection_required true; any unknown close blocks. No live capability is serialized.",
+    "exact_top_level_fields": [
+      "schema",
+      "invocation",
+      "selected_sources",
+      "workload",
+      "launch",
+      "terminal",
+      "guard",
+      "cleanup",
+      "pair",
+      "retained_evidence",
+      "custody",
+      "accounting",
+      "scope"
+    ],
+    "guard_content": "start/receipt/stdout/stderr/usage are retained FileRecords. start_fields and receipt_fields reproduce the validated exact original objects from raw files; their encodings/hashes join the retained raw pins. Preserve original raw bytes, including formatting.",
+    "guard_exact_fields": [
+      "start",
+      "receipt",
+      "start_fields",
+      "receipt_fields",
+      "stdout",
+      "stderr",
+      "usage"
+    ],
+    "immutability_and_cycle_rule": "Do not place manifest hash inside itself. Only after complete known writes/closes/readback, final tail and lease close may later separately authorized source selection pin its exact path/hash/size/identity plus parent source pin. Manifest or pair files existing without that selection remain nonqualifying.",
+    "invocation_exact_fields": [
+      "stage",
+      "job",
+      "label",
+      "stage_sha256",
+      "jobs_sha256",
+      "launch_selection_sha256"
+    ],
+    "launch_exact_fields": [
+      "parent_pid",
+      "parent_start_ticks",
+      "guard_pid",
+      "guard_start_ticks",
+      "guard_pgid",
+      "guard_sid",
+      "parent_guard_argv",
+      "guard_root_argv",
+      "adapter_producer_argv",
+      "cwd",
+      "environment",
+      "flags",
+      "launch_record"
+    ],
+    "launch_record": "Complete retained LAUNCH.json FileRecord; actual parent prelaunch plan and captured generation are distinct time-ordered records if needed. No PID is itself authority.",
+    "pair_exact_fields": [
+      "common",
+      "diagnostics",
+      "common_payload_sha256"
+    ],
+    "pair_value": "common and diagnostics each exact {original:FileRecord,retained:FileRecord}; both raw file names fixed; both complete. Their original and retained full bytes/SHA/size match; retained mode0444 and known parent directory identity. Pair payload digest joins common and diagnostic schema data.",
+    "retained_evidence": "Exact fixed mapping of original guard START, receipt, stdout, stderr, usage; parent launch, outer stdout, outer stderr, owned-observation and accounting records. Every member complete and immutable; no caller-chosen file list.",
+    "retained_evidence_exact_keys": [
+      "guard_START",
+      "guard_receipt",
+      "guard_stdout",
+      "guard_stderr",
+      "guard_usage",
+      "parent_launch",
+      "parent_outer_stdout",
+      "parent_outer_stderr",
+      "parent_owned_observations",
+      "parent_preseal_accounting"
+    ],
+    "schema_literal": "g12-parent-two-export-custody-v1",
+    "scope": "Fixed source-data custody only. No G12/P02/full-positive/native/performance/scientific admission; no universal writers theorem.",
+    "selected_sources_exact_fields": [
+      "parent",
+      "guard",
+      "root",
+      "provider",
+      "adapter",
+      "producer",
+      "authority",
+      "source_pins",
+      "reference",
+      "engine",
+      "runtime_profile",
+      "cleanup_leaf_origin"
+    ],
+    "terminal_exact_fields": [
+      "actual_popen_returncode",
+      "wait_completed",
+      "parent_stop",
+      "primary_error",
+      "secondary_errors",
+      "guard_receipt_missing"
+    ],
+    "terminal_values": "actual_popen_returncode exact int 0; wait_completed true; parent_stop/primary_error None; secondary_errors empty list; guard_receipt_missing false. These are emitted from the retained live Popen/owner closure, never accepted from a caller.",
+    "workload_exact_fields": [
+      "role",
+      "h",
+      "extra_target",
+      "mode",
+      "anchor",
+      "optimize",
+      "original_scientific_pins"
+    ],
+    "workload_values": {
+      "anchor": null,
+      "extra_target": [
+        0,
+        2,
+        1
+      ],
+      "h": 25,
+      "mode": "profile",
+      "optimize": 0,
+      "original_scientific_pins": [
+        "d623617f7c5cb3189580883a8ab30c0bd3832688ae3f1f0c1f881bbbbff8e0c1",
+        "0da395e67ac04fa213494e71012c1b19b544596d34cdce5a3b172b1fb6af5f1b",
+        "88bba3caf5975f30fa7abceaea9454110cf3b069233e8241a2ca13d1dff171a7",
+        "adc7f1241b42e322a6451854ab7e4b4c146bf78a"
+      ],
+      "role": "independent-original-uncached"
+    }
+  },
+  "publication_record_schema": {
+    "exact_fields": [
+      "schema",
+      "parent_source_sha256",
+      "launch_selection_sha256",
+      "manifest_path",
+      "manifest_sha256",
+      "manifest_bytes",
+      "manifest_identity",
+      "retained_pair_sha256",
+      "final_pair_recheck_complete",
+      "known_lease_close_completed",
+      "primary_error",
+      "secondary_errors",
+      "measured_through_ns",
+      "actual_costs_through_ns",
+      "enclosing_accounting_source_pin",
+      "enclosing_tail_join_required"
+    ],
+    "schema_literal": "g12-parent-custody-publication-v1",
+    "tail": "enclosing_tail_join_required is true and pins the authentic enclosing source whose actual completion charge covers final-record write/close/readback and later source-selection publication. The record alone cannot supply that authority. Later handoff adoption must join this real enclosing completion; missing/failed tail leaves None. No universal self-accounting theorem or invented funding.",
+    "values": "Manifest pin is computed only after its complete write/close/readback. retained_pair_sha256 is exact {common,diagnostics} matching manifest; final pair recheck and known lease close are actual parent-owned observations. primary_error None and secondaries [] only on success. measured_through_ns identifies exactly the last included clock point; actual_costs_through_ns contains exact wall/self/children CPU and finite memory values through that point, never a claim about future own-write cost."
+  },
+  "review_gate": {
+    "not_requested": "No runtime, target import, tests, helpers, compiler, native, decoder, science, locks, process inspection, network, historical audit or implementation.",
+    "request": "Independent bounded source-design review of exact frozen DESIGN-v1.json and SOURCE-PINS-v1.json before any implementation; review whether every branch is operational under the stated finite TCB and whether any concrete missing source predicate remains.",
+    "review_targets": [
+      "adapter actual Root/bootstrap/source/argv compatibility with accepted producer unchanged",
+      "actual Popen+original receipt+complete pair single-owner join",
+      "known cleanup and source-owned namespace assumptions without universal proof inflation",
+      "exact strict manifest/pair/consumer schemas and closed source selection",
+      "immutable retention and final accounting/publication tail without self-report authority",
+      "original controls/scopes and full cost invoice preserved"
+    ]
+  },
+  "schema": "g12-fixed-reference-custody-source-design-v1",
+  "scope": {
+    "accepted_producer_bytes_unchanged": "a346025d5b6e2b26246521c6af6292643a4c2c3286b33ff3996dcf051cd6be26",
+    "fixed_exports": [
+      "g12-reference.common.json",
+      "g12-reference.diagnostics.json"
+    ],
+    "new_source_leaves_after_review": [
+      "integration/g12_reference_adapter_v1.py",
+      "g12_reference_parent_v1.py",
+      "g12_reference_cold_consumer_v1.py"
+    ],
+    "no_new_authorization": "No new budget, reservation, native qualification, performance, science, PROFILE_ANCHOR_PASS, FULL_PASS, G12 approval or broader-goal status change.",
+    "no_reassignment": [
+      "group01",
+      "failure_variants",
+      "all212",
+      "F4",
+      "M",
+      "P02"
+    ],
+    "one_fixed_role": "independent-original-uncached G12; h=25; extra_target=(0,2,1); normal optimize0; original profile/no-anchor invocation",
+    "preserve": "Every original failure, partial export, raw error, source pin and historical frozen file remains intact. No repair/reroll or reconstruction of absent canonical receipts.",
+    "separate_P02": "P02 retains its own standard-workload independent double-reference/rank/complement/native equality obligations. G12 diagnostics never satisfy them."
+  },
+  "source_map": {
+    "finding_preserved": "No exact current G12 success plus complete two-export custody API was established in the bounded inspected closure.",
+    "freeze_sha256": "982b0370a6b9ed17c126f3066d3e7aed5d3abbda9c26f65ff42c315e8c3c88ba",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/reference-custody-map/REPORT-v1.json",
+    "sha256": "014f127a932b0c0f7e931fce4efd57372b93fc19c976df350601b829a45cda92"
+  },
+  "source_pin_record": {
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody/SOURCE-PINS-v1.json",
+    "sha256": "e586cb66935781f85668822ba8f118353652e223d9aa57835d206c714cc2c702"
+  },
+  "status": "FROZEN_SOURCE_DESIGN_FOR_INDEPENDENT_REVIEW_BEFORE_IMPLEMENTATION",
+  "stop": "Freeze exact design and wait for independent review. No implementation/adoption/execution in this assignment.",
+  "two_export_schema_and_crosslinks": {
+    "common_constants": {
+      "authority_source_sha256": "f279ab86fc17c6a517b035f19d56863919cbd8304de4e7d5332457c6159aec10",
+      "extra_target": [
+        0,
+        2,
+        1
+      ],
+      "h": 25,
+      "literal_original_type": "bool",
+      "original_driver_sha256": "0d976d2eb6b845f20d4a3396591a806f966688b88693cd6a5f8a0c9e48925e36",
+      "original_scientific_pins": [
+        "d623617f7c5cb3189580883a8ab30c0bd3832688ae3f1f0c1f881bbbbff8e0c1",
+        "0da395e67ac04fa213494e71012c1b19b544596d34cdce5a3b172b1fb6af5f1b",
+        "88bba3caf5975f30fa7abceaea9454110cf3b069233e8241a2ca13d1dff171a7",
+        "adc7f1241b42e322a6451854ab7e4b4c146bf78a"
+      ],
+      "producer_role": "independent-original-uncached",
+      "schema": "g12-independent-original-reference-envelope-v1",
+      "scope": "Actual original N22 literal and P07 common remainder observations only; no original PROFILE_ANCHOR_PASS, FULL_PASS, native qualification or G12 approval.",
+      "selected_driver_sha256": "a346025d5b6e2b26246521c6af6292643a4c2c3286b33ff3996dcf051cd6be26"
+    },
+    "common_exact_fields": [
+      "schema",
+      "producer_role",
+      "selected_driver_sha256",
+      "original_driver_sha256",
+      "authority_source_sha256",
+      "original_scientific_pins",
+      "h",
+      "extra_target",
+      "literal_original_type",
+      "literal_original_value",
+      "remaining_original_case_count",
+      "common_payload_sha256",
+      "common_payload_hex",
+      "scope"
+    ],
+    "common_observed": "literal_original_value is actual exact bool, not required to be True and not prefilled. remaining_original_case_count is actual exact int>0, not an invented answer. common_payload_hex is lowercase even-length complete hex. Recompute SHA256(decoded complete bytes) == common_payload_sha256. All SHA fields lowercase64.",
+    "common_payload_prefix": "Tagged JSON exactly follows producer._g12_primitive/_g12_bytes. Validate primitive tag structure without constructing foreign objects. Top-level tuple has exactly ten members, whose first four are str(g12-original-remainder-common-v1), tuple(original_scientific_pins), int(25), tuple(int(0),int(2),int(1)); last six preserve original code bytes, role return, full return, certificate bytes, stdout and suffix-phase tuple. Last tuple is verify_role_frames,full_log_integer_bounds,original_upstream_verify_sources,original_serializable,complete_original_cli. Validate canonical primitive tags/lengths and exact prefix/workload; return opaque complete bytes. Do not recompute scientific answers or compare native/cache counters here.",
+    "complement_receipt_exact_fields": [
+      "calls",
+      "canonical_stream_bytes",
+      "sha256",
+      "schema"
+    ],
+    "complement_receipt_types": "calls and canonical_stream_bytes exact nonnegative int; sha256 lowercase64; schema exact v2-jsonl:call,us,vs,result(type=list+values or type=None); ordered exact integer vectors. Preserve cumulative receipts as cumulative, without digest subtraction.",
+    "diagnostic_constants": {
+      "complement_suffix_limit": "Only cumulative original start/end receipts; no digest subtraction or suffix-stream claim.",
+      "completion": "Exact source-owned intentional marker followed by original finally, exact observer restoration, both cold2 checks and original source/output custody.",
+      "producer_role": "independent-original-uncached",
+      "schema": "g12-independent-original-reference-diagnostics-v1",
+      "selected_driver_sha256": "a346025d5b6e2b26246521c6af6292643a4c2c3286b33ff3996dcf051cd6be26"
+    },
+    "diagnostic_exact_fields": [
+      "schema",
+      "producer_role",
+      "selected_driver_sha256",
+      "common_payload_sha256",
+      "prefix_end",
+      "suffix_start",
+      "cli_end",
+      "ordered_rank_suffix_hex",
+      "complement_suffix_limit",
+      "phases",
+      "completion"
+    ],
+    "diagnostic_snapshot_exact_fields": [
+      "rank_event_count",
+      "ordered_rank_events_hex",
+      "complement_receipt",
+      "native_binding",
+      "cache_binding"
+    ],
+    "diagnostic_snapshot_types": "prefix_end/suffix_start/cli_end are exact dicts of listed keys; rank_event_count exact nonnegative int; ordered_rank_events_hex canonical lowercase even-length hex of original primitive rank-event tuple; native_binding and cache_binding exactly None, never fabricated zero. Retain full bytes for all three snapshots.",
+    "mandatory_links": [
+      "common.selected_driver_sha256 == diagnostic.selected_driver_sha256 == independently selected producer source pin",
+      "common.producer_role == diagnostic.producer_role == fixed independent-original-uncached",
+      "diagnostic.common_payload_sha256 == common.common_payload_sha256 == recomputed complete decoded payload SHA",
+      "common source/workload prefix == independently selected original source/workload tuple",
+      "full file SHA/size/mode/identity of both original and retained files == manifest pair records; manifest source/workload/hash pins == independent consumer source selection"
+    ],
+    "no_selfreport_authority": "Schema/completion/scope strings are checked for expected data shape only. Actual successful launch+completion and custody are supplied by the source-owned parent path, not these strings.",
+    "phase_exact_names": [
+      "input_custody",
+      "engine_custody",
+      "fresh_root_copy",
+      "fresh_engine_copy",
+      "cold_engine_import",
+      "cold_complex_module_load",
+      "cold_certify_import",
+      "cold_prepare_import",
+      "side_construction",
+      "checks_initialization",
+      "compile_roles",
+      "verify_map",
+      "verify_labels",
+      "verify_role_frames",
+      "original_upstream_verify_sources",
+      "full_log_integer_bounds",
+      "original_serializable",
+      "complete_original_cli"
+    ],
+    "phase_record": "Each exact dict has calls exact int==1, wall_seconds and cpu_seconds_with_children finite nonnegative exact int/float (not bool). Preserve all phase bytes and treat times as nested diagnostics, never additive total costs.",
+    "rank_suffix": "ordered_rank_suffix_hex is complete canonical lowercase hex of tagged tuple(rank events); validate finite primitive shapes. It remains diagnostic; its presence does not establish standard-workload P02 equality.",
+    "tagged_primitive_grammar": {
+      "Fraction": "[Fraction-tag, canonical numerator decimal str, canonical positive denominator decimal str]; actual producer Fraction is normalized; validation may check normalization with bounded exact stdlib arithmetic under charged budget, but no new scientific result is computed.",
+      "None": "[None-tag] where tag text is None; list length1.",
+      "bool": "[bool-tag, exact JSON bool]; list length2.",
+      "bytes": "[bytes-tag, complete lowercase even-length hex str].",
+      "dict": "[dict-tag, exact list of exact length2 lists of recursively valid key/value tags]; do not collapse/reorder the list into a dict while checking common bytes.",
+      "float": "[float-tag, exact str in canonical float.hex() output domain]; preserve producer-supported tag representation without treating it as a JSON NaN/Infinity token.",
+      "general": "Every encoded value is an exact JSON list with one known tag and its exact arity. Preserve all ordering, including dict-pair order. Do not materialize scientific classes or call arbitrary equality/constructors.",
+      "int": "[int-tag, canonical decimal str] with optional leading minus, no leading zeros except 0, no plus or negative zero.",
+      "str": "[str-tag, exact str].",
+      "tuple_or_list": "[tuple-tag or list-tag, exact list of recursively valid tags]."
+    }
+  }
+}

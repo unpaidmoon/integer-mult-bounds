@@ -1,0 +1,2431 @@
+"""Separate V7 cold authority; SOURCE ONLY until the parent's execution gate.
+
+Raw-load before any candidate exposure. All later checking routines are private
+closures over the original primitive/stdlib token. They never dispatch through
+a mutable public validator before authenticating it. No native code lives here.
+"""
+import _ast
+import ast
+import builtins
+import copy
+import copyreg
+import genericpath
+import hashlib
+import io
+import ntpath
+import os
+import pathlib
+import posixpath
+import sys
+import types
+
+SOURCE_REVIEW_GATE = None
+EXECUTION_GATE = None
+NATIVE_GATE = None
+FULL_FUNDING_GATE = None
+ROOT_SHA256 = 'f5a2d33f2b4d3651f214156a0e7094c2bb516ce2d5ab7698d18c11f98f35dee0'
+PROVIDER_SHA256 = '9cbb7368f89e71d1e6cc46db5dc77efed3e03ed2a801c98c88fe316e4d9f3ef2'
+BACKEND_SHA256 = 'e473c38245c3668715b5a78dfe980b2fe3ed0d0c9b8c97c666fbae6ecf1fffd5'
+CACHE_PRODUCER_SHA256 = '133c55e269b354542f86a2a1099f48cff052293d06da310f98b7cb33cb85258f'
+_CAPTURE_ONCE = []
+
+
+def capture_authority(root, capability, api):
+    """Return load/invoke/check/runtime_guard/check_product/set_guard/source.
+
+    The trusted parent calls this entry once immediately after raw source exec.
+    A later backend instance derives provenance from this original token; it
+    cannot substitute a newly captured stdlib or a self-reported class record.
+    """
+    if _CAPTURE_ONCE:
+        raise RuntimeError('Cold authority can only be captured once before exposure')
+    _CAPTURE_ONCE.append(True)
+    type0, id0, len0, next0, tuple0, list0 = type, id, len, next, tuple, list
+    dict0, str0, bytes0, object0, int0 = dict, str, bytes, object, int
+    error0, base_error0, value_error0 = RuntimeError, BaseException, ValueError
+    function_type, module_type, code_type = types.FunctionType, types.ModuleType, types.CodeType
+    builtin_type, cell_type = types.BuiltinFunctionType, types.CellType
+    static_type, class_type, property_type = staticmethod, classmethod, property
+    dict_get, dict_items, dict_iter = dict.get, dict.items, dict.__iter__
+    dict_len, dict_set, dict_del, dict_clear = dict.__len__, dict.__setitem__, dict.__delitem__, dict.clear
+    object_get = object.__getattribute__
+    type_get = type.__getattribute__
+    module_dict_get = module_type.__dict__['__dict__'].__get__
+    class_dict_get = type.__dict__['__dict__'].__get__
+    class_mro_get = type.__dict__['__mro__'].__get__
+    cell_get = cell_type.__dict__['cell_contents'].__get__
+    function_fields = tuple((name, function_type.__dict__[name].__get__) for name in
+                            ('__code__', '__globals__', '__builtins__', '__defaults__',
+                             '__kwdefaults__', '__closure__', '__dict__'))
+    proxy_type = type(type.__dict__)
+    proxy_get, proxy_iter, proxy_items, proxy_len = proxy_type.get, proxy_type.__iter__, proxy_type.items, proxy_type.__len__
+    builtin_self_get = builtin_type.__dict__['__self__'].__get__
+    builtin_namespace = builtins.__dict__
+    missing = object0()
+    missing_id = id0(missing)
+    initial_sys_modules = sys.modules
+    initial_sys_flags = sys.flags
+    initial_optimize = sys.flags.optimize
+    sys_owner = sys
+    sys_namespace = module_dict_get(sys_owner, module_type)
+    authority_namespace = globals()
+    root_pin, provider_pin, backend_pin = ROOT_SHA256, PROVIDER_SHA256, BACKEND_SHA256
+    cache_pin = CACHE_PRODUCER_SHA256
+    max_source, max_functions, max_classes = 1048576, 8192, 2048
+    registry, by_namespace, products, backend_guards = {}, {}, {}, {}
+    transitions = []
+    initial_std_modules = (_ast, ast, copy, copyreg, genericpath, hashlib, io,
+                           ntpath, os, pathlib, posixpath, types)
+    producer_rules = (
+        ('320435ec4125544f2b2aedf74f21469b232d08683fe76f0913607516254bbd29', 'make_runtime_guard', 'backend_guard'),
+        ('f7ca7f4f03ac63c1a95ba42f06149543211566de5e29f487a3dc4d08c5ee9b94', 'extra_guard_type', 'extra_guard'),
+        ('4bdb401271ffd049c52eff0edc28d8d604a11faf66fec419555a82cbd3b32d60', 'make_trace_type', 'trace'),
+        ('364b45c100be73a7ace44ab664f3c792020dad6f33f7788b62aaeab67c0c5aa9', 'make_row_interner', 'row_function'),
+        ('364b45c100be73a7ace44ab664f3c792020dad6f33f7788b62aaeab67c0c5aa9', 'make_runtime_guard', 'row_guard'),
+        ('364b45c100be73a7ace44ab664f3c792020dad6f33f7788b62aaeab67c0c5aa9', 'make_cache_runtime_guard', 'row_guard'),
+        ('5aeee9364d29147ef4e1bfffba532f7392833a6158d73d1da50ed6c772f061af', 'derive_row_bind', 'row_bind'),
+        (cache_pin, 'compose_runtime_guard', 'cache_guard'))
+
+    def need(ok, message):
+        if not ok:
+            raise error0(message)
+
+    def string_domain(owner, domains):
+        key = iterator = kind = None
+        try:
+            identity = id0(owner)
+            prior = dict_get(domains, identity, missing)
+            if prior is not missing:
+                return prior
+            kind = type0(owner)
+            if kind is dict0:
+                iterator = dict_iter(owner)
+            elif kind is proxy_type:
+                iterator = proxy_iter(owner)
+            else:
+                return False
+            while True:
+                key = next0(iterator, missing)
+                if key is missing:
+                    break
+                if type0(key) is not str0:
+                    dict_set(domains, identity, False)
+                    return False
+                key = None
+            dict_set(domains, identity, True)
+            return True
+        finally:
+            key = iterator = kind = owner = None
+
+    def get_id(owner, name, domains):
+        try:
+            if type0(name) is not str0 or not string_domain(owner, domains):
+                return -1
+            if type0(owner) is dict0:
+                return id0(dict_get(owner, name, missing))
+            return id0(proxy_get(owner, name, missing))
+        finally:
+            owner = None
+
+    def identity_mapping(owner, expected):
+        """Non-string dispatch dictionaries: identity scan, never key equality."""
+        iterator = pair = key = value = None
+        try:
+            if type0(owner) is not dict0 or dict_len(owner) != len0(expected):
+                return False
+            iterator = iter0(dict_items(owner))
+            while True:
+                pair = next0(iterator, missing)
+                if pair is missing:
+                    break
+                key, value = pair
+                found = False
+                for old_key, old_value in expected:
+                    if key is old_key:
+                        if value is not old_value:
+                            return False
+                        found = True
+                        break
+                if not found:
+                    return False
+                pair = key = value = None
+            return True
+        finally:
+            iterator = pair = key = value = owner = None
+
+    iter0 = iter
+
+    def code_names(code):
+        pending, result, seen = [code], [], {}
+        while pending:
+            current = pending.pop()
+            need(type0(current) is code_type, 'Cold authority code shape differs')
+            for name in current.co_names:
+                need(type0(name) is str0, 'Cold authority code name shape differs')
+                if dict_get(seen, name, missing) is missing:
+                    dict_set(seen, name, True)
+                    result.append(name)
+            for value in current.co_consts:
+                if type0(value) is code_type:
+                    pending.append(value)
+        return tuple0(result)
+
+    def raw_function_record(function):
+        need(type0(function) is function_type, 'Cold authority requires exact functions')
+        values = tuple0(getter(function, function_type) for _, getter in function_fields)
+        code, namespace, builtins_owner, defaults, keywords, closure, attributes = values
+        domains = {}
+        try:
+            need(type0(namespace) is dict0 and type0(builtins_owner) is dict0 and
+                 string_domain(namespace, domains) and string_domain(builtins_owner, domains),
+                 'Cold authority initial function dictionary domain differs')
+            keyword_items = ()
+            if keywords is not None:
+                need(type0(keywords) is dict0 and string_domain(keywords, domains),
+                     'Cold authority initial keyword defaults differ')
+                keyword_items = tuple0(dict_items(keywords))
+            cells = () if closure is None else tuple0((cell, cell_get(cell, cell_type)) for cell in closure)
+            lookups = tuple0((name, dict_get(namespace, name, missing), dict_get(builtins_owner, name, missing))
+                            for name in code_names(code))
+            need(type0(attributes) is dict0 and string_domain(attributes, domains),
+                 'Cold authority function attribute dictionary differs')
+            return (function, values, keyword_items, cells, lookups, tuple0(dict_items(attributes)))
+        finally:
+            dict_clear(domains)
+
+    def capture_graph(initial_functions, initial_classes):
+        """Called only at initial source load or directly after an admitted producer."""
+        functions, classes, seen_functions, seen_classes = [], [], {}, {}
+        pending_functions, pending_classes = list0(initial_functions), list0(initial_classes)
+        while pending_functions or pending_classes:
+            while pending_classes:
+                cls = pending_classes.pop()
+                need(type0(cls) is type0, 'Cold authority class metaclass differs')
+                if dict_get(seen_classes, id0(cls), missing) is not missing:
+                    continue
+                need(len0(classes) < max_classes, 'Cold authority class census exceeds bound')
+                dict_set(seen_classes, id0(cls), cls)
+                mro = class_mro_get(cls, type0)
+                proxy = class_dict_get(cls, type0)
+                members = tuple0(proxy_items(proxy))
+                classes.append((cls, mro, proxy, members))
+                for base in mro[1:]:
+                    if type0(base) is type0:
+                        pending_classes.append(base)
+                for name, value in members:
+                    need(type0(name) is str0, 'Cold authority class member name differs')
+                    kind = type0(value)
+                    if kind is function_type:
+                        pending_functions.append(value)
+                    elif kind is static_type or kind is class_type:
+                        underlying = object_get(value, '__func__')
+                        if type0(underlying) is function_type:
+                            pending_functions.append(underlying)
+                    elif kind is property_type:
+                        for field in ('fget', 'fset', 'fdel'):
+                            underlying = object_get(value, field)
+                            if type0(underlying) is function_type:
+                                pending_functions.append(underlying)
+            if pending_functions:
+                function = pending_functions.pop()
+                if dict_get(seen_functions, id0(function), missing) is not missing:
+                    continue
+                need(len0(functions) < max_functions, 'Cold authority function census exceeds bound')
+                record = raw_function_record(function)
+                dict_set(seen_functions, id0(function), function)
+                functions.append(record)
+                for cell, value in record[3]:
+                    if type0(value) is function_type:
+                        pending_functions.append(value)
+                defaults = record[1][3]
+                if defaults is not None:
+                    need(type0(defaults) is tuple0, 'Cold authority positional defaults shape differs')
+                    for value in defaults:
+                        if type0(value) is function_type:
+                            pending_functions.append(value)
+                for name, value in record[2] + record[5]:
+                    if type0(value) is function_type:
+                        pending_functions.append(value)
+                # Source-owned function helpers reached through effective globals
+                # are authenticated transitively, including validator helpers.
+                for name, value, builtin_value in record[4]:
+                    if type0(value) is function_type:
+                        pending_functions.append(value)
+        return (tuple0(functions), tuple0(classes))
+
+    def expected_global(namespace, name, expected):
+        if name != 'RuntimeGuard':
+            return expected
+        record = dict_get(by_namespace, id0(namespace), missing)
+        if record is not missing and record[2] is namespace and record[12] == 'backend':
+            return dict_get(backend_guards, id0(record[0]), missing)
+        return expected
+
+    def fresh_function(record, domains, builtin_values):
+        function, values, keyword_items, cells, lookups, attributes_items = record
+        if type0(function) is not function_type:
+            return False
+        field_key = ('function-fields', id0(function))
+        observed_fields = dict_get(domains, field_key, missing)
+        if observed_fields is missing:
+            scalar_fields = []
+            for (_, getter), expected in zip0(function_fields, values):
+                observed_id = id0(getter(function, function_type))
+                if observed_id != id0(expected):
+                    return False
+                scalar_fields.append(observed_id)
+            dict_set(domains, field_key, tuple0(scalar_fields))
+        else:
+            if len0(observed_fields) != len0(values):
+                return False
+            for observed_id, expected in zip0(observed_fields, values):
+                if observed_id != id0(expected):
+                    return False
+        code, namespace, builtins_owner, defaults, keywords, closure, attributes = values
+        if keywords is not None:
+            if type0(keywords) is not dict0 or dict_len(keywords) != len0(keyword_items):
+                return False
+            for name, expected in keyword_items:
+                if get_id(keywords, name, domains) != id0(expected):
+                    return False
+        for cell, expected in cells:
+            try:
+                if id0(cell_get(cell, cell_type)) != id0(expected):
+                    return False
+            except value_error0:
+                return False
+        if dict_len(attributes) != len0(attributes_items):
+            return False
+        for name, expected in attributes_items:
+            if get_id(attributes, name, domains) != id0(expected):
+                return False
+        lookup_key = ('function-lookups', id0(function), id0(code),
+                      id0(namespace), id0(builtins_owner))
+        observed_lookups = dict_get(domains, lookup_key, missing)
+        if observed_lookups is missing:
+            scalar_lookups = []
+            for name, expected, expected_builtin in lookups:
+                observed_global = get_id(namespace, name, domains)
+                if observed_global != id0(expected_global(namespace, name, expected)):
+                    return False
+                # A false builtin_values path must not observe builtin keys or
+                # values. The absent slot is completed only in a later true path.
+                if builtin_values:
+                    observed_builtin = get_id(builtins_owner, name, domains)
+                    if observed_builtin != id0(expected_builtin):
+                        return False
+                    scalar_lookups.append((name, observed_global, True, observed_builtin))
+                else:
+                    scalar_lookups.append((name, observed_global, False, 0))
+            dict_set(domains, lookup_key, tuple0(scalar_lookups))
+        else:
+            if len0(observed_lookups) != len0(lookups):
+                return False
+            completed_lookups = None
+            index = 0
+            for (name, expected, expected_builtin), observed in zip0(lookups, observed_lookups):
+                if observed[0] != name:
+                    return False
+                if observed[1] != id0(expected_global(namespace, name, expected)):
+                    return False
+                if builtin_values:
+                    if observed[2]:
+                        observed_builtin = observed[3]
+                    else:
+                        observed_builtin = get_id(builtins_owner, name, domains)
+                    if observed_builtin != id0(expected_builtin):
+                        return False
+                    if not observed[2]:
+                        if completed_lookups is None:
+                            completed_lookups = list0(observed_lookups)
+                        completed_lookups[index] = (name, observed[1], True, observed_builtin)
+                index += 1
+            if completed_lookups is not None:
+                dict_set(domains, lookup_key, tuple0(completed_lookups))
+        return True
+
+    zip0 = zip
+
+    def fresh_graph(graph, domains, builtin_values, message):
+        functions, classes = graph
+        for cls, mro, proxy, members in classes:
+            if not (type0(cls) is type0 and class_mro_get(cls, type0) is mro and
+                 proxy_len(proxy) == len0(members)):
+                need(False, message + ': class dispatch')
+            for name, expected in members:
+                if not (get_id(proxy, name, domains) == id0(expected)):
+                    need(False, message + ': class member ' + name)
+        for record in functions:
+            if not (fresh_function(record, domains, builtin_values)):
+                need(False, message + ': function environment')
+
+    def module_image(module, name, kind, path, digest, source_bytes, *, stdlib=False):
+        need(type0(module) is module_type, 'Cold authority module exact type differs')
+        namespace = module_dict_get(module, module_type)
+        domains = {}
+        try:
+            need(type0(namespace) is dict0 and string_domain(namespace, domains),
+                 'Cold authority module dictionary domain differs')
+            items = tuple0(dict_items(namespace))
+            functions, classes = [], []
+            for field, value in items:
+                if type0(value) is function_type:
+                    if stdlib or value.__globals__ is namespace:
+                        functions.append(value)
+                elif type0(value) is type0:
+                    declared = type_get(value, '__module__')
+                    if stdlib or (type0(declared) is str0 and declared == name):
+                        classes.append(value)
+            graph = capture_graph(functions, classes)
+            mappings = []
+            selected = ('_CANONICAL_BUILTINS', '_TYPE_BUILTINS') if kind == 'backend' else ()
+            for field in selected:
+                mapping = dict_get(namespace, field, missing)
+                need(type0(mapping) is dict0, 'Cold authority backend dispatch dictionary differs')
+                mappings.append((field, mapping, tuple0(dict_items(mapping))))
+            original_guard = dict_get(namespace, 'RuntimeGuard', missing) if kind == 'backend' else None
+            if kind == 'backend':
+                need(type0(original_guard) is type0, 'Cold authority original RuntimeGuard differs')
+            handle = object0()
+            return (handle, module, namespace, name, path, digest, source_bytes,
+                    items, graph[0], graph[1], tuple0(mappings), original_guard, kind)
+        finally:
+            dict_clear(domains)
+
+    def record_for(handle):
+        record = dict_get(registry, id0(handle), missing)
+        need(record is not missing and record[0] is handle, 'Cold authority handle is not registered')
+        return record
+
+    def fresh_module(record, domains, builtin_values, *, registry_slot=True, exact_census=True, prefix='Cold authority'):
+        module, namespace = record[1], record[2]
+        if not (type0(module) is module_type and module_dict_get(module, module_type) is namespace):
+            need(False, prefix + ': module owner differs')
+        if registry_slot:
+            if not (get_id(initial_sys_modules, record[3], domains) == id0(module)):
+                need(False, prefix + ': registered module slot differs')
+        if exact_census:
+            if not (dict_len(namespace) == len0(record[7])):
+                need(False, prefix + ': namespace census differs')
+        for name, expected in record[7]:
+            if not (get_id(namespace, name, domains) == id0(expected_global(namespace, name, expected))):
+                need(False, prefix + ': namespace binding ' + name)
+        for name, mapping, expected in record[10]:
+            if not (identity_mapping(mapping, expected)):
+                need(False, prefix + ': dispatch dictionary ' + name)
+        fresh_graph((record[8], record[9]), domains, builtin_values, prefix)
+
+    need(type0(root) is module_type and type0(api) is tuple0 and len0(api) == 4,
+         'Cold authority requires the actual pristine root and sealed fourtuple')
+    root_namespace = module_dict_get(root, module_type)
+    root_api_graph = capture_graph(api, ())
+    root_hash = dict_get(root_namespace, '_hash_regular', missing)
+    root_compile = dict_get(root_namespace, '_COMPILE', missing)
+    root_exec = dict_get(root_namespace, '_EXEC', missing)
+    root_identity = api[0]
+    initial_builtin_items = tuple0(dict_items(builtin_namespace))
+    stdlib_records = tuple0(module_image(module, module.__name__, 'stdlib', None, None, None, stdlib=True)
+                           for module in initial_std_modules)
+    stdlib_mappings = tuple0((mapping, tuple0(dict_items(mapping))) for mapping in
+                            (copy._deepcopy_dispatch, copy.dispatch_table, copyreg.dispatch_table))
+    self_graph = capture_graph((dict_get(authority_namespace, 'capture_authority'),), ())
+    self_items = tuple0(dict_items(authority_namespace))
+
+    def root_and_stdlib(domains):
+        need(type0(sys_owner) is module_type and module_dict_get(sys_owner, module_type) is sys_namespace and
+             get_id(sys_namespace, 'modules', domains) == id0(initial_sys_modules) and
+             get_id(sys_namespace, 'flags', domains) == id0(initial_sys_flags),
+             'Cold authority interpreter owner differs')
+        need(dict_len(builtin_namespace) == len0(initial_builtin_items), 'Cold authority builtin census differs')
+        for name, expected in initial_builtin_items:
+            need(get_id(builtin_namespace, name, domains) == id0(expected), 'Cold authority builtin binding ' + name)
+        for name, expected in self_items:
+            need(get_id(authority_namespace, name, domains) == id0(expected), 'Cold authority source binding ' + name)
+        fresh_graph(self_graph, domains, True, 'Cold authority source')
+        fresh_graph(root_api_graph, domains, True, 'Cold authority root entry')
+        dict_clear(domains)
+        need(root_identity() == root_pin, 'Cold authority actual root source identity differs')
+        dict_clear(domains)
+        for record in stdlib_records:
+            fresh_module(record, domains, True, registry_slot=True, exact_census=False, prefix='Cold authority initial stdlib')
+        for mapping, expected in stdlib_mappings:
+            need(identity_mapping(mapping, expected), 'Cold authority initial copy dispatch differs')
+
+    def check_registered(domains):
+        for record in tuple0(registry.values()):
+            fresh_module(record, domains, True)
+
+    def cold_check(handle=None):
+        domains = {}
+        try:
+            root_and_stdlib(domains)
+            check_registered(domains)
+            if handle is not None:
+                record = record_for(handle)
+                dict_clear(domains)
+                digest, size, raw = root_hash(record[4], max_source, False)
+                need(digest == record[5], 'Cold authority source file changed')
+                return record
+            return None
+        finally:
+            dict_clear(domains)
+
+    def load(path, digest, name, kind='module'):
+        cold_check()
+        need(type0(path) is str0 and path.startswith('/') and type0(digest) is str0 and len0(digest) == 64 and
+             type0(name) is str0 and name and type0(kind) is str0 and kind in ('module', 'backend'),
+             'Cold authority source-load argument shape differs')
+        for character in digest:
+            need(character in '0123456789abcdef', 'Cold authority source digest is not lowercase SHA256')
+        need((kind == 'backend') == (digest == backend_pin), 'Cold authority original backend classification differs')
+        domains = {}
+        try:
+            need(get_id(initial_sys_modules, name, domains) == missing_id, 'Cold authority module name already registered')
+        finally:
+            dict_clear(domains)
+        observed, size, source_bytes = root_hash(path, max_source, True)
+        need(observed == digest and type0(source_bytes) is bytes0, 'Cold authority source bytes differ')
+        module = module_type(name)
+        namespace = module_dict_get(module, module_type)
+        namespace.update({'__file__': path, '__builtins__': builtin_namespace})
+        # Dataclass/import ownership sees the correct unique slot during exec.
+        dict_set(initial_sys_modules, name, module)
+        try:
+            code = root_compile(source_bytes, path, 'exec', dont_inherit=True, optimize=initial_optimize)
+            root_exec(code, namespace)
+            record = module_image(module, name, kind, path, digest, source_bytes)
+            dict_set(registry, id0(record[0]), record)
+            dict_set(by_namespace, id0(namespace), record)
+            if kind == 'backend':
+                dict_set(backend_guards, id0(record[0]), record[11])
+            cold_check(record[0])
+        except base_error0:
+            # A failed source is retained in the unique slot for evidence and
+            # cannot be retried/reclassified as an unobserved clean load.
+            raise
+        return (module, record[0])
+
+    def make_caller_descriptor(operations, label):
+        """Mint only at original capture or an authenticated entry-three return.
+
+        The caller checks the dispatcher record INLINE before invoking it. This
+        is not a claim that the dispatcher can authenticate its own replacement
+        code. Its already-admitted active frame checks all target/helper objects.
+        """
+        pending, seen, records = list0(operations), {}, []
+        while pending:
+            function = pending.pop()
+            if dict_get(seen, id0(function), missing) is not missing:
+                continue
+            need(len0(records) < max_functions, 'Cold authority caller helper census exceeds bound')
+            raw = raw_function_record(function)
+            record = (function,) + raw[1][:6] + (raw[2], raw[3])
+            dict_set(seen, id0(function), function)
+            records.append(record)
+            for cell, value in record[8]:
+                if type0(value) is function_type:
+                    pending.append(value)
+        records = tuple0(records)
+        field_getters = function_fields[:6]
+        primitives = (type0, function_type, id0, len0, field_getters, cell_type,
+                      cell_get, error0, value_error0, tuple0, dict0, str0,
+                      dict_get, dict_len, dict_iter, next0, dict_clear, missing, zip0)
+
+        def dispatch(index, *args, **kwargs):
+            # The active caller has already authenticated this actual function.
+            # This pretarget block uses captured C primitives only. In particular
+            # it does not call need(), fresh_function(), or any other validator.
+            if type0(index) is not int0 or index < 0 or index >= len0(operations):
+                raise error0(label + ': operation index differs')
+            for record in records:
+                function = record[0]
+                if type0(function) is not function_type:
+                    raise error0(label + ': target exact function differs')
+                for (name, getter), expected in zip0(field_getters, record[1:7]):
+                    if id0(getter(function, function_type)) != id0(expected):
+                        raise error0(label + ': target function environment differs')
+                keywords = record[5]
+                if keywords is not None:
+                    if type0(keywords) is not dict0 or dict_len(keywords) != len0(record[7]):
+                        raise error0(label + ': target keyword census differs')
+                    iterator = current = None
+                    valid_domain = True
+                    try:
+                        iterator = dict_iter(keywords)
+                        while True:
+                            current = next0(iterator, missing)
+                            if current is missing:
+                                break
+                            if type0(current) is not str0:
+                                valid_domain = False
+                                break
+                            current = None
+                    finally:
+                        # Foreign current keys never survive a retained error.
+                        iterator = current = None
+                    if not valid_domain:
+                        raise error0(label + ': target keyword key domain differs')
+                    for name, expected in record[7]:
+                        if id0(dict_get(keywords, name, missing)) != id0(expected):
+                            raise error0(label + ': target keyword value differs')
+                for cell, expected in record[8]:
+                    try:
+                        observed_id = id0(cell_get(cell, cell_type))
+                    except value_error0:
+                        raise error0(label + ': target closure became empty') from None
+                    if observed_id != id0(expected):
+                        raise error0(label + ': target closure value differs')
+            # The chosen function object comes from the original immutable
+            # operations tuple, not a mutable late attribute or caller registry.
+            return operations[index](*args, **kwargs)
+
+        raw_dispatch = raw_function_record(dispatch)
+        dispatch_record = (dispatch,) + raw_dispatch[1][:6] + (raw_dispatch[2], raw_dispatch[3])
+        need(dispatch_record[4] is None and dispatch_record[5] is None and not dispatch_record[7],
+             'Cold authority dispatcher source defaults contract differs')
+        return ('h25-cold-authority-caller-v1', operations, dispatch,
+                dispatch_record, records, primitives)
+
+    def runtime_guard(handle):
+        record = cold_check(handle)
+        def guarded_helpers():
+            domains = {}
+            try:
+                fresh_module(record, domains, False, prefix='Runtime drift: cache collector')
+            finally:
+                dict_clear(domains)
+        child_descriptor = make_caller_descriptor((guarded_helpers,), 'Runtime drift: cache collector caller')
+        return (guarded_helpers, child_descriptor)
+
+    def known_backend(module):
+        need(type0(module) is module_type, 'Cold authority producer backend type differs')
+        namespace = module_dict_get(module, module_type)
+        record = dict_get(by_namespace, id0(namespace), missing)
+        need(record is not missing and record[1] is module and record[12] == 'backend' and record[5] == backend_pin,
+             'Cold authority producer backend provenance differs')
+        return record
+
+    def known_guard(cls):
+        need(type0(cls) is type0, 'Cold authority exact guard class differs')
+        for record in tuple0(registry.values()):
+            if record[12] == 'backend' and cls is record[11]:
+                return None
+        product = dict_get(products, id0(cls), missing)
+        need(product is not missing and product[0] is cls and product[6] in
+             ('backend_guard', 'extra_guard', 'row_guard', 'cache_guard'),
+             'Cold authority guard was not produced by an admitted source')
+        domains = {}
+        try:
+            fresh_graph(product[5], domains, True, 'Cold authority producer base product')
+        finally:
+            dict_clear(domains)
+        return product
+
+    def classify(record, export):
+        for digest, name, role in producer_rules:
+            if digest is not None and record[5] == digest and export == name:
+                return role
+        return None
+
+    def validate_producer_arguments(record, export, role, args, kwargs):
+        domains = {}
+        try:
+            need(type0(kwargs) is dict0 and string_domain(kwargs, domains) and not kwargs,
+                 'Cold authority reviewed producers require positional arguments')
+            if role == 'backend_guard':
+                need(len0(args) == 1, 'Cold authority backend guard arguments differ')
+                known_backend(args[0])
+            elif role == 'extra_guard':
+                need(len0(args) == 3 and type0(args[2]) is tuple0, 'Cold authority trace guard arguments differ')
+                known_guard(args[0]); known_backend(args[1])
+                for entry in args[2]:
+                    need(type0(entry) is tuple0 and len0(entry) == 3,
+                         'Cold authority trace entry shape differs')
+                    owner, name, function = entry
+                    need(type0(owner) is module_type and type0(name) is str0 and
+                         type0(function) is builtin_type and
+                         builtin_self_get(function, builtin_type) is owner and
+                         get_id(module_dict_get(owner, module_type), name, domains) == id0(function),
+                         'Cold authority trace entry owner differs')
+            elif role == 'trace':
+                need(len0(args) == 2 and type0(args[1]) is module_type, 'Cold authority trace producer arguments differ')
+                known_backend(args[0])
+            elif role == 'row_function':
+                need(not args, 'Cold authority row interner arguments differ')
+            elif role == 'row_guard':
+                need(len0(args) == 2, 'Cold authority row guard arguments differ')
+                known_guard(args[0])
+                product = dict_get(products, id0(args[1]), missing)
+                need(product is not missing and product[0] is args[1] and product[1] is record[0] and
+                     product[2] == 'make_row_interner' and product[6] == 'row_function',
+                     'Cold authority row helper provenance differs')
+                fresh_graph(product[5], domains, True, 'Cold authority producer row helper')
+            elif role == 'cache_guard':
+                need(len0(args) == 2 and type0(args[1]) is dict0 and string_domain(args[1], domains),
+                     'Cold authority cache guard arguments differ')
+                known_guard(args[0])
+                owner = dict_get(args[1], 'owner', missing)
+                need(type0(owner) is dict_get(record[2], '_Owner', missing),
+                     'Cold authority prepared cache owner class differs')
+            elif role == 'row_bind':
+                need(len0(args) == 2 and type0(args[0]) is function_type and type0(args[1]) is bytes0,
+                     'Cold authority row bind arguments differ')
+                found = False
+                for backend_record in tuple0(registry.values()):
+                    if (backend_record[12] == 'backend' and args[0] is dict_get(backend_record[2], 'bind', missing) and
+                            args[1] is backend_record[6]):
+                        found = True
+                        break
+                need(found, 'Cold authority row bind is not the original registered function/source')
+        finally:
+            dict_clear(domains)
+
+    def invoke(handle, export, *args, **kwargs):
+        record = cold_check(handle)
+        need(type0(export) is str0, 'Cold authority export name must be exact str')
+        function = dict_get(record[2], export, missing)
+        need(type0(function) is function_type and function.__globals__ is record[2],
+             'Cold authority export is not an owned source function')
+        role = classify(record, export)
+        if role is not None:
+            validate_producer_arguments(record, export, role, args, kwargs)
+        result = function(*args, **kwargs)
+        if role is not None:
+            # Do not retain a row producer's enclosing tuple or mutable AST.
+            product = result[0] if type0(result) is tuple0 and len0(result) and type0(result[0]) is function_type else result
+            expected_kind = function_type if role in ('row_function', 'row_bind') else type0
+            need(type0(product) is expected_kind and dict_get(products, id0(product), missing) is missing,
+                 'Cold authority producer did not return a fresh exact product')
+            graph = capture_graph((product,) if expected_kind is function_type else (),
+                                  (product,) if expected_kind is type0 else ())
+            product_record = (product, handle, export, args, tuple0(dict_items(kwargs)), graph, role)
+            dict_set(products, id0(product), product_record)
+            domains = {}
+            try:
+                fresh_graph(graph, domains, True, 'Cold authority new product')
+            finally:
+                dict_clear(domains)
+        return result
+
+    def check_product(obj, producer_handle, export, args_tuple, kwargs_dict):
+        record_for(producer_handle)
+        cold_check(producer_handle)
+        need(type0(args_tuple) is tuple0 and type0(kwargs_dict) is dict0 and type0(export) is str0,
+             'Cold authority product proof arguments differ')
+        product = dict_get(products, id0(obj), missing)
+        need(product is not missing and product[0] is obj and product[1] is producer_handle and product[2] == export,
+             'Cold authority product provenance differs')
+        need(len0(args_tuple) == len0(product[3]), 'Cold authority product positional census differs')
+        for actual, expected in zip0(args_tuple, product[3]):
+            need(actual is expected, 'Cold authority product positional identity differs')
+        domains = {}
+        try:
+            need(dict_len(kwargs_dict) == len0(product[4]), 'Cold authority product keyword census differs')
+            for name, expected in product[4]:
+                need(get_id(kwargs_dict, name, domains) == id0(expected), 'Cold authority product keyword identity differs')
+            fresh_graph(product[5], domains, True, 'Cold authority registered product')
+        finally:
+            dict_clear(domains)
+        return None
+
+    def set_backend_guard(handle, cls):
+        record = cold_check(handle)
+        need(record[12] == 'backend', 'Cold authority guard transition requires original backend')
+        product = known_guard(cls)
+        domains = {}
+        try:
+            if product is not None:
+                fresh_graph(product[5], domains, True, 'Cold authority guard transition product')
+            old = dict_get(backend_guards, id0(handle), missing)
+            need(dict_get(record[2], 'RuntimeGuard', missing) is old,
+                 'Cold authority backend guard changed outside the transition ledger')
+            dict_clear(domains)
+            dict_set(record[2], 'RuntimeGuard', cls)
+            dict_set(backend_guards, id0(handle), cls)
+            transitions.append((handle, old, cls, product))
+            fresh_module(record, domains, True)
+        finally:
+            dict_clear(domains)
+        return None
+
+    def source(handle):
+        record = cold_check(handle)
+        return (record[1], record[4], record[5], record[6])
+
+    # Final initial-root validation occurs before any source can receive a token.
+    cold_check()
+    need(api[1](capability, provider_pin) is not None, 'Cold authority root capability differs')
+    operations = (load, invoke, cold_check, runtime_guard, check_product, set_backend_guard, source)
+    descriptor = make_caller_descriptor(operations, 'Cold authority caller')
+    # Original raw loader only: capture this transport immediately and retain
+    # the immutable descriptor privately. No later attribute read is authority.
+    load.__dict__['_h25_caller_descriptor'] = descriptor
+    return operations
+
+
+"""Concrete SOURCE ONLY epoch ledger. No execution/profile grant is embedded."""
+import ast
+import builtins
+import hashlib
+import types
+
+SOURCE_EXECUTION_CONTRACT = None
+FULL_EXECUTION_CONTRACT = None
+_FUNCTION = types.FunctionType
+_MODULE = types.ModuleType
+_CODE = types.CodeType
+_TYPE, _ID, _LEN = type, id, len
+_DICT, _TUPLE, _STR, _INT, _BOOL = dict, tuple, str, int, bool
+_GET, _ITEMS, _CLEAR = dict.get, dict.items, dict.clear
+_CLASS_DICT = type.__dict__['__dict__'].__get__
+_CLASS_MRO = type.__dict__['__mro__'].__get__
+_CELL = types.CellType.__dict__['cell_contents'].__get__
+_FFIELDS = tuple((name, _FUNCTION.__dict__[name].__get__) for name in
+                ('__code__', '__globals__', '__builtins__', '__defaults__',
+                 '__kwdefaults__', '__closure__', '__dict__'))
+_MISSING = object()
+SLOTS = (
+ ('module', 'echelon'), ('module', 'rank'), ('module', 'compile_roles'),
+ ('module', 'verify_role_frames'), ('circuit', 'add'), ('circuit', '__init__'),
+ ('checks', 'verify_map'), ('checks', '__init__'), ('checks', 'label'),
+ ('checks', 'target_frame'), ('checks', 'verify_labels'),
+ ('checks', 'residual_ok'), ('checks', 'label_ok'),
+ ('label', 'complement_in'), ('label', 'nondegenerate'))
+ROLE_FOR_SLOT = {
+ ('module', 'echelon'): ('canonical',),
+ ('module', 'rank'): ('rank_trace',),
+ ('module', 'compile_roles'): ('phase',),
+ ('module', 'verify_role_frames'): ('roles', 'roles_observer'),
+ ('circuit', 'add'): ('construction_add',),
+ ('circuit', '__init__'): ('construction_init', 'phase'),
+ ('checks', 'verify_map'): ('p1', 'phase'),
+ ('checks', '__init__'): ('C1', 'checks_capture', 'phase'),
+ ('checks', 'label'): ('C2',), ('checks', 'target_frame'): ('C3',),
+ ('checks', 'verify_labels'): ('labels', 'phase'),
+ ('checks', 'residual_ok'): ('public_residual',),
+ ('checks', 'label_ok'): ('public_label',),
+ ('label', 'complement_in'): ('native_complement',),
+ ('label', 'nondegenerate'): ('native_gram',)}
+
+
+def need(condition, message):
+    if not condition:
+        raise RuntimeError(message)
+
+
+def string_keys(mapping):
+    need(_TYPE(mapping) is _DICT, 'Epoch namespace is not exact dict')
+    for key in mapping:
+        need(_TYPE(key) is _STR, 'Epoch foreign namespace key')
+
+
+def names(code):
+    pending, result = [code], []
+    while pending:
+        value = pending.pop()
+        need(_TYPE(value) is _CODE, 'Epoch code type')
+        for name in value.co_names:
+            if name not in result:
+                result.append(name)
+        pending.extend(x for x in value.co_consts if _TYPE(x) is _CODE)
+    return tuple(result)
+
+
+def function_record(function):
+    need(_TYPE(function) is _FUNCTION, 'Epoch exact function required')
+    fields = tuple(getter(function, _FUNCTION) for _, getter in _FFIELDS)
+    code, namespace, builtin_owner, defaults, keywords, closure, attrs = fields
+    string_keys(namespace); string_keys(builtin_owner); string_keys(attrs)
+    if defaults is not None:
+        need(_TYPE(defaults) is _TUPLE, 'Epoch defaults type')
+    if keywords is not None:
+        string_keys(keywords)
+    cells = () if closure is None else tuple((cell, _CELL(cell, types.CellType)) for cell in closure)
+    lookups = tuple((name, _GET(namespace, name, _MISSING),
+                     _GET(builtin_owner, name, _MISSING)) for name in names(code))
+    return (function, fields, () if keywords is None else tuple(keywords.items()),
+            cells, lookups, tuple(attrs.items()))
+
+
+def check_fields(record):
+    function, fields, keywords, cells, lookups, attrs = record
+    need(_TYPE(function) is _FUNCTION, 'Epoch function replacement')
+    for (_, getter), expected in zip(_FFIELDS, fields):
+        need(getter(function, _FUNCTION) is expected, 'Epoch function field changed')
+    current_keywords = fields[4]
+    if current_keywords is not None:
+        string_keys(current_keywords)
+        need(len(current_keywords) == len(keywords), 'Epoch keyword census')
+        for name, expected in keywords:
+            need(_GET(current_keywords, name, _MISSING) is expected, 'Epoch keyword value')
+    for cell, expected in cells:
+        need(_CELL(cell, types.CellType) is expected, 'Epoch closure cell changed')
+    current_attrs = fields[6]
+    string_keys(current_attrs)
+    need(len(current_attrs) == len(attrs), 'Epoch function attributes census')
+    for name, expected in attrs:
+        need(_GET(current_attrs, name, _MISSING) is expected, 'Epoch function attribute')
+
+
+def class_record(cls):
+    need(_TYPE(cls) is _TYPE, 'Epoch class metaclass')
+    proxy = _CLASS_DICT(cls, _TYPE)
+    members = tuple(proxy.items())
+    need(all(_TYPE(k) is _STR for k, _ in members), 'Epoch class key domain')
+    return (cls, _CLASS_MRO(cls, _TYPE), members)
+
+
+def graph(functions, classes, canonical_functions=None, canonical_classes=None):
+    """Explicit class roots; arbitrary state/tuple cells never imply provenance."""
+    functions, classes = list(functions), list(classes)
+    seen_f, seen_c, records_f, records_c = {}, {}, [], []
+    canonical_functions = {} if canonical_functions is None else canonical_functions
+    canonical_classes = {} if canonical_classes is None else canonical_classes
+    while functions or classes:
+        while classes:
+            cls = classes.pop()
+            if id(cls) in seen_c:
+                continue
+            need(len(seen_c) < 2048, 'Epoch class graph bound')
+            seen_c[id(cls)] = cls
+            rec = canonical_classes.get(id(cls))
+            rec = class_record(cls) if rec is None else rec
+            need(rec[0] is cls, 'Epoch class canonical identity')
+            records_c.append(rec)
+            for base in rec[1][1:]:
+                if type(base) is type:
+                    classes.append(base)
+            for _, value in rec[2]:
+                if type(value) is _FUNCTION:
+                    functions.append(value)
+                elif type(value) in (staticmethod, classmethod):
+                    functions.append(value.__func__)
+                elif type(value) is property:
+                    functions.extend(x for x in (value.fget, value.fset, value.fdel) if x is not None)
+        if functions:
+            function = functions.pop()
+            if id(function) in seen_f:
+                continue
+            need(len(seen_f) < 8192, 'Epoch function graph bound')
+            seen_f[id(function)] = function
+            rec = canonical_functions.get(id(function))
+            rec = function_record(function) if rec is None else rec
+            need(rec[0] is function, 'Epoch original function canonical identity')
+            records_f.append(rec)
+            for _, value in rec[3]:
+                if type(value) is _FUNCTION:
+                    functions.append(value)
+            defaults = rec[1][3]
+            if defaults is not None:
+                functions.extend(x for x in defaults if type(x) is _FUNCTION)
+            functions.extend(x for _, x in rec[2] + rec[5] if type(x) is _FUNCTION)
+            functions.extend(x for _, x, _ in rec[4] if type(x) is _FUNCTION)
+    return tuple(records_f), tuple(records_c)
+
+
+class EpochLedger:
+    """One original generation; no generic external record/admission operation."""
+    def __init__(self):
+        self.origins = {}
+        self.phase = 'COLD'
+        self.serial = 0
+        self.failure = None
+        self.class_origin = class_record(type(self))
+        self.method_origin = tuple(function_record(v) for _, v in self.class_origin[2]
+                                   if type(v) is _FUNCTION)
+
+    def guard_engine(self):
+        cls, mro, members = self.class_origin
+        need(type(self) is cls and _CLASS_MRO(cls, type) is mro, 'Epoch engine class drift')
+        current = _CLASS_DICT(cls, type)
+        need(len(current) == len(members), 'Epoch engine member census')
+        for name, value in members:
+            need(current.get(name, _MISSING) is value, 'Epoch engine member drift')
+        for rec in self.method_origin:
+            check_fields(rec)
+
+    def capture(self, module, backend, source_bytes, factory_results, authority_graph, missing_token):
+        self.guard_engine()
+        need(self.phase == 'COLD', 'Epoch original capture is one shot')
+        need(type(module) is _MODULE and type(backend) is _MODULE and type(source_bytes) is bytes,
+             'Epoch original inputs')
+        namespace = module.__dict__; string_keys(namespace)
+        need(hashlib.sha256(source_bytes).hexdigest() ==
+             'd623617f7c5cb3189580883a8ab30c0bd3832688ae3f1f0c1f881bbbbff8e0c1', 'Epoch original source hash')
+        # Caller authenticates backend + each pristine factory BEFORE this call.
+        label = backend.guard_module(module)
+        checks, circuit = namespace['Checks'], namespace['ComplexSideCircuit']
+        need(label is namespace['Label'], 'Epoch original Label identity')
+        need(type(factory_results) is tuple and len(factory_results) == 3, 'Epoch actual factory outputs')
+        p1, construction, prepared = factory_results
+        need(type(prepared) is dict and prepared['owner'].module is module, 'Epoch actual prepared owner')
+        compiled = compile(source_bytes, namespace['__file__'], 'exec', dont_inherit=True)
+        source_codes = {x.co_name: x for x in compiled.co_consts if type(x) is _CODE}
+        for cls, name in ((label, 'Label'), (checks, 'Checks'), (circuit, 'ComplexSideCircuit')):
+            expected = {x.co_name: x for x in source_codes[name].co_consts if type(x) is _CODE}
+            attrs = _CLASS_DICT(cls, type)
+            need(set(attrs) == set(expected) | {'__module__','__doc__','__dict__','__weakref__'},
+                 'Epoch original class census')
+            for field, code in expected.items():
+                function = attrs[field]
+                need(type(function) is _FUNCTION and function.__globals__ is namespace and
+                     function.__builtins__ is builtins.__dict__ and function.__defaults__ is None and
+                     function.__kwdefaults__ is None and function.__closure__ is None and
+                     backend._code_shape(function.__code__) == backend._code_shape(code),
+                     'Epoch original class source/calling contract')
+        need(type(authority_graph) is tuple and len(authority_graph)==2, 'Epoch original authority graph')
+        fg, original_classes = authority_graph
+        cg=tuple((row[0],row[1],row[3]) for row in original_classes)
+        need(all(type(row) is tuple and len(row)==6 for row in fg), 'Epoch original raw-record schema')
+        self.serial += 1; handle = object()
+        origin = {'handle':handle,'module':module,'namespace':namespace,'backend':backend,
+                  'label':label,'checks':checks,'circuit':circuit,'items':tuple(namespace.items()),
+                  'functions':fg,'classes':cg,'function_map':{id(x[0]):x for x in fg},
+                  'class_map':{id(x[0]):x for x in cg},'slots':{},'visible':{},'edges':[],
+                  'products':[],'factory_results':factory_results,'generation':self.serial,
+                  'raw_guard':None,'suite':None,'phase':'ORIGINAL','missing':missing_token,'authority_classes':original_classes,
+                  'primary_error':None,'secondary_error':None,'uncertain':False}
+        owners = {'module':namespace,'label':label,'checks':checks,'circuit':circuit}
+        for kind, name in SLOTS:
+            owner = owners[kind]
+            value = owner[name] if type(owner) is dict else _CLASS_DICT(owner,type)[name]
+            origin['slots'][kind,name] = (owner,value,value,())
+            origin['visible'][kind,name] = value
+        self.origins[id(handle)] = origin; self.phase = 'ORIGINAL'
+        return handle
+
+    def origin(self, handle):
+        self.guard_engine()
+        origin = self.origins.get(id(handle))
+        need(origin is not None and origin['handle'] is handle, 'Epoch origin handle')
+        need(origin['phase'] != 'FAILED', 'Epoch failed generation')
+        return origin
+
+    def enroll_suite(self, handle, suite):
+        origin = self.origin(handle)
+        need(origin['phase'] == 'ORIGINAL' and origin['suite'] is None, 'Epoch suite one shot')
+        origin['suite'] = suite
+        origin['phase'] = 'FACTORIES_ADMITTED'
+        return origin['generation']
+
+    def authorize(self, handle, kind, name, old, new, role, product_graph):
+        origin = self.origin(handle)
+        need(origin['phase'] in ('FACTORIES_ADMITTED','CALLERS_INSTALLED','NATIVE_PRODUCTS_PREPARED'),
+             'Epoch transition phase')
+        need(type(kind) is str and type(name) is str and type(role) is str and
+             (kind,name) in origin['slots'] and role in ROLE_FOR_SLOT[kind,name], 'Epoch finite slot/role')
+        owner, first, prior, chain = origin['slots'][kind,name]
+        need(old is prior and new is not prior, 'Epoch preceding endpoint identity')
+        current = owner[name] if type(owner) is dict else _CLASS_DICT(owner,type).get(name,_MISSING)
+        need(current is old, 'Epoch unauthorized prior change')
+        need(type(new) is _FUNCTION, 'Epoch callable product type')
+        # Product comes only from the authenticated suite builder; it supplies
+        # the complete graph after its strict source/code inverse validation.
+        need(type(product_graph) is tuple and len(product_graph)==2, 'Epoch product graph shape')
+        origin['products'].append(product_graph)
+        origin['slots'][kind,name] = (owner,first,new,chain+((old,new,role),))
+        origin['edges'].append((kind,name,old,new,role,origin['generation']))
+        return None
+
+    def register_product(self,handle,suite,role,function,product_graph):
+        origin=self.origin(handle)
+        allowed=('C1','C2','C3','labels','roles','canonical','public_label',
+                 'public_residual','private_label','private_residual','prepare','finish')
+        need(type(role) is str and role in allowed and type(function) is _FUNCTION,
+             'Epoch private product role/type')
+        if origin['suite'] is None:
+            need(origin.get('creating') is True,'Epoch factory not active')
+            origin['suite']=suite;origin['phase']='FACTORIES_ADMITTED'
+        need(origin['suite'] is suite,'Epoch source suite ownership')
+        proof=suite.proofs.get(id(function))
+        need(proof is not None and proof[0] is function and proof[1]==role,
+             'Epoch actual factory product proof')
+        origin['products'].append(product_graph)
+        origin.setdefault('private_products',{})[role]=function
+        return None
+
+    def install(self, handle, kind, name, new):
+        origin = self.origin(handle)
+        owner, first, endpoint, chain = origin['slots'][kind,name]
+        need(endpoint is new and chain, 'Epoch install requires declared product')
+        prior = chain[-1][0]
+        if type(owner) is dict:
+            need(owner.get(name,_MISSING) is prior, 'Epoch global old identity')
+            owner[name] = new
+        else:
+            need(_CLASS_DICT(owner,type).get(name,_MISSING) is prior, 'Epoch class old identity')
+            type.__setattr__(owner,name,new)
+        origin['visible'][kind,name]=new
+
+    def observed_transition(self, handle, kind, name, old, new, role, product_graph):
+        """Source-owned existing wrapper operation, verified with old retained ref."""
+        origin=self.origin(handle)
+        owner, first, prior, chain=origin['slots'][kind,name]
+        need(old is prior, 'Epoch observed old identity')
+        current=owner[name] if type(owner) is dict else _CLASS_DICT(owner,type).get(name,_MISSING)
+        need(current is new and role in ROLE_FOR_SLOT[kind,name], 'Epoch observed source endpoint')
+        need(type(new) is _FUNCTION, 'Epoch observed function')
+        origin['products'].append(product_graph)
+        origin['slots'][kind,name]=(owner,first,new,chain+((old,new,role),))
+        origin['visible'][kind,name]=new
+        origin['edges'].append((kind,name,old,new,role,origin['generation']))
+
+    def expected(self, owner, name, old):
+        for origin in self.origins.values():
+            for (kind, field), (slot_owner, first, endpoint, chain) in origin['slots'].items():
+                if slot_owner is owner and field == name and chain:
+                    if old is first or any(old is item[0] for item in chain):
+                        return origin['visible'][kind,field]
+        return old
+
+    def expected_lookup(self, raw_record, namespace, name, expected):
+        # Exact ORIGINAL function-record identity/function + original namespace
+        # and lookup name/object. Products never become a replacement origin.
+        for origin in self.origins.values():
+            canonical=origin['function_map'].get(id(raw_record[0]))
+            if canonical is raw_record and namespace is origin['namespace']:
+                for old_name, old_value, old_builtin in canonical[4]:
+                    if old_name==name and old_value is expected:
+                        return self.expected(namespace,name,expected)
+        return expected
+
+    def original_record(self, function):
+        for origin in self.origins.values():
+            record=origin['function_map'].get(id(function))
+            if record is not None and record[0] is function:return record
+        return None
+
+    def original_class(self, cls):
+        for origin in self.origins.values():
+            for record in origin['authority_classes']:
+                if record[0] is cls:return record
+        return None
+
+    def projected_member(self, cls, name, expected):
+        return self.expected(cls,name,expected)
+
+    def check(self, handle):
+        origin=self.origin(handle); namespace=origin['namespace'];string_keys(namespace)
+        need(origin['module'].__dict__ is namespace and len(namespace)==len(origin['items']),
+             'Epoch source namespace owner/census')
+        for name, value in origin['items']:
+            need(namespace.get(name,_MISSING) is self.expected(namespace,name,value), 'Epoch module current binding')
+        graphs=((origin['functions'],origin['classes']),)+tuple(origin['products'])
+        seen=set()
+        for functions, classes in graphs:
+            for cls,mro,members in classes:
+                need(type(cls) is type and _CLASS_MRO(cls,type) is mro, 'Epoch class dispatch')
+                proxy=_CLASS_DICT(cls,type);need(len(proxy)==len(members),'Epoch class census')
+                for name,value in members:
+                    need(proxy.get(name,_MISSING) is self.expected(cls,name,value),'Epoch class current member')
+            for rec in functions:
+                if id(rec[0]) in seen:continue
+                seen.add(id(rec[0]));check_fields(rec)
+                fn, fields, keywords, cells, lookups,attrs=rec
+                ns,builtin_owner=fields[1:3];string_keys(ns);string_keys(builtin_owner)
+                for name,old,old_builtin in lookups:
+                    need(ns.get(name,origin['missing']) is self.expected_lookup(rec,ns,name,old), 'Epoch current effective global')
+                    need(builtin_owner.get(name,origin['missing']) is old_builtin,'Epoch current effective builtin')
+        return None
+
+    def phase_to(self,handle,expected,new):
+        origin=self.origin(handle);need(origin['phase']==expected,'Epoch phase transition')
+        origin['phase']=new;return None
+
+    def fix_raw_guard(self,handle,raw):
+        origin=self.origin(handle)
+        need(origin['phase']=='NATIVE_PRODUCTS_PREPARED' and origin['raw_guard'] is None,'Epoch raw guard phase')
+        origin['raw_guard']=raw;origin['phase']='GLOBALS_COMMITTED'
+
+    def finish_bind(self,handle,result,owner):
+        origin=self.origin(handle)
+        need(origin['phase']=='GLOBALS_COMMITTED' and type(result) is dict and
+             result.get('runtime_guard') is origin['raw_guard'] and owner.runtime is origin['raw_guard'],
+             'Epoch actual raw/final runtime guard')
+        self.check(handle)
+        result['runtime_guard'].check()
+        origin['phase']='FINAL_CAPTURED'
+
+    def fail(self,handle,error):
+        origin=self.origins.get(id(handle))
+        if origin is not None and origin['handle'] is handle:
+            origin['phase']='FAILED';origin['failure']=error
+        self.failure=error
+
+
+# Source supplement to the versioned authority; initial source loading is parent-owned.
+
+def _epoch_closure(function):
+    need(type(function) is types.FunctionType, 'Epoch wrapper exact function')
+    return {} if function.__closure__ is None else dict(zip(function.__code__.co_freevars,
+                (cell.cell_contents for cell in function.__closure__)))
+
+
+def _epoch_code_constant(code, name):
+    values=[x for x in code.co_consts if type(x) is types.CodeType and x.co_name==name]
+    need(len(values)==1, 'Epoch exact nested code '+name)
+    return values[0]
+
+
+def _epoch_operations(ledger, legacy, capture_graph0, raw_function0, descriptor_factory,
+                      record_for0, cold_check0, root, capability, api, missing,
+                      engine_guard, bundle_cell):
+    pending={}
+    entries={}
+    def before():
+        engine_guard();cold_check0()
+
+    def owned(handle, digest=None):
+        before();record=cold_check0(handle)
+        if digest is not None:need(record[5]==digest,'Epoch selected source pin')
+        return record
+
+    def suite_guard(handle,suite):
+        before()
+        origin=ledger.origin(handle)
+        record=owned(origin['cache_handle'],EPOCH_CACHE_SHA256)
+        cls=record[2].get('_EpochSuite')
+        need(type(suite) is cls and (origin['suite'] is suite or origin['suite'] is None and origin.get('creating') is True),'Epoch actual suite class/generation')
+        need(suite.handle is handle and suite.module is origin['module'] and
+             suite.namespace is origin['namespace'] and suite.label is origin['label'] and
+             suite.checks_class is origin['checks'] and suite.E0 is origin['slots']['module','echelon'][1] and
+             suite.owner is origin['factory_results'][2]['owner'],'Epoch fixed suite source bindings')
+        return origin,record
+
+    def product_graph(origin,functions=(),classes=()):
+        fg,cg=capture_graph0(tuple(functions),tuple(classes)+(origin['label'],origin['checks'],origin['circuit']))
+        return fg,tuple((x[0],x[1],x[3]) for x in cg)
+
+    def graph_fields_only(value):
+        functions,classes=value
+        for rec in functions:
+            check_fields(rec)
+            namespace,builtin_owner=rec[1][1:3]
+            string_keys(namespace);string_keys(builtin_owner)
+            for name,expected,expected_builtin in rec[4]:
+                need(namespace.get(name,missing) is ledger.expected_lookup(rec,namespace,name,expected),'Epoch factory current effective global')
+                need(builtin_owner.get(name,missing) is expected_builtin,'Epoch factory current effective builtin')
+        for cls,mro,members in classes:
+            need(type(cls) is type and type.__dict__['__mro__'].__get__(cls,type) is mro,'Epoch factory class MRO')
+            proxy=type.__dict__['__dict__'].__get__(cls,type)
+            need(len(proxy)==len(members),'Epoch factory class census')
+            for name,expected in members:need(proxy.get(name,missing) is ledger.projected_member(cls,name,expected),'Epoch factory class source')
+
+    def admit(stage,*args):
+        before();need(type(stage) is str,'Epoch admission stage type')
+        if stage=='driver_entry':
+            need(len(args)==3,'Epoch driver entry argument grammar')
+            function,phase_class,invocation_token=args
+            need(type(function) is types.FunctionType and function.__name__=='main_epoch' and
+                 function.__globals__ is sys.modules['__main__'].__dict__ and type(phase_class) is type and
+                 function.__globals__.get('Phases') is phase_class,'Epoch actual root-installed driver identity')
+            need(id(invocation_token) not in entries,'Epoch duplicate initial driver invocation')
+            fg,cg=capture_graph0((function,),(phase_class,))
+            record=next(row for row in fg if row[0] is function)
+            entries[id(invocation_token)]=(invocation_token,record,(fg,tuple((x[0],x[1],x[3]) for x in cg)),phase_class)
+            return record
+        if stage=='load':
+            need(len(args)==1,'Epoch original loader arguments')
+            backend_handle=args[0];record=owned(backend_handle,BACKEND_SHA256)
+            need(record[12]=='backend' and record[3]=='native_backend','Epoch production backend owner')
+            need(sys.modules.get('complex_circuit') is None,'Epoch fresh production module required')
+            loader=record[2].get('load_source')
+            need(type(loader) is types.FunctionType and loader.__globals__ is record[2],'Epoch original loader binding')
+            module=legacy[1](backend_handle,'load_source','complex_circuit')
+            need(type(module) is types.ModuleType and module.__name__=='complex_circuit','Epoch actual loaded module')
+            raw=record[1].verify_sources()
+            ticket=object();pending[id(ticket)]=(ticket,module,backend_handle,record[1],raw)
+            return module,ticket
+        need(stage=='factories' and len(args)==7,'Epoch original factory arguments')
+        ticket,set_handle,construction_handle,cache_handle,cache_args,cache_kwargs,context=args
+        item=pending.pop(id(ticket),None)
+        need(item is not None and item[0] is ticket,'Epoch one-shot genuine load ticket')
+        module,backend_handle,backend,raw=item[1:]
+        owned(backend_handle,BACKEND_SHA256);owned(set_handle,EPOCH_SET_SHA256)
+        owned(construction_handle,EPOCH_CONSTRUCTION_SHA256);cache_record=owned(cache_handle,EPOCH_CACHE_SHA256)
+        need(type(cache_args) is tuple and len(cache_args)==2 and type(cache_kwargs) is dict and
+             all(type(k) is str for k in cache_kwargs),'Epoch cache factory transport')
+        need(set(cache_kwargs)=={'bootstrap_root','bootstrap_capability','bootstrap_api','factory_environment'} and
+             cache_kwargs['bootstrap_root'] is root and cache_kwargs['bootstrap_capability'] is capability and
+             cache_kwargs['bootstrap_api'] is api,'Epoch actual original bootstrap/factory context')
+        need(type(context) is dict and all(type(k) is str for k in context) and set(context)=={'data_handle','data_module','phase_function','phase_class','phase_owner','driver_function','driver_record','invocation_token','disposition_state'},'Epoch exact source context key domain')
+        data_record=owned(context['data_handle'],EPOCH_DATA_SHA256)
+        need(context['data_module'] is data_record[1],'Epoch current data adapter owner')
+        phase_fn=context['phase_function'];phase_owner=context['phase_owner']
+        need(type(phase_fn) is types.FunctionType and type(phase_owner) is context['phase_class'] and
+             phase_fn is context['phase_class'].__dict__['wrap'] and
+             phase_fn.__globals__ is sys.modules['__main__'].__dict__,'Epoch genuine driver phase factory')
+        # Reference code is source authenticated DATA, compiled but never executed.
+        reference_path=pathlib.Path(__file__).with_name('reference_scientific_driver.py.txt')
+        reference=reference_path.read_bytes()
+        need(hashlib.sha256(reference).hexdigest()==EPOCH_REFERENCE_DRIVER_SHA256,'Epoch reference driver source')
+        original_code=compile(reference,phase_fn.__code__.co_filename,'exec',dont_inherit=True,optimize=sys.flags.optimize)
+        phase_code=_epoch_code_constant(_epoch_code_constant(original_code,'Phases'),'wrap')
+        need(backend._code_shape(phase_code)==backend._code_shape(phase_fn.__code__) and
+             phase_fn.__defaults__ is None and phase_fn.__kwdefaults__ is None and phase_fn.__closure__ is None,
+             'Epoch original phase source/calling contract')
+        entry=entries.pop(id(context['invocation_token']),None)
+        need(entry is not None and entry[0] is context['invocation_token'] and entry[1] is context['driver_record'] and
+             entry[3] is context['phase_class'],'Epoch original consumed driver-entry authority')
+        graph_fields_only(entry[2])
+        driver_record=context['driver_record'];check_fields(driver_record)
+        need(driver_record[0] is context['driver_function'] and driver_record[0].__globals__ is phase_fn.__globals__,
+             'Epoch initial driver function record')
+        disposition_state=context['disposition_state']
+        need(type(disposition_state) is dict and all(type(k) is str for k in disposition_state),'Epoch actual parent disposition state')
+        execution=driver_record[0].__globals__['_EXECUTION']
+        need(type(execution) is dict and all(type(k) is str for k in execution) and execution.get('state') is disposition_state,
+             'Epoch existing parent failure path must own acquisition state')
+        record=disposition_state.get('epoch_acquisition')
+        need(type(record) is dict and all(type(k) is str for k in record) and
+             disposition_state.get('cache_binding',missing) is None and disposition_state.get('authority') is legacy and
+             disposition_state.get('backend_handle') is backend_handle and disposition_state.get('enabled') is True and
+             type(disposition_state.get('owned_states')) is list and any(x is disposition_state for x in disposition_state['owned_states']) and
+             disposition_state.get('cache_teardown_attempted') is False,'Epoch continuously reachable disposition route')
+        # The pristine original functions/factories run before their mutations.
+        backend.guard_module(module)
+        p1=legacy[1](set_handle,'bind_verify_map',module)
+        construction=legacy[1](construction_handle,'bind_construction',module)
+        prepared=legacy[1](cache_handle,'prepare_epoch_cache_contract',module,*cache_args,
+            **cache_kwargs,disposition_state=disposition_state,disposition_record=record)
+        need(disposition_state['cache_binding'] is prepared and record['prepared'] is prepared and record['published'] is True,
+             'Epoch acquisition handoff preceded graph/capture')
+        fg,cg=capture_graph0(tuple(v for v in module.__dict__.values() if type(v) is types.FunctionType),
+                            (module.Label,module.Checks,module.ComplexSideCircuit))
+        handle=ledger.capture(module,backend,raw,(p1,construction,prepared),(fg,cg),missing)
+        record['origin_handle']=handle
+        origin=ledger.origin(handle)
+        origin.update({'backend_handle':backend_handle,'cache_handle':cache_handle,
+            'set_handle':set_handle,'construction_handle':construction_handle,'context':context,
+            'data_record':data_record,'phase_record':raw_function0(phase_fn),'driver_record':driver_record,
+            'creating':False,'native_pending':None,'driver_graph':entry[2]})
+        roots=tuple(v for mapping in (p1,construction) for v in mapping.values() if type(v) is types.FunctionType)
+        ff,fc=capture_graph0(roots,(type(p1['owner']),type(construction['owner']),type(prepared['owner'])))
+        origin['factory_graph']=(ff,tuple((x[0],x[1],x[3]) for x in fc))
+        origin['factory_items']=tuple((mapping,tuple(mapping.items())) for mapping in (p1,construction))
+        record['phase']='ORIGIN_ACCEPTED_PARENT_OWNED'
+        return handle,p1,construction,prepared
+
+    def derive(handle,context):
+        before()
+        origin=ledger.origin(handle);cache_record=owned(origin['cache_handle'],EPOCH_CACHE_SHA256)
+        need(origin['phase']=='ORIGINAL' and origin['context'] is context and not origin['creating'],
+             'Epoch suite creation provenance')
+        creator=cache_record[2].get('create_epoch_suite')
+        need(type(creator) is types.FunctionType and creator.__globals__ is cache_record[2],'Epoch suite source creator')
+        origin['creating']=True
+        try:
+            p1,construction,prepared=origin['factory_results']
+            prepared['owner']._epoch_creator_record=(bundle_cell[0][3],handle,context)
+            suite=creator(bundle_cell[0][3],handle,origin['module'],origin['backend'].verify_sources(),
+                          prepared,p1,construction,context,origin['generation'])
+            need(origin['suite'] is suite,'Epoch multiproduct creator ownership')
+            origin['suite_snapshot']=(suite.registry,suite.products,suite.caller_caps,suite.descriptor,
+                                       suite.prepared,suite.p1,suite.construction)
+            return suite
+        except BaseException as error:
+            ledger.fail(handle,error);raise
+        finally:origin['creating']=False
+
+    def check_factory(origin):
+        for mapping,items in origin['factory_items']:
+            need(type(mapping) is dict and len(mapping)==len(items),'Epoch original factory output census')
+            for key,value in items:need(mapping.get(key,missing) is value,'Epoch factory output binding')
+        graph_fields_only(origin['factory_graph'])
+        graph_fields_only(origin['driver_graph'])
+
+    def wrap_proof(origin,suite,kind,name,role,function):
+        need(type(function) is types.FunctionType,'Epoch wrapper function type')
+        owner,first,old,chain=origin['slots'][kind,name]
+        p1,construction,prepared=origin['factory_results'];context=origin['context']
+        if role=='construction_add':need(function is construction['add'],'Epoch original construction add product')
+        elif role=='p1':need(function is p1['verify_map'],'Epoch original P1 product')
+        elif role in ('public_label','public_residual'):
+            need(function is suite.products[role],'Epoch genuine public source product')
+        elif role=='checks_capture':
+            maker=origin['data_record'][2]['install_epoch_circuit']
+            need(function.__code__ is _epoch_code_constant(maker.__code__,'captured_checks') and
+                 function.__globals__ is origin['data_record'][2],'Epoch original checks observer source')
+            cells=_epoch_closure(function)
+            need(set(cells)=={'original_checks_init','capture_checks'} and cells['original_checks_init'] is old,
+                 'Epoch checks observer original constructor')
+            method=cells['capture_checks']
+            need(type(method) is types.MethodType and method.__self__ is p1['owner'] and
+                 method.__func__ is type(p1['owner']).__dict__['capture_checks'],'Epoch P1 capture method')
+        elif role=='phase':
+            check_fields(origin['phase_record']);phase=context['phase_function'];cells=_epoch_closure(function)
+            need(function.__code__ is _epoch_code_constant(phase.__code__,'observed') and
+                 function.__globals__ is phase.__globals__ and set(cells)=={'self','name','original'} and
+                 cells['self'] is context['phase_owner'] and cells['original'] is old and
+                 type(cells['name']) is str,'Epoch genuine original phase product')
+            expected={('circuit','__init__'):'side_construction',('checks','__init__'):'checks_initialization',
+                      ('module','compile_roles'):'compile_roles',('checks','verify_map'):'verify_map',
+                      ('checks','verify_labels'):'verify_labels'}
+            need((kind,name) in expected and cells['name']==expected[kind,name],'Epoch phase identity')
+        elif role=='roles_observer':
+            check_fields(origin['driver_record']);maker=context['driver_function'];cells=_epoch_closure(function)
+            need(function.__code__ is _epoch_code_constant(maker.__code__,'observe_roles') and
+                 function.__globals__ is maker.__globals__ and
+                 set(cells)=={'captures','original_roles','phases'} and cells['original_roles'] is old and
+                 cells['phases'] is context['phase_owner'] and type(cells['captures']) is dict,
+                 'Epoch actual role observation source')
+        else:need(False,'Epoch undeclared existing wrapper role')
+        defaults=function.__defaults__
+        need(function.__kwdefaults__ is None and (type(defaults) is tuple and len(defaults)==1 and defaults[0] is None if role=='roles_observer' else defaults is None),'Epoch wrapper default contract')
+        return old
+
+    def product(handle,suite,action,*args):
+        origin,record=suite_guard(handle,suite)
+        need(type(action) is str,'Epoch product action type')
+        if action=='product':
+            role,function=args
+            need(origin['creating'] is True or origin['suite'] is suite,'Epoch genuine source-product creator')
+            # Complete source factories already verified reconstructive inverses;
+            # both actual function and exact proof record must be in that suite.
+            if origin.get('suite_fields') is None:origin['suite_fields']=object.__getattribute__(suite,'__dict__')
+            proof=suite.proofs.get(id(function))
+            need(proof is not None and proof[0] is function and suite.products[role] is function,
+                 'Epoch multiproduct proof member')
+            check_fields(raw_function0(function))
+            return ledger.register_product(handle,suite,role,function,
+                       product_graph(origin,(function,),(type(suite),)))
+        if action=='install':
+            kind,name,role,function=args
+            need(suite.products.get(role) is function,'Epoch registered callsite product')
+            old=origin['slots'][kind,name][2]
+            ledger.authorize(handle,kind,name,old,function,role,product_graph(origin,(function,),(type(suite),)))
+            ledger.install(handle,kind,name,function)
+            return None
+        if action=='existing':
+            kind,name,role,function=args;check_factory(origin)
+            old=wrap_proof(origin,suite,kind,name,role,function)
+            ledger.authorize(handle,kind,name,old,function,role,product_graph(origin,(function,),(type(suite),)))
+            ledger.install(handle,kind,name,function)
+            return None
+        need(action=='construction_init' and not args,'Epoch constructor wrapper action')
+        check_factory(origin);p1,construction,prepared=origin['factory_results']
+        wrapper=construction['wrap_constructor'](construction['original_init'],p1['owner'].capture_c)
+        old=origin['slots']['circuit','__init__'][2]
+        ledger.authorize(handle,'circuit','__init__',old,wrapper,'construction_init',product_graph(origin,(wrapper,),(type(suite),)))
+        ledger.install(handle,'circuit','__init__',wrapper)
+        return wrapper
+
+    def stages(handle,suite,stage,*args):
+        origin,record=suite_guard(handle,suite)
+        need(type(stage) is str,'Epoch bind stage type')
+        if stage=='reconcile':
+            need(origin['phase']=='FACTORIES_ADMITTED','Epoch prebind phase')
+            # Every nonnative slot was installed through the source-owned API.
+            ledger.check(handle);origin['phase']='CALLERS_INSTALLED';return None
+        if stage=='prepare':
+            need(origin['phase']=='CALLERS_INSTALLED' and len(args)==5,'Epoch native preparation stage')
+            module,label,original_functions,complement,gram=args
+            need(module is origin['module'] and label is origin['label'] and type(original_functions) is list,
+                 'Epoch actual original bind arguments')
+            rank_calls,trace,native,row,final_guard=suite.bind_inputs
+            owned(origin['backend_handle'],BACKEND_SHA256)
+            backend=origin['backend'];check_fields(origin['phase_record']);check_fields(origin['driver_record'])
+            # The original trace factory ran after original guard_module and
+            # before the original native closures were assigned.
+            oldrank=origin['slots']['module','rank'][2];traced=module.rank
+            cells=_epoch_closure(traced)
+            need(traced.__code__ is _epoch_code_constant(backend.attach_trace.__code__,'traced_rank') and
+                 traced.__globals__ is backend.__dict__ and cells['original_rank'] is oldrank and
+                 cells['rank_calls'] is rank_calls,'Epoch original rank trace source')
+            ledger.observed_transition(handle,'module','rank',oldrank,traced,'rank_trace',product_graph(origin,(traced,)))
+            expected_helpers=[dict(origin['items'])[name] for name in backend._HELPER_NAMES]
+            expected_helpers.extend(v for name,v in origin['class_map'][id(label)][2] if type(v) is types.FunctionType)
+            need(len(original_functions)==len(expected_helpers) and all(a is b for a,b in zip(original_functions,expected_helpers)),
+                 'Epoch retained original bind function list')
+            records=[]
+            for name,fn,role,native_name in (('complement_in',complement,'native_complement','complement'),('nondegenerate',gram,'native_gram','gram_rank')):
+                expected_code=_epoch_code_constant(suite.bind_expected_code,name)
+                need(backend._code_shape(fn.__code__)==backend._code_shape(expected_code) and
+                     fn.__globals__ is backend.__dict__ and fn.__builtins__ is builtins.__dict__ and
+                     fn.__defaults__ is None and fn.__kwdefaults__ is None,'Epoch native closure code/calling source')
+                values=_epoch_closure(fn);need(values.get('runtime',missing) is None,'Epoch native pending runtime')
+                need(values.get('label',label) is label,'Epoch native Label closure')
+                entry=native.__dict__[native_name]
+                need(type(entry) is types.BuiltinFunctionType and entry.__self__ is native and
+                     values.get('native_complement' if name=='complement_in' else 'native_gram') is entry,
+                     'Epoch current native entry closure')
+                for field,value in values.items():
+                    if field=='runtime':continue
+                    expected={'label':label,'complement_trace':trace,'rank_calls':rank_calls,'rank_row_intern':row,
+                        'original_complement':origin['slots']['label','complement_in'][1],
+                        'original_nondegenerate':origin['slots']['label','nondegenerate'][1],
+                        'original_dot':dict(origin['items'])['dot'],'original_rank':dict(origin['items'])['rank']}.get(field,missing)
+                    if expected is not missing:need(value is expected,'Epoch native captured argument '+field)
+                    elif field=='counters':need(type(value) is dict and set(value)=={'complement_native','complement_fallback','gram_native','gram_fallback'} and all(type(v) is int and v==0 for v in value.values()),'Epoch actual initial counters')
+                    elif field not in ('native_complement','native_gram'):need(False,'Epoch unexpected native closure field '+field)
+                cell=dict(zip(fn.__code__.co_freevars,fn.__closure__))['runtime']
+                records.append((name,fn,role,cell,raw_function0(fn)))
+            origin['native_pending']=tuple(records);origin['phase']='NATIVE_PRODUCTS_PREPARED';return None
+        if stage=='commit':
+            need(len(args)==1 and origin['phase']=='NATIVE_PRODUCTS_PREPARED','Epoch global commit stage')
+            raw=args[0];need(type(raw) is suite.bind_inputs[4],'Epoch exact actual raw guard allocation')
+            for name,fn,role,cell,initial in origin['native_pending']:
+                need(cell.cell_contents is raw,'Epoch exact fixed runtime-cell endpoint')
+                fields=raw_function0(fn)
+                need(len(fields[1])==len(initial[1]) and all(a is b for a,b in zip(fields[1],initial[1])) and len(fields[3])==len(initial[3]),'Epoch native closure fields changed')
+                for (oldcell,oldvalue),(newcell,newvalue) in zip(initial[3],fields[3]):
+                    need(oldcell is newcell and (newvalue is raw if oldcell is cell else newvalue is oldvalue),'Epoch native cell transition')
+                old=origin['slots']['label',name][2]
+                ledger.observed_transition(handle,'label',name,old,fn,role,product_graph(origin,(fn,),(type(raw),)))
+            ledger.fix_raw_guard(handle,raw)
+            old=origin['slots']['module','echelon'][2];hook=suite.products['canonical']
+            # Only initialization can observe GLOBALS_COMMITTED; no epoch is armed.
+            origin['phase']='NATIVE_PRODUCTS_PREPARED'
+            ledger.authorize(handle,'module','echelon',old,hook,'canonical',product_graph(origin,(hook,),(type(suite),)))
+            ledger.install(handle,'module','echelon',hook);origin['phase']='GLOBALS_COMMITTED'
+            ledger.check(handle);return None
+        need(stage=='finish' and len(args)==2,'Epoch final binding stage')
+        return ledger.finish_bind(handle,args[0],args[1])
+
+    def seal(handle,suite):
+        origin,record=suite_guard(handle,suite)
+        need(origin['phase']=='FINAL_CAPTURED','Epoch seal after actual final graph')
+        ledger.check(handle);origin['phase']='SEALED';return None
+
+    def check(handle,suite):
+        origin,record=suite_guard(handle,suite)
+        need(origin['phase'] in ('FACTORIES_ADMITTED','CALLERS_INSTALLED','GLOBALS_COMMITTED','FINAL_CAPTURED','SEALED'),
+             'Epoch current binding phase')
+        if 'suite_snapshot' in origin:
+            values=origin['suite_snapshot']
+            need(all(a is b for a,b in zip(values,(suite.registry,suite.products,suite.caller_caps,suite.descriptor,
+                            suite.prepared,suite.p1,suite.construction))),'Epoch fixed suite data binding')
+            for role,fn in origin.get('private_products',{}).items():
+                need(suite.products.get(role) is fn,'Epoch actual product dispatch identity')
+        graph_fields_only(origin['driver_graph'])
+        ledger.check(handle);return None
+
+    def manifest(handle):
+        before();origin=ledger.origin(handle)
+        return {'schema':'h25-epoch-source-manifest-v1','generation':origin['generation'],
+                'phase':origin['phase'],'edge_count':len(origin['edges']),
+                'source_sha256':'d623617f7c5cb3189580883a8ab30c0bd3832688ae3f1f0c1f881bbbbff8e0c1',
+                'runtime_admission':False,'full_execution_contract':None}
+
+    # This fence owns failed installations. It runs metadata disposal only;
+    # no failed source/native check is retried and no origin is recaptured.
+    engine_guard()
+    getattrs=object.__getattribute__;setattrs=object.__setattr__
+    ledger_fields=getattrs(ledger,'__dict__');origins0=ledger_fields['origins']
+    failure_box=[None]
+    clear0=dict.clear;get0=dict.get;type0=type;id0=id;dict0=dict;str0=str
+    def failed(handle,error):
+        origin=get0(origins0,id0(handle))
+        if origin is None or get0(origin,'handle') is not handle:return None
+        origin['phase']='FAILED'
+        if origin['primary_error'] is None:origin['primary_error']=error
+        if failure_box[0] is None:failure_box[0]=error
+        # Do not write a rejected/current instance namespace here. The actual
+        # origin/Suite dictionaries and independent failure_box own P; Core.fail
+        # remains the legitimate source transition for its diagnostic scalar.
+        suite=get0(origin,'suite')
+        if suite is None:return None
+        fields=get0(origin,'suite_fields')
+        if fields is None:return None
+        if get0(fields,'primary_error') is None:fields['primary_error']=error
+        fields['active']=False;fields['terminal']=True;fields['pending']=None
+        fields['checks']=None;fields['checks_c']=None;fields['checks_h']=None
+        try:
+            registry=get0(fields,'registry')
+            if type0(registry) is not dict0:raise RuntimeError('Epoch failed registry is not exact metadata dict')
+            clear0(registry)
+        except BaseException as secondary:
+            origin['uncertain']=True;fields['uncertain']=True
+            if origin['secondary_error'] is None:origin['secondary_error']=secondary
+            if get0(fields,'secondary_error') is None:fields['secondary_error']=secondary
+        return None
+
+    def plain0(value):
+        if type0(value) is not dict0:return False
+        for key in value:
+            if type0(key) is not str0:return False
+        return True
+
+    def protect(function):
+        def operation(*args,**kwargs):
+            try:
+                engine_guard()
+                return function(*args,**kwargs)
+            except BaseException as primary:
+                if function is admit:
+                    if len(args)==8 and type0(args[0]) is str and args[0]=='factories':
+                        context=args[-1]
+                        if plain0(context):
+                            state=get0(context,'disposition_state')
+                            record=get0(state,'epoch_acquisition') if plain0(state) else None
+                            if plain0(record):
+                                if get0(record,'primary') is None:record['primary']=primary
+                                handle=get0(record,'origin_handle')
+                                if handle is not None:failed(handle,primary)
+                elif args:failed(args[0],primary)
+                raise
+        return operation
+
+    return tuple(protect(fn) for fn in (admit,derive,product,stages,seal,check,manifest))
+
+
+EPOCH_CACHE_SHA256 = 'd317c9866566cd6147c96566879f26f364e7e6801ac3eed0800b6ed8eedd01a2'
+EPOCH_DATA_SHA256 = '18679fd1eb6ae99c4b375756511427c26718f77674c2d8fcc490e25ceb47cba5'
+EPOCH_SET_SHA256 = 'eeeead34731e73f74dff250f354e57b72314c4e18670848bfa9f48c87de1305d'
+EPOCH_CONSTRUCTION_SHA256 = 'ed7fd6c8a93c524c4d28245e48d75d6b949234a5a60f6affb8025f27ef9506b5'
+EPOCH_REFERENCE_DRIVER_SHA256 = '8027a1b24d08a598c2aa9e91cfe791edd58d1b87b17ce5957cee2d5da49d5c2f'
+
+def capture_epoch_authority(root, capability, api):
+    """Return load/invoke/check/runtime_guard/check_product/set_guard/source.
+
+    The trusted parent calls this entry once immediately after raw source exec.
+    A later backend instance derives provenance from this original token; it
+    cannot substitute a newly captured stdlib or a self-reported class record.
+    """
+    if _CAPTURE_ONCE:
+        raise RuntimeError('Cold authority can only be captured once before exposure')
+    _CAPTURE_ONCE.append(True)
+    type0, id0, len0, next0, tuple0, list0 = type, id, len, next, tuple, list
+    dict0, str0, bytes0, object0, int0 = dict, str, bytes, object, int
+    error0, base_error0, value_error0 = RuntimeError, BaseException, ValueError
+    function_type, module_type, code_type = types.FunctionType, types.ModuleType, types.CodeType
+    builtin_type, cell_type = types.BuiltinFunctionType, types.CellType
+    static_type, class_type, property_type = staticmethod, classmethod, property
+    dict_get, dict_items, dict_iter = dict.get, dict.items, dict.__iter__
+    dict_len, dict_set, dict_del, dict_clear = dict.__len__, dict.__setitem__, dict.__delitem__, dict.clear
+    object_get = object.__getattribute__
+    type_get = type.__getattribute__
+    module_dict_get = module_type.__dict__['__dict__'].__get__
+    class_dict_get = type.__dict__['__dict__'].__get__
+    class_mro_get = type.__dict__['__mro__'].__get__
+    cell_get = cell_type.__dict__['cell_contents'].__get__
+    function_fields = tuple((name, function_type.__dict__[name].__get__) for name in
+                            ('__code__', '__globals__', '__builtins__', '__defaults__',
+                             '__kwdefaults__', '__closure__', '__dict__'))
+    proxy_type = type(type.__dict__)
+    proxy_get, proxy_iter, proxy_items, proxy_len = proxy_type.get, proxy_type.__iter__, proxy_type.items, proxy_type.__len__
+    builtin_self_get = builtin_type.__dict__['__self__'].__get__
+    builtin_namespace = builtins.__dict__
+    missing = object0()
+    missing_id = id0(missing)
+    initial_sys_modules = sys.modules
+    initial_sys_flags = sys.flags
+    initial_optimize = sys.flags.optimize
+    sys_owner = sys
+    sys_namespace = module_dict_get(sys_owner, module_type)
+    authority_namespace = globals()
+    root_pin, provider_pin, backend_pin = ROOT_SHA256, PROVIDER_SHA256, BACKEND_SHA256
+    cache_pin = EPOCH_CACHE_SHA256
+    max_source, max_functions, max_classes = 1048576, 8192, 2048
+    registry, by_namespace, products, backend_guards = {}, {}, {}, {}
+    transitions = []
+    ledger = EpochLedger()
+    bundle_cell = []
+    descriptor_cell = []
+    engine_class = EpochLedger
+    engine_mro = class_mro_get(engine_class, type0)
+    engine_members = tuple0(proxy_items(class_dict_get(engine_class,type0)))
+    engine_dict_get = proxy_get(class_dict_get(engine_class,type0),'__dict__').__get__
+    engine_namespace = engine_dict_get(ledger,engine_class)
+    if type0(engine_namespace) is not dict0:raise error0('Epoch engine instance dictionary differs')
+    initial_iterator=initial_key=None
+    initial_valid=True
+    try:
+        initial_iterator=dict_iter(engine_namespace)
+        while True:
+            initial_key=next0(initial_iterator,missing)
+            if initial_key is missing:break
+            if type0(initial_key) is not str0:initial_valid=False;break
+            initial_key=None
+    finally:initial_iterator=initial_key=None
+    if not initial_valid:raise error0('Epoch engine instance key domain differs')
+    engine_namespace_names = tuple0(dict_iter(engine_namespace))
+    engine_origins = dict_get(engine_namespace,'origins',missing)
+    engine_class_origin = dict_get(engine_namespace,'class_origin',missing)
+    engine_method_origin = dict_get(engine_namespace,'method_origin',missing)
+    engine_functions = tuple0((value,tuple0(getter(value,function_type) for _,getter in function_fields))
+                             for name,value in engine_members if type0(value) is function_type)
+    def engine_guard():
+        if type0(ledger) is not engine_class or class_mro_get(engine_class,type0) is not engine_mro:
+            raise error0('Epoch engine class identity differs')
+        actual_namespace=engine_dict_get(ledger,engine_class)
+        if type0(actual_namespace) is not dict0 or actual_namespace is not engine_namespace:
+            raise error0('Epoch engine instance namespace differs')
+        iterator=current=None
+        valid_domain=True
+        try:
+            iterator=dict_iter(actual_namespace)
+            while True:
+                current=next0(iterator,missing)
+                if current is missing:break
+                if type0(current) is not str0:valid_domain=False;break
+                current=None
+        finally:iterator=current=None
+        if not valid_domain:raise error0('Epoch engine instance key domain differs')
+        if dict_len(actual_namespace)!=len0(engine_namespace_names):
+            raise error0('Epoch engine instance member census differs')
+        for field in engine_namespace_names:
+            if dict_get(actual_namespace,field,missing) is missing:
+                raise error0('Epoch engine instance member binding differs')
+        if dict_get(actual_namespace,'origins',missing) is not engine_origins:
+            raise error0('Epoch engine instance origins binding differs')
+        if dict_get(actual_namespace,'class_origin',missing) is not engine_class_origin or dict_get(actual_namespace,'method_origin',missing) is not engine_method_origin:
+            raise error0('Epoch engine fixed record binding differs')
+        current_phase=dict_get(actual_namespace,'phase',missing)
+        current_serial=dict_get(actual_namespace,'serial',missing)
+        current_failure=dict_get(actual_namespace,'failure',missing)
+        if type0(current_phase) is not str0 or current_phase not in ('COLD','ORIGINAL'):
+            raise error0('Epoch engine phase schema differs')
+        if type0(current_serial) is not int0 or current_serial<0 or current_serial>1 or (current_phase=='ORIGINAL' and current_serial!=1):
+            raise error0('Epoch engine serial schema differs')
+        # COLD/1 is a real in-progress or failed original capture interval.
+        # failure is None or an actual native BaseException subclass instance;
+        # the native type MRO avoids arbitrary __class__/isinstance callbacks.
+        if current_failure is not None:
+            failure_type=type0(current_failure)
+            failure_bases=class_mro_get(failure_type,type0)
+            valid_failure=False
+            for base in failure_bases:
+                if base is base_error0:valid_failure=True;break
+            if not valid_failure:raise error0('Epoch engine failure schema differs')
+        proxy=class_dict_get(engine_class,type0)
+        if proxy_len(proxy)!=len0(engine_members):raise error0('Epoch engine class census differs')
+        for name,value in engine_members:
+            if proxy_get(proxy,name,missing) is not value:raise error0('Epoch engine class binding differs')
+        for function,fields in engine_functions:
+            for (_,getter),expected in zip0(function_fields,fields):
+                if getter(function,function_type) is not expected:raise error0('Epoch engine method environment differs')
+    initial_std_modules = (_ast, ast, copy, copyreg, genericpath, hashlib, io,
+                           ntpath, os, pathlib, posixpath, types)
+    producer_rules = (
+        ('320435ec4125544f2b2aedf74f21469b232d08683fe76f0913607516254bbd29', 'make_runtime_guard', 'backend_guard'),
+        ('f7ca7f4f03ac63c1a95ba42f06149543211566de5e29f487a3dc4d08c5ee9b94', 'extra_guard_type', 'extra_guard'),
+        ('4bdb401271ffd049c52eff0edc28d8d604a11faf66fec419555a82cbd3b32d60', 'make_trace_type', 'trace'),
+        ('364b45c100be73a7ace44ab664f3c792020dad6f33f7788b62aaeab67c0c5aa9', 'make_row_interner', 'row_function'),
+        ('364b45c100be73a7ace44ab664f3c792020dad6f33f7788b62aaeab67c0c5aa9', 'make_runtime_guard', 'row_guard'),
+        ('364b45c100be73a7ace44ab664f3c792020dad6f33f7788b62aaeab67c0c5aa9', 'make_cache_runtime_guard', 'row_guard'),
+        ('5aeee9364d29147ef4e1bfffba532f7392833a6158d73d1da50ed6c772f061af', 'derive_row_bind', 'row_bind'),
+        (cache_pin, 'compose_runtime_guard', 'cache_guard'),
+        (cache_pin, 'compose_epoch_runtime_guard', 'epoch_guard'))
+
+    def need(ok, message):
+        if not ok:
+            raise error0(message)
+
+    def string_domain(owner, domains):
+        key = iterator = kind = None
+        try:
+            identity = id0(owner)
+            prior = dict_get(domains, identity, missing)
+            if prior is not missing:
+                return prior
+            kind = type0(owner)
+            if kind is dict0:
+                iterator = dict_iter(owner)
+            elif kind is proxy_type:
+                iterator = proxy_iter(owner)
+            else:
+                return False
+            while True:
+                key = next0(iterator, missing)
+                if key is missing:
+                    break
+                if type0(key) is not str0:
+                    dict_set(domains, identity, False)
+                    return False
+                key = None
+            dict_set(domains, identity, True)
+            return True
+        finally:
+            key = iterator = kind = owner = None
+
+    def get_id(owner, name, domains):
+        try:
+            if type0(name) is not str0 or not string_domain(owner, domains):
+                return -1
+            if type0(owner) is dict0:
+                return id0(dict_get(owner, name, missing))
+            return id0(proxy_get(owner, name, missing))
+        finally:
+            owner = None
+
+    def identity_mapping(owner, expected):
+        """Non-string dispatch dictionaries: identity scan, never key equality."""
+        iterator = pair = key = value = None
+        try:
+            if type0(owner) is not dict0 or dict_len(owner) != len0(expected):
+                return False
+            iterator = iter0(dict_items(owner))
+            while True:
+                pair = next0(iterator, missing)
+                if pair is missing:
+                    break
+                key, value = pair
+                found = False
+                for old_key, old_value in expected:
+                    if key is old_key:
+                        if value is not old_value:
+                            return False
+                        found = True
+                        break
+                if not found:
+                    return False
+                pair = key = value = None
+            return True
+        finally:
+            iterator = pair = key = value = owner = None
+
+    iter0 = iter
+
+    def code_names(code):
+        pending, result, seen = [code], [], {}
+        while pending:
+            current = pending.pop()
+            need(type0(current) is code_type, 'Cold authority code shape differs')
+            for name in current.co_names:
+                need(type0(name) is str0, 'Cold authority code name shape differs')
+                if dict_get(seen, name, missing) is missing:
+                    dict_set(seen, name, True)
+                    result.append(name)
+            for value in current.co_consts:
+                if type0(value) is code_type:
+                    pending.append(value)
+        return tuple0(result)
+
+    def raw_function_record(function):
+        need(type0(function) is function_type, 'Cold authority requires exact functions')
+        values = tuple0(getter(function, function_type) for _, getter in function_fields)
+        code, namespace, builtins_owner, defaults, keywords, closure, attributes = values
+        domains = {}
+        try:
+            need(type0(namespace) is dict0 and type0(builtins_owner) is dict0 and
+                 string_domain(namespace, domains) and string_domain(builtins_owner, domains),
+                 'Cold authority initial function dictionary domain differs')
+            keyword_items = ()
+            if keywords is not None:
+                need(type0(keywords) is dict0 and string_domain(keywords, domains),
+                     'Cold authority initial keyword defaults differ')
+                keyword_items = tuple0(dict_items(keywords))
+            cells = () if closure is None else tuple0((cell, cell_get(cell, cell_type)) for cell in closure)
+            lookups = tuple0((name, dict_get(namespace, name, missing), dict_get(builtins_owner, name, missing))
+                            for name in code_names(code))
+            need(type0(attributes) is dict0 and string_domain(attributes, domains),
+                 'Cold authority function attribute dictionary differs')
+            return (function, values, keyword_items, cells, lookups, tuple0(dict_items(attributes)))
+        finally:
+            dict_clear(domains)
+
+    def capture_graph(initial_functions, initial_classes):
+        """Called only at initial source load or directly after an admitted producer."""
+        functions, classes, seen_functions, seen_classes = [], [], {}, {}
+        pending_functions, pending_classes = list0(initial_functions), list0(initial_classes)
+        while pending_functions or pending_classes:
+            while pending_classes:
+                cls = pending_classes.pop()
+                need(type0(cls) is type0, 'Cold authority class metaclass differs')
+                if dict_get(seen_classes, id0(cls), missing) is not missing:
+                    continue
+                need(len0(classes) < max_classes, 'Cold authority class census exceeds bound')
+                dict_set(seen_classes, id0(cls), cls)
+                mro = class_mro_get(cls, type0)
+                proxy = class_dict_get(cls, type0)
+                engine_guard()
+                canonical_class = ledger.original_class(cls)
+                members = tuple0(proxy_items(proxy)) if canonical_class is None else canonical_class[3]
+                classes.append((cls, mro, proxy, members) if canonical_class is None else canonical_class)
+                for base in mro[1:]:
+                    if type0(base) is type0:
+                        pending_classes.append(base)
+                for name, value in members:
+                    need(type0(name) is str0, 'Cold authority class member name differs')
+                    kind = type0(value)
+                    if kind is function_type:
+                        pending_functions.append(value)
+                    elif kind is static_type or kind is class_type:
+                        underlying = object_get(value, '__func__')
+                        if type0(underlying) is function_type:
+                            pending_functions.append(underlying)
+                    elif kind is property_type:
+                        for field in ('fget', 'fset', 'fdel'):
+                            underlying = object_get(value, field)
+                            if type0(underlying) is function_type:
+                                pending_functions.append(underlying)
+            if pending_functions:
+                function = pending_functions.pop()
+                if dict_get(seen_functions, id0(function), missing) is not missing:
+                    continue
+                need(len0(functions) < max_functions, 'Cold authority function census exceeds bound')
+                engine_guard()
+                canonical_function = ledger.original_record(function)
+                record = raw_function_record(function) if canonical_function is None else canonical_function
+                dict_set(seen_functions, id0(function), function)
+                functions.append(record)
+                for cell, value in record[3]:
+                    if type0(value) is function_type:
+                        pending_functions.append(value)
+                defaults = record[1][3]
+                if defaults is not None:
+                    need(type0(defaults) is tuple0, 'Cold authority positional defaults shape differs')
+                    for value in defaults:
+                        if type0(value) is function_type:
+                            pending_functions.append(value)
+                for name, value in record[2] + record[5]:
+                    if type0(value) is function_type:
+                        pending_functions.append(value)
+                # Source-owned function helpers reached through effective globals
+                # are authenticated transitively, including validator helpers.
+                for name, value, builtin_value in record[4]:
+                    if type0(value) is function_type:
+                        pending_functions.append(value)
+        return (tuple0(functions), tuple0(classes))
+
+    def expected_global(namespace, name, expected, original_record=None):
+        engine_guard()
+        if original_record is not None:
+            projected = ledger.expected_lookup(original_record,namespace,name,expected)
+        else:
+            projected = ledger.expected(namespace,name,expected)
+        if projected is not expected:return projected
+        if name != 'RuntimeGuard':
+            return expected
+        record = dict_get(by_namespace, id0(namespace), missing)
+        if record is not missing and record[2] is namespace and record[12] == 'backend':
+            return dict_get(backend_guards, id0(record[0]), missing)
+        return expected
+
+    def fresh_function(record, domains, builtin_values):
+        function, values, keyword_items, cells, lookups, attributes_items = record
+        if type0(function) is not function_type:
+            return False
+        field_key = ('function-fields', id0(function))
+        observed_fields = dict_get(domains, field_key, missing)
+        if observed_fields is missing:
+            scalar_fields = []
+            for (_, getter), expected in zip0(function_fields, values):
+                observed_id = id0(getter(function, function_type))
+                if observed_id != id0(expected):
+                    return False
+                scalar_fields.append(observed_id)
+            dict_set(domains, field_key, tuple0(scalar_fields))
+        else:
+            if len0(observed_fields) != len0(values):
+                return False
+            for observed_id, expected in zip0(observed_fields, values):
+                if observed_id != id0(expected):
+                    return False
+        code, namespace, builtins_owner, defaults, keywords, closure, attributes = values
+        if keywords is not None:
+            if type0(keywords) is not dict0 or dict_len(keywords) != len0(keyword_items):
+                return False
+            for name, expected in keyword_items:
+                if get_id(keywords, name, domains) != id0(expected):
+                    return False
+        for cell, expected in cells:
+            try:
+                if id0(cell_get(cell, cell_type)) != id0(expected):
+                    return False
+            except value_error0:
+                return False
+        if dict_len(attributes) != len0(attributes_items):
+            return False
+        for name, expected in attributes_items:
+            if get_id(attributes, name, domains) != id0(expected):
+                return False
+        lookup_key = ('function-lookups', id0(function), id0(code),
+                      id0(namespace), id0(builtins_owner))
+        observed_lookups = dict_get(domains, lookup_key, missing)
+        if observed_lookups is missing:
+            scalar_lookups = []
+            for name, expected, expected_builtin in lookups:
+                observed_global = get_id(namespace, name, domains)
+                if observed_global != id0(expected_global(namespace, name, expected, record)):
+                    return False
+                # A false builtin_values path must not observe builtin keys or
+                # values. The absent slot is completed only in a later true path.
+                if builtin_values:
+                    observed_builtin = get_id(builtins_owner, name, domains)
+                    if observed_builtin != id0(expected_builtin):
+                        return False
+                    scalar_lookups.append((name, observed_global, True, observed_builtin))
+                else:
+                    scalar_lookups.append((name, observed_global, False, 0))
+            dict_set(domains, lookup_key, tuple0(scalar_lookups))
+        else:
+            if len0(observed_lookups) != len0(lookups):
+                return False
+            completed_lookups = None
+            index = 0
+            for (name, expected, expected_builtin), observed in zip0(lookups, observed_lookups):
+                if observed[0] != name:
+                    return False
+                if observed[1] != id0(expected_global(namespace, name, expected, record)):
+                    return False
+                if builtin_values:
+                    if observed[2]:
+                        observed_builtin = observed[3]
+                    else:
+                        observed_builtin = get_id(builtins_owner, name, domains)
+                    if observed_builtin != id0(expected_builtin):
+                        return False
+                    if not observed[2]:
+                        if completed_lookups is None:
+                            completed_lookups = list0(observed_lookups)
+                        completed_lookups[index] = (name, observed[1], True, observed_builtin)
+                index += 1
+            if completed_lookups is not None:
+                dict_set(domains, lookup_key, tuple0(completed_lookups))
+        return True
+
+    zip0 = zip
+
+    def fresh_graph(graph, domains, builtin_values, message):
+        functions, classes = graph
+        for cls, mro, proxy, members in classes:
+            if not (type0(cls) is type0 and class_mro_get(cls, type0) is mro and
+                 proxy_len(proxy) == len0(members)):
+                need(False, message + ': class dispatch')
+            for name, expected in members:
+                if not (get_id(proxy, name, domains) == id0(ledger.projected_member(cls, name, expected))):
+                    need(False, message + ': class member ' + name)
+        for record in functions:
+            if not (fresh_function(record, domains, builtin_values)):
+                need(False, message + ': function environment')
+
+    def module_image(module, name, kind, path, digest, source_bytes, *, stdlib=False):
+        need(type0(module) is module_type, 'Cold authority module exact type differs')
+        namespace = module_dict_get(module, module_type)
+        domains = {}
+        try:
+            need(type0(namespace) is dict0 and string_domain(namespace, domains),
+                 'Cold authority module dictionary domain differs')
+            items = tuple0(dict_items(namespace))
+            functions, classes = [], []
+            for field, value in items:
+                if type0(value) is function_type:
+                    if stdlib or value.__globals__ is namespace:
+                        functions.append(value)
+                elif type0(value) is type0:
+                    declared = type_get(value, '__module__')
+                    if stdlib or (type0(declared) is str0 and declared == name):
+                        classes.append(value)
+            graph = capture_graph(functions, classes)
+            mappings = []
+            selected = ('_CANONICAL_BUILTINS', '_TYPE_BUILTINS') if kind == 'backend' else ()
+            for field in selected:
+                mapping = dict_get(namespace, field, missing)
+                need(type0(mapping) is dict0, 'Cold authority backend dispatch dictionary differs')
+                mappings.append((field, mapping, tuple0(dict_items(mapping))))
+            original_guard = dict_get(namespace, 'RuntimeGuard', missing) if kind == 'backend' else None
+            if kind == 'backend':
+                need(type0(original_guard) is type0, 'Cold authority original RuntimeGuard differs')
+            handle = object0()
+            return (handle, module, namespace, name, path, digest, source_bytes,
+                    items, graph[0], graph[1], tuple0(mappings), original_guard, kind)
+        finally:
+            dict_clear(domains)
+
+    def record_for(handle):
+        record = dict_get(registry, id0(handle), missing)
+        need(record is not missing and record[0] is handle, 'Cold authority handle is not registered')
+        return record
+
+    def fresh_module(record, domains, builtin_values, *, registry_slot=True, exact_census=True, prefix='Cold authority'):
+        module, namespace = record[1], record[2]
+        if not (type0(module) is module_type and module_dict_get(module, module_type) is namespace):
+            need(False, prefix + ': module owner differs')
+        if registry_slot:
+            if not (get_id(initial_sys_modules, record[3], domains) == id0(module)):
+                need(False, prefix + ': registered module slot differs')
+        if exact_census:
+            if not (dict_len(namespace) == len0(record[7])):
+                need(False, prefix + ': namespace census differs')
+        for name, expected in record[7]:
+            if not (get_id(namespace, name, domains) == id0(expected_global(namespace, name, expected))):
+                need(False, prefix + ': namespace binding ' + name)
+        for name, mapping, expected in record[10]:
+            if not (identity_mapping(mapping, expected)):
+                need(False, prefix + ': dispatch dictionary ' + name)
+        fresh_graph((record[8], record[9]), domains, builtin_values, prefix)
+
+    need(type0(root) is module_type and type0(api) is tuple0 and len0(api) == 4,
+         'Cold authority requires the actual pristine root and sealed fourtuple')
+    root_namespace = module_dict_get(root, module_type)
+    root_api_graph = capture_graph(api, ())
+    root_hash = dict_get(root_namespace, '_hash_regular', missing)
+    root_compile = dict_get(root_namespace, '_COMPILE', missing)
+    root_exec = dict_get(root_namespace, '_EXEC', missing)
+    root_identity = api[0]
+    initial_builtin_items = tuple0(dict_items(builtin_namespace))
+    stdlib_records = tuple0(module_image(module, module.__name__, 'stdlib', None, None, None, stdlib=True)
+                           for module in initial_std_modules)
+    stdlib_mappings = tuple0((mapping, tuple0(dict_items(mapping))) for mapping in
+                            (copy._deepcopy_dispatch, copy.dispatch_table, copyreg.dispatch_table))
+    self_graph = capture_graph((dict_get(authority_namespace, 'capture_epoch_authority'),), (EpochLedger,))
+    self_items = tuple0(dict_items(authority_namespace))
+
+    def root_and_stdlib(domains):
+        need(type0(sys_owner) is module_type and module_dict_get(sys_owner, module_type) is sys_namespace and
+             get_id(sys_namespace, 'modules', domains) == id0(initial_sys_modules) and
+             get_id(sys_namespace, 'flags', domains) == id0(initial_sys_flags),
+             'Cold authority interpreter owner differs')
+        need(dict_len(builtin_namespace) == len0(initial_builtin_items), 'Cold authority builtin census differs')
+        for name, expected in initial_builtin_items:
+            need(get_id(builtin_namespace, name, domains) == id0(expected), 'Cold authority builtin binding ' + name)
+        for name, expected in self_items:
+            need(get_id(authority_namespace, name, domains) == id0(expected), 'Cold authority source binding ' + name)
+        fresh_graph(self_graph, domains, True, 'Cold authority source')
+        fresh_graph(root_api_graph, domains, True, 'Cold authority root entry')
+        dict_clear(domains)
+        need(root_identity() == root_pin, 'Cold authority actual root source identity differs')
+        dict_clear(domains)
+        for record in stdlib_records:
+            fresh_module(record, domains, True, registry_slot=True, exact_census=False, prefix='Cold authority initial stdlib')
+        for mapping, expected in stdlib_mappings:
+            need(identity_mapping(mapping, expected), 'Cold authority initial copy dispatch differs')
+
+    def check_registered(domains):
+        for record in tuple0(registry.values()):
+            fresh_module(record, domains, True)
+        for product_record in tuple0(products.values()):
+            fresh_graph(product_record[5], domains, True, 'Epoch current registered source product')
+
+    def cold_check(handle=None):
+        domains = {}
+        try:
+            root_and_stdlib(domains)
+            check_registered(domains)
+            if handle is not None:
+                record = record_for(handle)
+                dict_clear(domains)
+                digest, size, raw = root_hash(record[4], max_source, False)
+                need(digest == record[5], 'Cold authority source file changed')
+                return record
+            return None
+        finally:
+            dict_clear(domains)
+
+    def load(path, digest, name, kind='module'):
+        cold_check()
+        need(type0(path) is str0 and path.startswith('/') and type0(digest) is str0 and len0(digest) == 64 and
+             type0(name) is str0 and name and type0(kind) is str0 and kind in ('module', 'backend'),
+             'Cold authority source-load argument shape differs')
+        for character in digest:
+            need(character in '0123456789abcdef', 'Cold authority source digest is not lowercase SHA256')
+        need((kind == 'backend') == (digest == backend_pin), 'Cold authority original backend classification differs')
+        domains = {}
+        try:
+            need(get_id(initial_sys_modules, name, domains) == missing_id, 'Cold authority module name already registered')
+        finally:
+            dict_clear(domains)
+        observed, size, source_bytes = root_hash(path, max_source, True)
+        need(observed == digest and type0(source_bytes) is bytes0, 'Cold authority source bytes differ')
+        module = module_type(name)
+        namespace = module_dict_get(module, module_type)
+        namespace.update({'__file__': path, '__builtins__': builtin_namespace})
+        # Dataclass/import ownership sees the correct unique slot during exec.
+        dict_set(initial_sys_modules, name, module)
+        try:
+            code = root_compile(source_bytes, path, 'exec', dont_inherit=True, optimize=initial_optimize)
+            root_exec(code, namespace)
+            record = module_image(module, name, kind, path, digest, source_bytes)
+            dict_set(registry, id0(record[0]), record)
+            dict_set(by_namespace, id0(namespace), record)
+            if kind == 'backend':
+                dict_set(backend_guards, id0(record[0]), record[11])
+            cold_check(record[0])
+        except base_error0:
+            # A failed source is retained in the unique slot for evidence and
+            # cannot be retried/reclassified as an unobserved clean load.
+            raise
+        return (module, record[0])
+
+    def make_caller_descriptor(operations, label):
+        """Mint only at original capture or an authenticated entry-three return.
+
+        The caller checks the dispatcher record INLINE before invoking it. This
+        is not a claim that the dispatcher can authenticate its own replacement
+        code. Its already-admitted active frame checks all target/helper objects.
+        """
+        pending, seen, records = list0(operations), {}, []
+        # Authenticate every borrowed ledger/support helper before invocation.
+        pending.extend(value for name,value in tuple0(dict_items(authority_namespace)) if type0(value) is function_type)
+        pending.extend(value for name,value in engine_members if type0(value) is function_type)
+        while pending:
+            function = pending.pop()
+            if dict_get(seen, id0(function), missing) is not missing:
+                continue
+            need(len0(records) < max_functions, 'Cold authority caller helper census exceeds bound')
+            raw = raw_function_record(function)
+            record = (function,) + raw[1][:6] + (raw[2], raw[3])
+            dict_set(seen, id0(function), function)
+            records.append(record)
+            for cell, value in record[8]:
+                if type0(value) is function_type:
+                    pending.append(value)
+        records = tuple0(records)
+        field_getters = function_fields[:6]
+        primitives = (type0, function_type, id0, len0, field_getters, cell_type,
+                      cell_get, error0, value_error0, tuple0, dict0, str0,
+                      dict_get, dict_len, dict_iter, next0, dict_clear, missing, zip0)
+
+        def dispatch(index, *args, **kwargs):
+            # The active caller has already authenticated this actual function.
+            # This pretarget block uses captured C primitives only. In particular
+            # it does not call need(), fresh_function(), or any other validator.
+            if type0(index) is not int0 or index < 0 or index >= len0(operations):
+                raise error0(label + ': operation index differs')
+            for record in records:
+                function = record[0]
+                if type0(function) is not function_type:
+                    raise error0(label + ': target exact function differs')
+                for (name, getter), expected in zip0(field_getters, record[1:7]):
+                    if id0(getter(function, function_type)) != id0(expected):
+                        raise error0(label + ': target function environment differs')
+                keywords = record[5]
+                if keywords is not None:
+                    if type0(keywords) is not dict0 or dict_len(keywords) != len0(record[7]):
+                        raise error0(label + ': target keyword census differs')
+                    iterator = current = None
+                    valid_domain = True
+                    try:
+                        iterator = dict_iter(keywords)
+                        while True:
+                            current = next0(iterator, missing)
+                            if current is missing:
+                                break
+                            if type0(current) is not str0:
+                                valid_domain = False
+                                break
+                            current = None
+                    finally:
+                        # Foreign current keys never survive a retained error.
+                        iterator = current = None
+                    if not valid_domain:
+                        raise error0(label + ': target keyword key domain differs')
+                    for name, expected in record[7]:
+                        if id0(dict_get(keywords, name, missing)) != id0(expected):
+                            raise error0(label + ': target keyword value differs')
+                for cell, expected in record[8]:
+                    try:
+                        observed_id = id0(cell_get(cell, cell_type))
+                    except value_error0:
+                        raise error0(label + ': target closure became empty') from None
+                    if observed_id != id0(expected):
+                        raise error0(label + ': target closure value differs')
+            # The chosen function object comes from the original immutable
+            # operations tuple, not a mutable late attribute or caller registry.
+            if bundle_cell:
+                attrs = function_fields[6][1](bundle_cell[0][1][0], function_type)
+                iterator = current = None
+                valid = type0(attrs) is dict0 and dict_len(attrs)==2
+                try:
+                    if valid:
+                        iterator=dict_iter(attrs)
+                        while True:
+                            current=next0(iterator,missing)
+                            if current is missing:break
+                            if type0(current) is not str0:valid=False;break
+                            current=None
+                finally:iterator=current=None
+                if not valid or dict_get(attrs,'_h25_epoch_bundle',missing) is not bundle_cell[0]:
+                    raise error0('Epoch immutable bootstrap bundle transport differs')
+                if dict_get(attrs,'_h25_caller_descriptor',missing) is not descriptor_cell[0]:
+                    raise error0('Epoch original caller descriptor transport differs')
+            return operations[index](*args, **kwargs)
+
+        raw_dispatch = raw_function_record(dispatch)
+        dispatch_record = (dispatch,) + raw_dispatch[1][:6] + (raw_dispatch[2], raw_dispatch[3])
+        need(dispatch_record[4] is None and dispatch_record[5] is None and not dispatch_record[7],
+             'Cold authority dispatcher source defaults contract differs')
+        return ('h25-cold-authority-caller-v1', operations, dispatch,
+                dispatch_record, records, primitives)
+
+    def runtime_guard(handle):
+        record = cold_check(handle)
+        def guarded_helpers():
+            domains = {}
+            try:
+                fresh_module(record, domains, False, prefix='Runtime drift: cache collector')
+            finally:
+                dict_clear(domains)
+        child_descriptor = make_caller_descriptor((guarded_helpers,), 'Runtime drift: cache collector caller')
+        return (guarded_helpers, child_descriptor)
+
+    def known_backend(module):
+        need(type0(module) is module_type, 'Cold authority producer backend type differs')
+        namespace = module_dict_get(module, module_type)
+        record = dict_get(by_namespace, id0(namespace), missing)
+        need(record is not missing and record[1] is module and record[12] == 'backend' and record[5] == backend_pin,
+             'Cold authority producer backend provenance differs')
+        return record
+
+    def known_guard(cls):
+        need(type0(cls) is type0, 'Cold authority exact guard class differs')
+        for record in tuple0(registry.values()):
+            if record[12] == 'backend' and cls is record[11]:
+                return None
+        product = dict_get(products, id0(cls), missing)
+        need(product is not missing and product[0] is cls and product[6] in
+             ('backend_guard', 'extra_guard', 'row_guard', 'cache_guard', 'epoch_guard'),
+             'Cold authority guard was not produced by an admitted source')
+        domains = {}
+        try:
+            fresh_graph(product[5], domains, True, 'Cold authority producer base product')
+        finally:
+            dict_clear(domains)
+        return product
+
+    def classify(record, export):
+        for digest, name, role in producer_rules:
+            if digest is not None and record[5] == digest and export == name:
+                return role
+        return None
+
+    def validate_producer_arguments(record, export, role, args, kwargs):
+        domains = {}
+        try:
+            need(type0(kwargs) is dict0 and string_domain(kwargs, domains) and not kwargs,
+                 'Cold authority reviewed producers require positional arguments')
+            if role == 'backend_guard':
+                need(len0(args) == 1, 'Cold authority backend guard arguments differ')
+                known_backend(args[0])
+            elif role == 'extra_guard':
+                need(len0(args) == 3 and type0(args[2]) is tuple0, 'Cold authority trace guard arguments differ')
+                known_guard(args[0]); known_backend(args[1])
+                for entry in args[2]:
+                    need(type0(entry) is tuple0 and len0(entry) == 3,
+                         'Cold authority trace entry shape differs')
+                    owner, name, function = entry
+                    need(type0(owner) is module_type and type0(name) is str0 and
+                         type0(function) is builtin_type and
+                         builtin_self_get(function, builtin_type) is owner and
+                         get_id(module_dict_get(owner, module_type), name, domains) == id0(function),
+                         'Cold authority trace entry owner differs')
+            elif role == 'trace':
+                need(len0(args) == 2 and type0(args[1]) is module_type, 'Cold authority trace producer arguments differ')
+                known_backend(args[0])
+            elif role == 'row_function':
+                need(not args, 'Cold authority row interner arguments differ')
+            elif role == 'row_guard':
+                need(len0(args) == 2, 'Cold authority row guard arguments differ')
+                known_guard(args[0])
+                product = dict_get(products, id0(args[1]), missing)
+                need(product is not missing and product[0] is args[1] and product[1] is record[0] and
+                     product[2] == 'make_row_interner' and product[6] == 'row_function',
+                     'Cold authority row helper provenance differs')
+                fresh_graph(product[5], domains, True, 'Cold authority producer row helper')
+            elif role == 'cache_guard':
+                need(len0(args) == 2 and type0(args[1]) is dict0 and string_domain(args[1], domains),
+                     'Cold authority cache guard arguments differ')
+                known_guard(args[0])
+                owner = dict_get(args[1], 'owner', missing)
+                need(type0(owner) is dict_get(record[2], '_Owner', missing),
+                     'Cold authority prepared cache owner class differs')
+            elif role == 'epoch_guard':
+                need(len0(args)==2, 'Epoch guard exact source arguments')
+                known_guard(args[0])
+                suite=args[1]
+                need(type0(suite) is dict_get(record[2], '_EpochSuite', missing), 'Epoch guard source suite class')
+                origin=ledger.origin(suite.handle)
+                need(origin['suite'] is suite and origin['cache_handle'] is record[0], 'Epoch guard actual source generation')
+            elif role == 'row_bind':
+                need(len0(args) == 2 and type0(args[0]) is function_type and type0(args[1]) is bytes0,
+                     'Cold authority row bind arguments differ')
+                found = False
+                for backend_record in tuple0(registry.values()):
+                    if (backend_record[12] == 'backend' and args[0] is dict_get(backend_record[2], 'bind', missing) and
+                            args[1] is backend_record[6]):
+                        found = True
+                        break
+                need(found, 'Cold authority row bind is not the original registered function/source')
+        finally:
+            dict_clear(domains)
+
+    def invoke(handle, export, *args, **kwargs):
+        record = cold_check(handle)
+        need(type0(export) is str0, 'Cold authority export name must be exact str')
+        function = dict_get(record[2], export, missing)
+        need(type0(function) is function_type and function.__globals__ is record[2],
+             'Cold authority export is not an owned source function')
+        role = classify(record, export)
+        if role is not None:
+            validate_producer_arguments(record, export, role, args, kwargs)
+        result = function(*args, **kwargs)
+        if role is not None:
+            # Do not retain a row producer's enclosing tuple or mutable AST.
+            product = result[0] if type0(result) is tuple0 and len0(result) and type0(result[0]) is function_type else result
+            expected_kind = function_type if role in ('row_function', 'row_bind') else type0
+            need(type0(product) is expected_kind and dict_get(products, id0(product), missing) is missing,
+                 'Cold authority producer did not return a fresh exact product')
+            graph = capture_graph((product,) if expected_kind is function_type else (),
+                                  (product,) if expected_kind is type0 else ())
+            product_record = (product, handle, export, args, tuple0(dict_items(kwargs)), graph, role)
+            dict_set(products, id0(product), product_record)
+            domains = {}
+            try:
+                fresh_graph(graph, domains, True, 'Cold authority new product')
+            finally:
+                dict_clear(domains)
+        return result
+
+    def check_product(obj, producer_handle, export, args_tuple, kwargs_dict):
+        record_for(producer_handle)
+        cold_check(producer_handle)
+        need(type0(args_tuple) is tuple0 and type0(kwargs_dict) is dict0 and type0(export) is str0,
+             'Cold authority product proof arguments differ')
+        product = dict_get(products, id0(obj), missing)
+        need(product is not missing and product[0] is obj and product[1] is producer_handle and product[2] == export,
+             'Cold authority product provenance differs')
+        need(len0(args_tuple) == len0(product[3]), 'Cold authority product positional census differs')
+        for actual, expected in zip0(args_tuple, product[3]):
+            need(actual is expected, 'Cold authority product positional identity differs')
+        domains = {}
+        try:
+            need(dict_len(kwargs_dict) == len0(product[4]), 'Cold authority product keyword census differs')
+            for name, expected in product[4]:
+                need(get_id(kwargs_dict, name, domains) == id0(expected), 'Cold authority product keyword identity differs')
+            fresh_graph(product[5], domains, True, 'Cold authority registered product')
+        finally:
+            dict_clear(domains)
+        return None
+
+    def set_backend_guard(handle, cls):
+        record = cold_check(handle)
+        need(record[12] == 'backend', 'Cold authority guard transition requires original backend')
+        product = known_guard(cls)
+        domains = {}
+        try:
+            if product is not None:
+                fresh_graph(product[5], domains, True, 'Cold authority guard transition product')
+            old = dict_get(backend_guards, id0(handle), missing)
+            need(dict_get(record[2], 'RuntimeGuard', missing) is old,
+                 'Cold authority backend guard changed outside the transition ledger')
+            dict_clear(domains)
+            dict_set(record[2], 'RuntimeGuard', cls)
+            dict_set(backend_guards, id0(handle), cls)
+            transitions.append((handle, old, cls, product))
+            fresh_module(record, domains, True)
+        finally:
+            dict_clear(domains)
+        return None
+
+    def source(handle):
+        record = cold_check(handle)
+        return (record[1], record[4], record[5], record[6])
+
+    # Final initial-root validation occurs before any source can receive a token.
+    cold_check()
+    need(api[1](capability, provider_pin) is not None, 'Cold authority root capability differs')
+    operations = (load, invoke, cold_check, runtime_guard, check_product, set_backend_guard, source)
+    descriptor = make_caller_descriptor(operations, 'Cold authority caller')
+    # Original raw loader only: capture this transport immediately and retain
+    # the immutable descriptor privately. No later attribute read is authority.
+    load.__dict__['_h25_caller_descriptor'] = descriptor
+    descriptor_cell.append(descriptor)
+    epoch_operations = _epoch_operations(ledger, operations, capture_graph, raw_function_record,
+        make_caller_descriptor, record_for, cold_check, root, capability, api, missing, engine_guard, bundle_cell)
+    epoch_descriptor = make_caller_descriptor(epoch_operations, 'Epoch authority caller')
+    bundle = ('h25-cold-authority-epoch-bundle-v1', operations, epoch_operations, epoch_descriptor)
+    bundle_cell.append(bundle)
+    load.__dict__['_h25_epoch_bundle'] = bundle
+    return bundle

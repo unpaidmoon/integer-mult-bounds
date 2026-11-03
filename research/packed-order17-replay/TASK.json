@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "task_id": "replay-runtime",
+  "priority_revision": 8,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "original_card": {
+    "id": "replay-runtime",
+    "question": "Can one measured replay bottleneck be sped up without dropping coverage?",
+    "starting_points": [
+      "scripts/run_isolated_tests.py",
+      "scripts/verify_replay_coverage.py",
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "Profile one isolated replay and optimize the measured bottleneck.",
+      "Design source-bound reuse with explicit dependency invalidation and negative controls."
+    ],
+    "acceptance_gate": "Report before/after wall time on the same fixture, retained checks and invalidation behavior.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_selected_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Resolve the current selected review, separate complex/ordinary BIT/admitted BIT/outer budgets, and compare the card against live handoffs before starting. Historical ceilings require exact source/model equivalence.",
+      "scope": "Source-binding orientation only; not a scientific replay or all-size proof. Materialize selected inputs if this checkout is sparse."
+    },
+    "first_experiment": "Measure one unchanged fixture, preserve check coverage, and test one optimization with invalidation controls.",
+    "bottleneck_link": "Faster trustworthy replays increase review throughput and let mechanism candidates be checked sooner.",
+    "allowed_variations": [
+      "Profile one stage or design one source-bound cache boundary."
+    ],
+    "scope_change_triggers": [
+      "Skipping coverage or comparing different fixtures to claim speedup."
+    ],
+    "overlap_terms": [
+      "replay runtime",
+      "cache invalidation",
+      "isolated tests"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Accelerate the complete four-command PR6208 Clifford replay by an exact signed packed Gaussian matrix kernel.",
+  "scope_change_reason": "The replay-runtime card is specialized to a new arithmetic implementation; no predecessor theorem is audited or extended.",
+  "bottleneck_link": "Verifier engineering side result: retain complete finite matrix coverage while reducing repeated exact replay cost. It changes no paid supplier invoice or kappa.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop at the first complete-suite gain outside observed ranges, or hand off an inconclusive result. No second arithmetic optimization.",
+  "outcome": "completed",
+  "evidence": "85 literal products / 21760 entries; 16275 signed vector pairs; 71 matrix cases; 11 invalid inputs; five source mutations; five alternating complete bundles per side, 40 commands, zero errors and output mismatches.",
+  "author": "Nick Petalas",
+  "ai_assistance": "Independent human and formal proof-kernel review are unclaimed.",
+  "open_questions": [
+    {
+      "question": "Does this bounded packed kernel improve another actual Gaussian-rational checker with larger numerator components?",
+      "why_it_matters": "The observed gain is small in absolute time and is specific to one complete suite.",
+      "first_step": "Profile one different complete checker and measure integer packing width before adapting this source-bound runner.",
+      "blocked_by": "No performance or coverage evidence is supplied for another consumer."
+    }
+  ],
+  "claim_url": "https://github.com/CrocSwap/integer-mult-bounds/discussions/1166#discussioncomment-19292048",
+  "source_pr": 6208,
+  "source_head": "4e3f55105e436dfa364029f9032c90f6a239fbe0",
+  "upstream_checkpoint": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "upstream_checked_utc": "2026-10-30T11:23:46Z",
+  "overlap": {
+    "scope": "Live open PR list, own latest 200 PRs, last 40 handoffs, active discussions, replay-runtime overlap helper, main README and merged PR searches for order-seventeen, Gaussian multiplication and sparse multiplication.",
+    "limitations": "No exhaustive historical novelty claim; only the bounded arithmetic implementation and measured consumer improvement are claimed.",
+    "source": "original"
+  },
+  "claim_type": "scoped implementation proof with measured local performance improvement"
+}

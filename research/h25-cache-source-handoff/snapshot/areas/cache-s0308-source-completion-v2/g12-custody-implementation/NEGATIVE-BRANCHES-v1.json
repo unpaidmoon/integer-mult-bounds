@@ -1,0 +1,1598 @@
+{
+  "N15_scope_correction": "Unknown final tail forbids completed-cost/adoption claims; source custody no longer requires inventing a new financial API. Actual authorization/accounting gates remain closed.",
+  "branches": [
+    {
+      "id": "G12-N01",
+      "result": "Reject before dependent operation; no execution or expected reference.",
+      "source_locations": [
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 966
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1256
+        }
+      ],
+      "trigger": "launch or handoff source selection None/missing/foreign",
+      "verification": "STATIC_SOURCE_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "G12-N02",
+      "result": "Reject before scientific entry; unchanged accepted producer remains intact.",
+      "source_locations": [
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 408
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 799
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 801
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 802
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 804
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 432
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 829
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 831
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 832
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 834
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1176
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1179
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1258
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1308
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1315
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1322
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1329
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1334
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1336
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1350
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1356
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1359
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1361
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1363
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1369
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1372
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1376
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1379
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1382
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1567
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1573
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 350
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 386
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 391
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 395
+        }
+      ],
+      "trigger": "Root/provider/adapter/producer/authority/stage/source/reference pin or mode mismatch, historical 2a941 authority",
+      "verification": "STATIC_SOURCE_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "G12-N03",
+      "result": "Adapter refuses; never silently removes an unrecognized option.",
+      "source_locations": [
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 824
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 854
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1312
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1355
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 357
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 360
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 363
+        }
+      ],
+      "trigger": "wrong guard tail, --finite-only, -O, wrong lanes, supplied anchor or alternate producer CLI",
+      "verification": "STATIC_SOURCE_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "G12-N04",
+      "result": "Cold/adapter source entry refuses; shapes/status do not establish provenance.",
+      "source_locations": [
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 221
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 227
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 492
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 495
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 497
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 501
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 503
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 505
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 507
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 509
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 925
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 940
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 950
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 957
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 958
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 970
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 971
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 977
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 1039
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 517
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 520
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 522
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 526
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 528
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 530
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 532
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 534
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 955
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 970
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1180
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1331
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 285
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 288
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 290
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 294
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 296
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 298
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 300
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 302
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 307
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 322
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 332
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 339
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 340
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 349
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 392
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 407
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 409
+        }
+      ],
+      "trigger": "fake or restored Root/API/capability, copied function namespace, foreign initial source owner",
+      "verification": "STATIC_SOURCE_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "G12-N05",
+      "result": "No launch or no publication; preserve failed attempt; no retry.",
+      "source_locations": [
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 432
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 434
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 456
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 458
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1318
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1342
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1345
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1394
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 372
+        }
+      ],
+      "trigger": "budget/phase/lease contention, prior label output, orphan prior attempt, inadequate full tail",
+      "verification": "STATIC_SOURCE_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "G12-N06",
+      "result": "Bounded known cleanup and raw evidence; no canonical success receipt invented.",
+      "source_locations": [
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 807
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 837
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1421
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1432
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1435
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1450
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1462
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1468
+        }
+      ],
+      "trigger": "Popen raises or no retained Popen/generation, nonzero return, timeout/RSS/output cap, parent STOP",
+      "verification": "STATIC_SOURCE_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "G12-N07",
+      "result": "Reject pair sealing; outer status cannot override guard predicates.",
+      "source_locations": [
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 416
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 418
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 420
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 427
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 430
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 442
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 446
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 451
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 453
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 854
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 1010
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 1015
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 1020
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 440
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 442
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 444
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 451
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 454
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 466
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 470
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 475
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 477
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 884
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1501
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1503
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1570
+        }
+      ],
+      "trigger": "guard return0 but receipt absent/nonzero/termination/STOP/stderr/input drift/log drift/usage incomplete",
+      "verification": "STATIC_SOURCE_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "G12-N08",
+      "result": "Cleanup/custody UNKNOWN; no manifest selection or universal closure claim.",
+      "source_locations": [
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 813
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 857
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 843
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 887
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1038
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1040
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1043
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1067
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1081
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1082
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1092
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1096
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1102
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1108
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1123
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1132
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1140
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1151
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1290
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1291
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1294
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1406
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1411
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1477
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1523
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1559
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1619
+        }
+      ],
+      "trigger": "unknown/denied process observation, remaining descendant/group/child, unknown stream/FD close, namespace owner loss",
+      "verification": "STATIC_SOURCE_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "G12-N09",
+      "result": "Preserve first primary and ordered secondaries; reject successful completion even if files exist.",
+      "source_locations": [
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 45
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 81
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 30
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 418
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 420
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 422
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 424
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 430
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 436
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 443
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 446
+        }
+      ],
+      "trigger": "producer primary/secondary/restoration/cold2 failure, adapter ownership/restoration failure",
+      "verification": "STATIC_SOURCE_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "G12-N10",
+      "result": "Retain partial originals, no manifest or common-only fallback.",
+      "source_locations": [
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1510
+        }
+      ],
+      "trigger": "only common export, missing diagnostic, partial diagnostic, missing common",
+      "verification": "STATIC_SOURCE_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "G12-N11",
+      "result": "Reject complete-byte custody; no stable/read-only shortcut.",
+      "source_locations": [
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 98
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 114
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 122
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 127
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 146
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 172
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 177
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 181
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 185
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 189
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 208
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 212
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 216
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 134
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 150
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 158
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 163
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 182
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 208
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 213
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 217
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 221
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 225
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 244
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 248
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 252
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1516
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1562
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 83
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 99
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 107
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 112
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 131
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 157
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 162
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 166
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 170
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 174
+        }
+      ],
+      "trigger": "symlink/hardlink/foreign namespace, short read, changed size/mode/identity or incomplete hash",
+      "verification": "STATIC_SOURCE_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "G12-N12",
+      "result": "Reject without target science decoding or repair.",
+      "source_locations": [
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 80
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 88
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 93
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 234
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 240
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 249
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 264
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 267
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 268
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 274
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 280
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 282
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 284
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 286
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 292
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 297
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 301
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 312
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 315
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 317
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 320
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 327
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 331
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 333
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 336
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 338
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 341
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 347
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 351
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 365
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 386
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 392
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 397
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 779
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 791
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 116
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 124
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 129
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 258
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 264
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 273
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 288
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 291
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 292
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 298
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 304
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 306
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 308
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 310
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 316
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 321
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 325
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 336
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 339
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 341
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 344
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 351
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 355
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 357
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 360
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 362
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 365
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 371
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 375
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 389
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 410
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 416
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 421
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 809
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 821
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 65
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 73
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 78
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 192
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 198
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 207
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 222
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 225
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 226
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 232
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 238
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 240
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 242
+        },
+        {
+          "file": "integration/g12_reference_adapter_v1.py",
+          "line": 244
+        }
+      ],
+      "trigger": "duplicate JSON key, NaN/Infinity, bool-as-int, unknown schema/field/tag, bad hex, finite decoder limit exceeded",
+      "verification": "STATIC_SOURCE_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "G12-N13",
+      "result": "Reject; matching self-reported completion strings are irrelevant.",
+      "source_locations": [
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 362
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 364
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 370
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 372
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 376
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 379
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 784
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 789
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 844
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 845
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 1026
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 386
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 388
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 394
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 396
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 400
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 403
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 814
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 819
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 874
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 875
+        }
+      ],
+      "trigger": "producer/role/source/workload mismatch across pair/manifest, payload hash or inner-prefix mismatch",
+      "verification": "STATIC_SOURCE_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "G12-N14",
+      "result": "Preserve partial retained files with no seal; final manifest bytes alone do not qualify.",
+      "source_locations": [
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 829
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 832
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 850
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 859
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 862
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 880
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1192
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1209
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1214
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1218
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1530
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1544
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1564
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1578
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1611
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1617
+        }
+      ],
+      "trigger": "copy/fsync/chmod/close/readback/final alias check failure or unexpected child after first check",
+      "verification": "STATIC_SOURCE_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "G12-N15",
+      "result": "Manifest stays unselected; handoff None; no completed invoice or custody approval.",
+      "source_locations": [
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 860
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 865
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 869
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 872
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 907
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 910
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 918
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 995
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 890
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 895
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 899
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 902
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 937
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 940
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 948
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1635
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1642
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1721
+        }
+      ],
+      "trigger": "manifest written but enclosing final cost/close/publication tail fails or lacks actual authority",
+      "verification": "STATIC_SOURCE_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "G12-N16",
+      "result": "Reject; only later immutable source literal selects actual parent custody.",
+      "source_locations": [
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 980
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 987
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 1288
+        }
+      ],
+      "trigger": "candidate source supplies success bool, result registry or arbitrary manifest path at runtime",
+      "verification": "STATIC_SOURCE_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "G12-N17",
+      "result": "No expected literal/count/common is exposed.",
+      "source_locations": [
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 226
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 992
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 1032
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 1035
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 1038
+        },
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 1042
+        }
+      ],
+      "trigger": "cold recheck detects manifest/common/diagnostic/publication mutation or Root/reader ownership drift",
+      "verification": "STATIC_SOURCE_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "G12-N18",
+      "result": "Out of scope; original separate controls remain required.",
+      "source_locations": [
+        {
+          "file": "g12_reference_cold_consumer_v1.py",
+          "line": 873
+        },
+        {
+          "file": "g12_reference_parent_v1.py",
+          "line": 903
+        }
+      ],
+      "trigger": "attempt to use G12 diagnostics as P02 standard-workload/native/full-positive/performance approval",
+      "verification": "STATIC_SOURCE_ONLY_NOT_EXECUTED"
+    }
+  ],
+  "schema": "g12-custody-finite-negative-map-v1"
+}

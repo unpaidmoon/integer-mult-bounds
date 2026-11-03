@@ -1,0 +1,6244 @@
+{
+  "baseline_ranks": [
+    1,
+    1,
+    3,
+    3,
+    5
+  ],
+  "baseline_truncated_sums": [
+    5,
+    8,
+    11,
+    12,
+    13,
+    13
+  ],
+  "certificate": [
+    {
+      "dimensions": [
+        0,
+        0,
+        1
+      ],
+      "geometric_realizations": 1,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 5
+      },
+      "ranks": [
+        1,
+        3,
+        6,
+        6,
+        6
+      ],
+      "representative_bases": [
+        [],
+        [],
+        [
+          52
+        ]
+      ],
+      "truncated_gaps": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        9
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        0,
+        2
+      ],
+      "geometric_realizations": 31,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 6
+      },
+      "ranks": [
+        1,
+        2,
+        3,
+        5,
+        5,
+        6
+      ],
+      "representative_bases": [
+        [],
+        [],
+        [
+          20,
+          32
+        ]
+      ],
+      "truncated_gaps": [
+        1,
+        3,
+        4,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        0,
+        3
+      ],
+      "geometric_realizations": 155,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 6
+      },
+      "ranks": [
+        2,
+        3,
+        3,
+        4,
+        4,
+        6
+      ],
+      "representative_bases": [
+        [],
+        [],
+        [
+          1,
+          20,
+          32
+        ]
+      ],
+      "truncated_gaps": [
+        1,
+        4,
+        6,
+        8,
+        8,
+        9
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        0,
+        4
+      ],
+      "geometric_realizations": 155,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 6
+      },
+      "ranks": [
+        3,
+        3,
+        3,
+        3,
+        4,
+        6
+      ],
+      "representative_bases": [
+        [],
+        [],
+        [
+          1,
+          10,
+          20,
+          32
+        ]
+      ],
+      "truncated_gaps": [
+        1,
+        4,
+        7,
+        8,
+        8,
+        9
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        0,
+        5
+      ],
+      "geometric_realizations": 31,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 6
+      },
+      "ranks": [
+        2,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "representative_bases": [
+        [],
+        [],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ]
+      ],
+      "truncated_gaps": [
+        1,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        0,
+        6
+      ],
+      "geometric_realizations": 1,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 6
+      },
+      "ranks": [
+        1,
+        1,
+        3,
+        5,
+        6,
+        6
+      ],
+      "representative_bases": [
+        [],
+        [],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ]
+      ],
+      "truncated_gaps": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        9
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        1,
+        1
+      ],
+      "geometric_realizations": 1,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 5
+      },
+      "ranks": [
+        1,
+        3,
+        5,
+        6,
+        6
+      ],
+      "representative_bases": [
+        [],
+        [
+          52
+        ],
+        [
+          52
+        ]
+      ],
+      "truncated_gaps": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        8
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        1,
+        2
+      ],
+      "geometric_realizations": 93,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        3,
+        5,
+        5,
+        5
+      ],
+      "representative_bases": [
+        [],
+        [
+          20
+        ],
+        [
+          20,
+          32
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        3,
+        4,
+        6,
+        8,
+        8
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        1,
+        3
+      ],
+      "geometric_realizations": 1085,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        2,
+        2,
+        3,
+        4,
+        4,
+        5
+      ],
+      "representative_bases": [
+        [],
+        [
+          1
+        ],
+        [
+          1,
+          20,
+          32
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        5,
+        6,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        1,
+        4
+      ],
+      "geometric_realizations": 2325,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        3,
+        3,
+        3,
+        3,
+        3,
+        5
+      ],
+      "representative_bases": [
+        [],
+        [
+          1
+        ],
+        [
+          1,
+          10,
+          20,
+          32
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        5,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        1,
+        5
+      ],
+      "geometric_realizations": 961,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        2,
+        2,
+        3,
+        4,
+        4,
+        5
+      ],
+      "representative_bases": [
+        [],
+        [
+          1
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        5,
+        6,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        1,
+        6
+      ],
+      "geometric_realizations": 63,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        3,
+        5,
+        5,
+        5
+      ],
+      "representative_bases": [
+        [],
+        [
+          1
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        3,
+        4,
+        6,
+        8,
+        8
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        2,
+        1
+      ],
+      "geometric_realizations": 31,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 6
+      },
+      "ranks": [
+        1,
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "representative_bases": [
+        [],
+        [
+          20,
+          32
+        ],
+        [
+          52
+        ]
+      ],
+      "truncated_gaps": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        2,
+        2
+      ],
+      "geometric_realizations": 31,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 6
+      },
+      "ranks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        5
+      ],
+      "representative_bases": [
+        [],
+        [
+          20,
+          32
+        ],
+        [
+          20,
+          32
+        ]
+      ],
+      "truncated_gaps": [
+        1,
+        3,
+        4,
+        6,
+        7,
+        7
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        2,
+        3
+      ],
+      "geometric_realizations": 1085,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        2,
+        2,
+        3,
+        4,
+        4,
+        4
+      ],
+      "representative_bases": [
+        [],
+        [
+          1,
+          20
+        ],
+        [
+          1,
+          20,
+          32
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        5,
+        6,
+        8,
+        7,
+        7
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        2,
+        4
+      ],
+      "geometric_realizations": 5425,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        4
+      ],
+      "representative_bases": [
+        [],
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          10,
+          20,
+          32
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        6,
+        8,
+        8,
+        7,
+        7
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        2,
+        5
+      ],
+      "geometric_realizations": 4805,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        2,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4
+      ],
+      "representative_bases": [
+        [],
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        6,
+        7,
+        8,
+        7,
+        7
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        2,
+        6
+      ],
+      "geometric_realizations": 651,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        4,
+        5
+      ],
+      "representative_bases": [
+        [],
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        4,
+        5,
+        7,
+        7,
+        7
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        3,
+        1
+      ],
+      "geometric_realizations": 155,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 6
+      },
+      "ranks": [
+        1,
+        2,
+        3,
+        3,
+        4,
+        6
+      ],
+      "representative_bases": [
+        [],
+        [
+          1,
+          20,
+          32
+        ],
+        [
+          52
+        ]
+      ],
+      "truncated_gaps": [
+        1,
+        3,
+        4,
+        5,
+        5,
+        6
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        3,
+        2
+      ],
+      "geometric_realizations": 465,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        2,
+        3,
+        3,
+        4,
+        5
+      ],
+      "representative_bases": [
+        [],
+        [
+          1,
+          20,
+          32
+        ],
+        [
+          20,
+          32
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        4,
+        5,
+        6,
+        6,
+        6
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        3,
+        3
+      ],
+      "geometric_realizations": 155,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 6
+      },
+      "ranks": [
+        2,
+        3,
+        3,
+        3,
+        4,
+        4
+      ],
+      "representative_bases": [
+        [],
+        [
+          1,
+          20,
+          32
+        ],
+        [
+          1,
+          20,
+          32
+        ]
+      ],
+      "truncated_gaps": [
+        1,
+        4,
+        6,
+        7,
+        6,
+        6
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        3,
+        4
+      ],
+      "geometric_realizations": 2325,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "representative_bases": [
+        [],
+        [
+          1,
+          10,
+          20
+        ],
+        [
+          1,
+          10,
+          20,
+          32
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        5,
+        8,
+        7,
+        6,
+        6
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        3,
+        5
+      ],
+      "geometric_realizations": 4805,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        4
+      ],
+      "representative_bases": [
+        [],
+        [
+          1,
+          10,
+          20
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        6,
+        7,
+        7,
+        6,
+        6
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        3,
+        6
+      ],
+      "geometric_realizations": 1395,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        3,
+        3,
+        3,
+        3,
+        5
+      ],
+      "representative_bases": [
+        [],
+        [
+          1,
+          10,
+          20
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        4,
+        6,
+        6,
+        6,
+        6
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        4,
+        1
+      ],
+      "geometric_realizations": 155,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 6
+      },
+      "ranks": [
+        1,
+        2,
+        3,
+        3,
+        3,
+        6
+      ],
+      "representative_bases": [
+        [],
+        [
+          1,
+          10,
+          20,
+          32
+        ],
+        [
+          52
+        ]
+      ],
+      "truncated_gaps": [
+        1,
+        3,
+        4,
+        4,
+        4,
+        5
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        4,
+        2
+      ],
+      "geometric_realizations": 1085,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        2,
+        2,
+        2,
+        3,
+        3,
+        5
+      ],
+      "representative_bases": [
+        [],
+        [
+          1,
+          10,
+          20,
+          32
+        ],
+        [
+          20,
+          32
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        5,
+        5,
+        5,
+        5,
+        5
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        4,
+        3
+      ],
+      "geometric_realizations": 1085,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        2,
+        2,
+        3,
+        3,
+        3,
+        4
+      ],
+      "representative_bases": [
+        [],
+        [
+          1,
+          10,
+          20,
+          32
+        ],
+        [
+          1,
+          20,
+          32
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        5,
+        6,
+        6,
+        5,
+        5
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        4,
+        4
+      ],
+      "geometric_realizations": 155,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 6
+      },
+      "ranks": [
+        2,
+        3,
+        3,
+        3,
+        3,
+        4
+      ],
+      "representative_bases": [
+        [],
+        [
+          1,
+          10,
+          20,
+          32
+        ],
+        [
+          1,
+          10,
+          20,
+          32
+        ]
+      ],
+      "truncated_gaps": [
+        1,
+        4,
+        6,
+        6,
+        5,
+        5
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        4,
+        5
+      ],
+      "geometric_realizations": 961,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        2,
+        2,
+        2,
+        3,
+        4,
+        4
+      ],
+      "representative_bases": [
+        [],
+        [
+          1,
+          10,
+          20,
+          32
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        5,
+        5,
+        6,
+        5,
+        5
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        4,
+        6
+      ],
+      "geometric_realizations": 651,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        4,
+        5
+      ],
+      "representative_bases": [
+        [],
+        [
+          1,
+          10,
+          20,
+          32
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        4,
+        4,
+        5,
+        5,
+        5
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        5,
+        1
+      ],
+      "geometric_realizations": 31,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 6
+      },
+      "ranks": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "representative_bases": [
+        [],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ],
+        [
+          52
+        ]
+      ],
+      "truncated_gaps": [
+        1,
+        2,
+        2,
+        3,
+        3,
+        4
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        5,
+        2
+      ],
+      "geometric_realizations": 465,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        5
+      ],
+      "representative_bases": [
+        [],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ],
+        [
+          20,
+          32
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        5,
+        3
+      ],
+      "geometric_realizations": 1085,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        2,
+        2,
+        2,
+        3,
+        3,
+        4
+      ],
+      "representative_bases": [
+        [],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ],
+        [
+          1,
+          20,
+          32
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        5,
+        5,
+        5,
+        4,
+        4
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        5,
+        4
+      ],
+      "geometric_realizations": 465,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        2,
+        3,
+        3,
+        3,
+        4
+      ],
+      "representative_bases": [
+        [],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ],
+        [
+          1,
+          10,
+          20,
+          32
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        4,
+        5,
+        5,
+        4,
+        4
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        5,
+        5
+      ],
+      "geometric_realizations": 31,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 6
+      },
+      "ranks": [
+        1,
+        2,
+        2,
+        3,
+        4,
+        5
+      ],
+      "representative_bases": [
+        [],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ]
+      ],
+      "truncated_gaps": [
+        1,
+        3,
+        3,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        5,
+        6
+      ],
+      "geometric_realizations": 63,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        1,
+        3,
+        5,
+        5
+      ],
+      "representative_bases": [
+        [],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        2,
+        2,
+        3,
+        4,
+        4
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        6,
+        1
+      ],
+      "geometric_realizations": 1,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 5
+      },
+      "ranks": [
+        1,
+        1,
+        3,
+        5,
+        6
+      ],
+      "representative_bases": [
+        [],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ],
+        [
+          52
+        ]
+      ],
+      "truncated_gaps": [
+        0,
+        0,
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        6,
+        2
+      ],
+      "geometric_realizations": 31,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 6
+      },
+      "ranks": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "representative_bases": [
+        [],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ],
+        [
+          20,
+          32
+        ]
+      ],
+      "truncated_gaps": [
+        1,
+        2,
+        2,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        6,
+        3
+      ],
+      "geometric_realizations": 155,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 6
+      },
+      "ranks": [
+        1,
+        2,
+        3,
+        3,
+        3,
+        4
+      ],
+      "representative_bases": [
+        [],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ],
+        [
+          1,
+          20,
+          32
+        ]
+      ],
+      "truncated_gaps": [
+        1,
+        3,
+        4,
+        4,
+        3,
+        3
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        6,
+        4
+      ],
+      "geometric_realizations": 155,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 6
+      },
+      "ranks": [
+        1,
+        2,
+        3,
+        3,
+        3,
+        4
+      ],
+      "representative_bases": [
+        [],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ],
+        [
+          1,
+          10,
+          20,
+          32
+        ]
+      ],
+      "truncated_gaps": [
+        1,
+        3,
+        4,
+        4,
+        3,
+        3
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        6,
+        5
+      ],
+      "geometric_realizations": 31,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 6
+      },
+      "ranks": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "representative_bases": [
+        [],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ]
+      ],
+      "truncated_gaps": [
+        1,
+        2,
+        2,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "dimensions": [
+        0,
+        6,
+        6
+      ],
+      "geometric_realizations": 1,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 5
+      },
+      "ranks": [
+        1,
+        1,
+        3,
+        5,
+        6
+      ],
+      "representative_bases": [
+        [],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ]
+      ],
+      "truncated_gaps": [
+        0,
+        0,
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        0,
+        2
+      ],
+      "geometric_realizations": 7,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        2,
+        5,
+        5,
+        6
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [],
+        [
+          30,
+          42
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        3,
+        3,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        0,
+        3
+      ],
+      "geometric_realizations": 105,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        2,
+        2,
+        2,
+        4,
+        4,
+        6
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [],
+        [
+          1,
+          30,
+          42
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        5,
+        5,
+        7,
+        7,
+        8
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        0,
+        4
+      ],
+      "geometric_realizations": 245,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        2,
+        3,
+        3,
+        3,
+        3,
+        6
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [],
+        [
+          1,
+          10,
+          20,
+          32
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        5,
+        7,
+        7,
+        7,
+        8
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        0,
+        5
+      ],
+      "geometric_realizations": 105,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        2,
+        2,
+        2,
+        4,
+        4,
+        6
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        5,
+        5,
+        7,
+        7,
+        8
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        0,
+        6
+      ],
+      "geometric_realizations": 7,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        2,
+        5,
+        5,
+        6
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        3,
+        3,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        1,
+        2
+      ],
+      "geometric_realizations": 7,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        2,
+        5,
+        5,
+        5
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [
+          30
+        ],
+        [
+          30,
+          42
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        3,
+        3,
+        5,
+        7,
+        7
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        1,
+        3
+      ],
+      "geometric_realizations": 105,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        2,
+        2,
+        2,
+        4,
+        4,
+        5
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [
+          30
+        ],
+        [
+          1,
+          30,
+          42
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        5,
+        5,
+        7,
+        7,
+        7
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        1,
+        4
+      ],
+      "geometric_realizations": 245,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        2,
+        3,
+        3,
+        3,
+        3,
+        5
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [
+          30
+        ],
+        [
+          1,
+          10,
+          20,
+          32
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        5,
+        7,
+        7,
+        7,
+        7
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        1,
+        5
+      ],
+      "geometric_realizations": 105,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        2,
+        2,
+        2,
+        4,
+        4,
+        5
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [
+          30
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        5,
+        5,
+        7,
+        7,
+        7
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        1,
+        6
+      ],
+      "geometric_realizations": 7,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        2,
+        5,
+        5,
+        5
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [
+          30
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        3,
+        3,
+        5,
+        7,
+        7
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        2,
+        2
+      ],
+      "geometric_realizations": 7,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        2,
+        4,
+        5,
+        5
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [
+          30,
+          42
+        ],
+        [
+          30,
+          42
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        3,
+        3,
+        5,
+        6,
+        6
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        2,
+        3
+      ],
+      "geometric_realizations": 315,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 8
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        4,
+        4,
+        4
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [
+          1,
+          30
+        ],
+        [
+          1,
+          30,
+          42
+        ]
+      ],
+      "truncated_gaps": [
+        3,
+        5,
+        5,
+        7,
+        6,
+        6
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        2,
+        4
+      ],
+      "geometric_realizations": 1715,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 8
+      },
+      "ranks": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        3,
+        4
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [
+          10,
+          20
+        ],
+        [
+          1,
+          10,
+          20,
+          32
+        ]
+      ],
+      "truncated_gaps": [
+        3,
+        6,
+        7,
+        7,
+        6,
+        6
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        2,
+        5
+      ],
+      "geometric_realizations": 1575,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 8
+      },
+      "ranks": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        3,
+        4,
+        4
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [
+          10,
+          20
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ]
+      ],
+      "truncated_gaps": [
+        3,
+        6,
+        6,
+        7,
+        6,
+        6
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        2,
+        6
+      ],
+      "geometric_realizations": 217,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 8
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        4,
+        4,
+        5
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [
+          10,
+          20
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ]
+      ],
+      "truncated_gaps": [
+        3,
+        4,
+        4,
+        6,
+        6,
+        6
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        3,
+        2
+      ],
+      "geometric_realizations": 105,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 8
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [
+          1,
+          30,
+          42
+        ],
+        [
+          30,
+          42
+        ]
+      ],
+      "truncated_gaps": [
+        3,
+        4,
+        4,
+        5,
+        5,
+        5
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        3,
+        3
+      ],
+      "geometric_realizations": 105,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        2,
+        2,
+        2,
+        3,
+        4,
+        4
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [
+          1,
+          30,
+          42
+        ],
+        [
+          1,
+          30,
+          42
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        5,
+        5,
+        6,
+        5,
+        5
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        3,
+        4
+      ],
+      "geometric_realizations": 1715,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 8
+      },
+      "ranks": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [
+          1,
+          10,
+          20
+        ],
+        [
+          1,
+          10,
+          20,
+          32
+        ]
+      ],
+      "truncated_gaps": [
+        3,
+        6,
+        7,
+        6,
+        5,
+        5
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        3,
+        5
+      ],
+      "geometric_realizations": 3675,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 8
+      },
+      "ranks": [
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        4
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [
+          1,
+          10,
+          20
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ]
+      ],
+      "truncated_gaps": [
+        3,
+        7,
+        6,
+        6,
+        5,
+        5
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        3,
+        6
+      ],
+      "geometric_realizations": 1085,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 8
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        5
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [
+          1,
+          10,
+          20
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ]
+      ],
+      "truncated_gaps": [
+        3,
+        5,
+        5,
+        5,
+        5,
+        5
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        4,
+        2
+      ],
+      "geometric_realizations": 245,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 8
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        3,
+        5
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [
+          1,
+          10,
+          20,
+          32
+        ],
+        [
+          30,
+          42
+        ]
+      ],
+      "truncated_gaps": [
+        3,
+        5,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        4,
+        3
+      ],
+      "geometric_realizations": 735,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 8
+      },
+      "ranks": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        3,
+        4
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [
+          1,
+          10,
+          20,
+          32
+        ],
+        [
+          1,
+          30,
+          42
+        ]
+      ],
+      "truncated_gaps": [
+        3,
+        6,
+        5,
+        5,
+        4,
+        4
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        4,
+        4
+      ],
+      "geometric_realizations": 245,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [
+          1,
+          10,
+          20,
+          32
+        ],
+        [
+          1,
+          10,
+          20,
+          32
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        5,
+        6,
+        5,
+        4,
+        4
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        4,
+        5
+      ],
+      "geometric_realizations": 1575,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 8
+      },
+      "ranks": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        3,
+        4
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [
+          1,
+          10,
+          20,
+          32
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ]
+      ],
+      "truncated_gaps": [
+        3,
+        6,
+        5,
+        5,
+        4,
+        4
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        4,
+        6
+      ],
+      "geometric_realizations": 1085,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 8
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        3,
+        5
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [
+          1,
+          10,
+          20,
+          32
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ]
+      ],
+      "truncated_gaps": [
+        3,
+        5,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        5,
+        2
+      ],
+      "geometric_realizations": 105,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 8
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        3,
+        5
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ],
+        [
+          30,
+          42
+        ]
+      ],
+      "truncated_gaps": [
+        3,
+        4,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        5,
+        3
+      ],
+      "geometric_realizations": 735,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 8
+      },
+      "ranks": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        4
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ],
+        [
+          1,
+          30,
+          42
+        ]
+      ],
+      "truncated_gaps": [
+        3,
+        6,
+        4,
+        4,
+        3,
+        3
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        5,
+        4
+      ],
+      "geometric_realizations": 735,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 8
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        3
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ],
+        [
+          1,
+          10,
+          20,
+          32
+        ]
+      ],
+      "truncated_gaps": [
+        3,
+        5,
+        5,
+        4,
+        3,
+        3
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        5,
+        5
+      ],
+      "geometric_realizations": 105,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        4,
+        4
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        4,
+        3,
+        4,
+        3,
+        3
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        5,
+        6
+      ],
+      "geometric_realizations": 217,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 8
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        4,
+        5
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ]
+      ],
+      "truncated_gaps": [
+        3,
+        3,
+        2,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        6,
+        2
+      ],
+      "geometric_realizations": 7,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        4,
+        5
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ],
+        [
+          30,
+          42
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        2,
+        1,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        6,
+        3
+      ],
+      "geometric_realizations": 105,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        3,
+        4
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ],
+        [
+          1,
+          30,
+          42
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        4,
+        3,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        6,
+        4
+      ],
+      "geometric_realizations": 245,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        3
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ],
+        [
+          1,
+          10,
+          20,
+          32
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        4,
+        4,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        6,
+        5
+      ],
+      "geometric_realizations": 105,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        4,
+        4
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        3,
+        2,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "dimensions": [
+        1,
+        6,
+        6
+      ],
+      "geometric_realizations": 7,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 6
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        2,
+        5,
+        5
+      ],
+      "representative_bases": [
+        [
+          30
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ]
+      ],
+      "truncated_gaps": [
+        1,
+        1,
+        0,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "dimensions": [
+        2,
+        0,
+        3
+      ],
+      "geometric_realizations": 7,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        2,
+        2,
+        4,
+        4,
+        6
+      ],
+      "representative_bases": [
+        [
+          30,
+          74
+        ],
+        [],
+        [
+          30,
+          42,
+          74
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        4,
+        4,
+        6,
+        6,
+        7
+      ]
+    },
+    {
+      "dimensions": [
+        2,
+        0,
+        4
+      ],
+      "geometric_realizations": 49,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        2,
+        2,
+        3,
+        3,
+        3,
+        6
+      ],
+      "representative_bases": [
+        [
+          30,
+          74
+        ],
+        [],
+        [
+          10,
+          20,
+          32,
+          64
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        5,
+        6,
+        6,
+        6,
+        7
+      ]
+    },
+    {
+      "dimensions": [
+        2,
+        0,
+        5
+      ],
+      "geometric_realizations": 49,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        2,
+        2,
+        2,
+        3,
+        4,
+        6
+      ],
+      "representative_bases": [
+        [
+          30,
+          74
+        ],
+        [],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        5,
+        5,
+        6,
+        6,
+        7
+      ]
+    },
+    {
+      "dimensions": [
+        2,
+        0,
+        6
+      ],
+      "geometric_realizations": 7,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        2,
+        4,
+        5,
+        6
+      ],
+      "representative_bases": [
+        [
+          30,
+          74
+        ],
+        [],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        3,
+        3,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "dimensions": [
+        2,
+        1,
+        3
+      ],
+      "geometric_realizations": 21,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 8
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        4,
+        4,
+        5
+      ],
+      "representative_bases": [
+        [
+          30,
+          74
+        ],
+        [
+          30
+        ],
+        [
+          30,
+          42,
+          74
+        ]
+      ],
+      "truncated_gaps": [
+        3,
+        4,
+        4,
+        6,
+        6,
+        6
+      ]
+    },
+    {
+      "dimensions": [
+        2,
+        1,
+        4
+      ],
+      "geometric_realizations": 147,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 8
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        2,
+        3,
+        3,
+        3,
+        5
+      ],
+      "representative_bases": [
+        [
+          30,
+          74
+        ],
+        [
+          30
+        ],
+        [
+          10,
+          20,
+          32,
+          64
+        ]
+      ],
+      "truncated_gaps": [
+        3,
+        5,
+        6,
+        6,
+        6,
+        6
+      ]
+    },
+    {
+      "dimensions": [
+        2,
+        1,
+        5
+      ],
+      "geometric_realizations": 147,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 8
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        3,
+        4,
+        5
+      ],
+      "representative_bases": [
+        [
+          30,
+          74
+        ],
+        [
+          30
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ]
+      ],
+      "truncated_gaps": [
+        3,
+        5,
+        5,
+        6,
+        6,
+        6
+      ]
+    },
+    {
+      "dimensions": [
+        2,
+        1,
+        6
+      ],
+      "geometric_realizations": 21,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 8
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        4,
+        5,
+        5
+      ],
+      "representative_bases": [
+        [
+          30,
+          74
+        ],
+        [
+          30
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ]
+      ],
+      "truncated_gaps": [
+        3,
+        3,
+        3,
+        5,
+        6,
+        6
+      ]
+    },
+    {
+      "dimensions": [
+        2,
+        2,
+        3
+      ],
+      "geometric_realizations": 7,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        2,
+        2,
+        4,
+        4,
+        4
+      ],
+      "representative_bases": [
+        [
+          30,
+          74
+        ],
+        [
+          30,
+          74
+        ],
+        [
+          30,
+          42,
+          74
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        4,
+        4,
+        6,
+        5,
+        5
+      ]
+    },
+    {
+      "dimensions": [
+        2,
+        2,
+        4
+      ],
+      "geometric_realizations": 49,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        2,
+        2,
+        3,
+        3,
+        3,
+        4
+      ],
+      "representative_bases": [
+        [
+          30,
+          74
+        ],
+        [
+          30,
+          74
+        ],
+        [
+          10,
+          20,
+          32,
+          64
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        5,
+        6,
+        6,
+        5,
+        5
+      ]
+    },
+    {
+      "dimensions": [
+        2,
+        2,
+        5
+      ],
+      "geometric_realizations": 49,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        2,
+        2,
+        2,
+        3,
+        4,
+        4
+      ],
+      "representative_bases": [
+        [
+          30,
+          74
+        ],
+        [
+          30,
+          74
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        5,
+        5,
+        6,
+        5,
+        5
+      ]
+    },
+    {
+      "dimensions": [
+        2,
+        2,
+        6
+      ],
+      "geometric_realizations": 7,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        2,
+        4,
+        4,
+        5
+      ],
+      "representative_bases": [
+        [
+          30,
+          74
+        ],
+        [
+          30,
+          74
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        3,
+        3,
+        5,
+        5,
+        5
+      ]
+    },
+    {
+      "dimensions": [
+        2,
+        3,
+        3
+      ],
+      "geometric_realizations": 7,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        4,
+        4
+      ],
+      "representative_bases": [
+        [
+          30,
+          74
+        ],
+        [
+          30,
+          42,
+          74
+        ],
+        [
+          30,
+          42,
+          74
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        4,
+        4,
+        5,
+        4,
+        4
+      ]
+    },
+    {
+      "dimensions": [
+        2,
+        3,
+        4
+      ],
+      "geometric_realizations": 147,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 8
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        2,
+        3,
+        3,
+        3,
+        3
+      ],
+      "representative_bases": [
+        [
+          30,
+          74
+        ],
+        [
+          10,
+          20,
+          64
+        ],
+        [
+          10,
+          20,
+          32,
+          64
+        ]
+      ],
+      "truncated_gaps": [
+        3,
+        5,
+        6,
+        5,
+        4,
+        4
+      ]
+    },
+    {
+      "dimensions": [
+        2,
+        3,
+        5
+      ],
+      "geometric_realizations": 343,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 8
+      },
+      "ranks": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        3,
+        4
+      ],
+      "representative_bases": [
+        [
+          30,
+          74
+        ],
+        [
+          1,
+          30,
+          74
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ]
+      ],
+      "truncated_gaps": [
+        3,
+        6,
+        5,
+        5,
+        4,
+        4
+      ]
+    },
+    {
+      "dimensions": [
+        2,
+        3,
+        6
+      ],
+      "geometric_realizations": 105,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 8
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        3,
+        3,
+        5
+      ],
+      "representative_bases": [
+        [
+          30,
+          74
+        ],
+        [
+          1,
+          30,
+          74
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ]
+      ],
+      "truncated_gaps": [
+        3,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "dimensions": [
+        2,
+        4,
+        3
+      ],
+      "geometric_realizations": 49,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 8
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        3,
+        4
+      ],
+      "representative_bases": [
+        [
+          30,
+          74
+        ],
+        [
+          10,
+          20,
+          32,
+          64
+        ],
+        [
+          30,
+          42,
+          74
+        ]
+      ],
+      "truncated_gaps": [
+        3,
+        5,
+        4,
+        4,
+        3,
+        3
+      ]
+    },
+    {
+      "dimensions": [
+        2,
+        4,
+        4
+      ],
+      "geometric_realizations": 49,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3
+      ],
+      "representative_bases": [
+        [
+          30,
+          74
+        ],
+        [
+          10,
+          20,
+          32,
+          64
+        ],
+        [
+          10,
+          20,
+          32,
+          64
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        5,
+        5,
+        4,
+        3,
+        3
+      ]
+    },
+    {
+      "dimensions": [
+        2,
+        4,
+        5
+      ],
+      "geometric_realizations": 343,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 8
+      },
+      "ranks": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        4
+      ],
+      "representative_bases": [
+        [
+          30,
+          74
+        ],
+        [
+          1,
+          10,
+          20,
+          64
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ]
+      ],
+      "truncated_gaps": [
+        3,
+        6,
+        4,
+        4,
+        3,
+        3
+      ]
+    },
+    {
+      "dimensions": [
+        2,
+        4,
+        6
+      ],
+      "geometric_realizations": 245,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 8
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        5
+      ],
+      "representative_bases": [
+        [
+          30,
+          74
+        ],
+        [
+          1,
+          10,
+          20,
+          64
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ]
+      ],
+      "truncated_gaps": [
+        3,
+        5,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "dimensions": [
+        2,
+        5,
+        3
+      ],
+      "geometric_realizations": 49,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 8
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        4
+      ],
+      "representative_bases": [
+        [
+          30,
+          74
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ],
+        [
+          30,
+          42,
+          74
+        ]
+      ],
+      "truncated_gaps": [
+        3,
+        5,
+        3,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "dimensions": [
+        2,
+        5,
+        4
+      ],
+      "geometric_realizations": 147,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 8
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        3,
+        3
+      ],
+      "representative_bases": [
+        [
+          30,
+          74
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ],
+        [
+          10,
+          20,
+          32,
+          64
+        ]
+      ],
+      "truncated_gaps": [
+        3,
+        5,
+        4,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "dimensions": [
+        2,
+        5,
+        5
+      ],
+      "geometric_realizations": 49,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        3,
+        4
+      ],
+      "representative_bases": [
+        [
+          30,
+          74
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        4,
+        3,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "dimensions": [
+        2,
+        5,
+        6
+      ],
+      "geometric_realizations": 105,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 8
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        3,
+        5
+      ],
+      "representative_bases": [
+        [
+          30,
+          74
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ]
+      ],
+      "truncated_gaps": [
+        3,
+        3,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "dimensions": [
+        2,
+        6,
+        3
+      ],
+      "geometric_realizations": 7,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        3,
+        4
+      ],
+      "representative_bases": [
+        [
+          30,
+          74
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ],
+        [
+          30,
+          42,
+          74
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        3,
+        2,
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "dimensions": [
+        2,
+        6,
+        4
+      ],
+      "geometric_realizations": 49,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        3,
+        3
+      ],
+      "representative_bases": [
+        [
+          30,
+          74
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ],
+        [
+          10,
+          20,
+          32,
+          64
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        4,
+        3,
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "dimensions": [
+        2,
+        6,
+        5
+      ],
+      "geometric_realizations": 49,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        3,
+        4
+      ],
+      "representative_bases": [
+        [
+          30,
+          74
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        3,
+        2,
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "dimensions": [
+        2,
+        6,
+        6
+      ],
+      "geometric_realizations": 7,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 6
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        2,
+        4,
+        5
+      ],
+      "representative_bases": [
+        [
+          30,
+          74
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ]
+      ],
+      "truncated_gaps": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "dimensions": [
+        3,
+        0,
+        4
+      ],
+      "geometric_realizations": 1,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 6
+      },
+      "ranks": [
+        1,
+        3,
+        3,
+        3,
+        3,
+        6
+      ],
+      "representative_bases": [
+        [
+          30,
+          74,
+          429
+        ],
+        [],
+        [
+          30,
+          42,
+          74,
+          391
+        ]
+      ],
+      "truncated_gaps": [
+        1,
+        3,
+        5,
+        5,
+        5,
+        6
+      ]
+    },
+    {
+      "dimensions": [
+        3,
+        0,
+        5
+      ],
+      "geometric_realizations": 3,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 6
+      },
+      "ranks": [
+        2,
+        2,
+        2,
+        3,
+        4,
+        6
+      ],
+      "representative_bases": [
+        [
+          30,
+          74,
+          429
+        ],
+        [],
+        [
+          11,
+          21,
+          33,
+          65,
+          391
+        ]
+      ],
+      "truncated_gaps": [
+        1,
+        4,
+        4,
+        5,
+        5,
+        6
+      ]
+    },
+    {
+      "dimensions": [
+        3,
+        0,
+        6
+      ],
+      "geometric_realizations": 1,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 6
+      },
+      "ranks": [
+        1,
+        1,
+        3,
+        3,
+        5,
+        6
+      ],
+      "representative_bases": [
+        [
+          30,
+          74,
+          429
+        ],
+        [],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ]
+      ],
+      "truncated_gaps": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "dimensions": [
+        3,
+        1,
+        4
+      ],
+      "geometric_realizations": 7,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        2,
+        3,
+        3,
+        3,
+        5
+      ],
+      "representative_bases": [
+        [
+          30,
+          74,
+          429
+        ],
+        [
+          30
+        ],
+        [
+          30,
+          42,
+          74,
+          391
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        4,
+        5,
+        5,
+        5,
+        5
+      ]
+    },
+    {
+      "dimensions": [
+        3,
+        1,
+        5
+      ],
+      "geometric_realizations": 21,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        2,
+        2,
+        2,
+        2,
+        4,
+        5
+      ],
+      "representative_bases": [
+        [
+          30,
+          74,
+          429
+        ],
+        [
+          30
+        ],
+        [
+          11,
+          21,
+          33,
+          65,
+          391
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        5,
+        4,
+        5,
+        5,
+        5
+      ]
+    },
+    {
+      "dimensions": [
+        3,
+        1,
+        6
+      ],
+      "geometric_realizations": 7,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        2,
+        3,
+        5,
+        5
+      ],
+      "representative_bases": [
+        [
+          30,
+          74,
+          429
+        ],
+        [
+          30
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        3,
+        3,
+        4,
+        5,
+        5
+      ]
+    },
+    {
+      "dimensions": [
+        3,
+        2,
+        4
+      ],
+      "geometric_realizations": 7,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        2,
+        3,
+        3,
+        3,
+        4
+      ],
+      "representative_bases": [
+        [
+          30,
+          74,
+          429
+        ],
+        [
+          30,
+          74
+        ],
+        [
+          30,
+          42,
+          74,
+          391
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        4,
+        5,
+        5,
+        4,
+        4
+      ]
+    },
+    {
+      "dimensions": [
+        3,
+        2,
+        5
+      ],
+      "geometric_realizations": 21,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        2,
+        2,
+        2,
+        2,
+        4,
+        4
+      ],
+      "representative_bases": [
+        [
+          30,
+          74,
+          429
+        ],
+        [
+          30,
+          74
+        ],
+        [
+          11,
+          21,
+          33,
+          65,
+          391
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        5,
+        4,
+        5,
+        4,
+        4
+      ]
+    },
+    {
+      "dimensions": [
+        3,
+        2,
+        6
+      ],
+      "geometric_realizations": 7,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "representative_bases": [
+        [
+          30,
+          74,
+          429
+        ],
+        [
+          30,
+          74
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        3,
+        3,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "dimensions": [
+        3,
+        3,
+        4
+      ],
+      "geometric_realizations": 1,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 6
+      },
+      "ranks": [
+        1,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "representative_bases": [
+        [
+          30,
+          74,
+          429
+        ],
+        [
+          30,
+          74,
+          429
+        ],
+        [
+          30,
+          42,
+          74,
+          391
+        ]
+      ],
+      "truncated_gaps": [
+        1,
+        3,
+        5,
+        4,
+        3,
+        3
+      ]
+    },
+    {
+      "dimensions": [
+        3,
+        3,
+        5
+      ],
+      "geometric_realizations": 3,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 6
+      },
+      "ranks": [
+        2,
+        2,
+        2,
+        3,
+        3,
+        4
+      ],
+      "representative_bases": [
+        [
+          30,
+          74,
+          429
+        ],
+        [
+          30,
+          74,
+          429
+        ],
+        [
+          11,
+          21,
+          33,
+          65,
+          391
+        ]
+      ],
+      "truncated_gaps": [
+        1,
+        4,
+        4,
+        4,
+        3,
+        3
+      ]
+    },
+    {
+      "dimensions": [
+        3,
+        3,
+        6
+      ],
+      "geometric_realizations": 1,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 6
+      },
+      "ranks": [
+        1,
+        1,
+        3,
+        3,
+        3,
+        5
+      ],
+      "representative_bases": [
+        [
+          30,
+          74,
+          429
+        ],
+        [
+          30,
+          74,
+          429
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ]
+      ],
+      "truncated_gaps": [
+        1,
+        2,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "dimensions": [
+        3,
+        4,
+        4
+      ],
+      "geometric_realizations": 1,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 6
+      },
+      "ranks": [
+        1,
+        2,
+        3,
+        3,
+        3,
+        3
+      ],
+      "representative_bases": [
+        [
+          30,
+          74,
+          429
+        ],
+        [
+          30,
+          42,
+          74,
+          391
+        ],
+        [
+          30,
+          42,
+          74,
+          391
+        ]
+      ],
+      "truncated_gaps": [
+        1,
+        3,
+        4,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "dimensions": [
+        3,
+        4,
+        5
+      ],
+      "geometric_realizations": 9,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        3,
+        4
+      ],
+      "representative_bases": [
+        [
+          30,
+          74,
+          429
+        ],
+        [
+          30,
+          42,
+          74,
+          391
+        ],
+        [
+          11,
+          21,
+          33,
+          65,
+          391
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        4,
+        3,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "dimensions": [
+        3,
+        4,
+        6
+      ],
+      "geometric_realizations": 7,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        3,
+        5
+      ],
+      "representative_bases": [
+        [
+          30,
+          74,
+          429
+        ],
+        [
+          30,
+          43,
+          74,
+          390
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        3,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "dimensions": [
+        3,
+        5,
+        4
+      ],
+      "geometric_realizations": 3,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        2,
+        3,
+        3,
+        3
+      ],
+      "representative_bases": [
+        [
+          30,
+          74,
+          429
+        ],
+        [
+          11,
+          21,
+          33,
+          65,
+          391
+        ],
+        [
+          30,
+          42,
+          74,
+          391
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        3,
+        3,
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "dimensions": [
+        3,
+        5,
+        5
+      ],
+      "geometric_realizations": 3,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 6
+      },
+      "ranks": [
+        1,
+        2,
+        2,
+        2,
+        3,
+        4
+      ],
+      "representative_bases": [
+        [
+          30,
+          74,
+          429
+        ],
+        [
+          11,
+          21,
+          33,
+          65,
+          391
+        ],
+        [
+          11,
+          21,
+          33,
+          65,
+          391
+        ]
+      ],
+      "truncated_gaps": [
+        1,
+        3,
+        2,
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "dimensions": [
+        3,
+        5,
+        6
+      ],
+      "geometric_realizations": 7,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 7
+      },
+      "ranks": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        3,
+        5
+      ],
+      "representative_bases": [
+        [
+          30,
+          74,
+          429
+        ],
+        [
+          11,
+          21,
+          33,
+          65,
+          391
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ]
+      ],
+      "truncated_gaps": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "dimensions": [
+        3,
+        6,
+        4
+      ],
+      "geometric_realizations": 1,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 6
+      },
+      "ranks": [
+        1,
+        1,
+        2,
+        3,
+        3,
+        3
+      ],
+      "representative_bases": [
+        [
+          30,
+          74,
+          429
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ],
+        [
+          30,
+          42,
+          74,
+          391
+        ]
+      ],
+      "truncated_gaps": [
+        1,
+        2,
+        2,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "dimensions": [
+        3,
+        6,
+        5
+      ],
+      "geometric_realizations": 3,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 6
+      },
+      "ranks": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        4
+      ],
+      "representative_bases": [
+        [
+          30,
+          74,
+          429
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ],
+        [
+          11,
+          21,
+          33,
+          65,
+          391
+        ]
+      ],
+      "truncated_gaps": [
+        1,
+        2,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "dimensions": [
+        3,
+        6,
+        6
+      ],
+      "geometric_realizations": 1,
+      "operations": {
+        "ADD": 3,
+        "CLEAR": 2,
+        "COPY": 2,
+        "INIT": 2,
+        "MOVE": 5
+      },
+      "ranks": [
+        1,
+        1,
+        3,
+        3,
+        5
+      ],
+      "representative_bases": [
+        [
+          30,
+          74,
+          429
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ],
+        [
+          1,
+          10,
+          20,
+          32,
+          64,
+          390
+        ]
+      ],
+      "truncated_gaps": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "contained_line_positive_control": {
+    "operations": {
+      "ADD": 3,
+      "CLEAR": 2,
+      "COPY": 2,
+      "INIT": 2,
+      "MOVE": 5
+    },
+    "ranks": [
+      1,
+      1,
+      2,
+      3,
+      6
+    ],
+    "replacement_source_basis": [
+      30,
+      42,
+      74
+    ],
+    "scope": "changed source frame, not a PR6167 implementation",
+    "strict_power_gain": "3^t+5^t-2^t-6^t > 0 for 0<t<1",
+    "truncated_gaps": [
+      0,
+      0,
+      -1,
+      -1,
+      -1,
+      0
+    ]
+  },
+  "controls": {
+    "ascending_owned_cache": "monotone move",
+    "changed_source_incidence": "source frame intersections",
+    "changed_source_read": "source anchor 12933",
+    "convex_tariff_is_outside_theorem": "concavity is necessary",
+    "free_cache_transport": "concave tariff domination",
+    "missing_B_capture": "arbitrary-input receiver endpoint",
+    "missing_V_capture": "arbitrary-input receiver endpoint",
+    "read_V_after_root_at_595": "historical V cannot follow root",
+    "root_sign": "arbitrary-input receiver endpoint",
+    "source_frame_cap": "dimension domain",
+    "uncleared_cache": "complete exit charts and cache cleanup",
+    "unmoved_cache": "addition common chart",
+    "wrong_cache_ownership": "move ownership"
+  },
+  "dimension_recipes": 126,
+  "equality_recipes": [
+    [
+      3,
+      6,
+      6
+    ]
+  ],
+  "frame_dimensions": {
+    "3": 0,
+    "519": 3,
+    "520": 6,
+    "529": 7,
+    "595": 1,
+    "737": 4,
+    "914": 7
+  },
+  "general_small_domain": {
+    "integer_inequalities": 186780,
+    "recipes": 10791,
+    "scope": "finite corroboration only; all-u result uses written subadditivity/concavity proof",
+    "u_range": [
+      2,
+      10
+    ]
+  },
+  "geometric_realizations": 52964,
+  "limitations": [
+    "Not a universal reader497 obstruction.",
+    "Local normalized-chart templates are not full native/caller implementations.",
+    "Free ordinary setup/storage/erasure is an optimistic relaxation; cache MOVEs are charged.",
+    "No full selected replay, compiler/outer/precision proof, human or kernel review.",
+    "No new kappa; all five selected framework assumptions remain."
+  ],
+  "min_gaps_by_root_dimension": {
+    "1": [
+      0,
+      0,
+      0,
+      1,
+      2,
+      3
+    ],
+    "2": [
+      1,
+      2,
+      1,
+      2,
+      2,
+      2
+    ],
+    "3": [
+      1,
+      3,
+      2,
+      2,
+      1,
+      1
+    ],
+    "4": [
+      1,
+      2,
+      2,
+      1,
+      0,
+      0
+    ],
+    "5": [
+      1,
+      2,
+      1,
+      1,
+      0,
+      0
+    ],
+    "6": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "scope": "Monotone reader/root paths, two direct retained operands, fixed sources and consumer; no source mixing or target changes.",
+  "source_anchors": {
+    "12888": [
+      "MOVE",
+      497,
+      3,
+      519,
+      false
+    ],
+    "12933": [
+      "ADD",
+      497,
+      48,
+      "1",
+      519
+    ],
+    "12934": [
+      "MOVE",
+      497,
+      519,
+      520,
+      false
+    ],
+    "12935": [
+      "ADD",
+      497,
+      228,
+      "1",
+      520
+    ],
+    "13485": [
+      "MOVE",
+      772,
+      529,
+      520,
+      true
+    ],
+    "13486": [
+      "ADD",
+      497,
+      772,
+      "-4",
+      520
+    ],
+    "13487": [
+      "MOVE",
+      772,
+      520,
+      595,
+      true
+    ],
+    "15462": [
+      "MOVE",
+      497,
+      520,
+      914,
+      false
+    ],
+    "15572": [
+      "ADD",
+      161,
+      497,
+      "-1/2",
+      914
+    ]
+  },
+  "source_hashes": {
+    "research/p104-retained-operand-descent/PROOF.md": "941145209301df79d2b1a1c91dc6133435952c8d94e79b825ed19eee5988ceef",
+    "research/p104-retained-operand-descent/README.md": "42704b4bf59b6f83ddc3a37c1e26d4c13d7e5f5da64fd6c1874e2391e6b7c4ff",
+    "research/p104-retained-operand-descent/WORD.json.gz": "68d1ff048bc6d30d85ceaeb38e2557adab87b20a9c67cf73948f95f54104575f",
+    "research/p104-root2-receiver-obstruction/README.md": "2b005a550c76ab6f72d43a3f5438c8a091ea7ea18e5599958f4140d8961596c3"
+  },
+  "status": "PASS_P104_READER497_CACHE_FLOOR",
+  "strict_deleted_stop_lower_bound": "2*4^t-3^t-5^t for 0<t<1",
+  "symbolic_template_events": 2006
+}

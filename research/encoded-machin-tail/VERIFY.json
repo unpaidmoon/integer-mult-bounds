@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/physical-ring-product/inputs/fourier-export.tar",
+    "research/physical-ring-product/ring_sources.py",
+    "research/physical-ring-product/ring_words.py",
+    "research/physical-ring-product/twiddle_setup.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 180,
+      "checks": "All finite rational, physical Machin, complete twiddle and rejecting controls, with source authentication and file-hash-bound stdout."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 180,
+      "checks": "All finite rational, physical Machin, complete twiddle and rejecting controls, with source authentication and file-hash-bound stdout."
+    }
+  ]
+}

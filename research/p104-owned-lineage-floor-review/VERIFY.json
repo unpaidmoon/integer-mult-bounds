@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [
+    "numpy==2.5.4"
+  ],
+  "inputs": [
+    "research/p104-helper468-rung-removal/WORD.json.gz",
+    "research/p104-helper470-twin-rung-removal/WORD.json.gz",
+    "research/p104-root-relay-descent-2/WORD.json.gz",
+    "research/p104-retained-operand-descent/WORD.json.gz"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 600,
+      "checks": "Authenticated inputs; own exact real and P_M replay of the PR5907, PR6030, PR6144 and PR6167 words: owned-delivery matrix C, PUB + C = I, R1, R3, P3a, NEED, Z, rank C, owned paid, SAME/STRICT ancestry, merges and branching; lineage factorization (rank one on every non-orthogonal pair, lineage paid >= F2 rank, completion X with X o Gamma = I and rank 8); exact E8 root data from the PR6030 completion and finite facts F1-F3 on root directions; result equals RESULT.json."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "{package}/verify.py",
+        "--flats"
+      ],
+      "timeout_seconds": 600,
+      "checks": "Own exact P_M replay of the PR6030 word (source of the completion), exact E8 root data and finite facts F1-F3, plus all 440,880 one-dimensional flats of the E8 arrangement as W-orbits of the fundamental coweights (exact integers): support spans and all span-pair F2 ranks; result equals RESULT.json."
+    }
+  ]
+}

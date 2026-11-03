@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "task_id": "replay-runtime",
+  "priority_revision": 8,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "original_card": {
+    "id": "replay-runtime",
+    "question": "Can one measured replay bottleneck be sped up without dropping coverage?",
+    "starting_points": [
+      "scripts/run_isolated_tests.py",
+      "scripts/verify_replay_coverage.py",
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "Profile one isolated replay and optimize the measured bottleneck.",
+      "Design source-bound reuse with explicit dependency invalidation and negative controls."
+    ],
+    "acceptance_gate": "Report before/after wall time on the same fixture, retained checks and invalidation behavior.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_selected_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Resolve the current selected review, separate complex/ordinary BIT/admitted BIT/outer budgets, and compare the card against live handoffs before starting. Historical ceilings require exact source/model equivalence.",
+      "scope": "Source-binding orientation only; not a scientific replay or all-size proof. Materialize selected inputs if this checkout is sparse."
+    },
+    "first_experiment": "Measure one unchanged fixture, preserve check coverage, and test one optimization with invalidation controls.",
+    "bottleneck_link": "Faster trustworthy replays increase review throughput and let mechanism candidates be checked sooner.",
+    "allowed_variations": [
+      "Profile one stage or design one source-bound cache boundary."
+    ],
+    "scope_change_triggers": [
+      "Skipping coverage or comparing different fixtures to claim speedup."
+    ],
+    "overlap_terms": [
+      "replay runtime",
+      "cache invalidation",
+      "isolated tests"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Decode-once exact gates for the complete PR1431 pivot-440 independent forward-pulse replay, with unchanged mathematical predicates and measured full-caller wall time.",
+  "scope_change_reason": "The runtime card is narrowed to one complete independent caller. The predecessor obstruction is cited and retained, not independently audited as the deliverable.",
+  "bottleneck_link": "The complex supplier depends on exact dirty-helper and restoration checks. Reducing complete replay friction makes those checks cheaper without claiming a better paid moment or kappa.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop after the first complete-caller improvement that exceeds timing noise and passes exact differential and invalidation controls. Do not optimize another mechanism or extend the mathematical census.",
+  "outcome": "completed",
+  "evidence": "BENCHMARK.json records ten successful complete callers in alternating fresh processes with equal output hashes. verify.py checks the exact pulse recurrence, source invalidation, and both complete callers against the retained receipts.",
+  "author": "Nick Petalas",
+  "ai_assistance": "Independent human and formal proof-kernel review are unclaimed.",
+  "open_questions": [
+    {
+      "question": "Can exact sparse-state zero handling reduce the remaining pulse propagation cost while preserving every source operation and pulse cut?",
+      "why_it_matters": "Fraction arithmetic and the full gate traversal remain the dominant work after decoding is removed.",
+      "first_step": "Profile the prepared complete caller and test any zero shortcut against cancellation, scale-zero, dirty-state and pulse-boundary cases.",
+      "blocked_by": "No such shortcut is implemented or measured here."
+    },
+    {
+      "question": "Should this prepared execution replace the source command in a separately maintained successor?",
+      "why_it_matters": "The frozen source is unchanged and the faster command is currently opt-in.",
+      "first_step": "Choose an explicit maintained caller and retain all four source dependencies and the complete saved-receipt checks.",
+      "blocked_by": "No source-package integration or broader workload timing is supplied."
+    }
+  ],
+  "claim_url": "https://github.com/CrocSwap/integer-mult-bounds/discussions/1166#discussioncomment-19294840",
+  "predecessor": {
+    "pr": 1431,
+    "author": "Hanson Sun / bbMisk",
+    "path": "research/complex-p440-window-shocks",
+    "relation": "Implementation performance contribution; no new mathematical obstruction."
+  },
+  "publication_context": {
+    "upstream_main": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+    "priority_revision": 8,
+    "selected_kappa": "781451/250000000",
+    "overlap_coverage": "333 open PRs and 6059 Discussion records with complete remote pagination; 91 of 8722 local HEAD notes searched, supplemented by targeted all-main README and merged-PR searches. Unpublished work and arbitrary historical diffs remain outside coverage.",
+    "selected_binding_control": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY"
+  }
+}

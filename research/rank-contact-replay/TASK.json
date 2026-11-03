@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "task_id": "replay-runtime",
+  "priority_revision": 8,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "original_card": {
+    "id": "replay-runtime",
+    "question": "Can one measured replay bottleneck be sped up without dropping coverage?",
+    "starting_points": [
+      "scripts/run_isolated_tests.py",
+      "scripts/verify_replay_coverage.py",
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "Profile one isolated replay and optimize the measured bottleneck.",
+      "Design source-bound reuse with explicit dependency invalidation and negative controls."
+    ],
+    "acceptance_gate": "Report before/after wall time on the same fixture, retained checks and invalidation behavior.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_selected_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Resolve the current selected review, separate complex/ordinary BIT/admitted BIT/outer budgets, and compare the card against live handoffs before starting. Historical ceilings require exact source/model equivalence.",
+      "scope": "Source-binding orientation only; not a scientific replay or all-size proof. Materialize selected inputs if this checkout is sparse."
+    },
+    "first_experiment": "Measure one unchanged fixture, preserve check coverage, and test one optimization with invalidation controls.",
+    "bottleneck_link": "Faster trustworthy replays increase review throughput and let mechanism candidates be checked sooner.",
+    "allowed_variations": [
+      "Profile one stage or design one source-bound cache boundary."
+    ],
+    "scope_change_triggers": [
+      "Skipping coverage or comparing different fixtures to claim speedup."
+    ],
+    "overlap_terms": [
+      "replay runtime",
+      "cache invalidation",
+      "isolated tests"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Exact basis-rank execution of the complete PR4841 mapped-contact caller, retaining all checks and receipts.",
+  "scope_change_reason": "The runtime card is refined to the complete retained PR4841 contact-distance caller and its measured literal intersection bottleneck.",
+  "bottleneck_link": "This verifier-engineering side result removes measured exponential subspace enumeration from a complete native-contact replay; it does not improve the paid supplier invoice.",
+  "budget_minutes": 60,
+  "stop_rule": "Ship the first verified complete-caller improvement; do not optimize other caller phases.",
+  "outcome": "completed",
+  "evidence": "PROOF.md; verify.py; benchmark.py emits timed complete-caller receipts and SHA256 bindings outside the checkout.",
+  "author": "Nick Petalas",
+  "ai_assistance": "Independent human and formal proof-kernel review are unclaimed.",
+  "open_questions": [
+    {
+      "question": "Can a basis-only contact ABI eliminate materialization of complete subspaces at the caller boundary?",
+      "why_it_matters": "The current adapter still pays for span construction and validates full input sets.",
+      "first_step": "Define a separate bounded basis contract and compare the complete graph caller, including basis validation.",
+      "blocked_by": "This changes the source interface and is outside the first-improvement scope."
+    }
+  ],
+  "question_source": {
+    "pr": 4841,
+    "author": "Dugongue",
+    "role": "Retained implementation and geometric predicates; the performance question is newly posed."
+  }
+}

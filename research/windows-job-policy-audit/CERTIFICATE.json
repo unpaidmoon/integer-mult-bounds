@@ -1,0 +1,199 @@
+{
+  "cases": [
+    {
+      "before_gate_active_processes": 2,
+      "checked_before_outer_job_teardown": true,
+      "context_yielded": false,
+      "controller_created_probe_pid": 12832,
+      "controller_rescue_used": false,
+      "exception": {
+        "errno": 12,
+        "filename": null,
+        "filename2": null,
+        "strerror": "\u3053\u306e\u30b3\u30de\u30f3\u30c9\u3092\u5b9f\u884c\u3059\u308b\u305f\u3081\u306e\u5341\u5206\u306a\u30af\u30a9\u30fc\u30bf\u304c\u3042\u308a\u307e\u305b\u3093\u3002",
+        "type": "OSError",
+        "winerror": 1816
+      },
+      "gate_argv_verified": true,
+      "gate_count": 1,
+      "gate_outer_active_before_release": [
+        3
+      ],
+      "gate_outer_pids_before_release": [
+        [
+          620,
+          12832,
+          32416
+        ]
+      ],
+      "gate_pid": 32416,
+      "gate_wait_results": [
+        0
+      ],
+      "launch_reports": [
+        {
+          "errno": 12,
+          "filename": null,
+          "filename2": null,
+          "status": "oserror",
+          "strerror": "\u3053\u306e\u30b3\u30de\u30f3\u30c9\u3092\u5b9f\u884c\u3059\u308b\u305f\u3081\u306e\u5341\u5206\u306a\u30af\u30a9\u30fc\u30bf\u304c\u3042\u308a\u307e\u305b\u3093\u3002",
+          "winerror": 1816
+        }
+      ],
+      "mode": "denied2",
+      "observer_cleanup_used": false,
+      "outer_active_after_probe": 0,
+      "outer_active_before_resume": 1,
+      "outer_entry_identities": [
+        {
+          "image": "C:\\Windows\\System32\\conhost.exe",
+          "pid": 620
+        },
+        {
+          "image": "F:\\Application\\stability_matrix\\Assets\\Python\\cpython-3.12.11-windows-x86_64-none\\python.exe",
+          "pid": 12832
+        }
+      ],
+      "outer_limit": 2,
+      "payload_returncode": null,
+      "probe_entry_active_processes": 2,
+      "probe_exit_code": 0,
+      "probe_identity": {
+        "image": "F:\\Application\\stability_matrix\\Assets\\Python\\cpython-3.12.11-windows-x86_64-none\\python.exe",
+        "pid": 12832
+      },
+      "probe_outer_pids_at_entry": [
+        620,
+        12832
+      ],
+      "probe_parent_identity": {
+        "image": "F:\\Application\\stability_matrix\\Assets\\Python\\cpython-3.12.11-windows-x86_64-none\\python.exe",
+        "pid": 4572
+      },
+      "sentinel_matches": false,
+      "sentinel_present": false
+    },
+    {
+      "before_gate_active_processes": 2,
+      "checked_before_outer_job_teardown": true,
+      "context_yielded": true,
+      "controller_created_probe_pid": 18792,
+      "controller_rescue_used": false,
+      "exception": null,
+      "gate_argv_verified": true,
+      "gate_count": 1,
+      "gate_outer_active_before_release": [
+        3
+      ],
+      "gate_outer_pids_before_release": [
+        [
+          18792,
+          44248,
+          47740
+        ]
+      ],
+      "gate_pid": 47740,
+      "gate_wait_results": [
+        0
+      ],
+      "launch_reports": [
+        {
+          "status": "started"
+        }
+      ],
+      "mode": "allowed3",
+      "observer_cleanup_used": false,
+      "outer_active_after_probe": 0,
+      "outer_active_before_resume": 1,
+      "outer_entry_identities": [
+        {
+          "image": "F:\\Application\\stability_matrix\\Assets\\Python\\cpython-3.12.11-windows-x86_64-none\\python.exe",
+          "pid": 18792
+        },
+        {
+          "image": "C:\\Windows\\System32\\conhost.exe",
+          "pid": 44248
+        }
+      ],
+      "outer_limit": 3,
+      "payload_returncode": 0,
+      "probe_entry_active_processes": 2,
+      "probe_exit_code": 0,
+      "probe_identity": {
+        "image": "F:\\Application\\stability_matrix\\Assets\\Python\\cpython-3.12.11-windows-x86_64-none\\python.exe",
+        "pid": 18792
+      },
+      "probe_outer_pids_at_entry": [
+        18792,
+        44248
+      ],
+      "probe_parent_identity": {
+        "image": "F:\\Application\\stability_matrix\\Assets\\Python\\cpython-3.12.11-windows-x86_64-none\\python.exe",
+        "pid": 4572
+      },
+      "sentinel_matches": true,
+      "sentinel_present": true
+    },
+    {
+      "checked_before_outer_job_teardown": true,
+      "context_yielded": false,
+      "controller_created_probe_pid": 19748,
+      "controller_rescue_used": false,
+      "exception": null,
+      "gate_argv_verified": false,
+      "gate_count": 0,
+      "gate_outer_active_before_release": [],
+      "gate_outer_pids_before_release": [],
+      "gate_wait_results": [],
+      "launch_reports": [],
+      "mode": "direct2",
+      "observer_cleanup_used": false,
+      "outer_active_after_probe": 0,
+      "outer_active_before_resume": 1,
+      "outer_entry_identities": [
+        {
+          "image": "F:\\Application\\stability_matrix\\Assets\\Python\\cpython-3.12.11-windows-x86_64-none\\python.exe",
+          "pid": 19748
+        },
+        {
+          "image": "C:\\Windows\\System32\\conhost.exe",
+          "pid": 46584
+        }
+      ],
+      "outer_limit": 2,
+      "payload_returncode": 0,
+      "probe_entry_active_processes": 2,
+      "probe_exit_code": 0,
+      "probe_identity": {
+        "image": "F:\\Application\\stability_matrix\\Assets\\Python\\cpython-3.12.11-windows-x86_64-none\\python.exe",
+        "pid": 19748
+      },
+      "probe_outer_pids_at_entry": [
+        19748,
+        46584
+      ],
+      "probe_parent_identity": {
+        "image": "F:\\Application\\stability_matrix\\Assets\\Python\\cpython-3.12.11-windows-x86_64-none\\python.exe",
+        "pid": 4572
+      },
+      "sentinel_matches": true,
+      "sentinel_present": true
+    }
+  ],
+  "environment": {
+    "executable": "F:\\Application\\stability_matrix\\Assets\\Python\\cpython-3.12.11-windows-x86_64-none\\python.exe",
+    "optimized": false,
+    "platform": "Windows-11-10.0.26300-SP0",
+    "python": "3.12.11"
+  },
+  "schema_version": 1,
+  "scope": "pending PR5721 checked_pipe; three isolated Windows job cases",
+  "source": {
+    "commit": "916cf98d5d8a448ec6515d211c6fe980a46a1694",
+    "git_blob": "54e33b7556364fa531e49b2d33d4d10d6f38fa59",
+    "path": "scripts/research_windows_git.py",
+    "retained_path": "vendor/research_windows_git.py",
+    "sha256": "9e3dfa9b8865d355c03529c2fe92d90e1c3b12a2adb8d505146d16757b2cba50",
+    "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/5721"
+  }
+}

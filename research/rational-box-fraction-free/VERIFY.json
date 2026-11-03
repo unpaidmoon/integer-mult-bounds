@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "scripts/compare_recursive_invoices.py",
+    "scripts/optimize_rational_box.py",
+    "tests/test_research_rational_box.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "-W",
+        "error",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "5,985 exact systems, kernel boundaries, six inherited test groups, complete CLI byte equality and three actual source corruptions."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-O",
+        "-B",
+        "-W",
+        "error",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "The same checks with assertions disabled; all new checks use explicit exceptions."
+    }
+  ]
+}

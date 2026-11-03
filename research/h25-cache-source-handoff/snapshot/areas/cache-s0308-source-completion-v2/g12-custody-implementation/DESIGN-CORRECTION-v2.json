@@ -1,0 +1,70 @@
+{
+  "accepted_design": {
+    "bytes": 60181,
+    "mode": "0444",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody/DESIGN-v1.json",
+    "sha256": "1f88ec187415abfd058728b7bf37fb6d9550e8bb3a080da4841d32be4019fe72"
+  },
+  "authorization": {
+    "bytes": 2545,
+    "mode": "0444",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/parent/AUTHORIZATION-v2.json",
+    "sha256": "9e32514288fed2b1d2873387bf81861ffcd9e1b56d2ab4828be13a311e629106"
+  },
+  "bounded_publication_purpose": "Only observed parent Popen/guard/pair/known-close custody and actual measured-through prewrite endpoints. Own record write/readback/close, remaining parent descriptors/return/adoption and later consumer work remain unknown current costs. No completed invoice/funding/fit claim.",
+  "explicit_changes": {
+    "enclosing_accounting_source_pin_replaced_by": "unmeasured_final_tail = None",
+    "enclosing_tail_join_required_replaced_by": "complete_cost_qualification = False",
+    "invented_financial_API_stub": "Removed under explicit parent instruction and pinned original-scope correction; no new accounting interface constructed.",
+    "manifest_schema": "g12-parent-two-export-custody-v2",
+    "publication_schema": "g12-parent-custody-publication-v2",
+    "source_pin_cycles": "Initial independent source identity comes from original trusted launcher/loader, never own-source SHA literal.",
+    "typed_cold_transport": "Exact three-argument call and original private-loader injection/identity checks; selected pins and handoff remain None."
+  },
+  "history": {
+    "bytes": 699,
+    "mode": "0444",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/pre-correction-source-v1/FREEZE.json",
+    "sha256": "033cf284a1c011b861743efcee0281bea8859583e3fcad423cf80a1a80c24a92"
+  },
+  "independent_original_scope_correction": {
+    "bytes": 10874,
+    "mode": "0444",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-custody-independent/G12-CUSTODY-SOURCE-SCOPE-CLARIFICATION-v1.json",
+    "sha256": "a9261f686d4fbe6ca40258335231a730dc7e3319be7cedf7c39e189a57c7f367"
+  },
+  "independent_produced_source_review": "Pending; no acceptance or body credit claimed.",
+  "preserved_scope": {
+    "accepted_producer_bytes_unchanged": "a346025d5b6e2b26246521c6af6292643a4c2c3286b33ff3996dcf051cd6be26",
+    "fixed_exports": [
+      "g12-reference.common.json",
+      "g12-reference.diagnostics.json"
+    ],
+    "new_source_leaves_after_review": [
+      "integration/g12_reference_adapter_v1.py",
+      "g12_reference_parent_v1.py",
+      "g12_reference_cold_consumer_v1.py"
+    ],
+    "no_new_authorization": "No new budget, reservation, native qualification, performance, science, PROFILE_ANCHOR_PASS, FULL_PASS, G12 approval or broader-goal status change.",
+    "no_reassignment": [
+      "group01",
+      "failure_variants",
+      "all212",
+      "F4",
+      "M",
+      "P02"
+    ],
+    "one_fixed_role": "independent-original-uncached G12; h=25; extra_target=(0,2,1); normal optimize0; original profile/no-anchor invocation",
+    "preserve": "Every original failure, partial export, raw error, source pin and historical frozen file remains intact. No repair/reroll or reconstruction of absent canonical receipts.",
+    "separate_P02": "P02 retains its own standard-workload independent double-reference/rank/complement/native equality obligations. G12 diagnostics never satisfy them."
+  },
+  "runtime": {
+    "handoff": null,
+    "launch": null,
+    "new_guard_budget": false,
+    "selected_transport": null,
+    "target_operations": 0
+  },
+  "schema": "g12-fixed-custody-source-boundary-correction-v2",
+  "source_and_runtime_separation": "Complete symbolic C01-C15 original invoice is required. Actual launch/adoption/phase/budget/resource fit/final-cost/scientific qualification remain separately closed; no new financial API is an original source-completion prerequisite."
+}

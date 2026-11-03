@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/cubic-pure-b-boundary/PROOF.md",
+    "research/dyadic-cubic-repair/PROOF.md"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Exact symbolic identity, dyadic weights, retained-child chronology and inverse, positive source controls and exact-reason rejection controls; compare committed RESULT.json."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-O",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Identical verification with assertions disabled."
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "d59b5035e7b4cbaa9d688a1d32dd0d6eb79c466a",
+      "sha256": "9b8d0eea95b3bf0dfcb7938a732a6439b87a2685dec2a5ab9e525b3b34debbfa"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "3404fbdd5e7529a0674eef26114b5071e4586cec",
+      "sha256": "ead6cdc9d0af6d58e8a49744d8ec8c7c15e13d2ba93c276c434bcf9b51b93a81"
+    },
+    {
+      "path": "research/e7-bitsliced-exhaustion/binary.py",
+      "usage": "input",
+      "git_blob": "cad9fc43ec0244bce415a76bc61b6445ffbd7519",
+      "sha256": "e79ad4d1d4be1748cf09aacc4274a316000d4b5922f13495778892b9309dc56e"
+    },
+    {
+      "path": "research/e7-bitsliced-exhaustion/classify.py",
+      "usage": "input",
+      "git_blob": "3c14a223aebb5b05562c2db4f37eacc87148f9a3",
+      "sha256": "9fbdf0d4ad5c7a5feddfda2bfda7fbfedcdbc1361543b6ec7ef0f8ecc6bfb6c1"
+    },
+    {
+      "path": "research/e7-bitsliced-exhaustion/source/RESULT.json",
+      "usage": "input",
+      "git_blob": "d32035693b23f114723c953c94370b349aa13cad",
+      "sha256": "2742bd01c85c988cb4b8c13359839ce9e10672bde1a40c8bf668aae70b12c98d"
+    },
+    {
+      "path": "research/e7-bitsliced-exhaustion/source/SOURCES.json",
+      "usage": "input",
+      "git_blob": "195cf52a31ad494b2a4444beaa2bf66f0c8942e8",
+      "sha256": "6281c850b2827c2d10624822c9fa2aed4f7ecf50e1c615777e72214aa568ecc6"
+    },
+    {
+      "path": "research/e7-bitsliced-exhaustion/source/vendor/PR5238.py",
+      "usage": "input",
+      "git_blob": "781a074d45126b1a84b92ee2393dc95790c0cb1b",
+      "sha256": "95502bb9e551302cbb0483097250441e96e5f858a5624745678875e3cedba9d2"
+    },
+    {
+      "path": "research/e7-bitsliced-exhaustion/source/vendor/PR5238.md",
+      "usage": "input",
+      "git_blob": "5dc802961147c41af039e899d8baa3c8bb9e3909",
+      "sha256": "36e2263d28280043d6861caa4c81270be4800246e17647ec09da7cb4c2826085"
+    }
+  ]
+}

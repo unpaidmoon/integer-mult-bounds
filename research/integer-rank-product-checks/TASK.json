@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "task_id": "replay-runtime",
+  "priority_revision": 8,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "original_card": {
+    "id": "replay-runtime",
+    "question": "Can one measured replay bottleneck be sped up without dropping coverage?",
+    "starting_points": [
+      "scripts/run_isolated_tests.py",
+      "scripts/verify_replay_coverage.py",
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "Profile one isolated replay and optimize the measured bottleneck.",
+      "Design source-bound reuse with explicit dependency invalidation and negative controls."
+    ],
+    "acceptance_gate": "Report before/after wall time on the same fixture, retained checks and invalidation behavior.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_selected_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Resolve the current selected review, separate complex/ordinary BIT/admitted BIT/outer budgets, and compare the card against live handoffs before starting. Historical ceilings require exact source/model equivalence.",
+      "scope": "Source-binding orientation only; not a scientific replay or all-size proof. Materialize selected inputs if this checkout is sparse."
+    },
+    "first_experiment": "Measure one unchanged fixture, preserve check coverage, and test one optimization with invalidation controls.",
+    "bottleneck_link": "Faster trustworthy replays increase review throughput and let mechanism candidates be checked sooner.",
+    "allowed_variations": [
+      "Profile one stage or design one source-bound cache boundary."
+    ],
+    "scope_change_triggers": [
+      "Skipping coverage or comparing different fixtures to claim speedup."
+    ],
+    "overlap_terms": [
+      "replay runtime",
+      "cache invalidation",
+      "isolated tests"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Accelerate the complete rational-rank certificate produce/save/check path by exact bounded denominator clearing in all four product checks.",
+  "scope_change_reason": "The replay-runtime card is refined to the PR5789 rank certificate interface and its bounded dense rectangular fixture; this is an implementation improvement, not a scientific audit.",
+  "bottleneck_link": "Exact interface searches require full rank and both kernel certificates. Faster complete certificate production and checking reduce that verification cost while retaining every certificate predicate.",
+  "budget_minutes": 60,
+  "stop_rule": "Ship the first measured full-path improvement after exact conformance and rejection checks. Do not extend to other consumers.",
+  "outcome": "completed",
+  "evidence": "591 complete certificate equalities, 802 rational product/mutant cases, 24 witness rejections and seven unit tests; five paired complete CLI bundles per side, twenty successful commands, byte-identical output and a local 54.94% median wall-time reduction. See README.md and the generated benchmark report.",
+  "author": "Nick Petalas",
+  "ai_assistance": "Independent human and formal proof-kernel review are unclaimed.",
+  "open_questions": [
+    {
+      "question": "Does this full-path improvement persist on an actual large interface-search workload with heterogeneous certificate denominators?",
+      "why_it_matters": "The retained fixture is dense and rational but synthetic; a broader production speed claim requires that workload.",
+      "first_step": "Export one source-bound interface matrix and run the unchanged paired CLI harness on it.",
+      "blocked_by": "A named consumer and its exact matrix export are not supplied here."
+    },
+    {
+      "question": "Can the 16384-bit scaling threshold be chosen from a proved allocation and arithmetic budget for a constrained backend?",
+      "why_it_matters": "The fallback preserves exact acceptance while the current threshold only bounds this Python fast path.",
+      "first_step": "Compare fixed-memory product algorithms under an explicit integer-capacity limit.",
+      "blocked_by": "No fixed-capacity runtime or whole-supplier resource contract is declared."
+    }
+  ],
+  "evidence_details": {
+    "complete_certificates": 591,
+    "rational_products_and_mutants": 802,
+    "certificate_rejections": 24,
+    "benchmark": "Five alternating fresh-process produce/save/check bundles per side; twenty successful CLI commands; identical serialized certificate hash. Raw timing arrays and profile attribution are retained in README.md.",
+    "local_python": "3.12.15",
+    "claim": "https://github.com/CrocSwap/integer-mult-bounds/discussions/1166#discussioncomment-19294774"
+  },
+  "claim_type": "Scoped exact-arithmetic implementation proof with finite conformance and a measured local 54.94% complete-CLI wall-time reduction."
+}

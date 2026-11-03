@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/p104-helper-subspace-splits/WORD.json.gz",
+    "research/p104-helper470-twin-rung-removal/WORD.json.gz",
+    "research/p104-native-channel/vendor/clifford_exact.py",
+    "research/p104-native-channel/vendor/native_verify.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 400,
+      "checks": "SHA256 of the selected #6030 word and of the #5599 word; chart walk of all 3453 MOVE events with recorded frames, ownership flags and strict span nesting; rejection of a wrong source frame and of a non-nested destination; lower_child phase census of all 2886 distinct operators (left phase 0, right phase histogram 1077/994/239/576, event histogram 1336/1255/246/616, rank equal to the frame-length gap); 78 endpoint pairs absent from the #5599 word, with phase histogram 23/17/20/18 and 103 events; one state-rotation control per residue and an off-by-one failure; width-2 witness that p*2 ≡ p (mod 4) exactly for p=0."
+    }
+  ]
+}

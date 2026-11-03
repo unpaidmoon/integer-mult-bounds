@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/frobenius-algebra-recognition/README.md",
+    "research/frobenius-algebra-recognition/check_exhaustive.py",
+    "research/frobenius-algebra-recognition/recognize.py",
+    "research/frobenius-algebra-recognition/verify.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-X",
+        "dev",
+        "-B",
+        "{package}/verify.py",
+        "--caller",
+        "main"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Exact symmetric-kernel equivalence, branch/precedence/immutability controls, contraction counts and complete baseline/adapted main caller equality."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-X",
+        "dev",
+        "-B",
+        "-O",
+        "{package}/verify.py",
+        "--caller",
+        "main"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Exact symmetric-kernel equivalence, branch/precedence/immutability controls, contraction counts and complete baseline/adapted main caller equality."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-X",
+        "dev",
+        "-B",
+        "{package}/verify.py",
+        "--caller",
+        "oracle"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Exact symmetric-kernel equivalence, branch/precedence/immutability controls, contraction counts and complete baseline/adapted oracle caller equality."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-X",
+        "dev",
+        "-B",
+        "-O",
+        "{package}/verify.py",
+        "--caller",
+        "oracle"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Exact symmetric-kernel equivalence, branch/precedence/immutability controls, contraction counts and complete baseline/adapted oracle caller equality."
+    }
+  ]
+}

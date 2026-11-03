@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/cyclic-dirty-commutator-audit/echo.py",
+    "research/universal-dirty-certificates/README.md",
+    "research/universal-dirty-certificates/SOURCES.json",
+    "research/universal-dirty-certificates/check_certificate.py",
+    "research/universal-dirty-certificates/examples/binary-echo3.certificate.json",
+    "research/universal-dirty-certificates/examples/binary-echo3.json",
+    "research/universal-dirty-certificates/examples/dirty-echo3.certificate.json",
+    "research/universal-dirty-certificates/examples/dirty-echo3.json",
+    "research/universal-dirty-certificates/examples/wrong-order.certificate.json",
+    "research/universal-dirty-certificates/examples/wrong-order.json",
+    "research/universal-dirty-certificates/fields.py",
+    "research/universal-dirty-certificates/linear_words.py",
+    "research/universal-dirty-certificates/verify.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 90,
+      "checks": "Exact cache-only delta; 80 two-root field/shift fixtures; transition work law and per-call lifetime; malformed shared-prefix controls; generated timing receipt; complete baseline and cached scientific caller with exact output parity."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-O",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 90,
+      "checks": "Exact cache-only delta; 80 two-root field/shift fixtures; transition work law and per-call lifetime; malformed shared-prefix controls; generated timing receipt; complete baseline and cached scientific caller with exact output parity."
+    }
+  ]
+}

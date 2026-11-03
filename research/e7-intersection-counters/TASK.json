@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "task_id": "replay-runtime",
+  "priority_revision": 8,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "original_card": {
+    "id": "replay-runtime",
+    "question": "Can one measured replay bottleneck be sped up without dropping coverage?",
+    "starting_points": [
+      "scripts/run_isolated_tests.py",
+      "scripts/verify_replay_coverage.py",
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "Profile one isolated replay and optimize the measured bottleneck.",
+      "Design source-bound reuse with explicit dependency invalidation and negative controls."
+    ],
+    "acceptance_gate": "Report before/after wall time on the same fixture, retained checks and invalidation behavior.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_selected_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Resolve the current selected review, separate complex/ordinary BIT/admitted BIT/outer budgets, and compare the card against live handoffs before starting. Historical ceilings require exact source/model equivalence.",
+      "scope": "Source-binding orientation only; not a scientific replay or all-size proof. Materialize selected inputs if this checkout is sparse."
+    },
+    "first_experiment": "Measure one unchanged fixture, preserve check coverage, and test one optimization with invalidation controls.",
+    "bottleneck_link": "Faster trustworthy replays increase review throughput and let mechanism candidates be checked sooner.",
+    "allowed_variations": [
+      "Profile one stage or design one source-bound cache boundary."
+    ],
+    "scope_change_triggers": [
+      "Skipping coverage or comparing different fixtures to claim speedup."
+    ],
+    "overlap_terms": [
+      "replay runtime",
+      "cache invalidation",
+      "isolated tests"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Implement intersection-based bit-lane weights and reduce the complete current E7 classification replay while preserving all checks and exact outputs.",
+  "scope_change_reason": "Refine replay-runtime to an originally posed arithmetic change in the retained PR5729 consumer; no predecessor scientific audit.",
+  "bottleneck_link": "Reduce complete replay cost for E7 deletion/decoder research while retaining every finite classification obligation.",
+  "budget_minutes": 60,
+  "stop_rule": "Ship the first verified complete-command speed improvement; do not continue tuning.",
+  "outcome": "completed",
+  "evidence": "BENCHMARK.json; PROOF.md; 34525 small-code comparisons, 108 wide cases, 87381 arithmetic pairs, 16 rejected inputs, 3 invalidation histories and byte-identical complete callers.",
+  "author": "Nick Petalas",
+  "ai_assistance": "Independent human and formal proof-kernel review are unclaimed.",
+  "open_questions": [
+    {
+      "question": "Can a named production caller adopt this intersection counter with all affected pins regenerated?",
+      "why_it_matters": "The package provides an opt-in complete replay, while default callers remain unchanged.",
+      "first_step": "Choose one explicit consumer installation, compare its complete source-bound behavior and update every affected input pin.",
+      "blocked_by": "Production integration is outside this isolated package."
+    }
+  ]
+}

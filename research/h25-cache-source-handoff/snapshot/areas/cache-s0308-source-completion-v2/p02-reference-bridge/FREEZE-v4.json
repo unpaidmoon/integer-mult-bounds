@@ -1,0 +1,57 @@
+{
+  "accepted_body_credit": 0,
+  "actual_current_costs": null,
+  "actual_unmeasured_final_tail": null,
+  "all_frozen_predecessors_preserved": true,
+  "artifacts": [
+    {
+      "bytes": 55647,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/DESIGN-v4.json",
+      "sha256": "e3b79641915661c18b2249818664579624c494ac19e2673d118f4c26b77f37bd"
+    },
+    {
+      "bytes": 9724,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/EXACT-DELTA-v3-to-v4.json",
+      "sha256": "a2acdd7089faa98ac0669dea665d9e1b92cff4b0e4a2469f522e2b18646053fe"
+    }
+  ],
+  "deadline_utc": "2026-10-31T02:29:08.955035Z",
+  "execution_authorized": false,
+  "funding_and_fit_accepted": false,
+  "implementation_created": false,
+  "independent_design_review_pending": true,
+  "next": "Bounded independent exact v3-to-v4 delta review only; no implementation in this assignment.",
+  "owner": "/root/cache_p02_reference_bridge",
+  "physical_complete_cost_admission": false,
+  "predecessor_freeze": {
+    "bytes": 2904,
+    "mode": "0444",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/FREEZE-v3.json",
+    "sha256": "c4c22b8464f691a13084c097f08ff1b377b4ba1daf312998fa6edfc113ef7dc2"
+  },
+  "resolved_finding_pending_independent_review": "P02-RB-V3-F1",
+  "review": {
+    "bytes": 12596,
+    "mode": "0664",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/p02-reference-independent/P02-REFERENCE-DESIGN-v3-REVIEW-v1.json",
+    "sha256": "b53c92ef3774d159fde456eb0545d34365d67e0c0a6bfd944693fda044d28373"
+  },
+  "runtime_payloads_created": 0,
+  "schema": "p02-reference-bridge-design-freeze-v4",
+  "source_adopted": false,
+  "status": "FROZEN_SOLE_RETENTION_ORDER_REPAIR_FOR_INDEPENDENT_DELTA_REVIEW",
+  "unchanged_source_interfaces": {
+    "bytes": 12560,
+    "mode": "0444",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/SOURCE-INTERFACES-v3.json",
+    "sha256": "1d51889836e1dbc73f68c96395308bbd5de45279db1078c25d44402e2c414b05"
+  },
+  "unchanged_source_pins": {
+    "bytes": 10881,
+    "mode": "0444",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/SOURCE-PINS-v3.json",
+    "sha256": "a1773498e738ac9a193f6772c117c5d35be7494c9e7e2abda16143d11045cf5a"
+  }
+}

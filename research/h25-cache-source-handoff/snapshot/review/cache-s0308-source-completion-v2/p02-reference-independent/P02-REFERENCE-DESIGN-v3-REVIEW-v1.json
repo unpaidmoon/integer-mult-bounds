@@ -1,0 +1,144 @@
+{
+  "created_utc": "2026-10-31T02:22:32.087037+00:00",
+  "findings": [
+    {
+      "consequence": "Implementing the specified pure-copy step necessarily violates the design literal requiring post-both-chain retention creation. Deferring that copy silently changes the frozen parent sequence. This is a concrete source-order inconsistency, not a missing runtime datum or an invented financial API.",
+      "evidence": [
+        {
+          "fact": "Explicitly requires creating the fresh parent retention directory only after both known writer chains have completed.",
+          "line": 299,
+          "pointer": "/known_process_and_namespace_bound/retention"
+        },
+        {
+          "fact": "_retain_lane(pure) reads and retains fresh byte-identical parent copies, then seals lane data.",
+          "lines": [
+            419,
+            420
+          ],
+          "pointer": "/parent_sequence/3"
+        },
+        {
+          "fact": "Native launch occurs only after that pure success/retention step; the native writer chain has not started or completed when the pure parent copies are created.",
+          "line": 423,
+          "pointer": "/parent_sequence/4"
+        }
+      ],
+      "id": "P02-RB-V3-F1",
+      "minimal_bounded_repair": "Preserve v3 and issue a separate successor design. After pure actual success/known cleanup, validate its raw namespace and keep it under actual parent ownership without creating or sealing any parent-retained copy. Run native once; require its actual success/known cleanup. Only after both writer chains are known closed, create the fresh retention directory, retain pure and native byte-identical copies with separate original/retained identities, jointly recheck all original/retained evidence, then complete pair join/seal/publication. No earlier qualified handoff, weaker cleanup, producer edits or extra invocation.",
+      "predicate": "The source design must have one executable retention order: no parent retention directory/copy is created before both known writer chains have completed when that is the stated custody boundary.",
+      "scope_of_repair": "Update only the contradictory parent_sequence wording and any dependent source-interface/manifest annotations. Keep both exact producer modes, cold interfaces, strict joins, original custody predicate and cost/tail charges unchanged. Freeze the exact delta for independent review.",
+      "severity": "blocking_for_exact_design",
+      "topic": "Parent retention creation contradicts the prescribed sequential lane order"
+    }
+  ],
+  "inputs": {
+    "delta": {
+      "bytes": 51666,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/EXACT-DELTA-v2-to-v3.json",
+      "sha256": "40dbe4c87839c19552eaa2a653f1023d4d8946a4fe0d327dc207ac1823a73751"
+    },
+    "design": {
+      "bytes": 53696,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/DESIGN-v3.json",
+      "sha256": "deef1b8534a46e892cceeb755c4b9f5915816c31f8cdb255094d75a87a77baa7"
+    },
+    "freeze": {
+      "bytes": 2904,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/FREEZE-v3.json",
+      "sha256": "c4c22b8464f691a13084c097f08ff1b377b4ba1daf312998fa6edfc113ef7dc2"
+    },
+    "independent_evidence": {
+      "bytes": 15242,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/p02-reference-independent/INDEPENDENT-STATIC-EVIDENCE-v1.json",
+      "sha256": "4ec4a33e95a458a8f8c98c6d2db8d251c3c87fd951caf113b8c3b39b35e6a34f"
+    },
+    "interfaces": {
+      "bytes": 12560,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/SOURCE-INTERFACES-v3.json",
+      "sha256": "1d51889836e1dbc73f68c96395308bbd5de45279db1078c25d44402e2c414b05"
+    },
+    "local_protocol_review": {
+      "bytes": 13606,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/p02-protocol-independent/P02-PROTOCOL-REVIEW-v1.json",
+      "sha256": "6f649d3dc9893836b731c01f0ab2ad5830aae88e393ab5f0def9e92d8ea52c7d"
+    },
+    "pins": {
+      "bytes": 10881,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/SOURCE-PINS-v3.json",
+      "sha256": "a1773498e738ac9a193f6772c117c5d35be7494c9e7e2abda16143d11045cf5a"
+    },
+    "scope_clarification": {
+      "bytes": 10874,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-custody-independent/G12-CUSTODY-SOURCE-SCOPE-CLARIFICATION-v1.json",
+      "sha256": "a9261f686d4fbe6ca40258335231a730dc7e3319be7cedf7c39e189a57c7f367"
+    }
+  },
+  "limits": {
+    "activity_credit": 0,
+    "actual_current_costs": null,
+    "actual_unmeasured_final_tail": null,
+    "body_credit": 0,
+    "broader_goal_service_status_changed": false,
+    "execution_authorized": false,
+    "funding_and_fit_accepted": false,
+    "implementation_created": false,
+    "physical_complete_cost_admission": false,
+    "process_lock_network_operations": 0,
+    "protected_runtime_tree_accessed": false,
+    "runtime_payloads_created": 0,
+    "source_adopted": false,
+    "target_operations": 0,
+    "whole_activity_accepted": false
+  },
+  "mechanism_assessment": "Apart from P02-RB-V3-F1, no second concrete source-design obstruction was found in this bounded review. The design describes feasible exact source edges for the two genuine originals, guarded parent observations, strict dual-reference projection and cold transport; these remain source-design obligations until concrete source and maps are independently reviewed.",
+  "method": "Exact named files only; source text, SHA256, JSON structural delta replay and stdlib AST. All 29 source pin byte lengths/hashes verified. Original producer, backend/writer, original guard, Root/provider, cold authority and bounded known-process source edges inspected. No target imports/tests/helpers/factories/compilers/native/science/decoder runs, process/lock/network inspection or protected runtime access.",
+  "next_action": "One explicitly owned successor-design retention-order correction and bounded independent exact-delta review may resolve the sole finding. Do not implement against rejected exact v3 or infer an extension of the existing stop deadline.",
+  "not_established": [
+    "Concrete parent/adapter/consumer/driver bridge implementation or exact maps/inverses.",
+    "Actual original anchor successful-parent provenance, launch/data selection, pair outputs or parent completion.",
+    "Configured source completion, accepted whole P02/S03.08 body, source adoption, full owner/resource/funding/fit/complete physical cost admission.",
+    "Runtime scientific correctness, dynamic cleanup behavior, numeric performance or kappa gain."
+  ],
+  "reviewer": "/root/cache_p02_protocol_review",
+  "schema": "p02-reference-bridge-independent-design-review-v1",
+  "scope": "First independent review of the full exact P02 reference-bridge source design, with retained local protocol analysis and explicit v3 accounting-scope correction. No implementation or source adoption is reviewed or performed.",
+  "status": "REJECT_EXACT_V3_ONE_BOUNDED_RETENTION_ORDER_REPAIR_REQUIRED",
+  "stop_rule": {
+    "baseline_accepted_count": "49/52",
+    "baseline_utc": "2026-10-31T01:59:08.955035Z",
+    "count_credit": 0,
+    "deadline_utc": "2026-10-31T02:29:08.955035Z",
+    "frozen_before_deadline": true,
+    "local_design_review_resets_deadline": false
+  },
+  "verified_findings": [
+    {
+      "result": "Original full_driver.py:136-218 fixes assertions, CPython3.12, baseline/candidate modes, mandatory original anchor, original 32-file inventory and seven engine pins. Pure uses original arithmetic plus observers; native independently performs cold build/all finite controls/native bind. Both use original H25 standard CLI with no G12 extra target. The unchanged producer already writes every needed artifact; no scientific producer-export splice is required.",
+      "topic": "Independent original producer origins"
+    },
+    {
+      "result": "Producer:257-352 and side writer:74-93 supply all six exact raw files, full cumulative complement receipt, typed full return, raw scientific stdout and side digests/sizes/rank counts. The design requires full pairwise six-file/trace byte equality before exposure, validates whole typed tree and ordered role/rank/trace domains, and restores fresh builtin projections. Pure supplies role/rank/trace/outputs; native actual receipt supplies counters after full common join. Native counters cannot be invented from original expected-count assertions or pure null.",
+      "topic": "Complete raw outputs and typed projection"
+    },
+    {
+      "result": "Exact original guard START/receipt fields, 180-second job limits, existing600/2400 phase caps, RSS/log/usage/source predicates and actual process wait are preserved. The design retains actual private Popen, generations/pidfds/known cleanup/raw logs, independent stdout-tail joins and source-owned publication; receipt status and file existence alone are explicitly insufficient. Native build subprocess return/build.json/finite-controls/extension evidence join the source-owned actual receipt.",
+      "topic": "Actual parent/guard completion"
+    },
+    {
+      "result": "Except the retention-order contradiction, the design keeps nofollow dirfd traversal, complete pre/open/post/final file identity and mode checks, nlink1, exact EOF, separate original/retained/cross-lane identities, bounded bytes/depth/nodes, exclusive copy/fsync/readback, joint recheck and unknown-close rejection. Its cooperative known-writer/OS/interpreter premise is explicit; 0444/0500 is not claimed hostile same-UID immutability. Known-process pattern corrections reject PermissionError/unknown rather than treating them as empty.",
+      "topic": "Custody and finite namespace"
+    },
+    {
+      "result": "Root:804-833 actually injects root/capability/API; local driver:127-161 captures the original authority and6-entry descriptor. Authority load/current/invoke:2092-2140,2344-2369 supports the declared owned plain-function exports and positional arguments without new authority roles. Proposed call arities match signatures: cold_join4, bind7, check6, candidate_read6. Complete immutable10tuple joins precede candidate integration exposure; actual Root/provider, registered module/handle/function environment and currentness stay bound. No source digest cycle is required.",
+      "topic": "Existing cold authority and exact 4/7/6/6 transport"
+    },
+    {
+      "result": "Consumed-before-attempt driver state, fixed intended output, immutable capsule and fresh projection container/value identities bind the actual original invocation object and suite token. Fixed candidate six-file reader adds nofollow identity/digest/size/current-science joins after original full output checks and before finalization. New FD/authority work ends before data_finalization; original helper comparisons/three advances and existing late cleanup remain. Dynamic behavior and concrete inverse/source maps remain unimplemented and unaccepted.",
+      "topic": "One-use invocation and candidate custody"
+    },
+    {
+      "result": "Exact declared v2\u2192v3 design/interface changes replay to v3; all11 claimed unchanged original predicate sections compare equal. The independently reviewed original-scope correction supports removing the added enclosing financial-API prerequisite. v3 preserves complete original C01-C15 ownership, measured-through endpoints, actual guard limits, every publication/cleanup/retention/process/source-selection tail and null unmeasured values. Actual execution/adoption/funding/fit/final-cost gates remain separately closed. No F4/M/new financial API source dependency is introduced.",
+      "topic": "Narrow accounting correction"
+    }
+  ]
+}

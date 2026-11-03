@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/coded-native-caller/NORMALIZERS.json"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Mode-matrix structure, L = {x : x mod 2 in H8} by HNF, genericity ranks, PR6312 witness relation, tau = 6 basis, pinned blocks and 2e_j pairs, exhaustive Hall lemma, 120 exact radius-below-two rounder runs, 1,864 subset-sum witnesses and nine rejection controls."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "The same explicit checks under optimized Python."
+    }
+  ]
+}

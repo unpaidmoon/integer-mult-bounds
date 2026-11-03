@@ -1,0 +1,2768 @@
+"""Source-derived verdict wrappers with current-data and live-runtime authority.
+
+Parent-owned installation only. No scientific module imports, arithmetic
+replacement, immutable Label replacement or shared reference answers. Generic
+Label data may use literal uncached expressions; custom Checks/verdict mappings
+are rejected. Serial stability is the existing native backend contract.
+
+V7 preserves the V5 public-dictionary collision contract, the V6 backend/deep
+guard split, and the real row interner at both full and light guard boundaries.
+All cold entries are invoked through one source-closed early authority. Ordered
+base/trace preflight retains the original existing-drift first error. Private
+owner/guard state corruption remains excluded; no instance-key safety is claimed.
+This source-only draft requires independent source and concrete stage admission.
+
+V5 replaces the all-public entry census with a fresh admitted native collision-
+path inspector. The inspector returns True or NotImplemented metadata only;
+entry and exit always inspect current state. All source arithmetic/public dict
+operations, canonical scans and authority remain Python-owned and unchanged.
+No path, version stamp, validation PASS or arithmetic answer is saved by the
+inspector. Compile/runtime/full gates remain closed pending independent review.
+
+The concrete caller must exclude unrelated callbacks/finalizers, signals,
+pending callbacks, concurrent mutation and private corruption for the whole
+admitted request: initial guard through key/preparation/probes/original work,
+exit guards and authority commit/return. GIL ownership and snapshots alone do
+not establish that premise. Unsupported fallback retains separately scoped
+literal callbacks and receives no authority.
+
+"""
+from __future__ import annotations
+
+import _thread
+import ast
+import builtins
+import copy
+import gc
+import hashlib
+from pathlib import Path
+import sys
+from types import BuiltinFunctionType, CodeType, FunctionType, GetSetDescriptorType, ModuleType
+
+V8_SOURCE_DRAFT = False
+V8_ROW_SOURCE_SHA256 = "364b45c100be73a7ace44ab664f3c792020dad6f33f7788b62aaeab67c0c5aa9"
+V8_ROW_PRODUCER_SHA256 = "5aeee9364d29147ef4e1bfffba532f7392833a6158d73d1da50ed6c772f061af"
+BACKEND_SOURCE_SHA256 = "e473c38245c3668715b5a78dfe980b2fe3ed0d0c9b8c97c666fbae6ecf1fffd5"
+SOURCE_SHA256 = "d623617f7c5cb3189580883a8ab30c0bd3832688ae3f1f0c1f881bbbbff8e0c1"
+# Exact provider bytes frozen by the disjoint native source author.
+PROBE_PROVIDER_SHA256 = "9cbb7368f89e71d1e6cc46db5dc77efed3e03ed2a801c98c88fe316e4d9f3ef2"
+# Correctness-only source pins. Actual parent/native admission and full funding
+# remain separate gates; no runtime or performance permission follows here.
+BOOTSTRAP_ROOT_SHA256 = "f5a2d33f2b4d3651f214156a0e7094c2bb516ce2d5ab7698d18c11f98f35dee0"
+_NOT_IMPLEMENTED = NotImplemented
+_TYPE, _OBJECT, _DICT, _TUPLE, _INT, _STR, _BOOL = type, object, dict, tuple, int, str, bool
+_LEN, _SORTED, _ID, _COMPILE = len, sorted, id, compile
+_GET, _ITEMS, _CLEAR = dict.get, dict.items, dict.clear
+_OBJGET, _TYPEGET = object.__getattribute__, type.__getattribute__
+_ERROR, _BASE_ERROR, _VALUE_ERROR = RuntimeError, BaseException, ValueError
+_BUILTINS = builtins.__dict__
+_ANY = _BUILTINS["any"]
+_GETTRACE, _GETPROFILE, _THREADCOUNT = sys.gettrace, sys.getprofile, _thread._count
+_MISSING = object()
+
+
+def _need(condition, message):
+    if not condition:
+        raise _ERROR(message)
+
+
+def _record(function):
+    _need(_TYPE(function) is FunctionType, "Cache contract requires ordinary functions")
+    closure = function.__closure__
+    return (function, function.__code__, function.__globals__, function.__builtins__,
+            function.__defaults__, function.__kwdefaults__, closure,
+            () if closure is None else _TUPLE((cell, cell.cell_contents) for cell in closure))
+
+
+def _fresh(record):
+    function, code, namespace, builtins_owner, defaults, kwdefaults, closure, cells = record
+    if not (function.__code__ is code and function.__globals__ is namespace and
+            function.__builtins__ is builtins_owner and function.__defaults__ is defaults and
+            function.__kwdefaults__ is kwdefaults and function.__closure__ is closure):
+        return False
+    for cell, value in cells:
+        try:
+            if cell.cell_contents is not value:
+                return False
+        except _VALUE_ERROR:
+            return False
+    return True
+
+
+def _string_key_domain(namespace):
+    """Return shape metadata only; release observed key/iterator before return.
+
+    Exact dict does not by itself prevent equality callbacks on named lookup.
+    The closed guard interval excludes concurrent mutation and unrelated
+    allocation finalizers; this function does not disable garbage collection.
+    """
+    if _TYPE(namespace) is not _DICT:
+        return False
+    current = iterator = None
+    try:
+        iterator = _DICT.__iter__(namespace)
+        for current in iterator:
+            if _TYPE(current) is not _STR:
+                return False
+        return True
+    finally:
+        current = None
+        iterator = None
+        namespace = None
+
+
+def _observed_fresh(record, observations):
+    """Share scalar actual metadata, never a PASS or independently expected row.
+
+    Function/cell objects below come from retained expected records. Current
+    defaults/code/globals/cell values are consumed only by captured id and are
+    never bound to local variables or retained in a traceback. Every expected
+    record still compares separately, in original field/cell order.
+    """
+    current = key = None
+    try:
+        function, code, namespace, builtins_owner, defaults, kwdefaults, closure, cells = record
+        if _TYPE(function) is not FunctionType:
+            return False
+        key = (0, _ID(function))
+        current = _GET(observations, key, _MISSING)
+        if current is _MISSING:
+            current = (_ID(function.__code__), _ID(function.__globals__),
+                       _ID(function.__builtins__), _ID(function.__defaults__),
+                       _ID(function.__kwdefaults__), _ID(function.__closure__))
+            observations[key] = current
+        if not (current[0] == _ID(code) and current[1] == _ID(namespace) and
+                current[2] == _ID(builtins_owner) and current[3] == _ID(defaults) and
+                current[4] == _ID(kwdefaults) and current[5] == _ID(closure)):
+            return False
+        for cell, value in cells:
+            key = (1, _ID(cell))
+            current = _GET(observations, key, _MISSING)
+            if current is _MISSING:
+                try:
+                    current = (True, _ID(cell.cell_contents))
+                except _VALUE_ERROR:
+                    current = (False, 0)
+                observations[key] = current
+            if not current[0] or current[1] != _ID(value):
+                return False
+        return True
+    finally:
+        current = key = None
+        observations = None
+
+
+def _ordinary(cls):
+    if _TYPE(cls) is not _TYPE or _TYPEGET(cls, "__mro__") != (cls, _OBJECT):
+        return False
+    members = _TYPEGET(cls, "__dict__")
+    if "__getattr__" in members or _TYPEGET(cls, "__getattribute__") is not _OBJECT.__getattribute__:
+        return False
+    if _TYPEGET(cls, "__new__") is not _OBJECT.__new__:
+        return False
+    for name in ("__dict__", "__weakref__"):
+        descriptor = members.get(name)
+        if _TYPE(descriptor) is not GetSetDescriptorType or descriptor.__objclass__ is not cls:
+            return False
+    return True
+
+
+def _plain_fields(instance, cls):
+    if _TYPE(instance) is not cls:
+        return None
+    namespace = _OBJGET(instance, "__dict__")
+    if _TYPE(namespace) is not _DICT:
+        return None
+    # Validate before string-key lookup: injected custom keys could otherwise
+    # invoke equality against an ordinary field name.
+    for name in namespace:
+        if _TYPE(name) is not _STR:
+            return None
+    return namespace
+
+
+def _canonical(instance, label):
+    """Current exact data, never Label.key alone; no custom operand dispatch."""
+    namespace = _plain_fields(instance, label)
+    if namespace is None or _LEN(namespace) != 3:
+        return None
+    basis = _GET(namespace, "basis", _MISSING)
+    dim = _GET(namespace, "dim", _MISSING)
+    key = _GET(namespace, "key", _MISSING)
+    if _TYPE(basis) is not _DICT or _TYPE(dim) is not _INT or _TYPE(key) is not _TUPLE:
+        return None
+    if dim != _LEN(basis) or _LEN(key) != dim:
+        return None
+    for value in key:
+        if _TYPE(value) is not _INT:
+            return None
+    pivots = 0
+    values = []
+    for pivot, value in _ITEMS(basis):
+        if _TYPE(pivot) is not _INT or _TYPE(value) is not _INT:
+            return None
+        if pivot <= 0 or pivot & (pivot - 1) or value <= 0 or value & -value != pivot:
+            return None
+        pivots |= pivot
+        values.append(value)
+    for pivot, value in _ITEMS(basis):
+        if value & pivots != pivot:
+            return None
+    if _TUPLE(_SORTED(values)) != key:
+        return None
+    # key is now an exact immutable representation of the canonical mapping.
+    return key
+
+
+def _hooks_clear():
+    """Known hook exclusion, not a promise against signals/finalizers/threads."""
+    if _GETTRACE() is not None or _GETPROFILE() is not None or _THREADCOUNT() != 0:
+        return False
+    callbacks = gc.callbacks
+    if _TYPE(callbacks) is not list or _LEN(callbacks):
+        return False
+    monitoring = getattr(sys, "monitoring", None)
+    if monitoring is not None:
+        for tool in range(6):
+            if monitoring.get_tool(tool) is not None:
+                return False
+    return True
+
+
+class _State:
+    __slots__ = ("checks", "mapping", "authority")
+
+    def __init__(self, checks, mapping):
+        self.checks, self.mapping, self.authority = checks, mapping, {}
+
+
+class _Ticket:
+    __slots__ = ("state", "signature", "c", "h", "hit", "expected")
+
+    def __init__(self, state, signature, circuit, height):
+        self.state, self.signature, self.c, self.h = state, signature, circuit, height
+        self.hit, self.expected = False, _MISSING
+
+
+class _Owner:
+    def __init__(self, module, source_records, class_names, probe_provider, probe_binding,
+                 bootstrap_root, bootstrap_capability, bootstrap_api, bootstrap_validate, bootstrap_load,
+                 bootstrap_identity, collector_guard, collector_descriptor):
+        self.collector_guard = collector_guard
+        self.collector_descriptor = collector_descriptor
+        self.module, self.namespace = module, module.__dict__
+        self.checks_class, self.label = self.namespace["Checks"], self.namespace["Label"]
+        self.source_records, self.class_names = source_records, class_names
+        self.odd = self.namespace["odd"]
+        self.probe_provider, self.probe_binding = probe_provider, probe_binding
+        self.probe_namespace = probe_provider.__dict__
+        self.probe_class = _TYPE(probe_binding)
+        self.probe_validate = probe_provider.validate_binding
+        self.probe_inspect = probe_binding.inspect
+        self.probe_counters = probe_binding.counters
+        self.probe_close = probe_binding.close
+        self.probe_namespace_items = _TUPLE(self.probe_namespace.items())
+        self.probe_class_mro = _TYPEGET(self.probe_class, "__mro__")
+        self.probe_class_items = _TUPLE(_TYPEGET(self.probe_class, "__dict__").items())
+        probe_functions = [value for _, value in self.probe_namespace_items if _TYPE(value) is FunctionType]
+        probe_functions.extend(value for _, value in self.probe_class_items if _TYPE(value) is FunctionType)
+        self.probe_records = _TUPLE(_record(function) for function in probe_functions)
+        self.bootstrap_root, self.bootstrap_capability = bootstrap_root, bootstrap_capability
+        self.bootstrap_api = bootstrap_api
+        self.bootstrap_validate, self.bootstrap_load = bootstrap_validate, bootstrap_load
+        self.bootstrap_identity = bootstrap_identity
+        self.bootstrap_namespace = bootstrap_root.__dict__
+        self.bootstrap_namespace_items = _TUPLE(self.bootstrap_namespace.items())
+        self.bootstrap_class = _TYPE(bootstrap_capability)
+        self.bootstrap_class_mro = _TYPEGET(self.bootstrap_class, "__mro__")
+        self.bootstrap_class_items = _TUPLE(_TYPEGET(self.bootstrap_class, "__dict__").items())
+        bootstrap_functions = [value for _, value in self.bootstrap_namespace_items
+                               if _TYPE(value) is FunctionType]
+        bootstrap_functions.extend(value for _, value in self.bootstrap_class_items
+                                   if _TYPE(value) is FunctionType)
+        bootstrap_functions.extend(bootstrap_api)
+        self.bootstrap_records = _TUPLE(_record(function) for function in bootstrap_functions)
+        self.probe_closed = False
+        self.teardown_stop = None
+        self.teardown_primary_error = None
+        self.teardown_close_error = None
+        self.runtime = None
+        self.composed_guard = None
+        self.composed_guard_records = ()
+        self.base_guard_records = ()
+        self.base_guard_classes = ()
+        self.binding_derivation = None
+        self.factory_environment = None
+        self.base_guard = None
+        self.methods = {}
+        self.method_records = ()
+        self.states = {}
+        self.receipt = {"schema": "h25-cache-contract-v8", "source_sha256": SOURCE_SHA256,
+                        "requests": 0, "entry_checks": 0, "exit_checks": 0,
+                        "probe_entry_calls": 0, "probe_exit_calls": 0,
+                        "probe_safe_observations": 0, "probe_unsupported_observations": 0,
+                        "probe_exit_rejections": 0,
+                        "snapshots": 0, "eligible_requests": 0, "uncached_requests": 0,
+                        "authorized_hits": 0, "authorized_results": 0,
+                        "invalidations": 0, "peak_authority_entries": 0,
+                        "current_authority_entries": 0, "teardowns": 0}
+
+    def _clear(self, state):
+        count = _LEN(state.authority)
+        if count:
+            _CLEAR(state.authority)
+            self.receipt["current_authority_entries"] -= count
+            self.receipt["invalidations"] += 1
+
+    def _lookup_state(self, checks):
+        state = _GET(self.states, _ID(checks))
+        if state is not None and state.checks is checks:
+            return state
+        return None
+
+    def enter(self, checks):
+        _need(self.runtime is not None, "Cache contract runtime is not attached")
+        self.runtime.check()
+        self.receipt["entry_checks"] += 1
+        self.receipt["requests"] += 1
+        # Do not read verdicts/everything/key here. Original key errors precede
+        # original verdict access errors; custom Checks itself is unsupported.
+        _need(_plain_fields(checks, self.checks_class) is not None,
+              "Unsupported cache contract Checks dispatch or fields")
+        return checks
+
+    def _data(self, checks, key, operands, kind):
+        self.receipt["snapshots"] += 1
+        namespace = _plain_fields(checks, self.checks_class)
+        if namespace is None:
+            return None
+        circuit, height = _GET(namespace, "c", _MISSING), _GET(namespace, "h", _MISSING)
+        if circuit is _MISSING or _TYPE(height) is not _INT:
+            return None
+        keys = []
+        for operand in operands:
+            value = _canonical(operand, self.label)
+            if value is None:
+                return None
+            keys.append(value)
+        if kind == "label":
+            everything = _GET(namespace, "everything", _MISSING)
+            whole_key = _canonical(everything, self.label)
+            if whole_key is None or _TYPE(key) is not _TUPLE or key != ("label", keys[0]):
+                return None
+            signature = (kind, keys[0], whole_key)
+        else:
+            if _TYPE(key) is not _TUPLE or key != (keys[0], keys[1]):
+                return None
+            signature = (kind, keys[0], keys[1])
+        return signature, circuit, height
+
+    def _probe_safe(self, mapping, key, *, exit_boundary=False):
+        """Fresh metadata only. inspect itself checks admitted provider/native state."""
+        self.check_bootstrap()
+        counter = "probe_exit_calls" if exit_boundary else "probe_entry_calls"
+        self.receipt[counter] += 1
+        result = self.probe_inspect(mapping, key)
+        if result is True:
+            self.receipt["probe_safe_observations"] += 1
+            return True
+        if result is _NOT_IMPLEMENTED:
+            self.receipt["probe_unsupported_observations"] += 1
+            return False
+        raise _ERROR("Cache probe returned non-metadata result")
+
+    def prepare(self, checks, key, operands, kind):
+        namespace = _plain_fields(checks, self.checks_class)
+        _need(namespace is not None, "Unsupported cache contract Checks fields")
+        mapping = _GET(namespace, "verdicts", _MISSING)
+        state = self._lookup_state(checks)
+        if mapping is _MISSING:
+            if state is not None:
+                self._clear(state)
+            self.receipt["uncached_requests"] += 1
+            return None  # original `self.verdicts` raises at its original site
+        _need(_TYPE(mapping) is _DICT, "Unsupported cache contract verdict mapping")
+        if state is None or state.mapping is not mapping:
+            if state is not None:
+                self._clear(state)
+            state = _State(checks, mapping)
+            self.states[_ID(checks)] = state
+        # Preserve original key construction and canonical/type admission before
+        # the native helper may hash an exact supported request key.
+        data = self._data(checks, key, operands, kind) if _hooks_clear() else None
+        public_safe = data is not None and self._probe_safe(mapping, key)
+        if not public_safe:
+            self._clear(state)  # no hash/equality involving unsupported key
+            self.receipt["uncached_requests"] += 1
+            return None
+        self.receipt["eligible_requests"] += 1
+        signature, circuit, height = data
+        return _Ticket(state, signature, circuit, height)
+
+    def reuse(self, ticket, key):
+        if ticket is None:
+            return False
+        record = _GET(ticket.state.authority, key)
+        if record is None:
+            return False
+        signature, circuit, height, result = record
+        if signature != ticket.signature or circuit is not ticket.c or height != ticket.h:
+            return False
+        ticket.hit, ticket.expected = True, result
+        return True
+
+    def finish(self, checks, key, operands, kind, ticket, result):
+        self.runtime.check()
+        self.receipt["exit_checks"] += 1
+        if ticket is None:
+            state = self._lookup_state(checks)
+            if state is not None:
+                self._clear(state)  # callbacks may have made reentrant requests
+            return result
+        namespace = _plain_fields(checks, self.checks_class)
+        same_mapping = namespace is not None and _GET(namespace, "verdicts", _MISSING) is ticket.state.mapping
+        data = self._data(checks, key, operands, kind) if same_mapping and _hooks_clear() else None
+        if (not same_mapping or
+                data is None or data[0] != ticket.signature or
+                data[1] is not ticket.c or data[2] != ticket.h):
+            self._clear(ticket.state)
+            raise _ERROR("Cache data changed during request")
+        if not self._probe_safe(ticket.state.mapping, key, exit_boundary=True):
+            self._clear(ticket.state)
+            self.receipt["probe_exit_rejections"] += 1
+            raise _ERROR("Cache probe unsupported at exit")
+        if ticket.hit and result is not ticket.expected:
+            self._clear(ticket.state)
+            raise _ERROR("Cache verdict authority changed")
+        if _TYPE(result) is not _BOOL:
+            self._clear(ticket.state)
+            return result
+        if ticket.hit:
+            self.receipt["authorized_hits"] += 1
+        authority = ticket.state.authority
+        if key not in authority:
+            self.receipt["current_authority_entries"] += 1
+            count = self.receipt["current_authority_entries"]
+            if count > self.receipt["peak_authority_entries"]:
+                self.receipt["peak_authority_entries"] = count
+        authority[key] = (ticket.signature, ticket.c, ticket.h, result)
+        self.receipt["authorized_results"] += 1
+        return result
+
+    def abort(self, checks):
+        state = self._lookup_state(checks)
+        if state is not None:
+            self._clear(state)
+
+    def check_bootstrap(self):
+        """Freshness relative to the actual root authenticated by the parent.
+
+        Exact types and snapshots enforce continuity; they do not independently
+        authenticate an arbitrary caller-supplied root. Parent bootstrap identity
+        is an explicit prerequisite, established before loading this adapter.
+        """
+        # V8_CALLER_GATE_BEGIN cache_contract_v8.py:16
+        _ca_desc = self.collector_descriptor
+        _ca_runtime_operations = _ca_desc[1]
+        _ca_p = _ca_desc[5]
+        _ca_type, _ca_function, _ca_id = _ca_p[0], _ca_p[1], _ca_p[2]
+        _ca_error, _ca_value_error, _ca_zip = _ca_p[7], _ca_p[8], _ca_p[18]
+        _ca_dispatch, _ca_record = _ca_desc[2], _ca_desc[3]
+        if _ca_type(_ca_runtime_operations) is not _ca_p[9] or _ca_p[3](_ca_runtime_operations) != 1 or _ca_runtime_operations[0] is not self.collector_guard:
+            raise _ca_error("Runtime drift: cache collector operation identity differs")
+        if _ca_runtime_operations is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+            raise _ca_error('Runtime drift: cache collector dispatcher identity differs')
+        for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+            if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+                raise _ca_error('Runtime drift: cache collector dispatcher environment differs')
+        if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+            raise _ca_error('Runtime drift: cache collector dispatcher defaults contract differs')
+        for _ca_cell, _ca_expected in _ca_record[8]:
+            try:
+                _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+            except _ca_value_error:
+                raise _ca_error('Runtime drift: cache collector dispatcher cell became empty') from None
+            if _ca_observed_id != _ca_id(_ca_expected):
+                raise _ca_error('Runtime drift: cache collector dispatcher cell differs')
+        # V8_CALLER_GATE_END cache_contract_v8.py:16
+        _ca_dispatch(0)
+        _need(_TYPE(self.bootstrap_root) is ModuleType and
+              _string_key_domain(self.bootstrap_root.__dict__),
+              "Unsupported cache bootstrap lookup key domain")
+        _need(_TYPE(self.bootstrap_root) is ModuleType and
+              self.bootstrap_root.__dict__ is self.bootstrap_namespace and
+              _LEN(self.bootstrap_namespace) == _LEN(self.bootstrap_namespace_items),
+              "Runtime drift: cache bootstrap root namespace")
+        for name, value in self.bootstrap_namespace_items:
+            _need(_GET(self.bootstrap_namespace, name, _MISSING) is value,
+                  "Runtime drift: cache bootstrap root binding " + name)
+        _need(_TYPE(self.bootstrap_api) is _TUPLE and _LEN(self.bootstrap_api) == 4 and
+              self.bootstrap_api[0] is self.bootstrap_identity and
+              self.bootstrap_api[1] is self.bootstrap_validate and
+              self.bootstrap_api[2] is self.bootstrap_load,
+              "Runtime drift: cache captured bootstrap entry")
+        _need(_TYPE(self.bootstrap_capability) is self.bootstrap_class and
+              _TYPEGET(self.bootstrap_class, "__mro__") is self.bootstrap_class_mro,
+              "Runtime drift: cache bootstrap capability class")
+        members = _TYPEGET(self.bootstrap_class, "__dict__")
+        _need(_LEN(members) == _LEN(self.bootstrap_class_items),
+              "Runtime drift: cache bootstrap capability members")
+        for name, value in self.bootstrap_class_items:
+            _need(members.get(name) is value,
+                  "Runtime drift: cache bootstrap capability member " + name)
+        for record in self.bootstrap_records:
+            _need(_fresh(record), "Runtime drift: cache bootstrap function calling environment")
+        root_digest = self.bootstrap_identity()
+        _need(_TYPE(root_digest) is _STR and root_digest == BOOTSTRAP_ROOT_SHA256,
+              "Cache bootstrap source identity differs")
+        _need(self.bootstrap_validate(self.bootstrap_capability, PROBE_PROVIDER_SHA256) is self.probe_provider,
+              "Cache bootstrap authenticated provider identity differs")
+
+    def teardown(self):
+        for state in self.states.values():
+            self._clear(state)
+        _CLEAR(self.states)
+        self.receipt["teardowns"] += 1
+        _need(not self.probe_closed, "Cache probe was already closed")
+        expected_calls = self.receipt["probe_entry_calls"] + self.receipt["probe_exit_calls"]
+        native_counters = None
+        primary_error = close_error = None
+        stage = "validation"
+        try:
+            self.check_bootstrap()
+            self.probe_validate(self.probe_binding)
+            stage = "counters"
+            native_counters = self.probe_counters()
+            stage = "accounting"
+            _need(_TYPE(native_counters) is _DICT and
+                  _TYPE(_GET(native_counters, "calls")) is _INT and
+                  native_counters["calls"] == expected_calls and
+                  _TYPE(_GET(native_counters, "counter_overflow")) is _INT and
+                  native_counters["counter_overflow"] == 0,
+                  "Cache native probe call accounting or saturation differs")
+        except _BASE_ERROR as error:
+            primary_error = error
+        finally:
+            try:
+                # Captured provider close attempts its captured native disarm and
+                # registry removal even when its own freshness/audit rejects.
+                self.probe_close()
+            except _BASE_ERROR as error:
+                close_error = error
+            finally:
+                self.probe_closed = True
+        if primary_error is not None or close_error is not None:
+            self.teardown_primary_error = primary_error
+            self.teardown_close_error = close_error
+            observed = (_GET(native_counters, "calls")
+                        if _TYPE(native_counters) is _DICT else None)
+            self.teardown_stop = {
+                "status": "STOP", "stage": stage if primary_error is not None else "close",
+                "expected_probe_calls": expected_calls,
+                "observed_probe_calls": observed,
+                "attempted_minus_native": (expected_calls - observed
+                                           if _TYPE(observed) is _INT else None),
+                "native_probe": native_counters,
+                "native_counters_available": native_counters is not None,
+                "close_attempted": True, "owner_terminal": True,
+                "primary_error": (None if primary_error is None else
+                                  (_TYPE(primary_error).__name__, _STR(primary_error))),
+                "close_error": (None if close_error is None else
+                                (_TYPE(close_error).__name__, _STR(close_error))),
+            }
+            # Preserve the actual primary exception object, including its
+            # traceback. A cleanup failure remains explicit as its cause.
+            if primary_error is not None:
+                if close_error is not None:
+                    raise primary_error from close_error
+                raise primary_error
+            raise close_error
+        result = _DICT(self.receipt)
+        result["native_probe"] = native_counters
+        result["probe_closed"] = True
+        return result
+
+
+def _code_named(code, name):
+    for item in code.co_consts:
+        if _TYPE(item) is CodeType and item.co_name == name:
+            return item
+    raise _ERROR("Cache contract expected source code was absent: " + name)
+
+
+def _authenticate(function, expected, namespace):
+    _need(_TYPE(function) is FunctionType and function.__globals__ is namespace and
+          function.__builtins__ is _BUILTINS and function.__closure__ is None and
+          function.__defaults__ is None and function.__kwdefaults__ is None and
+          _code_equal(function.__code__, expected), "Cache contract original source authentication failed")
+    return _record(function)
+
+
+def _generate(module, original_ast, owner, kind):
+    """Retain literal key/membership/body/store/return subtrees unchanged."""
+    original = copy.deepcopy(original_ast)
+    body = original.body
+    _need(_LEN(body) == 4 and _TYPE(body[0]) is ast.Expr and
+          _TYPE(body[1]) is ast.Assign and _TYPE(body[2]) is ast.If and
+          _TYPE(body[3]) is ast.Return, "Cache contract original method AST shape changed")
+    original_dump = ast.dump(original, include_attributes=False)
+    operands = "(lab,)" if kind == "label" else "(small, big)"
+    template = ast.parse('''
+def _factory(_h25_cache_owner, _h25_cache_error):
+    def _method(self):
+        _h25_cache_checks = _h25_cache_owner.enter(self)
+        try:
+            _H25_KEY
+            _h25_cache_ticket = _h25_cache_owner.prepare(self, key, OPERANDS, KIND)
+            _H25_IF
+            _h25_cache_result = _H25_RETURN
+            return _h25_cache_owner.finish(self, key, OPERANDS, KIND,
+                                          _h25_cache_ticket, _h25_cache_result)
+        except _h25_cache_error:
+            _h25_cache_owner.abort(_h25_cache_checks)
+            raise
+    return _method
+''')
+    factory = template.body[0]
+    method = factory.body[0]
+    method.name, method.args = original.name, original.args
+    method.body.insert(0, body[0])
+    factory.body[1].value.id = original.name
+    guarded = method.body[2]
+    guarded.body[0] = body[1]
+    original_if = body[2]
+    original_if.test = ast.BoolOp(op=ast.Or(), values=[original_if.test,
+        ast.UnaryOp(op=ast.Not(), operand=ast.parse(
+            "_h25_cache_owner.reuse(_h25_cache_ticket, key)", mode="eval").body)])
+    guarded.body[2] = original_if
+    guarded.body[3].value = body[3].value
+
+    class Replace(ast.NodeTransformer):
+        def visit_Name(self, node):
+            if node.id == "OPERANDS":
+                return ast.copy_location(ast.parse(operands, mode="eval").body, node)
+            if node.id == "KIND":
+                return ast.copy_location(ast.Constant(value=kind), node)
+            return node
+
+    Replace().visit(template)
+    ast.fix_missing_locations(template)
+    compiled = _COMPILE(template, "<h25-cache-contract-v8>", "exec", dont_inherit=True,
+                        optimize=sys.flags.optimize)
+    # FunctionType avoids adding even temporary globals to the scientific module.
+    make = FunctionType(_code_named(compiled, "_factory"), module.__dict__)
+    generated = make(owner, _BASE_ERROR)
+    _need(ast.dump(original_ast, include_attributes=False) == original_dump,
+          "Cache contract generator mutated the original AST")
+    return generated
+
+
+def _bootstrap_api(bootstrap_root, bootstrap_capability, bootstrap_api):
+    """Use the independently authenticated actual parent root and capability.
+
+    The parent establishes root identity before this adapter is loaded. This is
+    not admission of arbitrary duck-typed root callbacks. All provider source
+    reads, hashing, compile and execution belong exclusively to that root.
+    """
+    _need(_TYPE(PROBE_PROVIDER_SHA256) is _STR and _LEN(PROBE_PROVIDER_SHA256) == 64,
+          "Cache probe provider source pin is not configured")
+    _need(_TYPE(BOOTSTRAP_ROOT_SHA256) is _STR and _LEN(BOOTSTRAP_ROOT_SHA256) == 64,
+          "Cache trusted bootstrap root pin is not configured")
+    _need(_TYPE(bootstrap_root) is ModuleType, "Cache requires the actual trusted parent bootstrap root")
+    namespace = bootstrap_root.__dict__
+    _need(_TYPE(bootstrap_api) is _TUPLE and _LEN(bootstrap_api) == 4 and
+          not _ANY(_TYPE(function) is not FunctionType or function.__globals__ is not namespace
+                   for function in bootstrap_api),
+          "Cache bootstrap entries are not the parent's sealed source-bound API")
+    # The parent sealed these closures before driver/scientific code. Their
+    # captured pristine guard runs before mutable root helper lookup; no late
+    # capture of public root validate/load attributes occurs here.
+    identity, validate, load, diagnostics = bootstrap_api
+    root_digest = identity()
+    _need(_TYPE(root_digest) is _STR and root_digest == BOOTSTRAP_ROOT_SHA256,
+          "Cache trusted bootstrap root source differs")
+    provider = validate(bootstrap_capability, PROBE_PROVIDER_SHA256)
+    _need(_TYPE(provider) is ModuleType, "Cache bootstrap provider type differs")
+    return provider, validate, load, identity
+
+
+def _load_probe(extension_path, expected_extension_sha256, bootstrap_root, bootstrap_capability,
+                bootstrap_api):
+    """The trusted root owns cold native admission; every load is independent."""
+    provider, validate, load, identity = _bootstrap_api(bootstrap_root, bootstrap_capability, bootstrap_api)
+    binding = load(bootstrap_capability, extension_path, expected_extension_sha256)
+    try:
+        _need(validate(bootstrap_capability, PROBE_PROVIDER_SHA256) is provider,
+              "Cache bootstrap provider changed during loading")
+        _need(_TYPE(binding) is provider.ProbeBinding, "Cache probe binding type differs")
+        provider.validate_binding(binding)
+    except _BASE_ERROR as primary_error:
+        try:
+            binding.close()
+        except _BASE_ERROR as close_error:
+            raise primary_error from close_error
+        raise
+    return provider, binding, validate, load, identity
+
+
+def prepare_cache_contract(module, extension_path, expected_extension_sha256,
+                           *, bootstrap_root, bootstrap_capability, bootstrap_api, factory_environment,
+                           source_sha256=SOURCE_SHA256):
+    """Return methods/owner; parent installs only after original P1 admission."""
+    _need(not V8_SOURCE_DRAFT, "V8 source draft is not executable")
+    # The early source-closed guard precedes every new helper. The parent-root
+    # identity still precedes all scientific-source reads and native operations.
+    _need(_TYPE(factory_environment) is _BackendFactoryEnvironment,
+          "Cache v7 requires the parent's early factory environment")
+    # V8_CALLER_GATE_BEGIN cache_contract_v8.py:1
+    _ca_desc = factory_environment.cold_caller_descriptor
+    _ca_p = _ca_desc[5]
+    _ca_type, _ca_function, _ca_id = _ca_p[0], _ca_p[1], _ca_p[2]
+    _ca_error, _ca_value_error, _ca_zip = _ca_p[7], _ca_p[8], _ca_p[18]
+    _ca_dispatch, _ca_record = _ca_desc[2], _ca_desc[3]
+    if factory_environment.cold_authority is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+        raise _ca_error('Cold authority caller dispatcher identity differs')
+    for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+        if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher environment differs')
+    if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+        raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+    for _ca_cell, _ca_expected in _ca_record[8]:
+        try:
+            _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+        except _ca_value_error:
+            raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+        if _ca_observed_id != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher cell differs')
+    # V8_CALLER_GATE_END cache_contract_v8.py:1
+    _ca_dispatch(2, factory_environment.cache_handle)
+    # V8_CALLER_GATE_BEGIN cache_contract_v8.py:2
+    _ca_desc = factory_environment.collector_descriptor
+    _ca_runtime_operations = _ca_desc[1]
+    _ca_p = _ca_desc[5]
+    _ca_type, _ca_function, _ca_id = _ca_p[0], _ca_p[1], _ca_p[2]
+    _ca_error, _ca_value_error, _ca_zip = _ca_p[7], _ca_p[8], _ca_p[18]
+    _ca_dispatch, _ca_record = _ca_desc[2], _ca_desc[3]
+    if _ca_type(_ca_runtime_operations) is not _ca_p[9] or _ca_p[3](_ca_runtime_operations) != 1 or _ca_runtime_operations[0] is not factory_environment.collector_guard:
+        raise _ca_error("Runtime drift: cache collector operation identity differs")
+    if _ca_runtime_operations is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+        raise _ca_error('Runtime drift: cache collector dispatcher identity differs')
+    for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+        if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+            raise _ca_error('Runtime drift: cache collector dispatcher environment differs')
+    if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+        raise _ca_error('Runtime drift: cache collector dispatcher defaults contract differs')
+    for _ca_cell, _ca_expected in _ca_record[8]:
+        try:
+            _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+        except _ca_value_error:
+            raise _ca_error('Runtime drift: cache collector dispatcher cell became empty') from None
+        if _ca_observed_id != _ca_id(_ca_expected):
+            raise _ca_error('Runtime drift: cache collector dispatcher cell differs')
+    # V8_CALLER_GATE_END cache_contract_v8.py:2
+    _ca_dispatch(0)
+    _bootstrap_api(bootstrap_root, bootstrap_capability, bootstrap_api)
+    _need(_TYPE(module) is ModuleType, "Cache contract requires an exact source module")
+    namespace = module.__dict__
+    _need(_string_key_domain(namespace), "Unsupported cache contract source lookup key domain")
+    path = Path(namespace["__file__"])
+    raw = path.read_bytes()
+    _need(source_sha256 == SOURCE_SHA256 and hashlib.sha256(raw).hexdigest() == SOURCE_SHA256,
+          "Cache contract scientific source differs")
+    _need(_GET(namespace, "__builtins__") is _BUILTINS and "any" not in namespace and
+          _GET(_BUILTINS, "any") is _ANY, "Cache contract odd calling environment differs")
+    compiled = _COMPILE(raw, str(path), "exec", dont_inherit=True, optimize=sys.flags.optimize)
+    records = [_authenticate(namespace["odd"], _code_named(compiled, "odd"), namespace)]
+    checks = namespace["Checks"]
+    _need(_ordinary(checks) and _ordinary(namespace["Label"]), "Cache contract original class dispatch differs")
+    members = _TYPEGET(checks, "__dict__")
+    expected_names = {"__module__", "__doc__", "__dict__", "__weakref__"}
+    for code in _code_named(compiled, "Checks").co_consts:
+        if _TYPE(code) is CodeType:
+            expected_names.add(code.co_name)
+            records.append(_authenticate(members.get(code.co_name), code, namespace))
+    _need(set(members) == expected_names, "Cache contract original Checks members differ")
+    parsed = ast.parse(raw, filename=str(path))
+    checks_ast = next(item for item in parsed.body if _TYPE(item) is ast.ClassDef and item.name == "Checks")
+    provider, probe_binding, bootstrap_validate, bootstrap_load, bootstrap_identity = _load_probe(
+        extension_path, expected_extension_sha256, bootstrap_root, bootstrap_capability, bootstrap_api)
+    try:
+        owner = _Owner(module, _TUPLE(records), frozenset(expected_names), provider, probe_binding,
+                       bootstrap_root, bootstrap_capability, bootstrap_api, bootstrap_validate, bootstrap_load,
+                       bootstrap_identity, factory_environment.collector_guard,
+                       factory_environment.collector_descriptor)
+        owner.factory_environment = factory_environment
+        for name, kind in (("residual_ok", "residual"), ("label_ok", "label")):
+            method = next(item for item in checks_ast.body if _TYPE(item) is ast.FunctionDef and item.name == name)
+            owner.methods[name] = _generate(module, method, owner, kind)
+        owner.method_records = _TUPLE(_record(value) for value in owner.methods.values())
+    except _BASE_ERROR as primary_error:
+        try:
+            probe_binding.close()
+        except _BASE_ERROR as close_error:
+            raise primary_error from close_error
+        raise
+    return {"residual_ok": owner.methods["residual_ok"], "label_ok": owner.methods["label_ok"],
+            "owner": owner, "receipt": owner.receipt}
+
+
+def _constant_equal(actual, expected):
+    """No custom constant equality; clear actual roots on every error path."""
+    try:
+        if _TYPE(actual) is not _TYPE(expected):
+            return False
+        kind = _TYPE(actual)
+        if actual is None or actual is Ellipsis:
+            return actual is expected
+        if kind is _INT or kind is _BOOL or kind is _STR or kind is bytes:
+            return actual == expected
+        if kind is _TUPLE:
+            if _LEN(actual) != _LEN(expected):
+                return False
+            for index in range(_LEN(actual)):
+                if not _constant_equal(actual[index], expected[index]):
+                    return False
+            return True
+        if kind is CodeType:
+            return _code_equal(actual, expected)
+        return False
+    finally:
+        actual = expected = None
+        kind = None
+
+
+def _code_equal(actual, expected):
+    """Compare every executable/code metadata field through exact primitives."""
+    try:
+        if _TYPE(actual) is not CodeType or _TYPE(expected) is not CodeType:
+            return False
+        for field in ("co_argcount", "co_posonlyargcount", "co_kwonlyargcount",
+                      "co_nlocals", "co_stacksize", "co_flags", "co_code",
+                      "co_names", "co_varnames", "co_freevars", "co_cellvars",
+                      "co_exceptiontable", "co_linetable", "co_firstlineno",
+                      "co_filename", "co_name", "co_qualname", "co_consts"):
+            if not _constant_equal(_OBJGET(actual, field), _OBJGET(expected, field)):
+                return False
+        return True
+    finally:
+        actual = expected = None
+
+
+class _BackendFactoryEnvironment:
+    """Private per-backend projection of the ONE initial authority token.
+
+    Later source modules are authenticated by that token before this function
+    runs; this object never promotes late stdlib observations to initial trust.
+    Expected references remain until this private owner is released. Current
+    observations, scientific answers, native handles and validation PASS do not.
+    """
+    __slots__ = ("backend", "namespace", "bind", "source_bytes", "bind_ast", "bind_record",
+                 "cold_authority", "cold_caller_descriptor", "backend_handle", "cache_handle",
+                 "collector_guard", "collector_descriptor",
+                 "stdlib_method_owners", "receipt")
+
+    def __setattr__(self, name, value):
+        raise _ERROR("Backend factory environment is immutable")
+
+
+def capture_backend_factory_environment(backend, *, cold_authority, cold_caller_descriptor, backend_handle, cache_handle,
+                                        bootstrap_root, bootstrap_capability, bootstrap_api):
+    """Invoke through the source-closed authority before scientific exposure.
+
+    The authority was captured before ANY candidate import. Its current check
+    proves continuity to that initial boundary before deriving this backend's
+    private expected projection. All mutable helpers here are authenticated by
+    the outer invoke entry before this function or its first _need is entered.
+    """
+    _need(not V8_SOURCE_DRAFT, "V8 source draft is not executable")
+    _need(_TYPE(cold_authority) is _TUPLE and _LEN(cold_authority) == 7,
+          "Backend factory requires the initial seven-entry authority")
+    # V8_CALLER_GATE_BEGIN cache_contract_v8.py:3
+    _ca_desc = cold_caller_descriptor
+    _ca_p = _ca_desc[5]
+    _ca_type, _ca_function, _ca_id = _ca_p[0], _ca_p[1], _ca_p[2]
+    _ca_error, _ca_value_error, _ca_zip = _ca_p[7], _ca_p[8], _ca_p[18]
+    _ca_dispatch, _ca_record = _ca_desc[2], _ca_desc[3]
+    if cold_authority is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+        raise _ca_error('Cold authority caller dispatcher identity differs')
+    for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+        if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher environment differs')
+    if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+        raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+    for _ca_cell, _ca_expected in _ca_record[8]:
+        try:
+            _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+        except _ca_value_error:
+            raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+        if _ca_observed_id != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher cell differs')
+    # V8_CALLER_GATE_END cache_contract_v8.py:3
+    _ca_dispatch(2, cache_handle)
+    # V8_CALLER_GATE_BEGIN cache_contract_v8.py:4
+    _ca_desc = cold_caller_descriptor
+    _ca_p = _ca_desc[5]
+    _ca_type, _ca_function, _ca_id = _ca_p[0], _ca_p[1], _ca_p[2]
+    _ca_error, _ca_value_error, _ca_zip = _ca_p[7], _ca_p[8], _ca_p[18]
+    _ca_dispatch, _ca_record = _ca_desc[2], _ca_desc[3]
+    if cold_authority is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+        raise _ca_error('Cold authority caller dispatcher identity differs')
+    for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+        if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher environment differs')
+    if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+        raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+    for _ca_cell, _ca_expected in _ca_record[8]:
+        try:
+            _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+        except _ca_value_error:
+            raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+        if _ca_observed_id != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher cell differs')
+    # V8_CALLER_GATE_END cache_contract_v8.py:4
+    _ca_dispatch(2, backend_handle)
+    _bootstrap_api(bootstrap_root, bootstrap_capability, bootstrap_api)
+    # V8_CALLER_GATE_BEGIN cache_contract_v8.py:5
+    _ca_desc = cold_caller_descriptor
+    _ca_p = _ca_desc[5]
+    _ca_type, _ca_function, _ca_id = _ca_p[0], _ca_p[1], _ca_p[2]
+    _ca_error, _ca_value_error, _ca_zip = _ca_p[7], _ca_p[8], _ca_p[18]
+    _ca_dispatch, _ca_record = _ca_desc[2], _ca_desc[3]
+    if cold_authority is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+        raise _ca_error('Cold authority caller dispatcher identity differs')
+    for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+        if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher environment differs')
+    if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+        raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+    for _ca_cell, _ca_expected in _ca_record[8]:
+        try:
+            _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+        except _ca_value_error:
+            raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+        if _ca_observed_id != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher cell differs')
+    # V8_CALLER_GATE_END cache_contract_v8.py:5
+    source_module, filename, source_digest, raw = _ca_dispatch(6, backend_handle)
+    _need(source_module is backend and source_digest == BACKEND_SOURCE_SHA256 and
+          _TYPE(raw) is bytes and _TYPE(backend) is ModuleType and
+          _string_key_domain(backend.__dict__), "Backend factory original source differs")
+    namespace = backend.__dict__
+    _need(_GET(namespace, "__builtins__") is _BUILTINS,
+          "Backend factory original builtin owner differs")
+    bind = _GET(namespace, "bind")
+    parsed = ast.parse(raw, filename=filename)
+    bind_ast = next(statement for statement in parsed.body
+                    if _TYPE(statement) is ast.FunctionDef and statement.name == "bind")
+    compiled = _COMPILE(raw, filename, "exec", dont_inherit=True, optimize=sys.flags.optimize)
+    _need(_TYPE(bind) is FunctionType and bind.__globals__ is namespace and
+          bind.__builtins__ is _BUILTINS and bind.__closure__ is None and
+          bind.__kwdefaults__ is None and _TYPE(bind.__defaults__) is _TUPLE and
+          _LEN(bind.__defaults__) == 2 and bind.__defaults__[0] is None and
+          bind.__defaults__[1] is None and _code_equal(bind.__code__, _code_named(compiled, "bind")),
+          "Backend factory original bind calling code differs")
+    # These are references projected AFTER the early token checked its own
+    # initial records; they are only for the preserved descriptor control.
+    method_owners = []
+    for name in ("read_bytes", "resolve", "open"):
+        for cls in _TYPEGET(Path, "__mro__"):
+            _need(_TYPE(cls) is _TYPE, "Backend factory pathlib metaclass differs")
+            members = _TYPEGET(cls, "__dict__")
+            if name in members:
+                function = members[name]
+                _need(_TYPE(function) is FunctionType,
+                      "Backend factory pathlib method is not ordinary source")
+                method_owners.append((cls, _TYPEGET(cls, "__mro__"), name, function))
+                break
+        else:
+            raise _ERROR("Backend factory pathlib method is absent")
+    environment = _OBJECT.__new__(_BackendFactoryEnvironment)
+    # V8 runtime operation has an explicit producer-owned pair result.
+    # V8_CALLER_GATE_BEGIN cache_contract_v8.py:6
+    _ca_desc = cold_caller_descriptor
+    _ca_p = _ca_desc[5]
+    _ca_type, _ca_function, _ca_id = _ca_p[0], _ca_p[1], _ca_p[2]
+    _ca_error, _ca_value_error, _ca_zip = _ca_p[7], _ca_p[8], _ca_p[18]
+    _ca_dispatch, _ca_record = _ca_desc[2], _ca_desc[3]
+    if cold_authority is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+        raise _ca_error('Cold authority caller dispatcher identity differs')
+    for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+        if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher environment differs')
+    if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+        raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+    for _ca_cell, _ca_expected in _ca_record[8]:
+        try:
+            _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+        except _ca_value_error:
+            raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+        if _ca_observed_id != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher cell differs')
+    # V8_CALLER_GATE_END cache_contract_v8.py:6
+    collector_guard, collector_descriptor = _ca_dispatch(3, cache_handle)
+    fields = {
+        "backend": backend, "namespace": namespace, "bind": bind, "source_bytes": raw,
+        "bind_ast": ast.dump(bind_ast, include_attributes=False), "bind_record": _record(bind),
+        "cold_authority": cold_authority, "cold_caller_descriptor": cold_caller_descriptor,
+        "backend_handle": backend_handle, "cache_handle": cache_handle,
+        "collector_guard": collector_guard, "collector_descriptor": collector_descriptor,
+        "stdlib_method_owners": _TUPLE(method_owners),
+        "receipt": ("same-initial-pre-candidate-authority-token", BACKEND_SOURCE_SHA256,
+                    "initial-system-stdlib-provenance-is-parent-premise",
+                    "each-complete-factory-bind-interval-no-mutation-or-untrusted-callbacks")}
+    for name, value in fields.items():
+        _OBJECT.__setattr__(environment, name, value)
+    return environment
+
+
+def _check_factory_environment(environment, backend, expected_guard):
+    """Outer authority.invoke authenticates this validator before entry."""
+    _need(_TYPE(environment) is _BackendFactoryEnvironment,
+          "Backend factory requires the initial authority projection")
+    authority = environment.cold_authority
+    # V8_CALLER_GATE_BEGIN cache_contract_v8.py:7
+    _ca_desc = environment.cold_caller_descriptor
+    _ca_p = _ca_desc[5]
+    _ca_type, _ca_function, _ca_id = _ca_p[0], _ca_p[1], _ca_p[2]
+    _ca_error, _ca_value_error, _ca_zip = _ca_p[7], _ca_p[8], _ca_p[18]
+    _ca_dispatch, _ca_record = _ca_desc[2], _ca_desc[3]
+    if authority is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+        raise _ca_error('Cold authority caller dispatcher identity differs')
+    for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+        if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher environment differs')
+    if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+        raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+    for _ca_cell, _ca_expected in _ca_record[8]:
+        try:
+            _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+        except _ca_value_error:
+            raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+        if _ca_observed_id != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher cell differs')
+    # V8_CALLER_GATE_END cache_contract_v8.py:7
+    _ca_dispatch(2, environment.cache_handle)
+    # V8_CALLER_GATE_BEGIN cache_contract_v8.py:8
+    _ca_desc = environment.cold_caller_descriptor
+    _ca_p = _ca_desc[5]
+    _ca_type, _ca_function, _ca_id = _ca_p[0], _ca_p[1], _ca_p[2]
+    _ca_error, _ca_value_error, _ca_zip = _ca_p[7], _ca_p[8], _ca_p[18]
+    _ca_dispatch, _ca_record = _ca_desc[2], _ca_desc[3]
+    if authority is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+        raise _ca_error('Cold authority caller dispatcher identity differs')
+    for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+        if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher environment differs')
+    if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+        raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+    for _ca_cell, _ca_expected in _ca_record[8]:
+        try:
+            _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+        except _ca_value_error:
+            raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+        if _ca_observed_id != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher cell differs')
+    # V8_CALLER_GATE_END cache_contract_v8.py:8
+    _ca_dispatch(2, environment.backend_handle)
+    _need(environment.backend is backend and _TYPE(backend) is ModuleType and
+          backend.__dict__ is environment.namespace and
+          _string_key_domain(environment.namespace),
+          "Backend factory environment owner or lookup domain differs")
+    _need(_GET(environment.namespace, "RuntimeGuard") is expected_guard,
+          "Backend factory composed guard is not the intentionally installed guard")
+    _need(_GET(environment.namespace, "bind") is environment.bind and
+          _fresh(environment.bind_record), "Backend factory original public bind changed")
+
+
+def bind_cache_backend(backend, module, native, prepared, environment,
+                       *, row_producer_handle, row_handle, rank_row_intern, final_guard,
+                       rank_calls=None, complement_trace=None):
+    """Keep the real row observer; derive exactly its two callback guard targets.
+
+    The first producer reverses its row observer/parameter back to the original
+    backend. This second transform reverses its two check_backend attributes
+    back to THAT exact row-derived function. Public backend.bind stays original.
+    """
+    _need(not V8_SOURCE_DRAFT, "V8 source draft is not executable")
+    owner = prepared["owner"]
+    _need(owner.factory_environment is environment and owner.composed_guard is not None and
+          owner.runtime is None, "Backend factory requires a fresh composed cache guard")
+    authority = environment.cold_authority
+    _check_factory_environment(environment, backend, final_guard)
+    # V8_CALLER_GATE_BEGIN cache_contract_v8.py:9
+    _ca_desc = environment.cold_caller_descriptor
+    _ca_p = _ca_desc[5]
+    _ca_type, _ca_function, _ca_id = _ca_p[0], _ca_p[1], _ca_p[2]
+    _ca_error, _ca_value_error, _ca_zip = _ca_p[7], _ca_p[8], _ca_p[18]
+    _ca_dispatch, _ca_record = _ca_desc[2], _ca_desc[3]
+    if authority is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+        raise _ca_error('Cold authority caller dispatcher identity differs')
+    for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+        if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher environment differs')
+    if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+        raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+    for _ca_cell, _ca_expected in _ca_record[8]:
+        try:
+            _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+        except _ca_value_error:
+            raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+        if _ca_observed_id != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher cell differs')
+    # V8_CALLER_GATE_END cache_contract_v8.py:9
+    _ca_dispatch(4, owner.composed_guard, environment.cache_handle, "compose_runtime_guard",
+                 (owner.base_guard, prepared), {})
+    # V8_CALLER_GATE_BEGIN cache_contract_v8.py:10
+    _ca_desc = environment.cold_caller_descriptor
+    _ca_p = _ca_desc[5]
+    _ca_type, _ca_function, _ca_id = _ca_p[0], _ca_p[1], _ca_p[2]
+    _ca_error, _ca_value_error, _ca_zip = _ca_p[7], _ca_p[8], _ca_p[18]
+    _ca_dispatch, _ca_record = _ca_desc[2], _ca_desc[3]
+    if authority is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+        raise _ca_error('Cold authority caller dispatcher identity differs')
+    for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+        if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher environment differs')
+    if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+        raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+    for _ca_cell, _ca_expected in _ca_record[8]:
+        try:
+            _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+        except _ca_value_error:
+            raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+        if _ca_observed_id != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher cell differs')
+    # V8_CALLER_GATE_END cache_contract_v8.py:10
+    _ca_dispatch(4, rank_row_intern, row_handle, "make_row_interner", (), {})
+    # V8_CALLER_GATE_BEGIN cache_contract_v8.py:11
+    _ca_desc = environment.cold_caller_descriptor
+    _ca_p = _ca_desc[5]
+    _ca_type, _ca_function, _ca_id = _ca_p[0], _ca_p[1], _ca_p[2]
+    _ca_error, _ca_value_error, _ca_zip = _ca_p[7], _ca_p[8], _ca_p[18]
+    _ca_dispatch, _ca_record = _ca_desc[2], _ca_desc[3]
+    if authority is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+        raise _ca_error('Cold authority caller dispatcher identity differs')
+    for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+        if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher environment differs')
+    if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+        raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+    for _ca_cell, _ca_expected in _ca_record[8]:
+        try:
+            _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+        except _ca_value_error:
+            raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+        if _ca_observed_id != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher cell differs')
+    # V8_CALLER_GATE_END cache_contract_v8.py:11
+    _ca_dispatch(4, final_guard, row_handle, "make_cache_runtime_guard",
+                 (owner.composed_guard, rank_row_intern), {})
+    # V8_CALLER_GATE_BEGIN cache_contract_v8.py:12
+    _ca_desc = environment.cold_caller_descriptor
+    _ca_p = _ca_desc[5]
+    _ca_type, _ca_function, _ca_id = _ca_p[0], _ca_p[1], _ca_p[2]
+    _ca_error, _ca_value_error, _ca_zip = _ca_p[7], _ca_p[8], _ca_p[18]
+    _ca_dispatch, _ca_record = _ca_desc[2], _ca_desc[3]
+    if authority is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+        raise _ca_error('Cold authority caller dispatcher identity differs')
+    for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+        if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher environment differs')
+    if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+        raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+    for _ca_cell, _ca_expected in _ca_record[8]:
+        try:
+            _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+        except _ca_value_error:
+            raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+        if _ca_observed_id != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher cell differs')
+    # V8_CALLER_GATE_END cache_contract_v8.py:12
+    row_source = _ca_dispatch(6, row_handle)
+    # V8_CALLER_GATE_BEGIN cache_contract_v8.py:13
+    _ca_desc = environment.cold_caller_descriptor
+    _ca_p = _ca_desc[5]
+    _ca_type, _ca_function, _ca_id = _ca_p[0], _ca_p[1], _ca_p[2]
+    _ca_error, _ca_value_error, _ca_zip = _ca_p[7], _ca_p[8], _ca_p[18]
+    _ca_dispatch, _ca_record = _ca_desc[2], _ca_desc[3]
+    if authority is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+        raise _ca_error('Cold authority caller dispatcher identity differs')
+    for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+        if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher environment differs')
+    if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+        raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+    for _ca_cell, _ca_expected in _ca_record[8]:
+        try:
+            _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+        except _ca_value_error:
+            raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+        if _ca_observed_id != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher cell differs')
+    # V8_CALLER_GATE_END cache_contract_v8.py:13
+    producer_source = _ca_dispatch(6, row_producer_handle)
+    _need(row_source[2] == V8_ROW_SOURCE_SHA256 and
+          producer_source[2] == V8_ROW_PRODUCER_SHA256,
+          "Backend factory row source pin differs")
+    _need(_TYPE(final_guard) is _TYPE and _LEN(_TYPEGET(final_guard, "__mro__")) > 1 and
+          _TYPEGET(final_guard, "__mro__")[1] is owner.composed_guard,
+          "Backend factory requires the exact registered final row guard")
+    # Class constructors and both virtual methods were admitted by the product
+    # checker BEFORE original bind can enter the first self.check dispatch.
+    # V8_CALLER_GATE_BEGIN cache_contract_v8.py:14
+    _ca_desc = environment.cold_caller_descriptor
+    _ca_p = _ca_desc[5]
+    _ca_type, _ca_function, _ca_id = _ca_p[0], _ca_p[1], _ca_p[2]
+    _ca_error, _ca_value_error, _ca_zip = _ca_p[7], _ca_p[8], _ca_p[18]
+    _ca_dispatch, _ca_record = _ca_desc[2], _ca_desc[3]
+    if authority is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+        raise _ca_error('Cold authority caller dispatcher identity differs')
+    for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+        if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher environment differs')
+    if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+        raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+    for _ca_cell, _ca_expected in _ca_record[8]:
+        try:
+            _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+        except _ca_value_error:
+            raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+        if _ca_observed_id != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher cell differs')
+    # V8_CALLER_GATE_END cache_contract_v8.py:14
+    row_product = _ca_dispatch(1, row_producer_handle, "derive_row_bind",
+                               environment.bind, environment.source_bytes)
+    row_reference = row_receipt = packet = original = future = parsed = None
+    derived = restored = restored_tree = tree = None
+    try:
+        _need(_TYPE(row_product) is _TUPLE and _LEN(row_product) == 3,
+              "Backend factory row producer transport differs")
+        row_reference, row_receipt, packet = row_product
+        # V8_CALLER_GATE_BEGIN cache_contract_v8.py:17
+        _ca_desc = environment.cold_caller_descriptor
+        _ca_p = _ca_desc[5]
+        _ca_type, _ca_function, _ca_id = _ca_p[0], _ca_p[1], _ca_p[2]
+        _ca_error, _ca_value_error, _ca_zip = _ca_p[7], _ca_p[8], _ca_p[18]
+        _ca_dispatch, _ca_record = _ca_desc[2], _ca_desc[3]
+        if authority is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+            raise _ca_error('Cold authority caller dispatcher identity differs')
+        for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+            if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+                raise _ca_error('Cold authority caller dispatcher environment differs')
+        if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+            raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+        for _ca_cell, _ca_expected in _ca_record[8]:
+            try:
+                _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+            except _ca_value_error:
+                raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+            if _ca_observed_id != _ca_id(_ca_expected):
+                raise _ca_error('Cold authority caller dispatcher cell differs')
+        # V8_CALLER_GATE_END cache_contract_v8.py:17
+        _ca_dispatch(4, row_reference, row_producer_handle, "derive_row_bind",
+                     (environment.bind, environment.source_bytes), {})
+        _need(_TYPE(packet) is _TUPLE and _LEN(packet) == 2 and
+              _TYPE(packet[0]) is ast.FunctionDef and _TYPE(packet[1]) is list,
+              "Backend factory private row AST packet differs")
+        original, future = packet
+        # Check the producer's transported tree against its immediately sealed
+        # callable before modifying any AST. Only source-owned AST enters here.
+        original_tree = ast.Module(body=copy.deepcopy(future) + [copy.deepcopy(original)], type_ignores=[])
+        ast.fix_missing_locations(original_tree)
+        original_code = _code_named(_COMPILE(original_tree, row_reference.__code__.co_filename, "exec",
+                                             dont_inherit=True, optimize=sys.flags.optimize), "bind")
+        _need(_code_equal(original_code, row_reference.__code__),
+              "Backend factory transported row AST differs from its registered callable")
+        derived = copy.deepcopy(original)
+        replacements = []
+        for statement in derived.body:
+            if _TYPE(statement) is ast.FunctionDef and statement.name in ("complement_in", "nondegenerate"):
+                _need(_LEN(statement.body) > 0 and _TYPE(statement.body[0]) is ast.Expr,
+                      "Backend factory expected callback guard expression is absent")
+                call = statement.body[0].value
+                _need(_TYPE(call) is ast.Call and not call.args and not call.keywords and
+                      _TYPE(call.func) is ast.Attribute and call.func.attr == "check" and
+                      _TYPE(call.func.value) is ast.Name and call.func.value.id == "runtime",
+                      "Backend factory callback guard expression changed")
+                call.func.attr = "check_backend"
+                replacements.append(call.func)
+        _need(_LEN(replacements) == 2,
+              "Backend factory must replace exactly two row-reference callback guard calls")
+        restored = copy.deepcopy(derived)
+        restored_count = 0
+        for statement in restored.body:
+            if _TYPE(statement) is ast.FunctionDef and statement.name in ("complement_in", "nondegenerate"):
+                statement.body[0].value.func.attr = "check"
+                restored_count += 1
+        _need(restored_count == 2 and
+              ast.dump(restored, include_attributes=False) == ast.dump(original, include_attributes=False),
+              "Backend factory changed more than the two admitted row-reference guard calls")
+        restored_tree = ast.Module(body=copy.deepcopy(future) + [restored], type_ignores=[])
+        ast.fix_missing_locations(restored_tree)
+        restored_code = _code_named(_COMPILE(restored_tree, row_reference.__code__.co_filename, "exec",
+                                            dont_inherit=True, optimize=sys.flags.optimize), "bind")
+        _need(_code_equal(restored_code, row_reference.__code__),
+              "Backend factory reversed calling code differs from the row reference")
+        tree = ast.Module(body=copy.deepcopy(future) + [derived], type_ignores=[])
+        ast.fix_missing_locations(tree)
+        code = _code_named(_COMPILE(tree, row_reference.__code__.co_filename, "exec",
+                                   dont_inherit=True, optimize=sys.flags.optimize), "bind")
+        clone = FunctionType(code, row_reference.__globals__, row_reference.__name__,
+                             row_reference.__defaults__, row_reference.__closure__)
+        clone.__kwdefaults__ = row_reference.__kwdefaults__
+        _need(clone.__globals__ is row_reference.__globals__ and
+              clone.__builtins__ is row_reference.__builtins__ and
+              clone.__defaults__ is row_reference.__defaults__ and
+              clone.__kwdefaults__ is row_reference.__kwdefaults__ and
+              clone.__closure__ is row_reference.__closure__,
+              "Backend factory changed effective row-reference dispatch ownership")
+        # Pay fresh producer, row, cache and original backend checks again at
+        # the complete bind boundary. No earlier PASS is carried into this call.
+        _check_factory_environment(environment, backend, final_guard)
+        # V8_CALLER_GATE_BEGIN cache_contract_v8.py:18
+        _ca_desc = environment.cold_caller_descriptor
+        _ca_p = _ca_desc[5]
+        _ca_type, _ca_function, _ca_id = _ca_p[0], _ca_p[1], _ca_p[2]
+        _ca_error, _ca_value_error, _ca_zip = _ca_p[7], _ca_p[8], _ca_p[18]
+        _ca_dispatch, _ca_record = _ca_desc[2], _ca_desc[3]
+        if authority is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+            raise _ca_error('Cold authority caller dispatcher identity differs')
+        for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+            if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+                raise _ca_error('Cold authority caller dispatcher environment differs')
+        if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+            raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+        for _ca_cell, _ca_expected in _ca_record[8]:
+            try:
+                _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+            except _ca_value_error:
+                raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+            if _ca_observed_id != _ca_id(_ca_expected):
+                raise _ca_error('Cold authority caller dispatcher cell differs')
+        # V8_CALLER_GATE_END cache_contract_v8.py:18
+        _ca_dispatch(4, row_reference, row_producer_handle, "derive_row_bind",
+                     (environment.bind, environment.source_bytes), {})
+        # V8_CALLER_GATE_BEGIN cache_contract_v8.py:19
+        _ca_desc = environment.cold_caller_descriptor
+        _ca_p = _ca_desc[5]
+        _ca_type, _ca_function, _ca_id = _ca_p[0], _ca_p[1], _ca_p[2]
+        _ca_error, _ca_value_error, _ca_zip = _ca_p[7], _ca_p[8], _ca_p[18]
+        _ca_dispatch, _ca_record = _ca_desc[2], _ca_desc[3]
+        if authority is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+            raise _ca_error('Cold authority caller dispatcher identity differs')
+        for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+            if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+                raise _ca_error('Cold authority caller dispatcher environment differs')
+        if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+            raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+        for _ca_cell, _ca_expected in _ca_record[8]:
+            try:
+                _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+            except _ca_value_error:
+                raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+            if _ca_observed_id != _ca_id(_ca_expected):
+                raise _ca_error('Cold authority caller dispatcher cell differs')
+        # V8_CALLER_GATE_END cache_contract_v8.py:19
+        _ca_dispatch(4, final_guard, row_handle, "make_cache_runtime_guard",
+                     (owner.composed_guard, rank_row_intern), {})
+        _need(_TYPE(module) is ModuleType and _string_key_domain(module.__dict__),
+              "Backend factory scientific lookup domain changed")
+        result = clone(module, native, rank_calls, complement_trace, rank_row_intern)
+        _need(_GET(environment.namespace, "bind") is environment.bind,
+              "Backend factory replaced the original public bind")
+        owner.binding_derivation = {
+            "source_sha256": BACKEND_SOURCE_SHA256,
+            "row_source_sha256": V8_ROW_SOURCE_SHA256,
+            "row_producer_sha256": V8_ROW_PRODUCER_SHA256,
+            "row_derivation": _DICT(row_receipt),
+            "changed_callback_calls": 2, "restored_ast_identical": True,
+            "restored_code_identical": True, "transported_ast_matches_registered_row_callable": True,
+            "original_globals_builtins_defaults_closure": True,
+            "environment_reference": "exact private row-derived callable",
+            "exact_final_row_class_product_checked_before_bind": True,
+            "early_environment": environment.receipt}
+        return result
+    finally:
+        # Producer-owned expected callable records remain paid in the authority.
+        # The mutable AST transport is private temporary work, never retained.
+        row_product = row_reference = row_receipt = packet = original = future = parsed = None
+        original_tree = original_code = derived = restored = restored_tree = tree = None
+        replacements = statement = call = restored_code = code = clone = None
+
+
+def compose_runtime_guard(base, prepared):
+    """Initialize cache owner before final native/Label guard capture.
+
+    Install all Checks phase wrappers before backend.bind. Seal P1 afterward.
+    This is a factory for one isolated candidate module, not a global registry.
+    """
+    _need(not V8_SOURCE_DRAFT, "V8 source draft is not executable")
+    owner = prepared["owner"]
+    # V8_CALLER_GATE_BEGIN cache_contract_v8.py:15
+    _ca_desc = owner.factory_environment.cold_caller_descriptor
+    _ca_p = _ca_desc[5]
+    _ca_type, _ca_function, _ca_id = _ca_p[0], _ca_p[1], _ca_p[2]
+    _ca_error, _ca_value_error, _ca_zip = _ca_p[7], _ca_p[8], _ca_p[18]
+    _ca_dispatch, _ca_record = _ca_desc[2], _ca_desc[3]
+    if owner.factory_environment.cold_authority is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+        raise _ca_error('Cold authority caller dispatcher identity differs')
+    for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+        if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher environment differs')
+    if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+        raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+    for _ca_cell, _ca_expected in _ca_record[8]:
+        try:
+            _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+        except _ca_value_error:
+            raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+        if _ca_observed_id != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher cell differs')
+    # V8_CALLER_GATE_END cache_contract_v8.py:15
+    _ca_dispatch(2, owner.factory_environment.cache_handle)
+    _need(_TYPE(base) is _TYPE, "Cache composition requires an exact guard class")
+    base_records, base_classes = [], []
+    for cls in _TYPEGET(base, "__mro__"):
+        if cls is _OBJECT:
+            continue
+        _need(_TYPE(cls) is _TYPE, "Cache base guard has custom metaclass dispatch")
+        entries = _TUPLE(_TYPEGET(cls, "__dict__").items())
+        base_classes.append((cls, _TYPEGET(cls, "__mro__"), entries))
+        base_records.extend(_record(value) for _, value in entries if _TYPE(value) is FunctionType)
+    owner.base_guard = base
+    owner.base_guard_records = _TUPLE(base_records)
+    owner.base_guard_classes = _TUPLE(base_classes)
+
+    collector_guard = owner.collector_guard
+    collector_descriptor = owner.collector_descriptor
+    primitive_clear = _CLEAR
+    canonical_builtins = owner.factory_environment.backend._CANONICAL_BUILTINS
+
+    class CacheRuntimeGuard(base):
+        def __init__(self, module, label, native, original_functions):
+            _need(module is owner.module and label is owner.label and owner.runtime is None,
+                  "Cache guard owner differs or was already attached")
+            _need(_ordinary(owner.checks_class), "Cache guard Checks class dispatch differs")
+            members = _TYPEGET(owner.checks_class, "__dict__")
+            _need(frozenset(members) == owner.class_names,
+                  "Cache guard Checks member names differ")
+            for name, method in owner.methods.items():
+                _need(members.get(name) is method, "Cache guard prepared method was not installed")
+            for record in owner.source_records + owner.method_records + owner.probe_records + owner.bootstrap_records:
+                _need(_fresh(record), "Cache guard source changed before capture")
+            _need(_GET(owner.namespace, "odd") is owner.odd and "any" not in owner.namespace and
+                  _GET(_BUILTINS, "any") is _ANY, "Cache guard odd environment changed before capture")
+            owner.check_bootstrap()
+            owner.probe_validate(owner.probe_binding)
+            self._cache_class_mro = _TYPEGET(owner.checks_class, "__mro__")
+            self._cache_class_items = _TUPLE(members.items())
+            functions = [value for _, value in self._cache_class_items if _TYPE(value) is FunctionType]
+            self._cache_functions = owner.source_records + owner.method_records + _TUPLE(_record(f) for f in functions)
+            owner.runtime = self
+            # owner state and every wrapper closure now have final identities.
+            base.__init__(self, module, label, native, original_functions)
+
+        def _ordered_base_preflight(self):
+            """Original raw/P2 then trace order, with key gates at first lookup.
+
+            Every predicate is repeated by unchanged base.check afterwards and
+            is fully charged. The new scans add admission only immediately
+            before the relevant dictionary's first named lookup. Private guard
+            instance state remains excluded; there is no instance-key promise.
+            """
+            if not (_TYPE(self.module) is ModuleType and self.module.__dict__ is self.namespace):
+                raise _ERROR("Runtime drift: source module dispatch")
+            if not (_TYPE(self.label) is _TYPE and self.label.__mro__ is self.mro):
+                raise _ERROR("Runtime drift: Label class dispatch")
+            if not _string_key_domain(self.namespace):
+                raise _ERROR("Unsupported cache guard scientific lookup key domain")
+            for name, value in self.global_items:
+                if not (_GET(self.namespace, name) is value):
+                    raise _ERROR("Runtime drift: source helper " + name)
+            builtins_admitted = False
+            for name, expected in _ITEMS(canonical_builtins):
+                # Preserve the original 'name not in namespace and ...'
+                # short-circuit. A shadow error wins before builtin admission.
+                if name in self.namespace:
+                    raise _ERROR("Runtime drift: builtin lookup " + name)
+                if not builtins_admitted:
+                    if not _string_key_domain(_BUILTINS):
+                        raise _ERROR("Unsupported cache guard builtin lookup key domain")
+                    builtins_admitted = True
+                if not (_GET(_BUILTINS, name) is expected):
+                    raise _ERROR("Runtime drift: builtin lookup " + name)
+            attributes = self.label.__dict__
+            if not (_LEN(attributes) == _LEN(self.class_items)):
+                raise _ERROR("Runtime drift: Label descriptors")
+            for name, value in self.class_items:
+                if not (attributes.get(name) is value):
+                    raise _ERROR("Runtime drift: Label member " + name)
+            for function, code, namespace, effective_builtins, defaults, kwdefaults, closure, cells in self.functions:
+                if not (function.__code__ is code and function.__globals__ is namespace and
+                        function.__builtins__ is effective_builtins and function.__defaults__ is defaults and
+                        function.__kwdefaults__ is kwdefaults and function.__closure__ is closure):
+                    raise _ERROR("Runtime drift: function code or calling environment")
+                for cell, value in cells:
+                    # Original empty-cell ValueError propagates at this point.
+                    if not (cell.cell_contents is value):
+                        raise _ERROR("Runtime drift: wrapper closure")
+            if not (_TYPE(self.native) is ModuleType):
+                raise _ERROR("Runtime drift: native module dispatch")
+            if not _string_key_domain(self.native.__dict__):
+                raise _ERROR("Unsupported cache guard native lookup key domain")
+            for name, function in self.native_items:
+                if not (_GET(self.native.__dict__, name) is function):
+                    raise _ERROR("Runtime drift: native entry point " + name)
+            # Read only inherited private state, after the whole original base.
+            # Its arbitrary corruption is excluded by the pre-existing contract.
+            for trace_owner, name, function in _GET(_OBJGET(self, "__dict__"), "_h25_entries", ()):
+                if not (_TYPE(trace_owner) is ModuleType):
+                    raise _ERROR("Runtime drift: trace encoder entry point " + name)
+                if not _string_key_domain(trace_owner.__dict__):
+                    raise _ERROR("Unsupported cache guard trace lookup key domain")
+                if not (_GET(trace_owner.__dict__, name) is function):
+                    raise _ERROR("Runtime drift: trace encoder entry point " + name)
+
+        def _check_scientific(self, observations):
+            if not (_TYPE(owner.module) is ModuleType and owner.module.__dict__ is owner.namespace and
+                    _GET(owner.namespace, "Checks") is owner.checks_class and
+                    _GET(owner.namespace, "odd") is owner.odd and "any" not in owner.namespace and
+                    _GET(_BUILTINS, "any") is _ANY):
+                raise _ERROR("Runtime drift: cache source or odd lookup")
+            if not (_TYPE(owner.checks_class) is _TYPE and
+                    _TYPEGET(owner.checks_class, "__mro__") is self._cache_class_mro):
+                raise _ERROR("Runtime drift: cache Checks dispatch")
+            members = _TYPEGET(owner.checks_class, "__dict__")
+            if _LEN(members) != _LEN(self._cache_class_items):
+                raise _ERROR("Runtime drift: cache Checks members")
+            for name, value in self._cache_class_items:
+                if members.get(name) is not value:
+                    raise _ERROR("Runtime drift: cache Checks member " + name)
+            for record in self._cache_functions:
+                if not _observed_fresh(record, observations):
+                    raise _ERROR("Runtime drift: cache function calling environment")
+
+        def _check_provider(self, observations):
+            if not (_TYPE(owner.probe_provider) is ModuleType and
+                    _string_key_domain(owner.probe_provider.__dict__)):
+                raise _ERROR("Unsupported cache provider lookup key domain")
+            if not (_TYPE(owner.probe_provider) is ModuleType and
+                    owner.probe_provider.__dict__ is owner.probe_namespace and
+                    _LEN(owner.probe_namespace) == _LEN(owner.probe_namespace_items)):
+                raise _ERROR("Runtime drift: cache probe provider namespace")
+            for name, value in owner.probe_namespace_items:
+                if _GET(owner.probe_namespace, name, _MISSING) is not value:
+                    raise _ERROR("Runtime drift: cache probe provider binding " + name)
+            if not (_TYPE(owner.probe_binding) is owner.probe_class and
+                    _TYPEGET(owner.probe_class, "__mro__") is owner.probe_class_mro):
+                raise _ERROR("Runtime drift: cache probe binding class")
+            probe_members = _TYPEGET(owner.probe_class, "__dict__")
+            if _LEN(probe_members) != _LEN(owner.probe_class_items):
+                raise _ERROR("Runtime drift: cache probe class members")
+            for name, value in owner.probe_class_items:
+                if probe_members.get(name) is not value:
+                    raise _ERROR("Runtime drift: cache probe class member " + name)
+            for record in owner.probe_records:
+                if not _observed_fresh(record, observations):
+                    raise _ERROR("Runtime drift: cache probe function calling environment")
+            # The next public provider call owns a separate fresh context. No
+            # current scalar observation or PASS crosses that boundary.
+            primitive_clear(observations)
+            owner.probe_validate(owner.probe_binding)
+
+        def check(self):
+            """Full direct/cache-boundary semantics; never the light shortcut."""
+            observations = {}
+            try:
+                # V8_CALLER_GATE_BEGIN cache_contract_v8.py:20
+                _ca_desc = collector_descriptor
+                _ca_runtime_operations = _ca_desc[1]
+                _ca_p = _ca_desc[5]
+                _ca_type, _ca_function, _ca_id = _ca_p[0], _ca_p[1], _ca_p[2]
+                _ca_error, _ca_value_error, _ca_zip = _ca_p[7], _ca_p[8], _ca_p[18]
+                _ca_dispatch, _ca_record = _ca_desc[2], _ca_desc[3]
+                if _ca_type(_ca_runtime_operations) is not _ca_p[9] or _ca_p[3](_ca_runtime_operations) != 1 or _ca_runtime_operations[0] is not collector_guard:
+                    raise _ca_error("Runtime drift: cache collector operation identity differs")
+                if _ca_runtime_operations is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+                    raise _ca_error('Runtime drift: cache collector dispatcher identity differs')
+                for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+                    if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+                        raise _ca_error('Runtime drift: cache collector dispatcher environment differs')
+                if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+                    raise _ca_error('Runtime drift: cache collector dispatcher defaults contract differs')
+                for _ca_cell, _ca_expected in _ca_record[8]:
+                    try:
+                        _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+                    except _ca_value_error:
+                        raise _ca_error('Runtime drift: cache collector dispatcher cell became empty') from None
+                    if _ca_observed_id != _ca_id(_ca_expected):
+                        raise _ca_error('Runtime drift: cache collector dispatcher cell differs')
+                # V8_CALLER_GATE_END cache_contract_v8.py:20
+                _ca_dispatch(0)
+                self._ordered_base_preflight()
+                base.check(self)
+                owner.check_bootstrap()
+                self._check_scientific(observations)
+                self._check_provider(observations)
+            finally:
+                primitive_clear(observations)
+                observations = None
+
+        def check_backend(self):
+            """Actual backend callbacks retain all base and scientific checks."""
+            observations = {}
+            try:
+                # V8_CALLER_GATE_BEGIN cache_contract_v8.py:21
+                _ca_desc = collector_descriptor
+                _ca_runtime_operations = _ca_desc[1]
+                _ca_p = _ca_desc[5]
+                _ca_type, _ca_function, _ca_id = _ca_p[0], _ca_p[1], _ca_p[2]
+                _ca_error, _ca_value_error, _ca_zip = _ca_p[7], _ca_p[8], _ca_p[18]
+                _ca_dispatch, _ca_record = _ca_desc[2], _ca_desc[3]
+                if _ca_type(_ca_runtime_operations) is not _ca_p[9] or _ca_p[3](_ca_runtime_operations) != 1 or _ca_runtime_operations[0] is not collector_guard:
+                    raise _ca_error("Runtime drift: cache collector operation identity differs")
+                if _ca_runtime_operations is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+                    raise _ca_error('Runtime drift: cache collector dispatcher identity differs')
+                for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+                    if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+                        raise _ca_error('Runtime drift: cache collector dispatcher environment differs')
+                if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+                    raise _ca_error('Runtime drift: cache collector dispatcher defaults contract differs')
+                for _ca_cell, _ca_expected in _ca_record[8]:
+                    try:
+                        _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+                    except _ca_value_error:
+                        raise _ca_error('Runtime drift: cache collector dispatcher cell became empty') from None
+                    if _ca_observed_id != _ca_id(_ca_expected):
+                        raise _ca_error('Runtime drift: cache collector dispatcher cell differs')
+                # V8_CALLER_GATE_END cache_contract_v8.py:21
+                _ca_dispatch(0)
+                self._ordered_base_preflight()
+                base.check(self)
+                self._check_scientific(observations)
+                _need(not owner.probe_closed, "Cache probe owner is closed")
+            finally:
+                primitive_clear(observations)
+                observations = None
+
+    _need(owner.composed_guard is None, "Cache owner guard was already composed")
+    owner.composed_guard = CacheRuntimeGuard
+    owner.composed_guard_records = _TUPLE(_record(value) for value in
+        _TYPEGET(CacheRuntimeGuard, "__dict__").values() if _TYPE(value) is FunctionType)
+    return CacheRuntimeGuard
+
+
+# Appended, verbatim, to the independently pinned V8 cache source by the packet.
+# This extension is not a standalone import target.
+import ast as _epoch_ast
+import copy as _epoch_copy
+import types as _epoch_types
+import sys as _epoch_sys
+
+EPOCH_FULL_EXECUTION_CONTRACT = None
+_EPOCH_SUITES = {}
+_EPOCH_BINDERS = {}
+_EPOCH_ROLES = ('C1','C2','C3','labels','roles','canonical','public_label',
+                'public_residual','private_label','private_residual','prepare','finish')
+
+
+def _epoch_need(ok, message):
+    if not ok:
+        raise RuntimeError(message)
+
+
+def _epoch_fn_record(fn):
+    _epoch_need(type(fn) is _epoch_types.FunctionType, 'Epoch exact callable')
+    attrs=fn.__dict__;keywords=fn.__kwdefaults__
+    _epoch_need(type(attrs) is dict and all(type(k) is str for k in attrs),'Epoch callable attribute key domain')
+    _epoch_need(keywords is None or type(keywords) is dict and all(type(k) is str for k in keywords),'Epoch callable keyword key domain')
+    return (fn, fn.__code__, fn.__globals__, fn.__builtins__, fn.__defaults__,
+            keywords, fn.__closure__,
+            () if fn.__closure__ is None else tuple((c,c.cell_contents) for c in fn.__closure__),
+            attrs,tuple(attrs.items()),() if keywords is None else tuple(keywords.items()))
+
+
+def _epoch_fn_fresh(rec):
+    fn,code,ns,bi,defaults,keywords,closure,cells,attrs,attribute_items,keyword_items=rec
+    _epoch_need(type(fn) is _epoch_types.FunctionType and fn.__code__ is code and
+                fn.__globals__ is ns and fn.__builtins__ is bi and fn.__defaults__ is defaults and
+                fn.__kwdefaults__ is keywords and fn.__closure__ is closure and fn.__dict__ is attrs,'Epoch callable fields drift')
+    _epoch_need(type(attrs) is dict and all(type(k) is str for k in attrs) and len(attrs)==len(attribute_items),'Epoch callable attribute census/domain')
+    for name,value in attribute_items:_epoch_need(attrs.get(name) is value,'Epoch callable attribute drift')
+    if keywords is not None:
+        _epoch_need(type(keywords) is dict and all(type(k) is str for k in keywords) and len(keywords)==len(keyword_items),'Epoch callable keyword census/domain')
+        for name,value in keyword_items:_epoch_need(keywords.get(name) is value,'Epoch callable keyword drift')
+    for cell,value in cells:
+        _epoch_need(cell.cell_contents is value,'Epoch callable cell drift')
+
+
+def _epoch_checked(owner, assembler, index, *args):
+    record=_EPOCH_BINDERS.get(id(owner))
+    _epoch_need(record is not None and record[0] is owner and record[1] is assembler,
+                'Epoch assembler is not the genuine owned export argument')
+    _epoch_fn_fresh(record[2])
+    _epoch_need(type(index) is int and 0<=index<4,'Epoch assembler operation')
+    return assembler(index,*args)
+
+
+def _epoch_call(descriptor, index, *args, **kwargs):
+    """Actual caller-side primitive gate, before calling the epoch dispatcher."""
+    _epoch_need(type(descriptor) is tuple and len(descriptor)==6,'Epoch caller descriptor shape')
+    p=descriptor[5]; dispatch=descriptor[2]; rec=descriptor[3]
+    _epoch_need(type(p) is tuple and len(p)==19 and p[0] is type and p[1] is _epoch_types.FunctionType and p[2] is id and p[18] is zip and type(rec) is tuple and len(rec)==9,'Epoch native caller primitives')
+    typ,ft,identity=p[0],p[1],p[2]
+    if dispatch is not rec[0] or typ(dispatch) is not ft:
+        raise RuntimeError('Epoch caller dispatcher identity')
+    for (name,getter),expected in p[18](p[4],rec[1:7]):
+        if identity(getter(dispatch,ft)) != identity(expected):
+            raise RuntimeError('Epoch caller dispatcher fields')
+    if rec[4] is not None or rec[5] is not None or rec[7]:
+        raise RuntimeError('Epoch dispatcher defaults')
+    for cell,expected in rec[8]:
+        if p[6](cell,p[5]) is not expected:
+            raise RuntimeError('Epoch dispatcher cell')
+    return dispatch(index,*args,**kwargs)
+
+
+def _epoch_named(code,name):
+    _epoch_need(type(code) is _epoch_types.CodeType,'Epoch code object')
+    matches=[x for x in code.co_consts if type(x) is _epoch_types.CodeType and x.co_name==name]
+    _epoch_need(len(matches)==1,'Epoch unique code constant '+name)
+    return matches[0]
+
+
+def _epoch_ast_function(source, path):
+    node=_epoch_ast.parse(source)
+    for name in path:
+        values=[x for x in node.body if isinstance(x,(_epoch_ast.ClassDef,_epoch_ast.FunctionDef)) and x.name==name]
+        _epoch_need(len(values)==1,'Epoch unique source function '+name)
+        node=values[0]
+    _epoch_need(type(node) is _epoch_ast.FunctionDef,'Epoch function source')
+    return _epoch_copy.deepcopy(node)
+
+
+def _epoch_locations(actual, original):
+    _epoch_need(_epoch_ast.dump(actual,include_attributes=False)==
+                _epoch_ast.dump(original,include_attributes=False),'Epoch inverse unlisted AST change')
+    for left,right in zip(_epoch_ast.walk(actual),_epoch_ast.walk(original)):
+        for key in ('lineno','col_offset','end_lineno','end_col_offset'):
+            if hasattr(right,key):setattr(left,key,getattr(right,key))
+    return actual
+
+
+def _epoch_factory(node, namespace, captures, filename):
+    """Generate actual callable; explicit captures never become module globals."""
+    params=list(captures)
+    factory=_epoch_ast.FunctionDef(name='_epoch_factory',args=_epoch_ast.arguments(
+        posonlyargs=[],args=[_epoch_ast.arg(arg=x) for x in params],vararg=None,
+        kwonlyargs=[],kw_defaults=[],kwarg=None,defaults=[]),
+        body=[node,_epoch_ast.Return(value=_epoch_ast.Name(id=node.name,ctx=_epoch_ast.Load()))],
+        decorator_list=[])
+    tree=_epoch_ast.Module(body=[factory],type_ignores=[]);_epoch_ast.fix_missing_locations(tree)
+    code=compile(tree,filename,'exec',dont_inherit=True,optimize=_epoch_sys.flags.optimize)
+    make=_epoch_types.FunctionType(_epoch_named(code,'_epoch_factory'),namespace)
+    result=make(*(captures[x] for x in params))
+    _epoch_need(result.__globals__ is namespace and result.__builtins__ is namespace['__builtins__'],
+                'Epoch generated function owners')
+    return result,tree
+
+
+def _epoch_inverse_ctor(actual,original,site):
+    node=_epoch_copy.deepcopy(actual)
+    doc=[]
+    if node.body and isinstance(node.body[0],_epoch_ast.Expr) and isinstance(node.body[0].value,_epoch_ast.Constant):
+        doc=[node.body.pop(0)]
+    _epoch_need(len(node.body)==1 and type(node.body[0]) is _epoch_ast.Try,'Epoch constructor inverse try')
+    trial=node.body[0]
+    _epoch_need(len(trial.handlers)==1 and not trial.orelse and not trial.finalbody,'Epoch constructor inverse handler')
+    expected_handler=_epoch_ast.parse('try:\n pass\nexcept _ep_error as _ep_primary:\n _ep_cancel(_ep_primary)\n raise').body[0].handlers[0]
+    _epoch_need(_epoch_ast.dump(trial.handlers[0],include_attributes=False)==_epoch_ast.dump(expected_handler,include_attributes=False),'Epoch constructor inverse error cleanup')
+    class Undo(_epoch_ast.NodeTransformer):
+        calls=0;commits=0
+        def visit_Call(self,value):
+            if type(value.func) is _epoch_ast.Name and value.func.id=='_ep_ctor':
+                _epoch_need(len(value.args)==4 and type(value.args[0]) is _epoch_ast.Constant and value.args[0].value==site and not value.keywords and type(value.args[1]) is _epoch_ast.Name and value.args[1].id=='self' and _epoch_ast.dump(value.args[2],include_attributes=False)==_epoch_ast.dump(_epoch_ast.parse('None' if site=='C1' else 'node' if site=='C2' else 'key',mode='eval').body,include_attributes=False),'Epoch constructor inverse call')
+                self.calls+=1
+                return _epoch_ast.copy_location(_epoch_ast.Call(func=_epoch_ast.Name(id='Label',ctx=_epoch_ast.Load()),args=[value.args[3]],keywords=[]),value)
+            return self.generic_visit(value)
+        def visit_Expr(self,value):
+            if type(value.value) is _epoch_ast.Call and type(value.value.func) is _epoch_ast.Name and value.value.func.id=='_ep_commit':
+                _epoch_need(len(value.value.args)==2 and not value.value.keywords and type(value.value.args[0]) is _epoch_ast.Constant and value.value.args[0].value==site and type(value.value.args[1]) is _epoch_ast.Name and value.value.args[1].id=='self','Epoch inverse store commit')
+                self.commits+=1;return None
+            return self.generic_visit(value)
+    undo=Undo();node.body=doc+trial.body;node=undo.visit(node)
+    _epoch_need(undo.calls==undo.commits==1,'Epoch exact one constructor/store')
+    return _epoch_locations(node,original)
+
+
+def _epoch_verify_source_inverse(source,path,restored,function,filename):
+    tree=_epoch_ast.parse(source);owner=tree
+    for name in path[:-1]:
+        found=[x for x in owner.body if isinstance(x,(_epoch_ast.ClassDef,_epoch_ast.FunctionDef)) and x.name==name]
+        _epoch_need(len(found)==1,'Epoch inverse enclosing source');owner=found[0]
+    positions=[i for i,x in enumerate(owner.body) if type(x) is _epoch_ast.FunctionDef and x.name==path[-1]]
+    _epoch_need(len(positions)==1,'Epoch inverse target function')
+    owner.body[positions[0]]=_epoch_copy.deepcopy(restored)
+    _epoch_ast.fix_missing_locations(tree)
+    code=compile(tree,filename,'exec',dont_inherit=True,optimize=_epoch_sys.flags.optimize)
+    for name in path:code=_epoch_named(code,name)
+    _epoch_need(_code_equal(code,function.__code__),'Epoch complete source/code inverse')
+    return None
+
+
+def _epoch_constructor_product(original,site,suite):
+    node=_epoch_copy.deepcopy(original)
+    class Edit(_epoch_ast.NodeTransformer):
+        count=0
+        def visit_Assign(self,value):
+            call=value.value
+            if type(call) is _epoch_ast.Call and type(call.func) is _epoch_ast.Name and call.func.id=='Label':
+                _epoch_need(len(call.args)==1 and not call.keywords,'Epoch constructor old call shape')
+                key=_epoch_ast.Constant(value=None) if site=='C1' else _epoch_ast.Name(id='node' if site=='C2' else 'key',ctx=_epoch_ast.Load())
+                value.value=_epoch_ast.copy_location(_epoch_ast.Call(func=_epoch_ast.Name(id='_ep_ctor',ctx=_epoch_ast.Load()),args=[_epoch_ast.Constant(value=site),_epoch_ast.Name(id='self',ctx=_epoch_ast.Load()),key,call.args[0]],keywords=[]),call)
+                self.count+=1
+            # Store continuation is AFTER the exact original original assignment.
+            store=any(type(x) is _epoch_ast.Attribute and x.attr=='everything' or
+                      type(x) is _epoch_ast.Subscript and type(x.value) is _epoch_ast.Attribute and x.value.attr=='cache' for x in value.targets)
+            if store:
+                commit=_epoch_ast.Expr(value=_epoch_ast.Call(func=_epoch_ast.Name(id='_ep_commit',ctx=_epoch_ast.Load()),args=[_epoch_ast.Constant(value=site),_epoch_ast.Name(id='self',ctx=_epoch_ast.Load())],keywords=[]))
+                return [value,_epoch_ast.copy_location(commit,value)]
+            return value
+    edit=Edit();node=edit.visit(node);_epoch_need(edit.count==1,'Epoch source exactly one Label call')
+    doc=[]
+    if node.body and isinstance(node.body[0],_epoch_ast.Expr) and isinstance(node.body[0].value,_epoch_ast.Constant):doc=[node.body.pop(0)]
+    handler=_epoch_ast.parse('try:\n pass\nexcept _ep_error as _ep_primary:\n _ep_cancel(_ep_primary)\n raise').body[0].handlers
+    node.body=doc+[_epoch_ast.Try(body=node.body,handlers=handler,orelse=[],finalbody=[])]
+    _epoch_ast.fix_missing_locations(node);restored=_epoch_inverse_ctor(node,original,site)
+    _epoch_verify_source_inverse(suite.source,('Checks',original.name),restored,getattr(suite.checks_class,original.name),suite.filename)
+    return _epoch_factory(node,suite.namespace,{'_ep_ctor':suite.construct,'_ep_commit':_g12_commit_selector(suite,site),'_ep_cancel':suite.cancel,'_ep_error':BaseException},suite.filename),node,restored
+
+
+def _epoch_inverse_caller(actual,original,roles):
+    node=_epoch_copy.deepcopy(actual)
+    if roles:
+        doc=[]
+        if node.body and isinstance(node.body[0],_epoch_ast.Expr) and isinstance(node.body[0].value,_epoch_ast.Constant):doc=[node.body.pop(0)]
+        _epoch_need(len(node.body)==2 and type(node.body[1]) is _epoch_ast.Try,'Epoch role retirement inverse')
+        initial=_epoch_ast.parse('_ep_role_primary = None').body[0]
+        _epoch_need(_epoch_ast.dump(node.body[0],include_attributes=False)==_epoch_ast.dump(initial,include_attributes=False),'Epoch explicit role primary local')
+        trial=node.body[1]
+        expected=_epoch_ast.parse('_ep_retire(_ep_role_primary)').body[0]
+        handler=_epoch_ast.parse('try:\n pass\nexcept _ep_error as _ep_role_error:\n _ep_role_primary = _ep_role_error\n raise').body[0].handlers[0]
+        _epoch_need(len(trial.handlers)==1 and _epoch_ast.dump(trial.handlers[0],include_attributes=False)==_epoch_ast.dump(handler,include_attributes=False) and not trial.orelse and len(trial.finalbody)==1 and _epoch_ast.dump(trial.finalbody[0],include_attributes=False)==_epoch_ast.dump(expected,include_attributes=False),'Epoch exact preserving role finalizer')
+        node.body=doc+trial.body
+    class Undo(_epoch_ast.NodeTransformer):
+        count=0
+        def visit_Call(self,value):
+            if type(value.func) is _epoch_ast.Name and value.func.id=='_ep_request':
+                _epoch_need(len(value.args)>=3 and not value.keywords and type(value.args[0]) is _epoch_ast.Name and value.args[0].id=='_ep_cap' and type(value.args[2]) is _epoch_ast.Attribute and value.args[2].attr in ('label_ok','residual_ok') and type(value.args[1]) is _epoch_ast.Constant and value.args[1].value==('label' if value.args[2].attr=='label_ok' else 'residual'),'Epoch caller inverse grammar')
+                self.count+=1
+                return _epoch_ast.copy_location(_epoch_ast.Call(func=value.args[2],args=value.args[3:],keywords=[]),value)
+            return self.generic_visit(value)
+    undo=Undo();node=undo.visit(node);_epoch_need(undo.count==(4 if roles else 3),'Epoch all caller sites')
+    return _epoch_locations(node,original)
+
+
+def _epoch_caller_product(original,suite,roles):
+    node=_epoch_copy.deepcopy(original);cap=object();suite.caller_caps[id(cap)]=(cap,'roles' if roles else 'labels')
+    class Edit(_epoch_ast.NodeTransformer):
+        count=0
+        def visit_Call(self,value):
+            value=self.generic_visit(value)
+            if type(value.func) is _epoch_ast.Attribute and value.func.attr in ('label_ok','residual_ok'):
+                _epoch_need(not value.keywords,'Epoch caller keyword change')
+                kind='label' if value.func.attr=='label_ok' else 'residual'
+                self.count+=1
+                return _epoch_ast.copy_location(_epoch_ast.Call(func=_epoch_ast.Name(id='_ep_request',ctx=_epoch_ast.Load()),args=[_epoch_ast.Name(id='_ep_cap',ctx=_epoch_ast.Load()),_epoch_ast.Constant(value=kind),value.func]+value.args,keywords=[]),value)
+            return value
+    edit=Edit();node=edit.visit(node);_epoch_need(edit.count==(4 if roles else 3),'Epoch exact caller count')
+    if roles:
+        doc=[]
+        if node.body and isinstance(node.body[0],_epoch_ast.Expr) and isinstance(node.body[0].value,_epoch_ast.Constant):doc=[node.body.pop(0)]
+        handler=_epoch_ast.parse('try:\n pass\nexcept _ep_error as _ep_role_error:\n _ep_role_primary = _ep_role_error\n raise').body[0].handlers
+        node.body=doc+_epoch_ast.parse('_ep_role_primary = None').body+[_epoch_ast.Try(body=node.body,handlers=handler,orelse=[],finalbody=_epoch_ast.parse('_ep_retire(_ep_role_primary)').body)]
+    _epoch_ast.fix_missing_locations(node);restored=_epoch_inverse_caller(node,original,roles)
+    _epoch_verify_source_inverse(suite.source,(original.name,) if roles else ('Checks',original.name),restored,suite.namespace[original.name] if roles else getattr(suite.checks_class,original.name),suite.filename)
+    return _epoch_factory(node,suite.namespace,{'_ep_request':suite.request,'_ep_cap':cap,'_ep_retire':suite.role_retire,'_ep_error':BaseException},suite.filename),node,restored
+
+
+def _epoch_template(original,kind):
+    values=[x for x in _generate.__code__.co_consts if type(x) is str and 'def _factory(' in x and '_H25_KEY' in x]
+    _epoch_need(len(values)==1,'Epoch exact V8 template source')
+    template=_epoch_ast.parse(values[0]);factory=template.body[0];method=factory.body[0]
+    body=_epoch_copy.deepcopy(original.body);method.name=original.name;method.args=_epoch_copy.deepcopy(original.args)
+    method.body.insert(0,body[0]);factory.body[1].value.id=original.name
+    guarded=method.body[2];guarded.body[0]=body[1]
+    conditional=body[2];conditional.test=_epoch_ast.BoolOp(op=_epoch_ast.Or(),values=[conditional.test,_epoch_ast.UnaryOp(op=_epoch_ast.Not(),operand=_epoch_ast.parse('_h25_cache_owner.reuse(_h25_cache_ticket, key)',mode='eval').body)])
+    guarded.body[2]=conditional;guarded.body[3].value=body[3].value
+    operands='(lab,)' if kind=='label' else '(small, big)'
+    class Replace(_epoch_ast.NodeTransformer):
+        def visit_Name(self,value):
+            if value.id=='OPERANDS':return _epoch_ast.copy_location(_epoch_ast.parse(operands,mode='eval').body,value)
+            if value.id=='KIND':return _epoch_ast.copy_location(_epoch_ast.Constant(value=kind),value)
+            return value
+    template=Replace().visit(template);_epoch_ast.fix_missing_locations(template)
+    return template
+
+
+def _epoch_v8_product(original,kind,suite,private):
+    baseline=_epoch_template(original,kind)
+    base_code=_epoch_named(_epoch_named(compile(baseline,'<h25-cache-contract-v8>','exec',dont_inherit=True,optimize=_epoch_sys.flags.optimize),'_factory'),original.name)
+    _epoch_need(_code_equal(base_code,suite.original_public[kind].__code__),'Epoch reconstruction differs from actual V8 method')
+    tree=_epoch_copy.deepcopy(baseline);factory=tree.body[0];method=factory.body[0]
+    if private:
+        method.args.kwonlyargs.append(_epoch_ast.arg(arg='_ep_request'))
+        method.args.kw_defaults.append(None)
+        factory.args.args.extend([_epoch_ast.arg(arg='_ep_prepare'),_epoch_ast.arg(arg='_ep_finish')])
+        class Replace(_epoch_ast.NodeTransformer):
+            count=0
+            def visit_Call(self,value):
+                value=self.generic_visit(value)
+                if type(value.func) is _epoch_ast.Attribute and type(value.func.value) is _epoch_ast.Name and value.func.value.id=='_h25_cache_owner' and value.func.attr in ('prepare','finish'):
+                    name=value.func.attr;value.func=_epoch_ast.Name(id='_ep_'+name,ctx=_epoch_ast.Load())
+                    value.args.insert(0,_epoch_ast.Name(id='_h25_cache_owner',ctx=_epoch_ast.Load()))
+                    value.keywords.append(_epoch_ast.keyword(arg='_ep_request',value=_epoch_ast.Name(id='_ep_request',ctx=_epoch_ast.Load())))
+                    self.count+=1
+                return value
+        edit=Replace();tree=edit.visit(tree);_epoch_need(edit.count==2,'Epoch private method exact two targets')
+        captures=(suite.owner,BaseException,suite.prepare,suite.finish)
+    else:
+        factory.args.args.append(_epoch_ast.arg(arg='_ep_public'))
+        method.body.insert(2,_epoch_ast.Expr(value=_epoch_ast.Call(func=_epoch_ast.Name(id='_ep_public',ctx=_epoch_ast.Load()),args=[_epoch_ast.Name(id='self',ctx=_epoch_ast.Load())],keywords=[])))
+        captures=(suite.owner,BaseException,suite.public_entry)
+    _epoch_ast.fix_missing_locations(tree)
+    restored=_epoch_copy.deepcopy(tree);rf=restored.body[0];rm=rf.body[0]
+    if private:
+        _epoch_need(rm.args.kwonlyargs[-1].arg=='_ep_request' and rm.args.kw_defaults[-1] is None,'Epoch request required keyword')
+        rm.args.kwonlyargs.pop();rm.args.kw_defaults.pop();_epoch_need([x.arg for x in rf.args.args[-2:]]==['_ep_prepare','_ep_finish'],'Epoch private capture grammar');rf.args.args=rf.args.args[:-2]
+        class Undo(_epoch_ast.NodeTransformer):
+            count=0
+            def visit_Call(self,value):
+                if type(value.func) is _epoch_ast.Name and value.func.id in ('_ep_prepare','_ep_finish'):
+                    _epoch_need(type(value.args[0]) is _epoch_ast.Name and value.args[0].id=='_h25_cache_owner' and len(value.keywords)==1 and value.keywords[0].arg=='_ep_request' and type(value.keywords[0].value) is _epoch_ast.Name and value.keywords[0].value.id=='_ep_request','Epoch private inverse call')
+                    value.func=_epoch_ast.Attribute(value=value.args.pop(0),attr=value.func.id[4:],ctx=_epoch_ast.Load());value.keywords=[];self.count+=1
+                return self.generic_visit(value)
+        undo=Undo();restored=undo.visit(restored);_epoch_need(undo.count==2,'Epoch private inverse count')
+    else:
+        expected=_epoch_ast.parse('_ep_public(self)').body[0]
+        _epoch_need(_epoch_ast.dump(rm.body[2],include_attributes=False)==_epoch_ast.dump(expected,include_attributes=False),'Epoch public observer inverse')
+        _epoch_need(rf.args.args[-1].arg=='_ep_public','Epoch public capture grammar');rm.body.pop(2);rf.args.args.pop()
+    _epoch_locations(restored,baseline)
+    restored_code=_epoch_named(_epoch_named(compile(restored,'<h25-cache-contract-v8>','exec',dont_inherit=True,optimize=_epoch_sys.flags.optimize),'_factory'),original.name)
+    _epoch_need(_code_equal(restored_code,suite.original_public[kind].__code__),'Epoch whole V8 code inverse')
+    code=compile(tree,'<h25-epoch-cache-v1>','exec',dont_inherit=True,optimize=_epoch_sys.flags.optimize)
+    make=_epoch_types.FunctionType(_epoch_named(code,'_factory'),suite.namespace)
+    result=make(*captures)
+    return result,tree,restored
+
+
+def _epoch_data_product(name,suite):
+    original=_epoch_ast_function(suite.cache_source,('_Owner',name));node=_epoch_copy.deepcopy(original)
+    node.args.kwonlyargs.append(_epoch_ast.arg(arg='_ep_request'));node.args.kw_defaults.append(None)
+    class Edit(_epoch_ast.NodeTransformer):
+        count=0
+        def visit_Call(self,value):
+            value=self.generic_visit(value)
+            if type(value.func) is _epoch_ast.Attribute and type(value.func.value) is _epoch_ast.Name and value.func.value.id=='self' and value.func.attr=='_data':
+                value.func=_epoch_ast.Name(id='_ep_data',ctx=_epoch_ast.Load());value.args=[_epoch_ast.Name(id='_ep_request',ctx=_epoch_ast.Load()),_epoch_ast.Constant(value='entry' if name=='prepare' else 'finish')]+value.args;self.count+=1
+            return value
+    edit=Edit();node=edit.visit(node);_epoch_need(edit.count==1,'Epoch exact private _data substitution')
+    restored=_epoch_copy.deepcopy(node);restored.args.kwonlyargs.pop();restored.args.kw_defaults.pop()
+    class Undo(_epoch_ast.NodeTransformer):
+        count=0
+        def visit_Call(self,value):
+            if type(value.func) is _epoch_ast.Name and value.func.id=='_ep_data':
+                _epoch_need(len(value.args)==6 and not value.keywords and type(value.args[0]) is _epoch_ast.Name and value.args[0].id=='_ep_request' and type(value.args[1]) is _epoch_ast.Constant and value.args[1].value==('entry' if name=='prepare' else 'finish'),'Epoch data inverse grammar')
+                value.func=_epoch_ast.Attribute(value=_epoch_ast.Name(id='self',ctx=_epoch_ast.Load()),attr='_data',ctx=_epoch_ast.Load());value.args=value.args[2:];self.count+=1
+            return self.generic_visit(value)
+    undo=Undo();restored=undo.visit(restored);_epoch_need(undo.count==1,'Epoch data inverse count');_epoch_locations(restored,original)
+    _epoch_verify_source_inverse(suite.cache_source,('_Owner',name),restored,getattr(_Owner,name),_Owner.prepare.__code__.co_filename)
+    fn,tree=_epoch_factory(node,globals(),{'_ep_data':suite.data},_Owner.prepare.__code__.co_filename)
+    return fn,tree,restored
+
+
+class _EpochSuite:
+    def __init__(self,descriptor,handle,module,source,prepared,p1,construction,context,generation):
+        self.descriptor=descriptor;self.handle=handle;self.module=module;self.namespace=module.__dict__
+        self.filename=self.namespace['__file__'];self.source=source;self.owner=prepared['owner']
+        self.prepared=prepared;self.p1=p1;self.construction=construction;self.context=context
+        self.label=self.namespace['Label'];self.checks_class=self.namespace['Checks'];self.E0=self.namespace['echelon']
+        self.generation=generation;self.invocation_consumed=False;self.active=False;self.terminal=False;self.pending=None;self.checks=None;self.checks_c=None;self.checks_h=None
+        self.registry={};self.request_live=None;self.caller_caps={};self.products={};self.proofs={}
+        self.role_retirement_channel={'started':False,'error':None,'journal_error':None,'acknowledged':False}
+        self.emergency_retirement_channel={'started':False,'error':None,'journal_error':None,'acknowledged':False}
+        self.inner_retirement_channel={'started':False,'error':None,'journal_error':None,'acknowledged':False}
+        self.outer_retirement_channel={'started':False,'error':None,'journal_error':None,'acknowledged':False}
+        self.role_retirement_error=None;self.emergency_retirement_error=None;self.emergency_journal_error=None
+        self.inner_retirement_error=None;self.inner_journal_error=None;self.outer_retirement_error=None;self.outer_journal_error=None
+        self.secondary=[];self.primary_error=None;self.secondary_error=None;self.uncertain=False;self.raw_guard=None;self.installed=False
+        self.receipt={'constructors':0,'basis_loads':0,'key_loads':0,'commits':0,'signature_views':0,'retirements':0,'capacity_retirements':0,'private_requests':0}
+        self.original_public={'label':prepared['label_ok'],'residual':prepared['residual_ok']}
+        self.original_source_cache=Path(__file__).read_bytes()
+        _epoch_need(self.original_source_cache[:94922] and hashlib.sha256(self.original_source_cache[:94922]).hexdigest()=='133c55e269b354542f86a2a1099f48cff052293d06da310f98b7cb33cb85258f','Epoch original V8 cache prefix')
+        self.cache_source=self.original_source_cache[:94922].decode('utf-8')
+        self._build()
+        suite=self
+        def assembler(index,*args):
+            _epoch_need(type(index) is int and 0<=index<4,'Epoch assembler exact operation')
+            _epoch_fn_fresh(suite.assembler_record)
+            return (suite.instrument_bind,suite.native_prepare,suite.native_commit,suite.finish_bind)[index](*args)
+        self.assembler=assembler;self.assembler_record=_epoch_fn_record(assembler)
+        _EPOCH_BINDERS[id(self.owner)]=(self.owner,assembler,self.assembler_record,self)
+
+    def call(self,index,*args):
+        return _epoch_call(self.descriptor,index,*args)
+
+    def _product(self,role,fn,tree,restored):
+        _epoch_need(role in _EPOCH_ROLES and role not in self.products,'Epoch unique product role')
+        self.products[role]=fn
+        self.proofs[id(fn)]=(fn,role,_epoch_ast.dump(tree,include_attributes=True),_epoch_ast.dump(restored,include_attributes=True),_epoch_fn_record(fn))
+        self.call(2,self.handle,self,'product',role,fn)
+        return fn
+
+    def _build(self):
+        for site,name in (('C1','__init__'),('C2','label'),('C3','target_frame')):
+            original=_epoch_ast_function(self.source,('Checks',name))
+            (pair,node,restored)=_epoch_constructor_product(original,site,self)
+            fn,tree=pair;self._product(site,fn,tree,restored)
+        for role,name,isroles in (('labels','verify_labels',False),('roles','verify_role_frames',True)):
+            original=_epoch_ast_function(self.source,(name,) if isroles else ('Checks',name))
+            pair,node,restored=_epoch_caller_product(original,self,isroles);fn,tree=pair;self._product(role,fn,tree,restored)
+        for name in ('prepare','finish'):
+            fn,tree,restored=_epoch_data_product(name,self);self._product(name,fn,tree,restored)
+        for kind,name in (('label','label_ok'),('residual','residual_ok')):
+            original=_epoch_ast_function(self.source,('Checks',name))
+            for private in (False,True):
+                fn,tree,restored=_epoch_v8_product(original,kind,self,private)
+                self._product(('private_' if private else 'public_')+kind,fn,tree,restored)
+        suite=self;original=self.E0
+        def canonical(vectors):
+            return suite.canonical(vectors)
+        # Exact original callable is retained, never looked up through new H.
+        self._product('canonical',canonical,_epoch_ast.parse('def canonical(vectors):\n return suite.canonical(vectors)'),_epoch_ast.parse('def canonical(vectors):\n return original(vectors)'))
+
+    def install(self):
+        _epoch_need(not self.installed,'Epoch installation one shot')
+        for kind,name,role in (('checks','__init__','C1'),('checks','label','C2'),('checks','target_frame','C3'),('checks','verify_labels','labels'),('module','verify_role_frames','roles')):
+            self.call(2,self.handle,self,'install',kind,name,role,self.products[role])
+        for kind,name in (('label','label_ok'),('residual','residual_ok')):
+            self.owner.methods[name]=self.products['public_'+kind]
+            self.prepared[name]=self.owner.methods[name]
+        self.owner.method_records=tuple(_record(v) for v in self.owner.methods.values())
+        self.installed=True
+        return None
+
+    def guard_bindings(self):
+        self.call(5,self.handle,self)
+
+    def current(self):
+        self.guard_bindings()
+        _epoch_need(not self.owner.probe_closed,'Epoch native owner closed')
+        if self.owner.runtime is not None:self.owner.runtime.check()
+
+    def arm(self,invocation_token):
+        _epoch_need(not self.terminal and not self.invocation_consumed,'Epoch retired/consumed generation cannot arm')
+        _epoch_need(type(EPOCH_FULL_EXECUTION_CONTRACT) is dict and EPOCH_FULL_EXECUTION_CONTRACT.get('status')=='INDEPENDENT_COMPLETE_COST_AND_CALLER_APPROVED','Epoch full context is not admitted')
+        _epoch_need(not self.active and not self.terminal and self.raw_guard is not None,'Epoch arm generation')
+        _epoch_need(_epoch_sys.flags.optimize==0,'Epoch requires original assertions')
+        _epoch_need(invocation_token is self.context['invocation_token'] and not self.invocation_consumed,'Epoch unique actual full CLI invocation')
+        _epoch_need(self.context['driver_function'].__globals__ is self.context['phase_function'].__globals__,'Epoch actual driver invocation owner')
+        self.current();self.invocation_consumed=True;self.active=True
+
+    def canonical(self,vectors):
+        pending=self.pending
+        if pending is None or not self.active:return self.E0(vectors)
+        self.current()
+        if pending['basis'] is not None:
+            self.retire('normalizer-reentry');return self.E0(vectors)
+        result=self.E0(vectors)
+        if self.pending is pending and self.active:
+            _epoch_need(type(result) is dict,'Epoch actual normalizer dict')
+            pending['basis']=result
+        return result
+
+    def construct(self,site,checks,key,vectors):
+        if not self.active:return self.label(vectors)
+        self.current()
+        _epoch_need(type(site) is str and site in ('C1','C2','C3') and type(checks) is self.checks_class,'Epoch constructor site/owner')
+        if self.pending is not None:
+            self.retire('nested-constructor');raise RuntimeError('Epoch nested private constructor')
+        if site!='C1' and self.checks is not checks:
+            self.retire('wrong-checks');return self.label(vectors)
+        pending={'site':site,'checks':checks,'key':key,'basis':None,'label':None,'tuple':None}
+        self.pending=pending
+        try:
+            value=self.label(vectors)
+            if self.pending is not pending or not self.active:return value
+            _epoch_need(type(value) is self.label and pending['basis'] is not None,'Epoch genuine constructor pairing')
+            basis=value.basis;self.receipt['basis_loads']+=1
+            actual_key=value.key;self.receipt['key_loads']+=1
+            _epoch_need(basis is pending['basis'] and type(actual_key) is tuple,'Epoch actual basis/key tuple')
+            pending['label']=value;pending['tuple']=actual_key;self.receipt['constructors']+=1
+            return value
+        except BaseException as primary:
+            self.cancel(primary);raise
+
+    def commit(self,site,checks):
+        pending=self.pending
+        if pending is None:return None
+        _epoch_need(pending['site']==site and pending['checks'] is checks and pending['label'] is not None,'Epoch store continuation')
+        value=pending['label']
+        stored=checks.everything if site=='C1' else checks.cache[pending['key']]
+        _epoch_need(stored is value,'Epoch original successful store identity')
+        if site=='C1':
+            if self.checks is not None or type(checks.h) is not int:
+                self.retire('public-checks-generation-or-height');return None
+            self.checks=checks;self.checks_c=checks.c;self.checks_h=checks.h
+        _epoch_need(self.checks is checks,'Epoch committed Checks mismatch')
+        if len(self.registry)>=85196:
+            self.receipt['capacity_retirements']+=1;self.retire('metadata-capacity');return None
+        self.registry[id(value)]=(value,pending['basis'],pending['tuple'],len(pending['tuple']),checks,site,self.generation)
+        self.pending=None;self.receipt['commits']+=1
+
+    def cancel(self,primary):
+        if self.primary_error is None:self.primary_error=primary
+        try:self.retire('constructor-or-store')
+        except BaseException as secondary:
+            self.uncertain=True
+            if self.secondary_error is None:self.secondary_error=secondary
+            try:self.secondary.append(secondary)
+            except BaseException:pass
+        return None
+
+    def public_entry(self,checks):
+        if self.active:self.retire('public-entry')
+
+    def request(self,cap,kind,bound,*operands):
+        _epoch_need(type(kind) is str and kind in ('label','residual'),'Epoch request kind type')
+        record=self.caller_caps.get(id(cap))
+        _epoch_need(record is not None and record[0] is cap,'Epoch caller capability')
+        if not self.active:return bound(*operands)
+        self.current()
+        _epoch_need(type(bound) is _epoch_types.MethodType and bound.__self__ is self.checks and
+                    bound.__func__ is self.products['public_'+kind],'Epoch actual method/Checks binding')
+        if type(self.checks.h) is not int or self.checks.c is not self.checks_c or self.checks.h is not self.checks_h:
+            self.retire('changed-checks-context');return bound(*operands)
+        if self.request_live is not None:
+            self.retire('request-reentry');return bound(*operands)
+        _epoch_need(kind in ('label','residual') and len(operands)==(1 if kind=='label' else 2),'Epoch operand arity')
+        registered=[]
+        for value in operands:
+            item=self.registry.get(id(value))
+            if item is None or item[0] is not value or item[4] is not self.checks or item[6]!=self.generation:
+                self.retire('unregistered-operand');return bound(*operands)
+            registered.append(item)
+        req={'nonce':object(),'checks':self.checks,'operands':operands,'registered':tuple(registered),'kind':kind,'generation':self.generation,'stage':0,'views':set()}
+        self.request_live=req;self.receipt['private_requests']+=1
+        try:return self.products['private_'+kind](self.checks,*operands,_ep_request=req)
+        finally:
+            req['stage']=3;self.request_live=None
+
+    def _request(self,req,stage):
+        _epoch_need(type(req) is dict and self.request_live is req and type(req['stage']) is int and req['stage']==stage and req['generation']==self.generation,'Epoch consumed invocation/stage')
+
+    def prepare(self,owner,checks,key,operands,kind,*,_ep_request):
+        self._request(_ep_request,0);_ep_request['stage']=1
+        ticket=self.products['prepare'](owner,checks,key,operands,kind,_ep_request=_ep_request)
+        if ticket is None:self.retire('unsupported-mapping-or-hooks')
+        return ticket
+
+    def finish(self,owner,checks,key,operands,kind,ticket,result,*,_ep_request):
+        self._request(_ep_request,1);_ep_request['stage']=2
+        return self.products['finish'](owner,checks,key,operands,kind,ticket,result,_ep_request=_ep_request)
+
+    def data(self,req,stage,checks,key,operands,kind):
+        self._request(req,1 if stage=='entry' else 2)
+        _epoch_need(stage not in req['views'],'Epoch repeated signature view');req['views'].add(stage)
+        if not self.active:return self.owner._data(checks,key,operands,kind)
+        self.guard_bindings()
+        if type(checks.h) is not int or checks.c is not self.checks_c or checks.h is not self.checks_h:
+            self.retire('changed-checks-view');return self.owner._data(checks,key,operands,kind)
+        _epoch_need(checks is req['checks'] and kind==req['kind'] and len(operands)==len(req['operands']) and all(a is b for a,b in zip(operands,req['operands'])),'Epoch request operand identity')
+        values=req['registered']
+        if kind=='label':
+            whole=self.registry.get(id(checks.everything))
+            if whole is None or whole[0] is not checks.everything:
+                self.retire('unregistered-everything');return self.owner._data(checks,key,operands,kind)
+            _epoch_need(type(key) is tuple and len(key)==2 and type(key[0]) is str and key[0]=='label' and key[1] is values[0][2],'Epoch actual label key components')
+            signature=(kind,values[0][2],whole[2])
+        else:
+            _epoch_need(type(key) is tuple and len(key)==2 and key[0] is values[0][2] and key[1] is values[1][2],'Epoch actual residual key tuple objects')
+            signature=(kind,values[0][2],values[1][2])
+        self.receipt['signature_views']+=1
+        return signature,checks.c,checks.h
+
+    def retire(self,reason):
+        self.active=False;self.terminal=True;self.pending=None
+        self.registry.clear();self.checks=None;self.checks_c=None;self.checks_h=None
+        if not self.receipt['retirements']:self.receipt['retirements']=1
+        return None
+
+    def role_retire(self,primary=None):
+        channel=self.role_retirement_channel
+        try:return self.retire_preserving('last-role',primary,channel)
+        finally:
+            self.role_retirement_error=channel['error']
+            channel['acknowledged']=True
+
+    def instrument_bind(self,node,row_reference,future,rank_calls,complement_trace,native,rank_row_intern,final_guard):
+        _epoch_need(type(node) is _epoch_ast.FunctionDef,'Epoch bind AST')
+        self.bind_inputs=(rank_calls,complement_trace,native,rank_row_intern,final_guard)
+        self.call(3,self.handle,self,'reconcile')
+        original=_epoch_copy.deepcopy(node);result=_epoch_copy.deepcopy(node)
+        _epoch_need(not any(x.arg=='epoch_assembler' for x in result.args.kwonlyargs),'Epoch duplicate assembler argument')
+        result.args.kwonlyargs.append(_epoch_ast.arg(arg='epoch_assembler'));result.args.kw_defaults.append(None)
+        count_a=count_b=0;body=[]
+        for statement in result.body:
+            if type(statement) is _epoch_ast.Assign and len(statement.targets)==1 and type(statement.targets[0]) is _epoch_ast.Attribute and statement.targets[0].attr=='complement_in':
+                body.extend(_epoch_ast.parse('epoch_assembler(1,module,label,original_functions,complement_in,nondegenerate)').body);count_a+=1
+            body.append(statement)
+            if type(statement) is _epoch_ast.Assign and len(statement.targets)==1 and type(statement.targets[0]) is _epoch_ast.Name and statement.targets[0].id=='runtime' and type(statement.value) is _epoch_ast.Call and type(statement.value.func) is _epoch_ast.Attribute and statement.value.func.attr=='__new__':
+                body.extend(_epoch_ast.parse('epoch_assembler(2,module,label,original_functions,runtime)').body);count_b+=1
+        _epoch_need(count_a==count_b==1,'Epoch unique native install stages');result.body=body
+        restored=_epoch_copy.deepcopy(result);restored.args.kwonlyargs.pop();restored.args.kw_defaults.pop()
+        removed=[];kept=[]
+        for statement in restored.body:
+            if type(statement) is _epoch_ast.Expr and type(statement.value) is _epoch_ast.Call and type(statement.value.func) is _epoch_ast.Name and statement.value.func.id=='epoch_assembler':
+                removed.append(statement);continue
+            kept.append(statement)
+        _epoch_need(len(removed)==2 and [_epoch_ast.dump(x,include_attributes=False) for x in removed]==[_epoch_ast.dump(x,include_attributes=False) for x in _epoch_ast.parse('epoch_assembler(1,module,label,original_functions,complement_in,nondegenerate)\nepoch_assembler(2,module,label,original_functions,runtime)').body],'Epoch inverse stage grammar');restored.body=kept;_epoch_locations(restored,original)
+        self.bind_inverse={'original':_epoch_ast.dump(original,include_attributes=True),'derived':_epoch_ast.dump(result,include_attributes=True),'restored':_epoch_ast.dump(restored,include_attributes=True)}
+        expected_tree=_epoch_ast.Module(body=_epoch_copy.deepcopy(future)+[result],type_ignores=[])
+        _epoch_ast.fix_missing_locations(expected_tree)
+        self.bind_expected_code=_epoch_named(compile(expected_tree,row_reference.__code__.co_filename,'exec',dont_inherit=True,optimize=_epoch_sys.flags.optimize),'bind')
+        return result
+
+    def native_prepare(self,module,label,original_functions,complement,gram):
+        _epoch_need(module is self.module and label is self.label and type(original_functions) is list,'Epoch native original inputs')
+        self.call(3,self.handle,self,'prepare',module,label,original_functions,complement,gram)
+
+    def native_commit(self,module,label,original_functions,raw):
+        _epoch_need(module is self.module and label is self.label,'Epoch native commit module')
+        self.raw_guard=raw
+        self.call(3,self.handle,self,'commit',raw)
+
+    def finish_bind(self,result):
+        self.call(3,self.handle,self,'finish',result,self.owner)
+        return result
+
+
+def create_epoch_suite(descriptor,handle,module,source,prepared,p1,construction,context,generation):
+    _epoch_need(type(descriptor) is tuple and type(context) is dict,'Epoch genuine factory inputs')
+    _epoch_need(type(prepared) is dict and all(type(k) is str for k in prepared),'Epoch prepared factory result')
+    owner=prepared['owner'];_epoch_need(type(owner) is _Owner and id(owner) not in _EPOCH_SUITES,'Epoch owner already registered')
+    creator=object.__getattribute__(owner,'__dict__').get('_epoch_creator_record')
+    _epoch_need(type(creator) is tuple and len(creator)==3 and creator[0] is descriptor and creator[1] is handle and creator[2] is context,'Epoch source-owned creation record')
+    suite=_EpochSuite(descriptor,handle,module,source,prepared,p1,construction,context,generation)
+    _EPOCH_SUITES[id(owner)]=(owner,suite)
+    return suite
+
+
+def compose_epoch_runtime_guard(base,suite):
+    _epoch_need(type(base) is type and type(suite) is _EpochSuite and
+                id(suite.owner) in _EPOCH_SUITES and _EPOCH_SUITES[id(suite.owner)][0] is suite.owner and
+                _EPOCH_SUITES[id(suite.owner)][1] is suite,'Epoch owned guard source suite')
+    class EpochRuntimeGuard(base):
+        def check(self):
+            base.check(self)
+            suite.guard_bindings()
+        def check_backend(self):
+            base.check_backend(self)
+            suite.guard_bindings()
+    _epoch_need(getattr(suite,'epoch_guard',None) is None,'Epoch guard already composed')
+    suite.epoch_guard=EpochRuntimeGuard
+    return EpochRuntimeGuard
+
+
+def _epoch_validate(prepared,assembler):
+    _epoch_need(type(prepared) is dict and all(type(k) is str for k in prepared),'Epoch prepared key domain')
+    owner=prepared.get('owner')
+    record=_EPOCH_BINDERS.get(id(owner))
+    _epoch_need(record is not None and record[0] is owner and record[1] is assembler,'Epoch required genuine assembler')
+    _epoch_fn_fresh(record[2])
+    return owner
+
+
+def epoch_suite_call(suite,index,*args):
+    """Owned-source helper for adapters; not an implicit public epoch flag."""
+    _epoch_need(type(suite) is _EpochSuite,'Epoch exact suite')
+    record=_EPOCH_SUITES.get(id(suite.owner))
+    _epoch_need(record is not None and record[0] is suite.owner and record[1] is suite,'Epoch suite registry')
+    _epoch_need(type(index) is int and 0<=index<7,'Epoch suite operation')
+    return (suite.install,suite.apply_existing,suite.construction_init,
+            suite.phase_wrap,suite.arm,suite.seal,suite.retire_preserving)[index](*args)
+
+
+def _epoch_suite_apply_existing(self,kind,name,role,function):
+    return self.call(2,self.handle,self,'existing',kind,name,role,function)
+
+
+def _epoch_suite_construction_init(self):
+    return self.call(2,self.handle,self,'construction_init')
+
+
+def _epoch_suite_phase_wrap(self,phases,kind,owner,attribute,name):
+    # Genuine original phase factory constructs its exact function on a private
+    # temporary module; the source ledger authorizes before the real store.
+    temporary=_epoch_types.ModuleType('_h25_epoch_phase_temporary')
+    original=getattr(owner,attribute);setattr(temporary,attribute,original)
+    actual_original,observed=phases.wrap(temporary,attribute,name)
+    _epoch_need(actual_original is original,'Epoch original phase factory result')
+    self.call(2,self.handle,self,'existing',kind,attribute,'phase',observed)
+    return original,observed
+
+
+def _epoch_suite_seal(self):
+    self.call(4,self.handle,self)
+
+
+def _epoch_suite_retire_preserving(self,reason,primary=None,error_channel=None):
+    channel=self.emergency_retirement_channel if error_channel is None else error_channel
+    _epoch_need(channel['started'] is False and channel['acknowledged'] is False,'Epoch retirement channel already consumed')
+    channel['started']=True
+    if primary is not None and self.primary_error is None:self.primary_error=primary
+    try:self.retire(reason)
+    except BaseException as cleanup_error:
+        channel['error']=cleanup_error  # fixed raw owner before any optional growth
+        self.uncertain=True
+        if primary is None:
+            if self.primary_error is None:self.primary_error=cleanup_error
+        elif cleanup_error is not primary:
+            if self.secondary_error is None:self.secondary_error=cleanup_error
+            try:self.secondary.append(cleanup_error)
+            except BaseException as journal_error:
+                channel['journal_error']=journal_error
+        # A failed retirement cannot leave private invocation authority active.
+        # Only plain source-owned metadata is touched; no native guard/close is
+        # retried and no ambient exception state chooses the designated error.
+        self.active=False;self.terminal=True;self.pending=None
+        self.checks=None;self.checks_c=None;self.checks_h=None
+        try:dict.clear(self.registry)
+        except BaseException as metadata_error:
+            if self.secondary_error is None:self.secondary_error=metadata_error
+            try:self.secondary.append(metadata_error)
+            except BaseException:pass
+        if primary is None:raise cleanup_error
+    return None
+
+
+# These exact class members are installed at source module initialization before
+# cold authority capture of this module, never by a running target or caller.
+_EpochSuite.apply_existing=_epoch_suite_apply_existing
+_EpochSuite.construction_init=_epoch_suite_construction_init
+_EpochSuite.phase_wrap=_epoch_suite_phase_wrap
+_EpochSuite.seal=_epoch_suite_seal
+_EpochSuite.retire_preserving=_epoch_suite_retire_preserving
+
+
+def _epoch_guard_base(owner,assembler):
+    record=_EPOCH_BINDERS.get(id(owner))
+    _epoch_need(record is not None and record[0] is owner and record[1] is assembler,
+                'Epoch genuine guard-base assembler')
+    _epoch_fn_fresh(record[2]);suite=record[3]
+    result=getattr(suite,'epoch_guard',None)
+    _epoch_need(type(result) is type and result.__mro__[1] is owner.composed_guard,
+                'Epoch exact additional guard base')
+    return result
+
+
+
+def bind_epoch_cache_backend(backend, module, native, prepared, environment, *, row_producer_handle, row_handle, rank_row_intern, final_guard, rank_calls=None, complement_trace=None, epoch_assembler):
+    """Keep the real row observer; derive exactly its two callback guard targets.
+
+    The first producer reverses its row observer/parameter back to the original
+    backend. This second transform reverses its two check_backend attributes
+    back to THAT exact row-derived function. Public backend.bind stays original.
+    """
+    _epoch_validate(prepared, epoch_assembler)
+    _need(not V8_SOURCE_DRAFT, 'V8 source draft is not executable')
+    owner = prepared['owner']
+    _need(owner.factory_environment is environment and owner.composed_guard is not None and (owner.runtime is None), 'Backend factory requires a fresh composed cache guard')
+    authority = environment.cold_authority
+    _check_factory_environment(environment, backend, final_guard)
+    _ca_desc = environment.cold_caller_descriptor
+    _ca_p = _ca_desc[5]
+    _ca_type, _ca_function, _ca_id = (_ca_p[0], _ca_p[1], _ca_p[2])
+    _ca_error, _ca_value_error, _ca_zip = (_ca_p[7], _ca_p[8], _ca_p[18])
+    _ca_dispatch, _ca_record = (_ca_desc[2], _ca_desc[3])
+    if authority is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+        raise _ca_error('Cold authority caller dispatcher identity differs')
+    for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+        if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher environment differs')
+    if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+        raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+    for _ca_cell, _ca_expected in _ca_record[8]:
+        try:
+            _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+        except _ca_value_error:
+            raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+        if _ca_observed_id != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher cell differs')
+    _ca_dispatch(4, owner.composed_guard, environment.cache_handle, 'compose_runtime_guard', (owner.base_guard, prepared), {})
+    _ca_desc = environment.cold_caller_descriptor
+    _ca_p = _ca_desc[5]
+    _ca_type, _ca_function, _ca_id = (_ca_p[0], _ca_p[1], _ca_p[2])
+    _ca_error, _ca_value_error, _ca_zip = (_ca_p[7], _ca_p[8], _ca_p[18])
+    _ca_dispatch, _ca_record = (_ca_desc[2], _ca_desc[3])
+    if authority is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+        raise _ca_error('Cold authority caller dispatcher identity differs')
+    for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+        if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher environment differs')
+    if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+        raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+    for _ca_cell, _ca_expected in _ca_record[8]:
+        try:
+            _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+        except _ca_value_error:
+            raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+        if _ca_observed_id != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher cell differs')
+    _ca_dispatch(4, rank_row_intern, row_handle, 'make_row_interner', (), {})
+    _ca_desc = environment.cold_caller_descriptor
+    _ca_p = _ca_desc[5]
+    _ca_type, _ca_function, _ca_id = (_ca_p[0], _ca_p[1], _ca_p[2])
+    _ca_error, _ca_value_error, _ca_zip = (_ca_p[7], _ca_p[8], _ca_p[18])
+    _ca_dispatch, _ca_record = (_ca_desc[2], _ca_desc[3])
+    if authority is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+        raise _ca_error('Cold authority caller dispatcher identity differs')
+    for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+        if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher environment differs')
+    if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+        raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+    for _ca_cell, _ca_expected in _ca_record[8]:
+        try:
+            _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+        except _ca_value_error:
+            raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+        if _ca_observed_id != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher cell differs')
+    _ca_dispatch(4, final_guard, row_handle, 'make_cache_runtime_guard', (_epoch_guard_base(owner, epoch_assembler), rank_row_intern), {})
+    _ca_desc = environment.cold_caller_descriptor
+    _ca_p = _ca_desc[5]
+    _ca_type, _ca_function, _ca_id = (_ca_p[0], _ca_p[1], _ca_p[2])
+    _ca_error, _ca_value_error, _ca_zip = (_ca_p[7], _ca_p[8], _ca_p[18])
+    _ca_dispatch, _ca_record = (_ca_desc[2], _ca_desc[3])
+    if authority is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+        raise _ca_error('Cold authority caller dispatcher identity differs')
+    for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+        if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher environment differs')
+    if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+        raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+    for _ca_cell, _ca_expected in _ca_record[8]:
+        try:
+            _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+        except _ca_value_error:
+            raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+        if _ca_observed_id != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher cell differs')
+    row_source = _ca_dispatch(6, row_handle)
+    _ca_desc = environment.cold_caller_descriptor
+    _ca_p = _ca_desc[5]
+    _ca_type, _ca_function, _ca_id = (_ca_p[0], _ca_p[1], _ca_p[2])
+    _ca_error, _ca_value_error, _ca_zip = (_ca_p[7], _ca_p[8], _ca_p[18])
+    _ca_dispatch, _ca_record = (_ca_desc[2], _ca_desc[3])
+    if authority is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+        raise _ca_error('Cold authority caller dispatcher identity differs')
+    for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+        if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher environment differs')
+    if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+        raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+    for _ca_cell, _ca_expected in _ca_record[8]:
+        try:
+            _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+        except _ca_value_error:
+            raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+        if _ca_observed_id != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher cell differs')
+    producer_source = _ca_dispatch(6, row_producer_handle)
+    _need(row_source[2] == V8_ROW_SOURCE_SHA256 and producer_source[2] == V8_ROW_PRODUCER_SHA256, 'Backend factory row source pin differs')
+    _need(_TYPE(final_guard) is _TYPE and _LEN(_TYPEGET(final_guard, '__mro__')) > 1 and (_TYPEGET(final_guard, '__mro__')[1] is _epoch_guard_base(owner, epoch_assembler)), 'Backend factory requires the exact registered final row guard')
+    _ca_desc = environment.cold_caller_descriptor
+    _ca_p = _ca_desc[5]
+    _ca_type, _ca_function, _ca_id = (_ca_p[0], _ca_p[1], _ca_p[2])
+    _ca_error, _ca_value_error, _ca_zip = (_ca_p[7], _ca_p[8], _ca_p[18])
+    _ca_dispatch, _ca_record = (_ca_desc[2], _ca_desc[3])
+    if authority is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+        raise _ca_error('Cold authority caller dispatcher identity differs')
+    for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+        if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher environment differs')
+    if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+        raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+    for _ca_cell, _ca_expected in _ca_record[8]:
+        try:
+            _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+        except _ca_value_error:
+            raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+        if _ca_observed_id != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher cell differs')
+    row_product = _ca_dispatch(1, row_producer_handle, 'derive_row_bind', environment.bind, environment.source_bytes)
+    row_reference = row_receipt = packet = original = future = parsed = None
+    derived = restored = restored_tree = tree = None
+    try:
+        _need(_TYPE(row_product) is _TUPLE and _LEN(row_product) == 3, 'Backend factory row producer transport differs')
+        row_reference, row_receipt, packet = row_product
+        _ca_desc = environment.cold_caller_descriptor
+        _ca_p = _ca_desc[5]
+        _ca_type, _ca_function, _ca_id = (_ca_p[0], _ca_p[1], _ca_p[2])
+        _ca_error, _ca_value_error, _ca_zip = (_ca_p[7], _ca_p[8], _ca_p[18])
+        _ca_dispatch, _ca_record = (_ca_desc[2], _ca_desc[3])
+        if authority is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+            raise _ca_error('Cold authority caller dispatcher identity differs')
+        for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+            if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+                raise _ca_error('Cold authority caller dispatcher environment differs')
+        if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+            raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+        for _ca_cell, _ca_expected in _ca_record[8]:
+            try:
+                _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+            except _ca_value_error:
+                raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+            if _ca_observed_id != _ca_id(_ca_expected):
+                raise _ca_error('Cold authority caller dispatcher cell differs')
+        _ca_dispatch(4, row_reference, row_producer_handle, 'derive_row_bind', (environment.bind, environment.source_bytes), {})
+        _need(_TYPE(packet) is _TUPLE and _LEN(packet) == 2 and (_TYPE(packet[0]) is ast.FunctionDef) and (_TYPE(packet[1]) is list), 'Backend factory private row AST packet differs')
+        original, future = packet
+        original_tree = ast.Module(body=copy.deepcopy(future) + [copy.deepcopy(original)], type_ignores=[])
+        ast.fix_missing_locations(original_tree)
+        original_code = _code_named(_COMPILE(original_tree, row_reference.__code__.co_filename, 'exec', dont_inherit=True, optimize=sys.flags.optimize), 'bind')
+        _need(_code_equal(original_code, row_reference.__code__), 'Backend factory transported row AST differs from its registered callable')
+        derived = copy.deepcopy(original)
+        replacements = []
+        for statement in derived.body:
+            if _TYPE(statement) is ast.FunctionDef and statement.name in ('complement_in', 'nondegenerate'):
+                _need(_LEN(statement.body) > 0 and _TYPE(statement.body[0]) is ast.Expr, 'Backend factory expected callback guard expression is absent')
+                call = statement.body[0].value
+                _need(_TYPE(call) is ast.Call and (not call.args) and (not call.keywords) and (_TYPE(call.func) is ast.Attribute) and (call.func.attr == 'check') and (_TYPE(call.func.value) is ast.Name) and (call.func.value.id == 'runtime'), 'Backend factory callback guard expression changed')
+                call.func.attr = 'check_backend'
+                replacements.append(call.func)
+        _need(_LEN(replacements) == 2, 'Backend factory must replace exactly two row-reference callback guard calls')
+        restored = copy.deepcopy(derived)
+        restored_count = 0
+        for statement in restored.body:
+            if _TYPE(statement) is ast.FunctionDef and statement.name in ('complement_in', 'nondegenerate'):
+                statement.body[0].value.func.attr = 'check'
+                restored_count += 1
+        _need(restored_count == 2 and ast.dump(restored, include_attributes=False) == ast.dump(original, include_attributes=False), 'Backend factory changed more than the two admitted row-reference guard calls')
+        restored_tree = ast.Module(body=copy.deepcopy(future) + [restored], type_ignores=[])
+        ast.fix_missing_locations(restored_tree)
+        restored_code = _code_named(_COMPILE(restored_tree, row_reference.__code__.co_filename, 'exec', dont_inherit=True, optimize=sys.flags.optimize), 'bind')
+        _need(_code_equal(restored_code, row_reference.__code__), 'Backend factory reversed calling code differs from the row reference')
+        derived = _epoch_checked(owner, epoch_assembler, 0, derived, row_reference, future, rank_calls, complement_trace, native, rank_row_intern, final_guard)
+        tree = ast.Module(body=copy.deepcopy(future) + [derived], type_ignores=[])
+        ast.fix_missing_locations(tree)
+        code = _code_named(_COMPILE(tree, row_reference.__code__.co_filename, 'exec', dont_inherit=True, optimize=sys.flags.optimize), 'bind')
+        clone = FunctionType(code, row_reference.__globals__, row_reference.__name__, row_reference.__defaults__, row_reference.__closure__)
+        clone.__kwdefaults__ = row_reference.__kwdefaults__
+        _need(clone.__globals__ is row_reference.__globals__ and clone.__builtins__ is row_reference.__builtins__ and (clone.__defaults__ is row_reference.__defaults__) and (clone.__kwdefaults__ is row_reference.__kwdefaults__) and (clone.__closure__ is row_reference.__closure__), 'Backend factory changed effective row-reference dispatch ownership')
+        _check_factory_environment(environment, backend, final_guard)
+        _ca_desc = environment.cold_caller_descriptor
+        _ca_p = _ca_desc[5]
+        _ca_type, _ca_function, _ca_id = (_ca_p[0], _ca_p[1], _ca_p[2])
+        _ca_error, _ca_value_error, _ca_zip = (_ca_p[7], _ca_p[8], _ca_p[18])
+        _ca_dispatch, _ca_record = (_ca_desc[2], _ca_desc[3])
+        if authority is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+            raise _ca_error('Cold authority caller dispatcher identity differs')
+        for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+            if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+                raise _ca_error('Cold authority caller dispatcher environment differs')
+        if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+            raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+        for _ca_cell, _ca_expected in _ca_record[8]:
+            try:
+                _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+            except _ca_value_error:
+                raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+            if _ca_observed_id != _ca_id(_ca_expected):
+                raise _ca_error('Cold authority caller dispatcher cell differs')
+        _ca_dispatch(4, row_reference, row_producer_handle, 'derive_row_bind', (environment.bind, environment.source_bytes), {})
+        _ca_desc = environment.cold_caller_descriptor
+        _ca_p = _ca_desc[5]
+        _ca_type, _ca_function, _ca_id = (_ca_p[0], _ca_p[1], _ca_p[2])
+        _ca_error, _ca_value_error, _ca_zip = (_ca_p[7], _ca_p[8], _ca_p[18])
+        _ca_dispatch, _ca_record = (_ca_desc[2], _ca_desc[3])
+        if authority is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+            raise _ca_error('Cold authority caller dispatcher identity differs')
+        for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+            if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+                raise _ca_error('Cold authority caller dispatcher environment differs')
+        if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+            raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+        for _ca_cell, _ca_expected in _ca_record[8]:
+            try:
+                _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+            except _ca_value_error:
+                raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+            if _ca_observed_id != _ca_id(_ca_expected):
+                raise _ca_error('Cold authority caller dispatcher cell differs')
+        _ca_dispatch(4, final_guard, row_handle, 'make_cache_runtime_guard', (_epoch_guard_base(owner, epoch_assembler), rank_row_intern), {})
+        _need(_TYPE(module) is ModuleType and _string_key_domain(module.__dict__), 'Backend factory scientific lookup domain changed')
+        result = clone(module, native, rank_calls, complement_trace, rank_row_intern, epoch_assembler=epoch_assembler)
+        _need(_GET(environment.namespace, 'bind') is environment.bind, 'Backend factory replaced the original public bind')
+        owner.binding_derivation = {'source_sha256': BACKEND_SOURCE_SHA256, 'row_source_sha256': V8_ROW_SOURCE_SHA256, 'row_producer_sha256': V8_ROW_PRODUCER_SHA256, 'row_derivation': _DICT(row_receipt), 'changed_callback_calls': 2, 'restored_ast_identical': True, 'restored_code_identical': True, 'transported_ast_matches_registered_row_callable': True, 'original_globals_builtins_defaults_closure': True, 'environment_reference': 'exact private row-derived callable', 'exact_final_row_class_product_checked_before_bind': True, 'early_environment': environment.receipt}
+        result = _epoch_checked(owner, epoch_assembler, 3, result)
+        return result
+    finally:
+        row_product = row_reference = row_receipt = packet = original = future = parsed = None
+        original_tree = original_code = derived = restored = restored_tree = tree = None
+        replacements = statement = call = restored_code = code = clone = None
+
+
+# SOURCE supplement embedded after the unchanged legacy cache prefix.
+def _epoch_require_disposition(state,record):
+    _need(_TYPE(state) is _DICT and _string_key_domain(state) and _TYPE(record) is _DICT and _string_key_domain(record),'Epoch exact acquisition disposition dictionaries')
+    _need(set(record)=={'phase','prepared','owner','probe_binding','close_attempted','close_result','primary','secondary','uncertain','published','origin_handle'} and
+          _GET(state,'epoch_acquisition') is record and _GET(state,'cache_binding',_MISSING) is None and
+          _TYPE(record['phase']) is _STR and record['phase']=='BEFORE_ACQUISITION' and record['prepared'] is None and record['owner'] is None and
+          record['probe_binding'] is None and record['close_attempted'] is False and record['published'] is False and
+          record['close_result'] is None and record['primary'] is None and record['secondary'] is None and
+          record['uncertain'] is False and record['origin_handle'] is None,
+          'Epoch pending disposition identity and initial state')
+
+
+def prepare_epoch_cache_contract(module, extension_path, expected_extension_sha256, *, bootstrap_root, bootstrap_capability, bootstrap_api, factory_environment, source_sha256=SOURCE_SHA256, disposition_state, disposition_record):
+    """Return methods/owner; parent installs only after original P1 admission."""
+    _need(not V8_SOURCE_DRAFT, 'V8 source draft is not executable')
+    _need(_TYPE(factory_environment) is _BackendFactoryEnvironment, "Cache v7 requires the parent's early factory environment")
+    _ca_desc = factory_environment.cold_caller_descriptor
+    _ca_p = _ca_desc[5]
+    _ca_type, _ca_function, _ca_id = (_ca_p[0], _ca_p[1], _ca_p[2])
+    _ca_error, _ca_value_error, _ca_zip = (_ca_p[7], _ca_p[8], _ca_p[18])
+    _ca_dispatch, _ca_record = (_ca_desc[2], _ca_desc[3])
+    if factory_environment.cold_authority is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+        raise _ca_error('Cold authority caller dispatcher identity differs')
+    for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+        if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher environment differs')
+    if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+        raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+    for _ca_cell, _ca_expected in _ca_record[8]:
+        try:
+            _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+        except _ca_value_error:
+            raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+        if _ca_observed_id != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher cell differs')
+    _ca_dispatch(2, factory_environment.cache_handle)
+    _ca_desc = factory_environment.collector_descriptor
+    _ca_runtime_operations = _ca_desc[1]
+    _ca_p = _ca_desc[5]
+    _ca_type, _ca_function, _ca_id = (_ca_p[0], _ca_p[1], _ca_p[2])
+    _ca_error, _ca_value_error, _ca_zip = (_ca_p[7], _ca_p[8], _ca_p[18])
+    _ca_dispatch, _ca_record = (_ca_desc[2], _ca_desc[3])
+    if _ca_type(_ca_runtime_operations) is not _ca_p[9] or _ca_p[3](_ca_runtime_operations) != 1 or _ca_runtime_operations[0] is not factory_environment.collector_guard:
+        raise _ca_error('Runtime drift: cache collector operation identity differs')
+    if _ca_runtime_operations is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+        raise _ca_error('Runtime drift: cache collector dispatcher identity differs')
+    for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+        if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+            raise _ca_error('Runtime drift: cache collector dispatcher environment differs')
+    if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+        raise _ca_error('Runtime drift: cache collector dispatcher defaults contract differs')
+    for _ca_cell, _ca_expected in _ca_record[8]:
+        try:
+            _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+        except _ca_value_error:
+            raise _ca_error('Runtime drift: cache collector dispatcher cell became empty') from None
+        if _ca_observed_id != _ca_id(_ca_expected):
+            raise _ca_error('Runtime drift: cache collector dispatcher cell differs')
+    _ca_dispatch(0)
+    _bootstrap_api(bootstrap_root, bootstrap_capability, bootstrap_api)
+    _epoch_require_disposition(disposition_state, disposition_record)
+    _need(_TYPE(module) is ModuleType, 'Cache contract requires an exact source module')
+    namespace = module.__dict__
+    _need(_string_key_domain(namespace), 'Unsupported cache contract source lookup key domain')
+    path = Path(namespace['__file__'])
+    raw = path.read_bytes()
+    _need(source_sha256 == SOURCE_SHA256 and hashlib.sha256(raw).hexdigest() == SOURCE_SHA256, 'Cache contract scientific source differs')
+    _need(_GET(namespace, '__builtins__') is _BUILTINS and 'any' not in namespace and (_GET(_BUILTINS, 'any') is _ANY), 'Cache contract odd calling environment differs')
+    compiled = _COMPILE(raw, str(path), 'exec', dont_inherit=True, optimize=sys.flags.optimize)
+    records = [_authenticate(namespace['odd'], _code_named(compiled, 'odd'), namespace)]
+    checks = namespace['Checks']
+    _need(_ordinary(checks) and _ordinary(namespace['Label']), 'Cache contract original class dispatch differs')
+    members = _TYPEGET(checks, '__dict__')
+    expected_names = {'__module__', '__doc__', '__dict__', '__weakref__'}
+    for code in _code_named(compiled, 'Checks').co_consts:
+        if _TYPE(code) is CodeType:
+            expected_names.add(code.co_name)
+            records.append(_authenticate(members.get(code.co_name), code, namespace))
+    _need(set(members) == expected_names, 'Cache contract original Checks members differ')
+    parsed = ast.parse(raw, filename=str(path))
+    checks_ast = next((item for item in parsed.body if _TYPE(item) is ast.ClassDef and item.name == 'Checks'))
+    probe_binding = None
+    owner = None
+    prepared = None
+    try:
+        provider, probe_binding, bootstrap_validate, bootstrap_load, bootstrap_identity = _load_probe(extension_path, expected_extension_sha256, bootstrap_root, bootstrap_capability, bootstrap_api)
+        disposition_record['probe_binding'] = probe_binding
+        disposition_record['phase'] = 'NATIVE_LOCALLY_OWNED'
+        owner = _Owner(module, _TUPLE(records), frozenset(expected_names), provider, probe_binding, bootstrap_root, bootstrap_capability, bootstrap_api, bootstrap_validate, bootstrap_load, bootstrap_identity, factory_environment.collector_guard, factory_environment.collector_descriptor)
+        owner.factory_environment = factory_environment
+        for name, kind in (('residual_ok', 'residual'), ('label_ok', 'label')):
+            method = next((item for item in checks_ast.body if _TYPE(item) is ast.FunctionDef and item.name == name))
+            owner.methods[name] = _generate(module, method, owner, kind)
+        owner.method_records = _TUPLE((_record(value) for value in owner.methods.values()))
+        disposition_record['owner'] = owner
+        prepared = {'residual_ok': owner.methods['residual_ok'], 'label_ok': owner.methods['label_ok'], 'owner': owner, 'receipt': owner.receipt}
+        disposition_record['prepared'] = prepared
+        disposition_state['cache_binding'] = prepared
+        disposition_record['published'] = True
+        disposition_record['phase'] = 'PARENT_OWNED'
+        return prepared
+    except _BASE_ERROR as primary_error:
+        if disposition_record['primary'] is None:
+            disposition_record['primary'] = primary_error
+        if prepared is not None and _GET(disposition_state, 'cache_binding') is prepared:
+            disposition_record['published'] = True
+            disposition_record['phase'] = 'PARENT_OWNED_FAILURE'
+            raise
+        if probe_binding is None:
+            disposition_record['phase'] = 'FAILURE_BEFORE_BINDING_RETURN'
+            disposition_record['uncertain'] = True
+            raise
+        disposition_record['close_attempted'] = True
+        disposition_record['phase'] = 'LOCAL_CLOSE_ATTEMPTING'
+        try:
+            disposition_record['close_result'] = probe_binding.close()
+        except _BASE_ERROR as close_error:
+            disposition_record['secondary'] = close_error
+            disposition_record['uncertain'] = True
+            disposition_record['phase'] = 'LOCAL_CLOSE_FAILED'
+            raise primary_error from close_error
+        disposition_record['phase'] = 'LOCAL_CLOSE_RETURNED'
+        raise
+
+# BEGIN G12 EXACT SOURCE-OWNED C3 SELECTOR
+# Appended to the exact selected epoch cache source. The single constructor
+# capture edit calls this factory instead of taking suite.commit directly.
+# Original constructor body/inverse/store/error handler is unchanged.
+def _g12_commit_selector(suite, site):
+    original_commit = suite.commit
+    if site != 'C3':
+        return original_commit
+    driver = suite.context['driver_function']
+    namespace = driver.__globals__
+    # Other original control contexts retain the original capture exactly.
+    # The G12 wrapper belongs only to this explicit selected main source.
+    selection = namespace.get('_G12_SELECTED_CASE')
+    if type(selection) is not str or selection not in ('N22', 'P07') or driver is not namespace.get('main_epoch'):
+        return original_commit
+    handler = namespace.get('_g12_selected_store')
+    _epoch_need(type(driver) is _epoch_types.FunctionType and driver.__name__ == 'main_epoch' and
+                namespace is _epoch_sys.modules['__main__'].__dict__ and
+                type(handler) is _epoch_types.FunctionType and handler.__globals__ is namespace,
+                'G12 fixed Root-selected source store handler is absent')
+    # Original authority.driver_entry already captures this selected driver
+    # graph; the actual handler is also captured transitively in this product
+    # graph before publication, not installed as a late mutable callback.
+    def selected_commit(actual_site, checks):
+        return handler(suite, original_commit, actual_site, checks)
+    return selected_commit
+
+# END G12 EXACT SOURCE-OWNED C3 SELECTOR

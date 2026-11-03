@@ -1,0 +1,53 @@
+[
+  {
+    "case": "ordinary_path",
+    "expected_frozen_stale": 1,
+    "report": {
+      "merge_base": "c92c0d0bb8902cd1e9e608eb1066974d2d72ef1c",
+      "head": "f12c81a2158fc1eae0b0748e8a5136d3eb8f6ee8",
+      "changed_files": 1,
+      "pinned_changed_files": 1,
+      "stale": 1,
+      "frozen_stale": 1,
+      "pins": [
+        {
+          "pinned": "research/pkg/a.txt",
+          "change": "modified",
+          "pinner": "pin.txt",
+          "sha256": "6b53c9c192925718563767d10eb93b8940d8a9af8d9cc412b154d6209f5a1162",
+          "state": "stale",
+          "frozen": true
+        }
+      ],
+      "scope": "Full lowercase SHA-256 hex digests in merge-base text files only; not a replay, and an empty report does not prove frozen evidence is unchanged."
+    }
+  },
+  {
+    "case": "newline_path",
+    "expected_frozen_stale": 1,
+    "report": {
+      "merge_base": "feef3ee571a03f7e6def7a5a5ad4507d0c8636e2",
+      "head": "2e813b19c13a6b777c3d3e98ffe4cfa2161b3455",
+      "changed_files": 1,
+      "pinned_changed_files": 0,
+      "stale": 0,
+      "frozen_stale": 0,
+      "pins": [],
+      "scope": "Full lowercase SHA-256 hex digests in merge-base text files only; not a replay, and an empty report does not prove frozen evidence is unchanged."
+    }
+  },
+  {
+    "case": "ambient_GIT_DIR_redirect",
+    "expected_frozen_stale": 1,
+    "report": {
+      "merge_base": "475da3fc6e97b42972e8db2b30cbe6c5bb9e6591",
+      "head": "475da3fc6e97b42972e8db2b30cbe6c5bb9e6591",
+      "changed_files": 0,
+      "pinned_changed_files": 0,
+      "stale": 0,
+      "frozen_stale": 0,
+      "pins": [],
+      "scope": "Full lowercase SHA-256 hex digests in merge-base text files only; not a replay, and an empty report does not prove frozen evidence is unchanged."
+    }
+  }
+]

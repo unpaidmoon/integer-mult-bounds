@@ -1,0 +1,288 @@
+{
+  "schema_version": 1,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "d59b5035e7b4cbaa9d688a1d32dd0d6eb79c466a",
+      "sha256": "9b8d0eea95b3bf0dfcb7938a732a6439b87a2685dec2a5ab9e525b3b34debbfa"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "3404fbdd5e7529a0674eef26114b5071e4586cec",
+      "sha256": "ead6cdc9d0af6d58e8a49744d8ec8c7c15e13d2ba93c276c434bcf9b51b93a81"
+    },
+    {
+      "path": "research/clifford-state-performance/fast_state.py",
+      "usage": "input",
+      "git_blob": "5d546d8a05f6025d58a5133fa0d67ce134993013",
+      "sha256": "2fe087ba4558bd21ca49945dbedaa4047e4170e8fd4e2280701bb2f0481811b5"
+    },
+    {
+      "path": "research/frontier1094-recipes-exact-seed76/clifford.py",
+      "usage": "input",
+      "git_blob": "6f1e6a38febde7eb7a7341d317522e6650d84408",
+      "sha256": "d5e42ddabd141b7bfbd70fe13908f3c3a06aeccebeab90623596bfb1988b97fb"
+    },
+    {
+      "path": "research/packed-clifford-gate-tables/adapter.py",
+      "usage": "input",
+      "git_blob": "b99342ac6e4853048a87cc9fa7d31caf998f9af0",
+      "sha256": "b0d9ad3183416e1c2780e69ea4bea57afba8c20da3979f61a6430731b4a42599"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/README.md",
+      "usage": "input",
+      "git_blob": "83bd14c9e070715f54e03da067037b59ab62fa51",
+      "sha256": "0187d7fdf673832351c7a7ae1fc94d042547c5b8ba151580ffabea6371b356d4"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/RETAINED.json",
+      "usage": "input",
+      "git_blob": "e84052627fe809c7f9be6485dd08198c4d7aeb5e",
+      "sha256": "ecad7919c6da2239a4557a34f117341d0cd0a381969cc3f7f3d2d7a86cac52f6"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/SOURCES.json",
+      "usage": "input",
+      "git_blob": "2863575ac67ef63177077aebdd5d537e584ca7c9",
+      "sha256": "ed101ca5d24474f252286172da5408dab19f06d3ad01d37b91bcbb4c5c1b1c8a"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/adapter.py",
+      "usage": "input",
+      "git_blob": "71cb1bb66686ea1b44d29d8aa1931b528fdbf5db",
+      "sha256": "f72c7b24ff72c0a39eb1d849ae41d20f4e67471cc5cd1dd3183257008bc86169"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/replay.py",
+      "usage": "input",
+      "git_blob": "5467d0cc29b112c823592fc9348327a6b0f4589b",
+      "sha256": "36cd9ccab3288dee384c0a365ce6660e076a1da02e6dfbcd45efb6c8cc2b549b"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/vendor/pr1939/fast_copy.py",
+      "usage": "input",
+      "git_blob": "7f28c4e3076bf0d448ddbd7bd365560a21758fa1",
+      "sha256": "311ac249835bd96fce5409b4397c7c7021db894b06f6509ccd2c85fb76fb1ca4"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/vendor/pr3218/BENCHMARK.json",
+      "usage": "input",
+      "git_blob": "dcb0857727c3af4ab0d35cc34338e78fa5c52eb4",
+      "sha256": "90ae0715021df52c7c716ef2ffb74386b1e70acded5f2abc81a45e4072d81d84"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/vendor/pr3218/NOTICE.md",
+      "usage": "input",
+      "git_blob": "19f1706604315c59f47160a3512ce871e55c0638",
+      "sha256": "33c4a32374a1cb2ca216a7a769204e858c59f0bc0771dcfc16448fdcd7ec183c"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/vendor/pr3218/PROOF.md",
+      "usage": "input",
+      "git_blob": "cb71e12328dd00c77f1e9d8be809b48c35e116c5",
+      "sha256": "2c13a9f072f4d6b7d438fa6f8b19953bab5dee038b4d6f1bf4f8cc385af92030"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/vendor/pr3218/README.md",
+      "usage": "input",
+      "git_blob": "645731637c75898f2add5946ae278f028bb1390d",
+      "sha256": "2ae64f8138fc245e92eb4a561893c0175bfd5c85fcef35c5f09c2e30070a9119"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/vendor/pr3218/RESULT.json",
+      "usage": "input",
+      "git_blob": "33c1d5bbf5a0054c7875e8ca755d02327ec5ee71",
+      "sha256": "455e4745548ad70a261e0b20cf097d2a7be26fa7cb6840a7e2cd028a438d1f55"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/vendor/pr3218/SOURCES.json",
+      "usage": "input",
+      "git_blob": "4bb592d91e7887d6ee0f63a7548102c48e3f7a43",
+      "sha256": "5eb09e1a5865c7d408dec6f071c69323418a80a9b499a4c446c67d07bc179076"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/vendor/pr3218/TASK.json",
+      "usage": "input",
+      "git_blob": "aac896c2bc445a8d22419564e16b019b1776f5a8",
+      "sha256": "1856eb1949392e2da352fcde4587ee280fd495052d9af77f3f74b3e4c2b8f9b5"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/vendor/pr3218/VERIFY.json",
+      "usage": "input",
+      "git_blob": "ddcd3a48c6e8f47caf0b564ff702e32103973ac3",
+      "sha256": "ee52aff937c87194d34e7075460f3240d05210648966cf71420b61509999b0ab"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/vendor/pr3218/benchmark.py",
+      "usage": "input",
+      "git_blob": "db469190bbb85eb2a7ac8806bb6e0a79be287bc9",
+      "sha256": "132c2e7d7244b40528937a6506d1e5cdcae8809416a25457f888f97c5ac0a431"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/vendor/pr3218/controls.py",
+      "usage": "input",
+      "git_blob": "be69a270f040f6ea57656a493b793a753210a369",
+      "sha256": "a12f5521e2ad5a496440eebc10bcfdef289b9ea2112823fe8549e642d266085c"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/vendor/pr3218/engine.py",
+      "usage": "input",
+      "git_blob": "a34243c16b49f40f8db35b6389d05028ae7c99c4",
+      "sha256": "5f57804b7b7c3b1d8d2ceeefc41e199504f4d60c39e84df887fa6b3cd66b8b71"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/vendor/pr3218/replay.py",
+      "usage": "input",
+      "git_blob": "c1c31353fd7186ff27d06c8d07e2f3973080235f",
+      "sha256": "aa7911d8b36add5c803c299ae3709bb15ba26142707dabca909a5f96796928df"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/vendor/pr3218/test_package.py",
+      "usage": "input",
+      "git_blob": "d5722a70861b3e447e17346fcf372af295391f44",
+      "sha256": "d1bfb4917c03397157d07e6a1b2321bc2bb110454b0ccb256bd0937bb9451db4"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/vendor/pr3218/vendor/pr3202/README.md",
+      "usage": "input",
+      "git_blob": "b05efddf13cb67c7db7b0612ac18b537811872c7",
+      "sha256": "86af5efaf6dddf337fb80d4e1a5058633ed93d3247f0a00650f43f7b344e3175"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/vendor/pr3218/vendor/pr3202/RESULT.json",
+      "usage": "input",
+      "git_blob": "87f87bc4bbc549611889a956f53a01c2dbd29d39",
+      "sha256": "289f8ce423d2fc60489bd0b3a7ee9d7ca68e3e23c93389f31eff4d938157ba7a"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/vendor/pr3218/vendor/pr3202/SOURCES.json",
+      "usage": "input",
+      "git_blob": "71f2c61df0340a3e71d918fb371bc5e88eab3f13",
+      "sha256": "77da54e04b3d61cb436503ce8e9a6f7a0e11d0180fcc49d7eace65bb3e01f4f9"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/vendor/pr3218/vendor/pr3202/data/base/CANONICAL-WORD.json.gz",
+      "usage": "input",
+      "git_blob": "3958b8cf77b86b98d7a35ed0f4d2590f7de2b27f",
+      "sha256": "682e7b76fa51dfbfd7b7962ce1382317c8091f2cf14ae131f6b557de6475a6c0"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/vendor/pr3218/vendor/pr3202/data/base/CLIFFORD-RECIPES.json.gz",
+      "usage": "input",
+      "git_blob": "0591c6af1b744520e7f6a07303420c055ee9ae0e",
+      "sha256": "708bf689bf80265991cbe4b5916cf8a60522e74c674eb576c32932903f0c8ad0"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/vendor/pr3218/vendor/pr3202/data/base/LOCAL-PROGRAMS.json.gz",
+      "usage": "input",
+      "git_blob": "9ad65235dc846be16cddab2cf1839d24229de663",
+      "sha256": "c57a0999b9d89e90a49096ea0e25817d1986b015726f711c3059a8aa875e5c24"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/vendor/pr3218/vendor/pr3202/data/base/RESIDUAL-ADAPTERS.json.gz",
+      "usage": "input",
+      "git_blob": "3e154660a1ca7904703447280214a5c14957568f",
+      "sha256": "8faeab9752757c54ee0eef3df700a7c715c49d772d4c5dc545b11b80cecfd6b4"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/vendor/pr3218/vendor/pr3202/data/extra/CANONICAL-WORD.json.gz",
+      "usage": "input",
+      "git_blob": "c2c7a69938dcb2b2cbd390739bc027447ed6cb4c",
+      "sha256": "94e9a36aa0068024ccfceae4f6cb166ad33c5d460921e3e8e5df511eca0e6295"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/vendor/pr3218/vendor/pr3202/data/extra/CLIFFORD-RECIPES.json.gz",
+      "usage": "input",
+      "git_blob": "887f5bfc36d382e81e2f945f5dcc5c1bf2be7233",
+      "sha256": "bff42748de313838c5dd82772c56a8154750db3e3746d4c792e875c15f38ca08"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/vendor/pr3218/vendor/pr3202/data/extra/LOCAL-PROGRAMS.json.gz",
+      "usage": "input",
+      "git_blob": "9ad65235dc846be16cddab2cf1839d24229de663",
+      "sha256": "c57a0999b9d89e90a49096ea0e25817d1986b015726f711c3059a8aa875e5c24"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/vendor/pr3218/vendor/pr3202/data/extra/RESIDUAL-ADAPTERS.json.gz",
+      "usage": "input",
+      "git_blob": "3cb1e2927f406b18a635c6170ab73078b24b36e1",
+      "sha256": "da4f5fe1bdd515d29674cd098f6773c34a63061a49dcd1946f393b8f881723dd"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/vendor/pr3218/vendor/pr3202/verify.py",
+      "usage": "input",
+      "git_blob": "0ed4963416541b4da6f1b726cba18dc737c66412",
+      "sha256": "004a0bc6787cea330f401ab8b3f26bbe72499004e0ecb0ba09234ec6d2ada874"
+    },
+    {
+      "path": "research/r2-mutation-path-copy/vendor/pr3218/verify.py",
+      "usage": "input",
+      "git_blob": "b4844357c0b36034cdf39104b367d95e0124a70e",
+      "sha256": "74f86e4ccbf6246b004ffc001f750aa8b2755cda249d344552289bd5aca7564b"
+    },
+    {
+      "path": "research/rank7-shared-restore-fanin/evidence/NATIVE-RECEIPT.json",
+      "usage": "input",
+      "git_blob": "9b7c498ed6f92be5f1c4a85a1f25427788647fc1",
+      "sha256": "3dce85d535c34dd5755b7a7828b9706cd38198aa99e849dc0f166ac4e7ea47df"
+    },
+    {
+      "path": "research/rank7-shared-restore-fanin/evidence/SOURCE-MANIFEST.json",
+      "usage": "input",
+      "git_blob": "ff42fd06f9ede0e1a717766232e283005336f935",
+      "sha256": "4f52f55eb311319a7e8ac7de7f4e9cc45e36166270db42c21c955c96a2e0639c"
+    },
+    {
+      "path": "research/rank7-shared-restore-fanin/evidence/WORD-base.json.gz",
+      "usage": "input",
+      "git_blob": "51b0b3c912565b7e12b3a2f8a3c0ccd37290206b",
+      "sha256": "08e7e10e49053b97b7ae8a7e93f085ade519f3d270ed54b9c0c3a19236a4d267"
+    },
+    {
+      "path": "research/rank7-shared-restore-fanin/evidence/WORD-extra.json.gz",
+      "usage": "input",
+      "git_blob": "23915f0bec7533ce0658cac8c7ae2069873efe4b",
+      "sha256": "9c625893f09e46688fc650e1d65d05a416b504e2dcffe5fefdc4181c6de22479"
+    },
+    {
+      "path": "research/two-sided-helper-extraction/vendor/fastnative/vendor/native/new/code/borrow/bw_adapters.py",
+      "usage": "input",
+      "git_blob": "82beaa9c1d13bcd5f79d0a5e10e8a10733eac347",
+      "sha256": "c5907050a9a7fa36d4fcba3ad4fe440d1bec2063360c095013891785ba65c3ce"
+    },
+    {
+      "path": "research/two-sided-helper-extraction/vendor/fastnative/vendor/native/new/code/borrow/bw_emit.py",
+      "usage": "input",
+      "git_blob": "6d47f63ab7a533941b3881bbfd3ae4dac5f76932",
+      "sha256": "99b59a6fa3feda86785e4225157dcb1a6169d256cec4f5e0acc9cea7a701df76"
+    },
+    {
+      "path": "research/two-sided-helper-extraction/vendor/fastnative/vendor/native/new/code/borrow/bw_gauss.py",
+      "usage": "input",
+      "git_blob": "1ff29dfb244e2114de8e586a450ae9fb70308d58",
+      "sha256": "0884b14d6d77cde419a3c773ad9b21d0d18de1e6e20e6b6d5add458ed32ba4cb"
+    },
+    {
+      "path": "research/two-sided-helper-extraction/vendor/fastnative/vendor/native/new/code/borrow/bw_phases.py",
+      "usage": "input",
+      "git_blob": "99f351785ebca5fbf3336bedcd7b48bac9c255e5",
+      "sha256": "9d1a620e26715f4c42fd0347ecc14ef5a4a9031867869b64e8bae4d8526a821e"
+    },
+    {
+      "path": "research/two-sided-helper-extraction/vendor/fastnative/vendor/native/new/code/borrow/bw_transport.py",
+      "usage": "input",
+      "git_blob": "08248542b18864c94a5ac050c8669f68519838e1",
+      "sha256": "9818e08b819310b40f1441b89be8c4369584a5b3fa5dfe9b86b1df9a7f5d6a76"
+    },
+    {
+      "path": "research/two-sided-helper-extraction/vendor/fastnative/vendor/native/new/code/borrow/vendor/clifford/clifford_exact.py",
+      "usage": "input",
+      "git_blob": "166841a037f069249f6f7f6dedb89248812f59e2",
+      "sha256": "2982ead07721e83358dc67c6f49c2b4c16a236a6bebdfd72f58221be1f5d0962"
+    }
+  ]
+}

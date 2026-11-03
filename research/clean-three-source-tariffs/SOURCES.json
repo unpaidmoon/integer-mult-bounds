@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "d59b5035e7b4cbaa9d688a1d32dd0d6eb79c466a",
+      "sha256": "9b8d0eea95b3bf0dfcb7938a732a6439b87a2685dec2a5ab9e525b3b34debbfa"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "3404fbdd5e7529a0674eef26114b5071e4586cec",
+      "sha256": "ead6cdc9d0af6d58e8a49744d8ec8c7c15e13d2ba93c276c434bcf9b51b93a81"
+    },
+    {
+      "path": "research/clean-connector-gray-optimum/PROOF.md",
+      "usage": "input",
+      "git_blob": "3f1df5128e713d24c80942856826e510b03fc415",
+      "sha256": "82d5401187424c26a21e8f21dfe9aebbee8e419a3a363b108151d472620df73a"
+    },
+    {
+      "path": "research/clean-connector-gray-optimum/README.md",
+      "usage": "input",
+      "git_blob": "9396a9b3e5e42fcc87d1b72a67b53cf880da7f0b",
+      "sha256": "9025edf10e16dbc0ee6a015fcae513ca5ac51b09e443fd5761794d99fa4f493a"
+    }
+  ]
+}

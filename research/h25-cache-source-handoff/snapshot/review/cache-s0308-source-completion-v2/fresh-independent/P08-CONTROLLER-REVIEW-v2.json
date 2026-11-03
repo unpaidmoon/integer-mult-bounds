@@ -1,0 +1,91 @@
+{
+  "blocking_findings": [],
+  "candidate_sha256": "c9920851a03f971f2bfecad063c00dcd8ec09f352d0fb8a9e0eba9d328fab3b7",
+  "controller_write_sites": [
+    [
+      "started",
+      1682
+    ],
+    [
+      "primary",
+      1729
+    ],
+    [
+      "qualified",
+      1783
+    ],
+    [
+      "qualification_error",
+      1778
+    ]
+  ],
+  "freeze_sha256": "bd6ae8ff06c513c9da8b0a02a4f1dd68fa8e5b7721c9925fff8a591a3d55b12e",
+  "independent_checks": [
+    "All eleven frozen packet payload hashes/lengths verified; draft is explicitly unselected.",
+    "Removing exact appended suffix and restoring bottom call recovers accepted b1f1ba predecessor byte for byte.",
+    "Every existing function/class AST with locations and literal span unchanged. Original STOP relative to its pre-observer version is still deliberately instrumented; this controller adds no further STOP change.",
+    "Exactly one zero-argument captured entry call and exactly four controller field writes; no normal return, predicate replay, source/native/resource/file/cleanup operation in controller.",
+    "Preflight is one-use and requires actual untouched source record/capture; post-catch identity checks bind entry/predicate code/globals/builtins plus exact actual module, record, capture, context and original argv owner.",
+    "Actual captured P must equal observation/STOP/source state primary. Sole predicate-produced disposition and actual publication completed/no-error slots are required.",
+    "Existing original source-owned phase samples are read and any diagnostic summary rejects; no raw diagnostic error reconstruction is claimed.",
+    "Qualification failure is nested and separately retained; qualified=True occurs only in success else, and final bare raise remains outside nested handlers."
+  ],
+  "new_activity_credit": 0,
+  "open": [
+    "Final selected source tuple/maps and original T1-T4 graph adoption remain required.",
+    "No execution/native/profile/cost fit/FULL approval or whole S03.08 credit.",
+    "No arbitrary async/MemoryError equivalence or universal raw-custody guarantee; missing markers fail closed."
+  ],
+  "reviewer": "/root/cache_s0308_v2_review",
+  "schema": "cache-s0308-fresh-independent-p08-controller-source-review-v2",
+  "scope": "Exact corrected P08 fault tuple only; the source-owned qualified flag stays bound to the same actual raw P, live source records and exact selected source. It is not an external acceptance input or normal execution success.",
+  "selected_append_sha256": "b4b96877cebc004d2fae6c582600266faae7ccf86e7b290d92702f07d5a77a7b",
+  "status": "ACCEPT_BOUNDED_LIVE_SLOT_CONTROLLER_SOURCE_CANDIDATE",
+  "target_operations": 0,
+  "verified_packet": [
+    {
+      "file": "EXACT-INVERSE-v1.json",
+      "sha256": "a8f43fc646c111402bd1f470a8c0605edf035e7c436552d9cd3e759808e1ce26"
+    },
+    {
+      "file": "EXACT-INVERSE-v2.json",
+      "sha256": "5ba7c30fd5418222a5b5f434af2f8fc01dbb5deb0b09708801166fefd4121dca"
+    },
+    {
+      "file": "FIRST-CONTROLLER-DESIGN-v1.json",
+      "sha256": "10d168a8c163ab94115d8ae8cad68581356ee05de8547e60f1de0d277f817e06"
+    },
+    {
+      "file": "PHASE-DIAGNOSTIC-REFINEMENT-v2.json",
+      "sha256": "1f49408070309648ee80eb90d9d74d4395379abd861cbc6496c4dbd2c413388e"
+    },
+    {
+      "file": "SOURCE-CONTROLLER-PROOF-v2.json",
+      "sha256": "4ade33a8a339402ec2e3fab1af11216cea14d9a9cd8faf7e01e149dde3acc88c"
+    },
+    {
+      "file": "SOURCE-READINESS-v2.json",
+      "sha256": "88bc087367c123f88dcd5577dbe832e48ae4c95a90d8557766873397b5e82c6b"
+    },
+    {
+      "file": "STATIC-CHECKS-v2.json",
+      "sha256": "1e193f7fa540b53124528e2caec34ceee80a8ae6fdcb6ccbfb0df62471d31b10"
+    },
+    {
+      "file": "p08_controlled_driver.py",
+      "sha256": "a384ca329fad6fcd54bc9b8148ce3613b1e630b3e5e71a33ae0f485b316bad4f"
+    },
+    {
+      "file": "p08_controlled_driver_v2.py",
+      "sha256": "c9920851a03f971f2bfecad063c00dcd8ec09f352d0fb8a9e0eba9d328fab3b7"
+    },
+    {
+      "file": "p08_controller.py.txt",
+      "sha256": "d832f6bea1f170b6b9ffbaf5e261c46a2c554ef24c8a8d8ddff97a16a9cd692d"
+    },
+    {
+      "file": "p08_controller_v2.py.txt",
+      "sha256": "b4b96877cebc004d2fae6c582600266faae7ccf86e7b290d92702f07d5a77a7b"
+    }
+  ]
+}

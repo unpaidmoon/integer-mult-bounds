@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "task_id": "bit-helper-contract",
+  "priority_revision": 8,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "original_card": {
+    "id": "bit-helper-contract",
+    "question": "Can a changed G20 helper path or independent-target split improve the complete BIT moment without losing its physical endpoint?",
+    "starting_points": [
+      "docs/research/current-priorities.md",
+      "docs/research/research-family-status.md",
+      "certificates/selected-result.json",
+      "docs/research/pr-intake-evidence/pr5599-completion/PROOF-REVIEW.md",
+      "research/g20-helper-split/README.md",
+      "research/g20-conjugation-admission/README.md"
+    ],
+    "methods": [
+      "Construct and independently check one source-bound instance of the stated first experiment.",
+      "Seek an exact counterexample or target-specific complete-budget obstruction to that same proposed change."
+    ],
+    "acceptance_gate": "A full boundary contract and paid profile; unchanged scalar counts alone are insufficient. A scoped local result may be retained without a complete supplier. Expanding it into further construction rounds requires the family-level budget and obligation gate in research-family-status.md; an optimistic passing relaxation alone is not acceptance.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_selected_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Read revision 8, the selected review and live exact-source handoffs. Then follow this card's bounded first_experiment.",
+      "scope": "Source-bound orientation only, not a supplier replay or theorem proof."
+    },
+    "first_experiment": "First read #5679/#5708 and their audits as pending component proposals. Choose one uncovered helper group/cut on an exact word; compare arbitrary-input native action, targets, owned storage, both orientations and full signed bill. Stop if the gain is only a scalar count or repaid by lost targets. Do not rerun the frozen #5609 common-frame domain without changing its hypothesis.",
+    "bottleneck_link": "Judge the actual current supplier contract and complete signed target/paid bill; frozen-profile ceilings require an applicability proof.",
+    "allowed_variations": [
+      "One exact source head, helper/cut region or quantified proposition and changed hypothesis; check live handoffs first. Different seeds are not different scopes."
+    ],
+    "scope_change_triggers": [
+      "Changing source head, helper/cut domain, operation alphabet or caller boundary without recording the new scope.",
+      "Treating an archived proposal or local numerical pass as complete supplier admission."
+    ],
+    "overlap_terms": [
+      "G20",
+      "helper split",
+      "5679",
+      "5708",
+      "independent target"
+    ],
+    "existing_checks": [
+      {
+        "scope": "Selected PR5599: complete helper-subspace construction and independent caller replay; five framework assumptions remain.",
+        "evidence": "docs/research/pr-intake-evidence/pr5599-completion/PROOF-REVIEW.md",
+        "remaining": "The next experiment must identify uncovered source-specific work. Successor archive intake does not transfer this admission.",
+        "status": "reviewed",
+        "source_commit": "09dd0965711ca7eeb169057a420abab1c9052137",
+        "selected_record_sha256": "2a0220e866417774606e0f991e41b9c1d26b1f43b97857238cf478dbc7d330b5"
+      }
+    ]
+  },
+  "scope_status": "changed",
+  "actual_scope": "Determine the exact minimum paid-query moment change of every four-or-more-contact fixed-contact-frame A2 conjugation on the final PR5708 word with its published routes.",
+  "scope_change_reason": "The card requests a changed G20 helper path or target split and a full supplier bill. This contribution instead answers unpaidmoon PR6290 open question 2 at its fixed-frame boundary, removing the contact cutoff and proving an exact local paid-moment minimum. It does not construct or admit a supplier.",
+  "bottleneck_link": "Longer scalar identities are explicitly open in PR5708 and PR6290. The certificate excludes the entire single-conjugation longer-contact domain on the published routes, so further paid-moment work must change the word, correction coframes, routes or rewrite sequence.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop at the first exact paid-moment saving or the exhaustive new longer-contact obstruction; do not extend after obtaining one independently reviewable result.",
+  "outcome": "negative-result",
+  "evidence": "Standalone exact finite certificate: 1503 new intervals, 1450 missing routes, 53 emissions, 14 neutral and 39 strict losses throughout 0<t<1. Canonical certificate SHA256 577323306b7b7f2547ca660e6bbef1badc953959e2f7cd20de9e1f002e254889. Written sign proof in PROOF.md.",
+  "author": "Nick Petalas",
+  "ai_assistance": "Independent human and formal proof-kernel review are unclaimed.",
+  "open_questions": [
+    {
+      "question": "Can one of the 14 longer-contact neutral rewrites expose a later strict paid-moment saving?",
+      "why_it_matters": "The present certificate fixes the input word and allows only one conjugation; it does not exclude productive sequences through the new neutral neighbors.",
+      "first_step": "Generate one listed neutral word and enumerate changed intervals on that word, then emit every route and price the complete changed bill.",
+      "blocked_by": "No neutral-neighbor search or caller admission is supplied here."
+    },
+    {
+      "question": "Can an additional native route or a moved correction frame produce a fully charged saving for one of the rejected intervals?",
+      "why_it_matters": "1450 exclusions are relative to the published route table, rather than geometric nonexistence proofs.",
+      "first_step": "Choose one recorded missing frame pair, construct its actual native route, and reconstruct every changed paid and target charge.",
+      "blocked_by": "New native action, restoration, scalar fees and complete caller costs must be paid."
+    }
+  ],
+  "claim_type": "finite certificate with scoped algebraic proof",
+  "question_source": {
+    "pr": 6290,
+    "author": "unpaidmoon",
+    "head": "9d2916b07402aca2133ab315230b9c761cc9eff7",
+    "question": "Can a conjugation with four or more contacts, or one correction moved off its contact frame, strictly lower the paid moment on (0,1)?",
+    "answered_scope": "All four-or-more-contact single conjugations, with corrections kept at their original frames and the published route table fixed."
+  },
+  "environment": {
+    "python": "3.12.15",
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "dependencies": "standard library only"
+  },
+  "freshness": {
+    "checked_utc": "2026-10-30T18:17:25Z",
+    "canonical_main": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+    "priority_revision": 8,
+    "selected_kappa": "781451/250000000",
+    "limitations": "The overlap helper searched 114 materialized notes out of 8722 at HEAD; complete live open-PR/discussion data and separate main/merged searches supplemented that sparse inventory."
+  }
+}

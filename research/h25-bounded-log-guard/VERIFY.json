@@ -1,0 +1,28 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "checks": "Authenticate all shipped bytes and exact conserved source exports, then replay eight original finite process controls and eight real-file controls in fresh external storage; validate expected STOP/raw hashes/counts/stage inventory, ledger continuity and hashing memory gates.",
+      "timeout_seconds": 180
+    },
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "-O",
+        "{package}/verify.py"
+      ],
+      "checks": "Repeat the finite controls under deliberate optimized adapter and child Python; explicit checks remain active without assert statements.",
+      "timeout_seconds": 180
+    }
+  ],
+  "inputs": [],
+  "python": "3.12",
+  "requirements": [],
+  "schema_version": 1,
+  "status": "ready"
+}

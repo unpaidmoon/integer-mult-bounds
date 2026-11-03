@@ -1,0 +1,53 @@
+{
+  "final_physical_publication_boundary": "OPEN_NOT_ZERO",
+  "historical_physical_gap_retained": true,
+  "metadata_check": "PASS_PACKAGE_METADATA_AND_PINS",
+  "old_failures_preserved": "Private staging closure and CLI failures; logadapter readonly-copy failure preserved before the3line private-copy repair. No timing rerolls.",
+  "recorded_utc": "2026-10-30T21:47:43.557334+00:00",
+  "schema": "standalone-tool-release-validation-v1",
+  "scientific_or_throughput_claim": false,
+  "source_review_scope": "Independent adapter and original-source conservation review before addition of this non-executable release metadata",
+  "source_review_sha256": "67903feec302b1f5768a2d71d37a4a54b42f7f3ff8efaaa4107c25cb9d4bf921",
+  "tests": [
+    {
+      "genuine_runner_receipt_sha256": "e768edd898aaf980a7e3817fe63504fb65287c9d41b30759228c2fc53381001d",
+      "label": "log-normal-v4",
+      "raw_stdout_sha256": "890d3db65554b455389319b376ce18a8a1eecb5b4232886b9b46eecd90340a78",
+      "runner_wall_seconds": 1.593929708993528,
+      "sampled_process_group_rss_bytes": 38813696,
+      "summary": {
+        "external_workspace": "/tmp/h25-bounded-log-guard-f37ygvhz",
+        "optimized": false,
+        "process_controls": 8,
+        "raw_attempts_and_expected_stops_retained": true,
+        "real_file_controls": 8,
+        "receipt_tail_excluded_from_runner_wall_seconds": true,
+        "runner_sha256": "32633e40364d824c9f942af1ad2934da9701117328364c7c3f418b21b2e8054a",
+        "runner_wall_seconds_sum": 0.8130480409599841,
+        "scientific_execution": false,
+        "scope": "original finite log controls only",
+        "status": "PASS"
+      }
+    },
+    {
+      "genuine_runner_receipt_sha256": "bfd0ee832ac09e7e1fad1b648ca41f0cd767c1ed3b1c094af064cff6777a877d",
+      "label": "log-optimized",
+      "raw_stdout_sha256": "59a8c13e57c6e96263b126334a680527418d2e1d152be035a7575803c25e847d",
+      "runner_wall_seconds": 3.451184857985936,
+      "sampled_process_group_rss_bytes": 43188224,
+      "summary": {
+        "external_workspace": "/tmp/h25-bounded-log-guard-4h1vy7ww",
+        "optimized": true,
+        "process_controls": 8,
+        "raw_attempts_and_expected_stops_retained": true,
+        "real_file_controls": 8,
+        "receipt_tail_excluded_from_runner_wall_seconds": true,
+        "runner_sha256": "32633e40364d824c9f942af1ad2934da9701117328364c7c3f418b21b2e8054a",
+        "runner_wall_seconds_sum": 2.204400372807868,
+        "scientific_execution": false,
+        "scope": "original finite log controls only",
+        "status": "PASS"
+      }
+    }
+  ]
+}

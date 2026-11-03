@@ -1,0 +1,8 @@
+{
+  "path": "scripts/research_windows_git.py",
+  "git_blob": "54e33b7556364fa531e49b2d33d4d10d6f38fa59",
+  "sha256": "9e3dfa9b8865d355c03529c2fe92d90e1c3b12a2adb8d505146d16757b2cba50",
+  "retained_path": "vendor/research_windows_git.py",
+  "commit": "916cf98d5d8a448ec6515d211c6fe980a46a1694",
+  "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/5721"
+}

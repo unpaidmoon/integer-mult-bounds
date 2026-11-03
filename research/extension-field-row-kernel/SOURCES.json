@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "d59b5035e7b4cbaa9d688a1d32dd0d6eb79c466a",
+      "sha256": "9b8d0eea95b3bf0dfcb7938a732a6439b87a2685dec2a5ab9e525b3b34debbfa"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "3404fbdd5e7529a0674eef26114b5071e4586cec",
+      "sha256": "ead6cdc9d0af6d58e8a49744d8ec8c7c15e13d2ba93c276c434bcf9b51b93a81"
+    },
+    {
+      "path": "research/extension-field-tensor-recognition/SOURCES.json",
+      "usage": "input",
+      "git_blob": "c7f94ddda8952e3a00e2ab41e95bd0a9b99d40c1",
+      "sha256": "604ec385e20651bd8c6e8df60ba7edf818c1bfc32ff7e487e5c8a8c60c9c1454"
+    },
+    {
+      "path": "research/extension-field-tensor-recognition/recognize.py",
+      "usage": "input",
+      "git_blob": "1066bb74c19d180bfef7d9dd1c0650ec6bbd7780",
+      "sha256": "6daa160346d04691c6ca3c9c820b3df8982de4320ec01e5db10e3cb932f42c00"
+    },
+    {
+      "path": "research/extension-field-tensor-recognition/verify.py",
+      "usage": "input",
+      "git_blob": "a8f8d85d71636ed8809e4a67f5c49bc30d106335",
+      "sha256": "52d5b7b954d64e3342043f3200a67286a9c156d908d5fa4d78c992a6c18cd71d"
+    },
+    {
+      "path": "research/frobenius-algebra-recognition/PROOF.md",
+      "usage": "input",
+      "git_blob": "0a0b7d1fe48576be453df5aa5de0cc66463352fa",
+      "sha256": "726d9c294f0b4b9085e3994ffb8c93737822b78d6f5d0c63f81e36b718419e28"
+    },
+    {
+      "path": "research/frobenius-tensor-characters/README.md",
+      "usage": "input",
+      "git_blob": "b62f9a906e6ed49605684cca52a221f064924461",
+      "sha256": "31573ba91ac69caff5b8e5a42ce7fd0d80a6d54673c08d7f225c9ee08e0e0893"
+    },
+    {
+      "path": "research/nonreduced-tensor-recognition/README.md",
+      "usage": "input",
+      "git_blob": "826c6b010725d98b6ca6599a748c4179264140e9",
+      "sha256": "2eaed94a9f12ad7b6bb7253b14bff95b86549b3e320f0e91fa4e35c0025536de"
+    }
+  ]
+}

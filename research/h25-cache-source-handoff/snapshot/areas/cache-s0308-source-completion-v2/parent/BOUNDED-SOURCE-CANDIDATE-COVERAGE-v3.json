@@ -1,0 +1,370 @@
+{
+  "accepted_bounded_candidates": [
+    {
+      "id": "N01",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/fixed-case-independent/COLD-SOURCE-REVIEW-v2.json",
+        "sha256": "8c3c6420cbf9eeb978e3b4d6e1a8a47d409ef48714823bc3d781034084d602c2"
+      }
+    },
+    {
+      "id": "N02",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/fixed-case-independent/COLD-SOURCE-REVIEW-v2.json",
+        "sha256": "8c3c6420cbf9eeb978e3b4d6e1a8a47d409ef48714823bc3d781034084d602c2"
+      }
+    },
+    {
+      "id": "N03",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/fixed-case-independent/COLD-SOURCE-REVIEW-v2.json",
+        "sha256": "8c3c6420cbf9eeb978e3b4d6e1a8a47d409ef48714823bc3d781034084d602c2"
+      }
+    },
+    {
+      "id": "N04",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/fixed-case-independent/COLD-SOURCE-REVIEW-v2.json",
+        "sha256": "8c3c6420cbf9eeb978e3b4d6e1a8a47d409ef48714823bc3d781034084d602c2"
+      }
+    },
+    {
+      "id": "N05",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/fixed-case-independent/COLD-SOURCE-REVIEW-v2.json",
+        "sha256": "8c3c6420cbf9eeb978e3b4d6e1a8a47d409ef48714823bc3d781034084d602c2"
+      }
+    },
+    {
+      "id": "N06",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/fixed-case-independent/COLD-SOURCE-REVIEW-v2.json",
+        "sha256": "8c3c6420cbf9eeb978e3b4d6e1a8a47d409ef48714823bc3d781034084d602c2"
+      }
+    },
+    {
+      "id": "N07",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/fixed-case-independent/COLD-SOURCE-REVIEW-v2.json",
+        "sha256": "8c3c6420cbf9eeb978e3b4d6e1a8a47d409ef48714823bc3d781034084d602c2"
+      }
+    },
+    {
+      "id": "N08",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/fixed-case-independent/COLD-SOURCE-REVIEW-v2.json",
+        "sha256": "8c3c6420cbf9eeb978e3b4d6e1a8a47d409ef48714823bc3d781034084d602c2"
+      }
+    },
+    {
+      "id": "N09",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/fixed-case-independent/COLD-SOURCE-REVIEW-v2.json",
+        "sha256": "8c3c6420cbf9eeb978e3b4d6e1a8a47d409ef48714823bc3d781034084d602c2"
+      }
+    },
+    {
+      "id": "N10",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/fixed-case-independent/COLD-SOURCE-REVIEW-v2.json",
+        "sha256": "8c3c6420cbf9eeb978e3b4d6e1a8a47d409ef48714823bc3d781034084d602c2"
+      }
+    },
+    {
+      "id": "N11",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/fixed-case-independent/COLD-SOURCE-REVIEW-v2.json",
+        "sha256": "8c3c6420cbf9eeb978e3b4d6e1a8a47d409ef48714823bc3d781034084d602c2"
+      }
+    },
+    {
+      "id": "N12",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/fresh-independent/G08-DISPOSITION-REVIEW-v1.json",
+        "sha256": "b607426361abe712116326629ddb016615000c160fd4670545d4afc3a18be411"
+      }
+    },
+    {
+      "id": "N13",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/fixed-case-independent/REQUEST-PENDING-SOURCE-REVIEW-v2.json",
+        "sha256": "fa4213006b1d524e0b0a23460947c5f1fcb29bbd4ecff57fff21c9d2333b29e1"
+      }
+    },
+    {
+      "id": "N14",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/fixed-case-independent/REQUEST-PENDING-SOURCE-REVIEW-v2.json",
+        "sha256": "fa4213006b1d524e0b0a23460947c5f1fcb29bbd4ecff57fff21c9d2333b29e1"
+      }
+    },
+    {
+      "id": "N15",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/fixed-case-independent/REQUEST-PENDING-SOURCE-REVIEW-v2.json",
+        "sha256": "fa4213006b1d524e0b0a23460947c5f1fcb29bbd4ecff57fff21c9d2333b29e1"
+      }
+    },
+    {
+      "id": "N16",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/roles-armed-independent/SMALL-CASES-SOURCE-REVIEW-v1.json",
+        "sha256": "3ed0d29f385508c96eb940ee31d7d4b142374a1b636f295af57f4660c2575bd9"
+      }
+    },
+    {
+      "id": "N17",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/fixed-case-independent/REQUEST-PENDING-SOURCE-REVIEW-v2.json",
+        "sha256": "fa4213006b1d524e0b0a23460947c5f1fcb29bbd4ecff57fff21c9d2333b29e1"
+      }
+    },
+    {
+      "id": "N18",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/fixed-case-independent/COLD-SOURCE-REVIEW-v2.json",
+        "sha256": "8c3c6420cbf9eeb978e3b4d6e1a8a47d409ef48714823bc3d781034084d602c2"
+      }
+    },
+    {
+      "id": "N19",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/roles-armed-independent/SMALL-CASES-SOURCE-REVIEW-v1.json",
+        "sha256": "3ed0d29f385508c96eb940ee31d7d4b142374a1b636f295af57f4660c2575bd9"
+      }
+    },
+    {
+      "id": "N20",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/late-independent/SOURCE-REVIEW-v2.json",
+        "sha256": "3449872d91c4d6425fea5126cae70192ebd959cf5af2e1f69ec85c795c86b4c9"
+      }
+    },
+    {
+      "id": "N21",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/roles-armed-independent/SMALL-CASES-SOURCE-REVIEW-v1.json",
+        "sha256": "3ed0d29f385508c96eb940ee31d7d4b142374a1b636f295af57f4660c2575bd9"
+      }
+    },
+    {
+      "id": "N23",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/late-independent/SOURCE-REVIEW-v2.json",
+        "sha256": "3449872d91c4d6425fea5126cae70192ebd959cf5af2e1f69ec85c795c86b4c9"
+      }
+    },
+    {
+      "id": "N24",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/fixed-case-independent/COLD-SOURCE-REVIEW-v2.json",
+        "sha256": "8c3c6420cbf9eeb978e3b4d6e1a8a47d409ef48714823bc3d781034084d602c2"
+      }
+    },
+    {
+      "id": "P01",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/fresh-independent/G08-DISPOSITION-REVIEW-v1.json",
+        "sha256": "b607426361abe712116326629ddb016615000c160fd4670545d4afc3a18be411"
+      }
+    },
+    {
+      "id": "P03",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/late-independent/SOURCE-REVIEW-v2.json",
+        "sha256": "3449872d91c4d6425fea5126cae70192ebd959cf5af2e1f69ec85c795c86b4c9"
+      }
+    },
+    {
+      "id": "P04",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/roles-armed-independent/SMALL-CASES-SOURCE-REVIEW-v1.json",
+        "sha256": "3ed0d29f385508c96eb940ee31d7d4b142374a1b636f295af57f4660c2575bd9"
+      }
+    },
+    {
+      "id": "P05",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/roles-armed-independent/SMALL-CASES-SOURCE-REVIEW-v1.json",
+        "sha256": "3ed0d29f385508c96eb940ee31d7d4b142374a1b636f295af57f4660c2575bd9"
+      }
+    },
+    {
+      "id": "P06",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/roles-armed-independent/SMALL-CASES-SOURCE-REVIEW-v1.json",
+        "sha256": "3ed0d29f385508c96eb940ee31d7d4b142374a1b636f295af57f4660c2575bd9"
+      }
+    },
+    {
+      "id": "P08",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/fresh-independent/P08-CONTROLLER-REVIEW-v2.json",
+        "sha256": "8889df7287b97c7af56f02f6eec5b5ef464bdcea7e21d47a3ddb3adcca7b41b9"
+      }
+    },
+    {
+      "id": "V2_ORIGIN_FIRST_ALL_ROUTES",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/fixed-case-independent/COLD-SOURCE-REVIEW-v2.json",
+        "sha256": "8c3c6420cbf9eeb978e3b4d6e1a8a47d409ef48714823bc3d781034084d602c2"
+      }
+    },
+    {
+      "id": "V2_OWNER_FIRST_CAPTURE",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/fixed-case-independent/COLD-SOURCE-REVIEW-v2.json",
+        "sha256": "8c3c6420cbf9eeb978e3b4d6e1a8a47d409ef48714823bc3d781034084d602c2"
+      }
+    },
+    {
+      "id": "V2_OWNER_LATE_GRAPH",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/fixed-case-independent/COLD-SOURCE-REVIEW-v2.json",
+        "sha256": "8c3c6420cbf9eeb978e3b4d6e1a8a47d409ef48714823bc3d781034084d602c2"
+      }
+    },
+    {
+      "id": "V2_ROLE_CLEANUP_ONLY",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/late-independent/SOURCE-REVIEW-v2.json",
+        "sha256": "3449872d91c4d6425fea5126cae70192ebd959cf5af2e1f69ec85c795c86b4c9"
+      }
+    },
+    {
+      "id": "V3_CLI_BODY_DISARM",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/late-independent/SOURCE-REVIEW-v2.json",
+        "sha256": "3449872d91c4d6425fea5126cae70192ebd959cf5af2e1f69ec85c795c86b4c9"
+      }
+    },
+    {
+      "id": "V3_CLI_BODY_DISARM_RETIREMENT",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/late-independent/SOURCE-REVIEW-v2.json",
+        "sha256": "3449872d91c4d6425fea5126cae70192ebd959cf5af2e1f69ec85c795c86b4c9"
+      }
+    },
+    {
+      "id": "V3_CLI_DISARM_ONLY",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/late-independent/SOURCE-REVIEW-v2.json",
+        "sha256": "3449872d91c4d6425fea5126cae70192ebd959cf5af2e1f69ec85c795c86b4c9"
+      }
+    },
+    {
+      "id": "V3_FIXED_RECORD_BINDINGS",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/fixed-case-independent/COLD-SOURCE-REVIEW-v2.json",
+        "sha256": "8c3c6420cbf9eeb978e3b4d6e1a8a47d409ef48714823bc3d781034084d602c2"
+      }
+    },
+    {
+      "id": "V3_INSTANCE_KEY_DOMAIN",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/fixed-case-independent/COLD-SOURCE-REVIEW-v2.json",
+        "sha256": "8c3c6420cbf9eeb978e3b4d6e1a8a47d409ef48714823bc3d781034084d602c2"
+      }
+    },
+    {
+      "id": "V3_INSTANCE_METHOD_SHADOW",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/fixed-case-independent/COLD-SOURCE-REVIEW-v2.json",
+        "sha256": "8c3c6420cbf9eeb978e3b4d6e1a8a47d409ef48714823bc3d781034084d602c2"
+      }
+    },
+    {
+      "id": "V3_INSTANCE_STATE_SCHEMA",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/fixed-case-independent/COLD-SOURCE-REVIEW-v2.json",
+        "sha256": "8c3c6420cbf9eeb978e3b4d6e1a8a47d409ef48714823bc3d781034084d602c2"
+      }
+    },
+    {
+      "id": "V4_ARGV_BEFORE_DISARM_RETIREMENT",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/late-independent/SOURCE-REVIEW-v2.json",
+        "sha256": "3449872d91c4d6425fea5126cae70192ebd959cf5af2e1f69ec85c795c86b4c9"
+      }
+    },
+    {
+      "id": "V4_ARGV_DISARM_RETIREMENT",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/late-independent/SOURCE-REVIEW-v2.json",
+        "sha256": "3449872d91c4d6425fea5126cae70192ebd959cf5af2e1f69ec85c795c86b4c9"
+      }
+    },
+    {
+      "id": "V4_ARGV_ONLY",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/late-independent/SOURCE-REVIEW-v2.json",
+        "sha256": "3449872d91c4d6425fea5126cae70192ebd959cf5af2e1f69ec85c795c86b4c9"
+      }
+    },
+    {
+      "id": "V4_BODY_ARGV_DISARM_RETIREMENT",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/late-independent/SOURCE-REVIEW-v2.json",
+        "sha256": "3449872d91c4d6425fea5126cae70192ebd959cf5af2e1f69ec85c795c86b4c9"
+      }
+    },
+    {
+      "id": "V4_CLI_RAW_JOURNAL",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/late-independent/SOURCE-REVIEW-v2.json",
+        "sha256": "3449872d91c4d6425fea5126cae70192ebd959cf5af2e1f69ec85c795c86b4c9"
+      }
+    },
+    {
+      "id": "V4_ROLE_RAW_JOURNAL",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/late-independent/SOURCE-REVIEW-v2.json",
+        "sha256": "3449872d91c4d6425fea5126cae70192ebd959cf5af2e1f69ec85c795c86b4c9"
+      }
+    },
+    {
+      "id": "V5_MAIN_ABSENT_RECORD",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/roles-armed-independent/SC4-SOURCE-REVIEW-v1.json",
+        "sha256": "13d8887ad7a9869de5710aa7713a93ec3e723d2f75433196a6158579d26a3a95"
+      }
+    },
+    {
+      "id": "V5_MAIN_CLEANUP_ONLY",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/g13-binding-independent/REVIEW-v1.json",
+        "sha256": "b8ba9b1fcea3b386c0fd360ea15fae0d56651fd85bba039671a4bc43cd6bf65a"
+      }
+    },
+    {
+      "id": "V5_MAIN_PRIMARY_OUTER",
+      "review": {
+        "path": "review/cache-s0308-source-completion-v2/g13-binding-independent/REVIEW-v1.json",
+        "sha256": "b8ba9b1fcea3b386c0fd360ea15fae0d56651fd85bba039671a4bc43cd6bf65a"
+      }
+    }
+  ],
+  "bounded_candidate_body_count": 49,
+  "canonical212_census_unchanged": true,
+  "created_utc": "2026-10-31T01:59:08.955035+00:00",
+  "new_activity_credit": 0,
+  "new_runtime_qualified_cases": 0,
+  "original_activity_complete": false,
+  "original_coverage_spec": {
+    "path": "areas/cache-s0308-source-completion-v1/coverage/COVERAGE-SPEC-v1.json",
+    "sha256": "e4599f79a9dd46a66c9b6cf63ceb7c03d19a0b98a550315b66d5b43dd544d691"
+  },
+  "original_helper_body_count": 52,
+  "predecessor": {
+    "path": "areas/cache-s0308-source-completion-v2/parent/BOUNDED-SOURCE-CANDIDATE-COVERAGE-v2.json",
+    "sha256": "f53a11d091758bdda7ec80e3698901003eca82ba797e5680ede9c826add80c22"
+  },
+  "remaining_notes": "P02 local candidate source and complete standard dual-reference bridge; G12 N22/P07 narrow candidate repair and complete source-owned reference custody/consumer. Their authored/design-only/local protocol work does not yet add complete bounded helper-source candidates. G13 mechanical binding source accepted; complete SC1-SC6 adoption and activity credit remain open.",
+  "remaining_to_bind_or_reconcile": [
+    "N22",
+    "P02",
+    "P07"
+  ],
+  "schema": "cache-s0308-bounded-source-candidate-coverage-v3",
+  "scope": "Control bodies with independently accepted bounded source context/selector/disposition candidates in this source continuation. Not actual source adoption, complete original source-case qualification, runtime, or a replacement progress rubric."
+}

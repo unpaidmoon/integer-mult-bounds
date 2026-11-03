@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/p104-helper-subspace-splits/WORD.json.gz",
+    "research/p104-stochastic-prefix/PROOF.md",
+    "research/reversible-signed-half-kernel/PROOF.md",
+    "research/reversible-signed-half-kernel/kernel.py",
+    "research/reversible-stochastic-shears/verify.py",
+    "research/signed-half-marker-audit/AUDIT.md",
+    "research/signed-half-marker-audit/verify.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 300,
+      "checks": "Authenticate exact sources, actualevent52 slice andpacking; independent local704-rowmachine, exactendpoint/roundtrip/allheads/storage invoice, semanticrejectingcontrols."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "-O",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 300,
+      "checks": "Same exact finite certificate and semantic rejection controls with optimized Python."
+    }
+  ]
+}

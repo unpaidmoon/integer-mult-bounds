@@ -1,0 +1,65 @@
+{
+  "schema": "lossless-evidence-archive-retained-source-v1",
+  "canonical_base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "binding": "SHA256 authenticates retained local bytes. Original local source/reviews were not upstream Git objects; no Git blob or reachable-history claim is made for them. Package-local copies are sufficient for direct standalone replay.",
+  "files": [
+    {
+      "package_path": "archive.py",
+      "original_local_path": "outputs/h25-data-handling-20261028/areas/retention/archive.py",
+      "bytes": 38565,
+      "sha256": "5c60009c9ba1dd9eab5ba85b859ae3ca43b36ed1675100e824a801c9f04804f7",
+      "transformation": "none; exact byte copy"
+    },
+    {
+      "package_path": "oracle.py",
+      "original_local_path": "outputs/h25-data-handling-20261028/areas/retention/oracle.py",
+      "bytes": 11902,
+      "sha256": "5617967782a34a142dad25f499f432e6c5736a670bec6db6192c143bb774d9f3",
+      "transformation": "none; exact byte copy"
+    },
+    {
+      "package_path": "controls.py",
+      "original_local_path": "outputs/h25-data-handling-20261028/areas/retention/controls.py",
+      "bytes": 44686,
+      "sha256": "ece5c5a7f4282c783c7ccd274c5c130b1af12e5dc2cae8946dd9974ff7b66e89",
+      "transformation": "none; exact byte copy"
+    },
+    {
+      "package_path": "USAGE.md",
+      "original_local_path": "outputs/h25-data-handling-20261028/areas/retention/USAGE.md",
+      "bytes": 3824,
+      "sha256": "13edef89fe8aa68cd662ccc6b0c6fbac7026e08385303c605963594f77c9ba89",
+      "transformation": "none; exact byte copy"
+    },
+    {
+      "package_path": "COVERAGE-v5.json",
+      "original_local_path": "outputs/h25-data-handling-20261028/areas/retention/COVERAGE-v5.json",
+      "bytes": 7984,
+      "sha256": "dfada24bd481a79048ac70eb0bcfcf4d7b43982051b24352401f2d80dd32369e",
+      "transformation": "none; exact byte copy"
+    },
+    {
+      "package_path": "evidence/historical-source-review.json",
+      "original_local_path": "outputs/h25-data-handling-20261028/review/historical-archive-v5-source/REVIEW.json",
+      "bytes": 15640,
+      "sha256": "d6ce4ab0653bc30d53c61ec01737b1313cf2f1e112c58e92f3b75fe5d324a172",
+      "transformation": "none; exact byte copy"
+    },
+    {
+      "package_path": "evidence/historical-execution-review.json",
+      "original_local_path": "outputs/h25-data-handling-20261028/review/historical-archive-v5-execution/REVIEW.json",
+      "bytes": 9344,
+      "sha256": "31bc95e2642a51c75530ec13a549d512e353dd432adbaab9aaa2dfd947defdb0",
+      "transformation": "none; exact byte copy"
+    },
+    {
+      "package_path": "evidence/finite-execution-review.json",
+      "original_local_path": "outputs/h25-data-handling-20261028/review/retention-v5-finite-execution/REVIEW.json",
+      "bytes": 5360,
+      "sha256": "366fb15c4be72522428401c684076775f75c75abd4ace0373d71078019956cb4",
+      "transformation": "none; exact byte copy"
+    }
+  ],
+  "preservation": "Original local source/evidence remain unchanged. Protected historical payloads were not opened for this contribution.",
+  "historical_evidence_boundary": "Exact retained review records; references inside records describe original local paths. Large source, archive, restored trees, inventories and full outcome checks are not vendored. These records do not constitute a new independent payload replay."
+}

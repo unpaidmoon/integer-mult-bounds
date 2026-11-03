@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/clifford-state-performance/fast_state.py",
+    "research/frontier1094-recipes-exact-seed76/clifford.py",
+    "research/packed-clifford-gate-tables/adapter.py",
+    "research/r2-mutation-path-copy/README.md",
+    "research/r2-mutation-path-copy/RETAINED.json",
+    "research/r2-mutation-path-copy/SOURCES.json",
+    "research/r2-mutation-path-copy/adapter.py",
+    "research/r2-mutation-path-copy/replay.py",
+    "research/r2-mutation-path-copy/vendor/pr1939/fast_copy.py",
+    "research/r2-mutation-path-copy/vendor/pr3218/BENCHMARK.json",
+    "research/r2-mutation-path-copy/vendor/pr3218/NOTICE.md",
+    "research/r2-mutation-path-copy/vendor/pr3218/PROOF.md",
+    "research/r2-mutation-path-copy/vendor/pr3218/README.md",
+    "research/r2-mutation-path-copy/vendor/pr3218/RESULT.json",
+    "research/r2-mutation-path-copy/vendor/pr3218/SOURCES.json",
+    "research/r2-mutation-path-copy/vendor/pr3218/TASK.json",
+    "research/r2-mutation-path-copy/vendor/pr3218/VERIFY.json",
+    "research/r2-mutation-path-copy/vendor/pr3218/benchmark.py",
+    "research/r2-mutation-path-copy/vendor/pr3218/controls.py",
+    "research/r2-mutation-path-copy/vendor/pr3218/engine.py",
+    "research/r2-mutation-path-copy/vendor/pr3218/replay.py",
+    "research/r2-mutation-path-copy/vendor/pr3218/test_package.py",
+    "research/r2-mutation-path-copy/vendor/pr3218/vendor/pr3202/README.md",
+    "research/r2-mutation-path-copy/vendor/pr3218/vendor/pr3202/RESULT.json",
+    "research/r2-mutation-path-copy/vendor/pr3218/vendor/pr3202/SOURCES.json",
+    "research/r2-mutation-path-copy/vendor/pr3218/vendor/pr3202/data/base/CANONICAL-WORD.json.gz",
+    "research/r2-mutation-path-copy/vendor/pr3218/vendor/pr3202/data/base/CLIFFORD-RECIPES.json.gz",
+    "research/r2-mutation-path-copy/vendor/pr3218/vendor/pr3202/data/base/LOCAL-PROGRAMS.json.gz",
+    "research/r2-mutation-path-copy/vendor/pr3218/vendor/pr3202/data/base/RESIDUAL-ADAPTERS.json.gz",
+    "research/r2-mutation-path-copy/vendor/pr3218/vendor/pr3202/data/extra/CANONICAL-WORD.json.gz",
+    "research/r2-mutation-path-copy/vendor/pr3218/vendor/pr3202/data/extra/CLIFFORD-RECIPES.json.gz",
+    "research/r2-mutation-path-copy/vendor/pr3218/vendor/pr3202/data/extra/LOCAL-PROGRAMS.json.gz",
+    "research/r2-mutation-path-copy/vendor/pr3218/vendor/pr3202/data/extra/RESIDUAL-ADAPTERS.json.gz",
+    "research/r2-mutation-path-copy/vendor/pr3218/vendor/pr3202/verify.py",
+    "research/r2-mutation-path-copy/vendor/pr3218/verify.py",
+    "research/rank7-shared-restore-fanin/evidence/NATIVE-RECEIPT.json",
+    "research/rank7-shared-restore-fanin/evidence/SOURCE-MANIFEST.json",
+    "research/rank7-shared-restore-fanin/evidence/WORD-base.json.gz",
+    "research/rank7-shared-restore-fanin/evidence/WORD-extra.json.gz",
+    "research/two-sided-helper-extraction/vendor/fastnative/vendor/native/new/code/borrow/bw_adapters.py",
+    "research/two-sided-helper-extraction/vendor/fastnative/vendor/native/new/code/borrow/bw_emit.py",
+    "research/two-sided-helper-extraction/vendor/fastnative/vendor/native/new/code/borrow/bw_gauss.py",
+    "research/two-sided-helper-extraction/vendor/fastnative/vendor/native/new/code/borrow/bw_phases.py",
+    "research/two-sided-helper-extraction/vendor/fastnative/vendor/native/new/code/borrow/bw_transport.py",
+    "research/two-sided-helper-extraction/vendor/fastnative/vendor/native/new/code/borrow/vendor/clifford/clifford_exact.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Exact ordered-frame conformance, cache mutation/type/capacity/lifetime and source drift controls; complete original source replay versus cached replay with all 32 mutation payloads compared to deepcopy; complete result and 253 decisions; generated timing receipt source bindings."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Same complete conformance and source/cached scientific replay with interpreter assertions disabled."
+    }
+  ]
+}

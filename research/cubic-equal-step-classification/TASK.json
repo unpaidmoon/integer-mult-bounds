@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "task_id": "joint-query-controller",
+  "priority_revision": 8,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "original_card": {
+    "id": "joint-query-controller",
+    "question": "Can a changed query demand or caller remove real work while satisfying native chronology and restoration?",
+    "starting_points": [
+      "docs/research/current-priorities.md",
+      "docs/research/research-family-status.md",
+      "certificates/selected-result.json",
+      "docs/research/pr-intake-evidence/pr5599-completion/PROOF-REVIEW.md"
+    ],
+    "methods": [
+      "Construct and independently check one source-bound instance of the stated first experiment.",
+      "Seek an exact counterexample or target-specific complete-budget obstruction to that same proposed change."
+    ],
+    "acceptance_gate": "A source-bound arbitrary-input identity and legal producer/consumer boundary with the complete paid and productive target invoice, including restoration, ownership, native alignment and extra charges. Price under the actual current model; historical ceiling.py assumptions must be established before use. A favorable optimistic relaxation keeps a route open but is not a completed supplier. A scoped local result remains useful; expansion requires the family-level budget gate.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_selected_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Read revision 8, the selected review and live exact-source handoffs. Then follow this card's bounded first_experiment.",
+      "scope": "Source-bound orientation only, not a supplier replay or theorem proof."
+    },
+    "first_experiment": "Choose an exact caller and a new demand/interface hypothesis. Read the scoped #5617/#5631/#5649/#5747 and #5720/#5745 objections before rebuilding an excluded schedule. Compare the complete matched source/consumer protocols including all retained helper outputs. For an active-mode injection, first check #5745: its canonical delivery claim repays the eight removed centre jobs. Audit that exact claim or change its channel/feedback hypothesis; do not repeat the same free-injection search. Stop if the full favorable budget fails or the required restored output is unobservable.",
+    "bottleneck_link": "Judge the actual current supplier contract and complete signed target/paid bill; frozen-profile ceilings require an applicability proof.",
+    "allowed_variations": [
+      "One exact source head, helper/cut region or quantified proposition and changed hypothesis; check live handoffs first. Different seeds are not different scopes."
+    ],
+    "scope_change_triggers": [
+      "Changing source head, helper/cut domain, operation alphabet or caller boundary without recording the new scope.",
+      "Treating an archived proposal or local numerical pass as complete supplier admission."
+    ],
+    "overlap_terms": [
+      "query demand",
+      "active mode",
+      "5720",
+      "5745",
+      "5747",
+      "caller"
+    ],
+    "existing_checks": [
+      {
+        "scope": "PR #4166: author-checked installed producer/service/return/bridge connection; native-component comparison loses.",
+        "evidence": "research/qq16-caller-install/README.md",
+        "remaining": "Complete matched physical protocol bill, or changed source-compatible demand/circuit; no affordable supplier yet.",
+        "status": "author-checked",
+        "source_commit": "0b082d22a0e9a442d264ab0633e35ef26c790630",
+        "selected_record_sha256": "bb2eaa58647b353f88d0aec2eafb9d30df1be53589231b23e12ceef3e4bad129"
+      },
+      {
+        "scope": "Selected PR5599: complete helper-subspace construction and independent caller replay; five framework assumptions remain.",
+        "evidence": "docs/research/pr-intake-evidence/pr5599-completion/PROOF-REVIEW.md",
+        "remaining": "The next experiment must identify uncovered source-specific work. Successor archive intake does not transfer this admission.",
+        "status": "reviewed",
+        "source_commit": "09dd0965711ca7eeb169057a420abab1c9052137",
+        "selected_record_sha256": "2a0220e866417774606e0f991e41b9c1d26b1f43b97857238cf478dbc7d330b5"
+      }
+    ]
+  },
+  "scope_status": "changed",
+  "actual_scope": "Classify three dyadic weighted cubic queries whose entry-source directions are 0,d,2d (entry-A at an end), allowing nonmonic forms and general dyadic source frames; attain and chronologically restore the r=2^s+1 branch.",
+  "scope_change_reason": "Follow the concrete open dyadic cubic-reader handoff of PR6212/6215/6246, narrowing the broader joint-query-controller supplier card to coefficient feasibility and chronological restoration in one exact scalar interface. No complete supplier or favorable physical invoice is claimed.",
+  "bottleneck_link": "Scoped recursive-interface side result: identifies when repeated eager source restoration can be replaced by a fixed exact repair and excludes other arities only for the specified direction pattern. A favorable physical caller bill remains unknown.",
+  "budget_minutes": 120,
+  "stop_rule": "Stop after the exact direction-pattern classification, chronological construction, bounded controls and publication; no wider search or supplier admission.",
+  "outcome": "completed",
+  "evidence": "PROOF.md, exact receipts RESULT.json and CROSSCHECK.json, registered replay VERIFY.json, and executed checks in VALIDATION.md.",
+  "author": "@CubeJerry",
+  "ai_assistance": "Substantial OpenAI Codex assistance in algebra, proof, two separately implemented checkers, self-review, tests and packaging. No human or proof-kernel acceptance is claimed.",
+  "open_questions": [
+    {
+      "question": "Which remaining arities admit three dyadic queries outside directions 0,d,2d?",
+      "why_it_matters": "This theorem excludes only one direction pattern; r14 and centered r50 already escape it.",
+      "first_step": "Choose an unclaimed arity excluded by the existing three-query families, write the full four coefficient equations for a different pattern, then construct its source-restoring schedule.",
+      "blocked_by": "No general three-versus-four classification; finite search failure would not prove impossibility."
+    },
+    {
+      "question": "Does an actual complete backend make the r33 repair cheaper than 33 eager inverse shears?",
+      "why_it_matters": "Three additional weighted cube queries may cost more than the removed restoration work.",
+      "first_step": "Bind Q and L to one real caller and evaluate the complete inequality in PROOF.md, including preparation, routing, precision, storage and every recursive child.",
+      "blocked_by": "No pinned physical backend or favorable full cost recurrence is supplied; supplier expansion stops here."
+    }
+  ],
+  "track_number": 54,
+  "seed": "747c391a6a8f8e701e7d96c3ad256ecc",
+  "claim": {
+    "kind": "CLAIM",
+    "created_at": "2026-10-30T08:55:59.868065+00:00",
+    "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+    "predecessors": {
+      "6212": "9c159482e0495b6a97e17e629debe66a0ceb9466",
+      "6215": "0013c2b40c522ccd19670a8fbd4b1531f13fed2b",
+      "6246": "3d21b913efac1e3731bee7f0f4f4a8a84fecec37"
+    },
+    "expected_finish_utc": "2026-10-30T10:40:00Z",
+    "method": "Exact coefficient elimination and odd-prime denominator obstruction; literal symbolic dirty-state execution; use seed to select first discriminating exponent s=5 (r=33) over the other new residue s=7.",
+    "deliverable": "One scoped proof, standalone exact verifier, meaningful controls, complete symbolic event invoice and provenance.",
+    "posting": "Local claim: no sprint issue exists and the connected GitHub tools expose no Discussion mutations; gh is unavailable."
+  },
+  "time_budget_minutes": 120,
+  "selection": {
+    "candidates": [
+      "Equal-step dyadic cubic repair classification and r=2^s+1 attainment",
+      "Minimum source movement for the existing power-of-two repair",
+      "Sharing one correction across two consecutive cubic batches"
+    ],
+    "decision": "First candidate has an explicit open handoff and an exact small test. Second may be a trivial slope-visit count; third lacks a specified physical consumer.",
+    "seed_use": "int(seed,16) modulo 2 selects exponent class 5 mod 6 before 1 mod 6."
+  },
+  "experiment": {
+    "domain": "Every integer r>=3, dyadic d!=0, nonzero dyadic weights, exactly the monic forms A,A+dB,A+2dB; arbitrary incoming Y,A,B and source-only shears.",
+    "stop_rule": "Stop at this classified family and bounded corroboration. No general all-arity three-query census or backend search.",
+    "optimistic_budget": "Retain r original cube queries and r forward shears. Charge all appended weighted queries and source shears separately; compare their sum plus setup with r eager inverse shears. No price inequality is assumed."
+  },
+  "refinement": "The proof normalizes arbitrary nonmonic dyadic forms on the same directions, strengthening the lower-bound scope without changing the initial direction family. A discovered centered r50 control forced explicit entry-A-at-an-end wording; the classified domain remains 0,d,2d.",
+  "overlap": {
+    "initial_local": {
+      "head": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+      "records": 8722,
+      "complete_head_inventory": true,
+      "remote_cache": "unavailable"
+    },
+    "live_coverage": "GitHub plugin: newest 70 open PR results; all-state cubic-repair and focused cubic/equal and cubic/33 searches; web: active Discussion board and newest visible #1166 handoffs. No exhaustive remote claim coverage.",
+    "nearest": [
+      {
+        "pr": 6212,
+        "relation": "Known dyadic lower bound, original open three-query question and r3 identity; no 0,d,2d classification."
+      },
+      {
+        "pr": 6215,
+        "relation": "Requires a pure-original-B cube. Our three forms all involve A; r33 and r129 are outside that required-read family."
+      },
+      {
+        "pr": 6246,
+        "relation": "Entire r=2^s branch already covered and fully credited. New branch uses r=2^s+1, with one additional initial shear; classification adds the exact odd-prime exclusion for the named directions."
+      }
+    ],
+    "ledger": "PR6212 and PR6215 are partially reviewed; archival merge is not scientific acceptance.",
+    "novelty_limit": "Bounded overlap evidence is not a global novelty certificate."
+  },
+  "checkpoints": [
+    {
+      "utc": "2026-10-30T08:49:17Z",
+      "canonical_main": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+      "method": "Canonical Git fetch and independent GitHub API main-ref lookup; local cloned main is identical.",
+      "priority_revision": 8,
+      "selected_pr": 6030,
+      "selected_record_sha256": "9b8d0eea95b3bf0dfcb7938a732a6439b87a2685dec2a5ab9e525b3b34debbfa",
+      "decision": "Continue concrete cubic handoff, preserve all source pins."
+    },
+    {
+      "utc": "2026-10-30T09:31:25.894185+00:00",
+      "canonical_main": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+      "method": "Successful canonical git fetch --no-tags origin main; independent GitHub main-ref lookup agrees.",
+      "priority_revision": 8,
+      "selected_pr": 6030,
+      "guidance_change": "none: canonical commit identical",
+      "source_head_change": "none: PR6212, PR6215 and PR6246 exact heads rechecked via GitHub API",
+      "overlap_refresh": "All-state cubic/repair search (15 returned matches), newest 10 open PRs (latest 6248), prior full 8722-record local notes and visible #1166 handoffs. No overlapping zero-endpoint classification found within this bounded coverage.",
+      "decision": "Finish the same scoped result and publish; preserve frozen inputs."
+    }
+  ],
+  "completion_handoff": {
+    "kind": "DONE",
+    "result": "Exact dyadic classification for entry-source directions 0,d,2d; new r=2^s+1 three-query chronological repair. No new kappa.",
+    "branch_url": "https://github.com/CubeJerry/integer-mult-bounds/tree/research/cubic-equal-step-20261030-54-747c",
+    "reproduce": "python3.12 -B scripts/research_package.py --package research/cubic-equal-step-classification",
+    "expected": "PASS_REGISTERED_RESEARCH_PACKAGE",
+    "scope_released": true,
+    "coordination": "Local claim updated once with the result and prepared branch link; no Discussion mutation tool or gh CLI is available. Exact publication commit/tree verification belongs to the prefilled PR description, produced after this package commit."
+  }
+}

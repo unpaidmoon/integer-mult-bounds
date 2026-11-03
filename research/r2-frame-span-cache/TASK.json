@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "task_id": "replay-runtime",
+  "priority_revision": 8,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "original_card": {
+    "id": "replay-runtime",
+    "question": "Can one measured replay bottleneck be sped up without dropping coverage?",
+    "starting_points": [
+      "scripts/run_isolated_tests.py",
+      "scripts/verify_replay_coverage.py",
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "Profile one isolated replay and optimize the measured bottleneck.",
+      "Design source-bound reuse with explicit dependency invalidation and negative controls."
+    ],
+    "acceptance_gate": "Report before/after wall time on the same fixture, retained checks and invalidation behavior.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_selected_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Resolve the current selected review, separate complex/ordinary BIT/admitted BIT/outer budgets, and compare the card against live handoffs before starting. Historical ceilings require exact source/model equivalence.",
+      "scope": "Source-binding orientation only; not a scientific replay or all-size proof. Materialize selected inputs if this checkout is sparse."
+    },
+    "first_experiment": "Measure one unchanged fixture, preserve check coverage, and test one optimization with invalidation controls.",
+    "bottleneck_link": "Faster trustworthy replays increase review throughput and let mechanism candidates be checked sooner.",
+    "allowed_variations": [
+      "Profile one stage or design one source-bound cache boundary."
+    ],
+    "scope_change_triggers": [
+      "Skipping coverage or comparing different fixtures to claim speedup."
+    ],
+    "overlap_terms": [
+      "replay runtime",
+      "cache invalidation",
+      "isolated tests"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Bounded content-keyed span reuse in the complete unchanged PR3240 R2 path-copy replay, preserving the complete scientific result, mutant inventory, exact rejection messages and operator decisions.",
+  "scope_change_reason": "The runtime card is narrowed to the explicit remaining source/frame/event reconstruction handoff in PR3240. The predecessor mathematical result is cited, not audited.",
+  "bottleneck_link": "Exact complete native replays are a review cost. Removing repeated frame-span expansion preserves their scientific scope while reducing execution time.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop at the first verified complete-caller improvement; no follow-on optimization.",
+  "outcome": "completed",
+  "evidence": "BENCHMARK.json binds fresh-process timings to exact source and implementation hashes. verify.py checks complete scientific equality and cache invalidation in normal and optimized modes.",
+  "author": "Nick Petalas",
+  "ai_assistance": "Independent human and formal proof-kernel review are unclaimed.",
+  "open_questions": [
+    {
+      "question": "Does a different complete native caller have repeated long frame bases that justify the same bounded cache?",
+      "why_it_matters": "This is a caller-specific execution improvement; unrelated callers need their own evidence before adoption.",
+      "first_step": "Profile one named caller, retain its fastest existing implementation, and enumerate its span input types and mutation boundaries.",
+      "blocked_by": "No second caller or source lifetime is covered, and no further optimization is reserved."
+    }
+  ],
+  "claim_type": "Scoped implementation-preservation proof with a local complete-command performance measurement."
+}
