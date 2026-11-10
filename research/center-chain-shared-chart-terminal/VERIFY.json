@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/center-chain-terminal-feasibility/verify.py",
+    "research/center-helper-normal-form/inputs/ABI.json",
+    "research/center-helper-normal-form/inputs/retained_verify.py",
+    "research/center-helper-normal-form/inputs/round3-native.json.gz",
+    "research/center-helper-normal-form/verify.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 180,
+      "checks": "Chart census, 37 endpoints, raw duals, moment floors 106/164/176, strip-bill comparison, and four rejection controls."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 180,
+      "checks": "Same certificate with assertions removed by optimization. Failures are raised exceptions."
+    }
+  ]
+}
