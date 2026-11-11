@@ -71,8 +71,9 @@ whenever `s <= 9`.
 
 Under those floors, the only pair `(T, s)` whose addition lower bound
 `W_min(T) + 2u` is strictly less than 14 is `T = 10`, `s = 10`, `u = 0`,
-where `W_min = 12`. The same scan gives `T + 2u >= 10` in every legal pair,
-so `Q >= 72`. The exceptional addition corner is a closed ten-step walk with
+where `W_min = 12`. Lengths 1 through 40 are the whole region in which that
+bound can sit below 14: at length 40 or more, `W` is at least 42. The same
+scan gives `T + 2u >= 10` in every legal pair, so `Q >= 72`. The exceptional addition corner is a closed ten-step walk with
 `W = 12` and one weight-3 step, hence exactly nine singletons. Rotating that
 step to the end translates the prefix set and preserves differences. The
 closing triple is the XOR of the nine singleton labels. All `5^9 = 1,953,125`
