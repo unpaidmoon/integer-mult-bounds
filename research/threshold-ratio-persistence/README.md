@@ -72,7 +72,9 @@ Expected direct marker:
 PASS_THRESHOLD_RATIO_PERSISTENCE proof_rows=2100 direct_rows=592 ratio_rows=960 sharpness=1,2,5,4 kappa=363005817/100000000000 no_new_kappa=true
 ```
 
-The registered replay is the first command. `python3 -B
+The registered replay is
+`python3 -B scripts/research_package.py --package research/threshold-ratio-persistence`.
+`python3 -B
 scripts/research_selected_baseline.py` returned
 `PASS_RESEARCH_BASELINE_BINDINGS_ONLY` and is not a scientific replay.
 `make frontier7000-verify`, Lean and Docker were not run.
