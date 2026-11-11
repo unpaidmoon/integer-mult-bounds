@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/p104-coupled-helper-bases/local.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Seven typed free-block identities, actual source-emitter tariff/prefix regression, nonlinear dirty-input fusion, exact-reason source/semantic controls and observer/pair-mismatch boundaries."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "-O",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Seven typed free-block identities, actual source-emitter tariff/prefix regression, nonlinear dirty-input fusion, exact-reason source/semantic controls and observer/pair-mismatch boundaries."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/independent_nonlinear.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Independent exhaustive F3 function-pair composition:59049 cases across all source emitter modes and mismatched-pair leakage control."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "-O",
+        "{package}/independent_nonlinear.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Independent exhaustive F3 function-pair composition:59049 cases across all source emitter modes and mismatched-pair leakage control."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify_transition.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Source-bound changing-dual transition, full 288-to-224 macro allowance after exact source-sign cancellation (292-to-224 raw), scalar-prefix and coefficient-cap checks, nonlinear dirty-state evidence, eight controls and unfavorable-tariff discriminator."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "-O",
+        "{package}/verify_transition.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Source-bound changing-dual transition, full 288-to-224 macro allowance after exact source-sign cancellation (292-to-224 raw), scalar-prefix and coefficient-cap checks, nonlinear dirty-state evidence, eight controls and unfavorable-tariff discriminator."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/independent_transition.py",
+        "--package",
+        "{package}"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Independent module proof corroboration and separate transition construction/interpreter: 2000 nonlinear cases, exact source tariff, six boundary/cap discriminators."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "-O",
+        "{package}/independent_transition.py",
+        "--package",
+        "{package}"
+      ],
+      "timeout_seconds": 60,
+      "checks": "Independent module proof corroboration and separate transition construction/interpreter: 2000 nonlinear cases, exact source tariff, six boundary/cap discriminators."
+    }
+  ]
+}

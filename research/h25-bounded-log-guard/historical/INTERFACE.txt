@@ -1,0 +1,60 @@
+LOG-HANDLING V1 - SOURCE REVIEW ONLY, NO CONTROLS EXECUTED BY WORKER
+
+Install the exact run_guarded.py bytes at the new round root. Its HERE remains
+Path(__file__).resolve().parent, CLI remains STAGE JOB LABEL, and its stage
+driver remains stages/STAGE/integration/full_driver.py. Hash the installed
+runner in STAGE.json.runner_sha256. Never reuse or mutate the old ledger.
+
+To stage the finite log controls, copy controls/integration/*.py into a fresh
+stage's integration directory, copy the exact reviewed runner to that stage's
+runner_under_test.py, and write JOBS.json entries keyed by each proposal job,
+with lanes equal to that job and finite_only true. Authenticate all stage bytes
+and modes in the normal manifest; the fixture driver performs no scientific
+imports. The actual installed runner executes this fixture driver through its
+unchanged command path. The `files` job imports only the frozen runner copy.
+
+Execute parent-owned commands one at a time. Expected STOP cases exit1 from
+the runner and are successful adverse controls only after their retained
+receipts, exact raw files, and expected termination are independently checked.
+Do not treat a shell continuation after a failed command as a gate PASS. The
+next case needs an explicit queue decision after reviewing that receipt.
+
+Expected job behavior and output bounds are in PROPOSAL.json. In addition to
+those exact expectations, every stable process case must have hashes matching
+every retained raw byte; stdout_bytes/stderr_bytes must equal actual file sizes;
+source_bytes_and_modes_unchanged must be true; runner_wall_seconds must include
+the child wall_seconds plus before/after processing; and the next attempt's
+spent_before_seconds must equal the sum of prior runner_wall_seconds. Retain
+both START.json and receipt.json, all raw output, usage and scientific fixture
+folders, including all STOP cases.
+
+oversize-fast and stderr-oversize-fast exit immediately after finite writes.
+Their exact live-vs-final cap observation is scheduling-dependent, so report
+the observed location rather than assuming one. The real-file controls
+deterministically prove both before-stream finalization of already exited
+oversized output and after-stream cap/count changes without a scheduling race.
+
+The files job retains empty, binary, cap-boundary,4MiB and32MiB real files;
+its fixtures total <44MiB, none are scientific artifacts. It measures Python
+peak allocation during each hash and process lifetime maximum RSS before and
+after. Admission requires <=512KiB traced allocation and <=8MiB RSS increment
+for each measured case. The receipt's own runner_lifetime_max_rss_kib observes
+the actual parent process too. A high-water observation is not a full continuous
+RSS trace, and no measured result exists until the parent runs these controls.
+
+An unstable log digest describes exactly the bytes hashed, not a complete final
+file: retained_log_bytes_stable is false, the final sizes are explicit and STOP
+is mandatory. Same-file growth is covered. Unlink/symlink/open/read errors are
+outside the admitted retained-regular-file path and fail closed with the
+unclosed directory preserved; existing reconciliation rules block later runs.
+
+The original child-envelope wall_seconds is preserved. runner_wall_seconds
+starts before source inventory and ends after source/log postprocessing but
+before receipt construction/write/printing; parent queue overhead accounting
+must include this small tail and any failed pre-receipt attempts. Only the NEW
+ledger consumes the added field; fallback to wall_seconds supports old-schema
+receipts in that new ledger. Budget phases are exact integer600 or2400.
+
+Source inventory and fixed-size source snapshots retain their original
+read_bytes behavior. This patch makes no bounded-memory claim for arbitrary
+source/manifest sizes and does not strengthen the old process-group cleanup.

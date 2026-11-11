@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "task_id": "uniform-transfer-audit",
+  "priority_revision": 8,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "original_card": {
+    "id": "uniform-transfer-audit",
+    "question": "Can one of the selected record's five inherited assumptions be proved at its actual caller?",
+    "starting_points": [
+      "docs/research/current-priorities.md",
+      "docs/research/research-family-status.md",
+      "certificates/selected-result.json",
+      "docs/research/pr-intake-evidence/pr5599-completion/PROOF-REVIEW.md"
+    ],
+    "methods": [
+      "Construct and independently check one source-bound instance of the stated first experiment.",
+      "Seek an exact counterexample or target-specific complete-budget obstruction to that same proposed change."
+    ],
+    "acceptance_gate": "Identify the proposition and what would change downstream; do not equate a finite replay with a universal proof.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_selected_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Read revision 8, the selected review and live exact-source handoffs. Then follow this card's bounded first_experiment.",
+      "scope": "Source-bound orientation only, not a supplier replay or theorem proof."
+    },
+    "first_experiment": "Choose one assumption ID (native_all_columns, owned_erasure, compiler, precision_tape, analytic_recovery), one quantified implication and exact dependency closure. Check current handoffs, including #5625 row reentry and #5707 root-prefix lowering, without treating their partial scope as the whole theorem. Prove or falsify that implication with a caller-bound argument; stop at the chosen obligation. Finite tests or root digits do not discharge an all-size statement.",
+    "bottleneck_link": "Judge the actual current supplier contract and complete signed target/paid bill; frozen-profile ceilings require an applicability proof.",
+    "allowed_variations": [
+      "One exact source head, helper/cut region or quantified proposition and changed hypothesis; check live handoffs first. Different seeds are not different scopes."
+    ],
+    "scope_change_triggers": [
+      "Changing source head, helper/cut domain, operation alphabet or caller boundary without recording the new scope.",
+      "Treating an archived proposal or local numerical pass as complete supplier admission."
+    ],
+    "overlap_terms": [
+      "native_all_columns",
+      "owned_erasure",
+      "compiler",
+      "precision_tape",
+      "analytic_recovery"
+    ],
+    "existing_checks": [
+      {
+        "scope": "PR #4100: proposed unconditional construction and finite checks, without independent acceptance.",
+        "evidence": "research/unconditional-batched-crt/README.md",
+        "remaining": "Independent proof audit of one caller-bound all-size implication; all other premises remain explicit.",
+        "status": "author-checked",
+        "source_commit": "337d04939571a637aeab54a0f58f54fde811663a",
+        "selected_record_sha256": "bb2eaa58647b353f88d0aec2eafb9d30df1be53589231b23e12ceef3e4bad129"
+      },
+      {
+        "scope": "Selected PR5599: complete helper-subspace construction and independent caller replay; five framework assumptions remain.",
+        "evidence": "docs/research/pr-intake-evidence/pr5599-completion/PROOF-REVIEW.md",
+        "remaining": "The next experiment must identify uncovered source-specific work. Successor archive intake does not transfer this admission.",
+        "status": "reviewed",
+        "source_commit": "09dd0965711ca7eeb169057a420abab1c9052137",
+        "selected_record_sha256": "2a0220e866417774606e0f991e41b9c1d26b1f43b97857238cf478dbc7d330b5"
+      }
+    ]
+  },
+  "scope_status": "changed",
+  "actual_scope": "Prove linear iterated drift and a correction-state lower bound for the fixed-grid width-one native cycle of PR5492.",
+  "scope_change_reason": "The assignment requests original research rather than an audit. This new dynamics theorem builds on PR5492 instead of rechecking its one-traversal result.",
+  "bottleneck_link": "A proposed rounded native frame-potential service needs path-independent output or a funded correction interface. Unbounded drift rules out a path-length-independent absolute error envelope for these unchanged edges.",
+  "budget_minutes": 60,
+  "stop_rule": "Package the first verified original orbit/covariance result; do not broaden into other cycles, minimal periods or a complete supplier.",
+  "outcome": "negative-result",
+  "evidence": "PROOF.md; source-authenticated verify.py with independent full-bank interpreter; generated hash-bound receipt.",
+  "author": "Nick Petalas",
+  "ai_assistance": "Independent human and formal proof-kernel review are unclaimed.",
+  "open_questions": [
+    {
+      "question": "Can an actual chronological caller reach and repeat an equivalent drift segment under its owned-field and frame contracts?",
+      "why_it_matters": "The present cycle is a consistency diagnostic, not a consecutive supplier subword.",
+      "first_step": "Select a named caller and exhibit its complete entry, repeated segment and restored exit before pricing it.",
+      "blocked_by": "No chronological embedding or complete paid caller is constructed here."
+    },
+    {
+      "question": "Can a changed rounded-edge ABI remove this drift while preserving reversibility and the scalar ADD contract at a favorable complete cost?",
+      "why_it_matters": "The theorem fixes the old edge maps and does not exclude a coherent changed implementation.",
+      "first_step": "Specify where path information is stored and how it is erased, including path length if supplied externally.",
+      "blocked_by": "A physical implementation, numerical budget, ownership proof and full signed invoice are missing."
+    }
+  ],
+  "claim_type": "scoped proof with exact finite certificate",
+  "claim_url": "https://github.com/CrocSwap/integer-mult-bounds/discussions/1166#discussioncomment-19291984",
+  "source_question": {
+    "pr": 5492,
+    "author": "JoyboyBrian",
+    "head": "09f88edea964b16ffe8569be156f4efce066fa56"
+  },
+  "upstream_refresh": {
+    "commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+    "priority_revision": 8,
+    "checked_utc": "2026-10-30T11:24:00Z"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "actual_reference_handoff": null,
+  "actual_transport_source_pin": null,
+  "authority_capture": "Original capture_epoch_authority(root, capability, api), actual bootstrap validated before operations return; private loader uses those exact closure cells before selected source exec/module_image; invoke validates identity before call and cold_check after return.",
+  "current_target_execution": 0,
+  "edits": [
+    {
+      "derivative": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/candidate-integration/g12_epoch_authority_custody_v1.py",
+      "derivative_sha256": "3079a096df1072a83056f3f8a8cbf9e766fdddb488e36dddb36544c7929f988a",
+      "kind": "authority fixed loader and invoke",
+      "original": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1/g12_epoch_authority_selector_v1.py",
+      "original_sha256": "65b3d33068b0549ddb4a9e7e18a9912bebad69c309a8a29ae4fd532e9f428211"
+    },
+    {
+      "derivative": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/candidate-integration/g12_candidate_driver_N22_custody_v1.py",
+      "derivative_sha256": "c9d72a79ce3a828815d3d0370a1f95f210e1a41edeed767c55ff9d0614126fa4",
+      "kind": "exact capability ABI and selected owned authority derivative",
+      "original": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-protocol-repair/g12_candidate_driver_N22_v2.py",
+      "original_sha256": "a2d7fcaa1d3267bb43f14bfa1422759f77ede73641ed1f2a4fe55448792eec4a"
+    },
+    {
+      "derivative": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/candidate-integration/g12_candidate_driver_support_N22_custody_v1.py",
+      "derivative_sha256": "28c1a44750b9745a5ad6e930f9a83cf256b3a90905f5f30d08a89aca54c828da",
+      "kind": "exact capability ABI",
+      "original": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-protocol-repair/g12_candidate_driver_support_N22_v2.py",
+      "original_sha256": "5b7709012375e7e6600840c2c86bf90f44382499d1670b15ce325b30c14a2b48"
+    },
+    {
+      "derivative": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/candidate-integration/g12_candidate_driver_P07_custody_v1.py",
+      "derivative_sha256": "2a5d202dabd78d5de54fac29db7fdfaf8836866425d93842f2b22d747fa52d0c",
+      "kind": "exact capability ABI and selected owned authority derivative",
+      "original": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-protocol-repair/g12_candidate_driver_P07_v2.py",
+      "original_sha256": "dc0e3c32a2412d8a872f8568ecbaff99a41785fadd79b0bbfc2341e0e51ede74"
+    },
+    {
+      "derivative": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/candidate-integration/g12_candidate_driver_support_P07_custody_v1.py",
+      "derivative_sha256": "cae88bf247ee775d6d7fc1264cb2af1d487e4c19168ca787c7c16aba16452220",
+      "kind": "exact capability ABI",
+      "original": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-protocol-repair/g12_candidate_driver_support_P07_v2.py",
+      "original_sha256": "7c41cb423b18df69de48573817f92fae1a21be2751af7ad97768480ffa0b4a19"
+    }
+  ],
+  "no_self_digest_cycle": "Consumer source identity is initial loader tuple(path,digest,size) from its original Root hash; own source does not embed its own hash.",
+  "schema": "g12-fixed-cold-custody-source-edges-v1"
+}

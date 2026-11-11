@@ -1,0 +1,126 @@
+{
+  "activity": {
+    "broad_search_or_history": false,
+    "method": "Only exact frozen design fields, already-pinned source text/hash/AST inspection, and append-only owned review metadata",
+    "network": 0,
+    "new_implementation": 0,
+    "prior_review_or_frozen_source_modified": false,
+    "process_or_lock_operations": 0,
+    "protected_runtime_read_or_enumerated": false,
+    "target_imports_or_execution": 0,
+    "tests_helpers_compiler_native_science_decoders": 0
+  },
+  "answers": {
+    "accounting_question": "b: no exact compatible enclosing accounting interface is supplied by this design; source integration gap remains",
+    "consumer_ABI_question": "Pinned prior transport has two arguments; exact authenticated integration of the proposed three-argument consumer is not supplied"
+  },
+  "correction": "The original review conflated an unspecified source-owned accounting integration with future runtime selections and values. Its end-to-end constructability acceptance and R08 are hereby qualified: the local adapter/parent custody/consumer contracts are a bounded design, but the packet does not supply every source edge needed for a complete integrated source chain. Future measured values may remain unknown; the accounting API and authenticated caller ABI cannot be treated as mere unknown runtime values.",
+  "created_utc": "2026-10-31T02:09:37.094159+00:00",
+  "exact_design": {
+    "bytes": 60181,
+    "mode": "0444",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody/DESIGN-v1.json",
+    "sha256": "1f88ec187415abfd058728b7bf37fb6d9550e8bb3a080da4841d32be4019fe72"
+  },
+  "exact_source_pin_record": {
+    "bytes": 5525,
+    "mode": "0444",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody/SOURCE-PINS-v1.json",
+    "sha256": "e586cb66935781f85668822ba8f118353652e223d9aa57835d206c714cc2c702"
+  },
+  "inspected_named_sources": {
+    "current_controller": {
+      "bytes": 81343,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/fresh-controller-composition-v2/composed_controller.py",
+      "sha256": "c88736fce81d737ae13ac1bf47500dc9d72920bd4910efe1b49074797d6e3231"
+    },
+    "current_supervisor": {
+      "bytes": 44563,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/fresh-round-consumer-integration-v2/fresh_supervisor.py",
+      "sha256": "7b3304eaf4884e3029df5095e2b0950c18d1544ad21431a07c033b85e53bd4f7"
+    },
+    "unselected_transport_snapshot": {
+      "bytes": 7261,
+      "mode": "0664",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-transport-v1/g12_reference_transport_v1.py",
+      "sha256": "c4fcac756671cb8927158b11952eb9795222d76ba1d102523a2313d8dad358d2"
+    }
+  },
+  "preserved_findings": "Original static hashes and schema/guard/adapter/producer compatibility observations remain supported. Complete pair retention, first-primary/ordered-secondary semantics, bounded process trust, original controls and rejection of unknown cleanup remain valid requirements. This addendum does not reopen unrelated science or broaden the review.",
+  "prior_review_preserved": {
+    "bytes": 26124,
+    "mode": "0444",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-custody-independent/G12-CUSTODY-DESIGN-REVIEW-v1.json",
+    "sha256": "748af02d5766eae9a1f60890780817e3230e91d61b374e0c5e0b4621852e1ae3"
+  },
+  "remaining_closed_state": {
+    "complete_source_integration_accepted": false,
+    "execution_or_runtime_approval": false,
+    "existing_transport_handoff": "None as previously verified at line 12; unchanged by this addendum",
+    "implementation_or_stage_adoption_approved": false,
+    "new_authority_or_budget": false,
+    "runtime_selection": "None"
+  },
+  "reviewer": "/root/cache_g12_custody_review",
+  "schema": "g12-custody-independent-design-clarification-v1",
+  "source_integration_findings": [
+    {
+      "already_pinned_nearby_function": {
+        "boundary": "Mechanical declared-bill binding; explicitly requires separate external prerequisites. Exact schema binds selected packet, queue, stage, complete-work review and fixed normal/optimized cases. It is not the required G12 final-publication completion API and is not adopted by the G12 design.",
+        "function": "complete_bill(plan, approval, request)",
+        "lines": [
+          1011,
+          1047
+        ],
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/fresh-controller-composition-v2/composed_controller.py",
+        "sha256": "c88736fce81d737ae13ac1bf47500dc9d72920bd4910efe1b49074797d6e3231"
+      },
+      "design_locations": [
+        "DESIGN-v1.json:228 launch_selection_schema.accounting_selection",
+        "DESIGN-v1.json:215 full_cost_invoice.tail_rule",
+        "DESIGN-v1.json:574-580 P02 preflight contract",
+        "DESIGN-v1.json:604-610 P08 seal contract",
+        "DESIGN-v1.json:801-805 publication_record_schema"
+      ],
+      "future_values_not_required_now": "Actual launch outcomes, elapsed costs, payload digests and numerical authorized allowances remain future run values. Their absence is distinct from the unsupplied source function/interface.",
+      "id": "G12-SOURCE-GAP-01",
+      "impact": "Cannot call the exact full source integration supplied or implementation-complete. A source pin field, completion boolean, future cost number or run-time None gate does not fill the missing API.",
+      "minimal_resolution": "Supply and independently review the exact already-authorized source owner and compatible entry/completion interface with path/hash/spans, actual ownership lifetime, returned observation contract, and the final publication-tail accounting join; or explicitly park this integrated branch. Do not invent an accounting callback, generic framework, funding, or current-controller adoption.",
+      "observation": "The design requires an exact source pin and fixed entry of an existing enclosing accounting owner, plus actual completion accounting for publication-record write/readback/close and later source adoption. It provides no selected owner path/hash/API, entry and completion calls, source-owned lifetime/return contract or concrete final-completion join. P01-P09 contain requirements for charging and final tail success, not that missing source interface.",
+      "status": "OPEN_SOURCE_INTEGRATION_GAP",
+      "supervisor_boundary": "The pinned supervisor is named as the finite Popen/generation/cleanup pattern. The design supplies no supervisor function as an enclosing G12 final-accounting owner. This review does not import or repurpose the current controller or supervisor.",
+      "title": "No exact enclosing completion-accounting interface is supplied"
+    },
+    {
+      "design_locations": [
+        "DESIGN-v1.json:67 cold_consumer_design.caller_authority",
+        "DESIGN-v1.json:69 cold_consumer_design.function"
+      ],
+      "exact_prior_interface": {
+        "function": "load_original_g12_reference(root, api)",
+        "lines": [
+          50,
+          114
+        ],
+        "ownership_comment_lines": [
+          51,
+          56
+        ],
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-transport-v1/g12_reference_transport_v1.py",
+        "sha256": "c4fcac756671cb8927158b11952eb9795222d76ba1d102523a2313d8dad358d2"
+      },
+      "id": "G12-SOURCE-GAP-02",
+      "impact": "The proposed consumer is not established as a drop-in replacement for the pinned two-argument transport. This finding does not claim that an owned new derivative is impossible; it says the actual source integration remains unproven.",
+      "minimal_resolution": "An owned new derivative must provide the exact authenticated cold registration and invocation source, with actual initially captured Root/capability/API ownership transported into the three-argument entry and source currentness preserved. Independently inspect that source before calling the ABI connected. Do not fabricate a capability, weaken validation, silently omit the third argument, or alter frozen predecessors.",
+      "observation": "The pinned existing transport defines two arguments and states that an authenticated cold registered-source entry must supply the initial actual Root/API. The proposed design additionally validates a genuine capability, but names no exact pinned caller/registration function or source span supplying that third object. Neither the transport docstring nor the design phrase existing authenticated cold registered-source entry proves this ABI integration.",
+      "proposed_interface": "load_original_g12_reference(root, capability, api)",
+      "scope_boundary": "No unpinned candidate protocol/caller source was opened or inferred. The confirmed mismatch is the exact supplied transport signature against the design signature; the claimed candidate registration remains a source obligation.",
+      "status": "OPEN_AUTHENTICATED_CALLER_ABI_INTEGRATION_GAP",
+      "title": "Three-argument consumer lacks an exact supplied authenticated caller integration"
+    }
+  ],
+  "status": "QUALIFIED_LOCAL_DESIGN_ACCEPTANCE_WITH_TWO_SOURCE_INTEGRATION_GAPS_OPEN",
+  "stop": "Exact clarification established. Freeze addendum and return it to parent; no further search, implementation or execution in this assignment."
+}

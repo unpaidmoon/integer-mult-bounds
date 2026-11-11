@@ -1,0 +1,1878 @@
+#!/usr/bin/env python3
+"""One complete frozen complex-network CLI with retained exact observations.
+
+Parent-owned serial wall/RSS/aggregate guard is mandatory. Profile mode is one
+literal baseline diagnostic/anchor, not a performance sample. Both benchmark
+modes require its immutable anchor. No search, retry, orchestration or network.
+"""
+from __future__ import annotations
+
+# Actual source-authenticated root injects these three values before driver exec.
+# Capture them before importing any candidate, scientific, or orchestration code.
+_CAPTURED_BOOTSTRAP_ROOT = bootstrap_root
+_CAPTURED_BOOTSTRAP_CAPABILITY = bootstrap_capability
+_CAPTURED_BOOTSTRAP_API = bootstrap_api
+if type(_CAPTURED_BOOTSTRAP_API) is not tuple or len(_CAPTURED_BOOTSTRAP_API) != 4:
+    raise RuntimeError('Driver requires the parent-sealed exact four-entry bootstrap API')
+_INITIAL_ROOT_IDENTITY = _CAPTURED_BOOTSTRAP_API[0]()
+if (type(_CAPTURED_BOOTSTRAP_ROOT) is not _CAPTURED_BOOTSTRAP_ROOT.ModuleType or
+        any(type(entry) is not _CAPTURED_BOOTSTRAP_ROOT.FunctionType or
+            entry.__globals__ is not _CAPTURED_BOOTSTRAP_ROOT.__dict__
+            for entry in _CAPTURED_BOOTSTRAP_API)):
+    raise RuntimeError('Driver bootstrap API is not bound to the actual root namespace')
+
+# Accepted helper/control sources and parent-inspected native dependency tuple.
+# These are static expected pins; finite and full execution gates remain closed.
+EXPECTED_BOOTSTRAP_ROOT_SHA256 = 'f5a2d33f2b4d3651f214156a0e7094c2bb516ce2d5ab7698d18c11f98f35dee0'
+NATIVE_TCB_HELPER_SHA256 = '865943df5cfdbf9383362d7fb2b76c6d0fd895cf0a0e20d550a26b579606b5d7'
+NATIVE_TCB_CONTROLS_SHA256 = '63b1804caa7f89915662a1424f788c3becad13520e1f63212a338fb45aaa2c5a'
+NATIVE_TCB_EXPECTED_FILES = (('/usr/bin/python3.12', 'e50d468e8b0adfb05733f5b87b3cff34829c4a8c1aea50c865aa8bdfe4bb150f', 8020928),
+ ('/usr/lib/python3.12/lib-dynload/_hashlib.cpython-312-x86_64-linux-gnu.so',
+  '8dc6cda6dd9495b95a2bfb5b26e8cf06b72f36dc0213d958b9277a958287f0fe',
+  64368),
+ ('/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2',
+  'c20a2dc8917c755f02b94049356320fe1f62ac7d9f8994731f807d9df39302da',
+  236616),
+ ('/usr/lib/x86_64-linux-gnu/libc.so.6',
+  '3a15d66867d83762c7f2f1e37359cb8f6c5743edb369c65285cb0b1c4f7498bf',
+  2129424),
+ ('/usr/lib/x86_64-linux-gnu/libcrypto.so.3',
+  '6866ed711dab8927e1bf82bf1cd30e828bdfc34f3cc1e83b1c9eb01ce6c37d9a',
+  5309400),
+ ('/usr/lib/x86_64-linux-gnu/libexpat.so.1.9.1',
+  '286682ecbc5e59a638963b1a4e6351e65eb32fcf4bdcb9cb7569b6a61fe06a8d',
+  186624),
+ ('/usr/lib/x86_64-linux-gnu/libm.so.6',
+  'fce00b6f25f459cf4ae0b7fae4257909a1a8a86f9149e7c029a5d617baf1ccd0',
+  952616),
+ ('/usr/lib/x86_64-linux-gnu/libz.so.1.3',
+  'f61677c7bdb7c2aa2a243ea781bfd16afcb361cede7b4ef76127a9d8eb9a5242',
+  113000))
+NATIVE_TCB_EXPECTED_HASHLIB_ORIGIN = '/usr/lib/python3.12/lib-dynload/_hashlib.cpython-312-x86_64-linux-gnu.so'
+
+
+def _initial_native_tcb():
+    root, api = _CAPTURED_BOOTSTRAP_ROOT, _CAPTURED_BOOTSTRAP_API
+    if (type(EXPECTED_BOOTSTRAP_ROOT_SHA256) is not str or
+            _INITIAL_ROOT_IDENTITY != EXPECTED_BOOTSTRAP_ROOT_SHA256 or
+            type(NATIVE_TCB_HELPER_SHA256) is not str or len(NATIVE_TCB_HELPER_SHA256) != 64 or
+            type(NATIVE_TCB_EXPECTED_FILES) is not tuple or
+            type(NATIVE_TCB_EXPECTED_HASHLIB_ORIGIN) is not str):
+        raise RuntimeError('Initial native TCB source and expected dependency tuple are not configured')
+    helper_path = __file__.rsplit('/', 2)[0] + '/areas/cache-validity/probe-native/native_tcb_v1.py'
+    api[0]()
+    digest, _, source = root._hash_regular(helper_path, 262144, True)
+    if digest != NATIVE_TCB_HELPER_SHA256:
+        raise RuntimeError('Initial native TCB helper source differs')
+    helper = root.ModuleType('_h25_initial_native_tcb')
+    namespace = helper.__dict__
+    namespace.update({'__file__': helper_path, '__builtins__': root.builtins.__dict__})
+    api[0]()
+    code = root._COMPILE(source, helper_path, 'exec', dont_inherit=True, optimize=root._OPTIMIZE)
+    api[0]()
+    root._EXEC(code, namespace)
+    api[0]()
+    receipt = namespace['verify_native_tcb'](root, api, NATIVE_TCB_EXPECTED_FILES,
+                                               NATIVE_TCB_EXPECTED_HASHLIB_ORIGIN)
+    if type(NATIVE_TCB_CONTROLS_SHA256) is not str or len(NATIVE_TCB_CONTROLS_SHA256) != 64:
+        raise RuntimeError('Initial native TCB control source pin is not configured')
+    control_path = __file__.rsplit('/', 2)[0] + '/areas/cache-validity/probe-native/native_tcb_controls_v1.py'
+    api[0]()
+    digest, _, control_source = root._hash_regular(control_path, 262144, True)
+    if digest != NATIVE_TCB_CONTROLS_SHA256:
+        raise RuntimeError('Initial native TCB controls source differs')
+    control_namespace = {'__name__': '_h25_initial_native_tcb_controls', '__file__': control_path,
+                         '__builtins__': root.builtins.__dict__}
+    api[0]()
+    control_code = root._COMPILE(control_source, control_path, 'exec', dont_inherit=True, optimize=root._OPTIMIZE)
+    api[0]()
+    root._EXEC(control_code, control_namespace)
+    argv = root.sys.argv
+    if (type(argv) is not list or any(type(arg) is not str for arg in argv) or
+            argv.count('--output') != 1 or argv.index('--output') + 1 >= len(argv)):
+        raise RuntimeError('Early TCB controls require the unique parent --output argument')
+    output = argv[argv.index('--output') + 1]
+    stage_root = __file__.rsplit('/', 2)[0]
+    if (not output.startswith('/') or output.endswith('/') or
+            any(part in ('', '.', '..') for part in output.split('/')[1:]) or
+            output == stage_root or output.startswith(stage_root + '/')):
+        raise RuntimeError('Early TCB controls require a canonical absolute output outside the stage')
+    # Parent owns an existing nonsymlink output parent. mkdir is exclusive:
+    # a preexisting output, file, or symlink is rejected before any fixture write.
+    api[0]()
+    root.posix.mkdir(output, 0o700)
+    control_directory = output + '/initial-tcb-controls'
+    root.posix.mkdir(control_directory, 0o700)
+    api[0]()
+    controls = control_namespace['run_controls'](
+        helper, root, api, NATIVE_TCB_EXPECTED_FILES, NATIVE_TCB_EXPECTED_HASHLIB_ORIGIN, control_directory)
+    if (controls.get('schema') != 'h25-native-tcb-controls-v1' or
+            controls.get('expected_records') != 5 or len(controls.get('records', [])) != 5 or
+            controls.get('scientific_calls') != 0 or controls.get('probe_native_imports') != 0):
+        raise RuntimeError('Initial native TCB control census differs')
+    controls['status'] = 'NATIVE_INITIAL_TCB_CONTROLS_PASS'
+    return receipt, controls, output
+
+
+# Child outer wall/CPU/RSS includes this entire initial trust check.
+# It assumes the declared trusted OS/native startup; it does not prove itself.
+INITIAL_NATIVE_TCB_RECEIPT, INITIAL_NATIVE_TCB_CONTROLS, _INITIAL_OUTPUT = _initial_native_tcb()
+
+# This independent bootstrap support captures the initial system-stdlib
+# continuity boundary before any adapter or scientific module is exposed.
+# No late candidate-created snapshot is accepted as initial authentication.
+COLD_AUTHORITY_SHA256 = '3079a096df1072a83056f3f8a8cbf9e766fdddb488e36dddb36544c7929f988a'
+
+
+def _initial_cold_authority():
+    root, cap, api = (_CAPTURED_BOOTSTRAP_ROOT, _CAPTURED_BOOTSTRAP_CAPABILITY,
+                      _CAPTURED_BOOTSTRAP_API)
+    if type(COLD_AUTHORITY_SHA256) is not str or len(COLD_AUTHORITY_SHA256) != 64:
+        raise RuntimeError('Initial cold authority source pin is not configured')
+    source_path = __file__.rsplit('/', 2)[0] + '/areas/cache-validity/cold_authority_v7.py'
+    api[0]()
+    digest, _, source = root._hash_regular(source_path, 1048576, True)
+    if digest != COLD_AUTHORITY_SHA256:
+        raise RuntimeError('Initial cold authority source differs')
+    module = root.ModuleType('_h25_initial_cold_authority')
+    namespace = module.__dict__
+    namespace.update({'__file__': source_path, '__builtins__': root.builtins.__dict__})
+    api[0]()
+    code = root._COMPILE(source, source_path, 'exec', dont_inherit=True, optimize=root._OPTIMIZE)
+    api[0]()
+    root._EXEC(code, namespace)
+    # The actual source bytes have just executed under the admitted initial
+    # interpreter/system-stdlib premise. Capture precedes every candidate import.
+    api[0]()
+    bundle = namespace['capture_epoch_authority'](root, cap, api); authority = bundle[1]
+    if (type(authority) is not tuple or len(authority) != 7 or
+            any(type(entry) is not root.FunctionType for entry in authority)):
+        raise RuntimeError('Initial cold authority must expose the sealed seven-entry tuple')
+    # Read fresh transport exactly once, before any candidate exposure.
+    transport = root.FunctionType.__dict__['__dict__'].__get__(authority[0], root.FunctionType)
+    descriptor = transport['_h25_caller_descriptor']
+    if type(descriptor) is not tuple or len(descriptor) != 6 or descriptor[1] is not authority:
+        raise RuntimeError('Initial cold authority caller descriptor differs')
+    return authority, descriptor, bundle
+
+
+import importlib
+import typing
+_INITIAL_COLD_AUTHORITY, _INITIAL_COLD_CALLER_DESCRIPTOR, _INITIAL_EPOCH_BUNDLE = _initial_cold_authority()
+
+import time
+START_WALL = time.perf_counter()
+import argparse
+from contextlib import redirect_stdout
+from fractions import Fraction
+import hashlib
+import io
+import json
+import os
+from pathlib import Path
+import resource
+import runpy
+import shutil
+import stat
+import sys
+
+sys.dont_write_bytecode = True
+# Independent source pins are literal final-stage configuration. These modules
+# are admitted by the pre-exposure authority, including their live helper code.
+# Driver/source identity does not depend on a hash of itself.
+EARLY_INTEGRATION_SOURCE_PINS = ({'adapters': ('integration/adapters.py', 'f7ca7f4f03ac63c1a95ba42f06149543211566de5e29f487a3dc4d08c5ee9b94'), 'cold_build_evidence': ('integration/cold_build_evidence.py', 'aa0a315110e031e19291970c9611fe5e0f91465fa20eaec51e81186099563f78'), 'native_packet': ('integration/native_packet.py', '6adbcd1dfeb77fb6da7ee8f725796b1bfdbf0a4f397ef23f3a266a6b89d55892'), 'data_adapters': ('integration/data_adapters.py', '18679fd1eb6ae99c4b375756511427c26718f77674c2d8fcc490e25ceb47cba5'), 'guarded_adapters_v4': ('integration/guarded_adapters_v4.py', '5579fe0838d8c6acf63834990269479c6c32024a1662846ed0a075c25d13954c'), '_h25_data_cache': ('areas/cache-validity/cache_contract_v8.py', '20a8a94e96bfa6213d4f04244dabecf059b4c8c7e8ffa7e9409a8b87cfeef494')}
+
+
+
+
+
+
+)
+_INITIAL_INTEGRATION_MODULES = {}
+_INITIAL_INTEGRATION_HANDLES = {}
+for _entry_name, (_entry_relative, _entry_digest) in EARLY_INTEGRATION_SOURCE_PINS.items():
+    if type(_entry_digest) is not str or len(_entry_digest) != 64:
+        raise RuntimeError('Early integration source pin is not configured: ' + _entry_name)
+    # BEGIN evaluated dispatch arguments scientific_driver:195
+    _ca_args = (__file__.rsplit('/', 2)[0] + '/' + _entry_relative, _entry_digest, _entry_name)
+    _ca_kwargs = {}
+    # END evaluated dispatch arguments scientific_driver:195
+    # BEGIN caller admission scientific_driver:195
+    _ca_desc = _INITIAL_COLD_CALLER_DESCRIPTOR
+    _ca_p = _ca_desc[5]
+    _ca_type, _ca_function, _ca_id = _ca_p[0], _ca_p[1], _ca_p[2]
+    _ca_error, _ca_value_error, _ca_zip = _ca_p[7], _ca_p[8], _ca_p[18]
+    _ca_dispatch, _ca_record = _ca_desc[2], _ca_desc[3]
+    if _INITIAL_COLD_AUTHORITY is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+        raise _ca_error('Cold authority caller dispatcher identity differs')
+    for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+        if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher environment differs')
+    if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+        raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+    for _ca_cell, _ca_expected in _ca_record[8]:
+        try:
+            _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+        except _ca_value_error:
+            raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+        if _ca_observed_id != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher cell differs')
+    # END caller admission scientific_driver:195
+    _entry_module, _entry_handle = _ca_dispatch(0, *_ca_args, **_ca_kwargs)
+    if type(_entry_module) is not _CAPTURED_BOOTSTRAP_ROOT.ModuleType or sys.modules.get(_entry_name) is not _entry_module:
+        raise RuntimeError('Early integration module registry identity differs: ' + _entry_name)
+    _INITIAL_INTEGRATION_MODULES[_entry_name] = _entry_module
+    _INITIAL_INTEGRATION_HANDLES[_entry_name] = _entry_handle
+adapters = _INITIAL_INTEGRATION_MODULES['adapters']
+native_packet = _INITIAL_INTEGRATION_MODULES['native_packet']
+data_adapters = _INITIAL_INTEGRATION_MODULES['data_adapters']
+guarded_adapters_v4 = _INITIAL_INTEGRATION_MODULES['guarded_adapters_v4']
+_EXECUTION = {'output': Path(_INITIAL_OUTPUT), 'state': None, 'packet': None}
+ROUND = Path(__file__).resolve().parent.parent
+HERE = ROUND / "baseline"
+REFERENCE_DRIVER_SHA = "0d976d2eb6b845f20d4a3396591a806f966688b88693cd6a5f8a0c9e48925e36"
+BASE = "19fdb086ea96af9a9f87936a2b888e10af4ed810"
+UPSTREAM = "adc7f1241b42e322a6451854ab7e4b4c146bf78a"
+PIN_SHA = "88bba3caf5975f30fa7abceaea9454110cf3b069233e8241a2ca13d1dff171a7"
+REFERENCE_SHA = "1f763d95c7ff163aa71d13cd82784f16665be8afb21f75e76941e2119562098f"
+ENGINE_PINS = {
+    "native_gf2.c": "e9c3c9194a08718bd1575c1cf08c6c6772d3b644c2e274c25a84a1f9249d06cc",
+    "native_backend.py": "e473c38245c3668715b5a78dfe980b2fe3ed0d0c9b8c97c666fbae6ecf1fffd5",
+    "finite_controls.py": "df989a831aac43cc1af95169dad8c64a7548760e6e1f96976da996703f2c8f7a",
+    "compare_side_verifier.py": "6e507bb0c7e00d090a60289fddb6c55e90c946d0850c42c3c5e3e15c27604a68",
+    "profile_side_verifier.py": "9c994378171c20a91539418d93cb8387e1daa93465d6862beefea90e12999c2a",
+    "source/complex_circuit.py": "d623617f7c5cb3189580883a8ab30c0bd3832688ae3f1f0c1f881bbbbff8e0c1",
+    "source/complex_network.py": "0da395e67ac04fa213494e71012c1b19b544596d34cdce5a3b172b1fb6af5f1b",
+}
+COMPLEMENT_EXPECTED = {
+    "calls": 238685,
+    "canonical_stream_bytes": 55839507,
+    "sha256": "7dec2bf33303c37e1c699609e83768d61df7e19104d34a26a148f66d5ccc4838",
+    "schema": "v2-jsonl:call,us,vs,result(type=list+values or type=None); ordered exact integer vectors",
+}
+EXPECTED_STDOUT = (
+    "PASS conditional 59/100000000000 > 2^-31; minimum margin 14779261/25000000000000000\n"
+    "Side roles per invocation 108195 vs original 3693800\n"
+)
+
+
+def need(condition, message):
+    if not condition:
+        raise RuntimeError(message)
+
+
+def sha(data):
+    return hashlib.sha256(data).hexdigest()
+
+
+def canonical(value):
+    return json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=True).encode("ascii")
+
+
+def cpu():
+    own = resource.getrusage(resource.RUSAGE_SELF)
+    children = resource.getrusage(resource.RUSAGE_CHILDREN)
+    return own.ru_utime + own.ru_stime + children.ru_utime + children.ru_stime
+
+
+def inventory(root, pins, *, exact=True):
+    need(root.is_dir() and not root.is_symlink(), "Missing or symlinked input root")
+    files = {}
+    for path in sorted(root.rglob("*")):
+        need(not path.is_symlink(), "Symlink in frozen inputs: " + str(path))
+        if path.is_file():
+            relative = str(path.relative_to(root))
+            if relative not in pins:
+                need(not exact, "Undeclared frozen input: " + relative)
+                continue
+            raw = path.read_bytes()
+            expected = pins[relative][0] if type(pins[relative]) is list else pins[relative]
+            need(sha(raw) == expected, "Frozen input digest changed: " + relative)
+            files[relative] = {"sha256": sha(raw), "mode": stat.S_IMODE(path.stat().st_mode), "bytes": len(raw)}
+    need(set(files) == set(pins), "Frozen input inventory incomplete")
+    return files
+
+# Preserve the literal baseline function; main selects a local arm function.
+original_inventory = inventory
+
+def candidate_inventory(root, pins, *, exact=True):
+    need(root.is_dir() and not root.is_symlink(), "Missing or symlinked input root")
+    files = {}
+    for path in sorted(root.rglob("*")):
+        need(not path.is_symlink(), "Symlink in frozen inputs: " + str(path))
+        if path.is_file():
+            relative = str(path.relative_to(root))
+            if relative not in pins:
+                need(not exact, "Undeclared frozen input: " + relative)
+                continue
+            raw = path.read_bytes()
+            expected = pins[relative][0] if type(pins[relative]) is list else pins[relative]
+            raw_digest = sha(raw)
+            need(raw_digest == expected, "Frozen input digest changed: " + relative)
+            files[relative] = {"sha256": raw_digest, "mode": stat.S_IMODE(path.stat().st_mode), "bytes": len(raw)}
+    need(set(files) == set(pins), "Frozen input inventory incomplete")
+    return files
+
+
+def typed(value):
+    """Lossless full return representation, including order and exact types."""
+    kind = type(value)
+    if kind is Fraction:
+        return ["Fraction", value.numerator, value.denominator]
+    if value is None:
+        return ["None"]
+    if kind is bool:
+        return ["bool", value]
+    if kind is int:
+        return ["int", str(value)]
+    if kind is float:
+        return ["float", value.hex()]
+    if kind is str:
+        return ["str", value]
+    if kind is list or kind is tuple:
+        return [kind.__name__, [typed(item) for item in value]]
+    if kind is dict:
+        return ["dict", [[typed(key), typed(item)] for key, item in value.items()]]
+    raise TypeError("Unsupported exact full-certificate return type: " + kind.__name__)
+
+
+class Phases:
+    """Broad phase observations; no per-arithmetic resource sampling.
+
+    Every call retains the old timing fields. Memory samples are paid by both
+    arms, including nested side_construction so snapshots/retirement are visible.
+    """
+    def __init__(self):
+        self.rows = {}
+
+    @staticmethod
+    def memory():
+        with open("/proc/self/status", "rb") as stream:
+            raw = stream.read(65537)
+        need(len(raw) <= 65536, "Process status diagnostic exceeded its bound")
+        current = None
+        for line in raw.splitlines():
+            if line.startswith(b"VmRSS:"):
+                fields = line.split()
+                need(len(fields) == 3 and fields[2] == b"kB", "Unexpected process RSS diagnostic units")
+                current = int(fields[1]) * 1024
+                break
+        need(current is not None, "Current process RSS diagnostic unavailable")
+        highwater = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss * 1024
+        return {"current_vmrss_bytes": current, "process_ru_maxrss_bytes": highwater}
+
+    def call(self, name, function, *args, **kwargs):
+        wall, used = time.perf_counter(), cpu()
+        memory_before = self.memory()
+        primary_failure = False
+        try:
+            return _g12_after_phase(self, name, function, args, kwargs, function(*args, **kwargs))
+        except BaseException:
+            primary_failure = True
+            raise
+        finally:
+            memory_after, memory_error = None, None
+            try:
+                memory_after = self.memory()
+            except BaseException as error:
+                # Do not replace an original failure with diagnostic failure.
+                memory_error = {"type": type(error).__name__}
+                if not primary_failure:
+                    raise
+            row = self.rows.setdefault(name, {"calls": 0, "wall_seconds": 0.0,
+                                             "cpu_seconds_with_children": 0.0,
+                                             "memory_samples": [],
+                                             "memory_semantics": "VmRSS is current resident bytes; ru_maxrss is process high-water bytes; neither is an additive phase peak"})
+            row["calls"] += 1
+            row["memory_samples"].append({"before": memory_before, "after": memory_after,
+                                           "diagnostic_error": memory_error})
+            row["wall_seconds"] += time.perf_counter() - wall
+            row["cpu_seconds_with_children"] += cpu() - used
+
+    def wrap(self, owner, attribute, name):
+        original = getattr(owner, attribute)
+        def observed(*args, **kwargs):
+            return self.call(name, original, *args, **kwargs)
+        setattr(owner, attribute, observed)
+        return original, observed
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--frozen-root", type=Path, default=HERE / "frozen")
+    parser.add_argument("--reference", type=Path, default=HERE / "reference/certificates/complex-network.json")
+    parser.add_argument("--lanes", choices=("baseline", "candidate"), required=True)
+    parser.add_argument("--finite-only", action="store_true")
+    parser.add_argument("--output", type=Path, required=True, help="New external directory; every write stays below it")
+    parser.add_argument("--anchor", type=Path, default=HERE / "anchor.json")
+    args = parser.parse_args()
+    args.data_lanes = args.lanes
+    args.lanes = "all"  # Both comparison arms retain the complete original native/bookkeeping baseline.
+    if args.data_lanes == "transport":
+        need(args.frozen_root == HERE / "frozen" and
+             args.reference == HERE / "reference/certificates/complex-network.json" and
+             args.anchor == HERE / "anchor.json", "Transport uses only the original fixed historical inputs")
+        data_adapters.transport(ROUND, HERE, args.output)
+        return
+    inventory = candidate_inventory if args.data_lanes == "candidate" else original_inventory
+    args.mode = "candidate"  # Every new arm starts from the original native C configuration.
+    need(args.finite_only or sys.flags.optimize == 0, "Every full-caller mode requires original assertions")
+    need(sys.implementation.name == "cpython" and sys.version_info[:2] == (3, 12), "Frozen CPython 3.12 required")
+    data_adapters.require_execution_contract(args.data_lanes, args.finite_only)
+    need((args.mode == "profile") == (args.anchor is None), "Profile creates the anchor; both benchmark arms require --anchor")
+    frozen, reference = args.frozen_root.resolve(), args.reference.resolve()
+    output = args.output.resolve()
+    need(str(output) == _INITIAL_OUTPUT and output.is_dir() and not output.is_symlink() and
+         {path.name for path in output.iterdir()} == {'initial-tcb-controls'} and
+         (output / 'initial-tcb-controls').is_dir() and
+         not (output / 'initial-tcb-controls').is_symlink() and
+         not list((output / 'initial-tcb-controls').iterdir()),
+         "Early TCB output ownership or fresh control directory changed")
+    need(not output.is_relative_to(HERE) and not output.is_relative_to(frozen), "Output must be outside immutable sources")
+    need(reference.is_file() and not reference.is_symlink(), "Reference certificate missing or symlinked")
+    source_pin_bytes = (HERE / "SOURCE-PINS.json").read_bytes()
+    need(sha(source_pin_bytes) == PIN_SHA, "Source inventory pin changed")
+    pins = json.loads(source_pin_bytes)
+    need(len(pins) == 32, "Frozen closure must contain twelve scripts, manifest and nineteen payloads")
+    reference_bytes = reference.read_bytes()
+    need(sha(reference_bytes) == REFERENCE_SHA, "Original full certificate reference changed")
+    driver_before = Path(__file__).read_bytes()
+    new_custody_before = adapters.custody(ROUND, args.lanes)
+    data_custody_before = data_adapters.custody(ROUND)
+    reference_driver_before = (HERE / "full_driver.py").read_bytes()
+    need(sha(reference_driver_before) == REFERENCE_DRIVER_SHA, "Reference driver pin changed")
+    anchor_bytes = None if args.anchor is None else args.anchor.read_bytes()
+    expected_anchor = None if anchor_bytes is None else json.loads(anchor_bytes)
+    if expected_anchor is not None:
+        need(expected_anchor.get("schema") == "gf2-full-network-anchor-v1" and
+             expected_anchor.get("base_commit") == BASE and expected_anchor.get("source_pin_sha256") == PIN_SHA and
+             expected_anchor.get("driver_sha256") == REFERENCE_DRIVER_SHA and
+             expected_anchor.get("engine_pins") == ENGINE_PINS,
+             "Anchor source/driver/engine identity differs; no benchmark permitted")
+    _EXECUTION['output'] = output
+    compiler_tmp = output / "compiler-tmp"
+    compiler_tmp.mkdir()
+    os.environ["TMPDIR"] = str(compiler_tmp)
+    phases = Phases()
+    (output / 'initial-native-tcb.json').write_bytes(canonical(INITIAL_NATIVE_TCB_RECEIPT) + b'\n')
+    (output / 'initial-tcb-controls' / 'receipt.json').write_bytes(canonical(INITIAL_NATIVE_TCB_CONTROLS) + b'\n')
+    frozen_before = phases.call("input_custody", inventory, frozen, pins)
+    engine_before = phases.call("engine_custody", inventory, HERE / "engine", ENGINE_PINS)
+    manifest = json.loads((frozen / "upstream/manifest.json").read_bytes())
+    need(manifest["commit"] == UPSTREAM and len(manifest["files"]) == 19, "Wrong pinned upstream manifest")
+    need({"upstream/" + name for name in manifest["files"]} ==
+         {name for name in pins if name.startswith("upstream/") and name != "upstream/manifest.json"},
+         "Source verifier payload closure changed")
+    for name, info in manifest["files"].items():
+        need(info["sha256"] == pins["upstream/" + name][0], "Manifest payload hash differs from independent frozen pin")
+
+    runtime, engine = output / "runtime-root", output / "engine"
+    phases.call("fresh_root_copy", shutil.copytree, frozen, runtime)
+    phases.call("fresh_engine_copy", shutil.copytree, HERE / "engine", engine)
+    # copytree retains readonly source directory permissions. Only this new
+    # private root is made writable for the original CLI certificate output.
+    runtime.chmod(0o755)
+    (runtime / "certificates").mkdir()
+    runtime_before = inventory(runtime, pins)
+    copied_engine_before = inventory(engine, ENGINE_PINS)
+    need(runtime_before == frozen_before and copied_engine_before == engine_before, "Copy changed input bytes or modes")
+    for name in ("complex_network.py", "complex_circuit.py"):
+        need((engine / "source" / name).read_bytes() == (runtime / "scripts" / name).read_bytes(),
+             "PR5929 engine/source differs from the full caller closure")
+    script_names = {Path(name).stem for name in pins if name.startswith("scripts/")}
+    engine_names = {"native_backend", "finite_controls", "compare_side_verifier", "profile_side_verifier"}
+    need(not (script_names | engine_names) & set(sys.modules), "Scientific module already loaded; fresh process required")
+    sys.path[:0] = [str(engine), str(runtime / "scripts")]
+    # BEGIN evaluated dispatch arguments scientific_driver:462
+    _ca_args = (str(engine / 'native_backend.py'), ENGINE_PINS['native_backend.py'], 'native_backend')
+    _ca_kwargs = {'kind': 'backend'}
+    # END evaluated dispatch arguments scientific_driver:462
+    # BEGIN caller admission scientific_driver:462
+    _ca_desc = _INITIAL_COLD_CALLER_DESCRIPTOR
+    _ca_p = _ca_desc[5]
+    _ca_type, _ca_function, _ca_id = _ca_p[0], _ca_p[1], _ca_p[2]
+    _ca_error, _ca_value_error, _ca_zip = _ca_p[7], _ca_p[8], _ca_p[18]
+    _ca_dispatch, _ca_record = _ca_desc[2], _ca_desc[3]
+    if _INITIAL_COLD_AUTHORITY is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+        raise _ca_error('Cold authority caller dispatcher identity differs')
+    for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+        if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher environment differs')
+    if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+        raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+    for _ca_cell, _ca_expected in _ca_record[8]:
+        try:
+            _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+        except _ca_value_error:
+            raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+        if _ca_observed_id != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher cell differs')
+    # END caller admission scientific_driver:462
+    backend, backend_handle = phases.call('cold_engine_import', _ca_dispatch, 0, *_ca_args, **_ca_kwargs)
+    # BEGIN evaluated dispatch arguments scientific_driver:465
+    _ca_args = (_INITIAL_INTEGRATION_HANDLES['_h25_data_cache'], 'capture_backend_factory_environment', backend)
+    _ca_kwargs = {'cold_authority': _INITIAL_COLD_AUTHORITY, 'cold_caller_descriptor': _INITIAL_COLD_CALLER_DESCRIPTOR, 'backend_handle': backend_handle, 'cache_handle': _INITIAL_INTEGRATION_HANDLES['_h25_data_cache'], 'bootstrap_root': _CAPTURED_BOOTSTRAP_ROOT, 'bootstrap_capability': _CAPTURED_BOOTSTRAP_CAPABILITY, 'bootstrap_api': _CAPTURED_BOOTSTRAP_API}
+    # END evaluated dispatch arguments scientific_driver:465
+    # BEGIN caller admission scientific_driver:465
+    _ca_desc = _INITIAL_COLD_CALLER_DESCRIPTOR
+    _ca_p = _ca_desc[5]
+    _ca_type, _ca_function, _ca_id = _ca_p[0], _ca_p[1], _ca_p[2]
+    _ca_error, _ca_value_error, _ca_zip = _ca_p[7], _ca_p[8], _ca_p[18]
+    _ca_dispatch, _ca_record = _ca_desc[2], _ca_desc[3]
+    if _INITIAL_COLD_AUTHORITY is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+        raise _ca_error('Cold authority caller dispatcher identity differs')
+    for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+        if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher environment differs')
+    if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+        raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+    for _ca_cell, _ca_expected in _ca_record[8]:
+        try:
+            _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+        except _ca_value_error:
+            raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+        if _ca_observed_id != _ca_id(_ca_expected):
+            raise _ca_error('Cold authority caller dispatcher cell differs')
+    # END caller admission scientific_driver:465
+    factory_environment = phases.call('cold_backend_factory_environment', _ca_dispatch, 1, *_ca_args, **_ca_kwargs)
+    comparison = importlib.import_module("compare_side_verifier")
+    native = None
+    finite = None
+    build = None
+    if args.mode == "candidate":
+        packet = phases.call("cold_native_metadata_build", native_packet.prepare,
+                             ROUND, output, data_custody_before, _CAPTURED_BOOTSTRAP_ROOT,
+                             _CAPTURED_BOOTSTRAP_CAPABILITY, _CAPTURED_BOOTSTRAP_API)
+        _EXECUTION['packet'] = packet
+        packet['controls']['native_initial_tcb'] = INITIAL_NATIVE_TCB_CONTROLS
+        native, build = phases.call("cold_compile_link_load", backend.build_native, output / "cold-build")
+        # BEGIN evaluated dispatch arguments scientific_driver:484
+        _ca_args = (_INITIAL_INTEGRATION_HANDLES['guarded_adapters_v4'], 'prepare', ROUND, backend, backend_handle, native, output, args.lanes, phases, _INITIAL_COLD_AUTHORITY, _INITIAL_INTEGRATION_HANDLES['adapters'], new_custody_before)
+        _ca_kwargs = {'cold_caller_descriptor': _INITIAL_COLD_CALLER_DESCRIPTOR}
+        # END evaluated dispatch arguments scientific_driver:484
+        # BEGIN caller admission scientific_driver:484
+        _ca_desc = _INITIAL_COLD_CALLER_DESCRIPTOR
+        _ca_p = _ca_desc[5]
+        _ca_type, _ca_function, _ca_id = _ca_p[0], _ca_p[1], _ca_p[2]
+        _ca_error, _ca_value_error, _ca_zip = _ca_p[7], _ca_p[8], _ca_p[18]
+        _ca_dispatch, _ca_record = _ca_desc[2], _ca_desc[3]
+        if _INITIAL_COLD_AUTHORITY is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+            raise _ca_error('Cold authority caller dispatcher identity differs')
+        for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+            if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+                raise _ca_error('Cold authority caller dispatcher environment differs')
+        if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+            raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+        for _ca_cell, _ca_expected in _ca_record[8]:
+            try:
+                _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+            except _ca_value_error:
+                raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+            if _ca_observed_id != _ca_id(_ca_expected):
+                raise _ca_error('Cold authority caller dispatcher cell differs')
+        # END caller admission scientific_driver:484
+        extensions = phases.call('new_adapter_preparation', _ca_dispatch, 1, *_ca_args, **_ca_kwargs)
+        phases.call("all_native_metadata_and_preload_controls", native_packet.run_controls, packet, phases)
+        finite = phases.call("all_native_finite_independent_controls", importlib.import_module("finite_controls").run_controls, native)
+        phases.call("all_new_controls", adapters.run_controls, extensions, backend, native, phases)
+        # BEGIN evaluated dispatch arguments scientific_driver:492
+        _ca_args = (_INITIAL_INTEGRATION_HANDLES['data_adapters'], 'prepare', ROUND, backend, comparison, extensions, args.data_lanes, data_custody_before, packet)
+        _ca_kwargs = {'authority': _INITIAL_COLD_AUTHORITY, 'cold_caller_descriptor': _INITIAL_COLD_CALLER_DESCRIPTOR, 'integration_handles': _INITIAL_INTEGRATION_HANDLES, 'backend_handle': backend_handle, 'adapters_handle': _INITIAL_INTEGRATION_HANDLES['adapters'], 'setup_handle': _INITIAL_INTEGRATION_HANDLES['guarded_adapters_v4'], 'factory_environment': factory_environment, 'preloaded_cache': (_INITIAL_INTEGRATION_MODULES['_h25_data_cache'], _INITIAL_INTEGRATION_HANDLES['_h25_data_cache'])}
+        # END evaluated dispatch arguments scientific_driver:492
+        # BEGIN caller admission scientific_driver:492
+        _ca_desc = _INITIAL_COLD_CALLER_DESCRIPTOR
+        _ca_p = _ca_desc[5]
+        _ca_type, _ca_function, _ca_id = _ca_p[0], _ca_p[1], _ca_p[2]
+        _ca_error, _ca_value_error, _ca_zip = _ca_p[7], _ca_p[8], _ca_p[18]
+        _ca_dispatch, _ca_record = _ca_desc[2], _ca_desc[3]
+        if _INITIAL_COLD_AUTHORITY is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+            raise _ca_error('Cold authority caller dispatcher identity differs')
+        for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+            if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+                raise _ca_error('Cold authority caller dispatcher environment differs')
+        if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+            raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+        for _ca_cell, _ca_expected in _ca_record[8]:
+            try:
+                _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+            except _ca_value_error:
+                raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+            if _ca_observed_id != _ca_id(_ca_expected):
+                raise _ca_error('Cold authority caller dispatcher cell differs')
+        # END caller admission scientific_driver:492
+        data_state = phases.call('data_adapter_preparation', _ca_dispatch, 1, *_ca_args, **_ca_kwargs)
+        _EXECUTION['state'] = data_state
+        phases.call("all_data_controls", data_adapters.run_controls,
+                    data_state, native, output, phases, HERE / "full_driver.py", candidate_inventory, extensions)
+        (output / "finite-controls.json").write_bytes(canonical(finite) + b"\n")
+
+    if args.finite_only:
+        phases.call('terminal_native_cleanup_and_checks', data_adapters.finish_before_late, data_state)
+        # LAST native/scientific call. Everything below is source or receipt work.
+        phases.call('bootstrap_late_last', data_adapters.finish_late_last, data_state)
+        need(inventory(frozen, pins) == frozen_before and inventory(HERE / "engine", ENGINE_PINS) == engine_before, "Finite immutable source custody changed")
+        need(inventory(runtime, pins) == runtime_before and inventory(engine, ENGINE_PINS) == copied_engine_before, "Finite copied source custody changed")
+        need(adapters.custody(ROUND, args.lanes) == new_custody_before, "Finite new source custody changed")
+        need(data_adapters.custody(ROUND) == data_custody_before, "Finite data source custody changed")
+        result = {"status": "H25_DATA_HANDLING_FINITE_PASS", "lanes": args.data_lanes,
+                  "data_handling": data_adapters.finite_receipt(data_state),
+                  "data_source_custody": data_custody_before,
+                  "optimized": sys.flags.optimize, "original_controls": finite,
+                  "new_controls": extensions["controls"], "new_source_custody": new_custody_before,
+                  "driver_sha256": sha(driver_before),
+                  "initial_native_tcb": INITIAL_NATIVE_TCB_RECEIPT,
+                  "native_packet": native_packet.receipt(packet),
+                  "reference_driver_sha256": REFERENCE_DRIVER_SHA, "phases": phases.rows}
+        (output / "receipt.json").write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
+        print(json.dumps(result, sort_keys=True))
+        return
+
+    circuit_module = phases.call("cold_complex_module_load", backend.load_source, "complex_circuit")
+    sys.modules["complex_circuit"] = circuit_module
+    rank_calls = []
+    complement = extensions["trace_type"](circuit_module.Label)
+    phases.call("private_set_and_data_adapter_installation", data_adapters.install_circuit,
+                data_state, extensions, circuit_module, comparison)
+    side_writer = data_adapters.scientific_writer(data_state)
+    binding = None
+    captures = {}
+    phases.wrap(circuit_module.ComplexSideCircuit, "__init__", "side_construction")
+    phases.wrap(circuit_module.Checks, "__init__", "checks_initialization")
+    phases.wrap(circuit_module, "compile_roles", "compile_roles")
+    phases.wrap(circuit_module.Checks, "verify_map", "verify_map")
+    phases.wrap(circuit_module.Checks, "verify_labels", "verify_labels")
+    original_roles = circuit_module.verify_role_frames
+    def observe_roles(c, checks, code=None):
+        need("side" not in captures and code is not None, "Unexpected role-frame invocation")
+        result = phases.call("verify_role_frames", original_roles, c, checks, code)
+        captures["side"] = (c, checks, code, result)
+        return result
+    circuit_module.verify_role_frames = observe_roles
+
+    certify = phases.call("cold_certify_import", importlib.import_module, "certify")
+    phases.wrap(certify, "verify_sources", "original_upstream_verify_sources")
+    prepare = phases.call("cold_prepare_import", importlib.import_module, "prepare_layers")
+    search = importlib.import_module("search_network")
+    phases.wrap(search, "log_integer_bounds", "full_log_integer_bounds")
+    original_serializable = prepare.serializable
+    depth = 0
+    def observe_serializable(value):
+        nonlocal depth
+        outer = depth == 0
+        if outer:
+            need("full_return" not in captures and type(value) is dict, "Unexpected outer serialization")
+            captures["full_return"] = value
+        depth += 1
+        try:
+            # Recursion still delegates the original serializable exactly once
+            # per value; only the outer call is captured/timed.
+            if outer:
+                return phases.call("original_serializable", original_serializable, value)
+            return original_serializable(value)
+        finally:
+            depth -= 1
+    prepare.serializable = observe_serializable
+
+    # CS/Checks/phase/trace observers are final before either new guard captures them.
+    binding = phases.call("final_native_binding", data_adapters.bind_native,
+                          data_state, backend, circuit_module, native, rank_calls, complement)
+    phases.call("construction_lease_sealing", data_adapters.seal, data_state)
+    phases.call("private_set_lease_sealing", adapters.seal, extensions)
+    caller = runtime / "scripts/complex_network.py"
+    old_argv = sys.argv
+    stdout = io.StringIO()
+    try:
+        phases.call("final_private_environment_and_arming", data_adapters.arm, data_state, extensions)
+        sys.argv = [str(caller)]
+        with redirect_stdout(stdout):
+            namespace = phases.call("complete_original_cli", runpy.run_path, str(caller), run_name="__main__")
+    finally:
+        sys.argv = old_argv
+        adapters.disarm(extensions)
+    cli_stdout = stdout.getvalue()
+    need(cli_stdout == EXPECTED_STDOUT, "Original CLI stdout changed")
+    certificate_bytes = (runtime / "certificates/complex-network.json").read_bytes()
+    need(certificate_bytes == reference_bytes, "Original CLI certificate bytes differ from the pinned reference")
+    need(sys.modules["complex_circuit"] is circuit_module and
+         namespace["ComplexSideCircuit"] is circuit_module.ComplexSideCircuit and
+         namespace["Checks"] is circuit_module.Checks and namespace["compile_roles"] is circuit_module.compile_roles and
+         namespace["verify_role_frames"] is observe_roles and namespace["serializable"] is observe_serializable,
+         "Caller used a different scientific module or observation binding")
+    need(captures.keys() == {"side", "full_return"}, "Missing exact caller observations")
+    c, checks, code, role_result = captures["side"]
+    full_return = captures["full_return"]
+    need(full_return["role_frames"] is role_result and full_return["upstream_commit"] == UPSTREAM,
+         "Role return or actual source verification boundary changed")
+    for name in ("side_construction", "checks_initialization", "compile_roles", "verify_map", "verify_labels",
+                 "verify_role_frames", "original_upstream_verify_sources", "full_log_integer_bounds",
+                 "original_serializable", "complete_original_cli"):
+        need(phases.rows.get(name, {}).get("calls") == 1, "Original phase was omitted or repeated: " + name)
+    imports = {}
+    for name in script_names - {"complex_network"}:
+        module = sys.modules.get(name)
+        expected_path = engine / "source/complex_circuit.py" if name == "complex_circuit" else runtime / "scripts" / (name + ".py")
+        need(module is not None and Path(module.__file__).resolve() == expected_path.resolve(), "Unpinned scientific import: " + name)
+        imports[name] = str(module.__file__)
+    if binding is not None:
+        binding["runtime_guard"].check()
+        need(binding["counters"] == {"complement_native": 238685, "complement_fallback": 0,
+                                      "gram_native": 59959, "gram_fallback": 0}, "Native full-call coverage changed")
+
+    side_result = {key: full_return[key] for key in ("circuit", "side_map", "labels", "role_frames")}
+    witness = {
+        "support": c.support, "args": c.args, "kind": c.kind, "active": sorted(c.active),
+        "pieces": [(target, node, (coefficient.numerator, coefficient.denominator)) for target, node, coefficient in c.pieces],
+        "labels": [(key, list(label.basis.items()), label.dim, label.key) for key, label in checks.cache.items()],
+        "code": {"roles": code["roles"], "gates": code["gates"], "sources": list(code["sources"].items()),
+                 "outputs": list(code["outputs"].items())},
+    }
+    side_output = output / "side-observations"
+    side_output.mkdir()
+    side_receipt = phases.call("identical_lossless_side_serialization", side_writer,
+                               side_output, side_result, witness, rank_calls)
+    complement_receipt = complement.receipt()
+    need(complement_receipt == COMPLEMENT_EXPECTED, "Every ordered complement observation must match PR5929")
+    full_typed_bytes = canonical(typed(full_return))
+    (output / "full-return.lossless.json").write_bytes(full_typed_bytes)
+    (output / "original-stdout.txt").write_text(cli_stdout, encoding="utf-8")
+    (output / "complement-transcript.json").write_bytes(canonical(complement_receipt) + b"\n")
+    science = {
+        "full_cli_certificate_sha256": sha(certificate_bytes), "full_cli_stdout_sha256": sha(cli_stdout.encode("utf-8")),
+        "full_return_lossless_sha256": sha(full_typed_bytes), "side": side_receipt,
+        "ordered_complements": complement_receipt, "upstream_commit": UPSTREAM,
+    }
+    anchor = {"schema": "gf2-full-network-anchor-v1", "base_commit": BASE, "source_pin_sha256": PIN_SHA,
+              "driver_sha256": REFERENCE_DRIVER_SHA, "engine_pins": ENGINE_PINS, "science": science}
+    if expected_anchor is not None:
+        need(anchor == expected_anchor, "Complete certificate/types/ordered observations differ from frozen anchor")
+    else:
+        (output / "anchor.json").write_bytes(canonical(anchor) + b"\n")
+    need(inventory(frozen, pins) == frozen_before and inventory(HERE / "engine", ENGINE_PINS) == engine_before,
+         "Immutable source bytes/modes changed")
+    need(inventory(runtime, pins, exact=False) == runtime_before and inventory(engine, ENGINE_PINS) == copied_engine_before,
+         "Runtime scientific source bytes/modes changed")
+    runtime_files = {str(path.relative_to(runtime)) for path in runtime.rglob("*") if path.is_file()}
+    need(runtime_files == set(pins) | {"certificates/complex-network.json"}, "Unexpected full-caller file side effect")
+    need(Path(__file__).read_bytes() == driver_before and reference.read_bytes() == reference_bytes and
+         (anchor_bytes is None or args.anchor.read_bytes() == anchor_bytes), "Driver/reference/anchor changed during run")
+    need(adapters.custody(ROUND, args.lanes) == new_custody_before, "New source custody changed")
+    # Snapshot final scientific bookkeeping before the deliberately terminal late hook.
+    bookkeeping_receipt = adapters.receipt(extensions)
+    data_receipt = phases.call("data_finalization", data_adapters.finish, data_state, binding)
+    phases.call('terminal_native_cleanup_and_checks', data_adapters.finish_before_late, data_state)
+    # LAST native/scientific call. No owner, root API, provider, or native guard follows.
+    phases.call('bootstrap_late_last', data_adapters.finish_late_last, data_state)
+    # Honest source custody and receipt work continue after the terminal boundary.
+    need(data_adapters.custody(ROUND) == data_custody_before, "Data source custody changed")
+    need(adapters.custody(ROUND, args.lanes) == new_custody_before, "Post-late original source custody changed")
+    need(inventory(frozen, pins) == frozen_before and inventory(HERE / "engine", ENGINE_PINS) == engine_before,
+         "Post-late immutable source custody changed")
+    need(inventory(runtime, pins, exact=False) == runtime_before and inventory(engine, ENGINE_PINS) == copied_engine_before,
+         "Post-late copied source custody changed")
+    need(Path(__file__).read_bytes() == driver_before and reference.read_bytes() == reference_bytes and
+         (anchor_bytes is None or args.anchor.read_bytes() == anchor_bytes), "Post-late driver/reference/anchor changed")
+    receipt = {
+        "new_source_custody": new_custody_before,
+        "status": "FULL_NETWORK_PROFILE_ANCHOR_PASS" if args.mode == "profile" else "FULL_NETWORK_COMPLETE_PASS",
+        "mode": args.mode, "lanes": args.data_lanes, "bookkeeping": bookkeeping_receipt,
+        "data_handling": data_receipt, "data_source_custody": data_custody_before,
+        "reference_driver_sha256": REFERENCE_DRIVER_SHA,
+        "science": science, "base_commit": BASE, "native_predecessor_pr": 5995,
+        "driver_sha256": sha(driver_before), "source_pin_sha256": PIN_SHA,
+        "frozen_custody": frozen_before, "engine_custody": engine_before, "scientific_imports": imports,
+        "build": build, "finite_controls": finite,
+        "initial_native_tcb": INITIAL_NATIVE_TCB_RECEIPT,
+        "native_packet": native_packet.receipt(packet),
+        "private_root_permission": "runtime-root is0755; copied input file modes are retained and checked; immutable stages are never chmodded",
+        "compiler_tmpdir": str(compiler_tmp),
+        "native_calls": None if binding is None else dict(binding["counters"]),
+        "phases": phases.rows, "driver_wall_seconds_after_initial_tcb_before_receipt": time.perf_counter() - START_WALL,
+        "process_and_compiler_cpu_seconds_before_receipt": cpu(),
+        "environment": {"python": sys.version, "executable": sys.executable, "platform": sys.platform},
+        "measurement": "Parent outer guard is authoritative and includes pristine root startup, initial native TCB authentication, early cold source authority capture and every factory dependency/product check, three cold metadata compilations plus original cold native/trace builds, every old and new control in BOTH arms, all candidate production admission/guards, IO and terminal cleanup. Baseline receives the complete same control union. Driver wall diagnostic starts after initial TCB and cold authority capture and is not total process wall. Broad phase samples are nested, not additive; VmRSS is current RSS and ru_maxrss is process high-water. Eager witnesses and original observations remain; full funding and equality gates are separate and currently closed.",
+        "scope": "Complete frozen historical complex-network CLI with retained observations; conditional certificate only. No bare-CLI factor, selected-frontier, new kappa or PR5864 speed claim.",
+    }
+    (output / "receipt.json").write_text(json.dumps(receipt, indent=2, sort_keys=True) + "\n")
+    sys.stdout.write(cli_stdout)
+    print(json.dumps({"status": receipt["status"], "mode": args.mode, "science": science,
+                      "wall_seconds": receipt["driver_wall_seconds_after_initial_tcb_before_receipt"],
+                      "cpu_seconds_with_compiler": receipt["process_and_compiler_cpu_seconds_before_receipt"],
+                      "phases": phases.rows}, sort_keys=True))
+
+
+def _run_with_stop_evidence():
+    try:
+        main()
+    except BaseException as primary_error:
+        # Nothing in cleanup or evidence assembly may replace this primary object.
+        try:
+            state = _EXECUTION['state']
+            cleanup_errors = []
+            try:
+                cleanup_errors = data_adapters.cleanup_owned(state)
+            except BaseException as cleanup_error:
+                cleanup_errors.append({'type': type(cleanup_error).__name__, 'message': str(cleanup_error)})
+            stop = {'schema': 'h25-combined-v2-stop-v1', 'status': 'STOP',
+                    'primary_error': {'type': type(primary_error).__name__, 'message': str(primary_error)},
+                    'primary_cause': None if primary_error.__cause__ is None else {
+                        'type': type(primary_error.__cause__).__name__, 'message': str(primary_error.__cause__)},
+                    'cleanup_errors': cleanup_errors,
+                    'data': data_adapters.stop_diagnostics(state),
+                    'native_packet': None if _EXECUTION['packet'] is None else native_packet.receipt(_EXECUTION['packet']),
+                    'initial_native_tcb': INITIAL_NATIVE_TCB_RECEIPT}
+            output = _EXECUTION['output']
+            if output is not None:
+                with (output / 'STOP.json').open('x', encoding='utf-8') as stream:
+                    stream.write(json.dumps(stop, sort_keys=True, indent=2) + '\n')
+        except BaseException as evidence_error:
+            # Parent retains an independent process transcript even if this fails.
+            try:
+                sys.stderr.write('STOP evidence write failed: ' + type(evidence_error).__name__ + '\n')
+            except BaseException:
+                pass
+        raise
+
+
+
+
+def _epoch_cli_boundary(phases, data_state, extensions, caller, stdout, invocation_token, old_argv):
+    _epoch_cli_primary = None
+    _epoch_cli_argv_error = None
+    _epoch_cli_disarm_error = None
+    _epoch_cli_retirement_error = None
+    _epoch_cli_record = None
+    try:
+        try:
+            _epoch_cli_record = {'primary': None, 'argv_error': None, 'disarm_error': None, 'retirement_error': None, 'outer_retirement_error': None, 'uncertain': False, 'argv_owner': old_argv, 'retirement_channel': {'started': False, 'error': None, 'journal_error': None, 'acknowledged': False}, 'outer_retirement_channel': {'started': False, 'error': None, 'journal_error': None, 'acknowledged': False}}
+            data_state['epoch_cli_cleanup'] = _epoch_cli_record
+            phases.call('final_private_environment_and_arming', data_adapters.arm, data_state, extensions)
+            if data_state['enabled']:
+                data_adapters.epoch_arm(data_state, invocation_token)
+            sys.argv = [str(caller)]
+            with redirect_stdout(stdout):
+                namespace = phases.call('complete_original_cli', runpy.run_path, str(caller), run_name='__main__')
+            return namespace
+        except BaseException as _epoch_cli_error:
+            _epoch_cli_primary = _epoch_cli_error
+            if _epoch_cli_record is not None:
+                _epoch_cli_record['primary'] = _epoch_cli_error
+            raise
+        finally:
+            try:
+                sys.argv = old_argv
+            except BaseException as _epoch_argv_error:
+                _epoch_cli_argv_error = _epoch_argv_error
+                if _epoch_cli_record is not None:
+                    _epoch_cli_record['argv_error'] = _epoch_argv_error
+                    _epoch_cli_record['uncertain'] = True
+                if _epoch_cli_primary is None:
+                    _epoch_cli_primary = _epoch_argv_error
+                    if _epoch_cli_record is not None:
+                        _epoch_cli_record['primary'] = _epoch_argv_error
+            try:
+                adapters.disarm(extensions)
+            except BaseException as _epoch_disarm_error:
+                _epoch_cli_disarm_error = _epoch_disarm_error
+                if _epoch_cli_record is not None:
+                    _epoch_cli_record['disarm_error'] = _epoch_disarm_error
+                    _epoch_cli_record['uncertain'] = True
+                if _epoch_cli_primary is None:
+                    _epoch_cli_primary = _epoch_disarm_error
+                    if _epoch_cli_record is not None:
+                        _epoch_cli_record['primary'] = _epoch_disarm_error
+                    raise
+            if _epoch_cli_argv_error is not None:
+                raise _epoch_cli_primary
+    finally:
+        try:
+            data_adapters.epoch_retire(data_state, 'whole-cli-terminal', _epoch_cli_primary, _epoch_cli_disarm_error, _epoch_cli_argv_error, None if _epoch_cli_record is None else _epoch_cli_record['retirement_channel'], 'inner')
+        except BaseException as _epoch_retirement_error:
+            _epoch_cli_retirement_error = _epoch_retirement_error
+            if _epoch_cli_record is not None:
+                _epoch_cli_record['retirement_error'] = _epoch_retirement_error
+                _epoch_cli_record['uncertain'] = True
+            if _epoch_cli_primary is None:
+                _epoch_cli_primary = _epoch_retirement_error
+                if _epoch_cli_record is not None:
+                    _epoch_cli_record['primary'] = _epoch_retirement_error
+                raise
+
+def main_epoch():
+    _epoch_invocation = object()
+    _epoch_driver_origin = data_adapters.epoch_driver_entry(_INITIAL_COLD_AUTHORITY, _INITIAL_COLD_CALLER_DESCRIPTOR, _INITIAL_EPOCH_BUNDLE[3], main_epoch, Phases, _epoch_invocation)
+    data_state = None
+    _epoch_primary = None
+    _epoch_outer_retirement_error = None
+    _epoch_outer_cleanup = None
+    try:
+        _epoch_outer_cleanup = {'primary': None, 'retirement_error': None, 'uncertain': False, 'attempted': False}
+        _EXECUTION['epoch_outer_cleanup'] = _epoch_outer_cleanup
+        parser = argparse.ArgumentParser(description=__doc__)
+        parser.add_argument('--frozen-root', type=Path, default=HERE / 'frozen')
+        parser.add_argument('--reference', type=Path, default=HERE / 'reference/certificates/complex-network.json')
+        parser.add_argument('--lanes', choices=('baseline', 'candidate'), required=True)
+        parser.add_argument('--finite-only', action='store_true')
+        parser.add_argument('--output', type=Path, required=True, help='New external directory; every write stays below it')
+        parser.add_argument('--anchor', type=Path, default=HERE / 'anchor.json')
+        args = parser.parse_args()
+        args.data_lanes = args.lanes
+        args.lanes = 'all'
+        if args.data_lanes == 'transport':
+            need(args.frozen_root == HERE / 'frozen' and args.reference == HERE / 'reference/certificates/complex-network.json' and (args.anchor == HERE / 'anchor.json'), 'Transport uses only the original fixed historical inputs')
+            data_adapters.transport(ROUND, HERE, args.output)
+            return
+        inventory = candidate_inventory if args.data_lanes == 'candidate' else original_inventory
+        args.mode = 'candidate'; _g12_selected_args(args)
+        need(args.finite_only or sys.flags.optimize == 0, 'Every full-caller mode requires original assertions')
+        need(sys.implementation.name == 'cpython' and sys.version_info[:2] == (3, 12), 'Frozen CPython 3.12 required')
+        data_adapters.require_execution_contract(args.data_lanes, args.finite_only)
+        need((args.mode == 'profile') == (args.anchor is None), 'Profile creates the anchor; both benchmark arms require --anchor')
+        frozen, reference = (args.frozen_root.resolve(), args.reference.resolve())
+        output = args.output.resolve()
+        need(str(output) == _INITIAL_OUTPUT and output.is_dir() and (not output.is_symlink()) and ({path.name for path in output.iterdir()} == {'initial-tcb-controls'}) and (output / 'initial-tcb-controls').is_dir() and (not (output / 'initial-tcb-controls').is_symlink()) and (not list((output / 'initial-tcb-controls').iterdir())), 'Early TCB output ownership or fresh control directory changed')
+        need(not output.is_relative_to(HERE) and (not output.is_relative_to(frozen)), 'Output must be outside immutable sources')
+        need(reference.is_file() and (not reference.is_symlink()), 'Reference certificate missing or symlinked')
+        source_pin_bytes = (HERE / 'SOURCE-PINS.json').read_bytes()
+        need(sha(source_pin_bytes) == PIN_SHA, 'Source inventory pin changed')
+        pins = json.loads(source_pin_bytes)
+        need(len(pins) == 32, 'Frozen closure must contain twelve scripts, manifest and nineteen payloads')
+        reference_bytes = reference.read_bytes()
+        need(sha(reference_bytes) == REFERENCE_SHA, 'Original full certificate reference changed')
+        driver_before = Path(__file__).read_bytes()
+        new_custody_before = adapters.custody(ROUND, args.lanes)
+        data_custody_before = data_adapters.custody(ROUND)
+        reference_driver_before = (HERE / 'full_driver.py').read_bytes()
+        need(sha(reference_driver_before) == REFERENCE_DRIVER_SHA, 'Reference driver pin changed')
+        anchor_bytes = None if args.anchor is None else args.anchor.read_bytes()
+        expected_anchor = None if anchor_bytes is None else json.loads(anchor_bytes)
+        if expected_anchor is not None:
+            need(expected_anchor.get('schema') == 'gf2-full-network-anchor-v1' and expected_anchor.get('base_commit') == BASE and (expected_anchor.get('source_pin_sha256') == PIN_SHA) and (expected_anchor.get('driver_sha256') == REFERENCE_DRIVER_SHA) and (expected_anchor.get('engine_pins') == ENGINE_PINS), 'Anchor source/driver/engine identity differs; no benchmark permitted')
+        _EXECUTION['output'] = output
+        compiler_tmp = output / 'compiler-tmp'
+        compiler_tmp.mkdir()
+        os.environ['TMPDIR'] = str(compiler_tmp)
+        phases = Phases()
+        (output / 'initial-native-tcb.json').write_bytes(canonical(INITIAL_NATIVE_TCB_RECEIPT) + b'\n')
+        (output / 'initial-tcb-controls' / 'receipt.json').write_bytes(canonical(INITIAL_NATIVE_TCB_CONTROLS) + b'\n')
+        frozen_before = phases.call('input_custody', inventory, frozen, pins)
+        engine_before = phases.call('engine_custody', inventory, HERE / 'engine', ENGINE_PINS)
+        manifest = json.loads((frozen / 'upstream/manifest.json').read_bytes())
+        need(manifest['commit'] == UPSTREAM and len(manifest['files']) == 19, 'Wrong pinned upstream manifest')
+        need({'upstream/' + name for name in manifest['files']} == {name for name in pins if name.startswith('upstream/') and name != 'upstream/manifest.json'}, 'Source verifier payload closure changed')
+        for name, info in manifest['files'].items():
+            need(info['sha256'] == pins['upstream/' + name][0], 'Manifest payload hash differs from independent frozen pin')
+        runtime, engine = (output / 'runtime-root', output / 'engine')
+        phases.call('fresh_root_copy', shutil.copytree, frozen, runtime)
+        phases.call('fresh_engine_copy', shutil.copytree, HERE / 'engine', engine)
+        runtime.chmod(493)
+        (runtime / 'certificates').mkdir()
+        runtime_before = inventory(runtime, pins)
+        copied_engine_before = inventory(engine, ENGINE_PINS)
+        need(runtime_before == frozen_before and copied_engine_before == engine_before, 'Copy changed input bytes or modes')
+        for name in ('complex_network.py', 'complex_circuit.py'):
+            need((engine / 'source' / name).read_bytes() == (runtime / 'scripts' / name).read_bytes(), 'PR5929 engine/source differs from the full caller closure')
+        script_names = {Path(name).stem for name in pins if name.startswith('scripts/')}
+        engine_names = {'native_backend', 'finite_controls', 'compare_side_verifier', 'profile_side_verifier'}
+        need(not (script_names | engine_names) & set(sys.modules), 'Scientific module already loaded; fresh process required')
+        sys.path[:0] = [str(engine), str(runtime / 'scripts')]
+        _ca_args = (str(engine / 'native_backend.py'), ENGINE_PINS['native_backend.py'], 'native_backend')
+        _ca_kwargs = {'kind': 'backend'}
+        _ca_desc = _INITIAL_COLD_CALLER_DESCRIPTOR
+        _ca_p = _ca_desc[5]
+        _ca_type, _ca_function, _ca_id = (_ca_p[0], _ca_p[1], _ca_p[2])
+        _ca_error, _ca_value_error, _ca_zip = (_ca_p[7], _ca_p[8], _ca_p[18])
+        _ca_dispatch, _ca_record = (_ca_desc[2], _ca_desc[3])
+        if _INITIAL_COLD_AUTHORITY is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+            raise _ca_error('Cold authority caller dispatcher identity differs')
+        for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+            if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+                raise _ca_error('Cold authority caller dispatcher environment differs')
+        if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+            raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+        for _ca_cell, _ca_expected in _ca_record[8]:
+            try:
+                _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+            except _ca_value_error:
+                raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+            if _ca_observed_id != _ca_id(_ca_expected):
+                raise _ca_error('Cold authority caller dispatcher cell differs')
+        backend, backend_handle = phases.call('cold_engine_import', _ca_dispatch, 0, *_ca_args, **_ca_kwargs)
+        _ca_args = (_INITIAL_INTEGRATION_HANDLES['_h25_data_cache'], 'capture_backend_factory_environment', backend)
+        _ca_kwargs = {'cold_authority': _INITIAL_COLD_AUTHORITY, 'cold_caller_descriptor': _INITIAL_COLD_CALLER_DESCRIPTOR, 'backend_handle': backend_handle, 'cache_handle': _INITIAL_INTEGRATION_HANDLES['_h25_data_cache'], 'bootstrap_root': _CAPTURED_BOOTSTRAP_ROOT, 'bootstrap_capability': _CAPTURED_BOOTSTRAP_CAPABILITY, 'bootstrap_api': _CAPTURED_BOOTSTRAP_API}
+        _ca_desc = _INITIAL_COLD_CALLER_DESCRIPTOR
+        _ca_p = _ca_desc[5]
+        _ca_type, _ca_function, _ca_id = (_ca_p[0], _ca_p[1], _ca_p[2])
+        _ca_error, _ca_value_error, _ca_zip = (_ca_p[7], _ca_p[8], _ca_p[18])
+        _ca_dispatch, _ca_record = (_ca_desc[2], _ca_desc[3])
+        if _INITIAL_COLD_AUTHORITY is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+            raise _ca_error('Cold authority caller dispatcher identity differs')
+        for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+            if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+                raise _ca_error('Cold authority caller dispatcher environment differs')
+        if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+            raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+        for _ca_cell, _ca_expected in _ca_record[8]:
+            try:
+                _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+            except _ca_value_error:
+                raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+            if _ca_observed_id != _ca_id(_ca_expected):
+                raise _ca_error('Cold authority caller dispatcher cell differs')
+        factory_environment = phases.call('cold_backend_factory_environment', _ca_dispatch, 1, *_ca_args, **_ca_kwargs)
+        comparison = importlib.import_module('compare_side_verifier')
+        native = None
+        finite = None
+        build = None
+        if args.mode == 'candidate':
+            packet = phases.call('cold_native_metadata_build', native_packet.prepare, ROUND, output, data_custody_before, _CAPTURED_BOOTSTRAP_ROOT, _CAPTURED_BOOTSTRAP_CAPABILITY, _CAPTURED_BOOTSTRAP_API)
+            _EXECUTION['packet'] = packet
+            packet['controls']['native_initial_tcb'] = INITIAL_NATIVE_TCB_CONTROLS
+            native, build = phases.call('cold_compile_link_load', backend.build_native, output / 'cold-build')
+            _ca_args = (_INITIAL_INTEGRATION_HANDLES['guarded_adapters_v4'], 'prepare', ROUND, backend, backend_handle, native, output, args.lanes, phases, _INITIAL_COLD_AUTHORITY, _INITIAL_INTEGRATION_HANDLES['adapters'], new_custody_before)
+            _ca_kwargs = {'cold_caller_descriptor': _INITIAL_COLD_CALLER_DESCRIPTOR}
+            _ca_desc = _INITIAL_COLD_CALLER_DESCRIPTOR
+            _ca_p = _ca_desc[5]
+            _ca_type, _ca_function, _ca_id = (_ca_p[0], _ca_p[1], _ca_p[2])
+            _ca_error, _ca_value_error, _ca_zip = (_ca_p[7], _ca_p[8], _ca_p[18])
+            _ca_dispatch, _ca_record = (_ca_desc[2], _ca_desc[3])
+            if _INITIAL_COLD_AUTHORITY is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+                raise _ca_error('Cold authority caller dispatcher identity differs')
+            for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+                if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+                    raise _ca_error('Cold authority caller dispatcher environment differs')
+            if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+                raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+            for _ca_cell, _ca_expected in _ca_record[8]:
+                try:
+                    _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+                except _ca_value_error:
+                    raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+                if _ca_observed_id != _ca_id(_ca_expected):
+                    raise _ca_error('Cold authority caller dispatcher cell differs')
+            extensions = phases.call('new_adapter_preparation', _ca_dispatch, 1, *_ca_args, **_ca_kwargs)
+            phases.call('all_native_metadata_and_preload_controls', native_packet.run_controls, packet, phases)
+            finite = phases.call('all_native_finite_independent_controls', importlib.import_module('finite_controls').run_controls, native)
+            phases.call('all_new_controls', adapters.run_controls, extensions, backend, native, phases)
+            _ca_args = (_INITIAL_INTEGRATION_HANDLES['data_adapters'], 'prepare', ROUND, backend, comparison, extensions, args.data_lanes, data_custody_before, packet)
+            _ca_kwargs = {'authority': _INITIAL_COLD_AUTHORITY, 'cold_caller_descriptor': _INITIAL_COLD_CALLER_DESCRIPTOR, 'integration_handles': _INITIAL_INTEGRATION_HANDLES, 'backend_handle': backend_handle, 'adapters_handle': _INITIAL_INTEGRATION_HANDLES['adapters'], 'setup_handle': _INITIAL_INTEGRATION_HANDLES['guarded_adapters_v4'], 'factory_environment': factory_environment, 'preloaded_cache': (_INITIAL_INTEGRATION_MODULES['_h25_data_cache'], _INITIAL_INTEGRATION_HANDLES['_h25_data_cache'])}
+            _ca_desc = _INITIAL_COLD_CALLER_DESCRIPTOR
+            _ca_p = _ca_desc[5]
+            _ca_type, _ca_function, _ca_id = (_ca_p[0], _ca_p[1], _ca_p[2])
+            _ca_error, _ca_value_error, _ca_zip = (_ca_p[7], _ca_p[8], _ca_p[18])
+            _ca_dispatch, _ca_record = (_ca_desc[2], _ca_desc[3])
+            if _INITIAL_COLD_AUTHORITY is not _ca_desc[1] or _ca_dispatch is not _ca_record[0] or _ca_type(_ca_dispatch) is not _ca_function:
+                raise _ca_error('Cold authority caller dispatcher identity differs')
+            for (_ca_name, _ca_getter), _ca_expected in _ca_zip(_ca_p[4], _ca_record[1:7]):
+                if _ca_id(_ca_getter(_ca_dispatch, _ca_function)) != _ca_id(_ca_expected):
+                    raise _ca_error('Cold authority caller dispatcher environment differs')
+            if _ca_record[4] is not None or _ca_record[5] is not None or _ca_record[7]:
+                raise _ca_error('Cold authority caller dispatcher defaults contract differs')
+            for _ca_cell, _ca_expected in _ca_record[8]:
+                try:
+                    _ca_observed_id = _ca_id(_ca_p[6](_ca_cell, _ca_p[5]))
+                except _ca_value_error:
+                    raise _ca_error('Cold authority caller dispatcher cell became empty') from None
+                if _ca_observed_id != _ca_id(_ca_expected):
+                    raise _ca_error('Cold authority caller dispatcher cell differs')
+            data_state = phases.call('data_adapter_preparation', _ca_dispatch, 1, *_ca_args, **_ca_kwargs)
+            _EXECUTION['state'] = data_state
+            phases.call('all_data_controls', data_adapters.run_controls, data_state, native, output, phases, HERE / 'full_driver.py', candidate_inventory, extensions)
+            (output / 'finite-controls.json').write_bytes(canonical(finite) + b'\n')
+        if args.finite_only:
+            phases.call('terminal_native_cleanup_and_checks', data_adapters.finish_before_late, data_state)
+            phases.call('bootstrap_late_last', data_adapters.finish_late_last, data_state)
+            need(inventory(frozen, pins) == frozen_before and inventory(HERE / 'engine', ENGINE_PINS) == engine_before, 'Finite immutable source custody changed')
+            need(inventory(runtime, pins) == runtime_before and inventory(engine, ENGINE_PINS) == copied_engine_before, 'Finite copied source custody changed')
+            need(adapters.custody(ROUND, args.lanes) == new_custody_before, 'Finite new source custody changed')
+            need(data_adapters.custody(ROUND) == data_custody_before, 'Finite data source custody changed')
+            result = {'status': 'H25_DATA_HANDLING_FINITE_PASS', 'lanes': args.data_lanes, 'data_handling': data_adapters.finite_receipt(data_state), 'data_source_custody': data_custody_before, 'optimized': sys.flags.optimize, 'original_controls': finite, 'new_controls': extensions['controls'], 'new_source_custody': new_custody_before, 'driver_sha256': sha(driver_before), 'initial_native_tcb': INITIAL_NATIVE_TCB_RECEIPT, 'native_packet': native_packet.receipt(packet), 'reference_driver_sha256': REFERENCE_DRIVER_SHA, 'phases': phases.rows}
+            (output / 'receipt.json').write_text(json.dumps(result, indent=2, sort_keys=True) + '\n')
+            print(json.dumps(result, sort_keys=True))
+            return
+        if data_state['enabled']:
+            circuit_module, _epoch_load_ticket = phases.call('cold_complex_module_load', data_adapters.epoch_load, data_state, _INITIAL_EPOCH_BUNDLE[3])
+        else:
+            circuit_module = phases.call('cold_complex_module_load', backend.load_source, 'complex_circuit')
+        sys.modules['complex_circuit'] = circuit_module
+        rank_calls = []
+        complement = extensions['trace_type'](circuit_module.Label)
+        if data_state['enabled']:
+            _epoch_context = {'data_handle': _INITIAL_INTEGRATION_HANDLES['data_adapters'], 'data_module': data_adapters, 'phase_function': Phases.wrap, 'phase_class': Phases, 'phase_owner': phases, 'driver_function': main_epoch, 'driver_record': _epoch_driver_origin, 'invocation_token': _epoch_invocation, 'disposition_state': data_state}
+            phases.call('private_set_and_data_adapter_installation', data_adapters.install_epoch_circuit, data_state, extensions, circuit_module, comparison, _INITIAL_EPOCH_BUNDLE[3], _epoch_load_ticket, _epoch_context)
+        else:
+            phases.call('private_set_and_data_adapter_installation', data_adapters.install_circuit, data_state, extensions, circuit_module, comparison)
+        side_writer = data_adapters.scientific_writer(data_state)
+        binding = None
+        captures = {}
+        if data_state['enabled']:
+            data_adapters.epoch_phase_wrap(data_state, phases, 'circuit', circuit_module.ComplexSideCircuit, '__init__', 'side_construction')
+        else:
+            phases.wrap(circuit_module.ComplexSideCircuit, '__init__', 'side_construction')
+        if data_state['enabled']:
+            _g12_checks_pair = data_adapters.epoch_phase_wrap(data_state, phases, 'checks', circuit_module.Checks, '__init__', 'checks_initialization')
+        else:
+            phases.wrap(circuit_module.Checks, '__init__', 'checks_initialization')
+        if data_state['enabled']:
+            _g12_code_pair = data_adapters.epoch_phase_wrap(data_state, phases, 'module', circuit_module, 'compile_roles', 'compile_roles')
+        else:
+            phases.wrap(circuit_module, 'compile_roles', 'compile_roles')
+        if data_state['enabled']:
+            data_adapters.epoch_phase_wrap(data_state, phases, 'checks', circuit_module.Checks, 'verify_map', 'verify_map')
+        else:
+            phases.wrap(circuit_module.Checks, 'verify_map', 'verify_map')
+        if data_state['enabled']:
+            _g12_label_pair = data_adapters.epoch_phase_wrap(data_state, phases, 'checks', circuit_module.Checks, 'verify_labels', 'verify_labels')
+        else:
+            phases.wrap(circuit_module.Checks, 'verify_labels', 'verify_labels')
+        original_roles = circuit_module.verify_role_frames
+
+        def observe_roles(c, checks, code=None):
+            need('side' not in captures and code is not None, 'Unexpected role-frame invocation')
+            result = phases.call('verify_role_frames', original_roles, c, checks, code)
+            captures['side'] = (c, checks, code, result)
+            return result
+        if data_state['enabled']:
+            data_adapters.epoch_role_observer(data_state, observe_roles)
+        else:
+            circuit_module.verify_role_frames = observe_roles
+        certify = phases.call('cold_certify_import', importlib.import_module, 'certify')
+        phases.wrap(certify, 'verify_sources', 'original_upstream_verify_sources')
+        prepare = phases.call('cold_prepare_import', importlib.import_module, 'prepare_layers')
+        search = importlib.import_module('search_network')
+        phases.wrap(search, 'log_integer_bounds', 'full_log_integer_bounds')
+        original_serializable = prepare.serializable
+        depth = 0
+
+        def observe_serializable(value):
+            nonlocal depth
+            outer = depth == 0
+            if outer:
+                need('full_return' not in captures and type(value) is dict, 'Unexpected outer serialization')
+                captures['full_return'] = value
+            depth += 1
+            try:
+                if outer:
+                    return phases.call('original_serializable', original_serializable, value)
+                return original_serializable(value)
+            finally:
+                depth -= 1
+        prepare.serializable = observe_serializable
+        binding = phases.call('final_native_binding', data_adapters.bind_epoch_native if data_state['enabled'] else data_adapters.bind_native, data_state, backend, circuit_module, native, rank_calls, complement)
+        phases.call('construction_lease_sealing', data_adapters.seal, data_state)
+        phases.call('private_set_lease_sealing', adapters.seal, extensions)
+        if data_state['enabled']:
+            data_adapters.epoch_seal(data_state)
+        caller = runtime / 'scripts/complex_network.py'
+        old_argv = sys.argv
+        stdout = io.StringIO(); _g12_bind_locals(data_state, extensions, circuit_module, binding, phases, _epoch_invocation, _g12_checks_pair, _g12_code_pair, _g12_label_pair, caller, rank_calls, complement, captures, stdout, frozen, runtime, engine, output, reference, reference_bytes, driver_before, pins, frozen_before, engine_before, runtime_before, copied_engine_before, script_names, new_custody_before, data_custody_before, args.anchor, anchor_bytes)
+        namespace = _epoch_cli_boundary(phases, data_state, extensions, caller, stdout, _epoch_invocation, old_argv)
+        cli_stdout = stdout.getvalue()
+        need(cli_stdout == EXPECTED_STDOUT, 'Original CLI stdout changed')
+        certificate_bytes = (runtime / 'certificates/complex-network.json').read_bytes()
+        need(certificate_bytes == reference_bytes, 'Original CLI certificate bytes differ from the pinned reference')
+        need(sys.modules['complex_circuit'] is circuit_module and namespace['ComplexSideCircuit'] is circuit_module.ComplexSideCircuit and (namespace['Checks'] is circuit_module.Checks) and (namespace['compile_roles'] is circuit_module.compile_roles) and (namespace['verify_role_frames'] is observe_roles) and (namespace['serializable'] is observe_serializable), 'Caller used a different scientific module or observation binding')
+        need(captures.keys() == {'side', 'full_return'}, 'Missing exact caller observations')
+        c, checks, code, role_result = captures['side']
+        full_return = captures['full_return']
+        need(full_return['role_frames'] is role_result and full_return['upstream_commit'] == UPSTREAM, 'Role return or actual source verification boundary changed')
+        for name in ('side_construction', 'checks_initialization', 'compile_roles', 'verify_map', 'verify_labels', 'verify_role_frames', 'original_upstream_verify_sources', 'full_log_integer_bounds', 'original_serializable', 'complete_original_cli'):
+            need(phases.rows.get(name, {}).get('calls') == 1, 'Original phase was omitted or repeated: ' + name)
+        imports = {}
+        for name in script_names - {'complex_network'}:
+            module = sys.modules.get(name)
+            expected_path = engine / 'source/complex_circuit.py' if name == 'complex_circuit' else runtime / 'scripts' / (name + '.py')
+            need(module is not None and Path(module.__file__).resolve() == expected_path.resolve(), 'Unpinned scientific import: ' + name)
+            imports[name] = str(module.__file__)
+        if binding is not None:
+            binding['runtime_guard'].check()
+            need(binding['counters'] == {'complement_native': 238685, 'complement_fallback': 0, 'gram_native': 59959, 'gram_fallback': 0}, 'Native full-call coverage changed')
+        side_result = {key: full_return[key] for key in ('circuit', 'side_map', 'labels', 'role_frames')}
+        witness = {'support': c.support, 'args': c.args, 'kind': c.kind, 'active': sorted(c.active), 'pieces': [(target, node, (coefficient.numerator, coefficient.denominator)) for target, node, coefficient in c.pieces], 'labels': [(key, list(label.basis.items()), label.dim, label.key) for key, label in checks.cache.items()], 'code': {'roles': code['roles'], 'gates': code['gates'], 'sources': list(code['sources'].items()), 'outputs': list(code['outputs'].items())}}
+        side_output = output / 'side-observations'
+        side_output.mkdir()
+        side_receipt = phases.call('identical_lossless_side_serialization', side_writer, side_output, side_result, witness, rank_calls)
+        complement_receipt = complement.receipt()
+        need(complement_receipt == COMPLEMENT_EXPECTED, 'Every ordered complement observation must match PR5929')
+        full_typed_bytes = canonical(typed(full_return))
+        (output / 'full-return.lossless.json').write_bytes(full_typed_bytes)
+        (output / 'original-stdout.txt').write_text(cli_stdout, encoding='utf-8')
+        (output / 'complement-transcript.json').write_bytes(canonical(complement_receipt) + b'\n')
+        science = {'full_cli_certificate_sha256': sha(certificate_bytes), 'full_cli_stdout_sha256': sha(cli_stdout.encode('utf-8')), 'full_return_lossless_sha256': sha(full_typed_bytes), 'side': side_receipt, 'ordered_complements': complement_receipt, 'upstream_commit': UPSTREAM}
+        anchor = {'schema': 'gf2-full-network-anchor-v1', 'base_commit': BASE, 'source_pin_sha256': PIN_SHA, 'driver_sha256': REFERENCE_DRIVER_SHA, 'engine_pins': ENGINE_PINS, 'science': science}
+        if expected_anchor is not None:
+            need(anchor == expected_anchor, 'Complete certificate/types/ordered observations differ from frozen anchor')
+        else:
+            (output / 'anchor.json').write_bytes(canonical(anchor) + b'\n')
+        need(inventory(frozen, pins) == frozen_before and inventory(HERE / 'engine', ENGINE_PINS) == engine_before, 'Immutable source bytes/modes changed')
+        need(inventory(runtime, pins, exact=False) == runtime_before and inventory(engine, ENGINE_PINS) == copied_engine_before, 'Runtime scientific source bytes/modes changed')
+        runtime_files = {str(path.relative_to(runtime)) for path in runtime.rglob('*') if path.is_file()}
+        need(runtime_files == set(pins) | {'certificates/complex-network.json'}, 'Unexpected full-caller file side effect')
+        need(Path(__file__).read_bytes() == driver_before and reference.read_bytes() == reference_bytes and (anchor_bytes is None or args.anchor.read_bytes() == anchor_bytes), 'Driver/reference/anchor changed during run')
+        need(adapters.custody(ROUND, args.lanes) == new_custody_before, 'New source custody changed')
+        bookkeeping_receipt = adapters.receipt(extensions)
+        data_receipt = phases.call('data_finalization', data_adapters.finish, data_state, binding)
+        phases.call('terminal_native_cleanup_and_checks', data_adapters.finish_before_late, data_state)
+        phases.call('bootstrap_late_last', data_adapters.finish_late_last, data_state)
+        need(data_adapters.custody(ROUND) == data_custody_before, 'Data source custody changed')
+        need(adapters.custody(ROUND, args.lanes) == new_custody_before, 'Post-late original source custody changed')
+        need(inventory(frozen, pins) == frozen_before and inventory(HERE / 'engine', ENGINE_PINS) == engine_before, 'Post-late immutable source custody changed')
+        need(inventory(runtime, pins, exact=False) == runtime_before and inventory(engine, ENGINE_PINS) == copied_engine_before, 'Post-late copied source custody changed')
+        need(Path(__file__).read_bytes() == driver_before and reference.read_bytes() == reference_bytes and (anchor_bytes is None or args.anchor.read_bytes() == anchor_bytes), 'Post-late driver/reference/anchor changed')
+        receipt = {'new_source_custody': new_custody_before, 'status': 'FULL_NETWORK_PROFILE_ANCHOR_PASS' if args.mode == 'profile' else 'FULL_NETWORK_COMPLETE_PASS', 'mode': args.mode, 'lanes': args.data_lanes, 'bookkeeping': bookkeeping_receipt, 'data_handling': data_receipt, 'data_source_custody': data_custody_before, 'reference_driver_sha256': REFERENCE_DRIVER_SHA, 'science': science, 'base_commit': BASE, 'native_predecessor_pr': 5995, 'driver_sha256': sha(driver_before), 'source_pin_sha256': PIN_SHA, 'frozen_custody': frozen_before, 'engine_custody': engine_before, 'scientific_imports': imports, 'build': build, 'finite_controls': finite, 'initial_native_tcb': INITIAL_NATIVE_TCB_RECEIPT, 'native_packet': native_packet.receipt(packet), 'private_root_permission': 'runtime-root is0755; copied input file modes are retained and checked; immutable stages are never chmodded', 'compiler_tmpdir': str(compiler_tmp), 'native_calls': None if binding is None else dict(binding['counters']), 'phases': phases.rows, 'driver_wall_seconds_after_initial_tcb_before_receipt': time.perf_counter() - START_WALL, 'process_and_compiler_cpu_seconds_before_receipt': cpu(), 'environment': {'python': sys.version, 'executable': sys.executable, 'platform': sys.platform}, 'measurement': 'Parent outer guard is authoritative and includes pristine root startup, initial native TCB authentication, early cold source authority capture and every factory dependency/product check, three cold metadata compilations plus original cold native/trace builds, every old and new control in BOTH arms, all candidate production admission/guards, IO and terminal cleanup. Baseline receives the complete same control union. Driver wall diagnostic starts after initial TCB and cold authority capture and is not total process wall. Broad phase samples are nested, not additive; VmRSS is current RSS and ru_maxrss is process high-water. Eager witnesses and original observations remain; full funding and equality gates are separate and currently closed.', 'scope': 'Complete frozen historical complex-network CLI with retained observations; conditional certificate only. No bare-CLI factor, selected-frontier, new kappa or PR5864 speed claim.'}
+        (output / 'receipt.json').write_text(json.dumps(receipt, indent=2, sort_keys=True) + '\n')
+        sys.stdout.write(cli_stdout)
+        print(json.dumps({'status': receipt['status'], 'mode': args.mode, 'science': science, 'wall_seconds': receipt['driver_wall_seconds_after_initial_tcb_before_receipt'], 'cpu_seconds_with_compiler': receipt['process_and_compiler_cpu_seconds_before_receipt'], 'phases': phases.rows}, sort_keys=True))
+    except BaseException as _epoch_error:
+        _epoch_primary = _epoch_error
+        if _epoch_outer_cleanup is not None:
+            _epoch_outer_cleanup['primary'] = _epoch_error
+        raise
+    finally:
+        try:
+            if _epoch_outer_cleanup is not None:
+                _epoch_outer_cleanup['attempted'] = True
+            data_adapters.epoch_retire(data_state, 'whole-cli-terminal', _epoch_primary, None, None, None, 'outer')
+        except BaseException as _epoch_outer_error:
+            _epoch_outer_retirement_error = _epoch_outer_error
+            if _epoch_outer_cleanup is not None:
+                _epoch_outer_cleanup['retirement_error'] = _epoch_outer_error
+                _epoch_outer_cleanup['uncertain'] = True
+            if _epoch_primary is None:
+                _epoch_primary = _epoch_outer_error
+                if _epoch_outer_cleanup is not None:
+                    _epoch_outer_cleanup['primary'] = _epoch_outer_error
+                raise
+
+def _run_epoch_with_stop_evidence():
+    try:
+        main_epoch()
+    except BaseException as primary_error:
+        try:
+            state = _EXECUTION['state']
+            cleanup_errors = []
+            try:
+                cleanup_errors = data_adapters.epoch_cleanup_owned(state)
+            except BaseException as cleanup_error:
+                cleanup_errors.append({'type': type(cleanup_error).__name__, 'message': str(cleanup_error)})
+            stop = {'schema': 'h25-combined-v2-stop-v1', 'status': 'STOP', 'primary_error': {'type': type(primary_error).__name__, 'message': str(primary_error)}, 'primary_cause': None if primary_error.__cause__ is None else {'type': type(primary_error.__cause__).__name__, 'message': str(primary_error.__cause__)}, 'cleanup_errors': cleanup_errors, 'data': data_adapters.epoch_stop_diagnostics(state), 'native_packet': None if _EXECUTION['packet'] is None else native_packet.receipt(_EXECUTION['packet']), 'initial_native_tcb': INITIAL_NATIVE_TCB_RECEIPT}
+            output = _EXECUTION['output']
+            if output is not None:
+                with (output / 'STOP.json').open('x', encoding='utf-8') as stream:
+                    stream.write(json.dumps(stop, sort_keys=True, indent=2) + '\n')
+        except BaseException as evidence_error:
+            try:
+                sys.stderr.write('STOP evidence write failed: ' + type(evidence_error).__name__ + '\n')
+            except BaseException:
+                pass
+        raise
+
+
+# BEGIN G12 EXACT COMMON SOURCE
+# G12 common scientific projection. SOURCE ONLY; appended verbatim to each
+# independently source-authenticated selected driver, before its entry point.
+# Uses that driver's original Fraction and canonical functions. No data/payload
+# is fabricated here and no backend/native counters are compared by P07.
+_G12_COMMON_SCHEMA = 'g12-original-remainder-common-v1'
+_G12_SUFFIX_PHASES = ('verify_role_frames', 'full_log_integer_bounds',
+                      'original_upstream_verify_sources', 'original_serializable',
+                      'complete_original_cli')
+_G12_SCIENTIFIC_PINS = (
+    'd623617f7c5cb3189580883a8ab30c0bd3832688ae3f1f0c1f881bbbbff8e0c1',
+    '0da395e67ac04fa213494e71012c1b19b544596d34cdce5a3b172b1fb6af5f1b',
+    '88bba3caf5975f30fa7abceaea9454110cf3b069233e8241a2ca13d1dff171a7',
+    'adc7f1241b42e322a6451854ab7e4b4c146bf78a')
+
+
+def _g12_primitive(value):
+    """Lossless tagged exact builtin structures; never invoke foreign equality."""
+    kind = type(value)
+    if kind is Fraction:
+        return ['Fraction', str(value.numerator), str(value.denominator)]
+    if value is None:
+        return ['None']
+    if kind is bool:
+        return ['bool', value]
+    if kind is int:
+        return ['int', str(value)]
+    if kind is str:
+        return ['str', value]
+    if kind is bytes:
+        return ['bytes', value.hex()]
+    if kind is float:
+        return ['float', value.hex()]
+    if kind is tuple or kind is list:
+        return [kind.__name__, [_g12_primitive(item) for item in value]]
+    if kind is dict:
+        return ['dict', [[_g12_primitive(key), _g12_primitive(item)]
+                         for key, item in value.items()]]
+    raise TypeError('G12 common projection requires exact original primitive types')
+
+
+def _g12_bytes(value):
+    return canonical(_g12_primitive(value))
+
+
+def _g12_code_snapshot(code):
+    # Reject custom key/equality domains before inspecting the finite code map.
+    need(type(code) is dict and all(type(key) is str for key in code),
+         'G12 actual original code must be an exact string-keyed dict')
+    need(set(code) == {'roles', 'gates', 'sources', 'outputs'},
+         'G12 original code field set changed')
+    need(type(code['roles']) is int and code['roles'] > 0 and
+         type(code['gates']) is list and type(code['sources']) is dict and
+         type(code['outputs']) is dict, 'G12 original code containers changed')
+    for gate in code['gates']:
+        need(type(gate) is tuple and len(gate) == 3 and type(gate[0]) is int and
+             type(gate[1]) is tuple and type(gate[2]) is tuple and
+             all(type(slot) is int for slot in gate[1] + gate[2]),
+             'G12 original gate primitive types changed')
+    for source, slot in code['sources'].items():
+        need(type(source) is tuple and len(source) == 3 and
+             all(type(point) is int for point in source) and type(slot) is int,
+             'G12 original source primitive types changed')
+    need(all(type(index) is int and type(slot) is int
+             for index, slot in code['outputs'].items()),
+         'G12 original output primitive types changed')
+    return _g12_bytes(code)
+
+
+def _g12_remaining_count(code):
+    # Source-derived count after successful unchanged optimize0 role function;
+    # this is not a per-assert execution trace.
+    _g12_code_snapshot(code)
+    return (2 * sum(len(set(ins + outs)) for _, ins, outs in code['gates']) +
+            len(code['outputs']) + code['roles'] + len(code['sources']))
+
+
+def _g12_common_outputs(code, code_before, role_result, full_return,
+                        certificate_bytes, stdout_text, suffix_phases):
+    need(type(code_before) is bytes and _g12_code_snapshot(code) == code_before,
+         'G12 original code changed within the same invocation')
+    need(type(full_return) is dict and
+         all(type(key) is str for key in full_return) and
+         full_return.get('role_frames') is role_result,
+         'G12 original role/full-return identity relation changed')
+    need(type(certificate_bytes) is bytes and type(stdout_text) is str and
+         type(suffix_phases) is tuple and
+         all(type(name) is str for name in suffix_phases) and
+         suffix_phases == _G12_SUFFIX_PHASES,
+         'G12 actual original suffix outputs/phase completions changed')
+    return _g12_bytes((_G12_COMMON_SCHEMA, _G12_SCIENTIFIC_PINS, 25, (0, 2, 1),
+                       code_before, role_result, full_return, certificate_bytes,
+                       stdout_text, suffix_phases))
+
+# END G12 EXACT COMMON SOURCE
+# BEGIN G12 EXACT CANDIDATE SUPPORT
+# Fixed G12 source-control support, appended to the selected epoch driver.
+# SOURCE ONLY. No source selection, FULL approval or execution is supplied here.
+import types as _g12_types
+import traceback as _g12_traceback
+
+_G12_SELECTED_CASE = 'N22'
+_G12_SELECTED_HELPER_PIN = 'fcffe77b6a84d5b422b03e3d068924a701c1594cdb9ec305115827e3fad7d4b6'
+_G12_TRANSPORT_SOURCE_PIN = None
+_G12_CONTINUATION = {'started': False, 'step': 'EMPTY', 'ready': False,
+                     'helper_handle': None, 'helper_module': None, 'helper_function': None,
+                     'transport_handle': None, 'reference': None, 'suite': None,
+                     'generator': None, 'generator_frame': None, 'observed': None,
+                     'context': None, 'marker': None, 'primary': None,
+                     'secondary': [], 'secondary_clear': True,
+                     'frame_close_error': None, 'terminal_observation_error': None,
+                     'adapter_exit_error': None, 'suffix_phases': [], 'store_entries': 0,
+                     'first_advances': 0, 'second_advances': 0, 'close_attempts': 0}
+
+
+class _G12ControlCompletion(RuntimeError):
+    """Only the exact recorded object is this selected control's completion."""
+
+
+def _g12_cold(index, *args):
+    descriptor = _INITIAL_COLD_CALLER_DESCRIPTOR
+    need(type(descriptor) is tuple and len(descriptor) == 6 and
+         descriptor[1] is _INITIAL_COLD_AUTHORITY and type(index) is int and index in (0, 1, 2),
+         'G12 original cold operation/descriptor differs')
+    primitive, function, record = descriptor[5], descriptor[2], descriptor[3]
+    need(type(primitive) is tuple and len(primitive) == 19 and primitive[0] is type and
+         primitive[1] is _g12_types.FunctionType and primitive[2] is id and primitive[18] is zip and
+         type(function) is primitive[1] and function is record[0],
+         'G12 original cold caller primitives differ')
+    for (_, getter), expected in primitive[18](primitive[4], record[1:7]):
+        need(getter(function, primitive[1]) is expected, 'G12 cold dispatcher field changed')
+    need(record[4] is None and record[5] is None and not record[7], 'G12 cold dispatcher defaults changed')
+    for cell, expected in record[8]:
+        need(primitive[6](cell, primitive[5]) is expected, 'G12 cold dispatcher closure changed')
+    return function(index, *args)
+
+
+def _g12_helper_current():
+    record = _G12_CONTINUATION
+    source = _g12_cold(2, record['helper_handle'])
+    module = record['helper_module']
+    need(source[1] is module and source[2] is module.__dict__ and
+         source[5] == _G12_SELECTED_HELPER_PIN and
+         module.__dict__.get(_G12_SELECTED_CASE) is record['helper_function'] and
+         record['helper_function'].__code__ is record['helper_code'],
+         'G12 selected actual helper source/callable changed')
+    suite = record['suite']
+    need(record['state']['epoch_suite'] is suite and suite.context['driver_function'] is main_epoch and
+         suite.context['phase_owner'] is record['phases'] and
+         suite.context['invocation_token'] is record['invocation_token'] and
+         suite.generation is record['generation'] and suite.owner is record['native_owner'],
+         'G12 selected suite/driver/phase/token changed')
+    # Direct source-owned names extend both captured driver and C3 handler graphs
+    # to the actual outer entry, exit controller and terminal custody predicate.
+    need(type(_g12_continuation_entry) is _g12_types.FunctionType and
+         _g12_continuation_entry.__globals__ is globals() and
+         type(_g12_after_original_exit) is _g12_types.FunctionType and
+         _g12_after_original_exit.__globals__ is globals() and
+         type(_g12_original_terminal_custody) is _g12_types.FunctionType and
+         _g12_original_terminal_custody.__globals__ is globals(),
+         'G12 actual outer entry/exit/custody source owner changed')
+    suite.current()
+
+
+def _g12_generator_shape(suspended):
+    record = _G12_CONTINUATION
+    generator, context = record['generator'], record['context']
+    need(type(generator) is record['generator_type'] and generator.gi_code is record['helper_code'] and
+         generator.gi_running is False and generator.gi_yieldfrom is None and
+         generator.gi_suspended is suspended and generator.gi_frame is record['generator_frame'] and
+         generator.gi_frame is not None and generator.gi_frame.f_globals is record['helper_module'].__dict__,
+         'G12 P07 exact generator/frame/source shape changed')
+    local = generator.gi_frame.f_locals
+    need(type(local) is dict and local.get('c') is context,
+         'G12 P07 generator context identity changed')
+    if suspended:
+        need(local.get('observed') is record['observed'], 'G12 P07 suspended observation identity changed')
+    else:
+        need('observed' not in local, 'G12 P07 body already ran before selected first advance')
+
+
+def _g12_selected_store(suite, original_commit, site, checks):
+    record = _G12_CONTINUATION
+    if record['step'] != 'EXPECT_STORE':
+        return original_commit(site, checks)
+    need(record['ready'] is True and suite is record['suite'] and site == 'C3' and
+         type(site) is str and checks is record['checks'] and
+         type(original_commit) is _g12_types.MethodType and original_commit.__self__ is suite and
+         original_commit.__func__ is type(suite).__dict__['commit'] and record['store_entries'] == 0,
+         'G12 selected original C3 continuation owner changed')
+    _g12_helper_current()
+    pending = suite.pending
+    need(type(pending) is dict and pending.get('site') == 'C3' and pending.get('checks') is checks and
+         type(pending.get('key')) is tuple and pending['key'] == ('perp', (0, 2, 1)) and
+         type(pending.get('label')) is suite.label and
+         checks.cache.get(('perp', (0, 2, 1))) is pending['label'] and
+         suite.active is True and suite.terminal is False and suite.request_live is None and
+         type(suite.registry) is dict and len(suite.registry) == 85196,
+         'G12 requires actual pending extra C3 store at original capacity')
+    record['store_entries'] = 1
+    record['pending_store'] = pending
+    record['stored_label'] = pending['label']
+    context = record['context']
+    need('remaining_original_case_count' not in context and 'remaining_original_outputs' not in context,
+         'G12 candidate remainder fields must be absent before actual original remainder')
+    try:
+        record['step'] = 'HELPER_ENTERED'
+        if _G12_SELECTED_CASE == 'P07':
+            generator = record['helper_function'](context)
+            need(type(generator) is record['generator_type'], 'G12 selected P07 did not return its genuine generator')
+            record['generator'], record['generator_frame'] = generator, generator.gi_frame
+            _g12_generator_shape(False)
+            _g12_helper_current()
+            need(record['first_advances'] == 0, 'G12 P07 first advance repeated')
+            record['first_advances'] = 1
+            try:
+                observed = next(generator)
+            except StopIteration as early:
+                raise RuntimeError('G12 P07 completed before original CLI remainder') from early
+            record['observed'] = observed
+            _g12_generator_shape(True)
+            record['step'] = 'P07_SUSPENDED'
+        else:
+            need(_G12_SELECTED_CASE == 'N22', 'G12 source selected an undeclared helper')
+            _g12_helper_current()
+            record['observed'] = record['helper_function'](context)
+            record['step'] = 'N22_RETURNED'
+        need(type(record['observed']) is dict and
+             all(type(key) is str for key in record['observed']) and
+             set(record['observed']) == {'value', 'capacity_retirements', 'owner'} and
+             suite.terminal is True and suite.active is False and not suite.registry and
+             suite.pending is None and suite.request_live is None,
+             'G12 original N22 did not return its exact terminal continuation observation')
+        # N22 performed the sole original commit. Never call it again here.
+        return None
+    except BaseException as primary:
+        if record['primary'] is None:
+            record['primary'] = primary
+        raise
+
+
+
+def _g12_selected_args(args):
+    need(args.data_lanes == 'candidate' and args.finite_only is False and sys.flags.optimize == 0,
+         'G12 selected control requires the original full candidate/assertion scope')
+
+def _g12_bind_locals(state, extensions, module, binding, phases, invocation_token,
+                      checks_pair, code_pair, label_pair, caller, rank_calls, trace,
+                      captures, stdout, frozen, runtime, engine, output, reference,
+                      reference_bytes, driver_before, pins, frozen_before, engine_before,
+                      runtime_before, copied_engine_before, script_names, new_custody_before,
+                      data_custody_before, anchor_path, anchor_bytes):
+    record = _G12_CONTINUATION
+    suite, set_owner = state['epoch_suite'], extensions['set_binding']['owner']
+    need(record['started'] is True and record['ready'] is False and record['suite'] is None and
+         record['reference'] is not None and record['driver'] is sys.modules['__main__'] and
+         record['driver'].__dict__ is globals() and _EXECUTION['state'] is state and state['enabled'] is True and
+         suite.module is module and suite.context['driver_function'] is main_epoch and
+         suite.context['phase_owner'] is phases and suite.context['invocation_token'] is invocation_token and
+         suite.active is False and suite.terminal is False and suite.invocation_consumed is False and
+         suite.pending is None and suite.request_live is None and not suite.registry and
+         set_owner.sealed is True and set_owner.cli_active is False and set_owner.used is False and
+         set_owner.circuit is None and set_owner.checks is None,
+         'G12 requires the original source-owned sealed, unconsumed main-local generation')
+    for pair in (checks_pair, code_pair, label_pair):
+        need(type(pair) is tuple and len(pair) == 2 and
+             all(type(function) is _g12_types.FunctionType for function in pair),
+             'G12 original phase pair shape changed')
+    need(module.Checks.__dict__['__init__'] is checks_pair[1] and module.compile_roles is code_pair[1] and
+         module.Checks.__dict__['verify_labels'] is label_pair[1], 'G12 actual installed phase pairs changed')
+    # This fixed source name is also captured by the selected C3 product before
+    # product publication. It is not a callback parameter or a context entry.
+    need(_g12_selected_store.__globals__ is globals(), 'G12 fixed source store selector owner changed')
+    record.update({'suite': suite, 'generation': suite.generation, 'native_owner': suite.owner, 'state': state, 'extensions': extensions, 'module': module,
+                   'binding': binding, 'phases': phases, 'invocation_token': invocation_token,
+                   'checks_pair': checks_pair, 'code_pair': code_pair, 'label_pair': label_pair,
+                   'caller': str(caller), 'rank_calls': rank_calls, 'trace': trace, 'captures': captures,
+                   'stdout': stdout, 'frozen': frozen, 'runtime': runtime, 'engine': engine, 'output': output,
+                   'reference_file': reference, 'reference_bytes': reference_bytes, 'driver_before': driver_before,
+                   'pins': pins, 'frozen_before': frozen_before, 'engine_before': engine_before,
+                   'runtime_before': runtime_before, 'copied_engine_before': copied_engine_before,
+                   'script_names': script_names, 'new_custody_before': new_custody_before,
+                   'data_custody_before': data_custody_before, 'anchor_path': anchor_path,
+                   'anchor_bytes': anchor_bytes, 'ready': True, 'step': 'CLI_READY'})
+    _g12_helper_current()
+
+
+def _g12_diagnostics():
+    record = _G12_CONTINUATION
+    ranks = record['rank_calls']
+    need(type(ranks) is list, 'G12 actual original rank list changed')
+    for item in ranks:
+        need(type(item) is tuple and len(item) == 2 and type(item[0]) is tuple and
+             all(type(value) is int for value in item[0]) and type(item[1]) is int,
+             'G12 actual original rank event type changed')
+    binding = record['binding']
+    counters = binding['counters']
+    need(type(counters) is dict and all(type(key) is str and type(value) is int
+                                      for key, value in counters.items()),
+         'G12 original native counter primitive types changed')
+    return {'rank_event_count': len(ranks), 'ordered_rank_events_hex': _g12_bytes(tuple(ranks)).hex(),
+            'complement_receipt': record['trace'].receipt(), 'native_counters': dict(counters),
+            'cache_receipt': _g12_primitive(record['suite'].receipt),
+            'owner_receipt': _g12_primitive(record['suite'].owner.receipt)}
+
+
+
+def _g12_complete_capacity_store(checks, circuit, suite):
+    need(type(circuit.active) is set and len(circuit.active) == 82895 and
+         all(type(node) is int for node in circuit.active) and
+         type(circuit.triples) is list and len(circuit.triples) == 2300,
+         'G12 actual original h25 active/target census changed')
+    for target in circuit.triples:
+        need(type(target) is tuple and len(target) == 3 and all(type(point) is int for point in target) and
+             0 <= target[0] < target[1] < target[2] < 25,
+             'G12 actual original canonical target changed')
+    for key in checks.cache:
+        need(type(key) is int or (type(key) is tuple and len(key) == 2 and type(key[0]) is str and
+             key[0] == 'perp' and type(key[1]) is tuple and len(key[1]) == 3 and
+             all(type(point) is int for point in key[1])), 'G12 actual label store key type changed')
+    need(set(checks.cache) == circuit.active | {('perp', target) for target in circuit.triples},
+         'G12 requires the complete original canonical label store')
+    labels = tuple(checks.cache.values()) + (checks.everything,)
+    need(all(type(label) is suite.label for label in labels), 'G12 actual registered Label type changed')
+    identities = {id(label) for label in labels}
+    need(len(identities) == 85196 and all(type(key) is int for key in suite.registry) and
+         set(suite.registry) == identities, 'G12 actual registry includes missing/foreign original Labels')
+    for label in labels:
+        entry = suite.registry[id(label)]
+        need(type(entry) is tuple and len(entry) == 7 and entry[0] is label and entry[1] is label.basis and
+             entry[2] is label.key and entry[4] is checks and entry[6] is suite.generation,
+             'G12 original registry Label/basis/key/generation custody changed')
+        need(type(label.basis) is dict and all(type(key) is int and type(value) is int
+                                            for key, value in label.basis.items()) and
+             type(label.key) is tuple and all(type(value) is int for value in label.key) and
+             type(label.dim) is int and label.dim == len(label.basis) and
+             label.key == tuple(sorted(label.basis.values())), 'G12 original Label primitive state changed')
+
+def _g12_after_phase(phases, name, function, args, kwargs, result):
+    record = _G12_CONTINUATION
+    if not record['ready']:
+        return result
+    if name not in ('compile_roles', 'verify_labels', 'complete_original_cli'):
+        if record['step'] == 'SUFFIX' and name in _G12_SUFFIX_PHASES:
+            record['suffix_phases'].append(name)
+        return result
+    need(phases is record['phases'], 'G12 fixed actual phase owner changed')
+    _g12_helper_current()
+    if name == 'compile_roles':
+        need(record['step'] == 'CLI_READY' and type(args) is tuple and len(args) == 1 and not kwargs and
+             function is record['code_pair'][0] and record['module'].compile_roles is record['code_pair'][1] and
+             type(args[0]) is record['module'].ComplexSideCircuit,
+             'G12 actual original compile-role return checkpoint changed')
+        record.update({'circuit': args[0], 'code': result, 'code_before': _g12_code_snapshot(result), 'step': 'COMPILED'})
+        return result
+    if name == 'verify_labels':
+        need(record['step'] == 'COMPILED' and type(args) is tuple and len(args) == 1 and not kwargs and
+             function is record['label_pair'][0] and record['module'].Checks.__dict__['verify_labels'] is record['label_pair'][1],
+             'G12 actual original label-phase return checkpoint changed')
+        suite, checks, circuit = record['suite'], args[0], record['circuit']
+        set_owner = record['extensions']['set_binding']['owner']
+        need(type(checks) is suite.checks_class and checks.c is circuit and
+             type(checks.h) is int and type(circuit.h) is int and checks.h == circuit.h == 25 and
+             suite.active is True and suite.terminal is False and suite.invocation_consumed is True and
+             suite.primary_error is None and suite.pending is None and suite.request_live is None and
+             suite.checks is checks and suite.checks_c is circuit and
+             set_owner.cli_active is True and set_owner.used is False and set_owner.circuit is circuit and
+             set_owner.checks is checks and set_owner.triples is circuit.triples and
+             type(suite.registry) is dict and len(suite.registry) == 85196 and type(checks.cache) is dict and
+             len(checks.cache) == 85195 and ('perp', (0, 2, 1)) not in checks.cache,
+             'G12 genuine post-label original capacity checkpoint changed')
+        _g12_complete_capacity_store(checks, circuit, suite)
+        cleanup = record['state']['epoch_cli_cleanup']
+        need(type(cleanup) is dict and cleanup['primary'] is None and cleanup['argv_error'] is None and
+             cleanup['disarm_error'] is None and cleanup['retirement_error'] is None and
+             type(sys.argv) is list and sys.argv == [record['caller']] and sys.argv is not cleanup['argv_owner'],
+             'G12 must be inside original protected CLI after actual arming')
+        c1 = suite.registry.get(id(checks.everything))
+        need(type(c1) is tuple and len(c1) == 7 and c1[0] is checks.everything and c1[1] is checks.everything.basis and
+             c1[2] is checks.everything.key and c1[4] is checks and c1[5] == 'C1' and c1[6] == suite.generation,
+             'G12 registered_label must be actual original C1 store')
+        need(_g12_code_snapshot(record['code']) == record['code_before'], 'G12 original code changed before control store')
+        literal, reference_count, reference_outputs, _ = record['reference']
+        record['checks'] = checks
+        record['context'] = {'bundle': _INITIAL_EPOCH_BUNDLE, 'state': record['state'], 'site': 'C3',
+                             'checks': checks, 'registered_label': checks.everything, 'literal_expected': literal,
+                             'reference_remaining_case_count': reference_count, 'reference_remaining_outputs': reference_outputs}
+        record['prefix_end'] = _g12_diagnostics()
+        record['step'] = 'EXPECT_STORE'
+        actual_label = checks.target_frame((0, 2, 1))
+        need(record['store_entries'] == 1 and actual_label is record['stored_label'] and
+             checks.cache[('perp', (0, 2, 1))] is actual_label and
+             record['step'] == ('P07_SUSPENDED' if _G12_SELECTED_CASE == 'P07' else 'N22_RETURNED'),
+             'G12 actual selected store did not complete exactly once')
+        record['suffix_start'] = _g12_diagnostics()
+        record['rank_prefix'] = _g12_bytes(tuple(record['rank_calls']))
+        record['rank_index'] = len(record['rank_calls'])
+        record['step'] = 'SUFFIX'
+        return result
+    need(record['step'] == 'SUFFIX' and function is runpy.run_path and type(args) is tuple and len(args) == 1 and
+         args[0] == record['caller'] and type(kwargs) is dict and tuple(kwargs) == ('run_name',) and kwargs['run_name'] == '__main__',
+         'G12 actual same-invocation original CLI return changed')
+    record['suffix_phases'].append(name)
+    _g12_complete_original_cli(result)
+    marker = _G12ControlCompletion('G12 intentional ' + _G12_SELECTED_CASE + ' original-CLI control completion')
+    record['marker'], record['step'] = marker, 'MARKED'
+    raise marker
+
+
+def _g12_complete_original_cli(namespace):
+    record = _G12_CONTINUATION
+    module, captures = record['module'], record['captures']
+    need(type(namespace) is dict and all(type(key) is str for key in namespace) and
+         sys.modules.get('complex_circuit') is module and namespace.get('ComplexSideCircuit') is module.ComplexSideCircuit and
+         namespace.get('Checks') is module.Checks and namespace.get('compile_roles') is module.compile_roles and
+         namespace.get('verify_role_frames') is module.verify_role_frames and
+         namespace.get('serializable') is sys.modules['prepare_layers'].serializable,
+         'G12 original completed CLI namespace/observer binding changed')
+    need(type(captures) is dict and all(type(key) is str for key in captures) and set(captures) == {'side', 'full_return'} and
+         type(captures['side']) is tuple and len(captures['side']) == 4, 'G12 actual original capture set changed')
+    circuit, checks, code, roles = captures['side']
+    full_return = captures['full_return']
+    need(circuit is record['circuit'] and checks is record['checks'] and code is record['code'] and
+         type(full_return) is dict and all(type(key) is str for key in full_return) and
+         full_return.get('role_frames') is roles and full_return.get('upstream_commit') == UPSTREAM,
+         'G12 actual same original generation/full role result changed')
+    stdout_text = record['stdout'].getvalue()
+    certificate = (record['runtime'] / 'certificates/complex-network.json').read_bytes()
+    need(stdout_text == EXPECTED_STDOUT and certificate == record['reference_bytes'],
+         'G12 original fresh certificate/stdout differs from original immutable pins')
+    for name in ('side_construction', 'checks_initialization', 'compile_roles', 'verify_map', 'verify_labels',
+                 'verify_role_frames', 'original_upstream_verify_sources', 'full_log_integer_bounds', 'original_serializable'):
+        need(record['phases'].rows.get(name, {}).get('calls') == 1, 'G12 original phase omitted/repeated: ' + name)
+    need('complete_original_cli' not in record['phases'].rows, 'G12 original complete-CLI finally already ran')
+    _g12_original_imports()
+    outputs = _g12_common_outputs(code, record['code_before'], roles, full_return, certificate,
+                                   stdout_text, tuple(record['suffix_phases']))
+    count = _g12_remaining_count(code)
+    need(_g12_bytes(tuple(record['rank_calls'][:record['rank_index']])) == record['rank_prefix'],
+         'G12 actual original rank prefix changed')
+    record.update({'common': outputs, 'case_count': count, 'cli_end': _g12_diagnostics(),
+                   'rank_suffix': _g12_bytes(tuple(record['rank_calls'][record['rank_index']:])),
+                   'namespace': namespace, 'full_return': full_return, 'roles': roles})
+    native_start = record['suffix_start']['native_counters']
+    native_end = record['cli_end']['native_counters']
+    need(set(native_start) == set(native_end), 'G12 original native counter domain changed across suffix')
+    record['native_suffix_delta'] = {key: native_end[key] - value for key, value in native_start.items()}
+    if _G12_SELECTED_CASE == 'P07':
+        context = record['context']
+        need('remaining_original_case_count' not in context and 'remaining_original_outputs' not in context and
+             record['second_advances'] == 0, 'G12 candidate actual remainder publication/advance repeated')
+        _g12_generator_shape(True)
+        context['remaining_original_case_count'] = count
+        context['remaining_original_outputs'] = outputs
+        _g12_helper_current()
+        _g12_generator_shape(True)
+        record['second_advances'] = 1
+        try:
+            next(record['generator'])
+        except StopIteration as completed:
+            need(completed.value is record['observed'], 'G12 original P07 returned a different observation object')
+        else:
+            raise RuntimeError('G12 selected P07 yielded again instead of original comparisons/return')
+        need(record['generator'].gi_frame is None, 'G12 P07 frame remained live after original return')
+        record['p07_returned_original_observation'] = record['observed']
+    else:
+        need(_G12_SELECTED_CASE == 'N22' and record['generator'] is None,
+             'G12 original N22 selection acquired a P07 continuation')
+
+
+def _g12_original_imports():
+    record = _G12_CONTINUATION
+    for name in record['script_names'] - {'complex_network'}:
+        module = sys.modules.get(name)
+        expected = record['engine'] / 'source/complex_circuit.py' if name == 'complex_circuit' else record['runtime'] / 'scripts' / (name + '.py')
+        need(type(module) is _g12_types.ModuleType and Path(module.__file__).resolve() == expected.resolve(),
+             'G12 actual original scientific import path changed: ' + name)
+
+
+def _g12_original_terminal_custody():
+    record = _G12_CONTINUATION
+    need(inventory(record['frozen'], record['pins']) == record['frozen_before'] and
+         inventory(HERE / 'engine', ENGINE_PINS) == record['engine_before'] and
+         inventory(record['runtime'], record['pins'], exact=False) == record['runtime_before'] and
+         inventory(record['engine'], ENGINE_PINS) == record['copied_engine_before'],
+         'G12 original source/input inventory or modes changed')
+    files = {str(path.relative_to(record['runtime'])) for path in record['runtime'].rglob('*') if path.is_file()}
+    need(files == set(record['pins']) | {'certificates/complex-network.json'} and
+         Path(__file__).read_bytes() == record['driver_before'] and
+         record['reference_file'].read_bytes() == record['reference_bytes'],
+         'G12 original output/selected source/reference custody changed')
+    need(adapters.custody(ROUND, 'all') == record['new_custody_before'] and
+         data_adapters.custody(ROUND) == record['data_custody_before'] and
+         (record['anchor_bytes'] is None or record['anchor_path'].read_bytes() == record['anchor_bytes']),
+         'G12 original selected-source/anchor custody changed')
+    _g12_original_imports()
+    for name in ('side_construction', 'checks_initialization', 'compile_roles', 'verify_map', 'verify_labels',
+                 'verify_role_frames', 'original_upstream_verify_sources', 'full_log_integer_bounds',
+                 'original_serializable', 'complete_original_cli'):
+        need(record['phases'].rows.get(name, {}).get('calls') == 1,
+             'G12 complete original phase finally/count changed: ' + name)
+
+
+def _g12_after_original_exit(primary):
+    record = _G12_CONTINUATION
+    if record['primary'] is None:
+        record['primary'] = primary
+    generator = record['generator']
+    if generator is not None and generator.gi_frame is not None:
+        try:
+            # No original CLI resume occurs on failure. Original P07 source has
+            # no finally clause; closing this exact suspended code only releases
+            # its retained frame after original CLI/main/STOP/owned cleanup.
+            _g12_generator_shape(True)
+            need(record['close_attempts'] == 0, 'G12 suspended P07 close repeated')
+            record['close_attempts'] = 1
+            generator.close()
+            need(generator.gi_frame is None, 'G12 exact suspended P07 did not close')
+        except BaseException as secondary:
+            try:
+                record['secondary_clear'] = False
+                record['frame_close_error'] = secondary
+                record['secondary'].append((secondary, secondary.__traceback__, 'P07-frame-close'))
+            except BaseException:
+                pass
+    if primary is record['marker'] and record['step'] == 'MARKED':
+        try:
+            _g12_original_terminal_custody()
+            need(record['secondary_clear'] is True and
+                 record['frame_close_error'] is None and record['terminal_observation_error'] is None and
+                 record['adapter_exit_error'] is None and not record['secondary'],
+                 'G12 source-control secondary error or incomplete journal blocks observation export')
+            row = {'schema': 'g12-original-control-observation-v1', 'case': _G12_SELECTED_CASE,
+                   'selected_driver_sha256': sha(record['driver_before']),
+                   'reference_provenance': record['reference'][3],
+                   'original_helper_observation': _g12_primitive(record['observed']),
+                   'remaining_original_case_count': record['case_count'],
+                   'common_payload_sha256': sha(record['common']), 'common_payload_hex': record['common'].hex(),
+                   'prefix_end': record['prefix_end'], 'suffix_start': record['suffix_start'], 'cli_end': record['cli_end'],
+                   'ordered_rank_suffix_hex': record['rank_suffix'].hex(), 'native_suffix_delta': record['native_suffix_delta'],
+                   'phases': record['phases'].rows,
+                   'store_entries': record['store_entries'], 'first_advances': record['first_advances'],
+                   'second_advances': record['second_advances'], 'close_attempts': record['close_attempts'],
+                   'disposition_qualification': 'OPEN_REQUIRES_SEPARATE_ORIGINAL_STOP_AND_ALL_OWNED_CLEANUP_REVIEW',
+                   'scope': 'Original selected N22/P07 observation plus same-invocation original CLI remainder only. No original full-positive publication/native-count/P02/G12/FULL admission.'}
+            with (record['output'] / 'g12-control-observation.json').open('xb') as stream:
+                stream.write(canonical(row) + b'\n')
+        except BaseException as secondary:
+            try:
+                record['secondary_clear'] = False
+                record['terminal_observation_error'] = secondary
+                record['secondary'].append((secondary, secondary.__traceback__, 'terminal-source-observation'))
+            except BaseException:
+                pass
+    for secondary, traceback, phase in record['secondary']:
+        try:
+            sys.stderr.write('G12 secondary continuation error: ' + phase + '\n')
+            _g12_traceback.print_exception(type(secondary), secondary, traceback, file=sys.stderr)
+        except BaseException:
+            pass
+
+
+def _g12_continuation_entry():
+    record = _G12_CONTINUATION
+    need(record['started'] is False and _G12_SELECTED_CASE in ('N22', 'P07'), 'G12 source control entry is one-use')
+    record['started'] = True
+    record['driver'] = sys.modules['__main__']
+    need(record['driver'].__dict__ is globals(), 'G12 source control requires actual Root-installed driver namespace')
+    need(type(_G12_TRANSPORT_SOURCE_PIN) is str and len(_G12_TRANSPORT_SOURCE_PIN) == 64,
+         'G12 reference transport source has not been selected')
+    helper, helper_handle = _g12_cold(0, str(ROUND / 'areas/cache-validity/g12_source_controls.py'),
+                                     _G12_SELECTED_HELPER_PIN, '_h25_g12_source_controls')
+    transport, transport_handle = _g12_cold(0, str(ROUND / 'areas/cache-validity/g12_reference_transport.py'),
+                                           _G12_TRANSPORT_SOURCE_PIN, '_h25_g12_reference_transport')
+    reference = _g12_cold(1, transport_handle, 'load_original_g12_reference',
+                          _CAPTURED_BOOTSTRAP_ROOT, _CAPTURED_BOOTSTRAP_CAPABILITY, _CAPTURED_BOOTSTRAP_API)
+    need(type(reference) is tuple and len(reference) == 4 and type(reference[0]) is bool and
+         type(reference[1]) is int and reference[1] > 0 and type(reference[2]) is bytes and type(reference[3]) is tuple,
+         'G12 actual source-produced independent reference transport shape changed')
+    source = _g12_cold(2, helper_handle)
+    function = helper.__dict__[_G12_SELECTED_CASE]
+    need(source[1] is helper and source[5] == _G12_SELECTED_HELPER_PIN and
+         type(function) is _g12_types.FunctionType and function.__globals__ is helper.__dict__ and
+         bool(function.__code__.co_flags & 0x20) is (_G12_SELECTED_CASE == 'P07'),
+         'G12 exact selected helper source/generator protocol changed')
+    record.update({'helper_handle': helper_handle, 'helper_module': helper, 'helper_function': function,
+                   'helper_code': function.__code__, 'transport_handle': transport_handle,
+                   'reference': reference, 'generator_type': _g12_types.GeneratorType, 'step': 'PREPARED'})
+    try:
+        _run_epoch_with_stop_evidence()
+    except BaseException as primary:
+        # Original CLI/main/STOP/owned cleanup has already run. Preserve the
+        # identical primary and cause; every adapter cleanup error is secondary.
+        try:
+            _g12_after_original_exit(primary)
+        except BaseException as secondary:
+            try:
+                record['secondary_clear'] = False
+                record['adapter_exit_error'] = secondary
+                record['secondary'].append((secondary, secondary.__traceback__, 'adapter-exit-entry'))
+            except BaseException:
+                pass
+        raise
+    raise RuntimeError('G12 source control reached original full-positive return without its intentional marker')
+
+# END G12 EXACT CANDIDATE SUPPORT
+
+if __name__ == '__main__':
+    _g12_continuation_entry()

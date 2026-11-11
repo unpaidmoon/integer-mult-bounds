@@ -1,0 +1,54 @@
+{
+  "candidate_freeze": {
+    "bytes": 2012,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1/FREEZE-v1.json",
+    "sha256": "4ee86e91c36c1651da2fa31506da27b3e479ae1883b0a0563818508cda839124"
+  },
+  "files": {
+    "FREEZE-v1.json": {
+      "bytes": 1866,
+      "mode": "0o444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-protocol-independent/FREEZE-v1.json",
+      "sha256": "93cd3138cd6961fdf2e2df61c66bd970fd6d788606cff874b2ba655063b8d504"
+    },
+    "G12-CANDIDATE-PROTOCOL-REVIEW-v1.json": {
+      "bytes": 33560,
+      "mode": "0o444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-protocol-independent/G12-CANDIDATE-PROTOCOL-REVIEW-v1.json",
+      "sha256": "feecd63be55243fe2a7d07da8ac1f7cfcec6558362e694b82219a1be232ab7bc"
+    },
+    "GRAPH-ADDENDUM-v1.json": {
+      "bytes": 13092,
+      "mode": "0o444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-protocol-independent/GRAPH-ADDENDUM-v1.json",
+      "sha256": "d78a97545c84854b5da0905485c232030f7b4d3884bd51088c2d3ffa604632dd"
+    },
+    "STATIC-VERIFICATION-v1.json": {
+      "bytes": 13784,
+      "mode": "0o444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-protocol-independent/STATIC-VERIFICATION-v1.json",
+      "sha256": "e6db24ed8e2dd7927cab57680af61e8cde80b2b6a3e117630af3434c64f0b46b"
+    },
+    "verify_candidate_source_v1.py": {
+      "bytes": 9996,
+      "mode": "0o444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-protocol-independent/verify_candidate_source_v1.py",
+      "sha256": "74c36c6aa47797c11d68a8116db1a338e591a63cf79ced28f6c80713b30c8f8a"
+    }
+  },
+  "finding_ids": [
+    "G12-CANDIDATE-001",
+    "G12-CANDIDATE-002"
+  ],
+  "frozen_candidate_sources_unchanged": true,
+  "prior_freeze_preserved": {
+    "bytes": 1866,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-protocol-independent/FREEZE-v1.json",
+    "sha256": "93cd3138cd6961fdf2e2df61c66bd970fd6d788606cff874b2ba655063b8d504"
+  },
+  "reviewer": "/root/cache_g12_protocol_review",
+  "schema": "g12-candidate-protocol-independent-review-freeze-v2",
+  "scope": "Roll-up of unchanged initial review plus narrow additive disconnected-function-graph finding.",
+  "status": "REJECT_BOUNDED_CANDIDATE_PROTOCOL_SOURCE_V1",
+  "target_operations": 0
+}

@@ -1,0 +1,262 @@
+{
+  "accepted_design": {
+    "bytes": 32255,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-feasibility/DESIGN-v3.json",
+    "sha256": "fccc3456630a4a60f8e7d3736501ca3d5c7cb4ef303aaba32862c90a98d6a6e4"
+  },
+  "actual_parent_success_handoff": null,
+  "actual_projection": null,
+  "actual_reference_custody_handoff": null,
+  "execution_authorized": false,
+  "join_sequence": [
+    "Authenticate both distinct actual parent invocations, successful full original completion and immutable custody. Preserve both original driver bytes unchanged; receipt status alone is insufficient.",
+    "Require source/engine/inventory/base/upstream/relative input/anchor/scientific argv equality; physical cold roots and parent invocation identities must differ.",
+    "Validate each producer receipt has original mode and complete original science/custody/phase records; native has real native_calls and original cold build/finite controls; pure has null native_calls.",
+    "Read all six exact artifacts from each sealed lane, verify their parent file bindings and corresponding receipt/science hashes. Reject absent, stale, aliased, changed or partial files.",
+    "Require all six raw byte equalities and full complement raw byte equality. No G12 extra target fixture or epoch candidate data enters either lane or this join.",
+    "Validate complete typed full-return canonical schema and fixed role/rank/trace domains on both lanes. Require schema-exact equality with no bool-as-int or mutable cross-lane/candidate aliases.",
+    "Construct fresh pure-owned role/rank/trace projections and pure raw bytes tuple, plus fresh native-owned exact counter dict. Expose exactly the five reference members only after the complete join.",
+    "Bind this fresh projection to the actual P02 root/control handle and invocation through an independently reviewed fixed source bridge. Every absent proof keeps None; no arbitrary callback or flag enables the current driver."
+  ],
+  "original_scientific_circuit": {
+    "bytes": 19732,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/engine/source/complex_circuit.py",
+    "sha256": "d623617f7c5cb3189580883a8ab30c0bd3832688ae3f1f0c1f881bbbbff8e0c1"
+  },
+  "parent_binding_fields": {
+    "actual_child_argv": "actual immutable complete argv vector including mode, output, frozen-root, reference, anchor; recorded by source-owned spawn/return wrapper",
+    "actual_working_directory": "actual execution directory bound before child start and after return",
+    "anchor_binding": "actual anchor raw bytes SHA256 plus successful source-owned original anchor provenance and original driver equality; not a new profile sample",
+    "artifacts": "ordered tuple of six (relative name, exact immutable raw bytes, byte count, observed SHA256, identity/custody binding); no omitted member",
+    "base_commit": "19fdb086ea96af9a9f87936a2b888e10af4ed810",
+    "complement": "actual raw complement-transcript.json bytes with corresponding identity/custody binding",
+    "complete_parent_stdout_stderr": "actual retained raw outer process streams, including original receipt stdout tail; parent must observe completion after original full_driver:348-352",
+    "consumed": "exact one-use parent-to-consumer transfer, no candidate writable alias",
+    "guard_result": "actual outer full-cost wall/CPU/RSS/resource result, never receipt status or a source-only budget inference",
+    "invocation_id": "fresh parent-owned one-use identity, not receipt status",
+    "lane": "exact str baseline or candidate, paired respectively pure/native",
+    "normal_exit": "actual independently observed normal exit code exactly 0, no signal, timeout, kill, cancellation, guard failure or pending child",
+    "output_custody": "seal all required regular files after successful exit and revalidate same identity/content before transfer; reject symlink, stale, partial, aliased or changed custody",
+    "output_root": "fresh canonical separate output root, lstat/device/inode/mode ownership record and cold-generation nonce",
+    "parent_source_binding": "exact root-owned parent function/code/global/default/closure identity and source SHA256",
+    "producer_engine_pins": {
+      "compare_side_verifier.py": "6e507bb0c7e00d090a60289fddb6c55e90c946d0850c42c3c5e3e15c27604a68",
+      "finite_controls.py": "df989a831aac43cc1af95169dad8c64a7548760e6e1f96976da996703f2c8f7a",
+      "native_backend.py": "e473c38245c3668715b5a78dfe980b2fe3ed0d0c9b8c97c666fbae6ecf1fffd5",
+      "native_gf2.c": "e9c3c9194a08718bd1575c1cf08c6c6772d3b644c2e274c25a84a1f9249d06cc",
+      "profile_side_verifier.py": "9c994378171c20a91539418d93cb8387e1daa93465d6862beefea90e12999c2a",
+      "source/complex_circuit.py": "d623617f7c5cb3189580883a8ab30c0bd3832688ae3f1f0c1f881bbbbff8e0c1",
+      "source/complex_network.py": "0da395e67ac04fa213494e71012c1b19b544596d34cdce5a3b172b1fb6af5f1b"
+    },
+    "producer_source": {
+      "bytes": 20178,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/full_driver.py",
+      "sha256": "0d976d2eb6b845f20d4a3396591a806f966688b88693cd6a5f8a0c9e48925e36"
+    },
+    "receipt_binding": "actual receipt.json bytes and file identity, mode/source/engine/inventory/original checks/science binding verified",
+    "schema": "fixed source-owned parent completion schema, exact version to be independently implemented",
+    "scientific_input": "Same pinned 32-file inventory, H=25 and original relative paths; exact script argv [fresh_runtime/scripts/complex_network.py].",
+    "source_inventory_sha256": "88bba3caf5975f30fa7abceaea9454110cf3b069233e8241a2ca13d1dff171a7",
+    "upstream_commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a"
+  },
+  "producer": {
+    "bytes": 20178,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/full_driver.py",
+    "sha256": "0d976d2eb6b845f20d4a3396591a806f966688b88693cd6a5f8a0c9e48925e36"
+  },
+  "projection_fields": {
+    "reference_native_counters": {
+      "artifact": "receipt.json",
+      "exact_members": {
+        "complement_fallback": "exact nonnegative int, never bool",
+        "complement_native": "exact nonnegative int, never bool",
+        "gram_fallback": "exact nonnegative int, never bool",
+        "gram_native": "exact nonnegative int, never bool"
+      },
+      "null_invalid": true,
+      "observation_source": {
+        "bytes": 20334,
+        "lines": [
+          334,
+          376
+        ],
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/engine/native_backend.py",
+        "sha256": "e473c38245c3668715b5a78dfe980b2fe3ed0d0c9b8c97c666fbae6ecf1fffd5"
+      },
+      "owner": "native",
+      "pure_native_calls": "Pure baseline native_calls must remain null; never substitute it or epoch candidate counters.",
+      "python_type": "fresh exact builtin dict",
+      "selector": "native_calls",
+      "source": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/full_driver.py",
+      "source_lines": [
+        290,
+        293,
+        340,
+        347
+      ]
+    },
+    "reference_outputs": {
+      "artifacts_in_order": [
+        "full-return.lossless.json",
+        "runtime-root/certificates/complex-network.json",
+        "original-stdout.txt",
+        "side-observations/result.json",
+        "side-observations/witness.json",
+        "side-observations/rank-trace.json"
+      ],
+      "candidate_projection": "Exact same six relative paths under the actual epoch output root; read after original checks and before data_finalization. No serialization of candidate values into references.",
+      "join": "All six complete native artifact bytes must equal corresponding pure bytes first. No hash-only substitute or omitted member.",
+      "owner": "pure",
+      "python_type": "builtin tuple of exactly six builtin bytes values"
+    },
+    "reference_rank_events": {
+      "artifact": "side-observations/rank-trace.json",
+      "copy_policy": "Restore all tuple boundaries lost only by original JSON array serialization; no sorting, deduplication or suffix-only transcript.",
+      "json_domain": "list of pairs [rows, rank], rows is list of exact ints; rank exact int, never bool; no unknown members or arbitrary tags",
+      "native_shape_source": {
+        "bytes": 7425,
+        "lines": [
+          113,
+          126
+        ],
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/engine/native_gf2.c",
+        "sha256": "e9c3c9194a08718bd1575c1cf08c6c6772d3b644c2e274c25a84a1f9249d06cc",
+        "source_fact": "Original native gram_rank constructs tuple-of-int rows and an int rank, returns a pair tuple. Text inspected only; no native operation."
+      },
+      "owner": "pure",
+      "python_type": "fresh builtin list of builtin tuple pairs, each (tuple(exact int rows), exact int rank), in full original event order",
+      "source": {
+        "bytes": 10571,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/engine/compare_side_verifier.py",
+        "sha256": "6e507bb0c7e00d090a60289fddb6c55e90c946d0850c42c3c5e3e15c27604a68"
+      },
+      "source_lines": [
+        74,
+        90
+      ]
+    },
+    "reference_role_result": {
+      "artifact": "full-return.lossless.json",
+      "ordered_members": [
+        [
+          "roles",
+          "exact int, never bool"
+        ],
+        [
+          "forward_frames_nested",
+          "exact bool"
+        ],
+        [
+          "reverse_complement_frames_nested",
+          "exact bool"
+        ]
+      ],
+      "owner": "pure",
+      "python_type": "exact builtin dict",
+      "schema_source": {
+        "bytes": 19732,
+        "lines": [
+          410,
+          411
+        ],
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/engine/source/complex_circuit.py",
+        "sha256": "d623617f7c5cb3189580883a8ab30c0bd3832688ae3f1f0c1f881bbbbff8e0c1"
+      },
+      "selector": "unique typed top-level dict pair whose key is [str, role_frames]",
+      "source": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/full_driver.py",
+      "source_lines": [
+        91,
+        110,
+        309,
+        310
+      ],
+      "values": "Decode actual pure values. Do not hard-code scientific results; native complete typed artifact must match byte-for-byte."
+    },
+    "reference_trace": {
+      "artifact": "complement-transcript.json",
+      "exact_members": {
+        "calls": "exact int",
+        "canonical_stream_bytes": "exact int",
+        "schema": "exact str",
+        "sha256": "exact 64-character lowercase hex str"
+      },
+      "native_equality": "Raw entire complement-transcript.json bytes equal, plus decoded complete field equality; no digest subtraction.",
+      "owner": "pure",
+      "python_type": "fresh exact builtin dict",
+      "require_full_cumulative_receipt": true,
+      "source": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/full_driver.py",
+      "source_lines": [
+        307,
+        312
+      ]
+    }
+  },
+  "required_lanes": [
+    {
+      "actual_output_hashes": null,
+      "custody_handoff": null,
+      "mode": "baseline",
+      "owner": "pure",
+      "parent_success": null
+    },
+    {
+      "actual_output_hashes": null,
+      "custody_handoff": null,
+      "mode": "candidate",
+      "owner": "native",
+      "parent_success": null
+    }
+  ],
+  "runtime_payloads_created": 0,
+  "schema": "p02-dual-original-reference-binding-projection-v1",
+  "source_adopted": false,
+  "source_literals": {
+    "BASE": "19fdb086ea96af9a9f87936a2b888e10af4ed810",
+    "COMPLEMENT_EXPECTED": {
+      "calls": 238685,
+      "canonical_stream_bytes": 55839507,
+      "schema": "v2-jsonl:call,us,vs,result(type=list+values or type=None); ordered exact integer vectors",
+      "sha256": "7dec2bf33303c37e1c699609e83768d61df7e19104d34a26a148f66d5ccc4838"
+    },
+    "ENGINE_PINS": {
+      "compare_side_verifier.py": "6e507bb0c7e00d090a60289fddb6c55e90c946d0850c42c3c5e3e15c27604a68",
+      "finite_controls.py": "df989a831aac43cc1af95169dad8c64a7548760e6e1f96976da996703f2c8f7a",
+      "native_backend.py": "e473c38245c3668715b5a78dfe980b2fe3ed0d0c9b8c97c666fbae6ecf1fffd5",
+      "native_gf2.c": "e9c3c9194a08718bd1575c1cf08c6c6772d3b644c2e274c25a84a1f9249d06cc",
+      "profile_side_verifier.py": "9c994378171c20a91539418d93cb8387e1daa93465d6862beefea90e12999c2a",
+      "source/complex_circuit.py": "d623617f7c5cb3189580883a8ab30c0bd3832688ae3f1f0c1f881bbbbff8e0c1",
+      "source/complex_network.py": "0da395e67ac04fa213494e71012c1b19b544596d34cdce5a3b172b1fb6af5f1b"
+    },
+    "PIN_SHA": "88bba3caf5975f30fa7abceaea9454110cf3b069233e8241a2ca13d1dff171a7",
+    "REFERENCE_SHA": "1f763d95c7ff163aa71d13cd82784f16665be8afb21f75e76941e2119562098f",
+    "UPSTREAM": "adc7f1241b42e322a6451854ab7e4b4c146bf78a"
+  },
+  "status": "CONCRETE_SCHEMA_ONLY_PARENT_AND_CUSTODY_HANDOFF_CLOSED",
+  "typed_full_return_grammar": {
+    "allowed_exact_tags": {
+      "Fraction": "[Fraction, exact int numerator, exact positive int denominator] reduced original rational",
+      "None": "[None]",
+      "bool": "[bool, exact JSON boolean]",
+      "dict": "[dict, ordered unique recursively typed key/value pair list]",
+      "float": "[float, canonical float.hex string]",
+      "int": "[int, canonical decimal string]",
+      "list": "[list, recursively typed values list]",
+      "str": "[str, exact string]",
+      "tuple": "[tuple, recursively typed values list]"
+    },
+    "canonical_json": "json.dumps with sort_keys=True, separators=(comma, colon), ensure_ascii=True as original; no trailing newline for full-return.lossless.json",
+    "decoder_implementation": null,
+    "no_decoder_executed": true,
+    "rejections": [
+      "unknown/duplicate tags or object members",
+      "wrong tag arity",
+      "duplicate decoded dict key, even if tags differ",
+      "bool accepted as int",
+      "reordered/omitted values",
+      "noncanonical integer/fraction/float representation",
+      "arbitrary object or equality callbacks",
+      "partial subtree accepted as complete return"
+    ],
+    "root": "exact list tag dict with ordered unique key-value pairs; entire source-produced root retained and round-tripped byte-for-byte"
+  }
+}

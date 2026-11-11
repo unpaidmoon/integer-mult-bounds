@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "d59b5035e7b4cbaa9d688a1d32dd0d6eb79c466a",
+      "sha256": "9b8d0eea95b3bf0dfcb7938a732a6439b87a2685dec2a5ab9e525b3b34debbfa"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "3404fbdd5e7529a0674eef26114b5071e4586cec",
+      "sha256": "ead6cdc9d0af6d58e8a49744d8ec8c7c15e13d2ba93c276c434bcf9b51b93a81"
+    },
+    {
+      "path": "research/five-label-prefix-completion/PROOF.md",
+      "usage": "input",
+      "git_blob": "1f504817b2f4281e0551ac9fc24dfed2d9a3585c",
+      "sha256": "54731461e8636b0048bb01ad6bde4b92ce718959923a5cb58e888a519d94ac9d"
+    },
+    {
+      "path": "research/five-label-prefix-completion/README.md",
+      "usage": "input",
+      "git_blob": "1f3be2eab0c9df69e9965f4f9afe2d486ef04049",
+      "sha256": "591816a89f4f733b69fe218a66efd9f396e3c260ee2f3c0f4a8cdcd893571c83"
+    },
+    {
+      "path": "research/five-label-prefix-completion/bounds.py",
+      "usage": "input",
+      "git_blob": "3022224471f1578d4d7f6e3d31c9c0c091029a55",
+      "sha256": "e9023abd49e92ae4c5d0bcbf265ad0883d9408a51bab5354e321102f2f20f522"
+    }
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "declared_boundaries": [
+    "The concrete case IDs define executed coverage; pending_bill_cases=[] will mean only that this exact reviewed list completed, never every conceivable adversarial variant.",
+    "N09 uses wrong bytes under an expected content address. Producing a real SHA256 collision is outside the supported cryptographic assumption; no collision-resistance proof is claimed.",
+    "Symlinks, FIFO, ordinary user xattrs, invalid UTF8 and special/owner-inaccessible modes exercise explicit unsupported-domain rejection. ACLs, devices and sockets are rejected by the same reviewed feature/type boundary; privileged ACL/device setup is not performed.",
+    "File hardlink and path overlap controls execute; bind-mount creation is not authorized and is not exercised. Descriptor/inode ancestor overlap checks remain source-reviewed.",
+    "Injected chmod/fsync/ENOSPC/interrupt errors verify software failure handling and retained state; they do not establish physical power-loss durability or every filesystem implementation.",
+    "Group/other ordinary mode combinations remain supported only when owner-read/search requirements hold; representative 0444,0640,0755 files and0555,0750,0700 dirs execute, not an exhaustive512-mode enumeration.",
+    "Original custody comparison excludes exactly counts.allocated_bytes, retains both full inventories and both allocation values, and keeps every other original field in deep equality.",
+    "Allocation-only and isolated-field cases operate on copies of source-produced inventories; real content and inode mutations also use separate tiny filesystem fixtures.",
+    "CASE-PREFIX.jsonl records completed cases incrementally in exact order, at most128 rows,4096 bytes per record and1MiB total. A final incomplete line after abrupt termination is retained but is not a completed journal record. Journal IO/storage remain inside the guarded fixture bill."
+  ],
+  "expected_positive_rows": 5,
+  "expected_stop_rows": 93,
+  "expected_total_rows": 98,
+  "families": {
+    "absolute/traversal/dot/empty/backslash/NUL/drive paths and invalid UTF8": [
+      "N01-0",
+      "N01-1",
+      "N01-2",
+      "N01-3",
+      "N01-4",
+      "N01-5",
+      "N01-6",
+      "N01-7",
+      "N01-invalid-utf8"
+    ],
+    "allocation diagnosis excluded without weakening logical/identity custody": [
+      "P08-allocation-only",
+      "N26-real-content",
+      "N26-real-identity",
+      "N26-only-hash",
+      "N26-only-inode",
+      "N26-only-root-origin",
+      "N26-only-mode",
+      "N26-only-logical-bytes",
+      "N26-only-read-count"
+    ],
+    "archive hardlink aliases": [
+      "N20"
+    ],
+    "copied bundled tools with historical source/package locations unavailable": [
+      "P05"
+    ],
+    "duplicates/missing parent/file-directory conflicts": [
+      "N03-key",
+      "N03-path",
+      "N03-parent",
+      "N03-file-ancestor"
+    ],
+    "exact whole-tree contents/modes/failure receipts/empty dirs/chunk boundaries/duplicate payload accounting": [
+      "P01-P04"
+    ],
+    "existing or racing destination untouched": [
+      "N14-existing",
+      "N14-race"
+    ],
+    "explicit unsupported FS/mode domains": [
+      "N16",
+      "N16-fifo",
+      "N16-xattr",
+      "N16-owner-mode-0",
+      "N16-owner-mode-1",
+      "N16-owner-mode-2",
+      "N01-invalid-utf8"
+    ],
+    "external completeness anchor rejects shortened manifests": [
+      "N04"
+    ],
+    "fresh restoration byte/mode/path/alias drift and stale PASS rejection": [
+      "N19",
+      "N19-mode",
+      "N19-path",
+      "N19-alias",
+      "N24"
+    ],
+    "interruptions and unadmitted post-rename faults": [
+      "N18-before-marker",
+      "N18-before-rename",
+      "N18-after-rename",
+      "N22-publication-fsync"
+    ],
+    "invalid content-addressed blob verified before reuse": [
+      "N09"
+    ],
+    "missing/extra/partial package entries": [
+      "N06-missing",
+      "N06-partial",
+      "N06-extra",
+      "N06-manifest"
+    ],
+    "missing/malformed/wrong external digest": [
+      "N21",
+      "N21-missing",
+      "N21-malformed"
+    ],
+    "negative/bool/noninteger/oversized counts; schema/unknown metadata": [
+      "N11-0",
+      "N11-1",
+      "N11-2",
+      "N11-3",
+      "N11-schema",
+      "N11-unknown-root",
+      "N11-unknown-manifest"
+    ],
+    "overlap/private parent contract": [
+      "N15",
+      "N25-private-parent"
+    ],
+    "partial/zero writes, disk full, chmod/fsync faults and primary exception retention": [
+      "N17",
+      "N17-secondary-receipt",
+      "N17-chmod",
+      "N17-fsync",
+      "N17-disk-full"
+    ],
+    "per-run ownership partition": [
+      "N23"
+    ],
+    "readonly archive and original readonly root publish within same private parent": [
+      "P07-readonly-publication"
+    ],
+    "restored-byte preflight and inconsistent sums": [
+      "N13",
+      "N13-blob-sum",
+      "N13-source-sum",
+      "N13-inventory-sum"
+    ],
+    "root/individual/aggregate metadata, entries, depth, path, run, file and unique-byte caps": [
+      "N12",
+      "N12-max_manifest_bytes",
+      "N12-max_metadata_bytes",
+      "N12-max_entries",
+      "N12-max_depth",
+      "N12-max_path_bytes",
+      "N12-max_runs",
+      "N12-max_file_bytes",
+      "N12-max_unique_bytes"
+    ],
+    "same-size/truncated/extended corrupt payload": [
+      "N07",
+      "N07-truncated",
+      "N07-extended"
+    ],
+    "short writes complete correctly": [
+      "P06-short-write"
+    ],
+    "source addition and mid-stream byte/length/mode/inode/membership drift": [
+      "N05",
+      "N10",
+      "N10-mode",
+      "N10-inode",
+      "N10-membership"
+    ],
+    "source/package/destination symlinks including ancestors": [
+      "N02",
+      "N02-source-leaf",
+      "N02-ancestor",
+      "N02-destination-ancestor"
+    ],
+    "unsupported atomic publication/no fallback": [
+      "N22"
+    ],
+    "wrong package root/directory/metadata/blob modes": [
+      "N08",
+      "N08-root",
+      "N08-dir",
+      "N08-blob"
+    ]
+  },
+  "implementation_revision": 5,
+  "required_case_ids": [
+    "N01-0",
+    "N01-1",
+    "N01-2",
+    "N01-3",
+    "N01-4",
+    "N01-5",
+    "N01-6",
+    "N01-7",
+    "N01-invalid-utf8",
+    "N02",
+    "N02-ancestor",
+    "N02-destination-ancestor",
+    "N02-source-leaf",
+    "N03-file-ancestor",
+    "N03-key",
+    "N03-parent",
+    "N03-path",
+    "N04",
+    "N05",
+    "N06-extra",
+    "N06-manifest",
+    "N06-missing",
+    "N06-partial",
+    "N07",
+    "N07-extended",
+    "N07-truncated",
+    "N08",
+    "N08-blob",
+    "N08-dir",
+    "N08-root",
+    "N09",
+    "N10",
+    "N10-inode",
+    "N10-membership",
+    "N10-mode",
+    "N11-0",
+    "N11-1",
+    "N11-2",
+    "N11-3",
+    "N11-schema",
+    "N11-unknown-manifest",
+    "N11-unknown-root",
+    "N12",
+    "N12-max_depth",
+    "N12-max_entries",
+    "N12-max_file_bytes",
+    "N12-max_manifest_bytes",
+    "N12-max_metadata_bytes",
+    "N12-max_path_bytes",
+    "N12-max_runs",
+    "N12-max_unique_bytes",
+    "N13",
+    "N13-blob-sum",
+    "N13-inventory-sum",
+    "N13-source-sum",
+    "N14-existing",
+    "N14-race",
+    "N15",
+    "N16",
+    "N16-fifo",
+    "N16-owner-mode-0",
+    "N16-owner-mode-1",
+    "N16-owner-mode-2",
+    "N16-xattr",
+    "N17",
+    "N17-chmod",
+    "N17-disk-full",
+    "N17-fsync",
+    "N17-secondary-receipt",
+    "N18-after-rename",
+    "N18-before-marker",
+    "N18-before-rename",
+    "N19",
+    "N19-alias",
+    "N19-mode",
+    "N19-path",
+    "N20",
+    "N21",
+    "N21-malformed",
+    "N21-missing",
+    "N22",
+    "N22-publication-fsync",
+    "N23",
+    "N24",
+    "N25-private-parent",
+    "N26-only-hash",
+    "N26-only-inode",
+    "N26-only-logical-bytes",
+    "N26-only-mode",
+    "N26-only-read-count",
+    "N26-only-root-origin",
+    "N26-real-content",
+    "N26-real-identity",
+    "P01-P04",
+    "P05",
+    "P06-short-write",
+    "P07-readonly-publication",
+    "P08-allocation-only"
+  ],
+  "schema": "h25-retention-control-coverage-v5",
+  "status": "EXPECTED_CASES_NOT_EXECUTED"
+}

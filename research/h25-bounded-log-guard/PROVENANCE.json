@@ -1,0 +1,97 @@
+{
+  "authoritative_historical_result": "historical/REVIEW.json",
+  "canonical_publication_base": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "claims_excluded": [
+    "numerical execution",
+    "native compilation",
+    "full verifier speedup",
+    "new kappa",
+    "complete multiplication theorem",
+    "broader six-area resume"
+  ],
+  "external_source_export": true,
+  "files": [
+    {
+      "bytes": 12110,
+      "conservation": "exact byte copy; no newline or content normalization",
+      "local_source_path": "outputs/h25-data-handling-20261028/areas/log-handling/v1/run_guarded.py",
+      "package_path": "run_guarded.py",
+      "sha256": "32633e40364d824c9f942af1ad2934da9701117328364c7c3f418b21b2e8054a"
+    },
+    {
+      "bytes": 12110,
+      "conservation": "exact byte copy; no newline or content normalization",
+      "local_source_path": "outputs/h25-data-handling-20261028/stages/log-v1/runner_under_test.py",
+      "package_path": "frozen-stage/runner_under_test.py",
+      "sha256": "32633e40364d824c9f942af1ad2934da9701117328364c7c3f418b21b2e8054a"
+    },
+    {
+      "bytes": 6168,
+      "conservation": "exact byte copy; no newline or content normalization",
+      "local_source_path": "outputs/h25-data-handling-20261028/stages/log-v1/integration/file_controls.py",
+      "package_path": "frozen-stage/integration/file_controls.py",
+      "sha256": "8b8c3b823652c9a8dff0bf9dec2a67a90f30b1b7b642db28e95965b540e9d7bb"
+    },
+    {
+      "bytes": 2121,
+      "conservation": "exact byte copy; no newline or content normalization",
+      "local_source_path": "outputs/h25-data-handling-20261028/stages/log-v1/integration/full_driver.py",
+      "package_path": "frozen-stage/integration/full_driver.py",
+      "sha256": "14125583107b2a06e522e40823cf3874929b6a5c3114d099888adc8c31ac75f5"
+    },
+    {
+      "bytes": 587,
+      "conservation": "exact byte copy; no newline or content normalization",
+      "local_source_path": "outputs/h25-data-handling-20261028/stages/log-v1/JOBS.json",
+      "package_path": "frozen-stage/JOBS.json",
+      "sha256": "c29f596e6a6f73b5955c927875cb15d7166d34be59b774e4f44031a5134135c0"
+    },
+    {
+      "bytes": 932,
+      "conservation": "exact byte copy; no newline or content normalization",
+      "local_source_path": "outputs/h25-data-handling-20261028/stages/log-v1/STAGE.json",
+      "package_path": "frozen-stage/STAGE.json",
+      "sha256": "77bcbc01caf35021c0f1bd6039d35424854574276372b58063d3038409f17296"
+    },
+    {
+      "bytes": 4973,
+      "conservation": "exact byte copy; no newline or content normalization",
+      "local_source_path": "outputs/h25-data-handling-20261028/stages/log-v1/CONTROL-BILL.json",
+      "package_path": "frozen-stage/CONTROL-BILL.json",
+      "sha256": "1899914be203ef7ed19ecde949031ab69685d3ff4223d509cde519411e853cda"
+    },
+    {
+      "bytes": 3884,
+      "conservation": "exact byte copy; no newline or content normalization",
+      "local_source_path": "outputs/h25-data-handling-20261028/areas/log-handling/v1/INTERFACE.txt",
+      "package_path": "historical/INTERFACE.txt",
+      "sha256": "47e46ad6aece51b2277f05ec6160fe4078287929b9d73f9666a061d69bf24a27"
+    },
+    {
+      "bytes": 4559,
+      "conservation": "exact byte copy; no newline or content normalization",
+      "local_source_path": "outputs/h25-data-handling-20261028/areas/log-handling/v1/PROPOSAL.json",
+      "package_path": "historical/PROPOSAL.json",
+      "sha256": "cd06d296d9c2cf1c691f13cca9a0f1f6245eca3e69b08cca1edc854cb506cb55"
+    },
+    {
+      "bytes": 1008,
+      "conservation": "exact byte copy; no newline or content normalization",
+      "local_source_path": "outputs/h25-data-handling-20261028/areas/log-handling/v1/SOURCE-MANIFEST.json",
+      "package_path": "historical/SOURCE-MANIFEST.json",
+      "sha256": "9bcea12903d642a97ce0fde527b8bbf87f0e66ed6046e4b75f7064a0861d0911"
+    },
+    {
+      "bytes": 18219,
+      "conservation": "exact byte copy; no newline or content normalization",
+      "local_source_path": "outputs/h25-data-handling-20261028/review/log-handling-v1-execution/REVIEW.json",
+      "package_path": "historical/REVIEW.json",
+      "sha256": "bce18e269d06e2f2ca0e518996e5ea8186bdba2b610375b82030df175ef8a7fa"
+    }
+  ],
+  "git_blob_ids": "Not fabricated; local uncommitted predecessor inputs are authenticated by exact vendored byte equality and SHA256, outside upstream Git provenance pins.",
+  "historical_pending_labels": "PROPOSAL.json, INTERFACE.txt and SOURCE-MANIFEST.json describe their earlier source-only checkpoint. Executed review is later evidence, not a rewrite of historical bytes.",
+  "predecessor_pr": "https://github.com/CrocSwap/integer-mult-bounds/pull/6029",
+  "publication_validation": "PENDING_PARENT_EXECUTION",
+  "schema": "h25-log-guard-source-conservation-v1"
+}

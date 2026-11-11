@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/nonlinear-monomial-control-ceiling/.gitattributes",
+    "research/nonlinear-monomial-control-ceiling/EVIDENCE.json",
+    "research/nonlinear-monomial-control-ceiling/HISTORY.md",
+    "research/nonlinear-monomial-control-ceiling/LICENSE",
+    "research/nonlinear-monomial-control-ceiling/NOTICE",
+    "research/nonlinear-monomial-control-ceiling/README.md",
+    "research/nonlinear-monomial-control-ceiling/SOURCE-NOTICE",
+    "research/nonlinear-monomial-control-ceiling/SOURCES.json",
+    "research/nonlinear-monomial-control-ceiling/TASK.json",
+    "research/nonlinear-monomial-control-ceiling/VERIFY.json",
+    "research/nonlinear-monomial-control-ceiling/evidence/finite-check/FREEZE.json",
+    "research/nonlinear-monomial-control-ceiling/evidence/finite-check/MATRICES-OPTIMIZED.json",
+    "research/nonlinear-monomial-control-ceiling/evidence/finite-check/MATRICES.json",
+    "research/nonlinear-monomial-control-ceiling/evidence/finite-check/RESULT-OPTIMIZED.json",
+    "research/nonlinear-monomial-control-ceiling/evidence/finite-check/RESULT.json",
+    "research/nonlinear-monomial-control-ceiling/evidence/finite-check/REVIEW.md",
+    "research/nonlinear-monomial-control-ceiling/evidence/finite-check/SHA256SUMS",
+    "research/nonlinear-monomial-control-ceiling/evidence/finite-check/SOURCE-FACTS.md",
+    "research/nonlinear-monomial-control-ceiling/evidence/finite-check/check_support.py",
+    "research/nonlinear-monomial-control-ceiling/evidence/paid-control/AUTHOR-INPUTS.json",
+    "research/nonlinear-monomial-control-ceiling/evidence/paid-control/AUTHOR-REPORT.md",
+    "research/nonlinear-monomial-control-ceiling/evidence/paid-control/CAPTURES.json",
+    "research/nonlinear-monomial-control-ceiling/evidence/paid-control/INDEPENDENT-REVIEW.md",
+    "research/nonlinear-monomial-control-ceiling/evidence/paid-control/REVIEW-SOURCES.json",
+    "research/nonlinear-monomial-control-ceiling/evidence/paid-control/captures/01-PAID-SHEAR-SCREEN.md",
+    "research/nonlinear-monomial-control-ceiling/evidence/paid-control/captures/03-operator-valued-gather-rank-boundary.md",
+    "research/nonlinear-monomial-control-ceiling/evidence/paid-control/captures/04-PROOF.md",
+    "research/nonlinear-monomial-control-ceiling/evidence/paid-control/captures/05-REPORT.md",
+    "research/nonlinear-monomial-control-ceiling/evidence/paid-control/captures/06-REVIEW.md",
+    "research/nonlinear-monomial-control-ceiling/evidence/paid-control/captures/07-REPORT.md",
+    "research/nonlinear-monomial-control-ceiling/evidence/paid-control/captures/08-RESULT.json",
+    "research/nonlinear-monomial-control-ceiling/evidence/paid-control/captures/09-operator-valued-paid-theorem-fit.md",
+    "research/nonlinear-monomial-control-ceiling/evidence/paid-control/captures/RAW-GIT-5126-PROOF.md",
+    "research/nonlinear-monomial-control-ceiling/evidence/proof-review/FILES.json",
+    "research/nonlinear-monomial-control-ceiling/evidence/proof-review/RESULT.json",
+    "research/nonlinear-monomial-control-ceiling/evidence/proof-review/REVIEW.md",
+    "research/nonlinear-monomial-control-ceiling/evidence/proof-review/SOURCES.json",
+    "research/nonlinear-monomial-control-ceiling/evidence/proof-review/frozen/CODE.json",
+    "research/nonlinear-monomial-control-ceiling/evidence/proof-review/frozen/FIRST-DRAFT.md",
+    "research/nonlinear-monomial-control-ceiling/evidence/proof-review/frozen/NORMALIZERS.json",
+    "research/nonlinear-monomial-control-ceiling/evidence/proof-review/frozen/PHYSICAL.md",
+    "research/nonlinear-monomial-control-ceiling/evidence/proof-review/frozen/PREDECESSOR-PROOF.md",
+    "research/nonlinear-monomial-control-ceiling/evidence/proof-review/frozen/PREDECESSOR-SOURCE-CHECKER.py",
+    "research/nonlinear-monomial-control-ceiling/evidence/proof-review/frozen/PREDECESSOR-SOURCES.json",
+    "research/nonlinear-monomial-control-ceiling/evidence/proof-review/frozen/REVIEWED-PROOF.md",
+    "research/nonlinear-monomial-control-ceiling/verify.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "146 additional exact products, ten invalid-input controls, all 277 retained products and 70912 entries, complete frozen RESULT/MATRICES and original wrapper report, actual changed-source and complex-sign CLI rejection controls. Timings are not a CI predicate."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 60,
+      "checks": "146 additional exact products, ten invalid-input controls, all 277 retained products and 70912 entries, complete frozen RESULT/MATRICES and original wrapper report, actual changed-source and complex-sign CLI rejection controls. Timings are not a CI predicate."
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "accounting_edges_inspected": [
+    {
+      "actual_interface": "Returns private BoundConsumers with run_root and stop_supplement only. Bound root uses fixed active owner/nested runner/intent/source plan. It is not a callable accepting a P02 parent/publication tail and cannot be borrowed by assigning an accounting pin.",
+      "lines": [
+        444,
+        832
+      ],
+      "source": {
+        "bytes": 44563,
+        "mode": "0444",
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/fresh-round-consumer-integration-v2/fresh_supervisor.py",
+        "sha256": "7b3304eaf4884e3029df5095e2b0950c18d1544ad21431a07c033b85e53bd4f7"
+      },
+      "symbol": "bind_active_run_root(active_module,kernel_module,active_context,*,whole_body_begin_ns,case_contracts)"
+    },
+    {
+      "actual_interface": "Exactly normal then optimized queue cases under CaseBudget; retains genuine nested result. P02 pure/native reference jobs do not satisfy this fixed source contract.",
+      "lines": [
+        731,
+        759
+      ],
+      "source": {
+        "bytes": 81343,
+        "mode": "0444",
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/fresh-controller-composition-v2/composed_controller.py",
+        "sha256": "c88736fce81d737ae13ac1bf47500dc9d72920bd4910efe1b49074797d6e3231"
+      },
+      "symbol": "ActualRootResults.run_root"
+    },
+    {
+      "actual_interface": "Declared bill DATA binding for normal/optimized cases and <=180s selected whole command; no actual completion meter/export callable.",
+      "lines": [
+        1011,
+        1047
+      ],
+      "source": {
+        "bytes": 81343,
+        "mode": "0444",
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/fresh-controller-composition-v2/composed_controller.py",
+        "sha256": "c88736fce81d737ae13ac1bf47500dc9d72920bd4910efe1b49074797d6e3231"
+      },
+      "symbol": "complete_bill(plan,approval,request)"
+    },
+    {
+      "actual_interface": "Writes partial observation ACCOUNTING/PARENT with whole_outer_body_complete=False, financial_receipt_created=False,all_costs_settled=False; then closes/releases and requires real enclosing meter/native completion plus actual CLOSER/review. Cannot supply final P02 enclosing completion.",
+      "lines": [
+        1371,
+        1424
+      ],
+      "source": {
+        "bytes": 81343,
+        "mode": "0444",
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/fresh-controller-composition-v2/composed_controller.py",
+        "sha256": "c88736fce81d737ae13ac1bf47500dc9d72920bd4910efe1b49074797d6e3231"
+      },
+      "symbol": "run_composed final accounting/return"
+    }
+  ],
+  "actual_existing_cold_authority": {
+    "actual_bootstrap": "Driver._initial_cold_authority127-156 calls exact capture_epoch_authority(root,cap,api) and obtains actual authority tuple plus actual6-entry caller descriptor before candidate imports. These same captured objects supply the bridge; no two-argument substitute can produce a third capability.",
+    "root_api": "Each consumer call receives the actual captured3 tuple items root,capability,api. api[0]() must equal exact Root pin; api[1](capability,exact_provider_pin) validates actual original capability. Source-owned aliases and registered module/function identity checks remain on both sides.",
+    "source": {
+      "bytes": 137642,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_authority_products_v1.py",
+      "sha256": "f279ab86fc17c6a517b035f19d56863919cbd8304de4e7d5332457c6159aec10"
+    },
+    "source_call": "Authenticated descriptor dispatch(1, registered_handle, exact_export_name, *positional_args), no kwargs. Actual invoke(handle,export,*args,**kwargs)2344-2369 checks registered source/owned function before calling exact args. These new exports are plain unclassified functions, not a new capability-producing role.",
+    "source_current": "Authenticated descriptor dispatch(2, registered_handle), actual cold_check2092-2105. Existing driver._epoch_g08_dispatch1355-1379 supplies guarded late calls; the initial pre-exposure call copies the exact inline descriptor field/default/closure guard since _epoch_g08_dispatch is defined later. No authority code changes.",
+    "source_load": "Authenticated descriptor dispatch(0, absolute_consumer_path, reviewed_consumer_sha256, _h25_p02_reference_cold). Actual epoch authority load(path,digest,name,kind=module)2107-2140 returns(module,registered_handle)."
+  },
+  "execution_authorized": false,
+  "immutable_capsule_shapes": {
+    "native_counters": "Tuple4 ordered(name,int) pairs complement_native,complement_fallback,gram_native,gram_fallback.",
+    "one_use_owner": "Driver _P02 reference_started/consumed state is bound to actual Root-installed driver/function graph and capsule/module/handle identities. Set before reader/bind attempt. Later main-local object901 is retained as reference_invocation; _epoch_p02_bind_locals requires is identity with original suite token. No serialized invocation object or reset.",
+    "provenance": "Tuple of exact selected parent/manifest/publication/enclosing-completion SourcePin/FileRecord primitives and both lane identity/source/workload/artifact records, recursively frozen in declared field order. Full raw evidence stays retained.",
+    "pure_outputs": "Tuple6 bytes in frozen schema order.",
+    "pure_rank": "Tuple of ordered(tuple(exact-int rows),exact-int rank) pairs; fresh list/pair tuples restored at projection.",
+    "pure_roles": "Tuple3 ordered(name,value) pairs roles/int,forward_frames_nested/bool,reverse_complement_frames_nested/bool.",
+    "pure_trace": "Tuple4 ordered(name,value) pairs calls,canonical_stream_bytes,sha256,schema.",
+    "schema": "p02-dual-original-immutable-capsule-v1",
+    "source_roots": "Exact(pure_root_identity,native_root_identity,pure_invocation_id,native_invocation_id); roots/generations distinct.",
+    "workload": "Exact(base_commit,upstream_commit,inventory_sha,engine_pin_pairs,h,relative_scientific_argv,anchor_sha,anchor_bytes)."
+  },
+  "open_source_api": {
+    "closed_values": "enclosing_accounting_source_pin, enclosing_completion and P02_REFERENCE_DATA_SELECTION remain None. A symbolic source pin, caller callback, completed flag, manifest or declared bill is not this API.",
+    "effect": "This v2 cannot be accepted as a source-complete end-to-end bridge until the missing source interface is resolved. Buildable schema/parser/reader/local driver design is separable but no implementation is authorized by this packet. Actual funding/deadline/receipt values remain separate runtime gates and are not the reason for this source gap.",
+    "id": "P02-BRIDGE-SOURCE-API-1",
+    "missing": "No exact source-pinned callable/actual-owner interface has been established in this bounded named closure that encloses the complete P02 pair parent, final publication write/readback/close, lease closure and handoff source-selection publication, then supplies a provenance-bound actual completion/accounting result to the cold consumer.",
+    "required_resolution": "Parent must assign/identify a concrete fixed P02 enclosing caller/completion adapter with exact callable signature, actual live owner/return contract, known cleanup/first-primary behavior, finite whole-cost/tail joins and its independent review. Do not widen M/F4/normal-optimized or infer an existing API from a field name.",
+    "status": "OPEN_CONCRETE_SOURCE_INTERFACE_NOT_A_MISSING_RUNTIME_VALUE"
+  },
+  "proposed_consumer_signatures": [
+    {
+      "arguments": "Exactly4 positional args; candidate_output exact canonical absolute str. P02_REFERENCE_DATA_SELECTION is fixed source literal None initially; never a caller arg.",
+      "call": "initial guarded dispatch(1,handle,cold_join_p02,_CAPTURED_BOOTSTRAP_ROOT,_CAPTURED_BOOTSTRAP_CAPABILITY,_CAPTURED_BOOTSTRAP_API,_INITIAL_OUTPUT)",
+      "return": "Exact immutable10tuple(schema,provenance,workload,selected_output,source_roots,pure_outputs,pure_roles,pure_rank,pure_trace,native_counters). Every recursive member tuple/bytes/str/int/bool/None; no mutable dict/list or capability. Entire dual join before return/candidate integration exposure.",
+      "signature": "cold_join_p02(root, capability, api, candidate_output)"
+    },
+    {
+      "arguments": "Exactly7 positional args; scientific_source_tuple exact(base_commit,upstream_commit,inventory_sha,tuple(engine_pins.items()),h,relative_scientific_argv), compared type-exact to capsule; actual candidate output and anchor bytes bind unchanged original inputs.",
+      "call": "_epoch_g08_dispatch(1,handle,bind_p02_projection,root,cap,api,actual_capsule,str(actual_output),actual_anchor_bytes,actual_source_tuple)",
+      "return": "Exactly fresh builtin5-key dict per frozen projection schema. Pure members: reference_role_result,reference_rank_events,reference_trace,reference_outputs; native member: reference_native_counters. No actual candidate values enter it.",
+      "signature": "bind_p02_projection(root, capability, api, capsule, candidate_output, anchor_bytes, scientific_source_tuple)"
+    },
+    {
+      "arguments": "Exactly6 positional args; identity tuple captured source-locally at bind, not a returned equality callback. Validate exact container identities and complete primitive values against immutable capsule.",
+      "call": "_epoch_g08_dispatch(1,handle,check_p02_projection,root,cap,api,actual_capsule,actual_reference,initial_container_identity_tuple)",
+      "return": "None only; rejects mutation, never restores/recomputes expected answers.",
+      "signature": "check_p02_projection(root, capability, api, capsule, projection, container_identity_tuple)"
+    },
+    {
+      "arguments": "Exactly6 positional args; caller has already proven actual invocation token, captures/CLI/source-completion phase and output object identity. Function checks exact immutable identity tuple/plain science schema and6 fixed files under actual root.",
+      "call": "_epoch_g08_dispatch(1,handle,read_p02_candidate_outputs,root,cap,api,str(actual_output),actual_initial_output_identity,actual_science)",
+      "return": "Exactly tuple6 builtin bytes, full complete identity-stable raw actual output data; every new FD closed before return; source/cold check completes before original data_finalization.",
+      "signature": "read_p02_candidate_outputs(root, capability, api, candidate_output, initial_output_identity, science)"
+    }
+  ],
+  "schema": "p02-reference-bridge-exact-source-interface-map-v2",
+  "source_only": true,
+  "source_pins": {
+    "bytes": 8932,
+    "mode": "0444",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/SOURCE-PINS-v2.json",
+    "sha256": "f296ebb06f3b89f1737d456db3e6cc3a7061546275eabce84c1b18aecb3579d2"
+  }
+}

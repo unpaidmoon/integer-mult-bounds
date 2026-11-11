@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "task_id": "joint-query-controller",
+  "priority_revision": 8,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "original_card": {
+    "id": "joint-query-controller",
+    "question": "Can a changed query demand or caller remove real work while satisfying native chronology and restoration?",
+    "starting_points": [
+      "docs/research/current-priorities.md",
+      "docs/research/research-family-status.md",
+      "certificates/selected-result.json",
+      "docs/research/pr-intake-evidence/pr5599-completion/PROOF-REVIEW.md"
+    ],
+    "methods": [
+      "Construct and independently check one source-bound instance of the stated first experiment.",
+      "Seek an exact counterexample or target-specific complete-budget obstruction to that same proposed change."
+    ],
+    "acceptance_gate": "A source-bound arbitrary-input identity and legal producer/consumer boundary with the complete paid and productive target invoice, including restoration, ownership, native alignment and extra charges. Price under the actual current model; historical ceiling.py assumptions must be established before use. A favorable optimistic relaxation keeps a route open but is not a completed supplier. A scoped local result remains useful; expansion requires the family-level budget gate.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_selected_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Read revision 8, the selected review and live exact-source handoffs. Then follow this card's bounded first_experiment.",
+      "scope": "Source-bound orientation only, not a supplier replay or theorem proof."
+    },
+    "first_experiment": "Choose an exact caller and a new demand/interface hypothesis. Read the scoped #5617/#5631/#5649/#5747 and #5720/#5745 objections before rebuilding an excluded schedule. Compare the complete matched source/consumer protocols including all retained helper outputs. For an active-mode injection, first check #5745: its canonical delivery claim repays the eight removed centre jobs. Audit that exact claim or change its channel/feedback hypothesis; do not repeat the same free-injection search. Stop if the full favorable budget fails or the required restored output is unobservable.",
+    "bottleneck_link": "Judge the actual current supplier contract and complete signed target/paid bill; frozen-profile ceilings require an applicability proof.",
+    "allowed_variations": [
+      "One exact source head, helper/cut region or quantified proposition and changed hypothesis; check live handoffs first. Different seeds are not different scopes."
+    ],
+    "scope_change_triggers": [
+      "Changing source head, helper/cut domain, operation alphabet or caller boundary without recording the new scope.",
+      "Treating an archived proposal or local numerical pass as complete supplier admission."
+    ],
+    "overlap_terms": [
+      "query demand",
+      "active mode",
+      "5720",
+      "5745",
+      "5747",
+      "caller"
+    ],
+    "existing_checks": [
+      {
+        "scope": "PR #4166: author-checked installed producer/service/return/bridge connection; native-component comparison loses.",
+        "evidence": "research/qq16-caller-install/README.md",
+        "remaining": "Complete matched physical protocol bill, or changed source-compatible demand/circuit; no affordable supplier yet.",
+        "status": "author-checked",
+        "source_commit": "0b082d22a0e9a442d264ab0633e35ef26c790630",
+        "selected_record_sha256": "bb2eaa58647b353f88d0aec2eafb9d30df1be53589231b23e12ceef3e4bad129"
+      },
+      {
+        "scope": "Selected PR5599: complete helper-subspace construction and independent caller replay; five framework assumptions remain.",
+        "evidence": "docs/research/pr-intake-evidence/pr5599-completion/PROOF-REVIEW.md",
+        "remaining": "The next experiment must identify uncovered source-specific work. Successor archive intake does not transfer this admission.",
+        "status": "reviewed",
+        "source_commit": "09dd0965711ca7eeb169057a420abab1c9052137",
+        "selected_record_sha256": "2a0220e866417774606e0f991e41b9c1d26b1f43b97857238cf478dbc7d330b5"
+      }
+    ]
+  },
+  "scope_status": "changed",
+  "actual_scope": "Sharp relative coefficient and worst basis-pair output error for a shared phase-weighted Fourier convolution routine with nonzero order-two read translation.",
+  "scope_change_reason": "Originally posed quantitative approximation question at a Fourier boundary; this is a precision/analytic side result, not a selected caller or active-mode injection construction.",
+  "bottleneck_link": "A proposed approximate producer/consumer Fourier contract cannot have arbitrarily small relative error under the shared translated interface. Physical costs and selected supplier budgets remain unchanged.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop at the first verified sharp error floor and attaining weights; do not extend to other orders, norms or physical callers.",
+  "outcome": "completed",
+  "evidence": "PROOF.md gives the all-group argument; verify.py gives exact field, polynomial, literal Fourier, coefficient/moment and rejecting-control evidence with source-bound generated receipts.",
+  "author": "Nick Petalas",
+  "ai_assistance": "Independent human and formal proof-kernel review are unclaimed.",
+  "open_questions": [
+    {
+      "question": "What is the sharp error for translations of order greater than two?",
+      "why_it_matters": "Determines whether the order-two obstruction extends to other translations.",
+      "first_step": "Derive the constrained character moments for Z/3 before searching.",
+      "blocked_by": "The corresponding nonbinary character-moment optimization is unresolved."
+    },
+    {
+      "question": "What is the sharp error on arbitrary unit-norm input pairs?",
+      "why_it_matters": "The coefficient and basis-pair norms do not determine the bilinear operator norm.",
+      "first_step": "Use the two-output formula for the exhibited minimizer, then prove a matching all-phase lower bound.",
+      "blocked_by": "The optimizer in the different norm and physical implementation remain unproved."
+    }
+  ],
+  "claim_type": "scoped written proof with exact finite corroboration",
+  "coordination_claim": "https://github.com/CrocSwap/integer-mult-bounds/discussions/1166#discussioncomment-19299780",
+  "question_source": "original",
+  "predecessors": [
+    {
+      "pr": 1477,
+      "author": "bbMisk",
+      "role": "Exact weighted Fourier contract and classification; cited, not audited."
+    },
+    {
+      "pr": 940,
+      "author": "RossRichardson",
+      "role": "Unweighted Fourier criterion and retained normalization."
+    },
+    {
+      "pr": 4874,
+      "author": "petalas",
+      "role": "Older exact higher-arity theorem; no executable dependency."
+    },
+    {
+      "pr": 5946,
+      "author": "petalas",
+      "role": "Distinct restricted-input unequal-read contract, not the target of this work."
+    }
+  ],
+  "overlap_coverage": {
+    "main_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+    "priority_revision": 8,
+    "open_prs_complete_fetched_at": "2026-10-30T18:20:25.143176+00:00",
+    "discussion_records_complete_fetched_at": "2026-10-30T18:21:34.511861+00:00",
+    "source_of_question": "original",
+    "main_searches": "Weighted/shared Fourier, translation defect, stability, constant formula; main README searches supplement sparse local notes.",
+    "merged_searches": "shared Fourier; weighted Fourier; Fourier error; recent account references to PR1477.",
+    "limitations": "No novelty certification; no exhaustive arbitrary-diff or unpublished-work coverage. Concurrent PR1477 arithmetic work is a different implementation question."
+  }
+}

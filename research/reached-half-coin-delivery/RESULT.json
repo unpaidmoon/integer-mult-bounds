@@ -1,0 +1,258 @@
+{
+  "controls": {
+    "changed_inverse_coin": "complete inverse endpoint and residue cleanup",
+    "dirty_work_domain": "supplied clean cut premise violated",
+    "missing_marker_rewind": "heads or finite control did not return",
+    "omitted_unfetch": "complete forward endpoint including owned cells/spectators",
+    "one_bit_short_extreme_domain": "signed width insufficient",
+    "retained_accumulator": "heads or finite control did not return",
+    "wrong_coin_offset10": "complete forward endpoint including owned cells/spectators",
+    "wrong_inverse_coin_walk": "coin head escaped supplied interval"
+  },
+  "exhaustive_pair_coin_cases": 680,
+  "fixtures": [
+    {
+      "cases": 8,
+      "coin_moves_per_direction": 44,
+      "data_cells": 6,
+      "data_moves_per_direction": 152,
+      "half_sha256": "c25fae11105dd1bb0d782ab5cc6db776568e66a6c72113e6f33ce24473b9de3e",
+      "half_symbols": 192,
+      "original_bits": 1,
+      "payload_sha256": "e96249dcde036b4eee3b05073b99817d2235aae721c8aae33e1568a53dedad9f",
+      "payload_symbols": 254,
+      "program_cells": 256,
+      "random_cells": 12,
+      "steps_per_direction": 510,
+      "sum_visited_intervals": 274,
+      "width": 2
+    },
+    {
+      "cases": 32,
+      "coin_moves_per_direction": 44,
+      "data_cells": 8,
+      "data_moves_per_direction": 302,
+      "half_sha256": "f3730af778dde16f7038e3b19f735b5ba01f6220a41794b1f401c911a60a3382",
+      "half_symbols": 362,
+      "original_bits": 2,
+      "payload_sha256": "2aebcb5ccef90ff9112aee532f9911ff1091854ee6d682399309359badb870fd",
+      "payload_symbols": 428,
+      "program_cells": 430,
+      "random_cells": 12,
+      "steps_per_direction": 858,
+      "sum_visited_intervals": 450,
+      "width": 3
+    },
+    {
+      "cases": 128,
+      "coin_moves_per_direction": 44,
+      "data_cells": 10,
+      "data_moves_per_direction": 500,
+      "half_sha256": "83e7ce31724e6bee669aae02ca34c484ad0a69acea91f86886dc4a49ab09bf97",
+      "half_symbols": 580,
+      "original_bits": 3,
+      "payload_sha256": "1bd0cc704c326a17560f1bf98170921666d812afbafbba5194d412a449b794c1",
+      "payload_symbols": 650,
+      "program_cells": 652,
+      "random_cells": 12,
+      "steps_per_direction": 1302,
+      "sum_visited_intervals": 674,
+      "width": 4
+    },
+    {
+      "cases": 512,
+      "coin_moves_per_direction": 44,
+      "data_cells": 12,
+      "data_moves_per_direction": 746,
+      "half_sha256": "d5195e8438cbdc683e33fbfb2d8c94e3cce07eba46d6a65a3e7f1637268c2adc",
+      "half_symbols": 846,
+      "original_bits": 4,
+      "payload_sha256": "a7d63197574c90d0ccfea7785c9d51fb9be82e81ad41190e8ae846f12f8d22fe",
+      "payload_symbols": 920,
+      "program_cells": 922,
+      "random_cells": 12,
+      "steps_per_direction": 1842,
+      "sum_visited_intervals": 946,
+      "width": 5
+    },
+    {
+      "cases": 16,
+      "coin_moves_per_direction": 44,
+      "data_cells": 14,
+      "data_moves_per_direction": 1040,
+      "half_sha256": "dfc571db686f09e19521dd3e81086c8ae54fb7d1cf506c778cb14a896f5c8159",
+      "half_symbols": 1160,
+      "original_bits": 5,
+      "payload_sha256": "e2a0da2d11a3cbac8a8e493a95088dc32333bd1eaa33ca382916bc4e07aa094e",
+      "payload_symbols": 1238,
+      "program_cells": 1240,
+      "random_cells": 12,
+      "steps_per_direction": 2478,
+      "sum_visited_intervals": 1266,
+      "width": 6
+    },
+    {
+      "cases": 16,
+      "coin_moves_per_direction": 44,
+      "data_cells": 18,
+      "data_moves_per_direction": 1772,
+      "half_sha256": "a8dd33403ca4021dedf4d4fd9fb10f0c5b76f3b6476f4ef7003da0b8eefccede",
+      "half_symbols": 1932,
+      "original_bits": 7,
+      "payload_sha256": "c01a45bb3fcd51c831fcd3343bf72be7ba424116f8d04b8e70ac9975aaff76f8",
+      "payload_symbols": 2018,
+      "program_cells": 2020,
+      "random_cells": 12,
+      "steps_per_direction": 4038,
+      "sum_visited_intervals": 2050,
+      "width": 8
+    },
+    {
+      "cases": 16,
+      "coin_moves_per_direction": 44,
+      "data_cells": 34,
+      "data_moves_per_direction": 6620,
+      "half_sha256": "deb2cfdf41d6bea2ed25c150d290c7e96944e6e445f7d2c109f317173f08a3e0",
+      "half_symbols": 6940,
+      "original_bits": 15,
+      "payload_sha256": "03a3c88d7ca4d253094520f074457c2181e73c7c8c7b0f6d3430150fce300699",
+      "payload_symbols": 7058,
+      "program_cells": 7060,
+      "random_cells": 12,
+      "steps_per_direction": 14118,
+      "sum_visited_intervals": 7106,
+      "width": 16
+    },
+    {
+      "cases": 16,
+      "coin_moves_per_direction": 44,
+      "data_cells": 66,
+      "data_moves_per_direction": 25532,
+      "half_sha256": "c379a5eb88f913a1753cdca7f564261c3dd67a2ae0faeebe154df7191cea7184",
+      "half_symbols": 26172,
+      "original_bits": 31,
+      "payload_sha256": "cf273bf69e0a839b700409c2c96db7765efc592acd9b43fc31b92f4b0c75fd1b",
+      "payload_symbols": 26354,
+      "program_cells": 26356,
+      "random_cells": 12,
+      "steps_per_direction": 52710,
+      "sum_visited_intervals": 26434,
+      "width": 32
+    }
+  ],
+  "larger_endpoint_cases": 64,
+  "literal_round_trip_transitions": 4629600,
+  "local_table": {
+    "new_rows": 192,
+    "old_coin_projections": 512,
+    "old_rows": 256,
+    "rows": 704,
+    "sha256": "5067e258fe1c4216ec6e5c541f66a6b0db94a0d52c46b08043b8fa49f97108b0"
+  },
+  "origins": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      -17,
+      29,
+      -53
+    ],
+    [
+      101,
+      -211,
+      307
+    ]
+  ],
+  "schema": "reached-half-coin-delivery/1",
+  "scope": {
+    "allocation_layout_program_setup_supplied": true,
+    "freshness": "requires coin11 uniform conditional on past and input",
+    "native_or_selected6030_transfer": false,
+    "random_tape_generation_supplied": true,
+    "sampler_full_supplier_invoice_or_kappa_claim": false,
+    "source_event40_or_full_prefix_implemented": false
+  },
+  "source_sha256": {
+    "research/p104-helper-subspace-splits/WORD.json.gz": "bbb072bced5824a8d9094c49be2fc51fbfdd05fb2b7dab8106e1275053075099",
+    "research/p104-stochastic-prefix/PROOF.md": "db1640be6eade5955320c106ef4d0666742c195560402d0067fa0ee3648bbeca",
+    "research/reversible-signed-half-kernel/PROOF.md": "64c9b4b9f58639133f087d77f154b91026a18738bfb0830b93e96d5a30df9932",
+    "research/reversible-signed-half-kernel/kernel.py": "30da348f62d9935fef3007a63cd33c18e48f260c0ec75a6366894e436a0c8b49",
+    "research/reversible-stochastic-shears/verify.py": "7e7a203f6c8f82443d7fd036c36d1659c3d2ffdbbc7f86aebeda49e6642af73c",
+    "research/signed-half-marker-audit/AUDIT.md": "0661665d9dda68fb4150d5e4024edd97477a00a16e001da995e2e42fa2f9a08a",
+    "research/signed-half-marker-audit/verify.py": "c2e833f7f1d90683598d1733b7c71c13b0ec2cb24420ccfc10ee14f47c428c5e"
+  },
+  "source_slice": {
+    "coin_offset": 11,
+    "event": [
+      "SCALE",
+      345,
+      "1/2",
+      3
+    ],
+    "full_prefix_replayed": false,
+    "index": 52,
+    "original_signed_bits": "B>=1",
+    "packing": "new declared fixed-draw packing, not inherited tape ABI",
+    "prior_fixed_draw_blocks": [
+      [
+        19,
+        1
+      ],
+      [
+        20,
+        1
+      ],
+      [
+        41,
+        2
+      ],
+      [
+        42,
+        1
+      ],
+      [
+        43,
+        1
+      ],
+      [
+        44,
+        1
+      ],
+      [
+        45,
+        1
+      ],
+      [
+        46,
+        1
+      ],
+      [
+        47,
+        1
+      ],
+      [
+        48,
+        1
+      ]
+    ],
+    "prior_target_writes": [
+      [
+        40,
+        [
+          "ADD",
+          345,
+          93,
+          "1",
+          3
+        ]
+      ]
+    ],
+    "reached_range": "[-2^B, 2^B-2]",
+    "reached_value": "initial[345] + initial[93]",
+    "required_signed_width": "W=B+1"
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,132 @@
+{
+  "accepted_body_credit": 0,
+  "after": {
+    "bytes": 55647,
+    "mode": "0444",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/DESIGN-v4.json",
+    "sha256": "e3b79641915661c18b2249818664579624c494ac19e2673d118f4c26b77f37bd"
+  },
+  "all_29_source_pins_unchanged": true,
+  "all_other_design_sections_identical": true,
+  "before": {
+    "bytes": 53696,
+    "mode": "0444",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/DESIGN-v3.json",
+    "sha256": "deef1b8534a46e892cceeb755c4b9f5915816c31f8cdb255094d75a87a77baa7"
+  },
+  "changes": [
+    {
+      "after": "p02-fixed-dual-original-reference-bridge-design-v4",
+      "before": "p02-fixed-dual-original-reference-bridge-design-v3",
+      "op": "replace",
+      "path": "/schema"
+    },
+    {
+      "after": {
+        "bytes": 53696,
+        "mode": "0444",
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/DESIGN-v3.json",
+        "sha256": "deef1b8534a46e892cceeb755c4b9f5915816c31f8cdb255094d75a87a77baa7"
+      },
+      "before": {
+        "bytes": 47103,
+        "mode": "0444",
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/DESIGN-v2.json",
+        "sha256": "4a3f5b8b73c0ae082a7b3cc91edaaf33f53a2a495361c7dbfa08774811ce884a"
+      },
+      "op": "replace",
+      "path": "/supersedes"
+    },
+    {
+      "after": {
+        "finding": "P02-RB-V3-F1",
+        "independent_delta_review_pending": true,
+        "review": {
+          "bytes": 12596,
+          "mode": "0664",
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/p02-reference-independent/P02-REFERENCE-DESIGN-v3-REVIEW-v1.json",
+          "sha256": "b53c92ef3774d159fde456eb0545d34365d67e0c0a6bfd944693fda044d28373"
+        },
+        "scope": "Only parent retention order is repaired: validate/own pure raw outputs, run/validate native, then create fresh parent retention directory and copy both lanes before joint recheck/seal. Original custody boundary,29 pins,science,cold4/7/6/6,full symbolic bill and null-tail/runtime gates unchanged."
+      },
+      "op": "add",
+      "path": "/revision"
+    },
+    {
+      "after": [
+        "_join_guard_and_producer(pure): raw namespace validation only",
+        "After actual pure success/known cleanup, read the six fixed artifacts, full complement and producer receipt with the unchanged strict reader. Bind complete raw bytes, science digests, file/directory identities and original namespace under the actual retained parent lease/ownership. Keep that original pure namespace owned and unchanged while the native run proceeds. Create no parent retention directory, retained copy, lane seal or qualified reference handoff at this step; never chmod original producer files."
+      ],
+      "before": [
+        "_retain_lane(pure)",
+        "Read six fixed artifacts, full complement and producer receipt only after actual successful completion/known cleanup. Bind all science digests, full bytes and metadata; retain fresh byte-identical parent copies with separate original/retained identities. Never chmod original producer files. Seal lane data but expose no reference."
+      ],
+      "op": "replace",
+      "path": "/parent_sequence/3"
+    },
+    {
+      "after": [
+        "_run_fixed_lane(native)",
+        "Same fixed launch contract with p02-native-reference/native_label, only after pure actual success and raw namespace validation/ownership. Distinct process generation/output directories, same exact producer/engine/input/anchor/workload. Preserve actual original native compiler subprocess wait, all finite controls, extension source/load and actual counter path. No parent retention directory or copy exists while either writer chain is incomplete. Failed native leaves the owned original pure evidence unqualified; no retry."
+      ],
+      "before": [
+        "_run_fixed_lane(native)",
+        "Same fixed launch contract with p02-native-reference/native_label, only after pure success/retention. Distinct process generation/output directories, same exact producer/engine/input/anchor/workload. Preserve actual original native compiler subprocess wait, all finite controls, extension source/load and actual counter path. Failed native leaves retained pure lane nonqualifying."
+      ],
+      "op": "replace",
+      "path": "/parent_sequence/4"
+    },
+    {
+      "after": [
+        "_join_guard_and_producer(native): raw namespace validation only",
+        "Require the same actual successful Popen/guard completion and complete known cleanup, then strict raw namespace validation plus complete native build.json, finite-controls.json and extension evidence. Verify raw build/finite objects exactly join producer receipt and extension SHA; native counters are actual receipt native_calls, never constants. Preserve both original namespaces under actual parent lease/ownership. No retained parent copy or seal is created until both writer chains and all their known streams/pidfds are closed."
+      ],
+      "before": [
+        "_join_guard_and_producer(native)/_retain_lane(native)",
+        "Same completion/custody checks plus complete native build.json, finite-controls.json and extension evidence; verify raw build/finite objects exactly join producer receipt and extension SHA. Native counters are actual receipt native_calls, never constants."
+      ],
+      "op": "replace",
+      "path": "/parent_sequence/5"
+    },
+    {
+      "after": [
+        "_retain_lane(pure), _retain_lane(native), then _seal_pair",
+        "Only after both actual successful guard waits and both known writer chains/streams/pidfds have completed, revalidate the still-owned pure and native original namespaces, then create the fresh parent retention directory outside both producer roots. Neither child ever had its descriptor. Retain complete byte-identical pure and native artifact/evidence copies with separate original/retained and cross-lane identities; complete all writes/fsync/chmod0444/known close/readback. Compare all six full raw files pairwise plus full complement bytes, source/workload/anchor/relative namespace and strict projections. Jointly recheck every original and retained file plus source closure, then create the pair manifest solely from private observations, complete its fsync/chmod0444/close/readback and seal the retained directory0500. Emit only bounded custody publication and actual measured-through cost observations; preserve unknown final tail as null. Known lease/IO closure and ordinary actual parent return must complete before subsequent authenticated source selection. No earlier qualified handoff and no publication field claims financial completion or replaces actual parent success."
+      ],
+      "before": [
+        "_seal_pair",
+        "Compare all six full raw files pairwise plus full complement bytes, source/workload/anchor/relative namespace and strict projections. After both actual successful guard waits and every known writer/close completes, create pair manifest solely from private observations; recheck all original/retained files and source closure jointly, fsync/chmod0444/close/readback and seal fresh retained directory0500. Emit only bounded custody publication and actual measured-through cost observations; preserve unknown final tail as null. Known lease/IO closure and ordinary actual parent return must complete before subsequent authenticated source selection. No publication field claims financial completion or replaces actual parent success."
+      ],
+      "op": "replace",
+      "path": "/parent_sequence/6"
+    }
+  ],
+  "complete_inverse_sha256": "deef1b8534a46e892cceeb755c4b9f5915816c31f8cdb255094d75a87a77baa7",
+  "finding": "P02-RB-V3-F1",
+  "forward_replay_exact": true,
+  "genuine_cold_4_7_6_6_unchanged": true,
+  "implementation_created": false,
+  "inverse_replay_exact": true,
+  "original_retention_predicate_unchanged": true,
+  "review": {
+    "bytes": 12596,
+    "mode": "0664",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/p02-reference-independent/P02-REFERENCE-DESIGN-v3-REVIEW-v1.json",
+    "sha256": "b53c92ef3774d159fde456eb0545d34365d67e0c0a6bfd944693fda044d28373"
+  },
+  "runtime_operations": 0,
+  "schema": "p02-reference-bridge-design-v3-v4-exact-delta-v1",
+  "source_interfaces_unchanged": {
+    "bytes": 12560,
+    "mode": "0444",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/SOURCE-INTERFACES-v3.json",
+    "sha256": "1d51889836e1dbc73f68c96395308bbd5de45279db1078c25d44402e2c414b05"
+  },
+  "source_pins_unchanged": {
+    "bytes": 10881,
+    "mode": "0444",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/SOURCE-PINS-v3.json",
+    "sha256": "a1773498e738ac9a193f6772c117c5d35be7494c9e7e2abda16143d11045cf5a"
+  },
+  "symbolic_cost_null_tail_and_runtime_gates_unchanged": true
+}

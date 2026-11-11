@@ -1,0 +1,56 @@
+{
+  "accepted_body_credit": 0,
+  "actual_current_costs": null,
+  "actual_unmeasured_final_tail": null,
+  "all_frozen_predecessors_preserved": true,
+  "artifacts": [
+    {
+      "bytes": 53696,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/DESIGN-v3.json",
+      "sha256": "deef1b8534a46e892cceeb755c4b9f5915816c31f8cdb255094d75a87a77baa7"
+    },
+    {
+      "bytes": 10881,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/SOURCE-PINS-v3.json",
+      "sha256": "a1773498e738ac9a193f6772c117c5d35be7494c9e7e2abda16143d11045cf5a"
+    },
+    {
+      "bytes": 12560,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/SOURCE-INTERFACES-v3.json",
+      "sha256": "1d51889836e1dbc73f68c96395308bbd5de45279db1078c25d44402e2c414b05"
+    },
+    {
+      "bytes": 51666,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/EXACT-DELTA-v2-to-v3.json",
+      "sha256": "40dbe4c87839c19552eaa2a653f1023d4d8946a4fe0d327dc207ac1823a73751"
+    }
+  ],
+  "deadline_utc": "2026-10-31T02:29:08.955035Z",
+  "execution_authorized": false,
+  "funding_and_fit_accepted": false,
+  "implementation_created": false,
+  "independent_design_review_pending": true,
+  "next": "Independent exact v3 source-design/delta review; no implementation in this assignment.",
+  "owner": "/root/cache_p02_reference_bridge",
+  "physical_complete_cost_admission": false,
+  "predecessor_freeze": {
+    "bytes": 2424,
+    "mode": "0444",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/FREEZE-v2.json",
+    "sha256": "05dd24ccb8fad4757f83b3682820ed1cbfde56c84e600930074613260036c24d"
+  },
+  "runtime_payloads_created": 0,
+  "schema": "p02-reference-bridge-design-freeze-v3",
+  "scope_clarification": {
+    "bytes": 10874,
+    "mode": "0444",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-custody-independent/G12-CUSTODY-SOURCE-SCOPE-CLARIFICATION-v1.json",
+    "sha256": "a9261f686d4fbe6ca40258335231a730dc7e3319be7cedf7c39e189a57c7f367"
+  },
+  "source_adopted": false,
+  "status": "FROZEN_NARROW_SOURCE_SCOPE_CORRECTION_FOR_INDEPENDENT_DESIGN_REVIEW"
+}

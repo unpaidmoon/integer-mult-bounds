@@ -1,0 +1,297 @@
+{
+  "arity_domain": [
+    3,
+    1024
+  ],
+  "centered_equal_step_scope_control": "r50: slopes -35,0,35 accepted; zero must be at an end in the theorem",
+  "classification_sha256": "59a24b83f38e6c52c55345f0df51269de94e675cd2bc5347f2ba6ee18248dd33",
+  "dirty_numeric_cases": 189,
+  "dirty_numeric_events_including_inverses": 56916,
+  "eligible_arity_and_twice_spacing": [
+    [
+      3,
+      2
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      5,
+      4
+    ],
+    [
+      8,
+      8
+    ],
+    [
+      9,
+      8
+    ],
+    [
+      16,
+      16
+    ],
+    [
+      17,
+      16
+    ],
+    [
+      32,
+      32
+    ],
+    [
+      33,
+      32
+    ],
+    [
+      64,
+      64
+    ],
+    [
+      65,
+      64
+    ],
+    [
+      128,
+      128
+    ],
+    [
+      129,
+      128
+    ],
+    [
+      256,
+      256
+    ],
+    [
+      257,
+      256
+    ],
+    [
+      512,
+      512
+    ],
+    [
+      513,
+      512
+    ],
+    [
+      1024,
+      1024
+    ]
+  ],
+  "large_new_branch_fixtures": [
+    {
+      "r": "3",
+      "s": 1,
+      "weights_w0_w1_w2": [
+        "-2",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "r": "5",
+      "s": 2,
+      "weights_w0_w1_w2": [
+        "-15/4",
+        "5/2",
+        "5/4"
+      ]
+    },
+    {
+      "r": "9",
+      "s": 3,
+      "weights_w0_w1_w2": [
+        "-57/8",
+        "21/4",
+        "15/8"
+      ]
+    },
+    {
+      "r": "17",
+      "s": 4,
+      "weights_w0_w1_w2": [
+        "-221/16",
+        "85/8",
+        "51/16"
+      ]
+    },
+    {
+      "r": "33",
+      "s": 5,
+      "weights_w0_w1_w2": [
+        "-869/32",
+        "341/16",
+        "187/32"
+      ]
+    },
+    {
+      "r": "129",
+      "s": 7,
+      "weights_w0_w1_w2": [
+        "-13717/128",
+        "5461/64",
+        "2795/128"
+      ]
+    },
+    {
+      "r": "2049",
+      "s": 11,
+      "weights_w0_w1_w2": [
+        "-3496277/2048",
+        "1398101/1024",
+        "700075/2048"
+      ]
+    },
+    {
+      "r": "131073",
+      "s": 17,
+      "weights_w0_w1_w2": [
+        "-14316623189/131072",
+        "5726623061/65536",
+        "2863377067/131072"
+      ]
+    },
+    {
+      "r": "2147483649",
+      "s": 31,
+      "weights_w0_w1_w2": [
+        "-3843071683096565077/2147483648",
+        "1537228672809129301/1073741824",
+        "768614337478306475/2147483648"
+      ]
+    },
+    {
+      "r": "18446744073709551617",
+      "s": 64,
+      "weights_w0_w1_w2": [
+        "-283568639100782052895368878229994952021/18446744073709551616",
+        "113427455640312821154458202477256070485/9223372036854775808",
+        "56713727820156410586452473275482811051/18446744073709551616"
+      ]
+    },
+    {
+      "r": "340282366920938463463374607431768211457",
+      "s": 128,
+      "weights_w0_w1_w2": [
+        "-96493407697763496186309154173906589877895128404827605931279673976976825472341/340282366920938463463374607431768211456",
+        "38597363079105398474523661669562635951089994888546854679819194669304376546645/170141183460469231731687303715884105728",
+        "19298681539552699237261830834781317975715138627733896571641284638368072379051/340282366920938463463374607431768211456"
+      ]
+    }
+  ],
+  "literal_symbolic_events": 8540,
+  "literal_symbolic_programs": [
+    [
+      3,
+      2
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      5,
+      4
+    ],
+    [
+      8,
+      8
+    ],
+    [
+      9,
+      8
+    ],
+    [
+      16,
+      16
+    ],
+    [
+      17,
+      16
+    ],
+    [
+      32,
+      32
+    ],
+    [
+      33,
+      32
+    ],
+    [
+      64,
+      64
+    ],
+    [
+      65,
+      64
+    ],
+    [
+      128,
+      128
+    ],
+    [
+      129,
+      128
+    ],
+    [
+      256,
+      256
+    ],
+    [
+      257,
+      256
+    ]
+  ],
+  "negative_controls": [
+    "r2_outside_classification",
+    "boolean_arity",
+    "zero_spacing",
+    "r33_wrong_branch_has_odd_denominator",
+    "r14_equal_step_does_not_imply_general_floor",
+    "wrong_spacing_even_with_fitted_lower_moments",
+    "changed_weight",
+    "omitted_initial_shear",
+    "query_before_initial_shear",
+    "omitted_final_query",
+    "fused_or_missing_original_child",
+    "wrong_return_shear",
+    "output_feedback_outside_alphabet",
+    "duplicate_receipt_key"
+  ],
+  "polynomial_identities": 12,
+  "r33": {
+    "defect_A2B_AB2_B3": [
+      "1584",
+      "34320",
+      "278784"
+    ],
+    "original_children_retained": 33,
+    "repair_event_prices": {
+      "cube:-187/32": 1,
+      "cube:-341/16": 1,
+      "cube:869/32": 1,
+      "shear:-1": 1,
+      "shear:-16": 2
+    },
+    "weights_w0_w1_w2": [
+      "-869/32",
+      "341/16",
+      "187/32"
+    ]
+  },
+  "rational_decompositions": 2044,
+  "scope": "Written all-r equal-step theorem with exact finite corroboration; no new kappa.",
+  "spacing_scan": {
+    "arity": [
+      3,
+      40
+    ],
+    "cases": 10944,
+    "d": "k/8; -32<=k<=256; k!=0"
+  },
+  "status": "PASS_CUBIC_EQUAL_STEP_CLASSIFICATION",
+  "unequal_step_positive_scope_control": "PR6212 r14: three integer queries accepted"
+}

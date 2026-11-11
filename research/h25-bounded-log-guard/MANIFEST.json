@@ -1,0 +1,90 @@
+{
+  "excluded": [
+    "MANIFEST.json (self-reference)",
+    "external /tmp runtime/results are not package files"
+  ],
+  "files": {
+    "HANDOFF.json": {
+      "bytes": 2474,
+      "sha256": "39482bcc66611a34ec43612d3077ba1a497daeb61af450ecc7ebb64a39df527e"
+    },
+    "LICENSE": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "PROVENANCE.json": {
+      "bytes": 4804,
+      "sha256": "196f219746b78d0d7a16673de8f7ad95049c7b026b70944979f7a61a48c35bf6"
+    },
+    "README.md": {
+      "bytes": 8995,
+      "sha256": "c0d0837e911f5736116951f45dca90828edfcfa555e2ae1cf7bbdec23b72936a"
+    },
+    "SOURCES.json": {
+      "bytes": 1272,
+      "sha256": "849ed659fe941b8f819a3d25c0ca317402da2e506f245cc25778432f94669e73"
+    },
+    "TASK.json": {
+      "bytes": 4261,
+      "sha256": "04071a7d726c905261e7fff0ffc5ad1571b4eb001071a3db972966f3e32ea68c"
+    },
+    "VALIDATION.json": {
+      "bytes": 2578,
+      "sha256": "ecf94b5b52f461fed1197f19b3f918d02b54e284e6de36b3c6ab06bfdb384d61"
+    },
+    "VERIFY.json": {
+      "bytes": 852,
+      "sha256": "9a1ed0200938af19809dd1e0f38ec8ba13ab77ae6148ba37b8c3e42cb6c4e759"
+    },
+    "frozen-stage/CONTROL-BILL.json": {
+      "bytes": 4973,
+      "sha256": "1899914be203ef7ed19ecde949031ab69685d3ff4223d509cde519411e853cda"
+    },
+    "frozen-stage/JOBS.json": {
+      "bytes": 587,
+      "sha256": "c29f596e6a6f73b5955c927875cb15d7166d34be59b774e4f44031a5134135c0"
+    },
+    "frozen-stage/STAGE.json": {
+      "bytes": 932,
+      "sha256": "77bcbc01caf35021c0f1bd6039d35424854574276372b58063d3038409f17296"
+    },
+    "frozen-stage/integration/file_controls.py": {
+      "bytes": 6168,
+      "sha256": "8b8c3b823652c9a8dff0bf9dec2a67a90f30b1b7b642db28e95965b540e9d7bb"
+    },
+    "frozen-stage/integration/full_driver.py": {
+      "bytes": 2121,
+      "sha256": "14125583107b2a06e522e40823cf3874929b6a5c3114d099888adc8c31ac75f5"
+    },
+    "frozen-stage/runner_under_test.py": {
+      "bytes": 12110,
+      "sha256": "32633e40364d824c9f942af1ad2934da9701117328364c7c3f418b21b2e8054a"
+    },
+    "historical/INTERFACE.txt": {
+      "bytes": 3884,
+      "sha256": "47e46ad6aece51b2277f05ec6160fe4078287929b9d73f9666a061d69bf24a27"
+    },
+    "historical/PROPOSAL.json": {
+      "bytes": 4559,
+      "sha256": "cd06d296d9c2cf1c691f13cca9a0f1f6245eca3e69b08cca1edc854cb506cb55"
+    },
+    "historical/REVIEW.json": {
+      "bytes": 18219,
+      "sha256": "bce18e269d06e2f2ca0e518996e5ea8186bdba2b610375b82030df175ef8a7fa"
+    },
+    "historical/SOURCE-MANIFEST.json": {
+      "bytes": 1008,
+      "sha256": "9bcea12903d642a97ce0fde527b8bbf87f0e66ed6046e4b75f7064a0861d0911"
+    },
+    "run_guarded.py": {
+      "bytes": 12110,
+      "sha256": "32633e40364d824c9f942af1ad2934da9701117328364c7c3f418b21b2e8054a"
+    },
+    "verify.py": {
+      "bytes": 12038,
+      "sha256": "1ca1670712540d9089e9d5928101055e1a172438e3f64d167053fa2152c08d15"
+    }
+  },
+  "schema": "h25-log-guard-shipped-bytes-v1",
+  "validation_status": "SOURCE_ONLY_PARENT_EXECUTION_PENDING"
+}

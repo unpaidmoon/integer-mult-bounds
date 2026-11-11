@@ -1,0 +1,111 @@
+{
+  "author_report": {
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/armed-remaining/REPORT-v1.json",
+    "sha256": "0f7ff996d48bdf90013b4b6669a177a9a54b7e74a8e4324d65c7428981c75b3a"
+  },
+  "author_static_checks": {
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/armed-remaining/STATIC-CHECKS-v1.json",
+    "sha256": "63d4fceaff5450fc794b4ade3378d4c411f3c4ce8fa6b8dae2dc193d0ad1007f"
+  },
+  "base_source": {
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/armed-context/disposition-v1/g08_p01_n12_disposition_driver_v1.py",
+    "sha256": "ebbc86771d2397a1f0392dec414fd3fd1fb170c612c91a81d5bf412ba63ebc23"
+  },
+  "blocking_findings": [],
+  "cases": [
+    "N16",
+    "N19",
+    "N21",
+    "P04",
+    "P05",
+    "P06"
+  ],
+  "design": {
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/armed-remaining/SMALL-CASES-DESIGN-v2.json",
+    "sha256": "ea9cde807d0acb910f538505dab02c35633361dc799f0911376d12ba25487aa8"
+  },
+  "design_review": {
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/roles-armed-independent/SMALL-CASES-DESIGN-REVIEW-v1.json",
+    "sha256": "95bdbfb99a50228330dfb774c4cadffabf48cef855e1193120cb2a48ae7bfb31"
+  },
+  "execution_contract_owner": null,
+  "foundation_review": {
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/fresh-independent/G08-DISPOSITION-REVIEW-v1.json",
+    "sha256": "b607426361abe712116326629ddb016615000c160fd4670545d4afc3a18be411"
+  },
+  "freeze": {
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/armed-remaining/FREEZE-v1.json",
+    "sha256": "877cd6c2e85c2afd2524245ece764f69c292648f39c0e9f0f5d31f8e0a554c0d"
+  },
+  "independent_checks": [
+    "All nine freeze payload SHA256 and byte lengths independently verified; no builder or target source executed.",
+    "All eight exact edit hashes checked and inverses applied in memory to reconstruct accepted ebbc86771d2397a1f0392dec414fd3fd1fb170c612c91a81d5bf412ba63ebc23 bytes.",
+    "All17 prior unchanged function/class ASTs verified, including actual main_epoch, protected CLI, Phases and STOP. Six altered source functions and one added collision fixture independently read.",
+    "All52 original public helper body byte hashes and AST hashes match authoritative coverage exactly. Helper source remains original fcffe77b6a84d5b422b03e3d068924a701c1594cdb9ec305115827e3fad7d4b6.",
+    "N21 Foreign class source and AST exactly match original transient_env508-519; fixtures create separate classes/logs/labels; compare exact primitive callback order and restored basis after actual original scalar operations.",
+    "N19 independently constructed original C1 receives only basis mutation; original len(vs) calculation and native len(rows) support True. Original echelon182-193 and Label219-223 confirm literal snapshot basis/key insertion order.",
+    "N16 actual capability RuntimeError binds unchanged suite.request frame, raw error identity, public unregistered Label and no native/rank/trace/epoch/owner delta. P06 uses authentic C1/C2/C3 original stores before actual role_retire and no scalar replay.",
+    "N19/N21/P04/P05 use original backend-owned cold reference module, fresh original Checks/verdict dictionary, distinct objects/classes and one case-specific scalar operation; candidate-derived answers and whole caller replay are absent.",
+    "Each six-case hook starts at genuine active post-arm C1 with original CLI owner/token/phase; cases preserve actual raw P or fixed completion marker through original CLI/main/STOP. Known failures cannot qualify from their error string alone.",
+    "P06 adds its actual role channel to two CLI channels; all other cases require role channel unused. Complete pairwise distinctness, acknowledged/started and raw error fields are checked.",
+    "Disposition tail from suite.primary_error through known owners/acquisition/STOP/phase-diagnostic rejection is byte-exact to accepted foundation. Source controller keeps original same-P bare raise and requires actual restored argv/disposition/publication fields before sole success marker.",
+    "Final controller allows only six IDs. P01/N12 remain separately frozen and P02 is excluded; exact P02 output/native-reference obstruction remains open without a global impossibility claim."
+  ],
+  "inverse": {
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/armed-remaining/SOURCE-INVERSE-v1.json",
+    "sha256": "2224f91e901f6957e28772f4d96d4e88191aa0c631fdf6838ed3cf82ba4be20a"
+  },
+  "limits": [
+    "Bounded source acceptance only; no target import, helper/test/compiler/native/decoder/runtime/process/lock/network/PR operation.",
+    "Native and epoch approval literals remain None. Complete original caller/control/cost and final source map/Root/T1-T4 adoption remain separate.",
+    "Known recorded phase diagnostic failures reject qualification. Universal arbitrary allocation/asynchronous failure custody is not claimed.",
+    "No full caller result, resource fit, performance gain, scientific execution or activity credit."
+  ],
+  "new_activity_credit": 0,
+  "next_action": "Parent may consume exact six-case source/freeze pins for separate final source selection and adoption review; preserve P02 parked exact current route.",
+  "original_coverage": {
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v1/coverage/COVERAGE-SPEC-v1.json",
+    "sha256": "e4599f79a9dd46a66c9b6cf63ceb7c03d19a0b98a550315b66d5b43dd544d691"
+  },
+  "original_helper": {
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-full-contract-completion-v1/cache_epoch_source_controls.py",
+    "sha256": "fcffe77b6a84d5b422b03e3d068924a701c1594cdb9ec305115827e3fad7d4b6"
+  },
+  "parked_P02": {
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/armed-remaining/P02-EXACT-GATE-v1.json",
+    "sha256": "02394a44baabf0b893511352acf9d78f1a0e4a0e975cfab7374193e9f87eab79"
+  },
+  "reviewer": "/root/cache_roles_armed_review",
+  "schema": "G08-six-small-independent-source-review-v1",
+  "selected_source": {
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/armed-remaining/g08_six_small_driver_v1.py",
+    "sha256": "3380c0ab5f212ed2866deb0a55c7ffd867c8a42f0d7bc034e6fb1a5d524a2e96"
+  },
+  "sole_writers": {
+    "controller_marker": [
+      2196
+    ],
+    "disposition": [
+      1774
+    ],
+    "disposition_error": [
+      1777
+    ],
+    "entry_started": [
+      1715
+    ],
+    "publication_completed": [
+      1795
+    ],
+    "publication_error": [
+      1790
+    ],
+    "selected": [
+      1519
+    ]
+  },
+  "source_adopted": false,
+  "source_contract_owner": null,
+  "status": "ACCEPT_BOUNDED_SIX_CASE_SOURCE_CANDIDATE_ONLY",
+  "target_operations": 0
+}

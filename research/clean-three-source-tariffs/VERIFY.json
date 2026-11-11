@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/clean-connector-gray-optimum/PROOF.md",
+    "research/clean-connector-gray-optimum/README.md"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Universal-proof corroboration: 15 profiles, 9841 short words, independent arbitrary-length visited-state pricing, exact dirty endpoints and rejecting controls."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-W",
+        "error",
+        "-O",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Identical checks with assertions disabled; all semantic contracts use explicit exceptions."
+    }
+  ]
+}

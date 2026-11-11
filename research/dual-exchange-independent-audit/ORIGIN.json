@@ -1,0 +1,9 @@
+{
+  "source_pr": 6280,
+  "source_head": "4d6e4374d6fdda7df72ddeb19dd6756353383346",
+  "source_path": "research/division-free-dual-exchange/compiler.py",
+  "git_blob": "9ead98d5735474d1fd35b101a1f4d50426b7e943",
+  "sha256": "9d7b71ed4da90360f8a0f15b7a89599340efbb4eb1ff40054e11e621f85df5bf",
+  "local_path": "source/compiler.py",
+  "copyright": "Nick Petalas; Apache-2.0. Retained unchanged."
+}

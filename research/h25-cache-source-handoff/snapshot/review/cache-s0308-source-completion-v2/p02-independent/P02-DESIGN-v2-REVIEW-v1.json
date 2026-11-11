@@ -1,0 +1,208 @@
+{
+  "activity_credit": 0,
+  "all_16_source_pins_verified": [
+    {
+      "bytes": 2545,
+      "name": "authority",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/parent/AUTHORIZATION-v2.json",
+      "sha256": "9e32514288fed2b1d2873387bf81861ffcd9e1b56d2ab4828be13a311e629106"
+    },
+    {
+      "bytes": 137642,
+      "name": "authority_products",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_authority_products_v1.py",
+      "sha256": "f279ab86fc17c6a517b035f19d56863919cbd8304de4e7d5332457c6159aec10"
+    },
+    {
+      "bytes": 171075,
+      "name": "cache_products",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_cache_products_v1.py",
+      "sha256": "d317c9866566cd6147c96566879f26f364e7e6801ac3eed0800b6ed8eedd01a2"
+    },
+    {
+      "bytes": 10571,
+      "name": "comparison_writer",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/engine/compare_side_verifier.py",
+      "sha256": "6e507bb0c7e00d090a60289fddb6c55e90c946d0850c42c3c5e3e15c27604a68"
+    },
+    {
+      "bytes": 85486,
+      "name": "coverage",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v1/coverage/COVERAGE-SPEC-v1.json",
+      "sha256": "e4599f79a9dd46a66c9b6cf63ceb7c03d19a0b98a550315b66d5b43dd544d691"
+    },
+    {
+      "bytes": 135539,
+      "name": "current_g08_driver",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/armed-context/disposition-v1/g08_p01_n12_disposition_driver_v1.py",
+      "sha256": "ebbc86771d2397a1f0392dec414fd3fd1fb170c612c91a81d5bf412ba63ebc23"
+    },
+    {
+      "bytes": 103903,
+      "name": "data_products",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_data_products_v1.py",
+      "sha256": "18679fd1eb6ae99c4b375756511427c26718f77674c2d8fcc490e25ceb47cba5"
+    },
+    {
+      "bytes": 4153,
+      "name": "failed_current_route",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/armed-remaining/P02-EXACT-GATE-v1.json",
+      "sha256": "02394a44baabf0b893511352acf9d78f1a0e4a0e975cfab7374193e9f87eab79"
+    },
+    {
+      "bytes": 3531,
+      "name": "g12_review",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/fresh-independent/G12-DESIGN-REVIEW-v1.json",
+      "sha256": "a5199f838e8b8dfc05357ad097cdea6baa3a1b697780d504703869e6ff61a38f"
+    },
+    {
+      "bytes": 65591,
+      "name": "helper",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-full-contract-completion-v1/cache_epoch_source_controls.py",
+      "sha256": "fcffe77b6a84d5b422b03e3d068924a701c1594cdb9ec305115827e3fad7d4b6"
+    },
+    {
+      "bytes": 20334,
+      "name": "native_backend",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/engine/native_backend.py",
+      "sha256": "e473c38245c3668715b5a78dfe980b2fe3ed0d0c9b8c97c666fbae6ecf1fffd5"
+    },
+    {
+      "bytes": 7425,
+      "name": "native_rank_shape",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/engine/native_gf2.c",
+      "sha256": "e9c3c9194a08718bd1575c1cf08c6c6772d3b644c2e274c25a84a1f9249d06cc"
+    },
+    {
+      "bytes": 6105,
+      "name": "original_cli",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/engine/source/complex_network.py",
+      "sha256": "0da395e67ac04fa213494e71012c1b19b544596d34cdce5a3b172b1fb6af5f1b"
+    },
+    {
+      "bytes": 20178,
+      "name": "original_full_driver",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/full_driver.py",
+      "sha256": "0d976d2eb6b845f20d4a3396591a806f966688b88693cd6a5f8a0c9e48925e36"
+    },
+    {
+      "bytes": 1801,
+      "name": "p07_review",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/fresh-independent/P07-HELPER-REVIEW-v1.json",
+      "sha256": "92d70867fa5df4802467631cca12950312c6abdf70584c05181d8af2f60e36d2"
+    },
+    {
+      "bytes": 8959,
+      "name": "rank_encoder",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/engine/profile_side_verifier.py",
+      "sha256": "9c994378171c20a91539418d93cb8387e1daa93465d6862beefea90e12999c2a"
+    }
+  ],
+  "broader_goal_service_status_changed": false,
+  "execution_authorized": false,
+  "findings": [
+    {
+      "actual": "full-return.lossless.json",
+      "consequence": "The specified exact six-artifact read/join fails missing-file validation; treating the underscore name as an alias would silently change the frozen contract.",
+      "design_location": "DESIGN-v2.json:32 / independent_standard_reference.complete_output_tuple[0][0]",
+      "evidence": [
+        {
+          "line": 310,
+          "source": "original_full_driver",
+          "statement": "(output / \"full-return.lossless.json\").write_bytes(full_typed_bytes)"
+        },
+        {
+          "line": 1199,
+          "source": "current_g08_driver",
+          "statement": "(output / 'full-return.lossless.json').write_bytes(full_typed_bytes)"
+        }
+      ],
+      "id": "P02-DV2-F1",
+      "minimal_bounded_repair": "Change only this one design filename literal to full-return.lossless.json, preserve v2, and freeze a successor design plus manifest. Re-review the changed literal and retained source pins before assigning implementation. Do not change either producer or add a fallback alias.",
+      "predicate": "Every named member of independent_standard_reference.complete_output_tuple must be emitted at that exact relative path by both original reference producers and the same-invocation epoch producer.",
+      "severity": "blocking_for_exact_design",
+      "specified": "full_return.lossless.json"
+    }
+  ],
+  "full_owner_approval": false,
+  "independent_inverse_checks": {
+    "all_four_need_source_segments_preserved": true,
+    "original_checks_and_return_nodes_including_positions_identical": true,
+    "original_need_count": 4,
+    "other_top_level_nodes_including_positions_identical": true,
+    "proposed_text_sha256": "298b9951e5a0971bf4a7eb19ee789688c860e828a429036fd7fbc37352d69c04",
+    "reconstructed_original_sha256": "fcffe77b6a84d5b422b03e3d068924a701c1594cdb9ec305115827e3fad7d4b6",
+    "same_original_call_inventory": true,
+    "whole_helper_inverse_exact": true,
+    "yield_count": 2
+  },
+  "inputs": {
+    "DESIGN-v2.json": {
+      "bytes": 30977,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-feasibility/DESIGN-v2.json",
+      "sha256": "1135d7813cde42dcdb4465941d13c9d0f088947936a2129eba2c484b694911ac"
+    },
+    "FREEZE-v1.json": {
+      "bytes": 1697,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-feasibility/FREEZE-v1.json",
+      "sha256": "b88c28e8deeb07e77266d262988c6534191544926a16f17f24dcfa0e101a63f2"
+    },
+    "SOURCE-PROOF-v1.json": {
+      "bytes": 6483,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-feasibility/SOURCE-PROOF-v1.json",
+      "sha256": "e9b0e1e0b471c02185c13d891d1188e42a7235f2579ae721d33ab3d45ad8e521"
+    }
+  },
+  "mechanism_assessment": "The distinct two-suspension route is source-feasible at the bounded design level; no second concrete mechanism obstruction found in the inspected pinned guards. Exact v2 cannot pass because its complete artifact tuple names a file neither pinned producer writes.",
+  "method": "Read-only exact named source text, SHA256 and stdlib AST/inverse reasoning; in-memory proposed helper text was never executed/imported. No target helper/test/compiler/native/decoder/runtime/process/lock/network/PR activity.",
+  "next_action": "Parent may obtain the one-literal successor-design repair and bounded independent acceptance. Implementation remains unassigned and must wait for the independent gate plus explicit parent assignment.",
+  "protected_runtime_tree_accessed": false,
+  "remaining_after_filename_repair": [
+    "Concrete fixed P02 driver/helper source, one-use phase and role gates, exact compiled-code/current-suite/argument identities, inverse maps and strict failure/cleanup transitions.",
+    "Concrete separately owned dual-reference producer/immutable custody reader/typed decoder/join with verified successful parent outcome and no mutable candidate/reference aliases.",
+    "All original late checks, complete owner/cost/full-contract approvals and source adoption remain separate gates; no inferred bypass of the closed execution contract."
+  ],
+  "reviewed_design": "DESIGN-v2.json",
+  "reviewer": "/root/cache_p02_design_review",
+  "runtime_payloads_created": 0,
+  "schema": "p02-independent-exact-source-design-review-v1",
+  "scope": "Independent source-design review only. This does not establish implemented, configured or adopted source completion, full owner approval, successful reference custody or execution authorization.",
+  "source_adopted": false,
+  "source_findings": [
+    {
+      "result": "Original synchronous route remains failed. Original CLI:91-93 performs compile/map/labels then roles; CLI:94-120 completes scientific output work after roles. One yield after both helper calls cannot preserve both original boundaries. Four helper comparisons:285,288,290,291 and original return:292 are retained exactly in the proposed text.",
+      "topic": "Original route and original obligations"
+    },
+    {
+      "result": "First advance occurs inside the original labels phase and yields the actual labels result without an additional direct phase-function call. At original CLI role entry, the second advance calls the installed observer again; exactly the inner entry executes original observer:1131-1134 and the scientific roles product. The extra outer observer frame is explicit. Third advance occurs only after output/custody checks:1171-1213 and before data_finalization:1215. Literal call inventory alone is not an execution-count proof.",
+      "topic": "Declared two-boundary call graph"
+    },
+    {
+      "result": "authority_products:1216-1225 captures the actual main_epoch/Phases graph. Its:1251-1273 retains exact source context, original Phases.wrap shape and one-use entry authority. Observer proof:1365-1374 accepts the nested observe_roles code belonging to captured main_epoch, original globals, exactly captures/original_roles/phases closures and defaults (None,). A fixed global entry gate can retain those cells and original body; no authority relaxation is required by the design. Concrete gate code and source maps remain unreviewed.",
+      "topic": "Authority and source guards"
+    },
+    {
+      "result": "Both yields occur after the invoked scientific function returns. Actual labels and roles objects are intentionally retained by identity and returned into the same original CLI invocation. Original role retirement clears active/registry at cache_products:2195-2206; CLI retirement and outer exception preservation remain at driver:838-898,1227-1246. Third advance is before data_products.finish:1167-1196 closes cache resources. Exact selector failure consumption, suspended-generator closure/reference release and secondary-error handling still need concrete source review; diagram language is not that proof.",
+      "topic": "Lifetimes and cleanup"
+    },
+    {
+      "result": "original_full_driver:140-166 requires baseline/candidate modes to carry the original source-bound anchor. Pure mode attaches original observers at:201-218 and produces actual independent role/rank/trace and all six artifacts. Original native candidate mode separately performs cold build/finite controls:204-207 and actual bind:214-215, observes real dispatch counters at native_backend:334-376, checks them at full_driver:290-293, and serializes native_calls at:340. The pure lane has native_calls None and cannot supply this member.",
+      "topic": "Fresh pure versus native references"
+    },
+    {
+      "result": "Original typed encoder:91-110 retains exact type tags and dict order. Original full return/CLI/certificate and side writer:74-90 provide six raw artifacts. Rank trace source is list of pair tuples, rows a tuple and rank an exact int; native C:113-126 creates matching tuple/int shape. The proposed fixed schema must reject bool-as-int, duplicate/unknown tags and reordered/omitted values. All six raw artifacts plus full complement receipt and schema-exact role/rank observations must join between the two fresh originals before any expected field is handed to the epoch candidate.",
+      "topic": "Typed outputs and ordering"
+    },
+    {
+      "result": "Original receipt has mode/pins/science/native_calls, but its status alone does not prove successful process completion or later immutable artifact custody. It is written at full_driver:347 before stdout work:348-352. This review does not invent parent exit evidence, argv/anchor receipt members, fresh payloads, immutable file bindings or a closed transport. The separate custody investigator owns that edge.",
+      "topic": "Successful parent and output custody remains open"
+    },
+    {
+      "result": "Design charges three advances/two suspensions, extra observer frame, retained labels/control state, two complete fresh original reference runs including native cold work, full artifact custody/decoding/copies/join, original checks and cleanup. It makes no numeric fit, performance or kappa claim; G12 extra-target/pure-profile work cannot supply this standard P02 reference.",
+      "topic": "Costs and scope"
+    }
+  ],
+  "source_variant_implemented": false,
+  "status": "REJECT_EXACT_V2_ONE_BOUNDED_FILENAME_REPAIR_REQUIRED",
+  "target_operations": 0
+}

@@ -1,0 +1,182 @@
+{
+  "only_text_hash_ast": true,
+  "pins": {
+    "accepted_p02_design": {
+      "bytes": 32255,
+      "mode": "0664",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-feasibility/DESIGN-v3.json",
+      "sha256": "fccc3456630a4a60f8e7d3736501ca3d5c7cb4ef303aaba32862c90a98d6a6e4"
+    },
+    "authorization": {
+      "bytes": 2545,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/parent/AUTHORIZATION-v2.json",
+      "sha256": "9e32514288fed2b1d2873387bf81861ffcd9e1b56d2ab4828be13a311e629106"
+    },
+    "caller_equality": {
+      "bytes": 10515,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v1/contracts/CALLER-EQUALITY-DEFINITION-v1.json",
+      "sha256": "4a11f90727c636bdbaaf683d1ac95aa9234324698fb594a7da92a92f6a45c7eb"
+    },
+    "complete_symbolic_cost": {
+      "bytes": 9184,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v1/contracts/COMPLETE-SYMBOLIC-COST-DEFINITION-v1.json",
+      "sha256": "6ab22ebb387f15f9a1fd91e257ecae649eb4b177af32d4652c2eaec061e3b48c"
+    },
+    "current_controller": {
+      "bytes": 81343,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/fresh-controller-composition-v2/composed_controller.py",
+      "sha256": "c88736fce81d737ae13ac1bf47500dc9d72920bd4910efe1b49074797d6e3231"
+    },
+    "engine/compare_side_verifier.py": {
+      "bytes": 10571,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/engine/compare_side_verifier.py",
+      "sha256": "6e507bb0c7e00d090a60289fddb6c55e90c946d0850c42c3c5e3e15c27604a68"
+    },
+    "engine/finite_controls.py": {
+      "bytes": 23815,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/engine/finite_controls.py",
+      "sha256": "df989a831aac43cc1af95169dad8c64a7548760e6e1f96976da996703f2c8f7a"
+    },
+    "engine/native_backend.py": {
+      "bytes": 20334,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/engine/native_backend.py",
+      "sha256": "e473c38245c3668715b5a78dfe980b2fe3ed0d0c9b8c97c666fbae6ecf1fffd5"
+    },
+    "engine/native_gf2.c": {
+      "bytes": 7425,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/engine/native_gf2.c",
+      "sha256": "e9c3c9194a08718bd1575c1cf08c6c6772d3b644c2e274c25a84a1f9249d06cc"
+    },
+    "engine/profile_side_verifier.py": {
+      "bytes": 8959,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/engine/profile_side_verifier.py",
+      "sha256": "9c994378171c20a91539418d93cb8387e1daa93465d6862beefea90e12999c2a"
+    },
+    "engine/source/complex_circuit.py": {
+      "bytes": 19732,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/engine/source/complex_circuit.py",
+      "sha256": "d623617f7c5cb3189580883a8ab30c0bd3832688ae3f1f0c1f881bbbbff8e0c1"
+    },
+    "engine/source/complex_network.py": {
+      "bytes": 6105,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/engine/source/complex_network.py",
+      "sha256": "0da395e67ac04fa213494e71012c1b19b544596d34cdce5a3b172b1fb6af5f1b"
+    },
+    "epoch_authority": {
+      "bytes": 137642,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_authority_products_v1.py",
+      "sha256": "f279ab86fc17c6a517b035f19d56863919cbd8304de4e7d5332457c6159aec10"
+    },
+    "g12_pattern_design": {
+      "bytes": 60181,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody/DESIGN-v1.json",
+      "sha256": "1f88ec187415abfd058728b7bf37fb6d9550e8bb3a080da4841d32be4019fe72"
+    },
+    "g12_pattern_review": {
+      "bytes": 26124,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-custody-independent/G12-CUSTODY-DESIGN-REVIEW-v1.json",
+      "sha256": "748af02d5766eae9a1f60890780817e3230e91d61b374e0c5e0b4621852e1ae3"
+    },
+    "handoff": {
+      "bytes": 10071,
+      "mode": "0664",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-implementation/REFERENCE-BRIDGE-HANDOFF-v1.json",
+      "sha256": "2606738411455dd9b686d64e16a6b4161e873c3da8ceaf4da0114dfedf7770f6"
+    },
+    "known_cleanup_leaf_origin": {
+      "bytes": 44563,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/fresh-round-consumer-integration-v2/fresh_supervisor.py",
+      "sha256": "7b3304eaf4884e3029df5095e2b0950c18d1544ad21431a07c033b85e53bd4f7"
+    },
+    "local_p02_driver": {
+      "bytes": 169084,
+      "mode": "0664",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-implementation/p02_two_suspension_driver_v1.py",
+      "sha256": "833074436879e62c28a46bc365d368952736ced77a096ffb30398cea0a1b558e"
+    },
+    "local_p02_helper": {
+      "bytes": 65648,
+      "mode": "0664",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-implementation/cache_epoch_source_controls_p02_two_yield_v1.py",
+      "sha256": "298b9951e5a0971bf4a7eb19ee789688c860e828a429036fd7fbc37352d69c04"
+    },
+    "local_protocol_acceptance": {
+      "bytes": 13606,
+      "mode": "0664",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/p02-protocol-independent/P02-PROTOCOL-REVIEW-v1.json",
+      "sha256": "6f649d3dc9893836b731c01f0ab2ad5830aae88e393ab5f0def9e92d8ea52c7d"
+    },
+    "local_protocol_freeze": {
+      "bytes": 6581,
+      "mode": "0664",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-implementation/FREEZE-v1.json",
+      "sha256": "257b4a73dba448ad4905ed900c2e457bd36844c160e13b12140ef47d7d2617fa"
+    },
+    "original_checklist": {
+      "bytes": 8029,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/strict-source-review-20261030T231709Z/parent/NEXT-SOURCE-CHECKLIST-v1.json",
+      "sha256": "0c0ed109bd6d1bdbfa457c2f25c437b5a97cad44fd590b989d0fb74cd20544ce"
+    },
+    "original_guard": {
+      "bytes": 15493,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/run_guarded_v3.py",
+      "sha256": "bd882e3dadb1b6aeaa63ee824f1a1c58f8ef2546b6840a2bffa46885a184d3eb"
+    },
+    "original_producer": {
+      "bytes": 20178,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/full_driver.py",
+      "sha256": "0d976d2eb6b845f20d4a3396591a806f966688b88693cd6a5f8a0c9e48925e36"
+    },
+    "projection_schema": {
+      "bytes": 15170,
+      "mode": "0664",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-implementation/REFERENCE-BINDING-PROJECTION-SCHEMA-v1.json",
+      "sha256": "133950d6f513b234c62457e657a5d137443dedbc1a52afec38974654fc364054"
+    },
+    "provider": {
+      "bytes": 40799,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/integration/probe_binding_v3.py",
+      "sha256": "9cbb7368f89e71d1e6cc46db5dc77efed3e03ed2a801c98c88fe316e4d9f3ef2"
+    },
+    "root": {
+      "bytes": 38851,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/integration/full_driver.py",
+      "sha256": "f5a2d33f2b4d3651f214156a0e7094c2bb516ce2d5ab7698d18c11f98f35dee0"
+    },
+    "source_scope_clarification": {
+      "bytes": 10874,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-custody-independent/G12-CUSTODY-SOURCE-SCOPE-CLARIFICATION-v1.json",
+      "sha256": "a9261f686d4fbe6ca40258335231a730dc7e3319be7cedf7c39e189a57c7f367"
+    },
+    "source_scope_clarification_freeze": {
+      "bytes": 714,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-custody-independent/SOURCE-SCOPE-CLARIFICATION-FREEZE-v1.json",
+      "sha256": "0d611f41462951d2d875947ba0e156121d876324afa21a4713fd546c873736ad"
+    }
+  },
+  "runtime_artifacts_read": 0,
+  "schema": "p02-reference-bridge-source-pins-v3",
+  "scope": "Exact named P02 handoff/source edges; G12 is pattern only. No producer/helper/decoder import or execution."
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/raw-pencil-decomposition/README.md",
+    "research/raw-pencil-decomposition/RESULT.json",
+    "research/raw-pencil-decomposition/SOURCES.json",
+    "research/raw-pencil-decomposition/decompose.py",
+    "research/raw-pencil-decomposition/field_source.py",
+    "research/raw-pencil-decomposition/verify.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 240,
+      "checks": "All complete source fixtures with every matrix product compared, 2000 differential products, malformed-kernel and changed-source controls. Enumerate the exact retained and omitted scalar product terms on every complete-caller product."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-O",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 240,
+      "checks": "The same complete replay and controls with assertions disabled. Enumerate the exact retained and omitted scalar product terms on every complete-caller product."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+         493367 function calls (486018 primitive calls) in 0.079 seconds
+
+   Ordered by: cumulative time
+   List reduced from 22 to 18 due to restriction <18>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.079    0.079 /Users/nick/git/imb-research-12/research/five-label-prefix-completion/bounds.py:130(search)
+   7350/1    0.006    0.000    0.079    0.079 /Users/nick/git/imb-research-12/research/five-label-prefix-completion/bounds.py:136(visit)
+     7350    0.004    0.000    0.070    0.000 /Users/nick/git/imb-research-12/research/five-label-prefix-completion/bounds.py:114(reject)
+     4434    0.009    0.000    0.035    0.000 /Users/nick/git/imb-research-12/research/five-label-prefix-completion/bounds.py:42(tail_envelope)
+     4896    0.010    0.000    0.029    0.000 /Users/nick/git/imb-research-12/research/five-label-prefix-completion/bounds.py:75(union_reject)
+    19817    0.011    0.000    0.017    0.000 /Users/nick/git/imb-research-12/research/five-label-prefix-completion/bounds.py:47(<genexpr>)
+    15054    0.016    0.000    0.016    0.000 /Users/nick/git/imb-research-12/research/five-label-prefix-completion/bounds.py:18(pair_support)
+    62363    0.008    0.000    0.012    0.000 /Users/nick/git/imb-research-12/research/five-label-prefix-completion/bounds.py:77(<genexpr>)
+   307110    0.011    0.000    0.011    0.000 {method 'bit_count' of 'int' objects}
+     7350    0.001    0.000    0.002    0.000 /Users/nick/git/imb-research-12/research/five-label-prefix-completion/bounds.py:71(remaining_reject)
+    28519    0.001    0.000    0.001    0.000 {built-in method builtins.len}
+     7349    0.001    0.000    0.001    0.000 {built-in method builtins.max}
+     9792    0.001    0.000    0.001    0.000 /Users/nick/git/imb-research-12/research/five-label-prefix-completion/bounds.py:25(choose2)
+     7350    0.000    0.000    0.000    0.000 /Users/nick/git/imb-research-12/research/five-label-prefix-completion/bounds.py:13(require)
+     2141    0.000    0.000    0.000    0.000 {built-in method builtins.min}
+     1656    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+      828    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.sorted}

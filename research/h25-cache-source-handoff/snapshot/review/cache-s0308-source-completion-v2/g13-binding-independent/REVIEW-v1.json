@@ -1,0 +1,65 @@
+{
+  "FULL_contract_materialized": false,
+  "accepted_facts": [
+    "All nine frozen payload hashes and all 27 direct predecessor/input source-pin rows match actual files. This does not rereview the inherited base-stage closure.",
+    "Exactly eight declared factory edits reproduce the derivative bytes and reverse to predecessor 9c2c5ffdbfc692b48ddba780258df7694ba376ef43e7d5ab14e8760a041851ad. Only assemble_finite_sources function AST and INPUT_PINS, EXPECTED_PRODUCT_PINS, STAGE_OVERLAYS literals change.",
+    "Existing driver construction prefix, finite entry bytes, source guards and complete bind_original_root_command source/AST are unchanged. Both selected finite drivers reverse byte-for-byte to their named original fault drivers.",
+    "Corrected helper fcffe77b6a84d5b422b03e3d068924a701c1594cdb9ec305115827e3fad7d4b6 is both immutable input and expected output. Its retained map rendering is byte-identical; it has one existing json import; the obsolete import insertion/inverse removal is absent.",
+    "The historical helper change remains solely data.FULL_EXECUTION_CONTRACT to driver.native_packet.FULL_EXECUTION_CONTRACT in the absent-record branch. The original two finite public helpers and all helper assignment maps remain unchanged.",
+    "Each overlay uses an existing exact absolute source reference with matching hash; old packet-local driver/helper basenames are removed from selected overlays. Original logical stage filenames and all other fault dependencies are preserved.",
+    "Both corrected helper five-image tuples agree with actual selected driver/data/adapter/authority/cache sources. Driver early source pins and authority cache/data/Root/provider aliases agree.",
+    "All four symbolic command DATA records exactly match the unchanged binder for the two cases and optimize 0/1, retaining baseline finite-only lanes, original flags, external helper hash and typed path parameters.",
+    "Stage_root, output and concrete_argv remain null; no stage is guessed or installed. Parameterized source DATA suffices for this bounded mechanical review. Actual stage/output choice is a later adoption step.",
+    "Actual finite cache FULL owners remain None. No source/finite/native/full guard was weakened, no new control ID or finite semantic controller was introduced, and no helper/driver reciprocal hash cycle was introduced."
+  ],
+  "actual_source_adoption": false,
+  "blocking_findings": [],
+  "candidate_factory": {
+    "bytes": 82408,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g13-binding/cache_epoch_context_assembly_g13_v2.py",
+    "sha256": "66b8cc255bd3264333eeb22dceed1ab54ddbe1c17ef6bf615cacaf25360334b1"
+  },
+  "candidate_freeze": {
+    "bytes": 809,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g13-binding/FREEZE-v1.sha256",
+    "sha256": "28d293392c0bd47143897bcce910b409f72c829c728fc40c483c4908c7457b04"
+  },
+  "candidate_status": {
+    "bytes": 1125,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g13-binding/STATUS-v1.json",
+    "sha256": "4db2c06429601b8a5a6037fe35f6406e297c9fefa283e340a69d896799acf617"
+  },
+  "check_count_note": "The evidence contains repeated path/hash/record assertions; its assertion count is diagnostic and is not a new coverage or progress metric.",
+  "factory_binder_helper_execution_count": 0,
+  "independence": "Reviewer authored the precursor adoption map, not the candidate factory, selections, inverse records or command schemas. Candidate assertions were independently checked from saved source bytes and AST.",
+  "independent_evidence": {
+    "bytes": 61168,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g13-binding-independent/EVIDENCE-v1.json",
+    "sha256": "e7afacb80d64d674fa645a0e0c23fa36baf5fc4d760fb0fa3e12489fbd803df2"
+  },
+  "limits": [
+    "This verdict accepts only this exact mechanical G13 source-binding successor. It is not complete S03.08, whole selected tuple adoption, source execution authority, full caller/cost approval, runtime qualification or activity credit.",
+    "Complete original source/caller/control/cost acceptance, sanctioned FULL-owner materialization where applicable, actual external selection/inventories/inverses and final independent T1-T4 adoption remain separate.",
+    "Later original native/profile/guarded execution and numeric resource/funding gates remain separate. Neither successful runtime nor a supplied adopted stage/output was imposed as a condition of this bounded source verdict.",
+    "No unrelated accepted packet, wider all212 family or F4/M scope was independently rereviewed or added."
+  ],
+  "network_runtime_process_lock_operations": 0,
+  "new_activity_credit": 0,
+  "next_action": "Parent may consume this exact two-case binding packet in final source integration, retaining separate full/P08/absent-record/negative roles and refreshing any dependent pins only if their actual selected bytes change.",
+  "optimize_modes": [
+    0,
+    1
+  ],
+  "original_binder_source_unchanged": true,
+  "original_finite_entry_source_unchanged": true,
+  "protected_bookkeeping_or_runs_files_opened": false,
+  "reviewer": "/root/cache_final_adoption_map",
+  "schema": "g13-mechanical-binding-independent-source-review-v1",
+  "selected_cases": [
+    "V5_MAIN_PRIMARY_OUTER",
+    "V5_MAIN_CLEANUP_ONLY"
+  ],
+  "status": "ACCEPT_BOUNDED_G13_MECHANICAL_SOURCE_BINDING_ONLY",
+  "target_import_test_native_compiler_scientific_decoder_execution_count": 0,
+  "written_scope": "review/cache-s0308-source-completion-v2/g13-binding-independent/**"
+}

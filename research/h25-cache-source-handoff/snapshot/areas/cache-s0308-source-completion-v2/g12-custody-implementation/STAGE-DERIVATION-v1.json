@@ -1,0 +1,95 @@
+{
+  "actual_stage_created_or_mounted": false,
+  "new_source_selections": null,
+  "original_guard": {
+    "bytes": 15493,
+    "mode": "0444",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/run_guarded_v3.py",
+    "sha256": "bd882e3dadb1b6aeaa63ee824f1a1c58f8ef2546b6840a2bffa46885a184d3eb"
+  },
+  "original_producer": {
+    "bytes": 70246,
+    "mode": "0444",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/reference-producer-v2/g12_reference_driver_v2.py",
+    "sha256": "a346025d5b6e2b26246521c6af6292643a4c2c3286b33ff3996dcf051cd6be26"
+  },
+  "reviewed_new_adapter": {
+    "bytes": 21740,
+    "mode": "0444",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody-implementation/integration/g12_reference_adapter_v1.py",
+    "sha256": "43aaabc69841b0a90fae599011de85f4736f42ced64344c49d6cd93f20297f9f"
+  },
+  "schema": "g12-fixed-stage-source-derivation-recipe-v1",
+  "scope": "Recipe only. No existing stage or accepted source changed. Full prospective stage/JOBS/source closure requires exact immutable source selection after independent produced-source review.",
+  "stage": {
+    "created_now": false,
+    "future_digest_rule": "New adapter/stage/parent source digests must be computed from independently reviewed bytes at source selection; they cannot be fake hashes or runtime setter inputs. No self-referential source/plan hash cycle.",
+    "job_name": "g12-reference",
+    "job_record": {
+      "bootstrap": {
+        "driver": "integration/g12_reference_adapter_v1.py",
+        "provider": "integration/probe_binding_v3.py"
+      },
+      "lanes": "g12-reference",
+      "optimized": false
+    },
+    "job_rejections": [
+      "entry present",
+      "finite_only present or true",
+      "optimized other than exact False",
+      "additional jobs or bootstrap keys",
+      "different lanes",
+      "unknown argv tail"
+    ],
+    "manifest_rule": "New immutable STAGE.json and JOBS.json enumerate exactly the staged closure including adapter, Root, provider, baseline producer/source/reference and correct authority; runner_sha256 is unchanged original guard. No existing stage is edited. Root/provider runtime file pins remain unchanged.",
+    "mounts": {
+      "areas/cache-validity/cold_authority_v7.py": {
+        "historical_2a941_mount_rejected": true,
+        "mode": "0444",
+        "sha256": "f279ab86fc17c6a517b035f19d56863919cbd8304de4e7d5332457c6159aec10"
+      },
+      "baseline/SOURCE-PINS.json": {
+        "mode": "0444",
+        "sha256": "88bba3caf5975f30fa7abceaea9454110cf3b069233e8241a2ca13d1dff171a7"
+      },
+      "baseline/engine/": {
+        "constraint": "Exact original seven ENGINE_PINS entries at producer L33-41, original modes; no source modification."
+      },
+      "baseline/frozen/": {
+        "constraint": "Exact 32-file SOURCE-PINS closure, original modes, no symlinks; original producer inventory remains authoritative."
+      },
+      "baseline/full_driver.py": {
+        "bytes": 70246,
+        "mode": "0444",
+        "sha256": "a346025d5b6e2b26246521c6af6292643a4c2c3286b33ff3996dcf051cd6be26",
+        "source": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/reference-producer-v2/g12_reference_driver_v2.py"
+      },
+      "baseline/reference/certificates/complex-network.json": {
+        "mode": "0444",
+        "sha256": "1f763d95c7ff163aa71d13cd82784f16665be8afb21f75e76941e2119562098f"
+      },
+      "integration/RUNTIME-PROFILE.json": {
+        "mode": "0444",
+        "sha256": "ad0ec2aea01b83f97bdeafd9e9208360127fee870d024d353879b5ed99237109",
+        "source": "Exact file named by provider._profile_files at historical stage integration; preserve provider runtime/header preflight."
+      },
+      "integration/full_driver.py": {
+        "mode": "0444",
+        "sha256": "f5a2d33f2b4d3651f214156a0e7094c2bb516ce2d5ab7698d18c11f98f35dee0",
+        "source": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/integration/full_driver.py"
+      },
+      "integration/g12_reference_adapter_v1.py": {
+        "mode": "0444",
+        "sha256": "FUTURE_REVIEWED_ADAPTER_SOURCE_DIGEST"
+      },
+      "integration/probe_binding_v3.py": {
+        "mode": "0444",
+        "sha256": "9cbb7368f89e71d1e6cc46db5dc77efed3e03ed2a801c98c88fe316e4d9f3ef2",
+        "source": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/integration/probe_binding_v3.py"
+      }
+    },
+    "shape_reason": "Producer.__file__ at stage/baseline/full_driver.py makes HERE baseline and its rsplit(/,2)[0] authority reference resolve to stage/areas/cache-validity/cold_authority_v7.py exactly.",
+    "stage_name": "g12-reference-custody-v1",
+    "stage_root": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/g12-reference-custody-v1"
+  }
+}

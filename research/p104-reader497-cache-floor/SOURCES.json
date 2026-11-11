@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "d59b5035e7b4cbaa9d688a1d32dd0d6eb79c466a",
+      "sha256": "9b8d0eea95b3bf0dfcb7938a732a6439b87a2685dec2a5ab9e525b3b34debbfa"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "3404fbdd5e7529a0674eef26114b5071e4586cec",
+      "sha256": "ead6cdc9d0af6d58e8a49744d8ec8c7c15e13d2ba93c276c434bcf9b51b93a81"
+    },
+    {
+      "path": "research/p104-retained-operand-descent/PROOF.md",
+      "usage": "input",
+      "git_blob": "71d6a77e7c9ea81097a0d11744c1bbc33a8188db",
+      "sha256": "941145209301df79d2b1a1c91dc6133435952c8d94e79b825ed19eee5988ceef"
+    },
+    {
+      "path": "research/p104-retained-operand-descent/README.md",
+      "usage": "input",
+      "git_blob": "cbe390b9e7167b7aac019f52ed2c0c0707f8e7cc",
+      "sha256": "42704b4bf59b6f83ddc3a37c1e26d4c13d7e5f5da64fd6c1874e2391e6b7c4ff"
+    },
+    {
+      "path": "research/p104-retained-operand-descent/WORD.json.gz",
+      "usage": "input",
+      "git_blob": "f2d3f98964f939e5ca652f9b1453a0604f15f829",
+      "sha256": "68d1ff048bc6d30d85ceaeb38e2557adab87b20a9c67cf73948f95f54104575f"
+    },
+    {
+      "path": "research/p104-root2-receiver-obstruction/README.md",
+      "usage": "input",
+      "git_blob": "f6903dad589745b2de98da9126bd32612ce8c404",
+      "sha256": "2b005a550c76ab6f72d43a3f5438c8a091ea7ea18e5599958f4140d8961596c3"
+    }
+  ]
+}

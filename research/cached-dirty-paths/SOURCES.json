@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "d59b5035e7b4cbaa9d688a1d32dd0d6eb79c466a",
+      "sha256": "9b8d0eea95b3bf0dfcb7938a732a6439b87a2685dec2a5ab9e525b3b34debbfa"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "3404fbdd5e7529a0674eef26114b5071e4586cec",
+      "sha256": "ead6cdc9d0af6d58e8a49744d8ec8c7c15e13d2ba93c276c434bcf9b51b93a81"
+    },
+    {
+      "path": "research/cyclic-dirty-commutator-audit/echo.py",
+      "usage": "input",
+      "sha256": "63d44c48801f51720a7cc994d6b5e2e857d1aa4fae4c6b83c0cca032b3d9e13b",
+      "git_blob": "76a31171368eb945815cc00dce931c6c7a88e836"
+    },
+    {
+      "path": "research/universal-dirty-certificates/README.md",
+      "usage": "input",
+      "sha256": "fb8d94a58b6c0448aa893e65f263b9d71639b1aa79cd10f054d0dc740a570dca",
+      "git_blob": "be4e5981e57bdd2aa8d2ba8c36479594cf38b5d2"
+    },
+    {
+      "path": "research/universal-dirty-certificates/SOURCES.json",
+      "usage": "input",
+      "sha256": "5d2c0b2a8921b8dc0f724fa11f93cdfeb764e57cfdfb7fa236ec958d72306899",
+      "git_blob": "78109486a46ebc0f6552d8de4cc09afa5a783535"
+    },
+    {
+      "path": "research/universal-dirty-certificates/check_certificate.py",
+      "usage": "input",
+      "sha256": "09cba2605c62f8af0dc48cf60b4eab9f8711cba820e22698d0447833c1a16c37",
+      "git_blob": "cdb1d3fe14ba929cbe343d181cd08ff56f7f42e9"
+    },
+    {
+      "path": "research/universal-dirty-certificates/examples/binary-echo3.certificate.json",
+      "usage": "input",
+      "sha256": "cd088d9d5c0a8378361341c99e25ae5654a6be0b20398c9757a76804df2ab66a",
+      "git_blob": "34996f4e4234ad769010ba88b108b8141b835e75"
+    },
+    {
+      "path": "research/universal-dirty-certificates/examples/binary-echo3.json",
+      "usage": "input",
+      "sha256": "a5199c1dc6236e346891c641b9402d8065c5bd29087c560e76fcdf2299cdfcf9",
+      "git_blob": "8bb08f646562569d4c48168f9f4459cb57e8a120"
+    },
+    {
+      "path": "research/universal-dirty-certificates/examples/dirty-echo3.certificate.json",
+      "usage": "input",
+      "sha256": "21444c604e17d0cbd707ffbecde10edb4bdff0bdc5a3ffb71819be04c3ac58c5",
+      "git_blob": "f19706f07112e6d6b0b8a5301a6b1284274d5cea"
+    },
+    {
+      "path": "research/universal-dirty-certificates/examples/dirty-echo3.json",
+      "usage": "input",
+      "sha256": "862281041cd5616a8785b526d0cee57a50aa7457a8cb64a0abff1133d6d60798",
+      "git_blob": "13c38bf647c050243f5691d5a61be75ea3e4a4d9"
+    },
+    {
+      "path": "research/universal-dirty-certificates/examples/wrong-order.certificate.json",
+      "usage": "input",
+      "sha256": "54850450cc231e4db2a1c4637fc3f7a49dfb694d9c64cfeb8faa8df91d529a79",
+      "git_blob": "20e3102d5a6e68b6fa19345080d0eeb957977c23"
+    },
+    {
+      "path": "research/universal-dirty-certificates/examples/wrong-order.json",
+      "usage": "input",
+      "sha256": "137def9876c1195456a312b8c232d656ff063cc5caae645be6afc3d06709742c",
+      "git_blob": "85482942f052694a3a6d15d364d18823b51e1b00"
+    },
+    {
+      "path": "research/universal-dirty-certificates/fields.py",
+      "usage": "input",
+      "sha256": "0829ad6ed3775ba6e3d11cf04cfb3513ac763549b730aaed74958b1238e660d7",
+      "git_blob": "f1b6dc83e26bd9fd9ec67ded3fedb330ef89598d"
+    },
+    {
+      "path": "research/universal-dirty-certificates/linear_words.py",
+      "usage": "input",
+      "sha256": "fe825cf7c886de61bb5ec5a02171c5a392a7bddc185280726f4c359b3f289584",
+      "git_blob": "4a877e1ab9a87a0f01eb13e28ddf309c2060bd5e"
+    },
+    {
+      "path": "research/universal-dirty-certificates/verify.py",
+      "usage": "input",
+      "sha256": "2759a2e7514453012ed0e4ffc7017375dea973925672dc16f127d91790dcb6e5",
+      "git_blob": "abccca3c9e9005343e254a78dc3482693eabd993"
+    }
+  ]
+}

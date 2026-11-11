@@ -1,0 +1,998 @@
+{
+  "blocking_findings": [],
+  "created_utc": "2026-10-31T01:50:39.508473+00:00",
+  "critical_adoption_boundary": {
+    "fixed_selection_enforcement": "Each derivative has a fixed case/group literal; the command must match and actual helper dispatch uses that exact literal. Source-map rows remain unadopted.",
+    "reason": "The late helper retains all52 bodies but repins selected CLI fault-table driver entries. Original P08 uses one of the same table keys. This helper therefore belongs only to these12 fixed non-N20 late routes and is not a global replacement for the separately accepted P08 helper/driver tuple or other lanes. N20 executes its appended original body from the dedicated authority.",
+    "route_specific_helper_only": true
+  },
+  "decision": "ACCEPT_BOUNDED_LATE_FIXED_CASE_SOURCE_WITH_OPEN_ADOPTION",
+  "open_separate_gates": [
+    "Actual final source/Root/driver/authority/factory/caller/command map adoption, including route-specific helper separation.",
+    "Complete original source/caller/control/cost acceptance before any typed owner/None-contract materialization.",
+    "Exact new graph/alias/currentness and original T1-T4/native/profile/load/guard/custody/resource/execution gates.",
+    "Other S03.08 source lanes and complete whole-activity acceptance; no wider212/native-runtime expansion."
+  ],
+  "ownership_and_cost": {
+    "activity_credit": 0,
+    "bill": "Every original startup/native/compiler/control route, original155 legacy controls, added genuine constructors, source admission, error/traceback/native-object retention, original cleanup/STOP and added classification/publication/controller tail remains charged. Retired registry does not prove released aliases or a peak-memory bound.",
+    "execution_contract_owner": null,
+    "numeric_resource_or_gain_claims": false,
+    "original_FULL_contracts_not_materialized": true,
+    "runtime_results": 0,
+    "source_adoption": false,
+    "source_contract_owner": null
+  },
+  "preservation": {
+    "method": "Independent stdlib text, SHA256, AST, literal inverse and bounded source-flow inspection only.",
+    "network_process_lock_PR_operations": 0,
+    "original_sources_edited": false,
+    "protected_runtime_tree_read_enumerated_or_traversed": false,
+    "target_import_compile_helper_tests_decoder_or_execution": 0
+  },
+  "representative_shared_source": {
+    "bytes": 139678,
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cases/N23/epoch_late_driver_v1.py",
+    "sha256": "1295b8d5cb2c43f7e395d7b6812aaec3c9efc618d4ce4589bb30922279bd1d28"
+  },
+  "representative_source_spans": [
+    {
+      "ast_sha256": "e1b6b2f0ae3f643cd77f90dad2fe5b4c13fb615f7abb34101bf0086995c6d3b0",
+      "function": "_run_epoch_with_stop_evidence",
+      "lines": [
+        1247,
+        1307
+      ],
+      "literal_sha256": "133826163cd60887100a42891620ae21ae6fe889f9f9828c49bf16837fa36c4b"
+    },
+    {
+      "ast_sha256": "abdf02cc3d6fb39fd241fb0644f8532b7a5d5246c890e7913dcaa89cb04d966f",
+      "function": "_epoch_late_dispatch",
+      "lines": [
+        1342,
+        1362
+      ],
+      "literal_sha256": "9014fe7939fc4f330210afe4c568c13c52680056cce07dd5b75eb57418f6065c"
+    },
+    {
+      "ast_sha256": "a6615801226773352d32a06c868bda42ddccc42f7f723795d7d8e3701b046afc",
+      "function": "_epoch_late_frame",
+      "lines": [
+        1365,
+        1371
+      ],
+      "literal_sha256": "70cada7e03154c06a24d89b00e470f495c059b8fe69a4585d2a97c627cbfabc1"
+    },
+    {
+      "ast_sha256": "b31736be698faad20053a68c29ddf3eb7a465effc26486c176e815cb695368bc",
+      "function": "_epoch_late_error",
+      "lines": [
+        1374,
+        1376
+      ],
+      "literal_sha256": "f2b3d6d457ba69e71fcf16ad5692b40e0dcf5173f1711f36101e20446514a4cc"
+    },
+    {
+      "ast_sha256": "80ab0ce40a9d7519ce2894f316bf756971800547e1ec6ed5bb42cf188c8195f2",
+      "function": "_epoch_late_channel",
+      "lines": [
+        1379,
+        1383
+      ],
+      "literal_sha256": "40f941764f1abd6fa8364bea483806d9e76c22cfaac475bdfc806b202341798f"
+    },
+    {
+      "ast_sha256": "54d2920774e9fb5dac400fdcb69fde2c34e50fe7b95020374317616d4182a54d",
+      "function": "_epoch_late_bind_legacy",
+      "lines": [
+        1386,
+        1406
+      ],
+      "literal_sha256": "37433833be801717d74e971dd7fa8115e77794a243328cf7eba322d5dbd43262"
+    },
+    {
+      "ast_sha256": "7a5f6c74245cf752a2252d22fd2200da44e55ffa42ae4de78df670a154125f5d",
+      "function": "_epoch_late_source_handoff",
+      "lines": [
+        1409,
+        1498
+      ],
+      "literal_sha256": "26291cb8056321f36647001721280d63619558cee6d36009f70612b779e73c46"
+    },
+    {
+      "ast_sha256": "76ffdd772e11d4059cd108c1bbeaab930c0884d01b69cf2eaf914e1a58815d5e",
+      "function": "_epoch_late_capture_raw",
+      "lines": [
+        1501,
+        1512
+      ],
+      "literal_sha256": "c0d870991c780e47a2970ff64d1a2886e83c11c44743c9c6443b86a1c1882d07"
+    },
+    {
+      "ast_sha256": "de5889a961ebd091a67463e4fb5410dc3cac7e46926203ee777e5992a12b2d32",
+      "function": "_epoch_late_phase_records",
+      "lines": [
+        1515,
+        1527
+      ],
+      "literal_sha256": "04b0a02dbb38067b5bf3850d020cd11023e38e8c7a488d9ad039efd983980dab"
+    },
+    {
+      "ast_sha256": "cf5239eea3ce3819e5028b3693339c07591fad13d93368143a53be6e4e75025d",
+      "function": "_epoch_late_known_owners",
+      "lines": [
+        1530,
+        1584
+      ],
+      "literal_sha256": "59a8511da377c5701e53a34ce618b5172ccf4f147619e28110db0aef6bd01e2c"
+    },
+    {
+      "ast_sha256": "3afc2eca62bd12990de60b7dd17d445ef48b0cc81fece826c68916ca742ea765",
+      "function": "_epoch_late_baseline_disposition",
+      "lines": [
+        1587,
+        1651
+      ],
+      "literal_sha256": "f62290f41aa051fcb9b41665959d77e7191a6b60805c816cc8ce9c3ddcc9a7a2"
+    },
+    {
+      "ast_sha256": "320952e907618c3950a014f4aa3ec9e39352eec6c4662831809fc75231171f55",
+      "function": "_epoch_late_candidate_disposition",
+      "lines": [
+        1654,
+        1760
+      ],
+      "literal_sha256": "a2cc321b10226ea67e512a8e8a8bc0e0eefa4431f0d6776730def903adc92c57"
+    },
+    {
+      "ast_sha256": "9bea95671a8fe00f0cff16b130e41e9e5d32a2c31cc3240de3510f63b175518d",
+      "function": "_epoch_late_legacy_disposition",
+      "lines": [
+        1763,
+        1793
+      ],
+      "literal_sha256": "da0fa3e063d91e9246eff9a0981c4d48a870e2f9a5ec99ebb773a5833da58150"
+    },
+    {
+      "ast_sha256": "ad4fc9929d487bc50c9150775e3136cdeb82acefdc57103849b3269d01d641f1",
+      "function": "_epoch_late_require_disposition",
+      "lines": [
+        1796,
+        1840
+      ],
+      "literal_sha256": "04c55d8aa2e54666fc69e41a3acbb94dc2a87abdb59405e2d415f8111b9cd980"
+    },
+    {
+      "ast_sha256": "a7e1a3caf01924a186faee4d2e31b81e149daf9a1cec6bd1b9acbb10a840c72c",
+      "function": "_epoch_late_case_entry",
+      "lines": [
+        1843,
+        1945
+      ],
+      "literal_sha256": "029148a9f175aa128a0a0493b3dcfb188888ef565c4008ff751e7b593b303c44"
+    },
+    {
+      "ast_sha256": "a294711cd0557ff2e92936e22d52eafe940389a74f96415bcb0b237416122b0a",
+      "function": "_epoch_late_controller_entry",
+      "lines": [
+        1956,
+        2039
+      ],
+      "literal_sha256": "ea9867c1f53291d55437e7b718d94315a824376bc24c61df6cc42d3278c6025c"
+    }
+  ],
+  "resolved_finding": {
+    "all_original_source_inverses_preserved": true,
+    "delta_checks_failed": 0,
+    "delta_checks_passed": 277,
+    "id": "LC-GRAPH-01",
+    "independent_delta_checks": {
+      "bytes": 74309,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/late-independent/SOURCE-DELTA-CHECKS-v2.json",
+      "sha256": "2f4d09aa3754769c41d2fb1a36e52f3724365d4b792fb5dea1affaeda5da844f"
+    },
+    "predecessor_review": {
+      "bytes": 41582,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/late-independent/SOURCE-REVIEW-v1.json",
+      "sha256": "e831a26bc7cce130b3b4718a23772c9d887378ca17637d3a98f6e0a9552e1d91"
+    },
+    "predecessor_source_preserved": true,
+    "predecessor_status": "NEEDS_SOURCE_GRAPH_CLOSURE_SUCCESSOR",
+    "resolution": "Exactly two direct function-name expressions in authenticated postseal handoff add entry/predicate to original main_epoch/Phases source graph. Original effective-global function traversal includes their transitive qualification functions. N20 authority remains identical. No helper/callback was called and no guard or nonmutation premise was weakened.",
+    "successor": "source-v3"
+  },
+  "review_basis": [
+    {
+      "bytes": 29923,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/late-independent/DESIGN-REVIEW-v1.json",
+      "sha256": "47ca0b9aee2f7052b1ce506d2738f035543a30e54c5ce9b2857a70b63a57f746"
+    },
+    {
+      "bytes": 951,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/late-independent/DESIGN-FREEZE-v1.json",
+      "sha256": "aae386bcf9bb137c563153c437e94818e35fbcb1c4aee1c9a23049e748166877"
+    },
+    {
+      "bytes": 20325,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/late-independent/ORIGINAL-HELPER-CENSUS-v1.json",
+      "sha256": "ef56f81652d8754a03e6bfa3f99b6a56c2dcf384e26aae9390cdd855dfa9cf54"
+    },
+    {
+      "bytes": 191206,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/late-independent/SOURCE-CHECKS-v1.json",
+      "sha256": "e81e72aa80293d2dad96e6732f4c5593910fbeb2e6ab1d9bc7b44ba3a37169e5"
+    },
+    {
+      "bytes": 41582,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/late-independent/SOURCE-REVIEW-v1.json",
+      "sha256": "e831a26bc7cce130b3b4718a23772c9d887378ca17637d3a98f6e0a9552e1d91"
+    },
+    {
+      "bytes": 2129,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/late-independent/V2-REVIEW-FREEZE-v1.json",
+      "sha256": "51f49d1a1d52ee859723f2e5908951e0ba8943be72f530cedb62aa88ae4aea5c"
+    },
+    {
+      "bytes": 74309,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/late-independent/SOURCE-DELTA-CHECKS-v2.json",
+      "sha256": "2f4d09aa3754769c41d2fb1a36e52f3724365d4b792fb5dea1affaeda5da844f"
+    }
+  ],
+  "schema": "cache-s0308-late-independent-source-review-v2",
+  "scope": {
+    "all_original_helper_functions_preserved": 68,
+    "case_count": 13,
+    "case_ids": [
+      "N20",
+      "N23",
+      "P03",
+      "V2_ROLE_CLEANUP_ONLY",
+      "V3_CLI_DISARM_ONLY",
+      "V3_CLI_BODY_DISARM",
+      "V3_CLI_BODY_DISARM_RETIREMENT",
+      "V4_ARGV_ONLY",
+      "V4_BODY_ARGV_DISARM_RETIREMENT",
+      "V4_ARGV_DISARM_RETIREMENT",
+      "V4_ARGV_BEFORE_DISARM_RETIREMENT",
+      "V4_ROLE_RAW_JOURNAL",
+      "V4_CLI_RAW_JOURNAL"
+    ],
+    "changed_source_images": 15,
+    "not_whole_S0308_acceptance": true,
+    "public_original_helpers_preserved": 52,
+    "source_payloads_plus_freeze": 24
+  },
+  "selected_source_rows": [
+    {
+      "actual_helper_function_owner": {
+        "body_origin_sha256": "458a775cf2890e3640017a609f2886c62a37b57aae7821200d214fa94f9b3ddd",
+        "export": "N20",
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cases/N20/epoch_authority_n20_v1.py",
+        "sha256": "3f1226d93725b1c9df1aa7256188287a64b36611a6628e9fd02970b187931eac"
+      },
+      "case_id": "N20",
+      "checkpoint": "G09",
+      "driver": {
+        "bytes": 139635,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cases/N20/epoch_late_driver_v1.py",
+        "sha256": "54bcf67665f85c1d29f9674d7b213f92d5e2915b6518f84f2e745f8885e6ece1"
+      },
+      "mode": {
+        "case_flag": "--cache-control-case",
+        "case_value": "N20",
+        "helper_flag": "--cache-control-sha256",
+        "helper_value": "fcffe77b6a84d5b422b03e3d068924a701c1594cdb9ec305115827e3fad7d4b6",
+        "mode": "original_finite_normal_or_optimized_or_full_normal",
+        "required_original_lane": "baseline_or_candidate"
+      },
+      "selected_helper": {
+        "bytes": 65591,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-full-contract-completion-v1/cache_epoch_source_controls.py",
+        "sha256": "fcffe77b6a84d5b422b03e3d068924a701c1594cdb9ec305115827e3fad7d4b6"
+      },
+      "selected_tuple": {
+        "adapter": {
+          "bytes": 10820,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/integration/adapters.py",
+          "sha256": "f7ca7f4f03ac63c1a95ba42f06149543211566de5e29f487a3dc4d08c5ee9b94"
+        },
+        "authority": {
+          "bytes": 140515,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cases/N20/epoch_authority_n20_v1.py",
+          "sha256": "3f1226d93725b1c9df1aa7256188287a64b36611a6628e9fd02970b187931eac"
+        },
+        "cache": {
+          "bytes": 171075,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_cache_products_v1.py",
+          "sha256": "d317c9866566cd6147c96566879f26f364e7e6801ac3eed0800b6ed8eedd01a2"
+        },
+        "data": {
+          "bytes": 103903,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_data_products_v1.py",
+          "sha256": "18679fd1eb6ae99c4b375756511427c26718f77674c2d8fcc490e25ceb47cba5"
+        },
+        "driver": {
+          "bytes": 139635,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cases/N20/epoch_late_driver_v1.py",
+          "sha256": "54bcf67665f85c1d29f9674d7b213f92d5e2915b6518f84f2e745f8885e6ece1"
+        }
+      }
+    },
+    {
+      "actual_helper_function_owner": null,
+      "case_id": "N23",
+      "checkpoint": "G06",
+      "driver": {
+        "bytes": 139678,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cases/N23/epoch_late_driver_v1.py",
+        "sha256": "1295b8d5cb2c43f7e395d7b6812aaec3c9efc618d4ce4589bb30922279bd1d28"
+      },
+      "mode": {
+        "case_flag": "--cache-control-case",
+        "case_value": "N23",
+        "helper_flag": "--cache-control-sha256",
+        "helper_value": "516432a9f3532ee3c0ebe255aa641ed05179d98fe127e041baff3a1d211c674a",
+        "mode": "original_full_normal_only",
+        "required_original_lane": "candidate"
+      },
+      "selected_helper": {
+        "bytes": 65363,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cache_epoch_source_controls.py",
+        "sha256": "516432a9f3532ee3c0ebe255aa641ed05179d98fe127e041baff3a1d211c674a"
+      },
+      "selected_tuple": {
+        "adapter": {
+          "bytes": 10820,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/integration/adapters.py",
+          "sha256": "f7ca7f4f03ac63c1a95ba42f06149543211566de5e29f487a3dc4d08c5ee9b94"
+        },
+        "authority": {
+          "bytes": 137642,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_authority_products_v1.py",
+          "sha256": "f279ab86fc17c6a517b035f19d56863919cbd8304de4e7d5332457c6159aec10"
+        },
+        "cache": {
+          "bytes": 171075,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_cache_products_v1.py",
+          "sha256": "d317c9866566cd6147c96566879f26f364e7e6801ac3eed0800b6ed8eedd01a2"
+        },
+        "data": {
+          "bytes": 103903,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_data_products_v1.py",
+          "sha256": "18679fd1eb6ae99c4b375756511427c26718f77674c2d8fcc490e25ceb47cba5"
+        },
+        "driver": {
+          "bytes": 139678,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cases/N23/epoch_late_driver_v1.py",
+          "sha256": "1295b8d5cb2c43f7e395d7b6812aaec3c9efc618d4ce4589bb30922279bd1d28"
+        }
+      }
+    },
+    {
+      "actual_helper_function_owner": null,
+      "case_id": "P03",
+      "checkpoint": "G06",
+      "driver": {
+        "bytes": 139678,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cases/P03/epoch_late_driver_v1.py",
+        "sha256": "4ba1212f8d4ae3ad7970c59fd11e1851abbf834536bb4e36eb606d4e94fc814b"
+      },
+      "mode": {
+        "case_flag": "--cache-control-case",
+        "case_value": "P03",
+        "helper_flag": "--cache-control-sha256",
+        "helper_value": "516432a9f3532ee3c0ebe255aa641ed05179d98fe127e041baff3a1d211c674a",
+        "mode": "original_full_normal_only",
+        "required_original_lane": "candidate"
+      },
+      "selected_helper": {
+        "bytes": 65363,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cache_epoch_source_controls.py",
+        "sha256": "516432a9f3532ee3c0ebe255aa641ed05179d98fe127e041baff3a1d211c674a"
+      },
+      "selected_tuple": {
+        "adapter": {
+          "bytes": 10820,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/integration/adapters.py",
+          "sha256": "f7ca7f4f03ac63c1a95ba42f06149543211566de5e29f487a3dc4d08c5ee9b94"
+        },
+        "authority": {
+          "bytes": 137642,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_authority_products_v1.py",
+          "sha256": "f279ab86fc17c6a517b035f19d56863919cbd8304de4e7d5332457c6159aec10"
+        },
+        "cache": {
+          "bytes": 171075,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_cache_products_v1.py",
+          "sha256": "d317c9866566cd6147c96566879f26f364e7e6801ac3eed0800b6ed8eedd01a2"
+        },
+        "data": {
+          "bytes": 103903,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_data_products_v1.py",
+          "sha256": "18679fd1eb6ae99c4b375756511427c26718f77674c2d8fcc490e25ceb47cba5"
+        },
+        "driver": {
+          "bytes": 139678,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cases/P03/epoch_late_driver_v1.py",
+          "sha256": "4ba1212f8d4ae3ad7970c59fd11e1851abbf834536bb4e36eb606d4e94fc814b"
+        }
+      }
+    },
+    {
+      "actual_helper_function_owner": null,
+      "case_id": "V2_ROLE_CLEANUP_ONLY",
+      "checkpoint": "G06",
+      "driver": {
+        "bytes": 139695,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cases/V2_ROLE_CLEANUP_ONLY/epoch_late_driver_v1.py",
+        "sha256": "731063ffe96a7ae17185deb7bb844e3f7d596f615ee6e29558fd724c1bf0bc5d"
+      },
+      "mode": {
+        "case_flag": "--cache-control-case",
+        "case_value": "V2_ROLE_CLEANUP_ONLY",
+        "helper_flag": "--cache-control-sha256",
+        "helper_value": "516432a9f3532ee3c0ebe255aa641ed05179d98fe127e041baff3a1d211c674a",
+        "mode": "original_full_normal_only",
+        "required_original_lane": "candidate"
+      },
+      "selected_helper": {
+        "bytes": 65363,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cache_epoch_source_controls.py",
+        "sha256": "516432a9f3532ee3c0ebe255aa641ed05179d98fe127e041baff3a1d211c674a"
+      },
+      "selected_tuple": {
+        "adapter": {
+          "bytes": 10820,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/integration/adapters.py",
+          "sha256": "f7ca7f4f03ac63c1a95ba42f06149543211566de5e29f487a3dc4d08c5ee9b94"
+        },
+        "authority": {
+          "bytes": 137642,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_authority_products_v1.py",
+          "sha256": "f279ab86fc17c6a517b035f19d56863919cbd8304de4e7d5332457c6159aec10"
+        },
+        "cache": {
+          "bytes": 171075,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_cache_products_v1.py",
+          "sha256": "d317c9866566cd6147c96566879f26f364e7e6801ac3eed0800b6ed8eedd01a2"
+        },
+        "data": {
+          "bytes": 103903,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_data_products_v1.py",
+          "sha256": "18679fd1eb6ae99c4b375756511427c26718f77674c2d8fcc490e25ceb47cba5"
+        },
+        "driver": {
+          "bytes": 139695,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cases/V2_ROLE_CLEANUP_ONLY/epoch_late_driver_v1.py",
+          "sha256": "731063ffe96a7ae17185deb7bb844e3f7d596f615ee6e29558fd724c1bf0bc5d"
+        }
+      }
+    },
+    {
+      "actual_helper_function_owner": null,
+      "case_id": "V3_CLI_DISARM_ONLY",
+      "checkpoint": "G07",
+      "driver": {
+        "bytes": 139780,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cases/V3_CLI_DISARM_ONLY/epoch_late_driver_v1.py",
+        "sha256": "3913114122460afbb4ca31543cdd6cf873ecbe507d11c7bfee53b0fd0ae93f9a"
+      },
+      "mode": {
+        "case_flag": "--cache-control-case",
+        "case_value": "V3_CLI_DISARM_ONLY",
+        "helper_flag": "--cache-control-sha256",
+        "helper_value": "516432a9f3532ee3c0ebe255aa641ed05179d98fe127e041baff3a1d211c674a",
+        "mode": "original_full_normal_only",
+        "required_original_lane": "baseline"
+      },
+      "selected_helper": {
+        "bytes": 65363,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cache_epoch_source_controls.py",
+        "sha256": "516432a9f3532ee3c0ebe255aa641ed05179d98fe127e041baff3a1d211c674a"
+      },
+      "selected_tuple": {
+        "adapter": {
+          "bytes": 10994,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_adapters_cli_fault_v3.py",
+          "sha256": "57bcea26dd7abff4ab68a662be1b3a0de101af162d9e3077b45e31eb5e6aff69"
+        },
+        "authority": {
+          "bytes": 137642,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_authority_cli_disarm_only_fault_v3.py",
+          "sha256": "5f3450b5f278627d33ad313e52bd022c81f831c34934f2ed8725131ff406885a"
+        },
+        "cache": {
+          "bytes": 171337,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_cache_cli_fault_v3.py",
+          "sha256": "8d2f19273c8f7990c53fe2d12249677a716df5da52106193e005b76d5539eeb1"
+        },
+        "data": {
+          "bytes": 103903,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_data_cli_disarm_only_fault_v3.py",
+          "sha256": "18679fd1eb6ae99c4b375756511427c26718f77674c2d8fcc490e25ceb47cba5"
+        },
+        "driver": {
+          "bytes": 139780,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cases/V3_CLI_DISARM_ONLY/epoch_late_driver_v1.py",
+          "sha256": "3913114122460afbb4ca31543cdd6cf873ecbe507d11c7bfee53b0fd0ae93f9a"
+        }
+      }
+    },
+    {
+      "actual_helper_function_owner": null,
+      "case_id": "V3_CLI_BODY_DISARM",
+      "checkpoint": "G07",
+      "driver": {
+        "bytes": 139786,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cases/V3_CLI_BODY_DISARM/epoch_late_driver_v1.py",
+        "sha256": "d80fa9f24c14e1fac7a583db08434e286a0606dd7d93f1b3769bad6e76f2a70b"
+      },
+      "mode": {
+        "case_flag": "--cache-control-case",
+        "case_value": "V3_CLI_BODY_DISARM",
+        "helper_flag": "--cache-control-sha256",
+        "helper_value": "516432a9f3532ee3c0ebe255aa641ed05179d98fe127e041baff3a1d211c674a",
+        "mode": "original_full_normal_only",
+        "required_original_lane": "baseline"
+      },
+      "selected_helper": {
+        "bytes": 65363,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cache_epoch_source_controls.py",
+        "sha256": "516432a9f3532ee3c0ebe255aa641ed05179d98fe127e041baff3a1d211c674a"
+      },
+      "selected_tuple": {
+        "adapter": {
+          "bytes": 10994,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_adapters_cli_fault_v3.py",
+          "sha256": "57bcea26dd7abff4ab68a662be1b3a0de101af162d9e3077b45e31eb5e6aff69"
+        },
+        "authority": {
+          "bytes": 137642,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_authority_cli_body_disarm_fault_v3.py",
+          "sha256": "5f3450b5f278627d33ad313e52bd022c81f831c34934f2ed8725131ff406885a"
+        },
+        "cache": {
+          "bytes": 171337,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_cache_cli_fault_v3.py",
+          "sha256": "8d2f19273c8f7990c53fe2d12249677a716df5da52106193e005b76d5539eeb1"
+        },
+        "data": {
+          "bytes": 103903,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_data_cli_body_disarm_fault_v3.py",
+          "sha256": "18679fd1eb6ae99c4b375756511427c26718f77674c2d8fcc490e25ceb47cba5"
+        },
+        "driver": {
+          "bytes": 139786,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cases/V3_CLI_BODY_DISARM/epoch_late_driver_v1.py",
+          "sha256": "d80fa9f24c14e1fac7a583db08434e286a0606dd7d93f1b3769bad6e76f2a70b"
+        }
+      }
+    },
+    {
+      "actual_helper_function_owner": null,
+      "case_id": "V3_CLI_BODY_DISARM_RETIREMENT",
+      "checkpoint": "G07",
+      "driver": {
+        "bytes": 139797,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cases/V3_CLI_BODY_DISARM_RETIREMENT/epoch_late_driver_v1.py",
+        "sha256": "c642d9b23c4f2efbcd075450ab942bf1e486cc16dbe134255dd1281ddbaf31ef"
+      },
+      "mode": {
+        "case_flag": "--cache-control-case",
+        "case_value": "V3_CLI_BODY_DISARM_RETIREMENT",
+        "helper_flag": "--cache-control-sha256",
+        "helper_value": "516432a9f3532ee3c0ebe255aa641ed05179d98fe127e041baff3a1d211c674a",
+        "mode": "original_full_normal_only",
+        "required_original_lane": "baseline"
+      },
+      "selected_helper": {
+        "bytes": 65363,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cache_epoch_source_controls.py",
+        "sha256": "516432a9f3532ee3c0ebe255aa641ed05179d98fe127e041baff3a1d211c674a"
+      },
+      "selected_tuple": {
+        "adapter": {
+          "bytes": 10994,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_adapters_cli_fault_v3.py",
+          "sha256": "57bcea26dd7abff4ab68a662be1b3a0de101af162d9e3077b45e31eb5e6aff69"
+        },
+        "authority": {
+          "bytes": 137642,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_authority_cli_body_disarm_retirement_fault_v3.py",
+          "sha256": "b5b7cfb68f3dfa73c9183f79c1ce4364ba25493b8c58986e4f95c7c1883592b3"
+        },
+        "cache": {
+          "bytes": 171337,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_cache_cli_fault_v3.py",
+          "sha256": "8d2f19273c8f7990c53fe2d12249677a716df5da52106193e005b76d5539eeb1"
+        },
+        "data": {
+          "bytes": 104289,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_data_cli_body_disarm_retirement_fault_v3.py",
+          "sha256": "182565e53294e306e3c2dce51388f699ea3c7f66b9af22812a7a52269c680f34"
+        },
+        "driver": {
+          "bytes": 139797,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cases/V3_CLI_BODY_DISARM_RETIREMENT/epoch_late_driver_v1.py",
+          "sha256": "c642d9b23c4f2efbcd075450ab942bf1e486cc16dbe134255dd1281ddbaf31ef"
+        }
+      }
+    },
+    {
+      "actual_helper_function_owner": null,
+      "case_id": "V4_ARGV_ONLY",
+      "checkpoint": "G07",
+      "driver": {
+        "bytes": 139877,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cases/V4_ARGV_ONLY/epoch_late_driver_v1.py",
+        "sha256": "ed1b6b4d57b7fd47341c52ba71520af6ae43927330b9a169ec4014fecac0d0d6"
+      },
+      "mode": {
+        "case_flag": "--cache-control-case",
+        "case_value": "V4_ARGV_ONLY",
+        "helper_flag": "--cache-control-sha256",
+        "helper_value": "516432a9f3532ee3c0ebe255aa641ed05179d98fe127e041baff3a1d211c674a",
+        "mode": "original_full_normal_only",
+        "required_original_lane": "baseline"
+      },
+      "selected_helper": {
+        "bytes": 65363,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cache_epoch_source_controls.py",
+        "sha256": "516432a9f3532ee3c0ebe255aa641ed05179d98fe127e041baff3a1d211c674a"
+      },
+      "selected_tuple": {
+        "adapter": {
+          "bytes": 10820,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_adapter_cli_restore_only_fault_v4.py",
+          "sha256": "f7ca7f4f03ac63c1a95ba42f06149543211566de5e29f487a3dc4d08c5ee9b94"
+        },
+        "authority": {
+          "bytes": 137642,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_authority_cli_restore_only_fault_v4.py",
+          "sha256": "f279ab86fc17c6a517b035f19d56863919cbd8304de4e7d5332457c6159aec10"
+        },
+        "cache": {
+          "bytes": 171075,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_cache_cli_restore_only_fault_v4.py",
+          "sha256": "d317c9866566cd6147c96566879f26f364e7e6801ac3eed0800b6ed8eedd01a2"
+        },
+        "data": {
+          "bytes": 103903,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_data_cli_restore_only_fault_v4.py",
+          "sha256": "18679fd1eb6ae99c4b375756511427c26718f77674c2d8fcc490e25ceb47cba5"
+        },
+        "driver": {
+          "bytes": 139877,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cases/V4_ARGV_ONLY/epoch_late_driver_v1.py",
+          "sha256": "ed1b6b4d57b7fd47341c52ba71520af6ae43927330b9a169ec4014fecac0d0d6"
+        }
+      }
+    },
+    {
+      "actual_helper_function_owner": null,
+      "case_id": "V4_BODY_ARGV_DISARM_RETIREMENT",
+      "checkpoint": "G07",
+      "driver": {
+        "bytes": 139901,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cases/V4_BODY_ARGV_DISARM_RETIREMENT/epoch_late_driver_v1.py",
+        "sha256": "d8cbefeca8af9d336a1ce92352fd9d5a2fd2f17c0540c542a34f5d686ad6b8ba"
+      },
+      "mode": {
+        "case_flag": "--cache-control-case",
+        "case_value": "V4_BODY_ARGV_DISARM_RETIREMENT",
+        "helper_flag": "--cache-control-sha256",
+        "helper_value": "516432a9f3532ee3c0ebe255aa641ed05179d98fe127e041baff3a1d211c674a",
+        "mode": "original_full_normal_only",
+        "required_original_lane": "baseline"
+      },
+      "selected_helper": {
+        "bytes": 65363,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cache_epoch_source_controls.py",
+        "sha256": "516432a9f3532ee3c0ebe255aa641ed05179d98fe127e041baff3a1d211c674a"
+      },
+      "selected_tuple": {
+        "adapter": {
+          "bytes": 10994,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_adapter_cli_body_restore_disarm_retirement_fault_v4.py",
+          "sha256": "57bcea26dd7abff4ab68a662be1b3a0de101af162d9e3077b45e31eb5e6aff69"
+        },
+        "authority": {
+          "bytes": 137642,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_authority_cli_body_restore_disarm_retirement_fault_v4.py",
+          "sha256": "64556c881af5f1e4fee9628ea059bb80c65883ed14f8b4413f6452b10c448b83"
+        },
+        "cache": {
+          "bytes": 171075,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_cache_cli_body_restore_disarm_retirement_fault_v4.py",
+          "sha256": "d317c9866566cd6147c96566879f26f364e7e6801ac3eed0800b6ed8eedd01a2"
+        },
+        "data": {
+          "bytes": 104279,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_data_cli_body_restore_disarm_retirement_fault_v4.py",
+          "sha256": "667ff800f023173af0cb07ef985d0aa7345d624ed4f904670622a7dc1ac08e5d"
+        },
+        "driver": {
+          "bytes": 139901,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cases/V4_BODY_ARGV_DISARM_RETIREMENT/epoch_late_driver_v1.py",
+          "sha256": "d8cbefeca8af9d336a1ce92352fd9d5a2fd2f17c0540c542a34f5d686ad6b8ba"
+        }
+      }
+    },
+    {
+      "actual_helper_function_owner": null,
+      "case_id": "V4_ARGV_DISARM_RETIREMENT",
+      "checkpoint": "G07",
+      "driver": {
+        "bytes": 139890,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cases/V4_ARGV_DISARM_RETIREMENT/epoch_late_driver_v1.py",
+        "sha256": "0d0ed51687a95c1cb5b0df04e1e1d7311c9ad19d5453762e853fe41d7bfe7502"
+      },
+      "mode": {
+        "case_flag": "--cache-control-case",
+        "case_value": "V4_ARGV_DISARM_RETIREMENT",
+        "helper_flag": "--cache-control-sha256",
+        "helper_value": "516432a9f3532ee3c0ebe255aa641ed05179d98fe127e041baff3a1d211c674a",
+        "mode": "original_full_normal_only",
+        "required_original_lane": "baseline"
+      },
+      "selected_helper": {
+        "bytes": 65363,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cache_epoch_source_controls.py",
+        "sha256": "516432a9f3532ee3c0ebe255aa641ed05179d98fe127e041baff3a1d211c674a"
+      },
+      "selected_tuple": {
+        "adapter": {
+          "bytes": 10994,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_adapter_cli_restore_disarm_retirement_fault_v4.py",
+          "sha256": "57bcea26dd7abff4ab68a662be1b3a0de101af162d9e3077b45e31eb5e6aff69"
+        },
+        "authority": {
+          "bytes": 137642,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_authority_cli_restore_disarm_retirement_fault_v4.py",
+          "sha256": "64556c881af5f1e4fee9628ea059bb80c65883ed14f8b4413f6452b10c448b83"
+        },
+        "cache": {
+          "bytes": 171075,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_cache_cli_restore_disarm_retirement_fault_v4.py",
+          "sha256": "d317c9866566cd6147c96566879f26f364e7e6801ac3eed0800b6ed8eedd01a2"
+        },
+        "data": {
+          "bytes": 104279,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_data_cli_restore_disarm_retirement_fault_v4.py",
+          "sha256": "667ff800f023173af0cb07ef985d0aa7345d624ed4f904670622a7dc1ac08e5d"
+        },
+        "driver": {
+          "bytes": 139890,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cases/V4_ARGV_DISARM_RETIREMENT/epoch_late_driver_v1.py",
+          "sha256": "0d0ed51687a95c1cb5b0df04e1e1d7311c9ad19d5453762e853fe41d7bfe7502"
+        }
+      }
+    },
+    {
+      "actual_helper_function_owner": null,
+      "case_id": "V4_ARGV_BEFORE_DISARM_RETIREMENT",
+      "checkpoint": "G07",
+      "driver": {
+        "bytes": 139897,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cases/V4_ARGV_BEFORE_DISARM_RETIREMENT/epoch_late_driver_v1.py",
+        "sha256": "1eccb1026e8435dc754fd833fac5798858919eb26852ffb1e94a25fb6a480751"
+      },
+      "mode": {
+        "case_flag": "--cache-control-case",
+        "case_value": "V4_ARGV_BEFORE_DISARM_RETIREMENT",
+        "helper_flag": "--cache-control-sha256",
+        "helper_value": "516432a9f3532ee3c0ebe255aa641ed05179d98fe127e041baff3a1d211c674a",
+        "mode": "original_full_normal_only",
+        "required_original_lane": "baseline"
+      },
+      "selected_helper": {
+        "bytes": 65363,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cache_epoch_source_controls.py",
+        "sha256": "516432a9f3532ee3c0ebe255aa641ed05179d98fe127e041baff3a1d211c674a"
+      },
+      "selected_tuple": {
+        "adapter": {
+          "bytes": 10994,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_adapter_cli_restore_before_disarm_retirement_fault_v4.py",
+          "sha256": "57bcea26dd7abff4ab68a662be1b3a0de101af162d9e3077b45e31eb5e6aff69"
+        },
+        "authority": {
+          "bytes": 137642,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_authority_cli_restore_before_disarm_retirement_fault_v4.py",
+          "sha256": "64556c881af5f1e4fee9628ea059bb80c65883ed14f8b4413f6452b10c448b83"
+        },
+        "cache": {
+          "bytes": 171075,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_cache_cli_restore_before_disarm_retirement_fault_v4.py",
+          "sha256": "d317c9866566cd6147c96566879f26f364e7e6801ac3eed0800b6ed8eedd01a2"
+        },
+        "data": {
+          "bytes": 104279,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_data_cli_restore_before_disarm_retirement_fault_v4.py",
+          "sha256": "667ff800f023173af0cb07ef985d0aa7345d624ed4f904670622a7dc1ac08e5d"
+        },
+        "driver": {
+          "bytes": 139897,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cases/V4_ARGV_BEFORE_DISARM_RETIREMENT/epoch_late_driver_v1.py",
+          "sha256": "1eccb1026e8435dc754fd833fac5798858919eb26852ffb1e94a25fb6a480751"
+        }
+      }
+    },
+    {
+      "actual_helper_function_owner": null,
+      "case_id": "V4_ROLE_RAW_JOURNAL",
+      "checkpoint": "G06",
+      "driver": {
+        "bytes": 139694,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cases/V4_ROLE_RAW_JOURNAL/epoch_late_driver_v1.py",
+        "sha256": "222d23c9241966f3e10135c7308d46457d84763eac4279fa28d90f97df0eea09"
+      },
+      "mode": {
+        "case_flag": "--cache-control-case",
+        "case_value": "V4_ROLE_RAW_JOURNAL",
+        "helper_flag": "--cache-control-sha256",
+        "helper_value": "516432a9f3532ee3c0ebe255aa641ed05179d98fe127e041baff3a1d211c674a",
+        "mode": "original_full_normal_only",
+        "required_original_lane": "candidate"
+      },
+      "selected_helper": {
+        "bytes": 65363,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cache_epoch_source_controls.py",
+        "sha256": "516432a9f3532ee3c0ebe255aa641ed05179d98fe127e041baff3a1d211c674a"
+      },
+      "selected_tuple": {
+        "adapter": {
+          "bytes": 10820,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_adapter_cli_role_raw_journal_fault_v4.py",
+          "sha256": "f7ca7f4f03ac63c1a95ba42f06149543211566de5e29f487a3dc4d08c5ee9b94"
+        },
+        "authority": {
+          "bytes": 137642,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_authority_cli_role_raw_journal_fault_v4.py",
+          "sha256": "23177353bc42187c40ab50d1833e1ff014b1d464f109a44567f7005e332efc87"
+        },
+        "cache": {
+          "bytes": 171397,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_cache_cli_role_raw_journal_fault_v4.py",
+          "sha256": "b11ca58a17382e162833ed3a1091e0f975ab595bfba860dc6eb42ea4931655f2"
+        },
+        "data": {
+          "bytes": 103903,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_data_cli_role_raw_journal_fault_v4.py",
+          "sha256": "18679fd1eb6ae99c4b375756511427c26718f77674c2d8fcc490e25ceb47cba5"
+        },
+        "driver": {
+          "bytes": 139694,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cases/V4_ROLE_RAW_JOURNAL/epoch_late_driver_v1.py",
+          "sha256": "222d23c9241966f3e10135c7308d46457d84763eac4279fa28d90f97df0eea09"
+        }
+      }
+    },
+    {
+      "actual_helper_function_owner": null,
+      "case_id": "V4_CLI_RAW_JOURNAL",
+      "checkpoint": "G06",
+      "driver": {
+        "bytes": 139780,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cases/V4_CLI_RAW_JOURNAL/epoch_late_driver_v1.py",
+        "sha256": "421547f2ac40020bba3fd7fd817fb616f4669a8ac9d249e68b884f25a71c771f"
+      },
+      "mode": {
+        "case_flag": "--cache-control-case",
+        "case_value": "V4_CLI_RAW_JOURNAL",
+        "helper_flag": "--cache-control-sha256",
+        "helper_value": "516432a9f3532ee3c0ebe255aa641ed05179d98fe127e041baff3a1d211c674a",
+        "mode": "original_full_normal_only",
+        "required_original_lane": "candidate"
+      },
+      "selected_helper": {
+        "bytes": 65363,
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cache_epoch_source_controls.py",
+        "sha256": "516432a9f3532ee3c0ebe255aa641ed05179d98fe127e041baff3a1d211c674a"
+      },
+      "selected_tuple": {
+        "adapter": {
+          "bytes": 10994,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_adapter_cli_arm_raw_journal_fault_v4.py",
+          "sha256": "57bcea26dd7abff4ab68a662be1b3a0de101af162d9e3077b45e31eb5e6aff69"
+        },
+        "authority": {
+          "bytes": 137642,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_authority_cli_arm_raw_journal_fault_v4.py",
+          "sha256": "553393031b6f561e81b72a6ce87f3947fd99e9e269f0945b9ff0850ef7a7c9da"
+        },
+        "cache": {
+          "bytes": 171397,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_cache_cli_arm_raw_journal_fault_v4.py",
+          "sha256": "b11ca58a17382e162833ed3a1091e0f975ab595bfba860dc6eb42ea4931655f2"
+        },
+        "data": {
+          "bytes": 103991,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-epoch-products-v5/epoch_data_cli_arm_raw_journal_fault_v4.py",
+          "sha256": "d7743b4e865906801e02ee3665c7d65e9a8ca27af8cf168a563482551f09a952"
+        },
+        "driver": {
+          "bytes": 139780,
+          "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/cases/V4_CLI_RAW_JOURNAL/epoch_late_driver_v1.py",
+          "sha256": "421547f2ac40020bba3fd7fd817fb616f4669a8ac9d249e68b884f25a71c771f"
+        }
+      }
+    }
+  ],
+  "source_flow_findings": [
+    {
+      "case_boundaries": "N23 keeps body KeyError P plus distinct role cleanup S; V2 cleanup-only retains S as actual P and excludes ambient LookupError. P03 retains the actual original result separately from its positive marker.",
+      "decision": "ACCEPT_SOURCE",
+      "evidence": "Fixed handoff follows original epoch_seal and authenticates actual Root driver, actual state/module/token/phases and original sealed unused set owner. N23/V2 role/V4 role construct actual h8 circuit and Checks via installed constructors, prove exactly one genuine candidate construction fallback and unchanged set owner; P03/V4 CLI add no unnecessary fixture. Original helper bodies, ledger oracle and public-error checks remain unchanged.",
+      "id": "G06_CONTEXT_AND_ORACLES"
+    },
+    {
+      "case_boundaries": "Inactive CLI raw channels stay inactive in baseline. Original fixed external R is the same object at inner and outer calls; predicate preserves it. No P08 fresh-R or candidate construction-receipt predicate is borrowed.",
+      "decision": "ACCEPT_SOURCE",
+      "evidence": "All seven baseline selectors require original baseline enabledFalse state with no Suite/construction/cache binding or acquisition. Actual h8 constructors execute before arm while original capture_c/capture_checks decline ownership. Protected CLI and both original arm/disarm paths remain literal. V4 before-restore helper retains the actual pre-recovery argv result, then restores its own fixture; entry separately restores outer argv and controller authenticates the original owner.",
+      "id": "G07_BASELINE_AND_ARGV"
+    },
+    {
+      "case_boundaries": "Dirty actual state, raw channels, acquisition and owner records remain available before clean qualification. Clean qualification requires exact case-specific identities, uncertainty, consumed/unused channels and actual known-owner teardown. No journal-content or expected-error-only shortcut qualifies.",
+      "decision": "ACCEPT_SOURCE",
+      "evidence": "Role case separately observes actual Suite role/outer channels with P/R1/J1/R2/J2. CLI case separately observes actual CLI inner/outer channels with P/S/R1/J1/R2/J2 and untouched default Suite channels. Original data/cache code writes actual caller slots before ACK; all such original files remain exact selected original bytes.",
+      "id": "G06_V4_RAW_CHANNELS"
+    },
+    {
+      "decision": "ACCEPT_SOURCE",
+      "evidence": "Only active capture_epoch_authority.invoke gains a branch after unchanged cold_check, export/type/globals admission, classify and any producer validation. Exact original digest, original module name, run_controls export, roleNone, genuine module/globals and already-admitted function identity guard it. Byte-identical N20 and _need are source-owned and transitively reachable through original code_names/capture_graph/self_graph. N20 calls actual admitted module.run_controls with identical args/kwargs once; original unselected function call is not reached. Actual result and distinct positive marker are retained; disposition checks actual captured invoke traceback,12caller/10native and original independence flag.",
+      "id": "N20_AUTHENTIC_SINGLE_LEGACY_CALL",
+      "mode_and_cleanup": "The original driver1077-1079 seam precedes finite_only1081. Both baseline/candidate and finite normal/O remain selected under original gates; full remains normal only. No Suite/CLI/construction receipt is fabricated at this early seam. Marker unwinds original Phases/main/outer/STOP/known-owner cleanup."
+    },
+    {
+      "decision": "ACCEPT_SOURCE",
+      "evidence": "All13 drivers reuse exactly the accepted ten-slot STOP observer by record-name substitution. Every added entry raw capture, disposition, publication and controller-qualification failure is contained after capturing the actual outward primary; entry raises that same object and controller bare-raises its caught primary. Original cleanup/evidence operations stay intact. Actual phase diagnostic_error blocks clean qualification; actual STOP write/context-exit, both argv identities, acquired owner teardown counts/probe closure, live disposition and publication flags govern the marker.",
+      "id": "SHARED_TERMINAL_PRIMARY_AND_PUBLICATION",
+      "limits": "Unexpected outcomes remain raw retained outcomes and cannot qualify the selected case. Original terminal tails and all added observations/publication remain charged."
+    }
+  ],
+  "source_packet": [
+    {
+      "bytes": 8720,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/FREEZE.json",
+      "sha256": "6f96d7f38babc00a8109dd6ac735df0cd7f6e7f513b176ef93c0936ccd20910f"
+    },
+    {
+      "bytes": 49285,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/GRAPH-CLOSURE-DELTA.json",
+      "sha256": "e46ce2282d4eb7ecb6c5aa7a310c5ed47b8d45bdc6e80ecf06176edf47882eb7"
+    },
+    {
+      "bytes": 69725,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/SOURCE-MAP.json",
+      "sha256": "254b18ea6c9d411c2a4d3330ffb28efe1c331f8d4b94e7aea6afa36a5ef512a4"
+    },
+    {
+      "bytes": 782028,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/SOURCE-INVERSES.json",
+      "sha256": "bbe07df1a70e02a60a9a62ef5c3e51e5a617c2dfbb719c5c89a71a153da5b57f"
+    },
+    {
+      "bytes": 15531,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/late-cases/source-v3/SOURCE-READINESS.json",
+      "sha256": "44202f4f372190b7d198d4a0281c945e6831728988a219ffdf003fcf3e3ac8e4"
+    }
+  ],
+  "verification": {
+    "N20_and_need_authority_appends_literal_equal": true,
+    "N20_branch_only_in_actual_active_second_invoke": true,
+    "all13_STOP_observers_exact_accepted_shape_with_record_name_substitution_only": true,
+    "all13_original_Phases_and_protected_CLI_literal_equal": true,
+    "all15_added_source_functions_AST_equal_across13_drivers": true,
+    "all15_whole_file_inverses": true,
+    "all68_original_helper_literal_and_AST_equal": true,
+    "all9_helper_fault_metadata_rows_match_exact_selected_five_image_tuple": true,
+    "bounded_successor_delta_checks_passed": 277,
+    "delta_scope": "13 exact two-reference driver inverses to v2; only9 helper driver-digest repins; identical N20 authority; same map fields apart from paths/pins/sizes;15 exact original-source inverses and frozen readback",
+    "passive_checks_failed": 0,
+    "predecessor_checks_passed": 617,
+    "semantic_review": "Unchanged prior bounded semantic analysis carried forward; exact minimal delta reviewed independently.",
+    "target_execution": 0,
+    "unique_checked_inputs": 84
+  }
+}

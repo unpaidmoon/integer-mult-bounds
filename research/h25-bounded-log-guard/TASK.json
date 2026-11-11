@@ -1,0 +1,66 @@
+{
+  "actual_scope": "Publish the stable bounded retained-log guard and unchanged finite process/file controls as a standalone source-bound package.",
+  "ai_assistance": "Substantial OpenAI Codex assistance in original local H25 work and this source export, documentation and replay adapter.",
+  "author": "Chris R / Clear1nsight",
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "bottleneck_link": "Faster trustworthy replays increase review throughput and let mechanism candidates be checked sooner.",
+  "evidence": "Exact source export conservation in PROVENANCE.json; immutable historical executed review in historical/REVIEW.json. Fresh publication replay remains parent-owned and pending in HANDOFF.json.",
+  "open_questions": [
+    {
+      "blocked_by": "New implementation and execution require an authorized follow-up; exact frozen runner semantics are preserved here.",
+      "first_step": "Specify and source-review unlink, symlink and open/read-error controls in a separately authorized follow-up.",
+      "question": "Can retained-log path drift receive an explicit bounded failure receipt?",
+      "why_it_matters": "Unclosed attempts require reconciliation and block later attempts."
+    },
+    {
+      "blocked_by": "Separate authorization and cgroup availability; current controls do not establish descendant containment.",
+      "first_step": "Compare an explicit cgroup-based containment contract against the original runner and define finite adverse controls.",
+      "question": "Can a Linux lifetime containment contract cover descendants that detach from the process group?",
+      "why_it_matters": "The original group cleanup can be escaped by a new group or session."
+    }
+  ],
+  "original_card": {
+    "acceptance_gate": "Report before/after wall time on the same fixture, retained checks and invalidation behavior.",
+    "allowed_variations": [
+      "Profile one stage or design one source-bound cache boundary."
+    ],
+    "bottleneck_link": "Faster trustworthy replays increase review throughput and let mechanism candidates be checked sooner.",
+    "first_experiment": "Measure one unchanged fixture, preserve check coverage, and test one optimization with invalidation controls.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_selected_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Resolve the current selected review, separate complex/ordinary BIT/admitted BIT/outer budgets, and compare the card against live handoffs before starting. Historical ceilings require exact source/model equivalence.",
+      "scope": "Source-binding orientation only; not a scientific replay or all-size proof. Materialize selected inputs if this checkout is sparse."
+    },
+    "id": "replay-runtime",
+    "methods": [
+      "Profile one isolated replay and optimize the measured bottleneck.",
+      "Design source-bound reuse with explicit dependency invalidation and negative controls."
+    ],
+    "overlap_terms": [
+      "replay runtime",
+      "cache invalidation",
+      "isolated tests"
+    ],
+    "question": "Can one measured replay bottleneck be sped up without dropping coverage?",
+    "scope_change_triggers": [
+      "Skipping coverage or comparing different fixtures to claim speedup."
+    ],
+    "starting_points": [
+      "scripts/run_isolated_tests.py",
+      "scripts/verify_replay_coverage.py",
+      "certificates/selected-result.json"
+    ]
+  },
+  "outcome": "partial",
+  "schema_version": 1,
+  "scope_change_reason": "The explicit user assignment is to contribute an already stabilized bounded-log/memory defect repair. The replay-runtime card is retained as provenance; this publication does not claim a measured throughput improvement or fulfill the original before/after speedup gate.",
+  "scope_status": "changed",
+  "stop_rule": "Stop after scoped package preparation and parent-owned finite publication checks. No numerical or native execution and no broader six-area work.",
+  "task_id": "replay-runtime",
+  "time_budget": "Each registered command at most 180 seconds; source-only worker does not execute it. Parent charges publication validation against its existing authorized round allowance."
+}

@@ -1,0 +1,125 @@
+"""Bounded successor review: text/hash/AST only; never import target sources."""
+from pathlib import Path
+import ast
+import hashlib
+import json
+
+W = Path('/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453')
+R = W / 'outputs/h25-data-handling-20261028'
+D = R / 'areas/cache-s0308-source-completion-v2/g12-protocol-repair'
+P = R / 'areas/cache-s0308-source-completion-v2/continuation/candidate-protocol-v1'
+O = R / 'review/cache-s0308-source-completion-v2/g12-protocol-independent'
+inputs, checks, graph = {}, [], {}
+
+def read(path, expected):
+    data=path.read_bytes(); digest=hashlib.sha256(data).hexdigest()
+    assert digest == expected, (str(path),digest,expected)
+    inputs[str(path)]={'sha256':digest,'bytes':len(data)}
+    return data
+
+def check(name, value):
+    assert value,name
+    checks.append(name)
+
+def node(module,name):
+    return next(n for n in module.body if isinstance(n,(ast.FunctionDef,ast.ClassDef)) and n.name==name)
+
+def own_functions(module):
+    return {n.name:n for n in module.body if isinstance(n,ast.FunctionDef)}
+
+def bound_names(function):
+    names={n.id for n in ast.walk(function) if isinstance(n,ast.Name) and isinstance(n.ctx,(ast.Store,ast.Del))}
+    names.update(n.arg for n in ast.walk(function.args) if isinstance(n,ast.arg))
+    names.update(n.name for n in ast.walk(function) if n is not function and isinstance(n,(ast.FunctionDef,ast.ClassDef)))
+    names.update(n.name for n in ast.walk(function) if isinstance(n,ast.ExceptHandler) and n.name is not None)
+    return names
+
+read(O/'FREEZE-v2.json','add8245e21be2a902556837090dd454989bb5e4f97e4821fefdcf7b41c2b308d')
+read(O/'G12-CANDIDATE-PROTOCOL-REVIEW-v1.json','feecd63be55243fe2a7d07da8ac1f7cfcec6558362e694b82219a1be232ab7bc')
+read(O/'GRAPH-ADDENDUM-v1.json','d78a97545c84854b5da0905485c232030f7b4d3884bd51088c2d3ffa604632dd')
+prior_static=json.loads(read(O/'STATIC-VERIFICATION-v1.json','e6db24ed8e2dd7927cab57680af61e8cde80b2b6a3e117630af3434c64f0b46b'))
+check('prior81checks carried forward without rerunning predecessor checker',prior_static['verified_check_count']==81)
+frozen=json.loads(read(D/'FREEZE-v2.json','716dfb49f659651eb41c0965a2189db6efcad1587b25e307b19523bfbd05c7d3'))
+new={}
+for name,pin in frozen['files'].items():
+    new[name]=read(D/name,pin['sha256'])
+    check('successor exact bytes and0444 '+name,len(new[name])==pin['bytes'] and (D/name).stat().st_mode&0o777==0o444)
+    if name.endswith('.py'):
+        ast.parse(new[name]);checks.append('successor AST parses '+name)
+inverse=json.loads(new['SOURCE-INVERSE-v2.json']);edits=inverse['literal_replacements_in_forward_order']
+check('exactly six declared distinct edits',len(edits)==6 and len({x['id'] for x in edits})==6)
+source_map=json.loads(new['SOURCE-MAP-v2.json'])
+for name,pin in source_map['unchanged_selected_dependencies'].items():
+    read(Path(pin['path']),pin['sha256'])
+    checks.append('unchanged selected dependency identity '+name)
+old_inverse=json.loads(read(P/'SOURCE-INVERSE-v1.json','083d171828102a8c138810d05f9110fc6136c2017a09ab11d8d63c433afd387e'))
+old={}
+for name,record in inverse['files'].items():
+    old[name]=read(Path(record['predecessor']['path']),record['predecessor']['sha256'])
+    restored=new[name]
+    for edit in reversed(edits):
+        after,before=edit['after'].encode(),edit['before'].encode()
+        check(name+' unique reverse edit '+edit['id'],restored.count(after)==1)
+        restored=restored.replace(after,before)
+    check(name+' entire inverse exactly predecessor',restored==old[name])
+
+common=read(P/'g12_common_source_v1.py','8ac6902915ec8afb09914fc5f229e175d864e6aae9fe367f127e1bbd654ed42a')
+original_pin=old_inverse['originals']['driver']
+original=read(Path(original_pin['path']),original_pin['sha256'])
+expected_changed={'_g12_helper_current','_g12_after_original_exit','_g12_continuation_entry'}
+for case in ('N22','P07'):
+    driver_name='g12_candidate_driver_'+case+'_v2.py';support_name='g12_candidate_driver_support_'+case+'_v2.py'
+    driver,support=new[driver_name],new[support_name]
+    old_driver,old_support=old[driver_name],old[support_name]
+    marker1=b'# BEGIN G12 EXACT CANDIDATE SUPPORT\n';marker2=b'\n# END G12 EXACT CANDIDATE SUPPORT'
+    before,body=driver.split(marker1);embedded,after=body.split(marker2)
+    old_before,old_body=old_driver.split(marker1);old_embedded,old_after=old_body.split(marker2)
+    check(case+' only entire support block changed',before==old_before and after==old_after and embedded==support and old_embedded==old_support)
+    block=b'\n# BEGIN G12 EXACT COMMON SOURCE\n'+common+b'\n# END G12 EXACT COMMON SOURCE\n# BEGIN G12 EXACT CANDIDATE SUPPORT\n'+old_support+b'\n# END G12 EXACT CANDIDATE SUPPORT\n\n'
+    check(case+' predecessor common/support block unique',old_driver.count(block)==1)
+    reconstructed=old_driver.replace(block,b'')
+    for edit in old_inverse['literal_driver_line_replacements']:
+        selected=edit['selected'].encode()
+        check(case+' composed inverse driver line unique '+str(edit['original_line']),reconstructed.splitlines().count(selected)==1)
+        reconstructed=b'\n'.join(edit['original'].encode() if line==selected else line for line in reconstructed.split(b'\n'))
+    check(case+' composed successor-to-original complete byte inverse',reconstructed==original)
+    t=ast.parse(support);old_t=ast.parse(old_support);functions=own_functions(t);old_functions=own_functions(old_t)
+    changed={name for name,fn in functions.items() if ast.dump(fn,include_attributes=False)!=ast.dump(old_functions[name],include_attributes=False)}
+    check(case+' only three intended function ASTs changed',changed==expected_changed)
+    initial=next(n for n in t.body if isinstance(n,ast.Assign) and isinstance(n.targets[0],ast.Name) and n.targets[0].id=='_G12_CONTINUATION')
+    record=ast.literal_eval(initial.value)
+    check(case+' preexisting clear flag and three empty raw slots',record['secondary_clear'] is True and all(record[key] is None for key in ('frame_close_error','terminal_observation_error','adapter_exit_error')))
+    secondary_handlers=[h for name in ('_g12_after_original_exit','_g12_continuation_entry') for h in ast.walk(functions[name]) if isinstance(h,ast.ExceptHandler) and h.name=='secondary']
+    check(case+' exactly three designated secondary handlers',len(secondary_handlers)==3)
+    slots=[]
+    for handler in secondary_handlers:
+        check(case+' secondary handler entire body guarded at '+str(handler.lineno),len(handler.body)==1 and isinstance(handler.body[0],ast.Try))
+        guard=handler.body[0]
+        check(case+' unconditional BaseException suppression for new bookkeeping at '+str(handler.lineno),len(guard.handlers)==1 and isinstance(guard.handlers[0].type,ast.Name) and guard.handlers[0].type.id=='BaseException' and len(guard.handlers[0].body)==1 and isinstance(guard.handlers[0].body[0],ast.Pass) and not guard.orelse and not guard.finalbody)
+        check(case+' flag then raw slot then optional journal at '+str(handler.lineno),len(guard.body)==3 and isinstance(guard.body[0],ast.Assign) and ast.unparse(guard.body[0])=="record['secondary_clear'] = False" and isinstance(guard.body[1],ast.Assign) and isinstance(guard.body[1].value,ast.Name) and guard.body[1].value.id=='secondary' and isinstance(guard.body[2],ast.Expr) and isinstance(guard.body[2].value,ast.Call) and isinstance(guard.body[2].value.func,ast.Attribute) and guard.body[2].value.func.attr=='append')
+        slots.append(guard.body[1].targets[0].slice.value)
+    check(case+' one designated raw slot per handler',set(slots)=={'frame_close_error','terminal_observation_error','adapter_exit_error'})
+    entry=functions['_g12_continuation_entry'];entry_try=next(x for x in entry.body if isinstance(x,ast.Try));outer=entry_try.handlers[0]
+    check(case+' original primary bare raise remains after guarded exit handler',isinstance(outer.body[-1],ast.Raise) and outer.body[-1].exc is None and outer.body[-1].cause is None and isinstance(outer.body[0],ast.Try))
+    writes=[n for n in ast.walk(t) if isinstance(n,ast.Assign) and any(isinstance(target,ast.Subscript) and isinstance(target.value,ast.Name) and target.value.id=='record' and isinstance(target.slice,ast.Constant) and target.slice.value=='secondary_clear' for target in n.targets)]
+    check(case+' clear flag never reset after initialization',len(writes)==3 and all(isinstance(n.value,ast.Constant) and n.value.value is False for n in writes))
+    check(case+' export gate retains all four conservative checks',all(piece in support for piece in (b"record['secondary_clear'] is True",b"record['frame_close_error'] is None",b"record['terminal_observation_error'] is None",b"record['adapter_exit_error'] is None and not record['secondary']")))
+    check(case+' transport still None',b'_G12_TRANSPORT_SOURCE_PIN = None' in support)
+    dt=ast.parse(driver);df=own_functions(dt);phases=node(dt,'Phases');df['Phases.call']=node(phases,'call')
+    paths=[['main_epoch','_g12_bind_locals','_g12_helper_current'],['Phases.call','_g12_after_phase','_g12_helper_current'],['_g12_selected_store','_g12_helper_current']]
+    for target in ('_g12_continuation_entry','_g12_after_original_exit','_g12_original_terminal_custody'):
+        paths.append(['_g12_helper_current',target])
+    paths.extend([['_g12_continuation_entry','_g12_after_original_exit'],['_g12_after_original_exit','_g12_original_terminal_custody']])
+    edges=[]
+    for path in paths:
+        for source,target in zip(path,path[1:]):
+            loads=[n.lineno for n in ast.walk(df[source]) if isinstance(n,ast.Name) and isinstance(n.ctx,ast.Load) and n.id==target]
+            check(case+' genuine unshadowed direct global edge '+source+' -> '+target,bool(loads) and target not in bound_names(df[source]))
+            edges.append({'source':source,'target':target,'load_lines':loads})
+    graph[case]={'edges':edges,'actual_top_level_entry_line':dt.body[-1].body[0].lineno,'outer_chain_definition_spans':{name:[df[name].lineno,df[name].end_lineno] for name in expected_changed|{'_g12_original_terminal_custody'}}}
+    check(case+' top-level actual invocation uses same entry name',isinstance(dt.body[-1],ast.If) and isinstance(dt.body[-1].body[0],ast.Expr) and isinstance(dt.body[-1].body[0].value,ast.Call) and isinstance(dt.body[-1].body[0].value.func,ast.Name) and dt.body[-1].body[0].value.func.id=='_g12_continuation_entry')
+
+result={'schema':'g12-candidate-successor-independent-static-delta-v2','method':'Only text/hash/AST; author checker and all target sources/helpers unexecuted','inputs':inputs,'checks':checks,'verified_delta_check_count':len(checks),'prior_checks_carried':81,'source_graph_edges':graph,'target_operations':0,'findings_addressed':['G12-CANDIDATE-001','G12-CANDIDATE-002'],'full_inverse':'Both complete successor drivers recover their pinned v1 drivers and complete original driver bytes; both support inverse recover pinned v1 support bytes.'}
+p=O/'SUCCESSOR-DELTA-STATIC-v2.json'
+with p.open('x') as f:f.write(json.dumps(result,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'path':str(p),'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'checks':len(checks),'inputs':len(inputs)},sort_keys=True))

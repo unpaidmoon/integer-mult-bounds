@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "task_id": "complex-rank-shape-decoder",
+  "priority_revision": 8,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "original_card": {
+    "id": "complex-rank-shape-decoder",
+    "question": "Can a legal decoder or coframe change improve the full signed moment, including changed helper targets?",
+    "starting_points": [
+      "docs/research/current-priorities.md",
+      "docs/research/research-family-status.md",
+      "certificates/selected-result.json",
+      "docs/research/pr-intake-evidence/pr5599-completion/PROOF-REVIEW.md",
+      "docs/research/recursive-invoice-preflight.md"
+    ],
+    "methods": [
+      "Construct and independently check one source-bound instance of the stated first experiment.",
+      "Seek an exact counterexample or target-specific complete-budget obstruction to that same proposed change."
+    ],
+    "acceptance_gate": "A source-bound arbitrary-input identity and legal producer/consumer boundary with the complete paid and productive target invoice, including restoration, ownership, native alignment and extra charges. Price under the actual current model; historical ceiling.py assumptions must be established before use. A favorable optimistic relaxation keeps a route open but is not a completed supplier. A scoped local result remains useful; expansion requires the family-level budget gate.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_selected_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Read revision 8, the selected review and live exact-source handoffs. Then follow this card's bounded first_experiment.",
+      "scope": "Source-bound orientation only, not a supplier replay or theorem proof."
+    },
+    "first_experiment": "Price one complete changed itinerary with both paid and productive histograms. Check #5693/#5698 for overlap and their exact hypotheses before another coframe search. Use the signed invoice preflight where its boundary contract agrees; an inconclusive concave comparison is not a power crossing. Stop if an optimistic complete budget fails at the chosen target or native delivery remains unspecified.",
+    "bottleneck_link": "Judge the actual current supplier contract and complete signed target/paid bill; frozen-profile ceilings require an applicability proof.",
+    "allowed_variations": [
+      "One exact source head, helper/cut region or quantified proposition and changed hypothesis; check live handoffs first. Different seeds are not different scopes."
+    ],
+    "scope_change_triggers": [
+      "Changing source head, helper/cut domain, operation alphabet or caller boundary without recording the new scope.",
+      "Treating an archived proposal or local numerical pass as complete supplier admission."
+    ],
+    "overlap_terms": [
+      "coframe",
+      "signed moment",
+      "5693",
+      "5698"
+    ],
+    "existing_checks": [
+      {
+        "scope": "Selected PR5599: complete helper-subspace construction and independent caller replay; five framework assumptions remain.",
+        "evidence": "docs/research/pr-intake-evidence/pr5599-completion/PROOF-REVIEW.md",
+        "remaining": "The next experiment must identify uncovered source-specific work. Successor archive intake does not transfer this admission.",
+        "status": "reviewed",
+        "source_commit": "09dd0965711ca7eeb169057a420abab1c9052137",
+        "selected_record_sha256": "2a0220e866417774606e0f991e41b9c1d26b1f43b97857238cf478dbc7d330b5"
+      }
+    ]
+  },
+  "scope_status": "changed",
+  "actual_scope": "Every ordered pair of one-transvection charts at two of the 184 retained-center contacts strictly raises the paid r^theta moment for every theta in (0,1). Edgeless sets add. No selected-frontier change.",
+  "scope_change_reason": "The revision-8 card asks for one changed decoder or coframe itinerary on the selected supplier. This package instead prices the uncovered independent chart-pair grammar of the retained 640-input center-contact graph from PR #4867. That graph is not the selected P104 word. The result is a scoped obstruction for that grammar, not a supplier admission.",
+  "bottleneck_link": "A mixed pair of retained-center contact charts cannot reduce the paid Gaussian moment; every such pair strictly increases it. That removes this chart grammar as a route to a larger-rank child at those contacts.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop after the complete pair census and the edgeless-set corollary. Do not enumerate mixed labels on a connected triple, rebuild the coherent-block flow, or search native words.",
+  "outcome": "negative-result",
+  "evidence": "188048 single neighbors in 18 classes majorizing {1:+1,7:+1,8:-1}; empty-chart distances {0:1022,1:511,2:521220}; 261632 same-chart pairs; 261632 partner pairs; 8355872 rank-8 pairs with prefix at least 2; same-chart family attains the d* prefix.",
+  "author": "unpaidmoon",
+  "ai_assistance": "Substantial Cursor Grok assistance.",
+  "open_questions": [
+    {
+      "question": "Can three contacts on a connected internal path, with independently chosen one-transvection charts, make the joint paid moment nonpositive?",
+      "why_it_matters": "Pairs and edgeless sets lose, but two internal edges produce a joint correction that this pair decomposition does not price. A negative answer would extend the chart-grammar obstruction; a positive answer would be the first retained-contact chart saving.",
+      "first_step": "Price one rank-0 path of length 2, or prove a multi-label reduction that reuses the pair certificate.",
+      "blocked_by": "A direct screen is 1022^3 triples, above this pair budget, and no multi-label reduction is proved here."
+    },
+    {
+      "question": "Can one changed role-dependent route, other than a contact-chart retag, clear a positive optimistic moment while retaining every R_X observation, centre-to-Y coupling, and independent helper return?",
+      "why_it_matters": "Handoff 19133861 asked for a routing or coupled-demand operation beyond the coherent retag family. This package closes only the independent chart-pair remainder.",
+      "first_step": "Write one chronological route, a 640-input endpoint, and the full producer/consumer histogram before any search.",
+      "blocked_by": "No such route is supplied here. The handoff already stops raising all 112 Y exits from rank 8 to rank 9."
+    }
+  ]
+}

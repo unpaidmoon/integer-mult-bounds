@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "d59b5035e7b4cbaa9d688a1d32dd0d6eb79c466a",
+      "sha256": "9b8d0eea95b3bf0dfcb7938a732a6439b87a2685dec2a5ab9e525b3b34debbfa"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "3404fbdd5e7529a0674eef26114b5071e4586cec",
+      "sha256": "ead6cdc9d0af6d58e8a49744d8ec8c7c15e13d2ba93c276c434bcf9b51b93a81"
+    },
+    {
+      "path": "research/physical-fft-word/PROOF.md",
+      "usage": "provenance",
+      "git_blob": "b066548b77ae99d36d11df379c6c2332caccd0f1",
+      "sha256": "5d7e5c3e47c4936023f191ef91ff4015d4786cb4de303d8fd3bef0fcec7a77b0"
+    },
+    {
+      "path": "research/fft-carry-recovery/README.md",
+      "usage": "provenance",
+      "git_blob": "1e7a3e67d7824659c6dccb58859e68320cd1226c",
+      "sha256": "74d585d0d33e3c0f75d80d457e1990842bd2113830c12710797f702bd4e794b8"
+    }
+  ]
+}

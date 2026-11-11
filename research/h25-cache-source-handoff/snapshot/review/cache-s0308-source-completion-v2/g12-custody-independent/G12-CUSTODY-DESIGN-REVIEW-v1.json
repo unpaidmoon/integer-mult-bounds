@@ -1,0 +1,425 @@
+{
+  "P01_P09_review": [
+    {
+      "function": "run_g12_reference() -> source-owned sealed-result or raised original failure",
+      "id": "P01",
+      "status": "Constructible bounded source requirement; not implemented or run"
+    },
+    {
+      "function": "_g12_preflight_and_claim()",
+      "id": "P02",
+      "status": "Constructible bounded source requirement; not implemented or run"
+    },
+    {
+      "function": "_g12_launch_once()",
+      "id": "P03",
+      "status": "Constructible bounded source requirement; not implemented or run"
+    },
+    {
+      "function": "_g12_observe_wait_and_close()",
+      "id": "P04",
+      "status": "Constructible bounded source requirement; not implemented or run"
+    },
+    {
+      "function": "_g12_join_original_guard_evidence()",
+      "id": "P05",
+      "status": "Constructible bounded source requirement; not implemented or run"
+    },
+    {
+      "function": "_g12_collect_complete_pair()",
+      "id": "P06",
+      "status": "Constructible bounded source requirement; not implemented or run"
+    },
+    {
+      "function": "_g12_retain_parent_pair_and_evidence()",
+      "id": "P07",
+      "status": "Constructible bounded source requirement; not implemented or run"
+    },
+    {
+      "function": "_g12_seal_once()",
+      "id": "P08",
+      "status": "Constructible bounded source requirement; not implemented or run"
+    },
+    {
+      "function": "_g12_finish_failure(primary, ordered_secondaries)",
+      "id": "P09",
+      "status": "Constructible bounded source requirement; not implemented or run"
+    }
+  ],
+  "activity": {
+    "frozen_predecessors_modified": false,
+    "method": "Only stdlib text/JSON/AST/hash/stat inspection of exact named static files; exclusive creation of owned review metadata.",
+    "network": 0,
+    "output_ownership": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-custody-independent",
+    "reference_payload_existence_determined": false,
+    "reference_payload_inspected": false,
+    "runtime_or_protected_bookkeeping_read_or_enumeration": false,
+    "source_or_stage_implementation": false,
+    "target_execution": 0,
+    "target_imports": 0,
+    "target_process_inspection_or_launch_or_locks": 0,
+    "target_tests_helpers_factories_compiler_native_science_decoders": 0
+  },
+  "authority": {
+    "bytes": 2545,
+    "mode": "0444",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/parent/AUTHORIZATION-v2.json",
+    "sha256": "9e32514288fed2b1d2873387bf81861ffcd9e1b56d2ab4828be13a311e629106"
+  },
+  "blocking_findings": [],
+  "created_utc": "2026-10-31T01:59:23.254721+00:00",
+  "decision": "The exact frozen minimal source design is constructible under its explicitly bounded selected-source and trusted-operating premises. No concrete source-design defect was found in the inspected closure. The author may implement this design within the existing source-only authorization; this review accepts no implementation, stage adoption, execution, reference payload, scientific outcome or completed custody.",
+  "findings_by_boundary": [
+    {
+      "evidence": [
+        "original_guard:230-247",
+        "root:804-833",
+        "reference_producer:136-174,858-860,1129-1226"
+      ],
+      "finding": "The guard necessarily supplies --output and --lanes. A separate integration adapter can check that exact tail and then execute the original producer with only --frozen-root/--reference/--mode profile/--output. Root exposes ModuleType, original compile/exec and the actual capability/API injected into the adapter. Fresh producer __main__ namespace and exact bootstrap object forwarding preserve the source executor premise. Producer location under baseline resolves its authority mount to stage/areas/cache-validity/cold_authority_v7.py. Ordinary return follows the producer-owned marker/restoration/cold2/export path; adapter must not intercept that marker or call internals to manufacture success.",
+      "id": "R01",
+      "result": "ACCEPT_SOURCE_DESIGN",
+      "topic": "Adapter compatibility and actual initial ownership"
+    },
+    {
+      "evidence": [
+        "original_guard:25-54,166-254,259-310",
+        "current_supervisor:688-792",
+        "current_controller:731-759,875-898"
+      ],
+      "finding": "Private one-attempt state retains the actual Popen, generation, wait result and original failure before any serialized evidence is consumed. Exact clean argv/environment and stage/job selection are source derivations. The parent queue lease is separate from original science.lock, avoiding a self-deadlock. START, canonical receipt, usage and all raw logs are joined to that live invocation; missing receipts remain missing and guard PASS alone cannot qualify. Static AST comparisons confirmed the exact START and receipt key lists.",
+      "id": "R02",
+      "result": "ACCEPT_SOURCE_DESIGN",
+      "topic": "Parent P01-P05 invocation and original evidence join"
+    },
+    {
+      "evidence": [
+        "current_supervisor:114-146,205-309",
+        "reference_producer:201-218,257-265"
+      ],
+      "finding": "The design uses only the bounded process/generation/pidfd observation pattern, with explicit corrections for denied or ambiguous observations and failed closes. The selected producer profile skips candidate native construction and uses same-process original CLI execution. Successful closure relies on the stated trusted selected-source, OS/interpreter/stdlib and cooperating-parent premises; it is not inferred universally from /proc emptiness or a process-group kill. Unexplained processes or unknown cleanup remain nonqualifying. Fresh retained-domain creation after cleanup and no inherited retained-domain descriptors are constructible under those premises.",
+      "id": "R03",
+      "result": "ACCEPT_BOUNDED_PREMISE",
+      "topic": "Known-process cleanup and namespace custody"
+    },
+    {
+      "evidence": [
+        "reference_producer:1094-1126",
+        "root:480-506",
+        "current_supervisor:63-91"
+      ],
+      "finding": "Both original exports are mandatory. Complete bounded nofollow/dirfd reads, full mode/identity/link checks, joint repeated snapshots, exclusive retained copies, known close/fsync/readback and source-owned final checks supply the required custody predicate. Root hashing alone is explicitly insufficient for full mode/final-path checks, and the design supplements it. Original and retained FileRecords remain distinct. Parent manifests are emitted from actual private observations; caller booleans or orphan common files cannot qualify.",
+      "id": "R04",
+      "result": "ACCEPT_SOURCE_DESIGN",
+      "topic": "P06-P08 complete pair retention and sealing"
+    },
+    {
+      "evidence": [
+        "reference_producer:356-448,878-892,1094-1119",
+        "native_backend_source:212-254"
+      ],
+      "finding": "AST comparisons confirmed the common envelope, diagnostic envelope, diagnostic snapshot keys, scientific pins, original-driver pin and authority pin. The common prefix has ten members and preserves exact original code/return/certificate/stdout/suffix data. Strict JSON rejects duplicate keys, nonfinite JSON tokens, booleans used as integers and unknown fields; full lowercase hex and complete payload hashes are checked. Diagnostics retain cumulative complement receipts and absent native/cache bindings without becoming a new scientific equality oracle.",
+      "id": "R05",
+      "result": "ACCEPT_SOURCE_DESIGN",
+      "topic": "Exact pair schema, primitive grammar and source/workload joins"
+    },
+    {
+      "evidence": [
+        "root:447-506,577-624,772-833",
+        "unselected_transport_snapshot:12"
+      ],
+      "finding": "Authentic initially captured Root/capability/API and source-owned operation aliases remain the entry premise, rather than function shape or restored JSON objects. The consumer requires the independently source-selected manifest and publication record plus both complete retained exports, then jointly rechecks them after decoding. Existing G12_REFERENCE_HANDOFF is actually None at line 12; proposed source selections also remain None. Future output digests and actual launch/outcome values are legitimate future results, not prerequisites for authoring this closed source design.",
+      "id": "R06",
+      "result": "ACCEPT_SOURCE_DESIGN",
+      "topic": "Cold consumer and closed source selection"
+    },
+    {
+      "evidence": [
+        "reference_producer:1046-1091,1129-1150",
+        "original_guard:259-310"
+      ],
+      "finding": "The adapter preserves the producer primary and traceback, restores only owned argv/module slots, and treats any restoration/currentness/secondary error as non-success. Parent failures similarly retain primary and ordered secondary evidence and require bounded known cleanup; Popen failure or partial exports never produce a substitute canonical receipt or seal. Unknown close prevents qualification, including failures after manifest bytes have been written.",
+      "id": "R07",
+      "result": "ACCEPT_SOURCE_DESIGN",
+      "topic": "First failure, ordered secondaries and P09 cleanup"
+    },
+    {
+      "evidence": [
+        "original_guard:18-23,190-207,261-307"
+      ],
+      "finding": "Original 180-second, phase-cap, 1-GiB and stream/usage limits remain requirements. New finite file/parser ceilings are rejection limits and do not grant memory, time or proof that payloads fit. All parent/adapter/reference/cleanup/retention/manifest and later consumer costs remain charged, without adding nested phase timings as disjoint costs. The publication record covers through its pre-write point and separately authorized enclosing source-owned completion must cover its write/readback/close and source-adoption tail. Missing actual accounting ownership leaves selection None. No self-report substitutes for that final join.",
+      "id": "R08",
+      "result": "ACCEPT_SOURCE_DESIGN_WITH_RUNTIME_GATE_CLOSED",
+      "topic": "Finite limits and complete cost tail"
+    }
+  ],
+  "finite_negative_review": [
+    {
+      "id": "G12-N01",
+      "required_result": "Reject before dependent operation; no execution or expected reference.",
+      "status": "Consistent fail-closed source branch; not executed",
+      "trigger": "launch or handoff source selection None/missing/foreign"
+    },
+    {
+      "id": "G12-N02",
+      "required_result": "Reject before scientific entry; unchanged accepted producer remains intact.",
+      "status": "Consistent fail-closed source branch; not executed",
+      "trigger": "Root/provider/adapter/producer/authority/stage/source/reference pin or mode mismatch, historical 2a941 authority"
+    },
+    {
+      "id": "G12-N03",
+      "required_result": "Adapter refuses; never silently removes an unrecognized option.",
+      "status": "Consistent fail-closed source branch; not executed",
+      "trigger": "wrong guard tail, --finite-only, -O, wrong lanes, supplied anchor or alternate producer CLI"
+    },
+    {
+      "id": "G12-N04",
+      "required_result": "Cold/adapter source entry refuses; shapes/status do not establish provenance.",
+      "status": "Consistent fail-closed source branch; not executed",
+      "trigger": "fake or restored Root/API/capability, copied function namespace, foreign initial source owner"
+    },
+    {
+      "id": "G12-N05",
+      "required_result": "No launch or no publication; preserve failed attempt; no retry.",
+      "status": "Consistent fail-closed source branch; not executed",
+      "trigger": "budget/phase/lease contention, prior label output, orphan prior attempt, inadequate full tail"
+    },
+    {
+      "id": "G12-N06",
+      "required_result": "Bounded known cleanup and raw evidence; no canonical success receipt invented.",
+      "status": "Consistent fail-closed source branch; not executed",
+      "trigger": "Popen raises or no retained Popen/generation, nonzero return, timeout/RSS/output cap, parent STOP"
+    },
+    {
+      "id": "G12-N07",
+      "required_result": "Reject pair sealing; outer status cannot override guard predicates.",
+      "status": "Consistent fail-closed source branch; not executed",
+      "trigger": "guard return0 but receipt absent/nonzero/termination/STOP/stderr/input drift/log drift/usage incomplete"
+    },
+    {
+      "id": "G12-N08",
+      "required_result": "Cleanup/custody UNKNOWN; no manifest selection or universal closure claim.",
+      "status": "Consistent fail-closed source branch; not executed",
+      "trigger": "unknown/denied process observation, remaining descendant/group/child, unknown stream/FD close, namespace owner loss"
+    },
+    {
+      "id": "G12-N09",
+      "required_result": "Preserve first primary and ordered secondaries; reject successful completion even if files exist.",
+      "status": "Consistent fail-closed source branch; not executed",
+      "trigger": "producer primary/secondary/restoration/cold2 failure, adapter ownership/restoration failure"
+    },
+    {
+      "id": "G12-N10",
+      "required_result": "Retain partial originals, no manifest or common-only fallback.",
+      "status": "Consistent fail-closed source branch; not executed",
+      "trigger": "only common export, missing diagnostic, partial diagnostic, missing common"
+    },
+    {
+      "id": "G12-N11",
+      "required_result": "Reject complete-byte custody; no stable/read-only shortcut.",
+      "status": "Consistent fail-closed source branch; not executed",
+      "trigger": "symlink/hardlink/foreign namespace, short read, changed size/mode/identity or incomplete hash"
+    },
+    {
+      "id": "G12-N12",
+      "required_result": "Reject without target science decoding or repair.",
+      "status": "Consistent fail-closed source branch; not executed",
+      "trigger": "duplicate JSON key, NaN/Infinity, bool-as-int, unknown schema/field/tag, bad hex, finite decoder limit exceeded"
+    },
+    {
+      "id": "G12-N13",
+      "required_result": "Reject; matching self-reported completion strings are irrelevant.",
+      "status": "Consistent fail-closed source branch; not executed",
+      "trigger": "producer/role/source/workload mismatch across pair/manifest, payload hash or inner-prefix mismatch"
+    },
+    {
+      "id": "G12-N14",
+      "required_result": "Preserve partial retained files with no seal; final manifest bytes alone do not qualify.",
+      "status": "Consistent fail-closed source branch; not executed",
+      "trigger": "copy/fsync/chmod/close/readback/final alias check failure or unexpected child after first check"
+    },
+    {
+      "id": "G12-N15",
+      "required_result": "Manifest stays unselected; handoff None; no completed invoice or custody approval.",
+      "status": "Consistent fail-closed source branch; not executed",
+      "trigger": "manifest written but enclosing final cost/close/publication tail fails or lacks actual authority"
+    },
+    {
+      "id": "G12-N16",
+      "required_result": "Reject; only later immutable source literal selects actual parent custody.",
+      "status": "Consistent fail-closed source branch; not executed",
+      "trigger": "candidate source supplies success bool, result registry or arbitrary manifest path at runtime"
+    },
+    {
+      "id": "G12-N17",
+      "required_result": "No expected literal/count/common is exposed.",
+      "status": "Consistent fail-closed source branch; not executed",
+      "trigger": "cold recheck detects manifest/common/diagnostic/publication mutation or Root/reader ownership drift"
+    },
+    {
+      "id": "G12-N18",
+      "required_result": "Out of scope; original separate controls remain required.",
+      "status": "Consistent fail-closed source branch; not executed",
+      "trigger": "attempt to use G12 diagnostics as P02 standard-workload/native/full-positive/performance approval"
+    }
+  ],
+  "implementation_review_focus": [
+    "Implement only the three fixed G12 leaves and source-only metadata/stage derivations described by this packet; keep runtime source selections None.",
+    "Verify actual source/operation alias currentness and exact ownership at adapter and consumer entry/return in the produced source; do not replace authentic bootstrap values with shape checks.",
+    "Keep denied/malformed/ambiguous process observations, first failures, ordered secondaries, unknown descriptor closes and namespace drift explicitly nonqualifying.",
+    "Ensure retained-directory identity snapshots account for only owned file creation and final mode transitions, then recheck the finalized identities; avoid a manifest self-hash cycle.",
+    "Preserve all complete original and retained pair/raw evidence and actual tail accounting joins; never infer completion from available manifest bytes."
+  ],
+  "limits": "This is an independent review of exact source design and current named static sources. It establishes neither execution feasibility within the original limits nor produced-source correctness, successful custody, scientific correctness, G12 completion, P02 equality, full-positive/native/performance admission or broader authorization.",
+  "open_runtime_predicates": [
+    "Separately authorized exact launch source selection, accounting owner and full body/cleanup/retention/consumer/publication allowances.",
+    "Actual successful Popen and original guard evidence with known selected-chain cleanup and namespace custody.",
+    "Actual complete common and diagnostics bytes, validated parent retention and manifest.",
+    "Successful final close and complete enclosing publication-tail charge followed by separate immutable source selection."
+  ],
+  "reviewed_packet": {
+    "DESIGN-v1.json": {
+      "bytes": 60181,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody/DESIGN-v1.json",
+      "sha256": "1f88ec187415abfd058728b7bf37fb6d9550e8bb3a080da4841d32be4019fe72"
+    },
+    "FREEZE-v1.json": {
+      "bytes": 1698,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody/FREEZE-v1.json",
+      "sha256": "08a58558e04168894152a3478823a3eb6d99a328e9c38b23447a84ec7f8ec8f1"
+    },
+    "SOURCE-PINS-v1.json": {
+      "bytes": 5525,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/g12-custody/SOURCE-PINS-v1.json",
+      "sha256": "e586cb66935781f85668822ba8f118353652e223d9aa57835d206c714cc2c702"
+    }
+  },
+  "reviewer": "/root/cache_g12_custody_review",
+  "schema": "g12-custody-independent-source-design-review-v1",
+  "scope": {
+    "accepted_producer_unchanged": "a346025d5b6e2b26246521c6af6292643a4c2c3286b33ff3996dcf051cd6be26",
+    "call_chain": "Source-owned G12 parent actual Popen -> unchanged original guard -> GNU time -> exact Root/provider -> fixed G12 adapter -> unchanged accepted producer; successful join and known cleanup -> both complete exports and original evidence -> fresh parent retained domain -> manifest and full publication/accounting tail -> separately source-selected authentic cold consumer.",
+    "excluded": [
+      "all212",
+      "F4",
+      "M",
+      "P02 standard-workload equality",
+      "generic custody framework",
+      "broader-goal status changes",
+      "new funding or reservations",
+      "runtime or scientific approval"
+    ],
+    "one_role": "G12 independent-original-uncached reference; h=25; extra_target=(0,2,1); original profile/no-anchor; optimize=0"
+  },
+  "source_pins_current": {
+    "authorization": {
+      "bytes": 2545,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/parent/AUTHORIZATION-v2.json",
+      "sha256": "9e32514288fed2b1d2873387bf81861ffcd9e1b56d2ab4828be13a311e629106"
+    },
+    "current_controller": {
+      "bytes": 81343,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/fresh-controller-composition-v2/composed_controller.py",
+      "sha256": "c88736fce81d737ae13ac1bf47500dc9d72920bd4910efe1b49074797d6e3231"
+    },
+    "current_supervisor": {
+      "bytes": 44563,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/fresh-round-consumer-integration-v2/fresh_supervisor.py",
+      "sha256": "7b3304eaf4884e3029df5095e2b0950c18d1544ad21431a07c033b85e53bd4f7"
+    },
+    "historical_jobs_metadata": {
+      "bytes": 446,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/JOBS.json",
+      "sha256": "a7e5e47c6e8fe8432e334a22e6eeac4ee40275c940943f608133627246586315"
+    },
+    "historical_stage_metadata": {
+      "bytes": 32276,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/STAGE.json",
+      "sha256": "01ea38c458c66f24e5e7bafb06359c6390fefd842163db217e0773707def3da4"
+    },
+    "map_freeze": {
+      "bytes": 324,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/reference-custody-map/FREEZE-v1.json",
+      "sha256": "982b0370a6b9ed17c126f3066d3e7aed5d3abbda9c26f65ff42c315e8c3c88ba"
+    },
+    "map_report": {
+      "bytes": 17528,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/reference-custody-map/REPORT-v1.json",
+      "sha256": "014f127a932b0c0f7e931fce4efd57372b93fc19c976df350601b829a45cda92"
+    },
+    "native_backend_source": {
+      "bytes": 20334,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/baseline/engine/native_backend.py",
+      "sha256": "e473c38245c3668715b5a78dfe980b2fe3ed0d0c9b8c97c666fbae6ecf1fffd5"
+    },
+    "original_guard": {
+      "bytes": 15493,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/run_guarded_v3.py",
+      "sha256": "bd882e3dadb1b6aeaa63ee824f1a1c58f8ef2546b6840a2bffa46885a184d3eb"
+    },
+    "provider": {
+      "bytes": 40799,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/integration/probe_binding_v3.py",
+      "sha256": "9cbb7368f89e71d1e6cc46db5dc77efed3e03ed2a801c98c88fe316e4d9f3ef2"
+    },
+    "reference_boundary": {
+      "bytes": 4138,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/reference-producer-v2/SOURCE-BOUNDARY-v2.json",
+      "sha256": "4130f4c2467791a347673181320226bdbaf6ff86c8d84c6349adae7124a75342"
+    },
+    "reference_freeze": {
+      "bytes": 1586,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/reference-producer-v2/FREEZE-v2.json",
+      "sha256": "6dcde16350158117c916a5254321dfb1b938de67950a9c0360200444fa8c3fe8"
+    },
+    "reference_producer": {
+      "bytes": 70246,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/reference-producer-v2/g12_reference_driver_v2.py",
+      "sha256": "a346025d5b6e2b26246521c6af6292643a4c2c3286b33ff3996dcf051cd6be26"
+    },
+    "root": {
+      "bytes": 38851,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/stages/combined-finite-v8/integration/full_driver.py",
+      "sha256": "f5a2d33f2b4d3651f214156a0e7094c2bb516ce2d5ab7698d18c11f98f35dee0"
+    },
+    "unselected_transport_snapshot": {
+      "bytes": 7261,
+      "mode": "0664",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/continuation/candidate-transport-v1/g12_reference_transport_v1.py",
+      "sha256": "c4fcac756671cb8927158b11952eb9795222d76ba1d102523a2313d8dad358d2"
+    }
+  },
+  "static_comparisons": {
+    "START_exact_fields_match_guard_AST": true,
+    "all_15_named_source_pins_match_bytes_size_mode_and_are_regular_files": true,
+    "all_8_named_python_files_parse_as_AST_without_import_or_execution": true,
+    "common_exact_fields_match_producer_AST": true,
+    "design_launch_selection_is_None": true,
+    "diagnostic_exact_fields_match_producer_AST": true,
+    "diagnostic_snapshot_exact_fields_match_producer_AST": true,
+    "existing_unselected_transport_handoff_is_None": true,
+    "ordered_G12_N01_through_N18_present": true,
+    "ordered_P01_through_P09_present": true,
+    "receipt_exact_fields_match_guard_AST": true,
+    "scientific_authority_original_driver_pins_match_producer_literals": true
+  },
+  "stop": "Exact design review complete. Return this report and hash to parent; await any separately assigned produced-source review.",
+  "verdict": "ACCEPT_BOUNDED_G12_CUSTODY_SOURCE_DESIGN"
+}

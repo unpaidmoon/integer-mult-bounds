@@ -1,0 +1,732 @@
+{
+  "accepted_scope": {
+    "handoff": {
+      "bytes": 10071,
+      "mode": "0664",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-implementation/REFERENCE-BRIDGE-HANDOFF-v1.json",
+      "sha256": "2606738411455dd9b686d64e16a6b4161e873c3da8ceaf4da0114dfedf7770f6"
+    },
+    "lanes": [
+      "pure: original --mode baseline",
+      "native: original --mode candidate"
+    ],
+    "local_protocol_review": {
+      "does_not_admit": "Dual reference bridge, candidate artifact custody, configured stage, full owner/cost approval or execution.",
+      "pin": {
+        "bytes": 13606,
+        "mode": "0664",
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/p02-protocol-independent/P02-PROTOCOL-REVIEW-v1.json",
+        "sha256": "6f649d3dc9893836b731c01f0ab2ad5830aae88e393ab5f0def9e92d8ea52c7d"
+      },
+      "status": "ACCEPT_LOCAL_PROTOCOL_SOURCE_ONLY_REFERENCE_BRIDGE_CLOSED"
+    },
+    "no_G12_transfer": "No extra target fixture, G12 producer, G12 diagnostics or G12 common payload enters either run or any equality join.",
+    "p02_design": {
+      "bytes": 32255,
+      "mode": "0664",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-feasibility/DESIGN-v3.json",
+      "sha256": "fccc3456630a4a60f8e7d3736501ca3d5c7cb4ef303aaba32862c90a98d6a6e4"
+    },
+    "projection_schema": {
+      "bytes": 15170,
+      "mode": "0664",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-implementation/REFERENCE-BINDING-PROJECTION-SCHEMA-v1.json",
+      "sha256": "133950d6f513b234c62457e657a5d137443dedbc1a52afec38974654fc364054"
+    },
+    "protocol_packet": {
+      "bytes": 6581,
+      "mode": "0664",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-implementation/FREEZE-v1.json",
+      "sha256": "257b4a73dba448ad4905ed900c2e457bd36844c160e13b12140ef47d7d2617fa"
+    },
+    "scientific_artifacts": [
+      "full-return.lossless.json",
+      "runtime-root/certificates/complex-network.json",
+      "original-stdout.txt",
+      "side-observations/result.json",
+      "side-observations/witness.json",
+      "side-observations/rank-trace.json"
+    ],
+    "standard_reference_runs": 2,
+    "unchanged_scientific_producers": true
+  },
+  "activity": {
+    "accepted_body_credit": 0,
+    "decoders_executed": 0,
+    "helpers_executed": 0,
+    "locks": 0,
+    "native_or_compiler_operations": 0,
+    "network": 0,
+    "protected_bookkeeping_reads": 0,
+    "runtime_process_inspection": 0,
+    "scientific_runs": 0,
+    "target_imports": 0,
+    "tests": 0,
+    "text_hash_ast_only": true
+  },
+  "authority": {
+    "bytes": 2545,
+    "mode": "0444",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/parent/AUTHORIZATION-v2.json",
+    "sha256": "9e32514288fed2b1d2873387bf81861ffcd9e1b56d2ab4828be13a311e629106"
+  },
+  "candidate_custody_limit": "Source-owned same-process original scientific writes have returned and closed before hook1225; selected fixed source/OS/no concurrent writer premise plus initial fresh output identity and strict double reads prove only these bounded six actual files. No immutable snapshot is claimed from Path.read_bytes alone; any unknown writer/alias/close/source drift rejects.",
+  "closed_now": {
+    "P02_REFERENCE_DATA_SELECTION": null,
+    "P02_REFERENCE_LAUNCH_SELECTION": null,
+    "_P02_PARENT_SUCCESS_HANDOFF": null,
+    "_P02_REFERENCE_CUSTODY_HANDOFF": null,
+    "_P02_REFERENCE_PROJECTION": null,
+    "accepted_body_credit": 0,
+    "actual_anchor_provenance": null,
+    "actual_current_costs": null,
+    "actual_funding": null,
+    "actual_parent_completion": null,
+    "actual_reference_output_hashes": null,
+    "actual_unmeasured_final_tail": null,
+    "execution_authorized": false,
+    "funding_and_fit_accepted": false,
+    "physical_complete_cost_admission": false,
+    "runtime_payloads_created": 0,
+    "source_adopted": false
+  },
+  "custody_schema": {
+    "FileRecord": "Exact {relative,path,sha256,bytes,identity,directory_chain}; identity exact {dev,ino,mode,nlink,size,mtime_ns,ctime_ns}, exact ints never bool, regular nonsymlink,nlink1,size==bytes. Retain original and retained FileRecords separately; corresponding and cross-lane files cannot share(dev,ino). Directory chains contain held nofollow directory identities, excluding atime.",
+    "SourcePin": "Exact {path,sha256,bytes,mode}; canonical absolute path, lowercase64 SHA, exact nonnegative int bytes, exact mode.",
+    "finite_limits": {
+      "chunk_bytes": 65536,
+      "guard_stream_bytes": 2097152,
+      "guard_usage_bytes": 16384,
+      "json_depth": 256,
+      "json_nodes": "<= bounded input bytes",
+      "metadata_bytes": 262144,
+      "native_extension_bytes": 67108864,
+      "scientific_raw_total_per_lane_bytes": 268435456
+    },
+    "joint_recheck": "After both lane reads and every parser/projection step, recheck all twelve scientific files, both traces/receipts and every retained evidence/manifest/publication FileRecord jointly. Equal hashes never excuse missing raw bytes or shared mutable custody.",
+    "limit_meaning": "Rejection ceilings only; no budget or claim actual artifacts fit. Charge simultaneous raw buffers, parsed trees, normalized integer keys, copies and lifetimes. Check declared sizes and conservative allocation headroom before materialization under genuine existing <=1GiB guard. Stream native-vs-pure equality to avoid retaining duplicate six-file tuples; no truncation/repair or fallback on over-cap.",
+    "read": "Source-owned openat/dirfd traversal with O_RDONLY|O_NOFOLLOW|O_NONBLOCK|O_CLOEXEC; lstat==opened fstat==postread fstat==final lstat, full mode/link count/parent chain. Read exactly initial size in65536-byte chunks plus bounded EOF confirmation. Short/growing/replaced/unlinked/aliased files or unknown close reject. Root._hash_regular rechecks source pins, not a substitute for these path/mode guards.",
+    "write": "Exclusive create O_EXCL|O_NOFOLLOW; partial-write loop requires positive progress; full-byte/hash check, fsync/fchmod0444/known close, directory fsync and complete identity-stable readback. Do not mutate originals."
+  },
+  "driver_exact_delta": [
+    {
+      "change": "Add _initial_p02_reference with exact4-argument cold_join_p02 call and actual Root/capability/API transport in SOURCE-INTERFACES-v3. Use inline original descriptor guards to load/register consumer source, then complete immutable full dual join before EARLY_INTEGRATION_SOURCE_PINS loop. DATA_SELECTION remains None pending actual successful parent/custody provenance and separately satisfied original adoption/runtime gates. Consumer digest is externally source-selected; no consumer->driver digest cycle.",
+      "site": "After original initial authority capture161, before EARLY_INTEGRATION_SOURCE_PINS183/loop193"
+    },
+    {
+      "change": "Add reference_started/consumed=False and capsule/consumer/selected-output bindings. Capture actual loaded module/handle/function/code/global/builtins/default/closure and capsule identities in source binding. Preserve original helper/source state; authentic driver consumes reference attempt before any reader work, never resets.",
+      "site": "_P02 state/source binding2015-2051 and controller2491-2516"
+    },
+    {
+      "change": "Replace rejecting stub only in future separate derivative with _epoch_p02_prepare_reference(engine,backend_handle,invocation_token,output,anchor_bytes,frozen,reference), called with actual main locals at1093. Exact bind_p02_projection7-argument call is in SOURCE-INTERFACES-v3. Bind actual capsule/source/module/handle/output/anchor/workload and actual invocation object901, consume before attempt, set _P02[reference] only on full success. Original3 None handoffs stay closed in frozen predecessor; no arbitrary assignment enables it.",
+      "site": "main_epoch1093 and _epoch_p02_prepare_reference2054-2061"
+    },
+    {
+      "change": "Require actual token identity plus original suite token and use exact6-argument check_p02_projection from SOURCE-INTERFACES-v3 before helper reference reads. Preserve original owner/observer/phase/helper checks; reject modified containers/values rather than repair.",
+      "site": "_epoch_p02_bind_locals2064-2104; phase checks2164-2238"
+    },
+    {
+      "change": "Extend hook1225/_epoch_p02_finish with actual main-local science; source guards establish original invocation/captures/CLI/source completion. Use exact6-argument read_p02_candidate_outputs from SOURCE-INTERFACES-v3, fixed6 nofollow complete files and current science digest/size joins, joint recheck and known close. Existing third advance/four comparisons/return preserved; all new authority/FD work ends before data_finalization.",
+      "site": "_epoch_p02_finish2303-2340 called at actual main_epoch1225"
+    },
+    {
+      "change": "Release only added aliases after original retirement on every path, retaining first primary/secondary behavior. Record plain read/close/one-use completion in existing return predicate without post-late probes. Keep full original stdout/receipt/outer cleanup and P02-source-observation publication2552 return. Later candidate parent must observe actual successful full return and guard completion; this reference pair never substitutes for candidate success.",
+      "site": "_epoch_p02_release_owned2358-2398 and require_return2401-2488"
+    }
+  ],
+  "finite_negative_review_cases": [
+    "One lane or any one of six files/trace/receipt missing or partial => no capsule.",
+    "Producer receipt exists but final stdout/actual process/guard/parent tail fails => no parent completion.",
+    "Native receipt native_calls null, pure nonnull, wrong numeric type or copied epoch candidate counters => reject.",
+    "Same bytes but same inode/root/generation, hardlink/symlink, changed final mode/path/content or unknown close => reject.",
+    "Different anchor/input/source/argv/relative namespace, profile mode or G12 extra target => reject.",
+    "Any six-file or full-trace mismatch; malformed full tree, duplicate key, bool-as-int, omitted/reordered rank event => reject.",
+    "Native compiler/control failure, incomplete original build/finite evidence or guard resource/phase failure => reject, no rerun.",
+    "Wrong cold root/provider/consumer/helper/source handle/function environment or second consume => reject.",
+    "Candidate projection mutation, foreign token/output root or actual file not matching same-invocation science => reject.",
+    "Successful manifest write followed by actual parent/lease/IO/custody publication failure => no qualifying provenance. Unknown final accounting tail stays null and prevents a complete-cost claim; it is not silently treated as zero or an original source-design financial API prerequisite.",
+    "Allocation cap/depth/node bound exhausted, unknown child/permission metadata or primary plus cleanup failure => preserve first primary and ordered secondaries, no success."
+  ],
+  "fixed_reference_stage": {
+    "adapter": "Actual Root-injected bootstrap_root/capability/API captured before other work; require optimize0 and current Root/provider. Exact argv [adapter,--output,guard_science_path,--lanes,fixed_lane]. Exact lane maps to baseline or candidate; no other modes accepted. Require absent output outside source/frozen roots and no symlink components. Read/hash unchanged baseline/full_driver.py. Set a fresh __main__ module with its original __file__ and producer argv [producer,--frozen-root,stage/baseline/frozen,--reference,stage/baseline/reference/certificates/complex-network.json,--mode,baseline|candidate,--output,guard_science_path,--anchor,stage/baseline/anchor.json]. Execute exact bytes with admitted Root._COMPILE/_EXEC, dont_inherit=True,optimize=0. Original __main__ calls main once. Ordinary return after original352 is required. Verify source/currentness/argv/module alias identities, restore only owned slots once, preserve first primary and ordered secondary failures. No producer monkeypatch/call of internals.",
+    "created_now": false,
+    "jobs": {
+      "p02-native-reference": {
+        "bootstrap": {
+          "driver": "integration/p02_original_reference_adapter_v1.py",
+          "provider": "integration/probe_binding_v3.py"
+        },
+        "lanes": "p02-native-reference",
+        "optimized": false
+      },
+      "p02-pure-reference": {
+        "bootstrap": {
+          "driver": "integration/p02_original_reference_adapter_v1.py",
+          "provider": "integration/probe_binding_v3.py"
+        },
+        "lanes": "p02-pure-reference",
+        "optimized": false
+      }
+    },
+    "manifest": "New immutable STAGE.json/JOBS.json; runner_sha256 is original_guard pin; no edits to existing stages. No entry, finite_only, -O, extra jobs, flags or mutable source-setter.",
+    "name": "p02-original-reference-v1",
+    "source_binding_no_cycle": "Externally authenticated stage/launch selection supplies final adapter/parent/producer pins. No file embeds its own digest. Future consumer source selection may pin the completed pair, but pair manifest never requires the digest of a consumer source that embeds that pair digest.",
+    "unchanged_mounts": "Original Root/provider/runtime profile, baseline/full_driver.py, seven original engine files, exact baseline/SOURCE-PINS.json, 32-file baseline/frozen closure, original reference certificate. Exact independently selected original anchor bytes are additionally mounted read-only; no new profile run."
+  },
+  "full_cost_invoice": {
+    "actual_unmeasured_final_tail": null,
+    "authority": "No new budget/reservation/funding, amortization, reused reference, G12 credit, speed claim or kappa claim. Every actual invocation remains subject to original genuine execution/adoption/phase/budget/funding/fit/measurement/custody/cleanup gates. Full symbolic completeness does not establish physical fit. A new enclosing financial/accounting API is not an original S03.08 source prerequisite. No F4/M reassignment, callback or completion record is fabricated.",
+    "current_actual_costs": null,
+    "explicit_category_owners": {
+      "C01": "Actual pristine Root/parent admission, both fixed launches, all process tracking and outer measurement before driver START_WALL and after final sample.",
+      "C02": "All original/new source/anchor/input custody/copy and strict inverse/proof/installation work.",
+      "C03_C04": "Full unchanged native build/compiler children and independent finite/native/runtime-profile controls; pure/native costs remain distinct and complete.",
+      "C05_C12": "Existing graph/context/helper/role/request/fallback/error and retained exception/source graphs keep their original owners; added reader/bridge work cannot erase them.",
+      "C13": "Complete six-plus-trace/receipt/native evidence serialization/read/parse/byte comparison/hash/copy/fsync/chmod/metadata/readback; cold decoder and projection data work.",
+      "C14": "All original before-late/late/retirement/known process and descriptor cleanup, failed closes and secondary retention; no new post-late calls.",
+      "C15": "Complete actual parent wait/log/receipt/custody/publication/source-selection/resource tail through final process exit, retained memory lifetimes and all failed attempts. Every unknown numerical quantity remains null."
+    },
+    "funding_and_fit_accepted": false,
+    "measurement": "Preserve actual whole-parent/driver/all-child measurements where genuinely observed and their exact measured-through endpoints. Original guard/GNU time raw measurements and all actual resource limits remain mandatory. Charge every final receipt/publication/cleanup/retention/process-exit tail under original C01-C15; leave unmeasured current/final costs null, never zero. Nested phase times are diagnostic and never summed as exclusive total. Complete physical cost admission remains separately false.",
+    "original_symbolic_contract": {
+      "bytes": 9184,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v1/contracts/COMPLETE-SYMBOLIC-COST-DEFINITION-v1.json",
+      "sha256": "6ab22ebb387f15f9a1fd91e257ecae649eb4b177af32d4652c2eaec061e3b48c"
+    },
+    "physical_complete_cost_admission": false,
+    "required_categories": [
+      "entire pure original reference including fresh copies/imports/original CLI/all observations/checks/output/receipt/stdout tail",
+      "entire separate native original reference including cold compiler/link/load, all independent controls, actual counters and all ordinary full outputs/checks/tail",
+      "both original guard launch/time/RSS/phase/source/log/usage/receipt work",
+      "parent source/anchor/stage/launch authentication and separate queue lease",
+      "actual parent waits, generation/pidfd observation, known cleanup and all failure tails",
+      "complete six-plus-trace/receipt/native evidence reads/hashes, cross-lane full-byte comparisons, strict JSON/typed/rank/trace validation",
+      "retained copies/fsync/chmod/close/readback and full joint identity/source rechecks",
+      "all manifest/publication/source-selection writes, readback, retained memory and parent/process final tails under original C13-C15; unknown measured tail stays null",
+      "cold pre-exposure consumer load/read/hash/parse/join plus fresh projection allocation and retained raw/parsed lifetimes",
+      "candidate invocation/source/projection checks and fixed six complete actual artifact reads/rechecks/close",
+      "all existing two-suspension/helper/control/timing/memory/retirement/late/publication work unchanged"
+    ]
+  },
+  "guard_contract": {
+    "START_exact_fields": [
+      "command",
+      "parent_launch",
+      "stage_sha256",
+      "runner_sha256",
+      "fractions_sha256",
+      "budget_phase_sha256",
+      "spent_before_seconds",
+      "phase_cap_seconds",
+      "job",
+      "label"
+    ],
+    "joins": "Per lane: shared START/receipt fields type-exact equal to raw START and actual fixed P02 launch selection. Exact Root/provider/adapter argv and original producer argv/anchor/output match this lane; all source/phase/label/cwd bindings join. Parent stdout echo only checks consistency, never replaces canonical receipt or actual completion.",
+    "limits": "Original timeout 180 seconds, aggregate existing phase 600 or 2400 only, sampled process group RSS <=1GiB, runner lifetime RSS <=1GiB, usage metadata <=16KiB, no source/log drift. Preserve original current spent/cap checks; no new cap is granted by this document.",
+    "no_reconstruction": "No caller dictionary, receipt status, file existence, completion sentence or helper callback supplies actual P02 parent invocation ownership.",
+    "outer": "Actual private Popen exists, exact guard source launch, actual returncode int==0, original primary absent, no parent STOP, complete known cleanup, known closed outer logs, unchanged initial source/namespace/lease bindings.",
+    "raw_log_checks": "Recompute complete stdout/stderr bytes and SHA256 from retained files, check final sizes and identities, original 2MiB per stream, empty stderr, and complete outer raw logs; outer stderr must be empty. Original guard and producer diagnostics remain raw retained evidence.",
+    "receipt_exact_fields": [
+      "command",
+      "parent_launch",
+      "stage_sha256",
+      "runner_sha256",
+      "fractions_sha256",
+      "budget_phase_sha256",
+      "spent_before_seconds",
+      "phase_cap_seconds",
+      "job",
+      "label",
+      "exit",
+      "wall_seconds",
+      "usage",
+      "termination",
+      "sampled_process_group_rss_bytes",
+      "source_bytes_and_modes_unchanged",
+      "stdout_sha256",
+      "stdout_bytes",
+      "stderr_sha256",
+      "stderr_bytes",
+      "stdout_final_bytes",
+      "stderr_final_bytes",
+      "retained_log_bytes_stable",
+      "output_cap_observed_at",
+      "log_read_chunk_bytes",
+      "runner_wall_seconds",
+      "runner_user_seconds",
+      "runner_system_seconds",
+      "runner_lifetime_max_rss_kib",
+      "python",
+      "platform",
+      "status"
+    ],
+    "required_values": {
+      "exit": 0,
+      "log_read_chunk_bytes": 65536,
+      "output_cap_observed_at": null,
+      "retained_log_bytes_stable": true,
+      "source_bytes_and_modes_unchanged": true,
+      "status": "PASS",
+      "stderr_bytes": 0,
+      "stderr_final_bytes": 0,
+      "termination": null
+    },
+    "usage": "Retain original usage.json raw bytes; require exact expected GNU time record user_seconds/system_seconds/kernel_max_rss_kib/exit with finite nonnegative values and exact exit int zero for complete accounting. Missing/malformed/oversized usage is nonqualifying, not a fabricated zero."
+  },
+  "historical_extra_design_interface": {
+    "classification": "EXTRA_DESIGN_INTERFACE_NOT_DEMONSTRATED_ORIGINAL_S0308_SOURCE_PREREQUISITE",
+    "id": "P02-BRIDGE-SOURCE-API-1",
+    "original_source_blocker": false,
+    "previous_pointer": "/open_source_api",
+    "previous_record": {
+      "bytes": 11276,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/SOURCE-INTERFACES-v2.json",
+      "sha256": "e72330e2bff276552c7e3a749fea1acab095b41715d0cd79fc580f66d7a28298"
+    },
+    "reason": "The original checklist/cost/caller contracts require actual parent/guard/custody/typed transport plus complete symbolic work and tail charges. They do not require constructing a new enclosing financial API. Existing inspected non-supplying APIs remain accurately described; their absence does not create original-scope dependency.",
+    "scope_clarification": {
+      "bytes": 10874,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-custody-independent/G12-CUSTODY-SOURCE-SCOPE-CLARIFICATION-v1.json",
+      "sha256": "a9261f686d4fbe6ca40258335231a730dc7e3319be7cedf7c39e189a57c7f367"
+    }
+  },
+  "known_process_and_namespace_bound": {
+    "leaf": "Use bounded proc/census/generation/children_now and OwnedDomain patterns from known_cleanup_leaf_origin114-146,205-309, with G12 accepted corrections: PermissionError/unknown/malformed/oversized process metadata/ambiguous generation/failed close/unsupported pidfd => UNKNOWN/STOP, never empty. Never signal parent or unidentified generation. At most128 observed generations; deadline-bounded cleanup; no claim about arbitrary unobserved daemon/orphan.",
+    "namespace": "Selected fixed sources/compiler do not intentionally daemonize, enlist external writers or transfer writable descriptors outside the known domain. Trusted OS/interpreter/stdlib and cooperating same-UID launch domain exclude unrelated writer interference. Directory descriptors/nofollow prevent path substitution; permission0444/0500 does not prove hostile same-UID immutability.",
+    "retention": "Create fresh parent retention directory only after both known writer chains have completed, outside producer roots; no child had its descriptor.0700 during write,0500 after seal, retained regular files0444,nlink1. Original files remain unchanged. Any actual unknown writer or incomplete close blocks selection.",
+    "successful_chain": "Parent -> unchanged guard -> /usr/bin/time -> unchanged Root -> fixed adapter -> unchanged full_driver. Native mode additionally invokes backend.build_native subprocess.run and compiler/linker children synchronously; pure lane never enters it. Exact pinned source chain and ordinary compiler/OS/loader/stdlib cooperation are premises."
+  },
+  "launch_selection": {
+    "exact_fields": [
+      "schema",
+      "stage",
+      "stage_sha256",
+      "jobs_sha256",
+      "parent_source",
+      "pure_label",
+      "native_label",
+      "source_pins",
+      "original_anchor",
+      "original_anchor_provenance",
+      "phase_pin",
+      "original_symbolic_cost_contract",
+      "body_deadline_ns",
+      "retention_tail_allowance_ns",
+      "intended_consumer_output"
+    ],
+    "literal": "P02_REFERENCE_LAUNCH_SELECTION = None",
+    "original_symbolic_cost_contract": {
+      "bytes": 9184,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v1/contracts/COMPLETE-SYMBOLIC-COST-DEFINITION-v1.json",
+      "sha256": "6ab22ebb387f15f9a1fd91e257ecae649eb4b177af32d4652c2eaec061e3b48c"
+    },
+    "ownership": "One private pair record and a separate nonblocking parent queue lease retained through publication; never pre-acquire original guard science.lock. No concurrent reference/candidate run, retry or overwrite. Reference parent observation/retention directories are separate from each lane science directory and all staged/frozen roots.",
+    "schema": "p02-two-original-reference-launch-selection-v1",
+    "values": "Distinct fixed simple ASCII labels; roots R/runtime/runs/<label>/science absent before each single launch. Original anchor raw FileRecord and source-selected actual original-profile successful-parent/custody provenance; anchor schema/status alone is insufficient. Same selected anchor for both lanes and candidate. No runtime flags/callbacks/receipt dictionaries supply selection. Original exact phase/budget/authorization/measurement rules and real body/tail allowance remain required before an actual invocation; actual values remain None now. Complete original symbolic C01-C15 cost contract is pinned. No new enclosing financial API is a source prerequisite or created by this design."
+  },
+  "minimal_new_leaves_after_review": [
+    {
+      "file": "p02_reference_parent_v1.py",
+      "functions": [
+        "run_p02_original_references",
+        "_claim_fixed_pair",
+        "_run_fixed_lane",
+        "_join_guard_and_producer",
+        "_retain_lane",
+        "_seal_pair",
+        "_finish_failure"
+      ],
+      "role": "One fixed sequential pair of original guard runs; actual completion/custody/export/accounting only."
+    },
+    {
+      "file": "p02_original_reference_adapter_v1.py",
+      "functions": [
+        "_p02_original_adapter_entry"
+      ],
+      "role": "Translate exactly two fixed original guard lane selectors into unchanged original producer argv."
+    },
+    {
+      "file": "p02_reference_cold_consumer_v1.py",
+      "functions": [
+        "cold_join_p02",
+        "bind_p02_projection",
+        "check_p02_projection",
+        "read_p02_candidate_outputs",
+        "_read_fixed_regular",
+        "_strict_json",
+        "_validate_typed_tree"
+      ],
+      "role": "Fixed immutable source-selected dual-reference reader, strict projection, actual candidate file reader; no scientific calls."
+    },
+    {
+      "file": "p02_reference_bound_driver_v1.py",
+      "functions": [
+        "_initial_p02_reference",
+        "_epoch_p02_prepare_reference",
+        "_epoch_p02_bind_locals",
+        "_epoch_p02_finish",
+        "_epoch_p02_source_current",
+        "_epoch_p02_release_owned"
+      ],
+      "role": "Separately named minimal derivative of local_p02_driver; complete inverse back to833074... required. Helper unchanged."
+    }
+  ],
+  "owner": "/root/cache_p02_reference_bridge",
+  "ownership": "Only /home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/**; not alone in workspace; all original, synced, frozen and other-agent files preserved.",
+  "pair_manifest": {
+    "accounting": "Exact fields {symbolic_cost_contract,measured_through_ns,actual_wall_seconds,self_cpu_seconds,children_cpu_seconds,lifetime_peak_rss_bytes,guard_receipts,category_records,actual_unmeasured_final_tail,physical_complete_cost_admission}. Complete original C01-C15 symbolic bill pinned. Every measured value has its actual source/endpoint and finite nonnegative exact numeric type; every unmeasured value including final tail is null, never zero. Actual original guard usage/limits remain mandatory. physical_complete_cost_admission=False in source custody artifacts; no invented enclosing completion or fully paid claim.",
+    "custody": "Exact retained directory identity/mode, actual creation-after-known-cleanup record, every original/retained identity pair and full readback. Manifest contains no own digest.",
+    "exact_fields": [
+      "schema",
+      "pair_id",
+      "parent_source",
+      "selected_sources",
+      "launch_selection",
+      "original_anchor",
+      "workload",
+      "lanes",
+      "known_cleanup",
+      "custody",
+      "accounting",
+      "scope"
+    ],
+    "guard": "Exact retained START,receipt,stdout,stderr,usage FileRecords plus validated original START/receipt objects. Original exact schemas/joins in guard_contract apply per lane; original budgets/phase semantics unchanged.",
+    "lanes": "Exact ordered tuple pure then native, each {owner,mode,invocation_id,launch,terminal,guard,producer_receipt,science_artifacts,complement,native_evidence}. owner/mode are pure/baseline then native/candidate. science_artifacts ordered six exact {original:FileRecord,retained:FileRecord}. native_evidence null for pure, exact three FileRecord pairs for native. All complete raw guard/source/anchor/launch/outer-log/observation evidence retained.",
+    "launch": "Exact {actual_parent_guard_argv,actual_guard_root_argv,actual_adapter_producer_argv,parent_cwd,child_cwd,parent_generation,guard_generation,output_root,output_root_identity,cold_generation}; no derived argv replaces actual source-owned observation.",
+    "schema": "p02-two-original-parent-completion-v1",
+    "scope": "Fixed P02 reference source-data provenance only; no complete P02/full-positive/native-performance/science or kappa admission.",
+    "terminal": "Exact {actual_popen_returncode,wait_completed,parent_stop,primary_error,secondary_errors,known_remaining,known_streams_closed,known_pidfds_closed,io_unknown}; int0,True,None,None,[],[],True,True,False required, emitted only from private live parent path. No Popen/lease/root is recreated from JSON.",
+    "workload": "Exact {base_commit,upstream_commit,source_inventory_sha256,engine_pins,h,scientific_argv_relative,extra_target}; original literals,H exact int25, argv_relative tuple(scripts/complex_network.py),extra_target null."
+  },
+  "parent_sequence": [
+    [
+      "_claim_fixed_pair",
+      "Authenticate external launch/source/stage/anchor provenance/whole-cost selection and clean parent interpreter/stdlib; initial children empty and single task; reserve only genuine existing body/tail allowance. Claim parent queue lease, record FD/device/inode/mode, check every root absent. Capture private pair and two distinct lane invocation identities; do not accept caller success records."
+    ],
+    [
+      "_run_fixed_lane(pure)",
+      "Launch exactly [/usr/bin/python3.12,-S,-s,-P,-B,R/run_guarded_v3.py,p02-original-reference-v1,p02-pure-reference,pure_label], cwd R, original exact clean ENV, close_fds=True,start_new_session=True. Set attempted before Popen; retain actual Popen and generation/pidfd/raw outer logs. Actual full argv/parent cwd/child cwd recorded separately. Monitor original guard limits plus actual complete-body/tail allowance."
+    ],
+    [
+      "_join_guard_and_producer(pure)",
+      "Require actual Popen wait/return int0, no signal/STOP/primary/secondary, no pending known child/group, and all known streams/pidfds closed. Validate complete canonical original guard START/receipt/stdout/stderr/usage and all original predicates; producer receipt and complete raw stdout must include producer348-352. Keep canonical receipt missing if missing."
+    ],
+    [
+      "_retain_lane(pure)",
+      "Read six fixed artifacts, full complement and producer receipt only after actual successful completion/known cleanup. Bind all science digests, full bytes and metadata; retain fresh byte-identical parent copies with separate original/retained identities. Never chmod original producer files. Seal lane data but expose no reference."
+    ],
+    [
+      "_run_fixed_lane(native)",
+      "Same fixed launch contract with p02-native-reference/native_label, only after pure success/retention. Distinct process generation/output directories, same exact producer/engine/input/anchor/workload. Preserve actual original native compiler subprocess wait, all finite controls, extension source/load and actual counter path. Failed native leaves retained pure lane nonqualifying."
+    ],
+    [
+      "_join_guard_and_producer(native)/_retain_lane(native)",
+      "Same completion/custody checks plus complete native build.json, finite-controls.json and extension evidence; verify raw build/finite objects exactly join producer receipt and extension SHA. Native counters are actual receipt native_calls, never constants."
+    ],
+    [
+      "_seal_pair",
+      "Compare all six full raw files pairwise plus full complement bytes, source/workload/anchor/relative namespace and strict projections. After both actual successful guard waits and every known writer/close completes, create pair manifest solely from private observations; recheck all original/retained files and source closure jointly, fsync/chmod0444/close/readback and seal fresh retained directory0500. Emit only bounded custody publication and actual measured-through cost observations; preserve unknown final tail as null. Known lease/IO closure and ordinary actual parent return must complete before subsequent authenticated source selection. No publication field claims financial completion or replaces actual parent success."
+    ],
+    [
+      "_finish_failure",
+      "Preserve original primary/raw traceback and ordered secondaries on every path, bounded known cleanup and full charged retention. Leave partial/missing evidence visibly partial/missing. Unknown cleanup/close, failed second lane, source drift or failed publication never yields a qualifying pair; no retry."
+    ]
+  ],
+  "producer_receipt_contract": {
+    "common": "Strict duplicate-free JSON primitives; exact status FULL_NETWORK_COMPLETE_PASS, original base/source/driver pins and native_predecessor_pr5929. Full frozen32/engine7 byte+mode inventories match selected closure. Imports match all original relative script paths under that lane runtime/engine root. compiler_tmpdir equals lane/compiler-tmp. Actual receipt is retained raw; do not manufacture fields from expected values.",
+    "digest_join": "All three main digests and three side digests/sizes recomputed over complete fixed raw artifacts; rank_call_count joins full parsed event count and distinct count is checked using exact row tuples. ordered_complements equals complete strict trace object; upstream/base/source/engine identical across lanes and anchor. Reconstruct original anchor object solely for equality with authenticated actual original anchor; do not produce a new anchor.",
+    "exact_keys": [
+      "status",
+      "mode",
+      "science",
+      "base_commit",
+      "native_predecessor_pr",
+      "driver_sha256",
+      "source_pin_sha256",
+      "frozen_custody",
+      "engine_custody",
+      "scientific_imports",
+      "build",
+      "finite_controls",
+      "private_root_permission",
+      "compiler_tmpdir",
+      "native_calls",
+      "phases",
+      "process_wall_seconds_before_receipt",
+      "process_and_compiler_cpu_seconds_before_receipt",
+      "environment",
+      "measurement",
+      "scope"
+    ],
+    "native": "mode candidate; build and finite_controls exact source-produced objects and native_calls exact four-key nonnegative-int dict. build exact command/returncode/stdout/stderr/c_source_sha256/python/no_cached_binary/extension_sha256; returncode0,no_cached_binary True, command/output match selected compiler/header/source and lane/cold-build. Raw cold-build/build.json equals complete receipt build object; raw finite-controls.json equals complete receipt finite_controls, whose exact top-level keys/status follow run_controls111-293. All original controls already executed by unchanged producer; bridge never reruns them.",
+    "native_additional_files": [
+      "finite-controls.json",
+      "cold-build/build.json",
+      "cold-build/_packed_gf2.cpython-312-x86_64-linux-gnu.so"
+    ],
+    "phase_names_common": [
+      "input_custody",
+      "engine_custody",
+      "fresh_root_copy",
+      "fresh_engine_copy",
+      "cold_engine_import",
+      "cold_complex_module_load",
+      "side_construction",
+      "checks_initialization",
+      "compile_roles",
+      "verify_map",
+      "verify_labels",
+      "verify_role_frames",
+      "cold_certify_import",
+      "original_upstream_verify_sources",
+      "cold_prepare_import",
+      "full_log_integer_bounds",
+      "original_serializable",
+      "complete_original_cli",
+      "identical_lossless_side_serialization"
+    ],
+    "phases": "Exact set of common phases, native additionally cold_compile_link_load and all_native_finite_independent_controls. Each row exact calls/wall_seconds/cpu_seconds_with_children; calls exact int1, times finite nonnegative exact int/float, never bool. Nested timings remain diagnostics.",
+    "pure": "mode baseline; build,finite_controls,native_calls all exactly null. No fabricated native zero counters.",
+    "science_exact_keys": [
+      "full_cli_certificate_sha256",
+      "full_cli_stdout_sha256",
+      "full_return_lossless_sha256",
+      "side",
+      "ordered_complements",
+      "upstream_commit"
+    ],
+    "side_exact_keys": [
+      "result_sha256",
+      "exact_witness_sha256",
+      "rank_trace_sha256",
+      "rank_call_count",
+      "rank_distinct_matrix_count",
+      "serialized_bytes"
+    ],
+    "stdout": "Retain separate scientific original-stdout.txt, original guard stdout.txt, and parent outer stdout. Complete producer stdout must equal scientific stdout plus the exact original349-352 JSON summary line derived from that same receipt. Parent outer guard stdout must equal original308 receipt echo. Neither echo substitutes for canonical receipt or actual wait."
+  },
+  "publication_and_selection": {
+    "bounded_purpose": "Retained evidence of actual source-owned parent/custody operations through stated observed endpoints; actual private Popen/guard success, known cleanup and final parent return are still required. This record is not financial completion, a live capability, source adoption or execution permission.",
+    "consumer_literal": "P02_REFERENCE_DATA_SELECTION = None; later exact immutable source literal {pair_manifest:FileRecord,publication:FileRecord,parent_source:SourcePin,intended_consumer_output,original_anchor:FileRecord}. Actual authenticated source selection must follow genuine successful parent completion/custody, with every original adoption/runtime gate separately satisfied. No fabricated enclosing_completion field, argv/env/caller dict or file existence supplies provenance.",
+    "exact_fields": [
+      "schema",
+      "parent_source",
+      "pair_manifest",
+      "all_retained_file_pins",
+      "final_joint_recheck_complete",
+      "known_lease_close_completed",
+      "primary_error",
+      "secondary_errors",
+      "measured_through_ns",
+      "actual_costs_through_ns",
+      "actual_unmeasured_final_tail",
+      "cost_scope",
+      "physical_complete_cost_admission"
+    ],
+    "historical_extra_dependency": "The v2 enclosing financial API requirement is preserved only in frozen v2/history. It is not an established original S03.08 source prerequisite; source-scope correction is explicitly pinned above.",
+    "one_use": "Selected intended_consumer_output is unique/absent until the already-owned early TCB output creation. Same fresh candidate launch cannot be rerun against an existing output. Consumer loader consumed-before-attempt state and actual main invocation token prevent a second use within the authentic driver. No cross-process global registry is invented.",
+    "publication_schema": "p02-two-original-parent-custody-publication-v2",
+    "tail": "Charge every manifest/publication write/fsync/readback/close, lease close, retained memory, parent/process exit and any later source-selection work to the original complete symbolic bill. Record only actually measured-through costs; actual_unmeasured_final_tail remains null where unmeasured, and physical_complete_cost_admission is False. Unknown is not zero. A failure of actual parent/guard/known cleanup/IO/custody still blocks provenance. Separate genuine execution/funding/fit/final-cost qualification remains closed; no new enclosing financial API is constructed or required for source-only custody design."
+  },
+  "required_static_implementation_evidence": [
+    "Whole-source inverse of new candidate derivative reconstructs exact local_p02_driver833074...; unchanged helper remains298b995...; all original need/assert calls, phase bodies, CLI/circuit, native controls, owner/retirement/late checks and publication preserved.",
+    "Adapter source map proves unchanged original producer bytes and exact baseline/candidate argv/anchor; no G12 target/profile branch.",
+    "Parent source map proves exactly two fixed sequential single attempts, authentic actual Popen/guard/producer/tail join and no external minting of completion.",
+    "Consumer source map proves strict primitive schemas, complete pairwise raw equality, pre-exposure join and one-use same actual root/helper/invocation binding; reader has explicit finite failure/close paths.",
+    "Independent review of all exact new source pins, inverse maps, custody/alias/first-primary/cost/cleanup boundaries before adoption; local protocol review remains separate."
+  ],
+  "review_request": "Independent review of exact v3 and SOURCE-INTERFACES-v3, including the narrow v2-to-v3 scope correction. Verify unchanged actual parent Popen/guard/cleanup/source/artifact predicates and strict dual-reference/candidate custody, exact genuine cold4/7/6/6 registered calls, complete C01-C15 symbolic bill and visible unknown/null tails. Treat P02-BRIDGE-SOURCE-API-1 only as a historical extra-design interface, not an original source blocker. No design acceptance supplies implementation/adoption/runtime/funding/fit/complete-cost admission.",
+  "schema": "p02-fixed-dual-original-reference-bridge-design-v3",
+  "scope_correction": {
+    "implementation_accepted": false,
+    "independent_design_review_pending": true,
+    "narrow_change": "Remove only the added requirement to construct a new enclosing financial/accounting API as an original S03.08 source prerequisite. Preserve complete symbolic bill, authentic actual parent/guard/known-cleanup/source/artifact checks, exact cold4/7/6/6 transport, all unknown costs/tails and all separate actual execution/adoption/funding/fit gates.",
+    "original_contracts": {
+      "caller_equality": {
+        "bytes": 10515,
+        "mode": "0444",
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v1/contracts/CALLER-EQUALITY-DEFINITION-v1.json",
+        "sha256": "4a11f90727c636bdbaaf683d1ac95aa9234324698fb594a7da92a92f6a45c7eb"
+      },
+      "complete_symbolic_cost": {
+        "bytes": 9184,
+        "mode": "0444",
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v1/contracts/COMPLETE-SYMBOLIC-COST-DEFINITION-v1.json",
+        "sha256": "6ab22ebb387f15f9a1fd91e257ecae649eb4b177af32d4652c2eaec061e3b48c"
+      },
+      "original_checklist": {
+        "bytes": 8029,
+        "mode": "0444",
+        "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/strict-source-review-20261030T231709Z/parent/NEXT-SOURCE-CHECKLIST-v1.json",
+        "sha256": "0c0ed109bd6d1bdbfa457c2f25c437b5a97cad44fd590b989d0fb74cd20544ce"
+      }
+    },
+    "scope_clarification": {
+      "bytes": 10874,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-custody-independent/G12-CUSTODY-SOURCE-SCOPE-CLARIFICATION-v1.json",
+      "sha256": "a9261f686d4fbe6ca40258335231a730dc7e3319be7cedf7c39e189a57c7f367"
+    },
+    "scope_clarification_freeze": {
+      "bytes": 714,
+      "mode": "0444",
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/g12-custody-independent/SOURCE-SCOPE-CLARIFICATION-FREEZE-v1.json",
+      "sha256": "0d611f41462951d2d875947ba0e156121d876324afa21a4713fd546c873736ad"
+    },
+    "whole_activity_credit": 0
+  },
+  "source_edges": [
+    [
+      "original_producer",
+      "main",
+      136,
+      174,
+      "Exact benchmark argv, mandatory authentic original anchor, original driver/engine/inventory checks."
+    ],
+    [
+      "original_producer",
+      "main",
+      182,
+      218,
+      "Separate fresh source/engine roots; pure original arithmetic versus native cold build/all controls/bind."
+    ],
+    [
+      "engine/native_backend.py",
+      "build_native",
+      257,
+      290,
+      "Native compiler subprocess.run(timeout=90), actual return, complete build.json and extension hash, real load."
+    ],
+    [
+      "original_producer",
+      "main",
+      257,
+      352,
+      "Original CLI once, checks, six complete exports, full trace, anchor equality, source custody, receipt then final stdout tail."
+    ],
+    [
+      "engine/compare_side_verifier.py",
+      "write_scientific",
+      74,
+      93,
+      "Raw result/witness/rank bytes, full side digests and sizes."
+    ],
+    [
+      "engine/source/complex_network.py",
+      "certificate",
+      90,
+      120,
+      "Fixed H=25 standard original call/return/output, no extra target."
+    ],
+    [
+      "original_guard",
+      "main",
+      166,
+      310,
+      "Existing phase/locks/budgets, fixed Root argv, actual wait, log/source checks and canonical receipt."
+    ],
+    [
+      "root",
+      "_entry",
+      804,
+      833,
+      "Authentic Root/provider capability/API injection and exact selected source execution."
+    ],
+    [
+      "root",
+      "_hash_regular",
+      480,
+      506,
+      "Bounded source hashes; add full-mode, path/dirfd and final identity checks in new custody reader."
+    ],
+    [
+      "provider",
+      "preflight_runtime",
+      452,
+      458,
+      "Unchanged selected runtime/header/file audit."
+    ],
+    [
+      "epoch_authority",
+      "load/invoke/make_caller_descriptor",
+      2107,
+      2369,
+      "Existing cold source registration/invocation/currentness and authenticated caller descriptor, no authority relaxation."
+    ],
+    [
+      "local_p02_driver",
+      "initial capture",
+      127,
+      193,
+      "Insert complete immutable dual-reference cold join immediately after original authority capture, before EARLY_INTEGRATION_SOURCE_PINS loop exposes candidate integrations."
+    ],
+    [
+      "local_p02_driver",
+      "main_epoch",
+      900,
+      950,
+      "Actual private invocation object and initial output/frozen/reference/anchor bindings."
+    ],
+    [
+      "local_p02_driver",
+      "main_epoch",
+      1092,
+      1104,
+      "Attach joined projection before scientific module load, bind actual invocation object at prepare and again at original bind_locals."
+    ],
+    [
+      "local_p02_driver",
+      "main_epoch",
+      1190,
+      1260,
+      "Actual finish call is1225 after original anchor/source checks and before data_finalization1227; all late checks/receipt/stdout/outer retirement remain."
+    ],
+    [
+      "local_p02_driver",
+      "_epoch_p02_controller_entry",
+      2491,
+      2552,
+      "Original one-use helper/source path, actual return after original tail and P02 sidecar publication."
+    ]
+  ],
+  "source_interfaces": {
+    "bytes": 12560,
+    "mode": "0444",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/SOURCE-INTERFACES-v3.json",
+    "sha256": "1d51889836e1dbc73f68c96395308bbd5de45279db1078c25d44402e2c414b05"
+  },
+  "source_pins": {
+    "bytes": 10881,
+    "mode": "0444",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/SOURCE-PINS-v3.json",
+    "sha256": "a1773498e738ac9a193f6772c117c5d35be7494c9e7e2abda16143d11045cf5a"
+  },
+  "status": "FROZEN_SOURCE_DESIGN_FOR_INDEPENDENT_REVIEW_ORIGINAL_COST_GATES_SEPARATE",
+  "stop": "Freeze and send exact design/freeze pins promptly. No implementation/adoption/execution in this assignment.",
+  "stop_rule": {
+    "baseline": "49/52 at 2026-10-31T01:59:08.955035Z",
+    "context": "At context limit freeze/end; if context is lost stop and message parent before any filesystem operation.",
+    "freeze_and_end_no_later_than": "2026-10-31T02:29:08.955035Z",
+    "reset": "Only parent-announced genuine newly accepted body count/deadline; design approval is not a reset."
+  },
+  "strict_parser_and_projection": {
+    "exposure": "cold_join_p02 finishes full join before candidate integration source exposure. bind_p02_projection later creates exactly five fresh builtin members prescribed by frozen schema, solely from capsule; no scientific result is hard-coded. Projection is installed only into actual private _P02[reference]. Keep immutable capsule and container identity/value snapshot for mutation checks; failed checks reject rather than repair.",
+    "full_return": "_validate_typed_tree validates entire root [dict, ordered pair list], never accepts a role-only subtree as complete. Tags/arity exactly frozen projection schema: None1,bool2,int2,str2,float2,list2,tuple2,dict2,Fraction3. int payload canonical decimal str; Fraction payload exact JSON ints with positive reduced denominator; float payload exact canonical float.hex str. Preserve every dict/list/tuple boundary and pair order. Reject unknown tag, duplicate decoded-equivalent dict keys even across numeric tags, unhashable keys and noncanonical tags/arity. Key equivalence uses only normalized primitive numeric/tuple keys and trusted stdlib operations; no user equality/constructors. Keep the full tagged tree; materialize only required primitive fields, never scientific classes.",
+    "join": "Authenticate two successful distinct parent lanes before parsing; same exact original producer/engine/inventory/base/upstream/anchor/relative namespace/workload. Distinct roots/generations/identities. Compare all six entire raw artifact byte sequences plus full trace; both complete typed returns and projected domains validated. Only then create an immutable capsule of source/file/provenance pins, pure six bytes tuple, pure role/rank/trace primitive tuples, native counter tuple. No mutable containers shared across lanes/candidate.",
+    "json": "Reject duplicate members recursively, NaN/Infinity JSON tokens, invalid UTF8, nonprimitive objects and trailing data. Exact builtin types throughout; bool never satisfies int. Original compact canonical scientific JSON must round-trip byte-for-byte; original pretty receipt bytes retained and checked by original serialization where relevant.",
+    "native": "Actual native receipt native_calls exact keys complement_native,complement_fallback,gram_native,gram_fallback; exact nonnegative ints. Pure native_calls must be None. Original native full-count assertion remains its own source obligation, never used to fabricate reference counters.",
+    "rank": "Complete rank-trace.json exact JSON list of pairs, each rows list of exact ints and rank exact int. Restore fresh list of(tuple(rows),rank) pairs in original order; no sorting/deduplication/suffix. Source authenticates actual row/rank results; parser performs shape and receipt count joins only.",
+    "role": "Select unique top-level [str,role_frames] pair, require exact ordered member keys roles,forward_frames_nested,reverse_complement_frames_nested and exact int,bool,bool values. Fresh exact builtin dict from actual pure values.",
+    "trace": "Complete complement-transcript.json exact keys calls,canonical_stream_bytes,sha256,schema; first two exact nonnegative ints, lowercase64 SHA, exact source schema literal. Require both entire raw trace byte equality and primitive object equality; preserve full cumulative receipt, no digest subtraction."
+  },
+  "supersedes": {
+    "bytes": 47103,
+    "mode": "0444",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/p02-reference-bridge/DESIGN-v2.json",
+    "sha256": "4a3f5b8b73c0ae082a7b3cc91edaaf33f53a2a495361c7dbfa08774811ce884a"
+  }
+}

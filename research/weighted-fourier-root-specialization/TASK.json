@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "task_id": "replay-runtime",
+  "priority_revision": 8,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "original_card": {
+    "id": "replay-runtime",
+    "question": "Can one measured replay bottleneck be sped up without dropping coverage?",
+    "starting_points": [
+      "scripts/run_isolated_tests.py",
+      "scripts/verify_replay_coverage.py",
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "Profile one isolated replay and optimize the measured bottleneck.",
+      "Design source-bound reuse with explicit dependency invalidation and negative controls."
+    ],
+    "acceptance_gate": "Report before/after wall time on the same fixture, retained checks and invalidation behavior.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_selected_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Resolve the current selected review, separate complex/ordinary BIT/admitted BIT/outer budgets, and compare the card against live handoffs before starting. Historical ceilings require exact source/model equivalence.",
+      "scope": "Source-binding orientation only; not a scientific replay or all-size proof. Materialize selected inputs if this checkout is sparse."
+    },
+    "first_experiment": "Measure one unchanged fixture, preserve check coverage, and test one optimization with invalidation controls.",
+    "bottleneck_link": "Faster trustworthy replays increase review throughput and let mechanism candidates be checked sooner.",
+    "allowed_variations": [
+      "Profile one stage or design one source-bound cache boundary."
+    ],
+    "scope_change_triggers": [
+      "Skipping coverage or comparing different fixtures to claim speedup."
+    ],
+    "overlap_terms": [
+      "replay runtime",
+      "cache invalidation",
+      "isolated tests"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Specialize exact root multiplication in the complete pinned PR1477 weighted-Fourier scientific caller, retain its eleven tests, and measure the complete caller in alternating fresh processes.",
+  "scope_change_reason": "The replay-runtime card is instantiated at one fixed cyclotomic arithmetic kernel. This is implementation work, not a mathematical extension or audit of the predecessor.",
+  "bottleneck_link": "The exact literal oracle is part of the replay cost. Removing generic polynomial arithmetic from Gaussian quarter turns lowers replay cost without removing an equation or fixture.",
+  "budget_minutes": 60,
+  "stop_rule": "Ship the first measured improvement with identical complete receipts and passing conformance/rejection checks. Do not extend the specialization or search for further speedups.",
+  "outcome": "completed",
+  "evidence": "Written kernel-preservation proof; 7225 Gaussian and 1127 fallback comparisons; complete unchanged receipt; eleven retained tests; three kernel mutants; eight source/entry controls; ten alternating fresh-process timing pairs.",
+  "author": "Nick Petalas",
+  "ai_assistance": "Independent human and formal proof-kernel review are unclaimed.",
+  "open_questions": [
+    {
+      "question": "Would the same exact quarter-turn specialization help an actual selected native caller?",
+      "why_it_matters": "The measured gain here applies only to the phase-weighted Fourier replay, not the selected construction.",
+      "first_step": "Profile one named selected caller and identify whether Gaussian root multiplication is material before changing its arithmetic.",
+      "blocked_by": "A new source-specific profile, conformance argument and complete-caller benchmark are required."
+    }
+  ],
+  "question_source": {
+    "pr": 1477,
+    "author": "bbMisk",
+    "usage": "Originally posed implementation question at the retained caller; the source open physical-schedule question is not pursued."
+  },
+  "coordination": {
+    "claim_url": "https://github.com/CrocSwap/integer-mult-bounds/discussions/1166#discussioncomment-19299766",
+    "overlap": "Live open PRs, recent handoffs, merged searches and main README searches. PR5946 changes input contracts; PR4874 changes arity. Neither is the target here. The source supplied one target in the account last-week list, and no matching local reservation existed. Sparse notes and unpublished work remain limits.",
+    "remote_coverage": {
+      "open_prs": 364,
+      "discussion_records": 6107,
+      "complete_remote_pagination": true,
+      "local_notes_complete": false
+    }
+  },
+  "measurement": {
+    "pairs": 10,
+    "baseline_median_seconds": 0.6938914379570633,
+    "specialized_median_seconds": 0.609113916521892,
+    "median_wall_time_reduction_percent": 12.217692393607148,
+    "failures": 0,
+    "scope": "Complete retained scientific main, with tests and new controls checked separately."
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "accounting_boundary": "Operation and runner timings are nested; only encompassing queue plus residual is charged. Final residual-receipt write tail remains explicitly excluded. Metadata/source review cost is not scientific runtime. Complete payload read bill4,584,304,464bytes and write bill805,484,586bytes exclude separately recorded metadata IO.",
+  "actual_archive_outcome_admission": true,
+  "archive_representation_reduction_admission": true,
+  "archive_result": {
+    "blobs": 229,
+    "complete_archive_bytes": 63103336,
+    "current_workspace_reclaimed_bytes": 0,
+    "metadata_files": 32,
+    "reduction_bytes": 680230487,
+    "reduction_fraction": 0.9151076756532845,
+    "runs": 27,
+    "source_files": 1179,
+    "source_logical_bytes": 743333823,
+    "unique_blob_bytes": 62150763
+  },
+  "archive_root_sha256": "e9f40f7fcd59f22319c856201ec31389d87da125cc88c2a6af9576ce20d2ee66",
+  "area": "retention",
+  "checks_passed": 8657,
+  "costs": {
+    "charged_before_seconds": 81.85018230997026,
+    "child_cpu_seconds_rounded": 16.47,
+    "child_seconds": 67.91564102901611,
+    "complete_payload_read_bill_bytes": 4584304464,
+    "complete_payload_write_bill_bytes": 805484586,
+    "consumer_seconds_before_receipt": 67.8564970769803,
+    "cumulative_charged_seconds": 149.87018230997026,
+    "outer_cpu_seconds_rounded": 17.83,
+    "payload_bill_basis": "Fresh original before/after inventories eachS; create sourceS + reused/finalblobS; restoreblobS+2U + separate oracleS. Operation counters and reviewed source authenticate these reads inside parent job.",
+    "peak_rss_kib": 35284,
+    "sampled_group_rss_bytes": 37552128,
+    "whole_queue_conservative_seconds": 68.02000000000001
+  },
+  "custody": {
+    "all_27_original_closed_run_receipts_unchanged": true,
+    "current_original_metadata_identity_and_modes_match": true,
+    "current_restored_entry_identity_and_modes_match": true,
+    "current_workspace_reclaimed_bytes": 0,
+    "original_allocated_bytes_after": 437802496,
+    "original_allocated_bytes_before": 437802496,
+    "original_complete_before_after_inventories_identical": true,
+    "originals_preserved": true,
+    "restored_content_projection_identical": true,
+    "restored_root_only_ctime_changed_at_same_parent_rename": {
+      "ctime_ns": [
+        1793148368916161027,
+        1793148371565094321
+      ]
+    },
+    "source_restore_archive_file_inodes_disjoint": true
+  },
+  "disposition": "G3_HISTORICAL_ARCHIVE_CREATE_RESTORE_AUTHENTICATED_PASS",
+  "findings": [
+    "Actual guarded runner, consumer, create and restore all PASS; exact START/RESULT/receipt, stage/source/config and raw log pins authenticate the admitted invocation. Original source lock execution is parent-attested; live reviewer metadata pass independently found the same lock inode and used shared nonblocking access.",
+    "Original inventory and fresh after inventory are byte-for-byte equal, including every logical hash, identity/mode field and allocation count. All27closed runs are present, including five publication runs outside the supplemental22-run index.",
+    "Package ROOT matches the external parent pin. All32metadata files authenticate; exact28run manifests partition the full inventory; the229blob descriptors are the complete unique digest/size set with62,150,763payload bytes. Current263file package membership/modes/sizes match.",
+    "Restored independent oracle hash authenticates all1,179files and312directories with complete byte/mode projection equality; all entry identities remain as recorded. Root ctime alone changes on successful rename; root identity/mode and all child metadata remain bound. Source, archive and restore file inode sets are disjoint.",
+    "The complete archive occupies63,103,336logical bytes, reducing the representation by680,230,487bytes or91.51076756532845percent relative to743,333,823source bytes. No original was removed.",
+    "Retaining the restored tree and receipts makes the identified new execution artifacts807,772,463logical bytes. Adding the retained historical source yields1,551,106,286bytes for those scopes; this is not reclaimed space.",
+    "The charged enclosing run is68.02seconds including a0.01second conservative GNUtime allowance, bringing cumulative budget usage to149.87018230997026seconds. Child16.47CPU seconds and enclosing17.83CPU seconds have different scopes and are not added.",
+    "Parent execution performed the fresh full source, blob and restored payload scans. This independent review authenticates retained proofs and live metadata; it deliberately does not claim a second full-payload replay."
+  ],
+  "footprint_scope": "Listed actual run, enclosing queue and accounting artifacts only; excludes prior stage/source copies, mutable STATUS.json and this independent review bundle. Logical bytes are exact at review; stat allocated bytes are changing diagnostics, not physical shared extents.",
+  "footprints": {
+    "all_new_retained_execution_bytes": 807772463,
+    "archive": {
+      "directories": 5,
+      "files": 263,
+      "logical_bytes": 63103336,
+      "stat_allocated_bytes": 37629440
+    },
+    "complete_run_folder": {
+      "directories": 321,
+      "files": 1455,
+      "logical_bytes": 807765920,
+      "stat_allocated_bytes": 475844096
+    },
+    "originals_plus_all_new_retained_execution_bytes": 1551106286,
+    "queue_and_accounting_bytes_outside_run": 6543,
+    "queue_and_accounting_files_outside_run": [
+      {
+        "allocated_bytes_diagnostic": 512,
+        "bytes": 0,
+        "path": "validation/attempts/G3HistoricalArchiveV5/G3-historical-archive-v5.stderr"
+      },
+      {
+        "allocated_bytes_diagnostic": 4608,
+        "bytes": 583,
+        "path": "validation/attempts/G3HistoricalArchiveV5/G3-historical-archive-v5.gate.json"
+      },
+      {
+        "allocated_bytes_diagnostic": 4608,
+        "bytes": 1783,
+        "path": "validation/attempts/G3HistoricalArchiveV5/G3-historical-archive-v5.stdout"
+      },
+      {
+        "allocated_bytes_diagnostic": 4608,
+        "bytes": 1357,
+        "path": "validation/G3HistoricalArchiveV5-QUEUE.json"
+      },
+      {
+        "allocated_bytes_diagnostic": 512,
+        "bytes": 102,
+        "path": "validation/G3HistoricalArchiveV5-OUTER-TIME.txt"
+      },
+      {
+        "allocated_bytes_diagnostic": 512,
+        "bytes": 29,
+        "path": "runtime/runs/G3HistoricalArchiveV5-parent-overhead/START.json"
+      },
+      {
+        "allocated_bytes_diagnostic": 4608,
+        "bytes": 1561,
+        "path": "runtime/runs/G3HistoricalArchiveV5-parent-overhead/receipt.json"
+      },
+      {
+        "allocated_bytes_diagnostic": 512,
+        "bytes": 29,
+        "path": "runtime/runs/G3HistoricalArchiveV5-process-envelope-residual/START.json"
+      },
+      {
+        "allocated_bytes_diagnostic": 4608,
+        "bytes": 1099,
+        "path": "runtime/runs/G3HistoricalArchiveV5-process-envelope-residual/receipt.json"
+      }
+    ],
+    "restored": {
+      "directories": 312,
+      "files": 1179,
+      "logical_bytes": 743333823,
+      "stat_allocated_bytes": 437786112
+    },
+    "science_after_receipt": {
+      "directories": 320,
+      "files": 1450,
+      "logical_bytes": 807762824,
+      "stat_allocated_bytes": 475829248
+    },
+    "source": {
+      "directories": 312,
+      "files": 1179,
+      "logical_bytes": 743333823,
+      "stat_allocated_bytes": 437802496
+    }
+  },
+  "independent_checks": {
+    "bytes": 1068986,
+    "mode": 436,
+    "path": "review/historical-archive-v5-execution/OUTCOME-CHECKS.json",
+    "sha256": "bff9c0d45aea70876ae1bda40bda5d390fd67b096c6a288a99dfe2641d4a1c31"
+  },
+  "original_inventory_sha256": "bdbc9ba70d823593c20c06caed556841a3f12eb3b825b5f1ee7003b618ed51cf",
+  "payload_validation_boundary": {
+    "method": "Independent parse/hash of retained metadata and logs, exact manifest/blob closure, current metadata identity and footprint census. Full payload oracle and archive scans occurred within authenticated guarded parent execution; no second full payload replay.",
+    "parent_guarded_full_payload_validation": true,
+    "reviewer_full_payload_replay_bytes": 0
+  },
+  "pinned_metadata_source_log_files": 129,
+  "postrun_hook_admission": false,
+  "required_next": [
+    "Preserve original raws, this package and external ROOT/inventory pins. Keep the exact original/after/restored inventories and copied standalone tools.",
+    "Treat the retained archive as one admitted historical example; postrun selection/copy/hook source and execution remain separate gates.",
+    "Any additional independent full payload replay must be a new parent-guarded, charged job. No reviewer-side oracle invocation or automatic retry.",
+    "Do not infer scientific speedup, scientific output equivalence beyond the archived artifacts, or workspace reclamation from this result."
+  ],
+  "restored_inventory_sha256": "d4cd4f7033e5f98dc5c57e3f309d68dbd10ff9680aa8cde9dfd1af93dcb2a82a",
+  "reviewer_full_payload_replay_count": 0,
+  "revision": 5,
+  "schema": "h25-independent-historical-archive-outcome-review-v1",
+  "scientific_execution_admission": false,
+  "scientific_performance_claim_admission": false,
+  "source_gate": {
+    "bytes": 15640,
+    "mode": 292,
+    "path": "review/historical-archive-v5-source/REVIEW.json",
+    "sha256": "d6ce4ab0653bc30d53c61ec01737b1313cf2f1e112c58e92f3b75fe5d324a172"
+  }
+}

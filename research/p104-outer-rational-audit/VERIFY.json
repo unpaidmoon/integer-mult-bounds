@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/kappa-rebuild/controller/outer_parameters.py",
+    "research/kappa-rebuild/transfer-audit/outer_transfer_audit.py",
+    "research/p104-retained-operand-descent/RESULT.json",
+    "research/p104-retained-operand-descent/pricing.py",
+    "research/p104-retained-operand-independent-audit/README.md",
+    "research/pr4359-p7-padding/dependencies/compiler-refill/endpoint.py",
+    "research/query-thinned-controllers/RESULT.json"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Independent exact nine savings54strict4functional reconstruction, full name/parameter/value comparison, stock ordering and semantic rejection controls."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-B",
+        "-O",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Same source-bound exact arithmetic and rejection controls with optimized Python."
+    }
+  ]
+}

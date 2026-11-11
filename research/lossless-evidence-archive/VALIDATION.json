@@ -1,0 +1,61 @@
+{
+  "final_physical_publication_boundary": "OPEN_NOT_ZERO",
+  "historical_physical_gap_retained": true,
+  "metadata_check": "PASS_PACKAGE_METADATA_AND_PINS",
+  "old_failures_preserved": "Private staging closure and CLI failures; logadapter readonly-copy failure preserved before the3line private-copy repair. No timing rerolls.",
+  "recorded_utc": "2026-10-30T21:47:43.574307+00:00",
+  "schema": "standalone-tool-release-validation-v1",
+  "scientific_or_throughput_claim": false,
+  "source_review_scope": "Independent adapter and original-source conservation review before addition of this non-executable release metadata",
+  "source_review_sha256": "67903feec302b1f5768a2d71d37a4a54b42f7f3ff8efaaa4107c25cb9d4bf921",
+  "tests": [
+    {
+      "genuine_runner_receipt_sha256": "0bdd6ebe30a3dddb6e5772eef2df33914d555ce0f68ab9eeaaf371c0b0b7357f",
+      "label": "archive-normal",
+      "raw_stdout_sha256": "e62422a9be73a2d48e78d1add839be4b8bd810fc0ea7b22060d900385d6e867b",
+      "runner_wall_seconds": 9.670853329997044,
+      "sampled_process_group_rss_bytes": 25362432,
+      "summary": {
+        "boundary": "Finite fixture replay only; historical payload not replayed; no scientific or reclamation claim.",
+        "case_count": 98,
+        "expected_STOP": 93,
+        "optimized": 0,
+        "positive": 5,
+        "report": "/tmp/lossless-evidence-archive-sabopbyj/controls/CONTROL-RESULT.json",
+        "retained_output": "/tmp/lossless-evidence-archive-sabopbyj/controls",
+        "source_sha256": {
+          "COVERAGE-v5.json": "dfada24bd481a79048ac70eb0bcfcf4d7b43982051b24352401f2d80dd32369e",
+          "USAGE.md": "13edef89fe8aa68cd662ccc6b0c6fbac7026e08385303c605963594f77c9ba89",
+          "archive.py": "5c60009c9ba1dd9eab5ba85b859ae3ca43b36ed1675100e824a801c9f04804f7",
+          "controls.py": "ece5c5a7f4282c783c7ccd274c5c130b1af12e5dc2cae8946dd9974ff7b66e89",
+          "oracle.py": "5617967782a34a142dad25f499f432e6c5736a670bec6db6192c143bb774d9f3"
+        },
+        "status": "PASS"
+      }
+    },
+    {
+      "genuine_runner_receipt_sha256": "d72fca9edc53e9ea8a2bfc098462f47f1e4561a99498e8402c9ab32611d7c3f7",
+      "label": "archive-optimized",
+      "raw_stdout_sha256": "de9f044c5385fe6b09a4a7b165a63582b55b230df06e7c9c176bebd25f0e8ac4",
+      "runner_wall_seconds": 10.19187283294741,
+      "sampled_process_group_rss_bytes": 25980928,
+      "summary": {
+        "boundary": "Finite fixture replay only; historical payload not replayed; no scientific or reclamation claim.",
+        "case_count": 98,
+        "expected_STOP": 93,
+        "optimized": 1,
+        "positive": 5,
+        "report": "/tmp/lossless-evidence-archive-32emww6s/controls/CONTROL-RESULT.json",
+        "retained_output": "/tmp/lossless-evidence-archive-32emww6s/controls",
+        "source_sha256": {
+          "COVERAGE-v5.json": "dfada24bd481a79048ac70eb0bcfcf4d7b43982051b24352401f2d80dd32369e",
+          "USAGE.md": "13edef89fe8aa68cd662ccc6b0c6fbac7026e08385303c605963594f77c9ba89",
+          "archive.py": "5c60009c9ba1dd9eab5ba85b859ae3ca43b36ed1675100e824a801c9f04804f7",
+          "controls.py": "ece5c5a7f4282c783c7ccd274c5c130b1af12e5dc2cae8946dd9974ff7b66e89",
+          "oracle.py": "5617967782a34a142dad25f499f432e6c5736a670bec6db6192c143bb774d9f3"
+        },
+        "status": "PASS"
+      }
+    }
+  ]
+}

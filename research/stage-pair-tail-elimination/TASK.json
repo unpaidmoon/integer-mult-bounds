@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "task_id": "replay-runtime",
+  "priority_revision": 8,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "original_card": {
+    "id": "replay-runtime",
+    "question": "Can one measured replay bottleneck be sped up without dropping coverage?",
+    "starting_points": [
+      "scripts/run_isolated_tests.py",
+      "scripts/verify_replay_coverage.py",
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "Profile one isolated replay and optimize the measured bottleneck.",
+      "Design source-bound reuse with explicit dependency invalidation and negative controls."
+    ],
+    "acceptance_gate": "Report before/after wall time on the same fixture, retained checks and invalidation behavior.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_selected_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Resolve the current selected review, separate complex/ordinary BIT/admitted BIT/outer budgets, and compare the card against live handoffs before starting. Historical ceilings require exact source/model equivalence.",
+      "scope": "Source-binding orientation only; not a scientific replay or all-size proof. Materialize selected inputs if this checkout is sparse."
+    },
+    "first_experiment": "Measure one unchanged fixture, preserve check coverage, and test one optimization with invalidation controls.",
+    "bottleneck_link": "Faster trustworthy replays increase review throughput and let mechanism candidates be checked sooner.",
+    "allowed_variations": [
+      "Profile one stage or design one source-bound cache boundary."
+    ],
+    "scope_change_triggers": [
+      "Skipping coverage or comparing different fixtures to claim speedup."
+    ],
+    "overlap_terms": [
+      "replay runtime",
+      "cache invalidation",
+      "isolated tests"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Reduce exact modular row arithmetic in the complete fixed h=6 stage-pair certificate by skipping proved-zero prefixes, preserving all output fields, rank fallbacks, source checks and cache decisions.",
+  "scope_change_reason": "An originally posed replay-runtime experiment on the complete historical h=6 caller. The modular elimination has a finite known-zero prefix after each pivot. The prior mathematical results are cited, not audited as the deliverable.",
+  "bottleneck_link": "A small verification-throughput improvement. The profile identifies modular elimination as a minor component; the headline is exact redundant arithmetic removed, with complete runtime measured separately.",
+  "budget_minutes": 60,
+  "stop_rule": "Ship the first verified elimination-work reduction. Do not optimize matrix subtraction, rational rank, source construction, cache policy or any other path.",
+  "outcome": "completed",
+  "evidence": "verify.py and adapter.py: full byte-identical scientific payload, identical 65536-entry cache workload, live rank comparison, reference bytecode multiplication count, independent minor oracle and boundary/arithmetic controls. benchmark.py measures complete alternating fresh processes without a timing threshold.",
+  "author": "Nick Petalas",
+  "ai_assistance": "Independent human and formal proof-kernel review are unclaimed.",
+  "open_questions": [
+    {
+      "question": "Would the same zero-prefix optimization pay off in another explicitly pinned modular-rank caller?",
+      "why_it_matters": "The current full caller is dominated by rational matrix operations, so an arithmetic reduction need not yield a stable wall-time gain.",
+      "first_step": "Profile a named complete caller and establish its input, source and cache contracts before applying the kernel.",
+      "blocked_by": "No other caller, shared-code integration or broader runtime gain is certified here."
+    }
+  ],
+  "playbook": "autonomous local run",
+  "claim_url": "https://github.com/CrocSwap/integer-mult-bounds/discussions/1166#discussioncomment-19299758",
+  "question_source": "original",
+  "predecessors": [
+    {
+      "pr": 824,
+      "author": "navinor",
+      "scope": "Stage-pair performance baseline; Fraction and modular inverse optimizations, not this tail-only kernel."
+    }
+  ]
+}

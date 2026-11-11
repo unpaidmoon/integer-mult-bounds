@@ -1,0 +1,587 @@
+{
+  "chronological_fixtures": [
+    {
+      "appended_integer_shears": 2,
+      "appended_queries": 3,
+      "dirty_rational_cases": 75,
+      "eager_events": 12,
+      "no_pure_entry_B_query": true,
+      "numeric_logical_events_executed": 4125,
+      "query_forms_in_entry_coordinates": [
+        [
+          "-1/4",
+          [
+            "1",
+            "4"
+          ]
+        ],
+        [
+          "-5/2",
+          [
+            "1",
+            "2"
+          ]
+        ],
+        [
+          "11/4",
+          [
+            "1",
+            "0"
+          ]
+        ]
+      ],
+      "r": 4,
+      "repair": [
+        [
+          "Q",
+          "-1/4"
+        ],
+        [
+          "S",
+          "-2"
+        ],
+        [
+          "Q",
+          "-5/2"
+        ],
+        [
+          "S",
+          "-2"
+        ],
+        [
+          "Q",
+          "11/4"
+        ]
+      ],
+      "retained_child_events": 8,
+      "symbolic_logical_events_executed": 68
+    },
+    {
+      "appended_integer_shears": 2,
+      "appended_queries": 3,
+      "dirty_rational_cases": 75,
+      "eager_events": 24,
+      "no_pure_entry_B_query": true,
+      "numeric_logical_events_executed": 7125,
+      "query_forms_in_entry_coordinates": [
+        [
+          "-7/8",
+          [
+            "1",
+            "8"
+          ]
+        ],
+        [
+          "-21/4",
+          [
+            "1",
+            "4"
+          ]
+        ],
+        [
+          "49/8",
+          [
+            "1",
+            "0"
+          ]
+        ]
+      ],
+      "r": 8,
+      "repair": [
+        [
+          "Q",
+          "-7/8"
+        ],
+        [
+          "S",
+          "-4"
+        ],
+        [
+          "Q",
+          "-21/4"
+        ],
+        [
+          "S",
+          "-4"
+        ],
+        [
+          "Q",
+          "49/8"
+        ]
+      ],
+      "retained_child_events": 16,
+      "symbolic_logical_events_executed": 116
+    },
+    {
+      "appended_integer_shears": 2,
+      "appended_queries": 3,
+      "dirty_rational_cases": 75,
+      "eager_events": 48,
+      "no_pure_entry_B_query": true,
+      "numeric_logical_events_executed": 13125,
+      "query_forms_in_entry_coordinates": [
+        [
+          "-35/16",
+          [
+            "1",
+            "16"
+          ]
+        ],
+        [
+          "-85/8",
+          [
+            "1",
+            "8"
+          ]
+        ],
+        [
+          "205/16",
+          [
+            "1",
+            "0"
+          ]
+        ]
+      ],
+      "r": 16,
+      "repair": [
+        [
+          "Q",
+          "-35/16"
+        ],
+        [
+          "S",
+          "-8"
+        ],
+        [
+          "Q",
+          "-85/8"
+        ],
+        [
+          "S",
+          "-8"
+        ],
+        [
+          "Q",
+          "205/16"
+        ]
+      ],
+      "retained_child_events": 32,
+      "symbolic_logical_events_executed": 212
+    },
+    {
+      "appended_integer_shears": 2,
+      "appended_queries": 3,
+      "dirty_rational_cases": 75,
+      "eager_events": 96,
+      "no_pure_entry_B_query": true,
+      "numeric_logical_events_executed": 25125,
+      "query_forms_in_entry_coordinates": [
+        [
+          "-155/32",
+          [
+            "1",
+            "32"
+          ]
+        ],
+        [
+          "-341/16",
+          [
+            "1",
+            "16"
+          ]
+        ],
+        [
+          "837/32",
+          [
+            "1",
+            "0"
+          ]
+        ]
+      ],
+      "r": 32,
+      "repair": [
+        [
+          "Q",
+          "-155/32"
+        ],
+        [
+          "S",
+          "-16"
+        ],
+        [
+          "Q",
+          "-341/16"
+        ],
+        [
+          "S",
+          "-16"
+        ],
+        [
+          "Q",
+          "837/32"
+        ]
+      ],
+      "retained_child_events": 64,
+      "symbolic_logical_events_executed": 404
+    },
+    {
+      "appended_integer_shears": 2,
+      "appended_queries": 3,
+      "dirty_rational_cases": 75,
+      "eager_events": 192,
+      "no_pure_entry_B_query": true,
+      "numeric_logical_events_executed": 49125,
+      "query_forms_in_entry_coordinates": [
+        [
+          "-651/64",
+          [
+            "1",
+            "64"
+          ]
+        ],
+        [
+          "-1365/32",
+          [
+            "1",
+            "32"
+          ]
+        ],
+        [
+          "3381/64",
+          [
+            "1",
+            "0"
+          ]
+        ]
+      ],
+      "r": 64,
+      "repair": [
+        [
+          "Q",
+          "-651/64"
+        ],
+        [
+          "S",
+          "-32"
+        ],
+        [
+          "Q",
+          "-1365/32"
+        ],
+        [
+          "S",
+          "-32"
+        ],
+        [
+          "Q",
+          "3381/64"
+        ]
+      ],
+      "retained_child_events": 128,
+      "symbolic_logical_events_executed": 788
+    }
+  ],
+  "coefficient_fixtures": [
+    {
+      "children_materialized": true,
+      "exponent": 2,
+      "r": 4,
+      "source_shear": "-2",
+      "weights": [
+        "1/4",
+        "5/2",
+        "-11/4"
+      ]
+    },
+    {
+      "children_materialized": true,
+      "exponent": 3,
+      "r": 8,
+      "source_shear": "-4",
+      "weights": [
+        "7/8",
+        "21/4",
+        "-49/8"
+      ]
+    },
+    {
+      "children_materialized": true,
+      "exponent": 4,
+      "r": 16,
+      "source_shear": "-8",
+      "weights": [
+        "35/16",
+        "85/8",
+        "-205/16"
+      ]
+    },
+    {
+      "children_materialized": true,
+      "exponent": 5,
+      "r": 32,
+      "source_shear": "-16",
+      "weights": [
+        "155/32",
+        "341/16",
+        "-837/32"
+      ]
+    },
+    {
+      "children_materialized": true,
+      "exponent": 6,
+      "r": 64,
+      "source_shear": "-32",
+      "weights": [
+        "651/64",
+        "1365/32",
+        "-3381/64"
+      ]
+    },
+    {
+      "children_materialized": false,
+      "exponent": 10,
+      "r": 1024,
+      "source_shear": "-512",
+      "weights": [
+        "174251/1024",
+        "349525/512",
+        "-873301/1024"
+      ]
+    },
+    {
+      "children_materialized": false,
+      "exponent": 16,
+      "r": 65536,
+      "source_shear": "-32768",
+      "weights": [
+        "715795115/65536",
+        "1431655765/32768",
+        "-3579106645/65536"
+      ]
+    },
+    {
+      "children_materialized": false,
+      "exponent": 32,
+      "r": 4294967296,
+      "source_shear": "-2147483648",
+      "weights": [
+        "3074457343470774955/4294967296",
+        "6148914691236517205/2147483648",
+        "-15372286725943809365/4294967296"
+      ]
+    },
+    {
+      "children_materialized": false,
+      "exponent": 64,
+      "r": 18446744073709551616,
+      "source_shear": "-9223372036854775808",
+      "weights": [
+        "56713727820156410568005729201773259435/18446744073709551616",
+        "113427455640312821154458202477256070485/9223372036854775808",
+        "-283568639100782052876922134156285400405/18446744073709551616"
+      ]
+    },
+    {
+      "children_materialized": false,
+      "exponent": 128,
+      "r": 340282366920938463463374607431768211456,
+      "source_shear": "-170141183460469231731687303715884105728",
+      "weights": [
+        "19298681539552699237261830834781317975374856260812958108177910030936304167595/340282366920938463463374607431768211456",
+        "38597363079105398474523661669562635951089994888546854679819194669304376546645/170141183460469231731687303715884105728",
+        "-96493407697763496186309154173906589877554846037906667467816299369545057260885/340282366920938463463374607431768211456"
+      ]
+    }
+  ],
+  "controls": {
+    "false_pure_entry_B_premise": "pure entry-B query premise absent",
+    "missing_final_shear": "repair source restoration failed",
+    "non_dyadic_weight": "query coefficient outside dyadic ring",
+    "outside_power2_domain": "power-of-two r>=4 domain",
+    "query_shear_order": "repair output differs from eager",
+    "source_restore_required_even_if_output_matches": "repair source restoration failed",
+    "wrong_query_sign": "repair output differs from eager",
+    "wrong_universal_weight": "universal cubic coefficient mismatch: A^3"
+  },
+  "dirty_rational_cases": 375,
+  "dyadic_cancellation": {
+    "after_canceling_three_denominator": "2r, a power of two",
+    "inductive_residue_rows": [
+      {
+        "next_power_mod3": 2,
+        "numerators_mod3": [
+          0,
+          0,
+          0
+        ],
+        "r_mod3": 1
+      },
+      {
+        "next_power_mod3": 1,
+        "numerators_mod3": [
+          0,
+          0,
+          0
+        ],
+        "r_mod3": 2
+      }
+    ],
+    "nonzero_for_r_ge4": "c1>0, c2>0, c0<0 by their displayed factors",
+    "power_zero_residue": 1
+  },
+  "numeric_logical_events_executed": 98625,
+  "r16_scope_discriminator": {
+    "integer_shears": 2,
+    "predecessor_restricted_floor": 4,
+    "pure_entry_B_query_present": false,
+    "query_forms": [
+      [
+        1,
+        16
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "restricted_floor_applies_to_this_word": false,
+    "unrestricted_queries": 3,
+    "weights": [
+      "35/16",
+      "85/8",
+      "-205/16"
+    ]
+  },
+  "r4_prior_identity_credited": true,
+  "schema": "cubic-pow2-repair/1",
+  "scope": {
+    "arbitrary_r_classification": false,
+    "coefficient_preparation_or_physical_tariff_supplied": false,
+    "native_or_rounded_implementation": false,
+    "new_claim": "uniform three-query/two-integer-shear repair for powers of two r>=4",
+    "predecessor_code_executed": false,
+    "previously_known_counts": "r4, odd power exponents, and exponents divisible by six",
+    "query_lower_bound": "cited from PR6212, not reproved by finite fixtures",
+    "runtime_improvement_or_selected_frontier_claim": false
+  },
+  "source_sha256": {
+    "research/cubic-pure-b-boundary/PROOF.md": "f97362ac07cd0ff1fff0d7bb74e5497996eb21f12282825731e779cbed5e0792",
+    "research/dyadic-cubic-repair/PROOF.md": "1296f12278e198b6a22d8d88355cd58c1ee4fc2ab0e6941721614bb06cb1e7d5"
+  },
+  "status": "PASS",
+  "symbolic_chronological_arities": 5,
+  "universal_polynomial_certificate": {
+    "clearing_denominator": "6r",
+    "coefficient_order": "ascending powers of r",
+    "four_cleared_identities": [
+      {
+        "cleared_target": [
+          "0"
+        ],
+        "monomial": "A^3",
+        "residual": [
+          "0"
+        ]
+      },
+      {
+        "cleared_target": [
+          "0",
+          "0",
+          "-9",
+          "9"
+        ],
+        "monomial": "A^2*B",
+        "residual": [
+          "0"
+        ]
+      },
+      {
+        "cleared_target": [
+          "0",
+          "0",
+          "3",
+          "-9",
+          "6"
+        ],
+        "monomial": "A*B^2",
+        "residual": [
+          "0"
+        ]
+      },
+      {
+        "cleared_target": [
+          "0",
+          "0",
+          "0",
+          "3/2",
+          "-3",
+          "3/2"
+        ],
+        "monomial": "B^3",
+        "residual": [
+          "0"
+        ]
+      }
+    ],
+    "identity_domain": "all rational r != 0; claimed schedule uses powers of two r>=4",
+    "power_sum_recurrences": [
+      {
+        "exponent": 1,
+        "residual": [
+          "0"
+        ],
+        "sum_polynomial": [
+          "0",
+          "-1/2",
+          "1/2"
+        ]
+      },
+      {
+        "exponent": 2,
+        "residual": [
+          "0"
+        ],
+        "sum_polynomial": [
+          "0",
+          "1/6",
+          "-1/2",
+          "1/3"
+        ]
+      },
+      {
+        "exponent": 3,
+        "residual": [
+          "0"
+        ],
+        "sum_polynomial": [
+          "0",
+          "0",
+          "1/4",
+          "-1/2",
+          "1/4"
+        ]
+      }
+    ],
+    "weight_numerators": [
+      [
+        "2",
+        "-3",
+        "1"
+      ],
+      [
+        "-4",
+        "0",
+        "4"
+      ],
+      [
+        "2",
+        "3",
+        "-5"
+      ]
+    ]
+  }
+}

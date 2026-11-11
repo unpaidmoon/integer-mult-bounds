@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "task_id": "portable-replay",
+  "priority_revision": 8,
+  "base_commit": "a615e535914b130cdccf6b0eff3c3861d4a44f1c",
+  "original_card": {
+    "id": "portable-replay",
+    "question": "Can one reproducible environment or artifact-comparison failure be repaired?",
+    "starting_points": [
+      "research/gzip-container-reproducibility/README.md",
+      "docs/ci-verification.md"
+    ],
+    "methods": [
+      "Reproduce one portability failure and add a minimal cross-environment fix.",
+      "Audit one canonical-payload comparison for omitted proof-relevant fields."
+    ],
+    "acceptance_gate": "Preserve immutable source hashes and proof-relevant content; a different compressed byte stream alone is not a mathematical mismatch.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_selected_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Resolve the current selected review, separate complex/ordinary BIT/admitted BIT/outer budgets, and compare the card against live handoffs before starting. Historical ceilings require exact source/model equivalence.",
+      "scope": "Source-binding orientation only; not a scientific replay or all-size proof. Materialize selected inputs if this checkout is sparse."
+    },
+    "first_experiment": "Reproduce one specific mismatch or audit one canonical comparison for omitted proof-relevant fields.",
+    "bottleneck_link": "Portable exact checks prevent environment failures from blocking valid contributions.",
+    "allowed_variations": [
+      "One interpreter/version mismatch or one payload field comparison."
+    ],
+    "scope_change_triggers": [
+      "Removing immutable-source pins because generated compressed bytes differ."
+    ],
+    "overlap_terms": [
+      "gzip container",
+      "reproducibility",
+      "canonical payload"
+    ]
+  },
+  "scope_status": "changed",
+  "actual_scope": "Audit pending PR5721 checked_pipe under an isolated enclosing active-process policy; native payload diagnostics and observed gate cleanup before fixture teardown. Physical interpreter, explicitly observed System32 console-host auxiliary and exact named-job PID sets; no universal quota-count claim.",
+  "scope_change_reason": "Take PR5721 explicit restrictive-job handoff instead of the portable-replay card canonical-payload comparison; pending adapter is absent from current main.",
+  "bottleneck_link": "A pending Windows exact-source reader needs evidence that policy-denied payload creation preserves diagnostics and lifetime ownership.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop on one concrete failure or three discriminating native cases; setup denial and rescue never count as payload-denial success.",
+  "outcome": "partial",
+  "evidence": "Native Windows11/CPython3.12.11: requested-payload quota denial1816 with retained gate signaled before teardown, allowed3 and direct2 positive controls; exact named-job PID/image sets expose console-host auxiliary. Failed launcher/count premises retained. Eight receipt mutations. See VALIDATION.md for optimized/registered and source-transport evidence.",
+  "author": "AAAmirinu",
+  "ai_assistance": "Substantial OpenAI Codex assistance, implementation and separate AI source review; no independent human acceptance.",
+  "open_questions": [
+    {
+      "question": "Does the shared reader preserve no-retry behavior under this policy?",
+      "why_it_matters": "This package audits checked_pipe only, not the pending reader integration.",
+      "first_step": "Bind the same isolated fixture to pinned research_package.py and count real factory calls.",
+      "blocked_by": "Separate scoped consumer audit."
+    },
+    {
+      "question": "Do other restrictive policies and Windows/Python versions preserve ownership?",
+      "why_it_matters": "One active-process limit on one host does not cover other job restrictions or owner death.",
+      "first_step": "Repeat the exact discriminators on another native host before extending to one named policy.",
+      "blocked_by": "Additional host/policy evidence; production adoption remains review work."
+    }
+  ]
+}

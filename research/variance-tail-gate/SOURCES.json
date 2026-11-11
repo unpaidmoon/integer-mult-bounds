@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "d59b5035e7b4cbaa9d688a1d32dd0d6eb79c466a",
+      "sha256": "9b8d0eea95b3bf0dfcb7938a732a6439b87a2685dec2a5ab9e525b3b34debbfa"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "3404fbdd5e7529a0674eef26114b5071e4586cec",
+      "sha256": "ead6cdc9d0af6d58e8a49744d8ec8c7c15e13d2ba93c276c434bcf9b51b93a81"
+    },
+    {
+      "path": "research/adaptive-tail-entropy/PROOF.md",
+      "usage": "provenance",
+      "git_blob": "c9b0e7cb83d39ee59b3a822a2345f2acaff0369d",
+      "sha256": "2292ea3ad27f553c39254bd3bcecbf820a63e29381650627c19a70ee4461fca0"
+    },
+    {
+      "path": "research/interior-mass-tail-gate/README.md",
+      "usage": "provenance",
+      "git_blob": "4c94d71cda7f2f61e3fb2b95ab03182003fa61ca",
+      "sha256": "9a3fa58c03df3c0f0bf6a48f4500811c063131dea99fdc86fbea699b6b7e22db"
+    }
+  ]
+}

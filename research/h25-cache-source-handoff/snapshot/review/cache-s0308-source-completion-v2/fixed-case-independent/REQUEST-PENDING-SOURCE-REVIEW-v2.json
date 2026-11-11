@@ -1,0 +1,148 @@
+{
+  "accepted_designs": [
+    {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/request-pending/DESIGN-v1.json",
+      "sha256": "2b65f47db4a94cf0e0809df2e09a80b9e7be78de5e740e47d264ec1d416676d6"
+    },
+    {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/request-pending/DESIGN-REFINEMENT-v1.json",
+      "sha256": "a34dae3d71a14121e3ccd5e22300ba3e6502d79fbcf735538f63473a3472d99f"
+    },
+    {
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/request-pending/v2/REFINEMENT-v2.json",
+      "sha256": "4fcaedb7ee46ffb50ca90a0bdb585ba5caa06c2adb69d3dfc73fdd6bb0561918"
+    }
+  ],
+  "accepted_freeze": {
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/request-pending/v2/FREEZE-SOURCE-v2.json",
+    "sha256": "9d7854cb1fbc91c672e5c2573dd84fa6712488d76ea5ac4c4b5231c54fa38075"
+  },
+  "accepted_source_images": [
+    {
+      "bytes": 175709,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/request-pending/v2/g1011_epoch_cache.py",
+      "sha256": "f8200af69c829ec3e6bcdb47f6c4da5df7ccce5d5e3c8f084e0b6bee2c2428ff"
+    },
+    {
+      "bytes": 126280,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/request-pending/v2/g1011_driver.py",
+      "sha256": "6ddd318057975afac47fe1ea0e5d59c2da28eb964d82932202847088b9468d12"
+    }
+  ],
+  "blocking_defects_within_bounded_source": [],
+  "broader_goal_credit": 0,
+  "complete_source_case_adoption": false,
+  "independent_successor_checks": [
+    "All12 successor artifact lengths and SHA256 verified.",
+    "Cache source byte-identical to already reviewed v1 image.",
+    "Whole original CACHE and DRIVER byte inverses independently reconstructed from frozen splice records and exact appended source text.",
+    "AST comparison shows only _epoch_g1011_disposition semantics changed from v1 driver.",
+    "Actual retained phase owner identity/type and rows exact dict checked; each phase has positive exact-int calls and list sample count equal to calls; every actual sample has diagnostic_error None.",
+    "Top-level diagnostic traversal1668-1679 dominates the sole success return1793; no inner catch bypasses it.",
+    "Actual selected entry calls this disposition at1841 after original STOP cleanup, catches qualification failure only to retain it, then bare-raises the same primary.",
+    "Accepted ten-field SC3 observer remains exact identifier-only AST adaptation.",
+    "Original52 helper bodies, literal source source-error frames, success-only N17 original finally and genuine pending/store construction retain v1 reviewed semantics."
+  ],
+  "next_action": "Parent may integrate these exact accepted source hashes into the scoped immutable source map and obtain separate adoption review. No further G10/G11 local source repair is requested.",
+  "open_obligations": [
+    "Exact selected Root/authority/cache/driver/helper source maps and independent adoption remain required.",
+    "No constructed closed full source tuple or source-case admission follows solely from local source-image acceptance.",
+    "Parent must adjudicate canonical request-kind/fixture coverage.",
+    "Original P02 full arithmetic/count/ordered-output oracle remains separate.",
+    "No target/helper/native/compiler/test/runtime execution was performed or authorized."
+  ],
+  "preserved_prior_rejection": {
+    "finding": "G1011-F01",
+    "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/review/cache-s0308-source-completion-v2/fixed-case-independent/REQUEST-PENDING-SOURCE-REVIEW-v1.json",
+    "resolution": "Pure actual phases/rows/calls/sample traversal now rejects recorded non-None diagnostic_error before scoped disposition return.",
+    "sha256": "6edff2c00d242bf4fcf156240abcf7eeef90e5c2c9e6ad9633cdfc3292abc973"
+  },
+  "raw_diagnostic_custody_claimed": false,
+  "runtime_results": 0,
+  "schema": "cache-fixed-case-independent-request-pending-source-review-v2",
+  "source_adoption": false,
+  "source_implementation_accepted": true,
+  "source_scope": {
+    "N17_preceding_arithmetic": "Retained and chargeable but explicitly unqualified; original consumed-request oracle only.",
+    "canonical52_minimum63_unchanged": true,
+    "descriptive_selections": [
+      "N13-label",
+      "N13-residual",
+      "N14-pending",
+      "N15-store",
+      "N17-label",
+      "N17-residual"
+    ],
+    "helpers": [
+      "N13",
+      "N14",
+      "N15",
+      "N17"
+    ]
+  },
+  "status": "ACCEPT_BOUNDED_FIXED_REQUEST_PENDING_SOURCE_WITH_OPEN_MAPS_ADOPTION",
+  "target_execution_performed": false,
+  "verified_artifacts": [
+    {
+      "bytes": 1345,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/request-pending/v2/REFINEMENT-v2.json",
+      "sha256": "4fcaedb7ee46ffb50ca90a0bdb585ba5caa06c2adb69d3dfc73fdd6bb0561918"
+    },
+    {
+      "bytes": 4251,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/request-pending/v2/g1011_cache_extension.py.txt",
+      "sha256": "23396ebc12a61543c739f8e6fd1990528158da8939fae1e3942affbe93d213fd"
+    },
+    {
+      "bytes": 34880,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/request-pending/v2/g1011_driver_entry.py.txt",
+      "sha256": "f915b3971218ac1365d35cd2e78a47f20b1ca5248346dd88fff2d7d6b715833c"
+    },
+    {
+      "bytes": 11527,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/request-pending/v2/author_g1011_source.py",
+      "sha256": "0814bd4b43a25ce00729220271597f61298c08388b321c108d28ffd96e0502e0"
+    },
+    {
+      "bytes": 175709,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/request-pending/v2/g1011_epoch_cache.py",
+      "sha256": "f8200af69c829ec3e6bcdb47f6c4da5df7ccce5d5e3c8f084e0b6bee2c2428ff"
+    },
+    {
+      "bytes": 126280,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/request-pending/v2/g1011_driver.py",
+      "sha256": "6ddd318057975afac47fe1ea0e5d59c2da28eb964d82932202847088b9468d12"
+    },
+    {
+      "bytes": 6758,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/request-pending/v2/CACHE.patch",
+      "sha256": "523848a161ba0b0bee335a60c67a059a18df61603b8515e80385c4cb2a805fd4"
+    },
+    {
+      "bytes": 40515,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/request-pending/v2/DRIVER.patch",
+      "sha256": "e29f96162946ecb6dd7fdd01a0700cdac1d289f9c816385999e90b02368432d6"
+    },
+    {
+      "bytes": 2232,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/request-pending/v2/V1-TO-V2.patch",
+      "sha256": "8c10cd214a119534e481af7bb348dd3feb881c4eaf85413c1bae1253d0eabb5e"
+    },
+    {
+      "bytes": 11160,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/request-pending/v2/SOURCE-INVERSE-v1.json",
+      "sha256": "94ee5efbe62cfe8042c390b04fa0c3f7a07824edc4a8245a09e193b2ced8e36a"
+    },
+    {
+      "bytes": 7233,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/request-pending/v2/STATIC-CHECKS-v2.json",
+      "sha256": "2559c29525894b1033abb0f7a5aab190b74b4898d1c3258aea7bb1529608a6bd"
+    },
+    {
+      "bytes": 2843,
+      "path": "/home/d3lerium/.codex/.chatgpt-projects/g-p-6ad5817fd84881918865926b6fd51453/outputs/h25-data-handling-20261028/areas/cache-s0308-source-completion-v2/request-pending/v2/REPORT-v2.json",
+      "sha256": "97984306c4e8924083e5e126ac6d3b506322c1d283c943f50ef35da0e5dcf133"
+    }
+  ],
+  "whole_s0308_credit": 0
+}

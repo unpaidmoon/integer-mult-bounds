@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/weighted-fourier-layout/EXPECTED.json",
+    "research/weighted-fourier-layout/SOURCES.json",
+    "research/weighted-fourier-layout/oracle.py",
+    "research/weighted-fourier-layout/test_verify.py",
+    "research/weighted-fourier-layout/verify.py",
+    "upstream/build/sections/07-resampling.tex",
+    "upstream/manifest.json"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Complete pinned caller and canonical receipt, eleven retained tests, exact kernel conformance, actual arithmetic mutants and source/entry rejection controls."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "The same complete checks under optimized Python; all acceptance guards remain active."
+    }
+  ]
+}

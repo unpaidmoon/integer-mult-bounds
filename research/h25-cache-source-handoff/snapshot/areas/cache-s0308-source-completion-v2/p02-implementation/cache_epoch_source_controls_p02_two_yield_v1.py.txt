@@ -1,0 +1,845 @@
+"""Concrete future SOURCE controls. Nothing in this module is an execution grant.
+
+Each case requires its own genuine source-authenticated cold owner/context from
+an independently admitted parent control driver. No test model, fake assembler,
+manual active=True, registry reset or changed FULL=None constant is permitted.
+The actual construction/current-native/full-profile route is not configured.
+Returns retain observations/error objects; they do not mint a family PASS.
+"""
+import json
+import ast
+import copy
+import types
+import hashlib
+import sys
+import io
+from pathlib import Path
+
+EXECUTION_CONTRACT = None
+REQUIRED_IDS = tuple('N%02d'%i for i in range(1,25))+tuple('P%02d'%i for i in range(1,9))
+
+CASE_SCRIPT_SHA256 = '69df433711521d709c7045c8b6f9cd13ad92f4165d4b533d559b5447c46464e8'
+FAULT_SOURCE_PINS = {'V2 source fault after acquired owner publication': '77bac9cb02d27fc7f2dda6d3a940a77329931eb9f219ff857c7d7cad822072a3', 'V2 source fault after original origin capture': '7524b7811243f7d8457eb45efa8e983f0eb6386467236af4bdef165ce1a3a2f4'}
+CLI_FAULT_SOURCE_PINS = {'original_arm_entry': {'actual_arm_function': 'arm', 'adapter_file': 'epoch_adapters_cli_fault_v3.py', 'adapter_sha256': '57bcea26dd7abff4ab68a662be1b3a0de101af162d9e3077b45e31eb5e6aff69', 'authority_file': 'epoch_authority_cli_original_arm_entry_fault_v3.py', 'authority_sha256': '541b581ca9e92a09996023ac478870aecd78f418a91c2523d4aee9e5dbf93ebd', 'cache_file': 'epoch_cache_cli_fault_v3.py', 'cache_sha256': '8d2f19273c8f7990c53fe2d12249677a716df5da52106193e005b76d5539eeb1', 'data_file': 'epoch_data_cli_original_arm_entry_fault_v3.py', 'data_sha256': 'a6a2984acd9f21287800d3b13e86f0b5513387918ea9e8db6af9aedac48b60d1', 'disarm_source_wrapper_calls_actual_original_once': True, 'driver_file': 'epoch_driver_cli_original_arm_entry_fault_v3.py', 'driver_sha256': 'c8c91c1d1716438601af48b9a018c3fccd90af56d384b2ae1b29257de5612726', 'intended_primary_message': 'V3 source-case original_arm_entry', 'kind': 'original_arm_entry', 'live_context_or_authority_granted': False, 'retirement_source_wrapper_calls_actual_original_once': True}, 'original_arm_after_set': {'actual_arm_function': 'arm', 'adapter_file': 'epoch_adapters_cli_fault_v3.py', 'adapter_sha256': '57bcea26dd7abff4ab68a662be1b3a0de101af162d9e3077b45e31eb5e6aff69', 'authority_file': 'epoch_authority_cli_original_arm_after_set_fault_v3.py', 'authority_sha256': '2639b280655e641519a078aeee381436428ac76d54103eeb6ad744e89a06900e', 'cache_file': 'epoch_cache_cli_fault_v3.py', 'cache_sha256': '8d2f19273c8f7990c53fe2d12249677a716df5da52106193e005b76d5539eeb1', 'data_file': 'epoch_data_cli_original_arm_after_set_fault_v3.py', 'data_sha256': '3415eee67bef773d8a2145dd115fec7e499312c779356bd8f756e465aa820d51', 'disarm_source_wrapper_calls_actual_original_once': True, 'driver_file': 'epoch_driver_cli_original_arm_after_set_fault_v3.py', 'driver_sha256': '17c68a4ea1b39da6db77ae8497f8ba532e3fb8c3bf1c81f788731841cbe5e0c8', 'intended_primary_message': 'V3 source-case original_arm_after_set', 'kind': 'original_arm_after_set', 'live_context_or_authority_granted': False, 'retirement_source_wrapper_calls_actual_original_once': True}, 'epoch_arm_entry': {'actual_arm_function': 'epoch_arm', 'adapter_file': 'epoch_adapters_cli_fault_v3.py', 'adapter_sha256': '57bcea26dd7abff4ab68a662be1b3a0de101af162d9e3077b45e31eb5e6aff69', 'authority_file': 'epoch_authority_cli_epoch_arm_entry_fault_v3.py', 'authority_sha256': '6e58f52df3f7f5b0bc9ef790548978d18ab6df20b4f56ed7e5cd46a1ebe50d6d', 'cache_file': 'epoch_cache_cli_fault_v3.py', 'cache_sha256': '8d2f19273c8f7990c53fe2d12249677a716df5da52106193e005b76d5539eeb1', 'data_file': 'epoch_data_cli_epoch_arm_entry_fault_v3.py', 'data_sha256': '035e8a6612ce327af27577f93c830570dedcc0ad1759d75807668e3bdfc04da5', 'disarm_source_wrapper_calls_actual_original_once': True, 'driver_file': 'epoch_driver_cli_epoch_arm_entry_fault_v3.py', 'driver_sha256': '5962859a775721e20240c2e63d8028e24bc73b019ba5104c45703b8bd32e3a75', 'intended_primary_message': 'V3 source-case epoch_arm_entry', 'kind': 'epoch_arm_entry', 'live_context_or_authority_granted': False, 'retirement_source_wrapper_calls_actual_original_once': True}, 'disarm_only': {'actual_arm_function': 'arm', 'adapter_file': 'epoch_adapters_cli_fault_v3.py', 'adapter_sha256': '57bcea26dd7abff4ab68a662be1b3a0de101af162d9e3077b45e31eb5e6aff69', 'authority_file': 'epoch_authority_cli_disarm_only_fault_v3.py', 'authority_sha256': '5f3450b5f278627d33ad313e52bd022c81f831c34934f2ed8725131ff406885a', 'cache_file': 'epoch_cache_cli_fault_v3.py', 'cache_sha256': '8d2f19273c8f7990c53fe2d12249677a716df5da52106193e005b76d5539eeb1', 'data_file': 'epoch_data_cli_disarm_only_fault_v3.py', 'data_sha256': '18679fd1eb6ae99c4b375756511427c26718f77674c2d8fcc490e25ceb47cba5', 'disarm_source_wrapper_calls_actual_original_once': True, 'driver_file': 'epoch_driver_cli_disarm_only_fault_v3.py', 'driver_sha256': 'bbe123c827940fd301e58e89e108702329a747b7d2dcecaf666ae8b3bc869463', 'intended_primary_message': 'V3 source-case disarm_only', 'kind': 'disarm_only', 'live_context_or_authority_granted': False, 'retirement_source_wrapper_calls_actual_original_once': True}, 'body_disarm': {'actual_arm_function': 'arm', 'adapter_file': 'epoch_adapters_cli_fault_v3.py', 'adapter_sha256': '57bcea26dd7abff4ab68a662be1b3a0de101af162d9e3077b45e31eb5e6aff69', 'authority_file': 'epoch_authority_cli_body_disarm_fault_v3.py', 'authority_sha256': '5f3450b5f278627d33ad313e52bd022c81f831c34934f2ed8725131ff406885a', 'cache_file': 'epoch_cache_cli_fault_v3.py', 'cache_sha256': '8d2f19273c8f7990c53fe2d12249677a716df5da52106193e005b76d5539eeb1', 'data_file': 'epoch_data_cli_body_disarm_fault_v3.py', 'data_sha256': '18679fd1eb6ae99c4b375756511427c26718f77674c2d8fcc490e25ceb47cba5', 'disarm_source_wrapper_calls_actual_original_once': True, 'driver_file': 'epoch_driver_cli_body_disarm_fault_v3.py', 'driver_sha256': 'bbe123c827940fd301e58e89e108702329a747b7d2dcecaf666ae8b3bc869463', 'intended_primary_message': 'V3 source-case body_disarm', 'kind': 'body_disarm', 'live_context_or_authority_granted': False, 'retirement_source_wrapper_calls_actual_original_once': True}, 'body_disarm_retirement': {'actual_arm_function': 'arm', 'adapter_file': 'epoch_adapters_cli_fault_v3.py', 'adapter_sha256': '57bcea26dd7abff4ab68a662be1b3a0de101af162d9e3077b45e31eb5e6aff69', 'authority_file': 'epoch_authority_cli_body_disarm_retirement_fault_v3.py', 'authority_sha256': 'b5b7cfb68f3dfa73c9183f79c1ce4364ba25493b8c58986e4f95c7c1883592b3', 'cache_file': 'epoch_cache_cli_fault_v3.py', 'cache_sha256': '8d2f19273c8f7990c53fe2d12249677a716df5da52106193e005b76d5539eeb1', 'data_file': 'epoch_data_cli_body_disarm_retirement_fault_v3.py', 'data_sha256': '182565e53294e306e3c2dce51388f699ea3c7f66b9af22812a7a52269c680f34', 'disarm_source_wrapper_calls_actual_original_once': True, 'driver_file': 'epoch_driver_cli_body_disarm_retirement_fault_v3.py', 'driver_sha256': '7d829ea72c0c11dff4eb154025bfe98bdd5d6fcadfcd75a5f733788a962b554c', 'intended_primary_message': 'V3 source-case body_disarm_retirement', 'kind': 'body_disarm_retirement', 'live_context_or_authority_granted': False, 'retirement_source_wrapper_calls_actual_original_once': True}}
+
+def _need(value,message):
+    if not value:raise RuntimeError(message)
+
+
+def _dispatch(c,index,*args):
+    d=c['bundle'][3];p=d[5];fn=d[2];r=d[3]
+    _need(type(d) is tuple and len(d)==6 and type(p) is tuple and len(p)==19 and
+          p[0] is type and p[1] is types.FunctionType and p[2] is id and p[18] is zip,
+          'Control genuine native caller primitives')
+    _need(type(fn) is p[1] and fn is r[0],'Control actual dispatcher')
+    for (_,get),value in p[18](p[4],r[1:7]):
+        _need(get(fn,p[1]) is value,'Control dispatcher fields')
+    _need(r[4] is None and r[5] is None and not r[7],'Control dispatcher grammar')
+    for cell,value in r[8]:_need(p[6](cell,p[5]) is value,'Control dispatcher cell')
+    return fn(index,*args)
+
+
+def _live(c):
+    s=c['state']['epoch_suite'];_dispatch(c,5,s.handle,s)
+    return s
+
+
+def _ledger(c):
+    protected=c['bundle'][2][5]
+    outer=dict(zip(protected.__code__.co_freevars,protected.__closure__))
+    function=outer['function'].cell_contents
+    cells=dict(zip(function.__code__.co_freevars,function.__closure__))
+    ledger=cells['ledger'].cell_contents
+    _need(type(ledger) is c['authority_module'].EpochLedger,'Control actual ledger class')
+    return ledger
+
+
+def _counts(c):
+    return tuple(sorted(c['binding']['counters'].items())) if 'binding' in c else ()
+
+
+def _reject(c,operation,*args,**kwargs):
+    before=_counts(c)
+    try:operation(*args,**kwargs)
+    except BaseException as error:
+        _need(_counts(c)==before,'Rejected path performed original native arithmetic')
+        return {'error':error,'native_before':before,'native_after':_counts(c)}
+    raise RuntimeError('Required control refusal was absent')
+
+
+def N01(c):
+    # A foreign backend/source handle never reaches load_source.
+    return _reject(c,_dispatch,c,0,'load',object())
+
+
+def N02(c):
+    # Genuine module from the consumed load ticket; mutate before original guard.
+    c['module'].__dict__['echelon']=c['foreign_function']
+    return _reject(c,_dispatch,c,0,'factories',*c['factory_arguments'])
+
+
+def N03(c):
+    s=_live(c);ledger=_ledger(c);origin=ledger.origin(s.handle)
+    _need(origin['phase'] in ('FACTORIES_ADMITTED','CALLERS_INSTALLED'),'N03 needs genuine pre-native finite-ledger context')
+    result=_reject(c,ledger.authorize,s.handle,'module','echelon',s.E0,c['foreign_function'],'row_function',((),()))
+    _intended_error(result['error'],RuntimeError,('Epoch finite slot/role',),type(ledger).authorize.__code__)
+    return result
+
+
+
+def N04(c):
+    s=_live(c);function=s.products['canonical']
+    # This same-code/different-default change is checked before product use.
+    function.__defaults__=(None,)
+    return _reject(c,_dispatch,c,5,s.handle,s)
+
+
+def N05(c):
+    s=_live(c);c['module'].__dict__['Label']=c['foreign_class']
+    return _reject(c,_dispatch,c,5,s.handle,s)
+
+
+def N06(c):
+    s=_live(c);c['module'].__dict__['echelon']=c['foreign_function']
+    return _reject(c,_dispatch,c,5,s.handle,s)
+
+
+def N07(c):
+    s=_live(c);ledger=_ledger(c);origin=ledger.origin(s.handle)
+    _need(origin['phase'] in ('FACTORIES_ADMITTED','CALLERS_INSTALLED'),'N07 needs genuine finite-ledger phase')
+    result=_reject(c,ledger.authorize,s.handle,'module','unregistered_slot',s.E0,c['foreign_function'],'canonical',((),()))
+    _intended_error(result['error'],RuntimeError,('Epoch finite slot/role',),type(ledger).authorize.__code__)
+    return result
+
+
+
+def N08(c):
+    s=_live(c);origin=_ledger(c).origin(s.handle)
+    original=dict(origin['class_map'][id(s.label)][2])['__init__']
+    original.__code__=c['foreign_function'].__code__
+    return _reject(c,_dispatch,c,5,s.handle,s)
+
+
+def N09(c):
+    s=_live(c);del c['module'].__dict__['echelon']
+    return _reject(c,s.current)
+
+
+def N10(c):
+    s=_live(c);ledger=_ledger(c);origin=ledger.origin(s.handle)
+    _need(origin['phase']=='GLOBALS_COMMITTED' and c['binding']['runtime_guard'] is origin['raw_guard'] and
+          s.owner.runtime is origin['raw_guard'],'N10 needs actual post-initializer pre-finish checkpoint, never a manual phase change')
+    c['module'].__dict__['undeclared_source_slot']=object()
+    result=_reject(c,_dispatch,c,3,s.handle,s,'finish',c['binding'],s.owner)
+    _intended_error(result['error'],RuntimeError,('Epoch source namespace owner/census',),type(ledger).check.__code__)
+    return result
+
+
+
+def N11(c):
+    s=_live(c);original=c['registered_row_bind_ast'];bad=copy.deepcopy(original)
+    bad.body.append(ast.parse('undeclared_arithmetic_change()').body[0])
+    # _epoch_locations is the exact production reconstructive structural gate.
+    return _reject(c,c['cache_module']._epoch_locations,bad,original)
+
+
+def N12(c):
+    s=_live(c)
+    return _reject(c,s.construct,'wrong-site',c['checks'],None,c['vectors'])
+
+
+def N13(c):
+    s=_live(c);req=c['live_request'];values=req['registered']
+    original=values[0][2];equal_distinct=tuple(list(original))
+    _need(equal_distinct==original and equal_distinct is not original,'Need actual nonempty equal/distinct key fixture')
+    key=('label',equal_distinct) if req['kind']=='label' else (equal_distinct,values[1][2])
+    return _reject(c,s.data,req,'entry',req['checks'],key,req['operands'],req['kind'])
+
+
+def N14(c):
+    s=_live(c);_need(s.pending is not None,'Need genuine in-flight original constructor checkpoint')
+    result=_reject(c,s.construct,'C2',c['checks'],c['node'],c['vectors'])
+    _need(s.terminal and not s.active and s.pending is None,'Nested constructor did not retire')
+    return result
+
+
+def N15(c):
+    s=_live(c);primary=None
+    try:s.products['C2'](c['checks'],c['node'])
+    except BaseException as error:primary=error
+    _need(primary is not None and s.pending is None and not s.registry and s.primary_error is primary,
+          'Actual original constructor/store failure custody')
+    return {'primary':primary,'secondary':s.secondary_error,'uncertain':s.uncertain}
+
+
+def N16(c):
+    s=_live(c);before=len(s.registry)
+    public=c['module'].Label(c['vectors'])
+    _need(len(s.registry)==before and id(public) not in s.registry,'Public constructor acquired private authority')
+    result=_reject(c,s.request,object(),'label',c['checks'].label_ok,public)
+    return dict(result,public_label=public)
+
+
+def N17(c):
+    s=_live(c);request=c['consumed_request']
+    _need(request['stage']==3,'Need actual consumed invocation')
+    return _reject(c,s._request,request,0)
+
+
+def N18(c):
+    s=_live(c);s.retire('source-control-terminal')
+    result=_reject(c,s.arm,c['invocation_token'])
+    _intended_error(result['error'],RuntimeError,('Epoch retired/consumed generation cannot arm',),type(s).arm.__code__)
+    return result
+
+
+
+def N19(c):
+    s=_live(c);lab=c['registered_label'];lab.basis=dict(c['replacement_basis'])
+    # Real public method enters the old guard then retires before key callbacks.
+    result=c['checks'].label_ok(lab)
+    _need(s.terminal and not s.registry,'Public mutable label kept private authority')
+    _need(type(result) is type(c['literal_expected']) and result==c['literal_expected'],'Literal public result changed')
+    return {'value':result,'owner':dict(s.owner.receipt),'epoch':dict(s.receipt)}
+
+
+def N20(c):
+    # Actual unchanged 155 control function contains the canonical 2 HIT /
+    # 1 complement and wide 1 fallback assertions. This additional invocation
+    # is fully charged if the parent includes it; no cached receipt is used.
+    controls=c['legacy_controls']
+    result=controls.run_controls(*c['legacy_control_args'],**c['legacy_control_kwargs'])
+    _need(type(result) is dict and result['v8_caller_case_count']==12 and
+          result['native_consumer_case_count']==10,'Actual old control census changed')
+    return result
+
+
+def N21(c):
+    s=_live(c)
+    # Parent delivers the actual retained collision/reentry fixture operands;
+    # no replacement cache method or fake boolean is used by this control.
+    result=c['checks'].residual_ok(c['callback_small'],c['callback_big'])
+    _need(not s.active and s.terminal,'Public callback path retained private epoch')
+    _need(type(result) is type(c['literal_expected']) and result==c['literal_expected'],'Public callback result differs')
+    return {'value':result,'owner':dict(s.owner.receipt)}
+
+
+def N22(c):
+    s=_live(c);_need(len(s.registry)==85196 and s.pending is not None,'Need real metadata-capacity checkpoint')
+    s.commit(c['site'],c['checks'])
+    _need(s.terminal and not s.registry and s.pending is None,'Capacity did not retire metadata')
+    answer=c['checks'].label_ok(c['registered_label'])
+    _need(type(answer) is type(c['literal_expected']) and answer==c['literal_expected'],'Capacity continuation changed original result')
+    return {'value':answer,'capacity_retirements':s.receipt['capacity_retirements'],'owner':dict(s.owner.receipt)}
+
+
+def N23(c):
+    s=_live(c)
+    _need(s.active is False and s.terminal is False and s.primary_error is None and s.secondary_error is None,'Need genuine unarmed fresh role source case')
+    roles=s.products['roles'];s_context=c['circuit'];checks=c['checks']
+    _need(type(checks) is s.checks_class and type(s_context) is s.module.ComplexSideCircuit,'Need actual original source objects')
+    cls=type(s);original=cls.retire;secondary=RuntimeError('epoch source-case retirement secondary')
+    def failure(self,reason):raise secondary
+    caught=None
+    cls.retire=failure
+    try:
+        try:raise LookupError('unrelated outer handled exception')
+        except LookupError:
+            try:roles(s_context,checks,{'_h25_missing_roles':1})
+            except BaseException as error:caught=error
+    finally:cls.retire=original
+    _intended_error(caught,KeyError,('roles',),roles.__code__)
+    _need(s.primary_error is caught and s.secondary_error is secondary and secondary is not caught and s.uncertain and s.terminal and not s.active and not s.registry and s.pending is None,
+          'Automatic role-finally did not preserve actual original body primary')
+    return {'primary':caught,'secondary':secondary,'uncertain':s.uncertain,'automatic_role_boundary':roles.__code__}
+
+
+
+def N24(c):
+    s=c['state']['epoch_suite']
+    _need(c['cache_module'].EPOCH_FULL_EXECUTION_CONTRACT is None and not s.terminal and not s.invocation_consumed,
+          'Current FULLNone case requires a fresh otherwise eligible generation')
+    result=_reject(c,s.arm,c['invocation_token'])
+    _intended_error(result['error'],RuntimeError,('Epoch full context is not admitted',),type(s).arm.__code__)
+    return result
+
+
+
+def P01(c):
+    s=_live(c);checks=c['checks'];before=dict(s.receipt)
+    a=checks.label(c['fresh_active_node']);b=checks.target_frame(c['fresh_output_S'])
+    for value in (checks.everything,a,b):
+        record=s.registry.get(id(value))
+        _need(record is not None and record[0] is value and record[1] is value.basis and
+              record[2] is value.key and record[4] is checks and record[6]==s.generation,'Actual post-store pairing')
+    _need({s.registry[id(x)][5] for x in (checks.everything,a,b)}=={'C1','C2','C3'},'All actual constructor sites')
+    _need(s.receipt['constructors']-before['constructors']==2 and s.receipt['key_loads']-before['key_loads']==2 and
+          s.receipt['basis_loads']-before['basis_loads']==2,'Exactly one constructor capture per new label')
+    return {'before':before,'after':dict(s.receipt),'objects':(checks.everything,a,b)}
+
+
+def P02(c):
+    s=_live(c)
+    _p02_labels_result=s.products['labels'](c['checks']);yield _p02_labels_result
+    result=c['module'].verify_role_frames(c['circuit'],c['checks'],c['code']);yield result
+    _need(type(result) is dict and result==c['reference_role_result'] and not s.registry and not s.active,'Actual caller completion/retirement')
+    # Independent original cold child supplies raw typed oracle values, never
+    # an accepted/PASS flag. Its source/provenance/oracle gate remains separate.
+    _need(c['rank_events']==c['reference_rank_events'] and c['trace'].receipt()==c['reference_trace'],
+          'Original ordered rank/complement events changed')
+    _need(c['binding']['counters']==c['reference_native_counters'],'Original native call counts changed')
+    _need(c['actual_outputs']==c['reference_outputs'],'Independent original typed outputs changed')
+    return {'value':result,'native':dict(c['binding']['counters']),'epoch':dict(s.receipt)}
+
+
+def P03(c):
+    s=_live(c);ledger=_ledger(c);origin=ledger.origin(s.handle)
+    _need(origin['phase']=='SEALED' and origin['raw_guard'] is s.owner.runtime,'Actual final raw/sealed guard')
+    _need(len(origin['slots'])==15 and len(c['bundle'][1])==7 and c['bundle'][3][1] is c['bundle'][2],
+          'Finite lineages or legacy grammar changed')
+    ledger.check(s.handle)
+    return {'edges':tuple(origin['edges']),'phase':origin['phase'],'original_records':origin['functions']}
+
+
+def P04(c):
+    s=_live(c);n=len(s.registry);label=c['module'].Label(c['vectors'])
+    _need(len(s.registry)==n and id(label) not in s.registry,'Public Label gained private registration')
+    answer=c['checks'].label_ok(label)
+    _need(s.terminal and type(answer) is type(c['literal_expected']) and answer==c['literal_expected'],'Public validated result')
+    return {'value':answer,'owner':dict(s.owner.receipt)}
+
+
+def P05(c):
+    s=_live(c);answer=c['checks'].residual_ok(c['small'],c['big'])
+    _need(s.terminal and not s.registry,'Public reentry did not retire')
+    _need(type(answer) is type(c['literal_expected']) and answer==c['literal_expected'],'Validated V8 continuation differs')
+    _need(s.owner.receipt['snapshots']>c['snapshots_before'],'Real current-data validation absent')
+    return {'value':answer,'owner':dict(s.owner.receipt)}
+
+
+def P06(c):
+    s=_live(c)
+    for value,basis,key,dimension,checks,site,generation in s.registry.values():
+        _need((checks.everything is value if site=='C1' else any(item is value for item in checks.cache.values())),
+              'Registry extends original store lifetime')
+    s.role_retire()
+    _need(not s.registry and s.pending is None and s.checks is None,'Last-role references retained')
+    return {'epoch':dict(s.receipt),'native':_counts(c)}
+
+
+def P07(c):
+    observed=N22(c)
+    _need(c['remaining_original_case_count']==c['reference_remaining_case_count'] and
+          c['remaining_original_outputs']==c['reference_remaining_outputs'],'Capacity skipped original work')
+    return observed
+
+
+def P08(c):
+    s=_live(c);driver=c['driver_module'];data=c['data_module'];extensions=c['extensions']
+    kind=c['case_kind']
+    _need(type(kind) is str and kind in ('original_arm_entry','original_arm_after_set','epoch_arm_entry','body'),
+          'P08 exact source-case variant required')
+    _need(s.active is False and s.terminal is False and s.primary_error is None and
+          driver.data_adapters is data and driver._EXECUTION['state'] is c['state'] and
+          driver._INITIAL_EPOCH_BUNDLE is c['bundle'] and c['invocation_token'] is s.context['invocation_token'],
+          'P08 genuine untouched parent/source/invocation context')
+    if kind=='body':
+        # This original oracle is preserved, not silently replaced by FULLNone.
+        # Frozen current products cannot qualify this variant; it requires a
+        # separately independently admitted genuine full source-control context.
+        _need(type(c['cache_module'].EPOCH_FULL_EXECUTION_CONTRACT) is dict,
+              'P08 original-body source context is OPEN; FULLNone is not its expected error')
+        return _p08_original_body(c,s)
+    pins=CLI_FAULT_SOURCE_PINS[kind]
+    modules={'data':data,'driver':driver,'authority':c['authority_module'],
+             'cache':c['cache_module'],'adapter':driver.adapters}
+    for key,module in modules.items():
+        _need(hashlib.sha256(Path(module.__file__).read_bytes()).hexdigest()==pins[key+'_sha256'],
+              'P08 exact distinct source-case image required; production map is not widened')
+    expected=data._V3_ARM_ERROR;secondary=driver.adapters._V3_DISARM_ERROR;retirement=c['cache_module']._V3_RETIRE_ERROR
+    before=_counts(c);old_argv=sys.argv;owner=extensions['set_binding']['owner'];caught=None
+    _need(owner.cli_active is False and owner.circuit is None and owner.used is False,
+          'P08 genuine pre-arm original lease required, never a fabricated active flag')
+    try:driver._epoch_cli_boundary(c['phases'],c['state'],extensions,c['case_script_path'],io.StringIO(),c['invocation_token'],old_argv)
+    except BaseException as error:caught=error
+    arm_function=data.epoch_arm if kind=='epoch_arm_entry' else data.arm
+    _intended_error(caught,RuntimeError,('V3 source-case '+kind,),arm_function.__code__)
+    _need(caught is expected and _has_frame(caught,driver._epoch_cli_boundary.__code__),
+          'P08 earlier phase/FULL refusal masked actual arming failure')
+    _need(sys.argv is old_argv and owner.cli_active is False and owner.current is None and
+          owner.circuit is None and owner.checks is None and owner.triples is None,
+          'P08 actual original argv/disarm boundary skipped on arming failure')
+    _need(_has_frame(secondary,driver.adapters._V3_ORIGINAL_DISARM.__code__) is False and
+          _has_frame(secondary,driver.adapters.disarm.__code__), 'P08 intended post-original-disarm source error frame')
+    _need(s.primary_error is caught and s.secondary_error is secondary and secondary is not caught and
+          any(error is retirement for error in s.secondary) and s.uncertain and s.terminal and not s.active,
+          'P08 actual primary/disarm-secondary/retirement custody')
+    _need(_counts(c)==before,'P08 arming negative performed original native arithmetic')
+    return {'variant':kind,'primary':caught,'secondary':secondary,'retirement_error':retirement,
+            'argv_restored':sys.argv is old_argv,'actual_set_disarmed':owner.cli_active is False,'uncertain':s.uncertain}
+
+
+
+
+CASES = {name:globals()[name] for name in REQUIRED_IDS}
+
+
+def _has_frame(error,code):
+    trace=error.__traceback__
+    while trace is not None:
+        if trace.tb_frame.f_code is code:return True
+        trace=trace.tb_next
+    return False
+
+
+def _intended_error(error,kind,args,code):
+    _need(type(error) is kind and type(error.args) is tuple and all(type(x) is str for x in error.args) and
+          error.args==args and _has_frame(error,code),'Wrong source-case error or earlier phase/FULL gate masked the intended boundary')
+
+
+def V2_ROLE_CLEANUP_ONLY(c):
+    s=_live(c);roles=s.products['roles'];checks=c['checks']
+    _need(s.active is False and s.terminal is False and s.primary_error is None and s.secondary_error is None,'Need fresh unarmed role cleanup-only case')
+    cls=type(s);original=cls.retire;secondary=RuntimeError('epoch cleanup-only primary')
+    def failure(self,reason):raise secondary
+    caught=None;cls.retire=failure
+    try:
+        try:raise LookupError('unrelated outer handled exception')
+        except LookupError:
+            try:roles(c['circuit'],checks,{'roles':0,'sources':{},'gates':[],'outputs':{}})
+            except BaseException as error:caught=error
+    finally:cls.retire=original
+    _intended_error(caught,RuntimeError,('epoch cleanup-only primary',),roles.__code__)
+    _need(caught is secondary and s.primary_error is secondary and s.secondary_error is None and s.uncertain and s.terminal and not s.active and not s.registry,
+          'Cleanup-only error was not the actual primary; ambient handled exception leaked')
+    return {'primary':caught,'secondary':s.secondary_error,'uncertain':s.uncertain}
+
+
+def _owner_failure_case(c,marker,origin_expected):
+    state=c['state'];data=c['data_module'];before=_counts(c);caught=None
+    # The context selects a separately pinned pure-Python SOURCE fault copy.
+    # It never relabels that copy as the production authority source.
+    authority=c['authority_module'];source=Path(authority.__file__).read_bytes()
+    _need(hashlib.sha256(source).hexdigest()==FAULT_SOURCE_PINS[marker],'Wrong exact source fault image')
+    wrapped=c['bundle'][2][0];cells=dict(zip(wrapped.__code__.co_freevars,wrapped.__closure__))
+    actual_admit=cells['function'].cell_contents
+    expected=next(x for x in authority._epoch_operations.__code__.co_consts if type(x) is types.CodeType and x.co_name=='admit')
+    _need(actual_admit.__globals__ is authority.__dict__ and actual_admit.__code__ is expected,'Actual fault source code ownership')
+    try:data.install_epoch_circuit(state,c['extensions'],c['module'],c['comparison'],c['bundle'][3],c['load_ticket'],c['factory_context'])
+    except BaseException as error:caught=error
+    _intended_error(caught,RuntimeError,(marker,),actual_admit.__code__)
+    record=state['epoch_acquisition'];prepared=state['cache_binding']
+    _need(type(prepared) is dict and record['prepared'] is prepared and record['owner'] is prepared['owner'] and
+          record['published'] is True and record['primary'] is caught and state['cache_teardown_attempted'] is False,
+          'Real acquired owner was not continuously on the existing parent disposition route')
+    _need((record['origin_handle'] is not None) is origin_expected,'Fault masked by earlier capture/phase boundary')
+    errors=data.epoch_cleanup_owned(state)
+    _need(state['cache_teardown_attempted'] is True and record['close_attempted'] is True,'Known-owned terminal cleanup was not attempted')
+    native_after=_counts(c);again=data.epoch_cleanup_owned(state)
+    _need(again==[] and _counts(c)==native_after,'Parent cleanup retried its terminal owner')
+    _need(record['primary'] is caught,'Cleanup replaced the designated factory primary')
+    if errors:_need(record['secondary'] is not None and record['uncertain'],'Actual cleanup failure lost raw secondary custody')
+    return {'primary':caught,'secondary':record['secondary'],'uncertain':record['uncertain'],
+            'phase':record['phase'],'actual_teardown_receipt':state['cache_teardown_receipt'],
+            'native_before':before,'native_after':native_after,'cleanup_errors':errors}
+
+
+def V2_OWNER_FIRST_CAPTURE(c):
+    return _owner_failure_case(c,'V2 source fault after acquired owner publication',False)
+
+
+def V2_OWNER_LATE_GRAPH(c):
+    return _owner_failure_case(c,'V2 source fault after original origin capture',True)
+
+
+def V2_ORIGIN_FIRST_ALL_ROUTES(c):
+    # One fresh genuine source owner per route. The parent schedules all six
+    # variants separately; no origin/registry reset is used after a rejection.
+    s=_live(c);ledger=_ledger(c);cls=type(ledger);original=cls.origin;calls=[]
+    def forbidden(self,handle):
+        calls.append(handle)
+        raise AssertionError('foreign origin member was invoked')
+    index=c['route_index'];_need(type(index) is int and 1<=index<=6,'Exact covered source operation route')
+    args={1:(s.handle,s.context),2:(s.handle,s,'product'),3:(s.handle,s,'reconcile'),
+          4:(s.handle,s),5:(s.handle,s),6:(s.handle,)}[index]
+    # All retained original function objects remain unchanged. Only the current
+    # class-member binding changes, so object-only caller checks cannot suffice.
+    before=_counts(c);caught=None;cls.origin=forbidden
+    try:
+        try:_dispatch(c,index,*args)
+        except BaseException as error:caught=error
+    finally:cls.origin=original
+    engine=dict(zip(c['bundle'][2][index].__code__.co_freevars,c['bundle'][2][index].__closure__))['engine_guard'].cell_contents
+    _intended_error(caught,RuntimeError,('Epoch engine class binding differs',),engine.__code__)
+    _need(calls==[] and _counts(c)==before,'Foreign class member or native arithmetic ran before primitive source guard')
+    return {'route':index,'primary':caught,'foreign_calls':tuple(calls),'native_before':before,'native_after':_counts(c)}
+
+
+CASES.update({name:globals()[name] for name in ('V2_ROLE_CLEANUP_ONLY','V2_OWNER_FIRST_CAPTURE','V2_OWNER_LATE_GRAPH','V2_ORIGIN_FIRST_ALL_ROUTES')})
+
+
+def _p08_original_body(c,s):
+    # Required original body oracle through the SAME protected production path,
+    # including its actual arms. No direct helper shortcut, no no-op assembler,
+    # no current FULLNone overwrite or invented case-Root authority is used.
+    driver=c['driver_module'];checks=c['checks'];extensions=c['extensions']
+    _need(type(checks) is s.checks_class and type(checks).__dict__['verify_labels'] is s.products['labels'],
+          'Actual installed labels caller required')
+    path=c['case_script_path'];_need(hashlib.sha256(path.read_bytes()).hexdigest()==CASE_SCRIPT_SHA256,'Exact pre-role source-case script')
+    name='_h25_epoch_case_inputs_v2';_need(name not in sys.modules,'Freshly owned source-case input slot')
+    inputs=types.ModuleType(name);inputs.checks=checks;old_c=checks.c;checks.c=None
+    old_argv=sys.argv;caught=None;sys.modules[name]=inputs
+    try:
+        try:driver._epoch_cli_boundary(c['phases'],c['state'],extensions,path,io.StringIO(),c['invocation_token'],old_argv)
+        except BaseException as error:caught=error
+    finally:
+        checks.c=old_c
+        if sys.modules.get(name) is inputs:del sys.modules[name]
+    _intended_error(caught,AttributeError,("'NoneType' object has no attribute 'active'",),s.products['labels'].__code__)
+    _need(_has_frame(caught,driver._epoch_cli_boundary.__code__) and sys.argv is old_argv,
+          'Actual original body/argv protected boundary absent')
+    owner=extensions['set_binding']['owner']
+    secondary=driver.adapters._V3_DISARM_ERROR;retirement=c['cache_module']._V3_RETIRE_ERROR
+    _need(owner.cli_active is False and owner.current is None and owner.circuit is None and
+          owner.checks is None and owner.triples is None and s.primary_error is caught and
+          s.secondary_error is secondary and secondary is not caught and s.uncertain and
+          any(error is retirement for error in s.secondary),
+          'Actual original body/disarm/retirement primary-secondary custody')
+    return {'variant':'body','primary':caught,'secondary':s.secondary_error,'retirement_error':retirement,'uncertain':s.uncertain}
+
+
+def V3_INSTANCE_KEY_DOMAIN(c):
+    s=_live(c);ledger=_ledger(c);namespace=object.__getattribute__(ledger,'__dict__')
+    original=namespace['origins'];calls=[]
+    class Collision:
+        def __hash__(self):return hash('origins')
+        def __eq__(self,other):
+            calls.append(other)
+            raise AssertionError('foreign instance key equality invoked')
+    foreign=Collision();del namespace['origins'];namespace[foreign]=object();caught=None
+    try:
+        try:_dispatch(c,5,s.handle,s)
+        except BaseException as error:caught=error
+    finally:
+        # Restore only the owned fault binding. Never reset the captured actual
+        # origins table or revive a FAILED generation; parent discards child.
+        dict.__delitem__(namespace,foreign);namespace['origins']=original
+    guarded=c['bundle'][2][5]
+    engine=dict(zip(guarded.__code__.co_freevars,guarded.__closure__))['engine_guard'].cell_contents
+    _intended_error(caught,RuntimeError,('Epoch engine instance key domain differs',),engine.__code__)
+    _need(calls==[],'Instance key-domain refusal invoked foreign equality')
+    return {'primary':caught,'foreign_equalities':tuple(calls)}
+
+
+def V3_FIXED_RECORD_BINDINGS(c):
+    s=_live(c);ledger=_ledger(c);field=c['fixed_record_field']
+    _need(type(field) is str and field in ('class_origin','method_origin'),'Exact independently bound fixed-record case')
+    namespace=object.__getattribute__(ledger,'__dict__');original=namespace[field]
+    replacement=tuple(list(original));_need(replacement is not original,'Distinct fixed-record binding required')
+    namespace[field]=replacement;caught=None
+    try:
+        try:_dispatch(c,5,s.handle,s)
+        except BaseException as error:caught=error
+    finally:namespace[field]=original
+    guarded=c['bundle'][2][5]
+    engine=dict(zip(guarded.__code__.co_freevars,guarded.__closure__))['engine_guard'].cell_contents
+    _intended_error(caught,RuntimeError,('Epoch engine fixed record binding differs',),engine.__code__)
+    return {'primary':caught,'fixed_record_field':field,'distinct_binding':True}
+
+
+CASES.update({name:globals()[name] for name in ('V3_INSTANCE_KEY_DOMAIN','V3_FIXED_RECORD_BINDINGS')})
+
+
+def V3_INSTANCE_METHOD_SHADOW(c):
+    s=_live(c);ledger=_ledger(c);namespace=object.__getattribute__(ledger,'__dict__');calls=[]
+    _need('origin' not in namespace,'Fresh actual engine has no instance method shadow')
+    def forbidden(handle):
+        calls.append(handle)
+        raise AssertionError('foreign instance origin invoked')
+    namespace['origin']=forbidden;caught=None
+    try:
+        try:_dispatch(c,5,s.handle,s)
+        except BaseException as error:caught=error
+    finally:del namespace['origin']
+    guarded=c['bundle'][2][5]
+    engine=dict(zip(guarded.__code__.co_freevars,guarded.__closure__))['engine_guard'].cell_contents
+    _intended_error(caught,RuntimeError,('Epoch engine instance member census differs',),engine.__code__)
+    _need(calls==[],'Instance shadow invoked before refusal')
+    return {'primary':caught,'foreign_calls':tuple(calls)}
+
+
+def V3_INSTANCE_STATE_SCHEMA(c):
+    s=_live(c);ledger=_ledger(c);namespace=object.__getattribute__(ledger,'__dict__');field=c['state_schema_field']
+    _need(type(field) is str and field in ('phase','serial','failure'),'Exact finite changing-field schema case')
+    original=namespace[field];calls=[]
+    class Foreign:
+        def __eq__(self,other):
+            calls.append(other);raise AssertionError('foreign scalar equality invoked')
+        @property
+        def __class__(self):
+            calls.append('class');raise AssertionError('foreign scalar class callback invoked')
+    bad=False if field=='serial' else Foreign()
+    namespace[field]=bad;caught=None
+    try:
+        try:_dispatch(c,5,s.handle,s)
+        except BaseException as error:caught=error
+    finally:namespace[field]=original
+    guarded=c['bundle'][2][5]
+    engine=dict(zip(guarded.__code__.co_freevars,guarded.__closure__))['engine_guard'].cell_contents
+    _intended_error(caught,RuntimeError,('Epoch engine '+field+' schema differs',),engine.__code__)
+    _need(calls==[],'Finite state refusal invoked foreign equality/class callback')
+    return {'primary':caught,'field':field,'foreign_calls':tuple(calls)}
+
+
+CASES.update({name:globals()[name] for name in ('V3_INSTANCE_METHOD_SHADOW','V3_INSTANCE_STATE_SCHEMA')})
+
+
+def _v3_baseline_cli_case(c,kind):
+    # Actual baseline prepare/install/seal state, never a toggled candidate flag.
+    # This is an additive cleanup case, not a replacement for original P08.
+    driver=c['driver_module'];state=c['state'];extensions=c['extensions']
+    _need(state['arm']=='baseline' and state['enabled'] is False and state.get('epoch_suite') is None and
+          driver._EXECUTION['state'] is state,'Genuine baseline source-case context required')
+    pins=CLI_FAULT_SOURCE_PINS[kind]
+    for key,module in {'driver':driver,'data':driver.data_adapters,'adapter':driver.adapters,
+                       'authority':c['authority_module'],'cache':c['cache_module']}.items():
+        _need(hashlib.sha256(Path(module.__file__).read_bytes()).hexdigest()==pins[key+'_sha256'],'Exact baseline source-case images')
+    path=c['case_script_path'];expected=NORMAL_CASE_SCRIPT_SHA256 if kind=='disarm_only' else CASE_SCRIPT_SHA256
+    _need(hashlib.sha256(path.read_bytes()).hexdigest()==expected,'Exact pinned script, never a helper callback')
+    name='_h25_epoch_case_inputs_v2';_need(name not in sys.modules,'Fresh owned input slot')
+    inputs=types.ModuleType(name);checks=c['checks'];inputs.checks=checks;old_c=checks.c
+    if kind!='disarm_only':checks.c=None
+    old_argv=sys.argv;sys.modules[name]=inputs;caught=None;owner=extensions['set_binding']['owner']
+    _need(owner.cli_active is False and owner.circuit is None and owner.used is False,'Genuine original pre-arm baseline lease')
+    try:
+        try:driver._epoch_cli_boundary(c['phases'],state,extensions,path,io.StringIO(),None,old_argv)
+        except BaseException as error:caught=error
+    finally:
+        checks.c=old_c
+        if sys.modules.get(name) is inputs:del sys.modules[name]
+    secondary=driver.adapters._V3_DISARM_ERROR;record=state['epoch_cli_cleanup']
+    if kind=='disarm_only':
+        _intended_error(caught,RuntimeError,('V3 source-case disarm secondary',),driver.adapters.disarm.__code__)
+        _need(caught is secondary and record['primary'] is secondary,'First cleanup error must become primary')
+    else:
+        _intended_error(caught,AttributeError,("'NoneType' object has no attribute 'active'",),type(checks).__dict__['verify_labels'].__code__)
+        _need(record['primary'] is caught and record['disarm_error'] is secondary and secondary is not caught,
+              'Actual body primary lost to disarm secondary')
+    if kind=='body_disarm_retirement':
+        retirement=driver.data_adapters._V3_CLI_RETIRE_ERROR
+        _need(record['retirement_error'] is retirement and retirement is not caught and retirement is not secondary,
+              'Actual third retirement error not retained separately')
+    _need(_has_frame(caught,driver._epoch_cli_boundary.__code__) and sys.argv is old_argv and
+          owner.cli_active is False and owner.current is None and owner.circuit is None and
+          owner.checks is None and owner.triples is None and record['uncertain'],
+          'Actual argv/original disarm/custody boundary absent')
+    return {'variant':kind,'primary':caught,'disarm_error':record['disarm_error'],
+            'retirement_error':record['retirement_error'],'uncertain':record['uncertain']}
+
+
+def V3_CLI_DISARM_ONLY(c):return _v3_baseline_cli_case(c,'disarm_only')
+def V3_CLI_BODY_DISARM(c):return _v3_baseline_cli_case(c,'body_disarm')
+def V3_CLI_BODY_DISARM_RETIREMENT(c):return _v3_baseline_cli_case(c,'body_disarm_retirement')
+CASES.update({name:globals()[name] for name in ('V3_CLI_DISARM_ONLY','V3_CLI_BODY_DISARM','V3_CLI_BODY_DISARM_RETIREMENT')})
+
+NORMAL_CASE_SCRIPT_SHA256 = '4f99e7c79d3586f04d2f5f097bbb0011eb1eb899c4ad34f25e0e0ea7ffa3d006'
+
+# V4 automatic source boundary cases
+V4_CLI_FAULT_SOURCE_PINS = {'restore_only': {'kind': 'restore_only', 'data_file': 'epoch_data_cli_restore_only_fault_v4.py', 'data_sha256': '18679fd1eb6ae99c4b375756511427c26718f77674c2d8fcc490e25ceb47cba5', 'cache_file': 'epoch_cache_cli_restore_only_fault_v4.py', 'cache_sha256': 'd317c9866566cd6147c96566879f26f364e7e6801ac3eed0800b6ed8eedd01a2', 'adapter_file': 'epoch_adapter_cli_restore_only_fault_v4.py', 'adapter_sha256': 'f7ca7f4f03ac63c1a95ba42f06149543211566de5e29f487a3dc4d08c5ee9b94', 'authority_file': 'epoch_authority_cli_restore_only_fault_v4.py', 'authority_sha256': 'f279ab86fc17c6a517b035f19d56863919cbd8304de4e7d5332457c6159aec10', 'driver_file': 'epoch_driver_cli_restore_only_fault_v4.py', 'driver_sha256': '56f5954e900d6bdcacfbf62354e7e9078d4b93df721d5c89321db0f7ff42635e', 'no_live_authority_created': True, 'ordinary_Python_source_port_only': True, 'native_argv_or_allocation_failure_qualification': False, 'production_source_map_accepts_image': False}, 'body_restore_disarm_retirement': {'kind': 'body_restore_disarm_retirement', 'data_file': 'epoch_data_cli_body_restore_disarm_retirement_fault_v4.py', 'data_sha256': '667ff800f023173af0cb07ef985d0aa7345d624ed4f904670622a7dc1ac08e5d', 'cache_file': 'epoch_cache_cli_body_restore_disarm_retirement_fault_v4.py', 'cache_sha256': 'd317c9866566cd6147c96566879f26f364e7e6801ac3eed0800b6ed8eedd01a2', 'adapter_file': 'epoch_adapter_cli_body_restore_disarm_retirement_fault_v4.py', 'adapter_sha256': '57bcea26dd7abff4ab68a662be1b3a0de101af162d9e3077b45e31eb5e6aff69', 'authority_file': 'epoch_authority_cli_body_restore_disarm_retirement_fault_v4.py', 'authority_sha256': '64556c881af5f1e4fee9628ea059bb80c65883ed14f8b4413f6452b10c448b83', 'driver_file': 'epoch_driver_cli_body_restore_disarm_retirement_fault_v4.py', 'driver_sha256': '55f67f1809373ccda6c93c92628848d2778a10174145f5869ebb4d1a676771ba', 'no_live_authority_created': True, 'ordinary_Python_source_port_only': True, 'native_argv_or_allocation_failure_qualification': False, 'production_source_map_accepts_image': False}, 'restore_disarm_retirement': {'kind': 'restore_disarm_retirement', 'data_file': 'epoch_data_cli_restore_disarm_retirement_fault_v4.py', 'data_sha256': '667ff800f023173af0cb07ef985d0aa7345d624ed4f904670622a7dc1ac08e5d', 'cache_file': 'epoch_cache_cli_restore_disarm_retirement_fault_v4.py', 'cache_sha256': 'd317c9866566cd6147c96566879f26f364e7e6801ac3eed0800b6ed8eedd01a2', 'adapter_file': 'epoch_adapter_cli_restore_disarm_retirement_fault_v4.py', 'adapter_sha256': '57bcea26dd7abff4ab68a662be1b3a0de101af162d9e3077b45e31eb5e6aff69', 'authority_file': 'epoch_authority_cli_restore_disarm_retirement_fault_v4.py', 'authority_sha256': '64556c881af5f1e4fee9628ea059bb80c65883ed14f8b4413f6452b10c448b83', 'driver_file': 'epoch_driver_cli_restore_disarm_retirement_fault_v4.py', 'driver_sha256': '55f67f1809373ccda6c93c92628848d2778a10174145f5869ebb4d1a676771ba', 'no_live_authority_created': True, 'ordinary_Python_source_port_only': True, 'native_argv_or_allocation_failure_qualification': False, 'production_source_map_accepts_image': False}, 'restore_before_disarm_retirement': {'kind': 'restore_before_disarm_retirement', 'data_file': 'epoch_data_cli_restore_before_disarm_retirement_fault_v4.py', 'data_sha256': '667ff800f023173af0cb07ef985d0aa7345d624ed4f904670622a7dc1ac08e5d', 'cache_file': 'epoch_cache_cli_restore_before_disarm_retirement_fault_v4.py', 'cache_sha256': 'd317c9866566cd6147c96566879f26f364e7e6801ac3eed0800b6ed8eedd01a2', 'adapter_file': 'epoch_adapter_cli_restore_before_disarm_retirement_fault_v4.py', 'adapter_sha256': '57bcea26dd7abff4ab68a662be1b3a0de101af162d9e3077b45e31eb5e6aff69', 'authority_file': 'epoch_authority_cli_restore_before_disarm_retirement_fault_v4.py', 'authority_sha256': '64556c881af5f1e4fee9628ea059bb80c65883ed14f8b4413f6452b10c448b83', 'driver_file': 'epoch_driver_cli_restore_before_disarm_retirement_fault_v4.py', 'driver_sha256': '5cdca051fe0aafcce4105354734515a8173f460ab12c2f48d6de47bb03ff0f1c', 'no_live_authority_created': True, 'ordinary_Python_source_port_only': True, 'native_argv_or_allocation_failure_qualification': False, 'production_source_map_accepts_image': False}, 'arm_raw_journal': {'kind': 'arm_raw_journal', 'data_file': 'epoch_data_cli_arm_raw_journal_fault_v4.py', 'data_sha256': 'd7743b4e865906801e02ee3665c7d65e9a8ca27af8cf168a563482551f09a952', 'cache_file': 'epoch_cache_cli_arm_raw_journal_fault_v4.py', 'cache_sha256': 'b11ca58a17382e162833ed3a1091e0f975ab595bfba860dc6eb42ea4931655f2', 'adapter_file': 'epoch_adapter_cli_arm_raw_journal_fault_v4.py', 'adapter_sha256': '57bcea26dd7abff4ab68a662be1b3a0de101af162d9e3077b45e31eb5e6aff69', 'authority_file': 'epoch_authority_cli_arm_raw_journal_fault_v4.py', 'authority_sha256': '553393031b6f561e81b72a6ce87f3947fd99e9e269f0945b9ff0850ef7a7c9da', 'driver_file': 'epoch_driver_cli_arm_raw_journal_fault_v4.py', 'driver_sha256': 'e920875eddf16cab3d61ce328ada701c19876307f0b20ad357425f2018af8274', 'no_live_authority_created': True, 'ordinary_Python_source_port_only': True, 'native_argv_or_allocation_failure_qualification': False, 'production_source_map_accepts_image': False}, 'role_raw_journal': {'kind': 'role_raw_journal', 'data_file': 'epoch_data_cli_role_raw_journal_fault_v4.py', 'data_sha256': '18679fd1eb6ae99c4b375756511427c26718f77674c2d8fcc490e25ceb47cba5', 'cache_file': 'epoch_cache_cli_role_raw_journal_fault_v4.py', 'cache_sha256': 'b11ca58a17382e162833ed3a1091e0f975ab595bfba860dc6eb42ea4931655f2', 'adapter_file': 'epoch_adapter_cli_role_raw_journal_fault_v4.py', 'adapter_sha256': 'f7ca7f4f03ac63c1a95ba42f06149543211566de5e29f487a3dc4d08c5ee9b94', 'authority_file': 'epoch_authority_cli_role_raw_journal_fault_v4.py', 'authority_sha256': '23177353bc42187c40ab50d1833e1ff014b1d464f109a44567f7005e332efc87', 'driver_file': 'epoch_driver_cli_role_raw_journal_fault_v4.py', 'driver_sha256': '2ef3260b695a61877bf64bde8520ac2dc03e854f0427a9ee3e3e18c8e323df78', 'no_live_authority_created': True, 'ordinary_Python_source_port_only': True, 'native_argv_or_allocation_failure_qualification': False, 'production_source_map_accepts_image': False}}
+def _v4_images(c,kind):
+    pins=V4_CLI_FAULT_SOURCE_PINS[kind];driver=c['driver_module']
+    for key,module in {'driver':driver,'data':driver.data_adapters,'adapter':driver.adapters,
+                       'authority':c['authority_module'],'cache':c['cache_module']}.items():
+        _need(hashlib.sha256(Path(module.__file__).read_bytes()).hexdigest()==pins[key+'_sha256'],
+              'V4 exact distinct source image required before adverse work')
+    return driver
+
+
+def _v4_restore_case(c,kind):
+    driver=_v4_images(c,kind);data=driver.data_adapters;state=c['state'];extensions=c['extensions']
+    _need(state['arm']=='baseline' and state['enabled'] is False and state.get('epoch_suite') is None and
+          driver._EXECUTION['state'] is state,'Actual baseline source context, never fabricated private authority')
+    body=kind=='body_restore_disarm_retirement';before=kind=='restore_before_disarm_retirement'
+    path=c['case_script_path'];expected=CASE_SCRIPT_SHA256 if body else NORMAL_CASE_SCRIPT_SHA256
+    _need(hashlib.sha256(path.read_bytes()).hexdigest()==expected,'Exact actual script source')
+    name='_h25_epoch_case_inputs_v2';_need(name not in sys.modules,'Fresh owned input slot')
+    inputs=types.ModuleType(name);checks=c['checks'];inputs.checks=checks;old_c=checks.c
+    owner=extensions['set_binding']['owner'];old_argv=sys.argv;caught=None
+    _need(owner.cli_active is False and owner.circuit is None and owner.used is False,'Actual original untouched pre-arm owner')
+    if body:checks.c=None
+    sys.modules[name]=inputs
+    try:
+        try:driver._epoch_cli_boundary(c['phases'],state,extensions,path,io.StringIO(),None,old_argv)
+        except BaseException as error:caught=error
+        # Observe production outcome before restoring this source-case parent's
+        # own argv fixture. This is not a production recovery/retry assertion.
+        actual_argv=sys.argv
+    finally:
+        checks.c=old_c
+        if sys.modules.get(name) is inputs:del sys.modules[name]
+        sys.argv=old_argv
+    record=state['epoch_cli_cleanup'];argv_error=driver._V4_ARGV_ERROR
+    _intended_error(argv_error,RuntimeError,('V4 source-case argv restoration',),driver._epoch_cli_boundary.__code__)
+    if body:
+        _intended_error(caught,AttributeError,("'NoneType' object has no attribute 'active'",),type(checks).__dict__['verify_labels'].__code__)
+    else:_need(caught is argv_error,'Restoration A must be first actual primary without P')
+    _need(record['primary'] is caught and record['argv_error'] is argv_error and
+          _has_frame(caught,driver._epoch_cli_boundary.__code__),'Actual P/A object lost or earlier refusal masked boundary')
+    _need((actual_argv is old_argv) is (not before),'Declared before/after ordinary restoration port distinction')
+    if kind!='restore_only':
+        secondary=driver.adapters._V3_DISARM_ERROR;retirement=data._V4_CLI_RETIRE_ERROR
+        _intended_error(secondary,RuntimeError,('V3 source-case disarm secondary',),driver.adapters.disarm.__code__)
+        _intended_error(retirement,RuntimeError,('V4 source-case external retirement',),data.epoch_retire.__code__)
+        _need(record['disarm_error'] is secondary and record['retirement_error'] is retirement and
+              len({id(caught),id(secondary),id(retirement)})==3,'P/A/S/R fixed independent raw custody')
+    else:_need(record['disarm_error'] is None and record['retirement_error'] is None,'Unexpected later cleanup failure')
+    _need(owner.cli_active is False and owner.current is None and owner.circuit is None and
+          owner.checks is None and owner.triples is None and record['uncertain'],
+          'Restoration error skipped actual original disarm or uncertainty')
+    return {'primary':caught,'argv_error':record['argv_error'],'disarm_error':record['disarm_error'],
+            'retirement_error':record['retirement_error'],'argv_was_restored':actual_argv is old_argv,
+            'native_restoration_failure_qualified':False,'uncertain':record['uncertain']}
+
+
+def V4_ARGV_ONLY(c):return _v4_restore_case(c,'restore_only')
+def V4_BODY_ARGV_DISARM_RETIREMENT(c):return _v4_restore_case(c,'body_restore_disarm_retirement')
+def V4_ARGV_DISARM_RETIREMENT(c):return _v4_restore_case(c,'restore_disarm_retirement')
+def V4_ARGV_BEFORE_DISARM_RETIREMENT(c):return _v4_restore_case(c,'restore_before_disarm_retirement')
+
+
+def _v4_raw_channel_oracle(c,s,channel,primary,secondary,caller_slot,role_boundary=False):
+    retirement=channel['error'];journal=channel['journal_error'];cache=c['cache_module']
+    _intended_error(retirement,RuntimeError,('V4 source-case raw retirement',),cache._v4_source_case_retire.__code__)
+    _intended_error(journal,LookupError,('V4 source-case optional journal publication',),cache._epoch_suite_retire_preserving.__code__)
+    _need(caller_slot is retirement and channel['acknowledged'] is True and
+          retirement is not primary and ((secondary is retirement) if role_boundary else (retirement is not secondary)) and journal is not retirement and
+          all(error is not retirement for error in s.secondary),
+          'Actual callee R lost when optional journal publication failed')
+    _need(s.primary_error is primary and s.secondary_error is secondary and s.uncertain and
+          s.terminal and not s.active and s.pending is None and not s.registry,
+          'Raw channel case lost actual terminal disposition or first error identity')
+    return {'primary':primary,'secondary':secondary,'retirement_error':retirement,'journal_error':journal,
+            'acknowledged':channel['acknowledged'],'uncertain':s.uncertain}
+
+
+def V4_ROLE_RAW_JOURNAL(c):
+    _v4_images(c,'role_raw_journal');s=_live(c);roles=s.products['roles'];caught=None
+    _need(s.active is False and s.terminal is False and s.primary_error is None and s.secondary_error is None,
+          'Genuine untouched unarmed source role context')
+    try:roles(c['circuit'],c['checks'],{'_h25_missing_roles':1})
+    except BaseException as error:caught=error
+    _intended_error(caught,KeyError,('roles',),roles.__code__)
+    return _v4_raw_channel_oracle(c,s,s.role_retirement_channel,caught,s.role_retirement_channel['error'],s.role_retirement_error,True)
+
+
+def V4_CLI_RAW_JOURNAL(c):
+    driver=_v4_images(c,'arm_raw_journal');s=_live(c);state=c['state'];extensions=c['extensions'];old_argv=sys.argv;caught=None
+    _need(s.active is False and s.terminal is False and s.primary_error is None and s.secondary_error is None and
+          driver._EXECUTION['state'] is state and c['invocation_token'] is s.context['invocation_token'],
+          'Genuine pre-arm source context and actual invocation identity')
+    before=_counts(c);owner=extensions['set_binding']['owner']
+    _need(owner.cli_active is False and owner.circuit is None and owner.used is False,'Actual original pre-arm owner')
+    try:driver._epoch_cli_boundary(c['phases'],state,extensions,c['case_script_path'],io.StringIO(),c['invocation_token'],old_argv)
+    except BaseException as error:caught=error
+    _intended_error(caught,RuntimeError,('V4 source-case arm raw journal',),driver.data_adapters.arm.__code__)
+    _need(caught is driver.data_adapters._V4_ARM_ERROR and _counts(c)==before,'Earlier FULL/phase gate or native arithmetic masked case')
+    record=state['epoch_cli_cleanup'];secondary=driver.adapters._V3_DISARM_ERROR
+    _intended_error(secondary,RuntimeError,('V3 source-case disarm secondary',),driver.adapters.disarm.__code__)
+    _need(record['disarm_error'] is secondary and record['primary'] is caught and sys.argv is old_argv and
+          owner.cli_active is False and owner.current is None and owner.circuit is None,'Actual automatic cleanup path required')
+    return _v4_raw_channel_oracle(c,s,record['retirement_channel'],caught,secondary,record['retirement_error'])
+
+
+CASES.update({name:globals()[name] for name in ('V4_ARGV_ONLY','V4_BODY_ARGV_DISARM_RETIREMENT',
+ 'V4_ARGV_DISARM_RETIREMENT','V4_ARGV_BEFORE_DISARM_RETIREMENT','V4_ROLE_RAW_JOURNAL','V4_CLI_RAW_JOURNAL')})
+
+# V5 actual outer-main and absent-record cases
+V5_OUTER_FAULT_SOURCE_PINS = {'main_primary_outer': {'kind': 'main_primary_outer', 'actual_entry': '_run_epoch_with_stop_evidence -> main_epoch (unaltered call edge)', 'requires_genuine_full_context': False, 'finite_only_baseline': True, 'source_context_or_authority_created': False, 'native_allocation_failure_qualification': False, 'production_driver_rejects_image': True, 'data_file': 'epoch_data_main_primary_outer_fault_v5.py', 'data_sha256': '3694f577651e8baaf4be1d07baff9ba7fa0f312a8d1620836c35988f03a43954', 'cache_file': 'epoch_cache_main_primary_outer_fault_v5.py', 'cache_sha256': 'd317c9866566cd6147c96566879f26f364e7e6801ac3eed0800b6ed8eedd01a2', 'adapter_file': 'epoch_adapter_main_primary_outer_fault_v5.py', 'adapter_sha256': 'f7ca7f4f03ac63c1a95ba42f06149543211566de5e29f487a3dc4d08c5ee9b94', 'authority_file': 'epoch_authority_main_primary_outer_fault_v5.py', 'authority_sha256': '091fcb583a160b72c95896380ade42f46873c97794d11fe88ab168fb00d099dd', 'driver_file': 'epoch_driver_main_primary_outer_fault_v5.py', 'driver_sha256': '96ba87197551d991606ddfdb6a86296a39edf2e1b63417a1767d59b357bacc3d'}, 'main_cleanup_only': {'kind': 'main_cleanup_only', 'actual_entry': '_run_epoch_with_stop_evidence -> main_epoch (unaltered call edge)', 'requires_genuine_full_context': False, 'finite_only_baseline': True, 'source_context_or_authority_created': False, 'native_allocation_failure_qualification': False, 'production_driver_rejects_image': True, 'data_file': 'epoch_data_main_cleanup_only_fault_v5.py', 'data_sha256': '3694f577651e8baaf4be1d07baff9ba7fa0f312a8d1620836c35988f03a43954', 'cache_file': 'epoch_cache_main_cleanup_only_fault_v5.py', 'cache_sha256': 'd317c9866566cd6147c96566879f26f364e7e6801ac3eed0800b6ed8eedd01a2', 'adapter_file': 'epoch_adapter_main_cleanup_only_fault_v5.py', 'adapter_sha256': 'f7ca7f4f03ac63c1a95ba42f06149543211566de5e29f487a3dc4d08c5ee9b94', 'authority_file': 'epoch_authority_main_cleanup_only_fault_v5.py', 'authority_sha256': '091fcb583a160b72c95896380ade42f46873c97794d11fe88ab168fb00d099dd', 'driver_file': 'epoch_driver_main_cleanup_only_fault_v5.py', 'driver_sha256': '070352ecdf1e226c9267ce822317452d3e64f74191abd468f970b241d6c7b074'}, 'main_absent_record': {'kind': 'main_absent_record', 'actual_entry': '_run_epoch_with_stop_evidence -> main_epoch (unaltered call edge)', 'requires_genuine_full_context': True, 'finite_only_baseline': False, 'source_context_or_authority_created': False, 'native_allocation_failure_qualification': False, 'production_driver_rejects_image': True, 'data_file': 'epoch_data_main_absent_record_fault_v5.py', 'data_sha256': '18679fd1eb6ae99c4b375756511427c26718f77674c2d8fcc490e25ceb47cba5', 'cache_file': 'epoch_cache_main_absent_record_fault_v5.py', 'cache_sha256': '25f3e43001a53cb2cadc926f4371e3c555056b735a5cd3151e01e5a166fb54c4', 'adapter_file': 'epoch_adapter_main_absent_record_fault_v5.py', 'adapter_sha256': 'f7ca7f4f03ac63c1a95ba42f06149543211566de5e29f487a3dc4d08c5ee9b94', 'authority_file': 'epoch_authority_main_absent_record_fault_v5.py', 'authority_sha256': '35d65a6e8c37b1021460a5da6bf1a141d41e4ac33ac5816cf2111ba16190d6ba', 'driver_file': 'epoch_driver_main_absent_record_fault_v5.py', 'driver_sha256': 'ec93ad847940da23b56e765e7d9fd6887ff6ca50c524c55feb3e395530552c87'}}
+def _v5_images(c,kind):
+    pins=V5_OUTER_FAULT_SOURCE_PINS[kind];driver=c['driver_module']
+    for key,module in {'driver':driver,'data':driver.data_adapters,'adapter':driver.adapters,
+                       'authority':c['authority_module'],'cache':c['cache_module']}.items():
+        _need(hashlib.sha256(Path(module.__file__).read_bytes()).hexdigest()==pins[key+'_sha256'],
+              'V5 exact declared source tuple, never mutable helper replacement')
+    _need(driver._EXECUTION['state'] is None and driver._EXECUTION['packet'] is None,
+          'V5 needs actual untouched driver cold startup, not borrowed prepared state')
+    return driver
+
+
+def _v5_main_stop(c,kind):
+    driver=_v5_images(c,kind);argv=c['argv'];cache=c['cache_module'];data=driver.data_adapters
+    _need(type(argv) is tuple and all(type(v) is str for v in argv) and len(argv)>1,'Exact original CLI argument tuple')
+    if kind=='main_absent_record':
+        # This full-source context is genuinely OPEN with current FULLNone.
+        # No None/phase refusal can satisfy the later intended source oracle.
+        _need(type(driver.native_packet.FULL_EXECUTION_CONTRACT) is dict and type(cache.EPOCH_FULL_EXECUTION_CONTRACT) is dict,
+              'V5 absent-record full context OPEN; None is not intended error')
+        _need('--finite-only' not in argv and '--lanes' in argv and argv[argv.index('--lanes')+1]=='candidate',
+              'Actual full candidate CLI required for genuine Suite creation')
+    else:
+        _need('--finite-only' in argv and '--lanes' in argv and argv[argv.index('--lanes')+1]=='baseline',
+              'Actual original finite-only baseline CLI, no FULLNone substitute')
+    old_argv=sys.argv;caught=None
+    sys.argv=list(argv)
+    try:
+        try:driver._run_epoch_with_stop_evidence()
+        except BaseException as error:caught=error
+    finally:sys.argv=old_argv
+    state=driver._EXECUTION['state'];record=driver._EXECUTION['epoch_outer_cleanup']
+    _need(type(state) is dict and record['attempted'] is True and record['primary'] is caught,
+          'Actual main/outer cleanup not reached or first-primary identity lost')
+    _need(_has_frame(caught,driver.main_epoch.__code__) and _has_frame(caught,driver._run_epoch_with_stop_evidence.__code__),
+          'Actual outer-main/STOP wrapper frames required')
+    stop=json.loads((driver._EXECUTION['output']/'STOP.json').read_text())
+    expected='V5 source-case absent CLI record' if kind=='main_absent_record' else 'V5 source-case post-prepare primary' if kind=='main_primary_outer' else 'V5 source-case outer retirement'
+    _need(stop['status']=='STOP' and stop['primary_error']=={'type':'RuntimeError' if kind=='main_cleanup_only' else 'ValueError','message':expected},
+          'Actual STOP owner evidence must describe intended first primary')
+    for owned in state['owned_states']:
+        _need(owned['cache_binding'] is None or owned['cache_teardown_attempted'] is True,
+              'Original known-owner teardown attempt missing after outer error')
+    if kind!='main_absent_record':
+        outer=record['retirement_error']
+        _intended_error(outer,RuntimeError,('V5 source-case outer retirement',),data.epoch_retire.__code__)
+        _need(record['uncertain'] is True,'Outer raw error lost uncertainty')
+        if kind=='main_cleanup_only':_need(caught is outer,'Cleanup-only E must become outward primary')
+        else:
+            _intended_error(caught,ValueError,('V5 source-case post-prepare primary',),driver.main_epoch.__code__)
+            _need(caught is not outer,'Actual first P replaced by distinct outer E')
+        # Fixed raw E is also present in the actual retained main frame before
+        # evidence formatting. No ambient exception-state inference is used.
+        trace=caught.__traceback__;frame=None
+        while trace is not None:
+            if trace.tb_frame.f_code is driver.main_epoch.__code__:frame=trace.tb_frame
+            trace=trace.tb_next
+        _need(frame is not None and frame.f_locals['_epoch_outer_retirement_error'] is outer,
+              'Actual main first-catch raw E owner missing')
+        return {'primary':caught,'outer_error':outer,'actual_stop':stop,'outer_record':record}
+    _intended_error(caught,ValueError,('V5 source-case absent CLI record',),driver._epoch_cli_boundary.__code__)
+    s=state['epoch_suite'];_need(state.get('epoch_cli_cleanup') is None,'No-record source port did not reach actual fallback')
+    inner=s.inner_retirement_channel;outer=s.outer_retirement_channel
+    r1,j1,r2,j2=inner['error'],inner['journal_error'],outer['error'],outer['journal_error']
+    for error in (r1,r2):_intended_error(error,RuntimeError,('V5 source-case fallback retirement',),cache._v5_source_case_retire.__code__)
+    for error in (j1,j2):_intended_error(error,LookupError,('V5 source-case fallback journal',),cache._epoch_suite_retire_preserving.__code__)
+    _need(len({id(caught),id(r1),id(j1),id(r2),id(j2)})==5 and inner is not outer and
+          inner['started'] is True and outer['started'] is True and inner['acknowledged'] is True and outer['acknowledged'] is True,
+          'Distinct attempt lifetime/actual P/R1/J1/R2/J2 raw custody required')
+    _need(s.inner_retirement_error is r1 and s.inner_journal_error is j1 and
+          s.outer_retirement_error is r2 and s.outer_journal_error is j2 and
+          s.primary_error is caught and s.secondary_error is r1 and s.uncertain and
+          not s.active and s.terminal and s.pending is None and not s.registry and cache._V5_RETIRE_CALLS[0]==2,
+          'Fixed handoffs/terminal state or either original cleanup attempt missing')
+    replay=None
+    try:data.epoch_retire(state,'source-replay-negative',caught,None,None,None,'inner')
+    except BaseException as error:replay=error
+    _intended_error(replay,RuntimeError,('Epoch retirement channel already consumed',),cache._epoch_suite_retire_preserving.__code__)
+    _need(inner['error'] is r1 and inner['journal_error'] is j1 and outer['error'] is r2 and outer['journal_error'] is j2 and
+          s.inner_retirement_error is r1 and s.inner_journal_error is j1 and cache._V5_RETIRE_CALLS[0]==2,
+          'ACKed replay overwrote raw custody or retried already completed attempt')
+    return {'primary':caught,'inner_R':r1,'inner_J':j1,'outer_R':r2,'outer_J':j2,'replay_error':replay,
+            'actual_stop':stop,'both_cleanup_attempts':cache._V5_RETIRE_CALLS[0],'native_allocation_failure_qualified':False}
+
+
+def V5_MAIN_PRIMARY_OUTER(c):return _v5_main_stop(c,'main_primary_outer')
+def V5_MAIN_CLEANUP_ONLY(c):return _v5_main_stop(c,'main_cleanup_only')
+def V5_MAIN_ABSENT_RECORD(c):return _v5_main_stop(c,'main_absent_record')
+CASES.update({name:globals()[name] for name in ('V5_MAIN_PRIMARY_OUTER','V5_MAIN_CLEANUP_ONLY','V5_MAIN_ABSENT_RECORD')})

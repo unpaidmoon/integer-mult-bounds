@@ -7,6 +7,13 @@ before using the task picker; its coverage fields identify prior checks and
 remaining obligations. Explicit user tasks take precedence over that default
 assignment; do not reroll an already assigned task.
 
+For a fresh assignment, run `python3 -B scripts/choose_contextual_research_task.py`.
+This entry point reports whether the catalogue's assessment context matches the
+selected record, then retains the existing current-command routes and frozen
+cards. The historical pickers and root guide stay
+unchanged because research packages pin their bytes. The current command
+examples are in [the standing procedure](docs/research/agent-procedure.md).
+
 For repeated/overnight loops, follow the
 [upstream refresh checkpoint](autoresearch.md#looping-agents-refresh-upstream-at-each-research-checkpoint)
 at every new round, before a major pivot and before submission. Fetch canonical

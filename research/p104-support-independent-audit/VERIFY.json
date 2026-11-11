@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/p104-helper-subspace-splits/WORD.json.gz"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "All-field proof premises; deterministic cycle certificates; independent rank and deletion-distance oracles; sharp P104-mask example; fourteen rejecting controls."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-W",
+        "error",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Repeat complete exact coverage with Python assertions disabled; generated receipt must match ordinary execution."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "{package}/independent.py"
+      ],
+      "timeout_seconds": 90,
+      "checks": "Independent complete531441 unit-diagonal F3 four-by-four matrices using exact deletion subsets, 729 kernel-count rank cross-checks, and actual P104 witness over six prime fields."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-W",
+        "error",
+        "-B",
+        "-O",
+        "{package}/independent.py"
+      ],
+      "timeout_seconds": 90,
+      "checks": "Independent complete531441 unit-diagonal F3 four-by-four matrices using exact deletion subsets, 729 kernel-count rank cross-checks, and actual P104 witness over six prime fields."
+    }
+  ]
+}

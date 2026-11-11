@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "task_id": "uniform-transfer-audit",
+  "priority_revision": 8,
+  "base_commit": "2485805a6d47f36ea83ddde6327d453ac82d44dc",
+  "original_card": {
+    "id": "uniform-transfer-audit",
+    "question": "Can one of the selected record's five inherited assumptions be proved at its actual caller?",
+    "starting_points": [
+      "docs/research/current-priorities.md",
+      "docs/research/research-family-status.md",
+      "certificates/selected-result.json",
+      "docs/research/pr-intake-evidence/pr5599-completion/PROOF-REVIEW.md"
+    ],
+    "methods": [
+      "Construct and independently check one source-bound instance of the stated first experiment.",
+      "Seek an exact counterexample or target-specific complete-budget obstruction to that same proposed change."
+    ],
+    "acceptance_gate": "Identify the proposition and what would change downstream; do not equate a finite replay with a universal proof.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_selected_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Read revision 8, the selected review and live exact-source handoffs. Then follow this card's bounded first_experiment.",
+      "scope": "Source-bound orientation only, not a supplier replay or theorem proof."
+    },
+    "first_experiment": "Choose one assumption ID (native_all_columns, owned_erasure, compiler, precision_tape, analytic_recovery), one quantified implication and exact dependency closure. Check current handoffs, including #5625 row reentry and #5707 root-prefix lowering, without treating their partial scope as the whole theorem. Prove or falsify that implication with a caller-bound argument; stop at the chosen obligation. Finite tests or root digits do not discharge an all-size statement.",
+    "bottleneck_link": "Judge the actual current supplier contract and complete signed target/paid bill; frozen-profile ceilings require an applicability proof.",
+    "allowed_variations": [
+      "One exact source head, helper/cut region or quantified proposition and changed hypothesis; check live handoffs first. Different seeds are not different scopes."
+    ],
+    "scope_change_triggers": [
+      "Changing source head, helper/cut domain, operation alphabet or caller boundary without recording the new scope.",
+      "Treating an archived proposal or local numerical pass as complete supplier admission."
+    ],
+    "overlap_terms": [
+      "native_all_columns",
+      "owned_erasure",
+      "compiler",
+      "precision_tape",
+      "analytic_recovery"
+    ],
+    "existing_checks": [
+      {
+        "scope": "PR #4100: proposed unconditional construction and finite checks, without independent acceptance.",
+        "evidence": "research/unconditional-batched-crt/README.md",
+        "remaining": "Independent proof audit of one caller-bound all-size implication; all other premises remain explicit.",
+        "status": "author-checked",
+        "source_commit": "337d04939571a637aeab54a0f58f54fde811663a",
+        "selected_record_sha256": "bb2eaa58647b353f88d0aec2eafb9d30df1be53589231b23e12ceef3e4bad129"
+      },
+      {
+        "scope": "Selected PR5599: complete helper-subspace construction and independent caller replay; five framework assumptions remain.",
+        "evidence": "docs/research/pr-intake-evidence/pr5599-completion/PROOF-REVIEW.md",
+        "remaining": "The next experiment must identify uncovered source-specific work. Successor archive intake does not transfer this admission.",
+        "status": "reviewed",
+        "source_commit": "09dd0965711ca7eeb169057a420abab1c9052137",
+        "selected_record_sha256": "2a0220e866417774606e0f991e41b9c1d26b1f43b97857238cf478dbc7d330b5"
+      }
+    ]
+  },
+  "scope_status": "changed",
+  "actual_scope": "Prove a feasible eight-mode fiber of the actual PR4933 code has exact integer rounding radius one, excluding every smaller joint-rounding radius.",
+  "scope_change_reason": "Original precision side question: correlated mode-preserving rounding replaces an audit of a selected all-size implication. No predecessor result is reverified as the deliverable.",
+  "bottleneck_link": "Possible correlated rounding requires its own local error set. Exact preservation of the coded inverse modes cannot be assumed compatible with a half-grid coordinate error; a physical caller and full error invoice remain separate.",
+  "budget_minutes": 60,
+  "stop_rule": "Ship the first verified feasible-fiber witness and exact radius proof; leave the global optimum and physical caller to Open next questions.",
+  "outcome": "completed",
+  "evidence": "Written two-equation integrality proof; exact live-source five-row relation; all sixteen integer corners; 91 translated/scaled attaining fixtures and nine rejection controls.",
+  "author": "Nick Petalas",
+  "ai_assistance": "Independent human and formal proof-kernel review are unclaimed.",
+  "open_questions": [
+    {
+      "question": "What is the least uniform radius on all nonempty integer fibers of this exact mode map?",
+      "why_it_matters": "The witness gives a necessary radius but no global attaining rounder.",
+      "first_step": "Describe a fundamental domain of the integer kernel lattice and bound its infinity-norm covering radius.",
+      "blocked_by": "A global upper construction is absent."
+    },
+    {
+      "question": "Can a concrete physical caller exploit approximate mode preservation?",
+      "why_it_matters": "Exact mode preservation has a larger coordinate error on this fiber; a different permitted error set may avoid it.",
+      "first_step": "Specify one reached state and its permitted mode-defect budget, then propagate it through the actual inverse.",
+      "blocked_by": "Caller reachability, full error propagation and tape costs are unspecified."
+    }
+  ],
+  "claim_type": "Scoped mathematical proof with an exact finite certificate",
+  "claim_url": "https://github.com/CrocSwap/integer-mult-bounds/discussions/1166#discussioncomment-19299863",
+  "question_source": "original",
+  "predecessors": [
+    {
+      "pr": 4933,
+      "author": "Dillon Amburgey / dillona",
+      "head": "d969c458c24278e0fd37e5b4c0ff8a53a496b430",
+      "use": "Actual eight-mode matrix and cited inverse factorization."
+    },
+    {
+      "pr": 5069,
+      "author": "JoyboyBrian",
+      "use": "Fixed-grid arithmetic context; not replayed."
+    },
+    {
+      "pr": 5838,
+      "author": "Ali Romman / aliromman",
+      "use": "Distinguishes a correlated physical error set from independently adverse defects; no source computation reused."
+    }
+  ]
+}
