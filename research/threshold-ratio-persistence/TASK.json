@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "task_id": "uniform-transfer-audit",
+  "priority_revision": 8,
+  "base_commit": "e54523517d0f03e58352e647c403a5af3e525a57",
+  "original_card": {
+    "id": "uniform-transfer-audit",
+    "question": "Can one of the selected record's five inherited assumptions be proved at its actual caller?",
+    "starting_points": [
+      "docs/research/current-priorities.md",
+      "docs/research/research-family-status.md",
+      "certificates/selected-result.json",
+      "docs/research/pr-intake-evidence/pr5599-completion/PROOF-REVIEW.md"
+    ],
+    "methods": [
+      "Construct and independently check one source-bound instance of the stated first experiment.",
+      "Seek an exact counterexample or target-specific complete-budget obstruction to that same proposed change."
+    ],
+    "acceptance_gate": "Identify the proposition and what would change downstream; do not equate a finite replay with a universal proof.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_selected_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Read revision 8, the selected review and live exact-source handoffs. Then follow this card's bounded first_experiment.",
+      "scope": "Source-bound orientation only, not a supplier replay or theorem proof."
+    },
+    "first_experiment": "Choose one assumption ID (native_all_columns, owned_erasure, compiler, precision_tape, analytic_recovery), one quantified implication and exact dependency closure. Check current handoffs, including #5625 row reentry and #5707 root-prefix lowering, without treating their partial scope as the whole theorem. Prove or falsify that implication with a caller-bound argument; stop at the chosen obligation. Finite tests or root digits do not discharge an all-size statement.",
+    "bottleneck_link": "Judge the actual current supplier contract and complete signed target/paid bill; frozen-profile ceilings require an applicability proof.",
+    "allowed_variations": [
+      "One exact source head, helper/cut region or quantified proposition and changed hypothesis; check live handoffs first. Different seeds are not different scopes."
+    ],
+    "scope_change_triggers": [
+      "Changing source head, helper/cut domain, operation alphabet or caller boundary without recording the new scope.",
+      "Treating an archived proposal or local numerical pass as complete supplier admission."
+    ],
+    "overlap_terms": [
+      "native_all_columns",
+      "owned_erasure",
+      "compiler",
+      "precision_tape",
+      "analytic_recovery"
+    ],
+    "existing_checks": [
+      {
+        "scope": "PR #4100: proposed unconditional construction and finite checks, without independent acceptance.",
+        "evidence": "research/unconditional-batched-crt/README.md",
+        "remaining": "Independent proof audit of one caller-bound all-size implication; all other premises remain explicit.",
+        "status": "author-checked",
+        "source_commit": "337d04939571a637aeab54a0f58f54fde811663a",
+        "selected_record_sha256": "bb2eaa58647b353f88d0aec2eafb9d30df1be53589231b23e12ceef3e4bad129"
+      },
+      {
+        "scope": "Selected PR5599: complete helper-subspace construction and independent caller replay; five framework assumptions remain.",
+        "evidence": "docs/research/pr-intake-evidence/pr5599-completion/PROOF-REVIEW.md",
+        "remaining": "The next experiment must identify uncovered source-specific work. Successor archive intake does not transfer this admission.",
+        "status": "reviewed",
+        "source_commit": "09dd0965711ca7eeb169057a420abab1c9052137",
+        "selected_record_sha256": "2a0220e866417774606e0f991e41b9c1d26b1f43b97857238cf478dbc7d330b5"
+      }
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "For assumption precision_tape, prove the section-6 threshold comparison: for every integer C>=1, every integer d0>=0 and every positive rational slack a/b, the inequality C(j+1)^d0 <= 2^((a/b)j) persists for every larger integer once it holds at an explicit witness, including whenever j exceeds 4 d0 b/a.",
+  "scope_change_reason": "The card asks for one assumption, one quantified implication and a caller-bound argument, and says to stop at that obligation. The implication is the threshold-enlargement comparison in the #7000 application review, section 6. It is not a proof of precision_tape, not the monomial record count in open PR #7286, and not a discharge of the other four assumptions.",
+  "bottleneck_link": "The selected all-size exponent is conditional on fixed finite template constants still producing an eventual cutoff. This comparison is the step the application review uses to freeze that cutoff. It does not change kappa.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop after the comparison, its persistence, the explicit witness and the review's factor 4 are proved. Do not evaluate the selected numerical cutoff or rerun frontier7000-verify.",
+  "outcome": "completed",
+  "evidence": "Written proof in PROOF.md. Exact integer census and rejection controls in verify.py. The proof is not a finite search.",
+  "author": "unpaidmoon",
+  "ai_assistance": "Cursor Grok assisted the proof writeup, the integer checker and the overlap reading.",
+  "open_questions": [
+    {
+      "question": "For the finite list of (C, d0, delta) pairs that the #7000 application review actually feeds into its outer cutoff, what is the least integer j at which the inequality holds?",
+      "why_it_matters": "The existence proof does not name the cutoff that the selected outer bound freezes. A smaller explicit cutoff would only change finite thresholds, which the review already says leave the exponent unchanged.",
+      "first_step": "Extract each pair from the outer-predicate table and evaluate the least j with the integer comparison in PROOF.md.",
+      "blocked_by": "Section 6 states the shape and says to take the maximum of several cutoffs. It does not isolate one pair. Open PR #7286 asks whether substituting its record count lowers one of those cutoffs; this package does not answer that."
+    },
+    {
+      "question": "Can an elementary persistence proof use a rational constant smaller than 8/5 in place of the hypothesis m >= ceil(8 d0 b/(5 a))?",
+      "why_it_matters": "The constant 8/5 comes from 2^8 > 3^5 and (1+1/m)^m < 3. The real exponential threshold is 1/ln(2), so a tighter elementary constant would shrink the explicit witness without changing the inequality.",
+      "first_step": "Replace 256 > 243 by a sharper integer pair and repeat the same binomial bound, then test the new ceiling against the witness (d0, a, b) = (1, 2, 5), where one less than the present ceiling already fails.",
+      "blocked_by": "Nothing external. This package only proves that 8/5 is sufficient and that subtracting one from its ceiling is not."
+    }
+  ]
+}
